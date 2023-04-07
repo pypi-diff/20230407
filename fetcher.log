@@ -2991,3 +2991,53 @@
 [2023-04-07 20:59:04] INFO root fetch - main [MainThread]: success
 [2023-04-07 20:59:05] INFO root fetch - main [MainThread]: success
 [2023-04-07 20:59:05] INFO root fetch - main [MainThread]: success
+[2023-04-07 21:07:48] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622107]
+[2023-04-07 21:07:53] INFO root fetch - main [MainThread]: Found 11 changed packages
+[2023-04-07 21:07:53] INFO root fetch - processPackages [elicznik]: New version: [1.4.1] Old Version: [1.4.0]
+[2023-04-07 21:07:53] WARNING root fetch - processPackages [Urlcut.py]: Skipping, unable to determine old version
+[2023-04-07 21:07:53] INFO root fetch - main [MainThread]: error
+[2023-04-07 21:07:53] INFO root fetch - processPackages [trame-vtk]: New version: [2.4.3] Old Version: [2.4.2]
+[2023-04-07 21:07:53] INFO root fetch - processPackages [MistressGPT]: New version: [0.9.8] Old Version: [0.9.71]
+[2023-04-07 21:07:53] INFO root fetch - processPackages [Pypckage]: New version: [1.0.1] Old Version: [1.0.0]
+[2023-04-07 21:07:53] INFO root fetch - processPackages [async-extensions]: New version: [1.2.2] Old Version: [1.2.1]
+[2023-04-07 21:07:53] INFO root fetch - processPackages [Pypckage]: Downloading https://files.pythonhosted.org/packages/6a/0b/368f886205eeb0c67549695b8504a1b2e39a3ae99ee522aba5cd3b684c8e/Pypckage-1.0.0.tar.gz
+[2023-04-07 21:07:54] INFO root fetch - processPackages [trame-vtk]: Downloading https://files.pythonhosted.org/packages/27/ff/2a5d0637d091f9c1d42d32594c5431cdad33d3d42655d541b3fbfdb1e85a/trame-vtk-2.4.2.tar.gz
+[2023-04-07 21:07:54] INFO root fetch - processPackages [async-extensions]: Downloading https://files.pythonhosted.org/packages/17/12/27e6f09b2c4dae611ce97e47ecee9bb84e3820d058f7eb2706c928fb986b/async_extensions-1.2.1.tar.gz
+[2023-04-07 21:07:54] INFO root fetch - processPackages [elicznik]: Downloading https://files.pythonhosted.org/packages/2e/6d/1c93d88062b40b17e48e14a2c4f0f554b94c163eea8cec85d1e50cb203e9/elicznik-1.4.1.tar.gz
+[2023-04-07 21:07:54] INFO root fetch - processPackages [MistressGPT]: Downloading https://files.pythonhosted.org/packages/03/66/91dd4f72af515e0748e42d8688e02925535b23448809fc20f1009adfd339/MistressGPT-0.9.8.tar.gz
+[2023-04-07 21:07:54] INFO root fetch - processPackages [Pypckage]: Downloading https://files.pythonhosted.org/packages/0e/0c/d29c735658642d08b4dfd17d3aaa52f642fcc670a73cec301e0275d0ab39/pypckage-1.0.1.tar.gz
+[2023-04-07 21:07:54] INFO root fetch - processPackages [trame-vtk]: Downloading https://files.pythonhosted.org/packages/2c/cf/e4c2aca60228072d46e71b3611c05a5cc160137d509d3dd864d6b872a9f6/trame-vtk-2.4.3.tar.gz
+[2023-04-07 21:07:54] INFO root fetch - processPackages [Pypckage]: executing diffoscope
+[2023-04-07 21:07:54] INFO root fetch - processPackages [Pypckage]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/Pypckage-1.0.0.tar.gz tmp/pypckage-1.0.1.tar.gz --markdown 20230407/P/Pypckage/1.0.0-1.0.1/diff.md
+[2023-04-07 21:07:54] INFO root fetch - processPackages [elicznik]: executing diffoscope
+[2023-04-07 21:07:54] INFO root fetch - processPackages [elicznik]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/elicznik-1.4.0.tar.gz tmp/elicznik-1.4.1.tar.gz --markdown 20230407/e/elicznik/1.4.0-1.4.1/diff.md
+[2023-04-07 21:07:54] INFO root fetch - processPackages [MistressGPT]: executing diffoscope
+[2023-04-07 21:07:54] INFO root fetch - processPackages [MistressGPT]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/MistressGPT-0.9.71.tar.gz tmp/MistressGPT-0.9.8.tar.gz --markdown 20230407/M/MistressGPT/0.9.71-0.9.8/diff.md
+[2023-04-07 21:07:54] INFO root fetch - processPackages [async-extensions]: Downloading https://files.pythonhosted.org/packages/d4/6e/1668beb30e22caa4d1335de5bd70eb55a2f9f74d9eb6a79c18da693f60d8/async_extensions-1.2.2.tar.gz
+[2023-04-07 21:07:54] INFO root fetch - processPackages [async-extensions]: executing diffoscope
+[2023-04-07 21:07:54] INFO root fetch - processPackages [async-extensions]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/async_extensions-1.2.1.tar.gz tmp/async_extensions-1.2.2.tar.gz --markdown 20230407/a/async-extensions/1.2.1-1.2.2/diff.md
+[2023-04-07 21:07:54] INFO root fetch - processPackages [trame-vtk]: executing diffoscope
+[2023-04-07 21:07:54] INFO root fetch - processPackages [trame-vtk]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/trame-vtk-2.4.2.tar.gz tmp/trame-vtk-2.4.3.tar.gz --markdown 20230407/t/trame-vtk/2.4.2-2.4.3/diff.md
+[2023-04-07 21:07:55] INFO root fetch - main [MainThread]: success
+[2023-04-07 21:07:55] INFO root fetch - processPackages [arcanum-newspaper-segmentation-client]: New version: [1.5.4] Old Version: [1.5.3]
+[2023-04-07 21:07:55] INFO root fetch - main [MainThread]: success
+[2023-04-07 21:07:55] INFO root fetch - processPackages [casambi-bt]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 21:07:55] INFO root fetch - main [MainThread]: success
+[2023-04-07 21:07:55] WARNING root fetch - processPackages [abch-tree-sitter]: Skipping, unable to determine old version
+[2023-04-07 21:07:55] INFO root fetch - main [MainThread]: error
+[2023-04-07 21:07:55] INFO root fetch - processPackages [arcanum-newspaper-segmentation-client]: Downloading https://files.pythonhosted.org/packages/50/45/b42c84fec8c07b2627ec7fb03fbc9cdc6896687cd1a8c3e0a011714594e7/arcanum-newspaper-segmentation-client-1.5.4.tar.gz
+[2023-04-07 21:07:55] WARNING root fetch - processPackages [cdmpy]: Skipping, unable to determine old version
+[2023-04-07 21:07:55] INFO root fetch - main [MainThread]: error
+[2023-04-07 21:07:55] INFO root fetch - processPackages [pypckage]: New version: [1.0.1] Old Version: [1.0.0]
+[2023-04-07 21:07:55] INFO root fetch - main [MainThread]: success
+[2023-04-07 21:07:55] INFO root fetch - processPackages [casambi-bt]: Downloading https://files.pythonhosted.org/packages/05/d5/fe22795f2aa611fed9676e137906c1ec5b8180a4b54d2a9aa28ac80e8f6e/casambi_bt-0.1.1-py3-none-any.whl
+[2023-04-07 21:07:55] INFO root fetch - processPackages [pypckage]: executing diffoscope
+[2023-04-07 21:07:55] INFO root fetch - processPackages [pypckage]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/Pypckage-1.0.0.tar.gz tmp/pypckage-1.0.1.tar.gz --markdown 20230407/p/pypckage/1.0.0-1.0.1/diff.md
+[2023-04-07 21:07:55] INFO root fetch - processPackages [arcanum-newspaper-segmentation-client]: executing diffoscope
+[2023-04-07 21:07:55] INFO root fetch - processPackages [arcanum-newspaper-segmentation-client]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/arcanum-newspaper-segmentation-client-1.5.3.tar.gz tmp/arcanum-newspaper-segmentation-client-1.5.4.tar.gz --markdown 20230407/a/arcanum-newspaper-segmentation-client/1.5.3-1.5.4/diff.md
+[2023-04-07 21:07:56] INFO root fetch - processPackages [casambi-bt]: executing diffoscope
+[2023-04-07 21:07:56] INFO root fetch - processPackages [casambi-bt]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/casambi_bt-0.1.0-py3-none-any.whl.zip tmp/casambi_bt-0.1.1-py3-none-any.whl.zip --markdown 20230407/c/casambi-bt/0.1.0-0.1.1/diff.md
+[2023-04-07 21:07:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 21:07:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 21:07:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 21:07:57] INFO root fetch - main [MainThread]: success
