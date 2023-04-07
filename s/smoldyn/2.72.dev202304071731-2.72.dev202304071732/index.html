@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/smoldyn-2.72.dev202304071731-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.zip tmp/smoldyn-2.72.dev202304071732-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.zip --html 20230407/s/smoldyn/2.72.dev202304071731-2.72.dev202304071732/index.html --text 20230407/s/smoldyn/2.72.dev202304071731-2.72.dev202304071732/diff.txt --markdown 20230407/s/smoldyn/2.72.dev202304071731-2.72.dev202304071732/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">10.7 KB</span></div>
+  <div><span class="source">tmp/smoldyn-2.72.dev202304071731-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.zip</span> vs.</div>
+  <div id="top"><span class="source">tmp/smoldyn-2.72.dev202304071732-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.zip</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">5.94 KB</span></div>
+    <div id="zipinfo---"><span class="source">zipinfo {}</span>
+      <a class="anchor" href="#zipinfo---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 34 lines modified</td><td colspan="2">Offset 1, 35 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span><del>4380</del>2<del>06</del><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>3<del>2</del></td><td class="diffline">1 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>size:<span class="dp">·</span><ins>5245</ins>2<ins>62</ins><span class="dp">·</span>bytes,<span class="dp">·</span>number<span class="dp">·</span>of<span class="dp">·</span>entries:<span class="dp">·</span>3<ins>3</ins></td></tr>
+<tr class="diffdeleted"><td class="diffline">2 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>stor<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:32<span class="dp">·</span>smoldyn-2.72.dev202304071731.dist-info/</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>stor<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/</td><td class="diffline">2 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>stor<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>stor<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/</td><td class="diffline">3 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>stor<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent"><del>-</del>rw<del>-</del>r-<del>-</del>r-<del>-</del><span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>148</del><span class="dp">·</span>b-<span class="dp">·</span><del>defN</del><span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn-2.72.dev20230407173<del>1</del>.dist-info/<del>WHEEL</del></td><td class="diffline">4 </td><td class="diffpresent"><ins>d</ins>rw<ins>x</ins>r-<ins>x</ins>r-<ins>x</ins><span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins><span class="dp">·</span><span class="dp">·</span>0</ins><span class="dp">·</span>b-<span class="dp">·</span><ins>stor</ins><span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn-2.72.dev20230407173<ins>2</ins>.dist-info/</td></tr>
+<tr class="diffdeleted"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:32<span class="dp">·</span>smoldyn-2.72.dev202304071731.dist-info/top_level.txt</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2591<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:32<span class="dp">·</span>smoldyn-2.72.dev202304071731.dist-info/RECORD</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2856<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:32<span class="dp">·</span>smoldyn-2.72.dev202304071731.dist-info/METADATA</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>stor<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/biosimulators/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>b-<span class="dp">·</span>stor<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/biosimulators/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1155<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/types.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1155<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/types.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1098<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/utils.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1098<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2068313<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/_smoldyn.cpython-38-x86_64-linux-gnu.so</td><td class="diffline">8 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2068313<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/_smoldyn.cpython-38-x86_64-linux-gnu.so</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>218<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>218<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>841<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/__main__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>841<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/__main__.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">11 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2121569<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:34<span class="dp">·</span>smoldyn/_smoldyn.cpython-37m-x86_64-linux-gnu.so</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2068353<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/_smoldyn.cpython-310-x86_64-linux-gnu.so</td><td class="diffline">12 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2068353<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/_smoldyn.cpython-310-x86_64-linux-gnu.so</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2068353<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/_smoldyn.cpython-311-x86_64-linux-gnu.so</td><td class="diffline">13 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2068353<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/_smoldyn.cpython-311-x86_64-linux-gnu.so</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78575<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/smoldyn.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>78575<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/smoldyn.py</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2068353<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/_smoldyn.cpython-39-x86_64-linux-gnu.so</td><td class="diffline">15 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span>2068353<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/_smoldyn.cpython-39-x86_64-linux-gnu.so</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/biosimulators/_version.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>46<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/biosimulators/_version.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17016<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/biosimulators/utils.py</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>17016<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/biosimulators/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47576<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/biosimulators/combine.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>47576<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/biosimulators/combine.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>489<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/biosimulators/__init__.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>489<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/biosimulators/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>579<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/biosimulators/__main__.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>579<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/biosimulators/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5274<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn/biosimulators/data_model.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>5274<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn/biosimulators/data_model.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>441321<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libXt-4e660efc.so.6.0.0</td><td class="diffline">22 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>441321<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libXt-4e660efc.so.6.0.0</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>531121<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libGLU-03ef17d1.so.1.3.1</td><td class="diffline">23 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>531121<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libGLU-03ef17d1.so.1.3.1</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>72577<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libXi-e28fba09.so.6.1.0</td><td class="diffline">24 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>72577<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libXi-e28fba09.so.6.1.0</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>290497<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libjpeg-43436dd5.so.62.1.0</td><td class="diffline">25 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>290497<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libjpeg-43436dd5.so.62.1.0</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>54297<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libjbig-78348776.so.2.0</td><td class="diffline">26 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>54297<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libjbig-78348776.so.2.0</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25817<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libXxf86vm-3971cbbb.so.1.0.0</td><td class="diffline">27 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>25817<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libXxf86vm-3971cbbb.so.1.0.0</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>497153<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libtiff-b6eb22fb.so.5.2.0</td><td class="diffline">28 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>497153<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libtiff-b6eb22fb.so.5.2.0</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>361201<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libglut-b0f599c2.so.3.10.0</td><td class="diffline">29 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>361201<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libglut-b0f599c2.so.3.10.0</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123745<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<del>2</del><span class="dp">·</span>smoldyn.libs/libXmu-e606ac5f.so.6.2.0</td><td class="diffline">30 </td><td class="diffpresent">-rwxr-xr-x<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>123745<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:3<ins>4</ins><span class="dp">·</span>smoldyn.libs/libXmu-e606ac5f.so.6.2.0</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>150<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:34<span class="dp">·</span>smoldyn-2.72.dev202304071732.dist-info/WHEEL</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">32 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:34<span class="dp">·</span>smoldyn-2.72.dev202304071732.dist-info/top_level.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">33 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2700<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:34<span class="dp">·</span>smoldyn-2.72.dev202304071732.dist-info/RECORD</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span>2.0<span class="dp">·</span>unx<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2856<span class="dp">·</span>b-<span class="dp">·</span>defN<span class="dp">·</span>23-Apr-07<span class="dp">·</span>17:34<span class="dp">·</span>smoldyn-2.72.dev202304071732.dist-info/METADATA</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">3<del>2</del><span class="dp">·</span>files,<span class="dp">·</span>1<del>08</del>295<del>7</del>1<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span><del>4375586</del><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>59.<del>6</del>%</td><td class="diffline">35 </td><td class="diffpresent">3<ins>3</ins><span class="dp">·</span>files,<span class="dp">·</span>1295<ins>12</ins><ins>5</ins>1<span class="dp">·</span>bytes<span class="dp">·</span>uncompressed,<span class="dp">·</span><ins>5240470</ins><span class="dp">·</span>bytes<span class="dp">·</span>compressed:<span class="dp">·</span><span class="dp">·</span>59.<ins>5</ins>%</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">1.38 KB</span></div>
+    <div id="zipnote---"><span class="source">zipnote {}</span>
+      <a class="anchor" href="#zipnote---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 26 lines modified</td><td colspan="2">Offset 1, 14 lines modified</td></tr>
+<tr class="diffdeleted"><td class="diffline">1 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev202304071731.dist-info/</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">2 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/</td><td class="diffline">1 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">2 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn.libs/</td><td class="diffline">3 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn.libs/</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev20230407173<del>1</del>.dist-info/<del>WHEEL</del></td><td class="diffline">5 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev20230407173<ins>2</ins>.dist-info/</td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev202304071731.dist-info/top_level.txt</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">11 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev202304071731.dist-info/RECORD</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">12 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">13 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev202304071731.dist-info/METADATA</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">6 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/biosimulators/</td><td class="diffline">7 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/biosimulators/</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">8 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/types.py</td><td class="diffline">9 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/types.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">10 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 33, 14 lines modified</td><td colspan="2">Offset 21, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/__init__.py</td><td class="diffline">21 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/__init__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">22 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/__main__.py</td><td class="diffline">23 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/__main__.py</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">24 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">25 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/_smoldyn.cpython-37m-x86_64-linux-gnu.so</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">26 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/_smoldyn.cpython-310-x86_64-linux-gnu.so</td><td class="diffline">27 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/_smoldyn.cpython-310-x86_64-linux-gnu.so</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">28 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/_smoldyn.cpython-311-x86_64-linux-gnu.so</td><td class="diffline">29 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/_smoldyn.cpython-311-x86_64-linux-gnu.so</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">30 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/smoldyn.py</td><td class="diffline">31 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn/smoldyn.py</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 90, 8 lines modified</td><td colspan="2">Offset 81, 20 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn.libs/libglut-b0f599c2.so.3.10.0</td><td class="diffline">81 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn.libs/libglut-b0f599c2.so.3.10.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">82 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">92 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn.libs/libXmu-e606ac5f.so.6.2.0</td><td class="diffline">83 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn.libs/libXmu-e606ac5f.so.6.2.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">93 </td><td class="diffpresent">Comment:<span class="dp">·</span></td><td class="diffline">84 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">85 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev202304071732.dist-info/WHEEL</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">86 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">87 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev202304071732.dist-info/top_level.txt</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">88 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">89 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev202304071732.dist-info/RECORD</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">90 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">91 </td><td class="diffpresent">Filename:<span class="dp">·</span>smoldyn-2.72.dev202304071732.dist-info/METADATA</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">92 </td><td class="diffpresent">Comment:<span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">94 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td><td class="diffline">93 </td><td class="diffpresent">Zip<span class="dp">·</span>file<span class="dp">·</span>comment:<span class="dp">·</span></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">2.73 KB</span></div>
+    <div><span class="source">smoldyn-2.72.dev202304071731.dist-info/RECORD</span> vs.</div>
+    <div id="smoldyn--.--.dev------------.dist-info-RECORD"><span class="source">smoldyn-2.72.dev202304071732.dist-info/RECORD</span>
+      <a class="anchor" href="#smoldyn--.--.dev------------.dist-info-RECORD">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 10% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 16 lines modified</td><td colspan="2">Offset 1, 13 lines modified</td></tr>
+<tr class="diffdeleted"><td class="diffline">1 </td><td class="diffpresent">smoldyn-2.72.dev202304071731.dist-info/WHEEL,sha256=5DQRW5VdkIxH8e7ylwa-YBCXLhSZeqHiz1ZmuOscrlo,148<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">2 </td><td class="diffpresent">smoldyn-2.72.dev202304071731.dist-info/top_level.txt,sha256=2FmedD0M8FnH4zNLmZCw84tbGuurvZfurkH4l4zSybQ,8<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">3 </td><td class="diffpresent">smoldyn-2.72.dev202304071731.dist-info/RECORD,,<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">4 </td><td class="diffpresent">smoldyn-2.72.dev202304071731.dist-info/METADATA,sha256=h-aldpK3eoYOGriG3M6sCTg_GzX0TLZMvTjnLrhpuj0,2856<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">smoldyn/types.py,sha256=f5V2ONb7or4vFKLCi_gyCL6vtqdvn1j5MinFmyFxi48,1155<em>\xd</em></td><td class="diffline">1 </td><td class="diffpresent">smoldyn/types.py,sha256=f5V2ONb7or4vFKLCi_gyCL6vtqdvn1j5MinFmyFxi48,1155<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">smoldyn/utils.py,sha256=FEye-64lUjKWWZKs_iwa_1AfgR6EgzVGEjEJh2xy6uM,1098<em>\xd</em></td><td class="diffline">2 </td><td class="diffpresent">smoldyn/utils.py,sha256=FEye-64lUjKWWZKs_iwa_1AfgR6EgzVGEjEJh2xy6uM,1098<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-38-x86_64-linux-gnu.so,sha256=L-8rA96GPfUyYhdIxhe7TCF5rRK-WrEowYovR1yXhDs,2068313<em>\xd</em></td><td class="diffline">3 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-38-x86_64-linux-gnu.so,sha256=L-8rA96GPfUyYhdIxhe7TCF5rRK-WrEowYovR1yXhDs,2068313<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">smoldyn/__init__.py,sha256=M-TlwaTuMxfbkRrmdKCNfgKKLgwnxqvyuto4jFkF8_0,218<em>\xd</em></td><td class="diffline">4 </td><td class="diffpresent">smoldyn/__init__.py,sha256=M-TlwaTuMxfbkRrmdKCNfgKKLgwnxqvyuto4jFkF8_0,218<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">smoldyn/__main__.py,sha256=8GdoclcDUTM2_2p3TI0v21F_gdyg3N5YI0OQ4F_DW_A,841<em>\xd</em></td><td class="diffline">5 </td><td class="diffpresent">smoldyn/__main__.py,sha256=8GdoclcDUTM2_2p3TI0v21F_gdyg3N5YI0OQ4F_DW_A,841<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">6 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-37m-x86_64-linux-gnu.so,sha256=nP0aUO4hRuYnj5kH2e0CkEspjKMTBwnrF5RQGvFZlE8,2121569<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-310-x86_64-linux-gnu.so,sha256=JwNAIVyvUIy7OEHxwigiFexXHxfUYjUWpeuZ1Bcj0N0,2068353<em>\xd</em></td><td class="diffline">7 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-310-x86_64-linux-gnu.so,sha256=JwNAIVyvUIy7OEHxwigiFexXHxfUYjUWpeuZ1Bcj0N0,2068353<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-311-x86_64-linux-gnu.so,sha256=S0jJLlNP_CSgBj2vKIKWz9cQCg8Ox1aXcivzPCS1RkY,2068353<em>\xd</em></td><td class="diffline">8 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-311-x86_64-linux-gnu.so,sha256=S0jJLlNP_CSgBj2vKIKWz9cQCg8Ox1aXcivzPCS1RkY,2068353<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">smoldyn/smoldyn.py,sha256=rWXvw8mk_3AGAumWOaspnMhjpQIAASaKWz5KVQ2TH0g,78575<em>\xd</em></td><td class="diffline">9 </td><td class="diffpresent">smoldyn/smoldyn.py,sha256=rWXvw8mk_3AGAumWOaspnMhjpQIAASaKWz5KVQ2TH0g,78575<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-39-x86_64-linux-gnu.so,sha256=3pHM525D1dBZglrIky1V5-IOX7AbcGZs_z2o1lq7EKM,2068353<em>\xd</em></td><td class="diffline">10 </td><td class="diffpresent">smoldyn/_smoldyn.cpython-39-x86_64-linux-gnu.so,sha256=3pHM525D1dBZglrIky1V5-IOX7AbcGZs_z2o1lq7EKM,2068353<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent">smoldyn/biosimulators/_version.py,sha256=eT1k6c8OBrlqv4P7Qh0ph6Dj0_vBxHbKju40OzX4Vrs,46<em>\xd</em></td><td class="diffline">11 </td><td class="diffpresent">smoldyn/biosimulators/_version.py,sha256=eT1k6c8OBrlqv4P7Qh0ph6Dj0_vBxHbKju40OzX4Vrs,46<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent">smoldyn/biosimulators/utils.py,sha256=vKVl1OmRbKL4_L5Ezb8rz8v0aEg7yLFpdQuOoIDPCsQ,17016<em>\xd</em></td><td class="diffline">12 </td><td class="diffpresent">smoldyn/biosimulators/utils.py,sha256=vKVl1OmRbKL4_L5Ezb8rz8v0aEg7yLFpdQuOoIDPCsQ,17016<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent">smoldyn/biosimulators/combine.py,sha256=2m4yog8Y77C6n1w-pnikpicV5NNYSV5Rkk_t-f7zbnQ,47576<em>\xd</em></td><td class="diffline">13 </td><td class="diffpresent">smoldyn/biosimulators/combine.py,sha256=2m4yog8Y77C6n1w-pnikpicV5NNYSV5Rkk_t-f7zbnQ,47576<em>\xd</em></td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 22, 7 lines modified</td><td colspan="2">Offset 19, 11 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">smoldyn.libs/libXi-e28fba09.so.6.1.0,sha256=3KIo_qAdwG3yxbLhZLbvb_YFW9P35GFTa-DfD6YaiLo,72577<em>\xd</em></td><td class="diffline">19 </td><td class="diffpresent">smoldyn.libs/libXi-e28fba09.so.6.1.0,sha256=3KIo_qAdwG3yxbLhZLbvb_YFW9P35GFTa-DfD6YaiLo,72577<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">smoldyn.libs/libjpeg-43436dd5.so.62.1.0,sha256=OasZPaHi24C0RPybxaSl0fug2chRlFnVDYkmmCsKVMw,290497<em>\xd</em></td><td class="diffline">20 </td><td class="diffpresent">smoldyn.libs/libjpeg-43436dd5.so.62.1.0,sha256=OasZPaHi24C0RPybxaSl0fug2chRlFnVDYkmmCsKVMw,290497<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">smoldyn.libs/libjbig-78348776.so.2.0,sha256=OiwSKoEDfSYfMq8as5AVdXMcJojPcZtbhj5NA_OoNQY,54297<em>\xd</em></td><td class="diffline">21 </td><td class="diffpresent">smoldyn.libs/libjbig-78348776.so.2.0,sha256=OiwSKoEDfSYfMq8as5AVdXMcJojPcZtbhj5NA_OoNQY,54297<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">smoldyn.libs/libXxf86vm-3971cbbb.so.1.0.0,sha256=Qn5bJZE8JT8xM8176FFJWcguwAryWCrpOiFzdjzdluw,25817<em>\xd</em></td><td class="diffline">22 </td><td class="diffpresent">smoldyn.libs/libXxf86vm-3971cbbb.so.1.0.0,sha256=Qn5bJZE8JT8xM8176FFJWcguwAryWCrpOiFzdjzdluw,25817<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">smoldyn.libs/libtiff-b6eb22fb.so.5.2.0,sha256=JVx7rccvR6SpnuokRMZ47oBD2o2326m7BpILom0l_Do,497153<em>\xd</em></td><td class="diffline">23 </td><td class="diffpresent">smoldyn.libs/libtiff-b6eb22fb.so.5.2.0,sha256=JVx7rccvR6SpnuokRMZ47oBD2o2326m7BpILom0l_Do,497153<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">smoldyn.libs/libglut-b0f599c2.so.3.10.0,sha256=BmYn7f88pW4-Cr_VDhWxoLV3gPpNyf2qLtXq5vY5CYs,361201<em>\xd</em></td><td class="diffline">24 </td><td class="diffpresent">smoldyn.libs/libglut-b0f599c2.so.3.10.0,sha256=BmYn7f88pW4-Cr_VDhWxoLV3gPpNyf2qLtXq5vY5CYs,361201<em>\xd</em></td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">smoldyn.libs/libXmu-e606ac5f.so.6.2.0,sha256=FVY2MoBiCYvsmAS9URT-6MCZtlKlCZVVJYtF_OB5brk,123745<em>\xd</em></td><td class="diffline">25 </td><td class="diffpresent">smoldyn.libs/libXmu-e606ac5f.so.6.2.0,sha256=FVY2MoBiCYvsmAS9URT-6MCZtlKlCZVVJYtF_OB5brk,123745<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">26 </td><td class="diffpresent">smoldyn-2.72.dev202304071732.dist-info/WHEEL,sha256=E0CkEo6W7NC93sVo8jj5Y2C0iOJBJ79Iyun5srY2VI0,150<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">27 </td><td class="diffpresent">smoldyn-2.72.dev202304071732.dist-info/top_level.txt,sha256=2FmedD0M8FnH4zNLmZCw84tbGuurvZfurkH4l4zSybQ,8<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">28 </td><td class="diffpresent">smoldyn-2.72.dev202304071732.dist-info/RECORD,,<em>\xd</em></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">29 </td><td class="diffpresent">smoldyn-2.72.dev202304071732.dist-info/METADATA,sha256=RDHhVlQ5rngybPoiHlFRDhC8yBs8IemauvZP-QehXJo,2856<em>\xd</em></td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">521 B</span></div>
+    <div><span class="source">smoldyn-2.72.dev202304071731.dist-info/METADATA</span> vs.</div>
+    <div id="smoldyn--.--.dev------------.dist-info-METADATA"><span class="source">smoldyn-2.72.dev202304071732.dist-info/METADATA</span>
+      <a class="anchor" href="#smoldyn--.--.dev------------.dist-info-METADATA">¶</a>
+    </div>
+    </div>
+    <div class="comment">Files 1% similar despite different names
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>smoldyn</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>smoldyn</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.72.dev20230407173<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>2.72.dev20230407173<ins>2</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Smoldyn<span class="dp">·</span>simulator</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Python<span class="dp">·</span>package<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>Smoldyn<span class="dp">·</span>simulator</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>http://www.smoldyn.org/</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>http://www.smoldyn.org/</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Dilawar<span class="dp">·</span>Singh</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Dilawar<span class="dp">·</span>Singh</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>dilawar.s.rajput@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>dilawar.s.rajput@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>LGPLv3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>LGPLv3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>3<span class="dp">·</span>-<span class="dp">·</span>Alpha</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Science/Research</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Intended<span class="dp">·</span>Audience<span class="dp">·</span>::<span class="dp">·</span>Science/Research</td></tr>
+</table>  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

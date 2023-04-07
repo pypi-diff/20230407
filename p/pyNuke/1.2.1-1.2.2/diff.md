@@ -1,0 +1,116 @@
+# Comparing `tmp/pyNuke-1.2.1-py2.py3-none-any.whl.zip` & `tmp/pyNuke-1.2.2-py2.py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,10 +1,10 @@
+-Zip file size: 6338 bytes, number of entries: 8
+--rw-rw-rw-  2.0 fat      761 b- defN 23-Apr-07 17:26 pyNuke/__init__.py
++Zip file size: 6387 bytes, number of entries: 8
++-rw-rw-rw-  2.0 fat      846 b- defN 23-Apr-07 17:30 pyNuke/__init__.py
+ -rw-rw-rw-  2.0 fat    14964 b- defN 23-Apr-07 17:16 pyNuke/discordNuke.py
+ -rw-rw-rw-  2.0 fat     6274 b- defN 23-Apr-05 20:02 pyNuke/pyNuke.py
+--rw-rw-rw-  2.0 fat      683 b- defN 23-Apr-07 17:26 pyNuke/setup.py
+--rw-rw-rw-  2.0 fat      685 b- defN 23-Apr-07 17:27 pyNuke-1.2.1.dist-info/METADATA
+--rw-rw-rw-  2.0 fat      110 b- defN 23-Apr-07 17:27 pyNuke-1.2.1.dist-info/WHEEL
+--rw-rw-rw-  2.0 fat        7 b- defN 23-Apr-07 17:27 pyNuke-1.2.1.dist-info/top_level.txt
+--rw-rw-r--  2.0 fat      590 b- defN 23-Apr-07 17:27 pyNuke-1.2.1.dist-info/RECORD
+-8 files, 24074 bytes uncompressed, 5320 bytes compressed:  77.9%
++-rw-rw-rw-  2.0 fat      685 b- defN 23-Apr-07 17:30 pyNuke/setup.py
++-rw-rw-rw-  2.0 fat      687 b- defN 23-Apr-07 17:30 pyNuke-1.2.2.dist-info/METADATA
++-rw-rw-rw-  2.0 fat      110 b- defN 23-Apr-07 17:30 pyNuke-1.2.2.dist-info/WHEEL
++-rw-rw-rw-  2.0 fat        7 b- defN 23-Apr-07 17:30 pyNuke-1.2.2.dist-info/top_level.txt
++-rw-rw-r--  2.0 fat      590 b- defN 23-Apr-07 17:30 pyNuke-1.2.2.dist-info/RECORD
++8 files, 24163 bytes uncompressed, 5369 bytes compressed:  77.8%
+```
+
+## zipnote {}
+
+```diff
+@@ -6,20 +6,20 @@
+ 
+ Filename: pyNuke/pyNuke.py
+ Comment: 
+ 
+ Filename: pyNuke/setup.py
+ Comment: 
+ 
+-Filename: pyNuke-1.2.1.dist-info/METADATA
++Filename: pyNuke-1.2.2.dist-info/METADATA
+ Comment: 
+ 
+-Filename: pyNuke-1.2.1.dist-info/WHEEL
++Filename: pyNuke-1.2.2.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: pyNuke-1.2.1.dist-info/top_level.txt
++Filename: pyNuke-1.2.2.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: pyNuke-1.2.1.dist-info/RECORD
++Filename: pyNuke-1.2.2.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## pyNuke/__init__.py
+
+```diff
+@@ -1,5 +1,6 @@
+ __description__ = "A Discord Nuke. Meant to be used with good intent for testing purposes."
+-__version__ = "1.2.1"
++__version__ = "1.2.2"
+ __author__ = 'Tiago Coelho'
+ __status__ = "Beta"
++__license__ = "The Unlicense  ||  Feel free to use this software however you want."
+ __how__ = "First, import pyNuke using `import pyNuke` and import discordNuke using `from pyNuke import discordNuke`.                                                        Make a command using, for example, @bot.tree.command().                                                                                                           At the end of the command, add the following function call: await discordNuke.nukeactivate(interaction=interaction, bot=bot).                                     Now, everytime someone uses that command, you will be able to use the discord nuke on the console."
+```
+
+## pyNuke/setup.py
+
+```diff
+@@ -1,14 +1,14 @@
+ from setuptools import setup
+ 
+ setup(
+     name='pyNuke',
+-    version='1.2.1',    
++    version='1.2.2',    
+     description='A Discord Nuke. Meant to be used with good intent for testing purposes.',
+     author='Tiago Coelho',
+     author_email='melaochapanao@gmail.com',
+-    license='MIT License',
++    license='The Unlicense',
+     packages=['pyNuke'],
+     install_requires=['discord.py'],
+ 
+     classifiers=["Development Status :: 4 - Beta", 'Intended Audience :: Developers', "Programming Language :: Python",    "Programming Language :: Python :: 3",    "Programming Language :: Python :: 3.6",    "Programming Language :: Python :: 3.7",    "Programming Language :: Python :: 3.8", 'Programming Language :: Python :: 3.9'],
+ )
+```
+
+## Comparing `pyNuke-1.2.1.dist-info/METADATA` & `pyNuke-1.2.2.dist-info/METADATA`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ Metadata-Version: 2.1
+ Name: pyNuke
+-Version: 1.2.1
++Version: 1.2.2
+ Summary: A Discord Nuke. Meant to be used with good intent for testing purposes.
+ Home-page: UNKNOWN
+ Author: Tiago Coelho
+ Author-email: melaochapanao@gmail.com
+-License: MIT License
++License: The Unlicense
+ Platform: UNKNOWN
+ Classifier: Development Status :: 4 - Beta
+ Classifier: Intended Audience :: Developers
+ Classifier: Programming Language :: Python
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.6
+ Classifier: Programming Language :: Python :: 3.7
+```
+

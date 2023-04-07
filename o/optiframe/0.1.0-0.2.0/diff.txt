@@ -1,0 +1,377 @@
+--- tmp/optiframe-0.1.0.tar.gz
++++ tmp/optiframe-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "optiframe-0.1.0.tar", max compression
+│ +gzip compressed data, was "optiframe-0.2.0.tar", max compression
+│   --- optiframe-0.1.0.tar
+├── +++ optiframe-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,16 +1,16 @@
+│ │ --rw-r--r--   0        0        0     1069 2023-03-12 14:09:36.025204 optiframe-0.1.0/LICENSE
+│ │ --rw-r--r--   0        0        0     1830 2023-04-01 18:11:44.397019 optiframe-0.1.0/README.md
+│ │ --rw-r--r--   0        0        0      289 2023-04-01 14:13:27.609904 optiframe-0.1.0/optiframe/__init__.py
+│ │ --rw-r--r--   0        0        0      272 2023-04-01 14:13:27.609904 optiframe-0.1.0/optiframe/framework/__init__.py
+│ │ --rw-r--r--   0        0        0      147 2023-04-01 14:13:27.609904 optiframe-0.1.0/optiframe/framework/errors.py
+│ │ --rw-r--r--   0        0        0     3784 2023-04-01 17:47:01.813742 optiframe-0.1.0/optiframe/framework/optimizer.py
+│ │ --rw-r--r--   0        0        0     1845 2023-04-01 17:47:01.813742 optiframe-0.1.0/optiframe/framework/tasks.py
+│ │ --rw-r--r--   0        0        0        0 2023-04-01 14:13:27.609904 optiframe-0.1.0/optiframe/py.typed
+│ │ --rw-r--r--   0        0        0      175 2023-04-01 14:13:27.609904 optiframe-0.1.0/optiframe/workflow_engine/__init__.py
+│ │ --rw-r--r--   0        0        0      453 2023-03-12 17:23:55.985961 optiframe-0.1.0/optiframe/workflow_engine/errors.py
+│ │ --rw-r--r--   0        0        0     6179 2023-04-01 16:00:54.930771 optiframe-0.1.0/optiframe/workflow_engine/step.py
+│ │ --rw-r--r--   0        0        0      690 2023-04-01 15:59:01.900091 optiframe-0.1.0/optiframe/workflow_engine/task.py
+│ │ --rw-r--r--   0        0        0     1458 2023-04-01 15:59:13.556367 optiframe-0.1.0/optiframe/workflow_engine/workflow.py
+│ │ --rw-r--r--   0        0        0      720 2023-04-01 16:44:14.652373 optiframe-0.1.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2716 1970-01-01 00:00:00.000000 optiframe-0.1.0/setup.py
+│ │ --rw-r--r--   0        0        0     2396 1970-01-01 00:00:00.000000 optiframe-0.1.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1069 2023-03-29 14:01:26.561203 optiframe-0.2.0/LICENSE
+│ │ +-rw-r--r--   0        0        0     2109 2023-04-07 17:24:23.751578 optiframe-0.2.0/README.md
+│ │ +-rw-r--r--   0        0        0      297 2023-04-06 15:54:45.897421 optiframe-0.2.0/optiframe/__init__.py
+│ │ +-rw-r--r--   0        0        0      272 2023-03-29 14:01:26.561203 optiframe-0.2.0/optiframe/framework/__init__.py
+│ │ +-rw-r--r--   0        0        0     1940 2023-04-06 15:54:45.897421 optiframe-0.2.0/optiframe/framework/default_tasks.py
+│ │ +-rw-r--r--   0        0        0      147 2023-03-29 14:01:26.561203 optiframe-0.2.0/optiframe/framework/errors.py
+│ │ +-rw-r--r--   0        0        0     4425 2023-04-06 15:54:45.897421 optiframe-0.2.0/optiframe/framework/optimizer.py
+│ │ +-rw-r--r--   0        0        0      998 2023-04-06 15:54:45.897421 optiframe-0.2.0/optiframe/framework/tasks.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-29 14:01:26.561203 optiframe-0.2.0/optiframe/py.typed
+│ │ +-rw-r--r--   0        0        0      175 2023-03-29 14:01:26.561203 optiframe-0.2.0/optiframe/workflow_engine/__init__.py
+│ │ +-rw-r--r--   0        0        0      453 2023-03-29 14:01:26.561203 optiframe-0.2.0/optiframe/workflow_engine/errors.py
+│ │ +-rw-r--r--   0        0        0     6179 2023-03-29 14:01:26.561203 optiframe-0.2.0/optiframe/workflow_engine/step.py
+│ │ +-rw-r--r--   0        0        0      690 2023-03-29 14:01:26.561203 optiframe-0.2.0/optiframe/workflow_engine/task.py
+│ │ +-rw-r--r--   0        0        0     1458 2023-03-29 14:01:26.561203 optiframe-0.2.0/optiframe/workflow_engine/workflow.py
+│ │ +-rw-r--r--   0        0        0      721 2023-04-07 17:25:40.463742 optiframe-0.2.0/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2676 1970-01-01 00:00:00.000000 optiframe-0.2.0/PKG-INFO
+│ │   --- optiframe-0.1.0/LICENSE
+│ ├── +++ optiframe-0.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- optiframe-0.1.0/README.md
+│ ├── +++ optiframe-0.2.0/README.md
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,29 +1,30 @@
+│ │ -# Optiframe
+│ │ +# Optiframe [![PyPI Version](https://img.shields.io/pypi/v/optiframe)](https://pypi.org/project/optiframe/) [![License](https://img.shields.io/pypi/l/optiframe)](LICENSE)
+│ │  
+│ │  Optiframe is an **opti**mization **frame**work for writing mixed integer programs (MIPs).
+│ │  
+│ │  It allows you to structure your MIPs in a way that allows clear separation of concerns,
+│ │  high modularity and testability.
+│ │  
+│ │  ## Core Concepts
+│ │  
+│ │  - The optimization process is divided into multiple **steps** which are clearly separated:
+│ │    1. **Validation** allows you to validate the input data.
+│ │ -  2. **MIP building** allows you to modify the MIP to define the optimization problem.
+│ │ -  3. **Solving** is a pre-defined step that obtains an optimal solution for the problem.
+│ │ -  4. **Solution extraction** allows you to process the variable values of the solution into something more meaningful.
+│ │ +  2. **Pre-processing** allows you to optimize the provided data to reduce the size of the final model.
+│ │ +  3. **MIP building** allows you to modify the MIP to define the optimization problem.
+│ │ +  4. **Solving** is a pre-defined step that obtains an optimal solution for the problem.
+│ │ +  5. **Solution extraction** allows you to process the variable values of the solution into something more meaningful.
+│ │  - **Tasks** are the core components that allow you to implement functionality for each step.
+│ │    - The constructor of a task allows you to define *dependencies* for that task,
+│ │      which are automatically injected by the optimizer based on their type annotation.
+│ │    - The **execute** method allows you to implement the functionality.
+│ │      It may return data which can then be used by other tasks as a dependency.
+│ │  - **Packages** combine tasks that belong together.
+│ │      Each package must contain a task for building the MIP and can additionally contain tasks
+│ │ -    for validation and solution extraction.
+│ │ +    for validation, pre-processing and solution extraction.
+│ │      The packages are what makes Optiframe so modular:
+│ │      You can define extensions of a problem in a separate package and only include it if needed.
+│ │  - The **optimizer** allows you to configure the packages that you need.
+│ │      Afterwards, you can initialize it with the instance data and then solve the optimization problem.
+│ │  
+│ │  ## Installation & Usage
+│ │   --- optiframe-0.1.0/optiframe/framework/optimizer.py
+│ ├── +++ optiframe-0.2.0/optiframe/framework/optimizer.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -3,39 +3,40 @@
+│ │  import tempfile
+│ │  from dataclasses import dataclass
+│ │  from typing import Optional, Self, Type, Any
+│ │  
+│ │  from pulp import LpProblem, LpMinimize, LpMaximize
+│ │  
+│ │  from optiframe.workflow_engine import Step, StepData
+│ │ -from optiframe.workflow_engine.task import Task
+│ │  from optiframe.workflow_engine.workflow import Workflow, InitializedWorkflow
+│ │  
+│ │ -from .tasks import (
+│ │ +from .default_tasks import (
+│ │      CreateProblemTask,
+│ │      SolveTask,
+│ │      SolveSettings,
+│ │      ExtractSolutionObjValueTask,
+│ │      ProblemSettings,
+│ │  )
+│ │ +from .tasks import BuildMipTask, ValidateTask, PreProcessingTask, ExtractSolutionTask
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class OptimizationPackage:
+│ │ -    build_mip: Type[Task[Any]]
+│ │ -    validate: Optional[Type[Task[None]]] = None
+│ │ -    extract_solution: Optional[Type[Task[Any]]] = None
+│ │ +    build_mip: Type[BuildMipTask[Any]]
+│ │ +    validate: Optional[Type[ValidateTask]] = None
+│ │ +    pre_processing: Optional[Type[PreProcessingTask[Any]]] = None
+│ │ +    extract_solution: Optional[Type[ExtractSolutionTask[Any]]] = None
+│ │  
+│ │  
+│ │  class Optimizer:
+│ │      name: str
+│ │      sense: LpMinimize | LpMaximize
+│ │      packages: list[OptimizationPackage]
+│ │  
+│ │ -    def __init__(self, name: str, sense: LpMinimize | LpMaximize = LpMinimize):
+│ │ +    def __init__(self, name: str, sense: LpMinimize | LpMaximize):
+│ │          """
+│ │          Create a new optimizer.
+│ │  
+│ │          :param name: The name of the optimization problem.
+│ │          :param sense: Whether to minimize or maximize the objective.
+│ │          Defaults to minimize.
+│ │          """
+│ │ @@ -45,30 +46,35 @@
+│ │  
+│ │      def add_package(self, package: OptimizationPackage) -> Self:
+│ │          self.packages.append(package)
+│ │          return self
+│ │  
+│ │      def initialize(self, *data: Any) -> InitializedOptimizer:
+│ │          validate_step = Step("validate")
+│ │ +        pre_processing_step = Step("pre_processing")
+│ │          build_mip_step = Step("build_mip").add_task(CreateProblemTask)
+│ │          solve_step = Step("solve").add_task(SolveTask)
+│ │          extract_solution_step = Step("extract_solution").add_task(ExtractSolutionObjValueTask)
+│ │  
+│ │          for package in self.packages:
+│ │              if package.validate is not None:
+│ │                  validate_step.add_task(package.validate)
+│ │  
+│ │ +            if package.pre_processing is not None:
+│ │ +                pre_processing_step.add_task(package.pre_processing)
+│ │ +
+│ │              build_mip_step.add_task(package.build_mip)
+│ │  
+│ │              if package.extract_solution is not None:
+│ │                  extract_solution_step.add_task(package.extract_solution)
+│ │  
+│ │          workflow = (
+│ │              Workflow()
+│ │              .add_step(validate_step)
+│ │ +            .add_step(pre_processing_step)
+│ │              .add_step(build_mip_step)
+│ │              .add_step(solve_step)
+│ │              .add_step(extract_solution_step)
+│ │              .initialize(*data)
+│ │              .add_data(ProblemSettings(name=self.name, sense=self.sense))
+│ │          )
+│ │          return InitializedOptimizer(workflow)
+│ │ @@ -87,16 +93,27 @@
+│ │  
+│ │  class ValidatedOptimizer:
+│ │      workflow: InitializedWorkflow
+│ │  
+│ │      def __init__(self, workflow: InitializedWorkflow):
+│ │          self.workflow = workflow
+│ │  
+│ │ -    def build_mip(self) -> BuiltOptimizer:
+│ │ +    def pre_processing(self) -> PreProcessedOptimizer:
+│ │          self.workflow.execute_step(1)
+│ │ +        return PreProcessedOptimizer(self.workflow)
+│ │ +
+│ │ +
+│ │ +class PreProcessedOptimizer:
+│ │ +    workflow: InitializedWorkflow
+│ │ +
+│ │ +    def __init__(self, workflow: InitializedWorkflow):
+│ │ +        self.workflow = workflow
+│ │ +
+│ │ +    def build_mip(self) -> BuiltOptimizer:
+│ │ +        self.workflow.execute_step(2)
+│ │          return BuiltOptimizer(self.workflow)
+│ │  
+│ │  
+│ │  class BuiltOptimizer:
+│ │      workflow: InitializedWorkflow
+│ │  
+│ │      def __init__(self, workflow: InitializedWorkflow):
+│ │ @@ -111,14 +128,14 @@
+│ │              return "".join(file.readlines()[:line_limit])
+│ │  
+│ │      def solve(
+│ │          self,
+│ │          solver: Optional[Any] = None,
+│ │      ) -> StepData:
+│ │          self.workflow.add_data(SolveSettings(solver))
+│ │ -        self.workflow.execute_step(2)
+│ │ -        return self.workflow.execute_step(3)
+│ │ +        self.workflow.execute_step(3)
+│ │ +        return self.workflow.execute_step(4)
+│ │  
+│ │      def print_mip_and_solve(self, solver: Optional[Any] = None) -> StepData:
+│ │          """Print the description of the MIP and solve it."""
+│ │          print(self.get_lp_string())
+│ │          return self.solve(solver)
+│ │   --- optiframe-0.1.0/optiframe/framework/tasks.py
+│ ├── +++ optiframe-0.2.0/optiframe/framework/default_tasks.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,23 +1,24 @@
+│ │  from dataclasses import dataclass
+│ │  from typing import Any, Optional
+│ │  
+│ │  from pulp import LpProblem, LpMinimize, LpAffineExpression, LpStatus, LpMaximize
+│ │  
+│ │  from optiframe.framework.errors import InfeasibleError
+│ │ +from optiframe.framework.tasks import BuildMipTask, ExtractSolutionTask
+│ │  from optiframe.workflow_engine import Task
+│ │  
+│ │  
+│ │  @dataclass
+│ │  class ProblemSettings:
+│ │      name: str
+│ │      sense: LpMinimize | LpMaximize
+│ │  
+│ │  
+│ │ -class CreateProblemTask(Task[LpProblem]):
+│ │ +class CreateProblemTask(BuildMipTask[LpProblem]):
+│ │      problem_settings: ProblemSettings
+│ │  
+│ │      def __init__(self, problem_settings: ProblemSettings):
+│ │          self.problem_settings = problem_settings
+│ │  
+│ │      def execute(self) -> LpProblem:
+│ │          problem = LpProblem(self.problem_settings.name, self.problem_settings.sense)
+│ │ @@ -57,15 +58,15 @@
+│ │  @dataclass
+│ │  class SolutionObjValue:
+│ │      """The objective value of the solution."""
+│ │  
+│ │      objective_value: float
+│ │  
+│ │  
+│ │ -class ExtractSolutionObjValueTask(Task[SolutionObjValue]):
+│ │ +class ExtractSolutionObjValueTask(ExtractSolutionTask[SolutionObjValue]):
+│ │      problem: LpProblem
+│ │  
+│ │      def __init__(self, problem: LpProblem):
+│ │          self.problem = problem
+│ │  
+│ │      def execute(self) -> SolutionObjValue:
+│ │          cost = self.problem.objective.value()
+│ │   --- optiframe-0.1.0/optiframe/workflow_engine/step.py
+│ ├── +++ optiframe-0.2.0/optiframe/workflow_engine/step.py
+│ │┄ Files identical despite different names
+│ │   --- optiframe-0.1.0/optiframe/workflow_engine/task.py
+│ ├── +++ optiframe-0.2.0/optiframe/workflow_engine/task.py
+│ │┄ Files identical despite different names
+│ │   --- optiframe-0.1.0/optiframe/workflow_engine/workflow.py
+│ ├── +++ optiframe-0.2.0/optiframe/workflow_engine/workflow.py
+│ │┄ Files identical despite different names
+│ │   --- optiframe-0.1.0/pyproject.toml
+│ ├── +++ optiframe-0.2.0/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  [tool.poetry]
+│ │  name = "optiframe"
+│ │ -version = "0.1.0"
+│ │ -description = "A modular framework for mixed integer programming"
+│ │ +version = "0.2.0"
+│ │ +description = "A modular framework for mixed integer programming."
+│ │  authors = ["Tim Jentzsch <optiframe.projects@timjen.net>"]
+│ │  license = "MIT"
+│ │  readme = "README.md"
+│ │  repository = "https://github.com/TimJentzsch/optiframe"
+│ │  exclude = ["examples", "tests"]
+│ │  
+│ │  [tool.poetry.scripts]
+│ │   --- optiframe-0.1.0/setup.py
+│ ├── +++ optiframe-0.2.0/PKG-INFO
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,34 +1,56 @@
+│ │ -# -*- coding: utf-8 -*-
+│ │ -from setuptools import setup
+│ │ +Metadata-Version: 2.1
+│ │ +Name: optiframe
+│ │ +Version: 0.2.0
+│ │ +Summary: A modular framework for mixed integer programming.
+│ │ +Home-page: https://github.com/TimJentzsch/optiframe
+│ │ +License: MIT
+│ │ +Author: Tim Jentzsch
+│ │ +Author-email: optiframe.projects@timjen.net
+│ │ +Requires-Python: >=3.11.0rc1
+│ │ +Classifier: License :: OSI Approved :: MIT License
+│ │ +Classifier: Programming Language :: Python :: 3
+│ │ +Classifier: Programming Language :: Python :: 3.11
+│ │ +Requires-Dist: pulp (>=2.7.0,<3.0.0)
+│ │ +Project-URL: Repository, https://github.com/TimJentzsch/optiframe
+│ │ +Description-Content-Type: text/markdown
+│ │ +
+│ │ +# Optiframe [![PyPI Version](https://img.shields.io/pypi/v/optiframe)](https://pypi.org/project/optiframe/) [![License](https://img.shields.io/pypi/l/optiframe)](LICENSE)
+│ │ +
+│ │ +Optiframe is an **opti**mization **frame**work for writing mixed integer programs (MIPs).
+│ │ +
+│ │ +It allows you to structure your MIPs in a way that allows clear separation of concerns,
+│ │ +high modularity and testability.
+│ │ +
+│ │ +## Core Concepts
+│ │ +
+│ │ +- The optimization process is divided into multiple **steps** which are clearly separated:
+│ │ +  1. **Validation** allows you to validate the input data.
+│ │ +  2. **Pre-processing** allows you to optimize the provided data to reduce the size of the final model.
+│ │ +  3. **MIP building** allows you to modify the MIP to define the optimization problem.
+│ │ +  4. **Solving** is a pre-defined step that obtains an optimal solution for the problem.
+│ │ +  5. **Solution extraction** allows you to process the variable values of the solution into something more meaningful.
+│ │ +- **Tasks** are the core components that allow you to implement functionality for each step.
+│ │ +  - The constructor of a task allows you to define *dependencies* for that task,
+│ │ +    which are automatically injected by the optimizer based on their type annotation.
+│ │ +  - The **execute** method allows you to implement the functionality.
+│ │ +    It may return data which can then be used by other tasks as a dependency.
+│ │ +- **Packages** combine tasks that belong together.
+│ │ +    Each package must contain a task for building the MIP and can additionally contain tasks
+│ │ +    for validation, pre-processing and solution extraction.
+│ │ +    The packages are what makes Optiframe so modular:
+│ │ +    You can define extensions of a problem in a separate package and only include it if needed.
+│ │ +- The **optimizer** allows you to configure the packages that you need.
+│ │ +    Afterwards, you can initialize it with the instance data and then solve the optimization problem.
+│ │ +
+│ │ +## Installation & Usage
+│ │ +
+│ │ +```cli
+│ │ +pip install optiframe
+│ │ +```
+│ │  
+│ │ -packages = \
+│ │ -['optiframe', 'optiframe.framework', 'optiframe.workflow_engine']
+│ │ +Take a look at the `examples` folder for examples on how to use Optiframe!
+│ │  
+│ │ -package_data = \
+│ │ -{'': ['*']}
+│ │ +## License
+│ │  
+│ │ -install_requires = \
+│ │ -['pulp>=2.7.0,<3.0.0']
+│ │ -
+│ │ -entry_points = \
+│ │ -{'console_scripts': ['knapsack = examples.knapsack:demo']}
+│ │ -
+│ │ -setup_kwargs = {
+│ │ -    'name': 'optiframe',
+│ │ -    'version': '0.1.0',
+│ │ -    'description': 'A modular framework for mixed integer programming',
+│ │ -    'long_description': '# Optiframe\n\nOptiframe is an **opti**mization **frame**work for writing mixed integer programs (MIPs).\n\nIt allows you to structure your MIPs in a way that allows clear separation of concerns,\nhigh modularity and testability.\n\n## Core Concepts\n\n- The optimization process is divided into multiple **steps** which are clearly separated:\n  1. **Validation** allows you to validate the input data.\n  2. **MIP building** allows you to modify the MIP to define the optimization problem.\n  3. **Solving** is a pre-defined step that obtains an optimal solution for the problem.\n  4. **Solution extraction** allows you to process the variable values of the solution into something more meaningful.\n- **Tasks** are the core components that allow you to implement functionality for each step.\n  - The constructor of a task allows you to define *dependencies* for that task,\n    which are automatically injected by the optimizer based on their type annotation.\n  - The **execute** method allows you to implement the functionality.\n    It may return data which can then be used by other tasks as a dependency.\n- **Packages** combine tasks that belong together.\n    Each package must contain a task for building the MIP and can additionally contain tasks\n    for validation and solution extraction.\n    The packages are what makes Optiframe so modular:\n    You can define extensions of a problem in a separate package and only include it if needed.\n- The **optimizer** allows you to configure the packages that you need.\n    Afterwards, you can initialize it with the instance data and then solve the optimization problem.\n\n## Installation & Usage\n\n```cli\npip install optiframe\n```\n\nTake a look at the `examples` folder for examples on how to use Optiframe!\n\n## License\n\nThis project is available under the terms of the [MIT license](LICENSE).\n',
+│ │ -    'author': 'Tim Jentzsch',
+│ │ -    'author_email': 'optiframe.projects@timjen.net',
+│ │ -    'maintainer': 'None',
+│ │ -    'maintainer_email': 'None',
+│ │ -    'url': 'https://github.com/TimJentzsch/optiframe',
+│ │ -    'packages': packages,
+│ │ -    'package_data': package_data,
+│ │ -    'install_requires': install_requires,
+│ │ -    'entry_points': entry_points,
+│ │ -    'python_requires': '>=3.11.0rc1',
+│ │ -}
+│ │ +This project is available under the terms of the [MIT license](LICENSE).
+│ │  
+│ │ -
+│ │ -setup(**setup_kwargs)

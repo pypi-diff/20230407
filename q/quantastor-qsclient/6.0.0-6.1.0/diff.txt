@@ -1,0 +1,3751 @@
+--- tmp/quantastor-qsclient-6.0.0.tar.gz
++++ tmp/quantastor-qsclient-6.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "quantastor-qsclient-6.0.0.tar", last modified: Sat Nov 12 00:02:33 2022, max compression
+│ +gzip compressed data, was "quantastor-qsclient-6.1.0.tar", last modified: Fri Apr  7 17:34:13 2023, max compression
+│   --- quantastor-qsclient-6.0.0.tar
+├── +++ quantastor-qsclient-6.1.0.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxrwxrwx   0 root         (0) root         (0)        0 2022-11-12 00:02:33.172957 quantastor-qsclient-6.0.0/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     6669 2022-11-12 00:02:33.172957 quantastor-qsclient-6.0.0/PKG-INFO
+│ │ --rw-r--r--   0 root         (0) root         (0)     5480 2022-09-16 21:43:09.000000 quantastor-qsclient-6.0.0/README.md
+│ │ -drwxrwxrwx   0 root         (0) root         (0)        0 2022-11-12 00:02:33.164957 quantastor-qsclient-6.0.0/quantastor/
+│ │ --rw-r--r--   0 root         (0) root         (0)        0 2022-09-16 21:43:09.000000 quantastor-qsclient-6.0.0/quantastor/__init__.py
+│ │ --rwxr-xr-x   0 root         (0) root         (0)  1216193 2022-11-12 00:02:32.000000 quantastor-qsclient-6.0.0/quantastor/qs_client.py
+│ │ -drwxrwxrwx   0 root         (0) root         (0)        0 2022-11-12 00:02:33.168957 quantastor-qsclient-6.0.0/quantastor_qsclient.egg-info/
+│ │ --rw-rw-rw-   0 root         (0) root         (0)     6669 2022-11-12 00:02:32.000000 quantastor-qsclient-6.0.0/quantastor_qsclient.egg-info/PKG-INFO
+│ │ --rw-rw-rw-   0 root         (0) root         (0)      279 2022-11-12 00:02:33.000000 quantastor-qsclient-6.0.0/quantastor_qsclient.egg-info/SOURCES.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)        1 2022-11-12 00:02:32.000000 quantastor-qsclient-6.0.0/quantastor_qsclient.egg-info/dependency_links.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       17 2022-11-12 00:02:32.000000 quantastor-qsclient-6.0.0/quantastor_qsclient.egg-info/requires.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       11 2022-11-12 00:02:32.000000 quantastor-qsclient-6.0.0/quantastor_qsclient.egg-info/top_level.txt
+│ │ --rw-rw-rw-   0 root         (0) root         (0)       38 2022-11-12 00:02:33.172957 quantastor-qsclient-6.0.0/setup.cfg
+│ │ --rw-r--r--   0 root         (0) root         (0)      732 2022-11-12 00:02:32.000000 quantastor-qsclient-6.0.0/setup.py
+│ │ +drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 17:34:13.906807 quantastor-qsclient-6.1.0/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     6669 2023-04-07 17:34:13.906807 quantastor-qsclient-6.1.0/PKG-INFO
+│ │ +-rw-rw-r--   0 root         (0) root         (0)     5480 2022-09-16 21:38:32.000000 quantastor-qsclient-6.1.0/README.md
+│ │ +drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 17:34:13.902807 quantastor-qsclient-6.1.0/quantastor/
+│ │ +-rw-rw-r--   0 root         (0) root         (0)        0 2022-09-16 21:38:32.000000 quantastor-qsclient-6.1.0/quantastor/__init__.py
+│ │ +-rwxrwxrwx   0 root         (0) root         (0)  1232201 2023-04-07 17:34:13.000000 quantastor-qsclient-6.1.0/quantastor/qs_client.py
+│ │ +drwxrwxrwx   0 root         (0) root         (0)        0 2023-04-07 17:34:13.906807 quantastor-qsclient-6.1.0/quantastor_qsclient.egg-info/
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)     6669 2023-04-07 17:34:13.000000 quantastor-qsclient-6.1.0/quantastor_qsclient.egg-info/PKG-INFO
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)      279 2023-04-07 17:34:13.000000 quantastor-qsclient-6.1.0/quantastor_qsclient.egg-info/SOURCES.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)        1 2023-04-07 17:34:13.000000 quantastor-qsclient-6.1.0/quantastor_qsclient.egg-info/dependency_links.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       17 2023-04-07 17:34:13.000000 quantastor-qsclient-6.1.0/quantastor_qsclient.egg-info/requires.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       11 2023-04-07 17:34:13.000000 quantastor-qsclient-6.1.0/quantastor_qsclient.egg-info/top_level.txt
+│ │ +-rw-rw-rw-   0 root         (0) root         (0)       38 2023-04-07 17:34:13.906807 quantastor-qsclient-6.1.0/setup.cfg
+│ │ +-rw-rw-r--   0 root         (0) root         (0)      732 2023-04-07 17:34:13.000000 quantastor-qsclient-6.1.0/setup.py
+│ │   --- quantastor-qsclient-6.0.0/PKG-INFO
+│ ├── +++ quantastor-qsclient-6.1.0/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: quantastor-qsclient
+│ │ -Version: 6.0.0
+│ │ +Version: 6.1.0
+│ │  Summary: QuantaStor REST API python library
+│ │  Home-page: https://github.com/OSNEXUS/QSPyClient
+│ │  Author: OSNEXUS Corporation
+│ │  Author-email: support@osnexus.com
+│ │  License: UNKNOWN
+│ │  Description: # QuantaStor
+│ │          ## OSNEXUS QuantaStor Python Client Library
+│ │   --- quantastor-qsclient-6.0.0/README.md
+│ ├── +++ quantastor-qsclient-6.1.0/README.md
+│ │┄ Files identical despite different names
+│ │   --- quantastor-qsclient-6.0.0/quantastor/qs_client.py
+│ ├── +++ quantastor-qsclient-6.1.0/quantastor/qs_client.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,8 +1,8 @@
+│ │ -# Copyright (c) 2009-2022 OSNEXUS Corporation.  All rights reserved.
+│ │ +# Copyright (c) 2009-2023 OSNEXUS Corporation.  All rights reserved.
+│ │  
+│ │  # DO NOT EDIT *** CODE GENERATED BY osn_codegen *** DO NOT EDIT
+│ │  import json
+│ │  import time
+│ │  from os import environ
+│ │  from os import path
+│ │  import requests
+│ │ @@ -268,14 +268,16 @@
+│ │              shareQuotaFreeSpaceAlertThreshold='0',
+│ │              shareQuotaFreeSpaceCriticalThreshold='0',
+│ │              enableSyslogAlerts=False,
+│ │              alertEndpoints='',
+│ │              enableAlertTypes='',
+│ │              disableAlertTypes='',
+│ │              pauseAlertTypes='',
+│ │ +            snmpUsername='',
+│ │ +            snmpPassword='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'senderEmailAddress' : senderEmailAddress,  #xsd:string
+│ │              'smtpServerIpAddress' : smtpServerIpAddress,  #xsd:string
+│ │              'smtpServerPort' : smtpServerPort,  #xsd:unsignedInt
+│ │              'smtpUsername' : smtpUsername,  #xsd:string
+│ │              'smtpPassword' : smtpPassword,  #xsd:string
+│ │ @@ -288,14 +290,16 @@
+│ │              'shareQuotaFreeSpaceAlertThreshold' : shareQuotaFreeSpaceAlertThreshold,  #xsd:unsignedInt
+│ │              'shareQuotaFreeSpaceCriticalThreshold' : shareQuotaFreeSpaceCriticalThreshold,  #xsd:unsignedInt
+│ │              'enableSyslogAlerts' : enableSyslogAlerts,  #xsd:boolean
+│ │              'alertEndpoints' : alertEndpoints,  #xsd:string
+│ │              'enableAlertTypes' : enableAlertTypes,  #xsd:string
+│ │              'disableAlertTypes' : disableAlertTypes,  #xsd:string
+│ │              'pauseAlertTypes' : pauseAlertTypes,  #xsd:string
+│ │ +            'snmpUsername' : snmpUsername,  #xsd:string
+│ │ +            'snmpPassword' : snmpPassword,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('alertConfigSet', payload)
+│ │          return AlertConfigSetResponse.responseParse(jsonOutput)
+│ │  
+│ │      def alert_enum(
+│ │              self,
+│ │ @@ -437,14 +441,15 @@
+│ │              retentionCountQuarterlies='0',
+│ │              remoteSmbUsername='',
+│ │              remoteSmbPassword='',
+│ │              minFileAgeDays='0',
+│ │              maxFileAgeDays='0',
+│ │              createLinks=False,
+│ │              lazyCloneSnaps=False,
+│ │ +            remoteExportSubPath='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'networkShareId' : networkShareId,  #xsd:string
+│ │              'remoteHostname' : remoteHostname,  #xsd:string
+│ │              'remoteExportPath' : remoteExportPath,  #xsd:string
+│ │ @@ -471,14 +476,15 @@
+│ │              'retentionCountQuarterlies' : retentionCountQuarterlies,  #xsd:unsignedInt
+│ │              'remoteSmbUsername' : remoteSmbUsername,  #xsd:string
+│ │              'remoteSmbPassword' : remoteSmbPassword,  #xsd:string
+│ │              'minFileAgeDays' : minFileAgeDays,  #xsd:unsignedInt
+│ │              'maxFileAgeDays' : maxFileAgeDays,  #xsd:unsignedInt
+│ │              'createLinks' : createLinks,  #xsd:boolean
+│ │              'lazyCloneSnaps' : lazyCloneSnaps,  #xsd:boolean
+│ │ +            'remoteExportSubPath' : remoteExportSubPath,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('backupPolicyCreate', payload)
+│ │          return BackupPolicyCreateResponse.responseParse(jsonOutput)
+│ │  
+│ │      def backup_policy_delete(
+│ │              self,
+│ │ @@ -564,14 +570,15 @@
+│ │              retentionCountQuarterlies='0',
+│ │              remoteSmbUsername='',
+│ │              remoteSmbPassword='',
+│ │              minFileAgeDays='0',
+│ │              maxFileAgeDays='0',
+│ │              createLinks=False,
+│ │              lazyCloneSnaps=False,
+│ │ +            remoteExportSubPath='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'backupPolicy' : backupPolicy,  #xsd:string
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'networkShareId' : networkShareId,  #xsd:string
+│ │              'remoteHostname' : remoteHostname,  #xsd:string
+│ │ @@ -599,14 +606,15 @@
+│ │              'retentionCountQuarterlies' : retentionCountQuarterlies,  #xsd:unsignedInt
+│ │              'remoteSmbUsername' : remoteSmbUsername,  #xsd:string
+│ │              'remoteSmbPassword' : remoteSmbPassword,  #xsd:string
+│ │              'minFileAgeDays' : minFileAgeDays,  #xsd:unsignedInt
+│ │              'maxFileAgeDays' : maxFileAgeDays,  #xsd:unsignedInt
+│ │              'createLinks' : createLinks,  #xsd:boolean
+│ │              'lazyCloneSnaps' : lazyCloneSnaps,  #xsd:boolean
+│ │ +            'remoteExportSubPath' : remoteExportSubPath,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('backupPolicyModify', payload)
+│ │          return BackupPolicyModifyResponse.responseParse(jsonOutput)
+│ │  
+│ │      def backup_policy_trigger(
+│ │              self,
+│ │ @@ -643,26 +651,30 @@
+│ │              name='',
+│ │              cephClusterId='',
+│ │              quotaSize='0',
+│ │              userAccessEntry='',
+│ │              bucketAclType='0',
+│ │              objectLockMode='0',
+│ │              objectLockRetentionDays='0',
+│ │ +            enableLifecyclePolicy=False,
+│ │ +            lifecyclePolicyDays='0',
+│ │              enableNetworkShareAccess=False,
+│ │              estNumObjects='0',
+│ │              count='0',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'name' : name,  #xsd:string
+│ │              'cephClusterId' : cephClusterId,  #xsd:string
+│ │              'quotaSize' : self.size_in_bytes(quotaSize),  #xsd:unsignedLong
+│ │              'userAccessEntry' : userAccessEntry,  #xsd:string
+│ │              'bucketAclType' : bucketAclType,  #xsd:unsignedInt
+│ │              'objectLockMode' : objectLockMode,  #xsd:unsignedInt
+│ │              'objectLockRetentionDays' : objectLockRetentionDays,  #xsd:unsignedInt
+│ │ +            'enableLifecyclePolicy' : enableLifecyclePolicy,  #xsd:boolean
+│ │ +            'lifecyclePolicyDays' : lifecyclePolicyDays,  #xsd:unsignedInt
+│ │              'enableNetworkShareAccess' : enableNetworkShareAccess,  #xsd:boolean
+│ │              'estNumObjects' : estNumObjects,  #xsd:unsignedInt
+│ │              'count' : count,  #xsd:unsignedInt
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('bucketCreate', payload)
+│ │          return BucketCreateResponse.responseParse(jsonOutput)
+│ │ @@ -720,20 +732,24 @@
+│ │          return BucketLinkResponse.responseParse(jsonOutput)
+│ │  
+│ │      def bucket_modify(
+│ │              self,
+│ │              bucketId='',
+│ │              objectLockMode='0',
+│ │              objectLockRetentionDays='0',
+│ │ +            enableLifecyclePolicy=False,
+│ │ +            lifecyclePolicyDays='0',
+│ │              enableNetworkShareAccess=False,
+│ │              flags='0'):
+│ │          payload = {
+│ │              'bucketId' : bucketId,  #xsd:string
+│ │              'objectLockMode' : objectLockMode,  #xsd:unsignedInt
+│ │              'objectLockRetentionDays' : objectLockRetentionDays,  #xsd:unsignedInt
+│ │ +            'enableLifecyclePolicy' : enableLifecyclePolicy,  #xsd:boolean
+│ │ +            'lifecyclePolicyDays' : lifecyclePolicyDays,  #xsd:unsignedInt
+│ │              'enableNetworkShareAccess' : enableNetworkShareAccess,  #xsd:boolean
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('bucketModify', payload)
+│ │          return BucketModifyResponse.responseParse(jsonOutput)
+│ │  
+│ │      def bucket_orphan_cleanup(
+│ │ @@ -797,14 +813,112 @@
+│ │              'bucketId' : bucketId,  #xsd:string
+│ │              'cephUserAccessId' : cephUserAccessId,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('bucketUserAssocGet', payload)
+│ │          return BucketUserAssocGetResponse.responseParse(jsonOutput)
+│ │  
+│ │ +    def ceph_client_conf_export(
+│ │ +            self,
+│ │ +            cephCluster='',
+│ │ +            outfile='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'cephCluster' : cephCluster,  #xsd:string
+│ │ +            'outfile' : outfile,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cephClientConfExport', payload)
+│ │ +        return CephClientConfExportResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def ceph_client_keyring_create(
+│ │ +            self,
+│ │ +            name='',
+│ │ +            clientKeyType='0',
+│ │ +            resourceList='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'name' : name,  #xsd:string
+│ │ +            'clientKeyType' : clientKeyType,  #xsd:unsignedInt
+│ │ +            'resourceList' : resourceList,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cephClientKeyringCreate', payload)
+│ │ +        return CephClientKeyringCreateResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def ceph_client_keyring_delete(
+│ │ +            self,
+│ │ +            cephClient='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'cephClient' : cephClient,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cephClientKeyringDelete', payload)
+│ │ +        return CephClientKeyringDeleteResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def ceph_client_keyring_enum(
+│ │ +            self,
+│ │ +            cephClusterId='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'cephClusterId' : cephClusterId,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cephClientKeyringEnum', payload)
+│ │ +        return CephClientKeyringEnumResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def ceph_client_keyring_export(
+│ │ +            self,
+│ │ +            cephClient='',
+│ │ +            outfile='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'cephClient' : cephClient,  #xsd:string
+│ │ +            'outfile' : outfile,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cephClientKeyringExport', payload)
+│ │ +        return CephClientKeyringExportResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def ceph_client_keyring_get(
+│ │ +            self,
+│ │ +            cephClient='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'cephClient' : cephClient,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cephClientKeyringGet', payload)
+│ │ +        return CephClientKeyringGetResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def ceph_client_keyring_resource_assoc_enum(
+│ │ +            self,
+│ │ +            cephClient='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'cephClient' : cephClient,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cephClientKeyringResourceAssocEnum', payload)
+│ │ +        return CephClientKeyringResourceAssocEnumResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def ceph_client_keyring_resource_assoc_get(
+│ │ +            self,
+│ │ +            cephClientId='',
+│ │ +            resourceId='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'cephClientId' : cephClientId,  #xsd:string
+│ │ +            'resourceId' : resourceId,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cephClientKeyringResourceAssocGet', payload)
+│ │ +        return CephClientKeyringResourceAssocGetResponse.responseParse(jsonOutput)
+│ │ +
+│ │      def ceph_cluster_add_node(
+│ │              self,
+│ │              clusterId='',
+│ │              storageSystemId='',
+│ │              interfacePortId='',
+│ │              publicnetwork='',
+│ │              clusternetwork='',
+│ │ @@ -1096,26 +1210,28 @@
+│ │              scalingFactor='0',
+│ │              maxReplicaCount='0',
+│ │              minReplicaCount='0',
+│ │              cephPoolType='',
+│ │              crushProfile='',
+│ │              activeMdsCount='0',
+│ │              standbyMdsCount='0',
+│ │ +            autoConfigNfs=False,
+│ │              flags='0'):
+│ │          payload = {
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'cephClusterId' : cephClusterId,  #xsd:string
+│ │              'scalingFactor' : scalingFactor,  #xsd:unsignedInt
+│ │              'maxReplicaCount' : maxReplicaCount,  #xsd:unsignedInt
+│ │              'minReplicaCount' : minReplicaCount,  #xsd:unsignedInt
+│ │              'cephPoolType' : cephPoolType,  #xsd:string
+│ │              'crushProfile' : crushProfile,  #xsd:string
+│ │              'activeMdsCount' : activeMdsCount,  #xsd:unsignedInt
+│ │              'standbyMdsCount' : standbyMdsCount,  #xsd:unsignedInt
+│ │ +            'autoConfigNfs' : autoConfigNfs,  #xsd:boolean
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('cephFilesystemCreate', payload)
+│ │          return CephFilesystemCreateResponse.responseParse(jsonOutput)
+│ │  
+│ │      def ceph_filesystem_delete(
+│ │              self,
+│ │ @@ -1453,25 +1569,27 @@
+│ │              zone='',
+│ │              zoneGroup='',
+│ │              dataPoolType='',
+│ │              maxReplicaCount='0',
+│ │              minReplicaCount='0',
+│ │              poolProfile='',
+│ │              scalingFactor='0',
+│ │ +            autoConfigNfs=False,
+│ │              flags='0'):
+│ │          payload = {
+│ │              'cephClusterId' : cephClusterId,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'zone' : zone,  #xsd:string
+│ │              'zoneGroup' : zoneGroup,  #xsd:string
+│ │              'dataPoolType' : dataPoolType,  #xsd:string
+│ │              'maxReplicaCount' : maxReplicaCount,  #xsd:unsignedInt
+│ │              'minReplicaCount' : minReplicaCount,  #xsd:unsignedInt
+│ │              'poolProfile' : poolProfile,  #xsd:string
+│ │              'scalingFactor' : scalingFactor,  #xsd:unsignedInt
+│ │ +            'autoConfigNfs' : autoConfigNfs,  #xsd:boolean
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('cephObjectPoolGroupCreate', payload)
+│ │          return CephObjectPoolGroupCreateResponse.responseParse(jsonOutput)
+│ │  
+│ │      def ceph_object_pool_group_delete(
+│ │              self,
+│ │ @@ -1892,179 +2010,14 @@
+│ │              'cephRadosGatewayId' : cephRadosGatewayId,  #xsd:string
+│ │              'modType' : modType,  #xsd:unsignedInt
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('cephRadosGatewayStartStopRestart', payload)
+│ │          return CephRadosGatewayStartStopRestartResponse.responseParse(jsonOutput)
+│ │  
+│ │ -    def cloud_backup_schedule_assoc_enum(
+│ │ -            self,
+│ │ -            schedule='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'schedule' : schedule,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleAssocEnum', payload)
+│ │ -        return CloudBackupScheduleAssocEnumResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_assoc_get(
+│ │ -            self,
+│ │ -            scheduleId='',
+│ │ -            storageVolumeId=''):
+│ │ -        payload = {
+│ │ -            'scheduleId' : scheduleId,  #xsd:string
+│ │ -            'storageVolumeId' : storageVolumeId,  #xsd:string
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleAssocGet', payload)
+│ │ -        return CloudBackupScheduleAssocGetResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_create(
+│ │ -            self,
+│ │ -            name='',
+│ │ -            description='',
+│ │ -            cloudContainerId='',
+│ │ -            priority='0',
+│ │ -            setEnabled='0',
+│ │ -            startDate='',
+│ │ -            maxBackups='0',
+│ │ -            daysOfWeek='0',
+│ │ -            hoursOfDay='0',
+│ │ -            storageVolumeList='',
+│ │ -            scheduleType='0',
+│ │ -            delayInterval='0',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'name' : name,  #xsd:string
+│ │ -            'description' : description,  #xsd:string
+│ │ -            'cloudContainerId' : cloudContainerId,  #xsd:string
+│ │ -            'priority' : priority,  #xsd:unsignedInt
+│ │ -            'setEnabled' : setEnabled,  #xsd:unsignedInt
+│ │ -            'startDate' : startDate,  #xsd:dateTime
+│ │ -            'maxBackups' : maxBackups,  #xsd:unsignedInt
+│ │ -            'daysOfWeek' : daysOfWeek,  #xsd:unsignedInt
+│ │ -            'hoursOfDay' : hoursOfDay,  #xsd:unsignedInt
+│ │ -            'storageVolumeList' : storageVolumeList,  #xsd:string
+│ │ -            'scheduleType' : scheduleType,  #xsd:unsignedInt
+│ │ -            'delayInterval' : delayInterval,  #xsd:unsignedInt
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleCreate', payload)
+│ │ -        return CloudBackupScheduleCreateResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_delete(
+│ │ -            self,
+│ │ -            schedule='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'schedule' : schedule,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleDelete', payload)
+│ │ -        return CloudBackupScheduleDeleteResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_disable(
+│ │ -            self,
+│ │ -            schedule='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'schedule' : schedule,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleDisable', payload)
+│ │ -        return CloudBackupScheduleDisableResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_enable(
+│ │ -            self,
+│ │ -            schedule='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'schedule' : schedule,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleEnable', payload)
+│ │ -        return CloudBackupScheduleEnableResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_enum(
+│ │ -            self,
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleEnum', payload)
+│ │ -        return CloudBackupScheduleEnumResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_get(
+│ │ -            self,
+│ │ -            schedule='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'schedule' : schedule,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleGet', payload)
+│ │ -        return CloudBackupScheduleGetResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_modify(
+│ │ -            self,
+│ │ -            schedule='',
+│ │ -            name='',
+│ │ -            description='',
+│ │ -            cloudContainerId='',
+│ │ -            setEnabled='0',
+│ │ -            startDate='',
+│ │ -            maxBackups='0',
+│ │ -            daysOfWeek='0',
+│ │ -            hoursOfDay='0',
+│ │ -            scheduleType='0',
+│ │ -            delayInterval='0',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'schedule' : schedule,  #xsd:string
+│ │ -            'name' : name,  #xsd:string
+│ │ -            'description' : description,  #xsd:string
+│ │ -            'cloudContainerId' : cloudContainerId,  #xsd:string
+│ │ -            'setEnabled' : setEnabled,  #xsd:unsignedInt
+│ │ -            'startDate' : startDate,  #xsd:dateTime
+│ │ -            'maxBackups' : maxBackups,  #xsd:unsignedInt
+│ │ -            'daysOfWeek' : daysOfWeek,  #xsd:unsignedInt
+│ │ -            'hoursOfDay' : hoursOfDay,  #xsd:unsignedInt
+│ │ -            'scheduleType' : scheduleType,  #xsd:unsignedInt
+│ │ -            'delayInterval' : delayInterval,  #xsd:unsignedInt
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleModify', payload)
+│ │ -        return CloudBackupScheduleModifyResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_trigger(
+│ │ -            self,
+│ │ -            schedule='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'schedule' : schedule,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleTrigger', payload)
+│ │ -        return CloudBackupScheduleTriggerResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def cloud_backup_schedule_volume_add_remove(
+│ │ -            self,
+│ │ -            schedule='',
+│ │ -            modType='0',
+│ │ -            storageVolumeList='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'schedule' : schedule,  #xsd:string
+│ │ -            'modType' : modType,  #xsd:unsignedInt
+│ │ -            'storageVolumeList' : storageVolumeList,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('cloudBackupScheduleVolumeAddRemove', payload)
+│ │ -        return CloudBackupScheduleVolumeAddRemoveResponse.responseParse(jsonOutput)
+│ │ -
+│ │      def cloud_container_add(
+│ │              self,
+│ │              credentialsId='',
+│ │              locationId='',
+│ │              encryptionKey='',
+│ │              storageUrl='',
+│ │              enableNfs=False,
+│ │ @@ -2252,14 +2205,25 @@
+│ │          payload = {
+│ │              'container' : container,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('cloudContainerRepair', payload)
+│ │          return CloudContainerRepairResponse.responseParse(jsonOutput)
+│ │  
+│ │ +    def cloud_container_rescan(
+│ │ +            self,
+│ │ +            container='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'container' : container,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cloudContainerRescan', payload)
+│ │ +        return CloudContainerRescanResponse.responseParse(jsonOutput)
+│ │ +
+│ │      def cloud_provider_add(
+│ │              self,
+│ │              name='',
+│ │              description='',
+│ │              locationName='',
+│ │              locationTag='',
+│ │              locationEndpoint='',
+│ │ @@ -2410,14 +2374,60 @@
+│ │          payload = {
+│ │              'providerId' : providerId,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('cloudProviderRemove', payload)
+│ │          return CloudProviderRemoveResponse.responseParse(jsonOutput)
+│ │  
+│ │ +    def cloud_provider_storage_class_add(
+│ │ +            self,
+│ │ +            providerId='',
+│ │ +            storageClassTag='',
+│ │ +            description='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'providerId' : providerId,  #xsd:string
+│ │ +            'storageClassTag' : storageClassTag,  #xsd:string
+│ │ +            'description' : description,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cloudProviderStorageClassAdd', payload)
+│ │ +        return CloudProviderStorageClassAddResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def cloud_provider_storage_class_enum(
+│ │ +            self,
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cloudProviderStorageClassEnum', payload)
+│ │ +        return CloudProviderStorageClassEnumResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def cloud_provider_storage_class_get(
+│ │ +            self,
+│ │ +            storageClass='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'storageClass' : storageClass,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cloudProviderStorageClassGet', payload)
+│ │ +        return CloudProviderStorageClassGetResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def cloud_provider_storage_class_remove(
+│ │ +            self,
+│ │ +            storageClass='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'storageClass' : storageClass,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('cloudProviderStorageClassRemove', payload)
+│ │ +        return CloudProviderStorageClassRemoveResponse.responseParse(jsonOutput)
+│ │ +
+│ │      def cluster_ring_create(
+│ │              self,
+│ │              siteClusterId='',
+│ │              ring='0',
+│ │              mcastPort='0',
+│ │              bindNetAddress='',
+│ │              memberAddresses='',
+│ │ @@ -2826,14 +2836,38 @@
+│ │              'description' : description,  #xsd:string
+│ │              'enclosureLayoutId' : enclosureLayoutId,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('externalSystemModify', payload)
+│ │          return ExternalSystemModifyResponse.responseParse(jsonOutput)
+│ │  
+│ │ +    def external_system_pool_enum(
+│ │ +            self,
+│ │ +            externalSystem='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'externalSystem' : externalSystem,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('externalSystemPoolEnum', payload)
+│ │ +        return ExternalSystemPoolEnumResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def external_system_pool_get(
+│ │ +            self,
+│ │ +            externalSystemPool='',
+│ │ +            externalSystem='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'externalSystemPool' : externalSystemPool,  #xsd:string
+│ │ +            'externalSystem' : externalSystem,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('externalSystemPoolGet', payload)
+│ │ +        return ExternalSystemPoolGetResponse.responseParse(jsonOutput)
+│ │ +
+│ │      def external_system_port_enum(
+│ │              self,
+│ │              externalSystem='',
+│ │              externalSystemPortGroup='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'externalSystem' : externalSystem,  #xsd:string
+│ │ @@ -2919,14 +2953,40 @@
+│ │              'storageSystem' : storageSystem,  #xsd:string
+│ │              'externalSystemMediaList' : externalSystemMediaList,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('externalSystemSwAdapterConfigAdd', payload)
+│ │          return ExternalSystemSwAdapterConfigAddResponse.responseParse(jsonOutput)
+│ │  
+│ │ +    def external_system_volume_enum(
+│ │ +            self,
+│ │ +            externalSystem='',
+│ │ +            externalSystemPool='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'externalSystem' : externalSystem,  #xsd:string
+│ │ +            'externalSystemPool' : externalSystemPool,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('externalSystemVolumeEnum', payload)
+│ │ +        return ExternalSystemVolumeEnumResponse.responseParse(jsonOutput)
+│ │ +
+│ │ +    def external_system_volume_get(
+│ │ +            self,
+│ │ +            externalSystemVolume='',
+│ │ +            externalSystem='',
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'externalSystemVolume' : externalSystemVolume,  #xsd:string
+│ │ +            'externalSystem' : externalSystem,  #xsd:string
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('externalSystemVolumeGet', payload)
+│ │ +        return ExternalSystemVolumeGetResponse.responseParse(jsonOutput)
+│ │ +
+│ │      def fc_target_port_disable(
+│ │              self,
+│ │              port='',
+│ │              storageSystem='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'port' : port,  #xsd:string
+│ │ @@ -3480,43 +3540,49 @@
+│ │              }
+│ │          jsonOutput = self.make_call('hwDiskGet', payload)
+│ │          return HwDiskGetResponse.responseParse(jsonOutput)
+│ │  
+│ │      def hw_disk_identify(
+│ │              self,
+│ │              diskIdList='',
+│ │ +            controllerId='',
+│ │              durationInSeconds='0',
+│ │              blinkType='0',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'diskIdList' : diskIdList,  #xsd:string
+│ │ +            'controllerId' : controllerId,  #xsd:string
+│ │              'durationInSeconds' : durationInSeconds,  #xsd:unsignedInt
+│ │              'blinkType' : blinkType,  #xsd:unsignedInt
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('hwDiskIdentify', payload)
+│ │          return HwDiskIdentifyResponse.responseParse(jsonOutput)
+│ │  
+│ │      def hw_disk_mark_good(
+│ │              self,
+│ │              diskIdList='',
+│ │ +            controllerId='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'diskIdList' : diskIdList,  #xsd:string
+│ │ +            'controllerId' : controllerId,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('hwDiskMarkGood', payload)
+│ │          return HwDiskMarkGoodResponse.responseParse(jsonOutput)
+│ │  
+│ │      def hw_disk_mark_hot_spare(
+│ │              self,
+│ │              diskIdList='',
+│ │ +            controllerId='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'diskIdList' : diskIdList,  #xsd:string
+│ │ +            'controllerId' : controllerId,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('hwDiskMarkHotSpare', payload)
+│ │          return HwDiskMarkHotSpareResponse.responseParse(jsonOutput)
+│ │  
+│ │      def hw_disk_modify(
+│ │              self,
+│ │ @@ -3532,17 +3598,19 @@
+│ │              }
+│ │          jsonOutput = self.make_call('hwDiskModify', payload)
+│ │          return HwDiskModifyResponse.responseParse(jsonOutput)
+│ │  
+│ │      def hw_disk_remove(
+│ │              self,
+│ │              diskIdList='',
+│ │ +            controllerId='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'diskIdList' : diskIdList,  #xsd:string
+│ │ +            'controllerId' : controllerId,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('hwDiskRemove', payload)
+│ │          return HwDiskRemoveResponse.responseParse(jsonOutput)
+│ │  
+│ │      def hw_disk_search(
+│ │              self,
+│ │ @@ -3554,17 +3622,19 @@
+│ │              }
+│ │          jsonOutput = self.make_call('hwDiskSearch', payload)
+│ │          return HwDiskSearchResponse.responseParse(jsonOutput)
+│ │  
+│ │      def hw_disk_unmark_hot_spare(
+│ │              self,
+│ │              diskIdList='',
+│ │ +            controllerId='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'diskIdList' : diskIdList,  #xsd:string
+│ │ +            'controllerId' : controllerId,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('hwDiskUnmarkHotSpare', payload)
+│ │          return HwDiskUnmarkHotSpareResponse.responseParse(jsonOutput)
+│ │  
+│ │      def hw_enclosure_enum(
+│ │              self,
+│ │ @@ -4703,14 +4773,15 @@
+│ │              parentShareId='',
+│ │              enableEncryption=False,
+│ │              encryptionKeyPassphrase='',
+│ │              count='0',
+│ │              disableSmbSnapsDir=False,
+│ │              disableNfsSnapsDir=False,
+│ │              enableNfsSnapBrowsing=False,
+│ │ +            immutabilityMode='0',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'provisionableId' : provisionableId,  #xsd:string
+│ │              'isPublic' : isPublic,  #xsd:boolean
+│ │              'isActive' : isActive,  #xsd:boolean
+│ │ @@ -4737,14 +4808,15 @@
+│ │              'parentShareId' : parentShareId,  #xsd:string
+│ │              'enableEncryption' : enableEncryption,  #xsd:boolean
+│ │              'encryptionKeyPassphrase' : encryptionKeyPassphrase,  #xsd:string
+│ │              'count' : count,  #xsd:unsignedInt
+│ │              'disableSmbSnapsDir' : disableSmbSnapsDir,  #xsd:boolean
+│ │              'disableNfsSnapsDir' : disableNfsSnapsDir,  #xsd:boolean
+│ │              'enableNfsSnapBrowsing' : enableNfsSnapBrowsing,  #xsd:boolean
+│ │ +            'immutabilityMode' : immutabilityMode,  #xsd:unsignedInt
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('networkShareCreateEx', payload)
+│ │          return NetworkShareCreateExResponse.responseParse(jsonOutput)
+│ │  
+│ │      def network_share_delete(
+│ │              self,
+│ │ @@ -4756,17 +4828,21 @@
+│ │              }
+│ │          jsonOutput = self.make_call('networkShareDelete', payload)
+│ │          return NetworkShareDeleteResponse.responseParse(jsonOutput)
+│ │  
+│ │      def network_share_delete_ex(
+│ │              self,
+│ │              networkShareList='',
+│ │ +            searchParams='',
+│ │ +            deleteOptions='0',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'networkShareList' : networkShareList,  #xsd:string
+│ │ +            'searchParams' : searchParams,  #xsd:string
+│ │ +            'deleteOptions' : deleteOptions,  #xsd:unsignedInt
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('networkShareDeleteEx', payload)
+│ │          return NetworkShareDeleteExResponse.responseParse(jsonOutput)
+│ │  
+│ │      def network_share_disable(
+│ │              self,
+│ │ @@ -4786,27 +4862,14 @@
+│ │          payload = {
+│ │              'networkShare' : networkShare,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('networkShareEnable', payload)
+│ │          return NetworkShareEnableResponse.responseParse(jsonOutput)
+│ │  
+│ │ -    def network_share_encrypted_start(
+│ │ -            self,
+│ │ -            networkShare='',
+│ │ -            encryptionKeyPassphrase='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'networkShare' : networkShare,  #xsd:string
+│ │ -            'encryptionKeyPassphrase' : encryptionKeyPassphrase,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('networkShareEncryptedStart', payload)
+│ │ -        return NetworkShareEncryptedStartResponse.responseParse(jsonOutput)
+│ │ -
+│ │      def network_share_encryption_key_export(
+│ │              self,
+│ │              networkShare='',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'networkShare' : networkShare,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │ @@ -5242,24 +5305,26 @@
+│ │              nfsMode='0',
+│ │              enableKerberos=False,
+│ │              defaultOptions='',
+│ │              reserved='',
+│ │              nfsKerberosMode='0',
+│ │              disableBrowsing=False,
+│ │              defaultNfsSecurityPolicy='0',
+│ │ +            nfsServerType='0',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'storageSystem' : storageSystem,  #xsd:string
+│ │              'nfsMode' : nfsMode,  #xsd:unsignedInt
+│ │              'enableKerberos' : enableKerberos,  #xsd:boolean
+│ │              'defaultOptions' : defaultOptions,  #xsd:string
+│ │              'reserved' : reserved,  #xsd:string
+│ │              'nfsKerberosMode' : nfsKerberosMode,  #xsd:unsignedInt
+│ │              'disableBrowsing' : disableBrowsing,  #xsd:boolean
+│ │              'defaultNfsSecurityPolicy' : defaultNfsSecurityPolicy,  #xsd:unsignedInt
+│ │ +            'nfsServerType' : nfsServerType,  #xsd:unsignedInt
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('networkShareNfsConfig', payload)
+│ │          return NetworkShareNfsConfigResponse.responseParse(jsonOutput)
+│ │  
+│ │      def network_share_remove_group_quota(
+│ │              self,
+│ │ @@ -6242,14 +6307,16 @@
+│ │              retentionCountMonthliesDst='0',
+│ │              retentionCountQuarterliesDst='0',
+│ │              reuseSourceSnapshot=False,
+│ │              reuseTargetChkpnt=False,
+│ │              scheduleActivationVifId='',
+│ │              lazyCloneSnaps=False,
+│ │              retentionCountSumReports='0',
+│ │ +            enableRecursiveNestedShares=False,
+│ │ +            enableConsistencyGroup=False,
+│ │              flags='0'):
+│ │          payload = {
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'resourceGroupId' : resourceGroupId,  #xsd:string
+│ │              'storageSystemLinkId' : storageSystemLinkId,  #xsd:string
+│ │              'targetResourceGroupId' : targetResourceGroupId,  #xsd:string
+│ │ @@ -6276,14 +6343,16 @@
+│ │              'retentionCountMonthliesDst' : retentionCountMonthliesDst,  #xsd:unsignedInt
+│ │              'retentionCountQuarterliesDst' : retentionCountQuarterliesDst,  #xsd:unsignedInt
+│ │              'reuseSourceSnapshot' : reuseSourceSnapshot,  #xsd:boolean
+│ │              'reuseTargetChkpnt' : reuseTargetChkpnt,  #xsd:boolean
+│ │              'scheduleActivationVifId' : scheduleActivationVifId,  #xsd:string
+│ │              'lazyCloneSnaps' : lazyCloneSnaps,  #xsd:boolean
+│ │              'retentionCountSumReports' : retentionCountSumReports,  #xsd:unsignedInt
+│ │ +            'enableRecursiveNestedShares' : enableRecursiveNestedShares,  #xsd:boolean
+│ │ +            'enableConsistencyGroup' : enableConsistencyGroup,  #xsd:boolean
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('replicationScheduleCreate', payload)
+│ │          return ReplicationScheduleCreateResponse.responseParse(jsonOutput)
+│ │  
+│ │      def replication_schedule_deactivate_checkpoints(
+│ │              self,
+│ │ @@ -6380,14 +6449,16 @@
+│ │              retentionCountMonthliesDst='0',
+│ │              retentionCountQuarterliesDst='0',
+│ │              reuseSourceSnapshot=False,
+│ │              reuseTargetChkpnt=False,
+│ │              scheduleActivationVifId='',
+│ │              lazyCloneSnaps=False,
+│ │              retentionCountSumReports='0',
+│ │ +            enableRecursiveNestedShares=False,
+│ │ +            enableConsistencyGroup=False,
+│ │              flags='0'):
+│ │          payload = {
+│ │              'schedule' : schedule,  #xsd:string
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'resourceGroupId' : resourceGroupId,  #xsd:string
+│ │              'setEnabled' : setEnabled,  #xsd:unsignedInt
+│ │ @@ -6409,14 +6480,16 @@
+│ │              'retentionCountMonthliesDst' : retentionCountMonthliesDst,  #xsd:unsignedInt
+│ │              'retentionCountQuarterliesDst' : retentionCountQuarterliesDst,  #xsd:unsignedInt
+│ │              'reuseSourceSnapshot' : reuseSourceSnapshot,  #xsd:boolean
+│ │              'reuseTargetChkpnt' : reuseTargetChkpnt,  #xsd:boolean
+│ │              'scheduleActivationVifId' : scheduleActivationVifId,  #xsd:string
+│ │              'lazyCloneSnaps' : lazyCloneSnaps,  #xsd:boolean
+│ │              'retentionCountSumReports' : retentionCountSumReports,  #xsd:unsignedInt
+│ │ +            'enableRecursiveNestedShares' : enableRecursiveNestedShares,  #xsd:boolean
+│ │ +            'enableConsistencyGroup' : enableConsistencyGroup,  #xsd:boolean
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('replicationScheduleModify', payload)
+│ │          return ReplicationScheduleModifyResponse.responseParse(jsonOutput)
+│ │  
+│ │      def replication_schedule_trigger(
+│ │              self,
+│ │ @@ -6502,14 +6575,15 @@
+│ │              name='',
+│ │              description='',
+│ │              reportToEmail='',
+│ │              reportToAlertEmails=False,
+│ │              reportTypes='0',
+│ │              outputFormat='0',
+│ │              setEnabled='0',
+│ │ +            scheduleType='0',
+│ │              initialStartDate='',
+│ │              delayInterval='0',
+│ │              daysOfWeek='0',
+│ │              hoursOfDay='0',
+│ │              offsetMinutes='0',
+│ │              maxSubdirDepth='0',
+│ │              maxSubdirsPerShare='0',
+│ │ @@ -6520,14 +6594,15 @@
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'reportToEmail' : reportToEmail,  #xsd:string
+│ │              'reportToAlertEmails' : reportToAlertEmails,  #xsd:boolean
+│ │              'reportTypes' : reportTypes,  #xsd:unsignedInt
+│ │              'outputFormat' : outputFormat,  #xsd:unsignedInt
+│ │              'setEnabled' : setEnabled,  #xsd:unsignedInt
+│ │ +            'scheduleType' : scheduleType,  #xsd:unsignedInt
+│ │              'initialStartDate' : initialStartDate,  #xsd:dateTime
+│ │              'delayInterval' : delayInterval,  #xsd:unsignedInt
+│ │              'daysOfWeek' : daysOfWeek,  #xsd:unsignedInt
+│ │              'hoursOfDay' : hoursOfDay,  #xsd:unsignedInt
+│ │              'offsetMinutes' : offsetMinutes,  #xsd:unsignedInt
+│ │              'maxSubdirDepth' : maxSubdirDepth,  #xsd:unsignedInt
+│ │              'maxSubdirsPerShare' : maxSubdirsPerShare,  #xsd:unsignedInt
+│ │ @@ -6597,14 +6672,15 @@
+│ │              name='',
+│ │              description='',
+│ │              reportToEmail='',
+│ │              reportToAlertEmails=False,
+│ │              reportTypes='0',
+│ │              outputFormat='0',
+│ │              setEnabled='0',
+│ │ +            scheduleType='0',
+│ │              initialStartDate='',
+│ │              delayInterval='0',
+│ │              daysOfWeek='0',
+│ │              hoursOfDay='0',
+│ │              offsetMinutes='0',
+│ │              maxSubdirDepth='0',
+│ │              maxSubdirsPerShare='0',
+│ │ @@ -6615,14 +6691,15 @@
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'reportToEmail' : reportToEmail,  #xsd:string
+│ │              'reportToAlertEmails' : reportToAlertEmails,  #xsd:boolean
+│ │              'reportTypes' : reportTypes,  #xsd:unsignedInt
+│ │              'outputFormat' : outputFormat,  #xsd:unsignedInt
+│ │              'setEnabled' : setEnabled,  #xsd:unsignedInt
+│ │ +            'scheduleType' : scheduleType,  #xsd:unsignedInt
+│ │              'initialStartDate' : initialStartDate,  #xsd:dateTime
+│ │              'delayInterval' : delayInterval,  #xsd:unsignedInt
+│ │              'daysOfWeek' : daysOfWeek,  #xsd:unsignedInt
+│ │              'hoursOfDay' : hoursOfDay,  #xsd:unsignedInt
+│ │              'offsetMinutes' : offsetMinutes,  #xsd:unsignedInt
+│ │              'maxSubdirDepth' : maxSubdirDepth,  #xsd:unsignedInt
+│ │              'maxSubdirsPerShare' : maxSubdirsPerShare,  #xsd:unsignedInt
+│ │ @@ -7699,14 +7776,27 @@
+│ │          payload = {
+│ │              'storageSystem' : storageSystem,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('siteClusterRestartServices', payload)
+│ │          return SiteClusterRestartServicesResponse.responseParse(jsonOutput)
+│ │  
+│ │ +    def site_cluster_set_maintenance_mode(
+│ │ +            self,
+│ │ +            siteCluster='',
+│ │ +            enable=False,
+│ │ +            flags='0'):
+│ │ +        payload = {
+│ │ +            'siteCluster' : siteCluster,  #xsd:string
+│ │ +            'enable' : enable,  #xsd:boolean
+│ │ +            'flags' : flags,  #xsd:unsignedInt
+│ │ +            }
+│ │ +        jsonOutput = self.make_call('siteClusterSetMaintenanceMode', payload)
+│ │ +        return SiteClusterSetMaintenanceModeResponse.responseParse(jsonOutput)
+│ │ +
+│ │      def site_storage_system_add_remove(
+│ │              self,
+│ │              site='',
+│ │              modType='0',
+│ │              storageSystemList='',
+│ │              flags='0'):
+│ │          payload = {
+│ │ @@ -7881,14 +7971,16 @@
+│ │              offsetMinutes='0',
+│ │              retentionCountHourlies='0',
+│ │              retentionCountDailies='0',
+│ │              retentionCountWeeklies='0',
+│ │              retentionCountMonthlies='0',
+│ │              retentionCountQuarterlies='0',
+│ │              lazyCloneSnaps=False,
+│ │ +            enableRecursiveNestedShares=False,
+│ │ +            enableConsistencyGroup=False,
+│ │              flags='0'):
+│ │          payload = {
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'resourceGroupId' : resourceGroupId,  #xsd:string
+│ │              'setEnabled' : setEnabled,  #xsd:unsignedInt
+│ │              'startDate' : startDate,  #xsd:dateTime
+│ │ @@ -7902,14 +7994,16 @@
+│ │              'offsetMinutes' : offsetMinutes,  #xsd:unsignedInt
+│ │              'retentionCountHourlies' : retentionCountHourlies,  #xsd:unsignedInt
+│ │              'retentionCountDailies' : retentionCountDailies,  #xsd:unsignedInt
+│ │              'retentionCountWeeklies' : retentionCountWeeklies,  #xsd:unsignedInt
+│ │              'retentionCountMonthlies' : retentionCountMonthlies,  #xsd:unsignedInt
+│ │              'retentionCountQuarterlies' : retentionCountQuarterlies,  #xsd:unsignedInt
+│ │              'lazyCloneSnaps' : lazyCloneSnaps,  #xsd:boolean
+│ │ +            'enableRecursiveNestedShares' : enableRecursiveNestedShares,  #xsd:boolean
+│ │ +            'enableConsistencyGroup' : enableConsistencyGroup,  #xsd:boolean
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('snapshotScheduleCreate', payload)
+│ │          return SnapshotScheduleCreateResponse.responseParse(jsonOutput)
+│ │  
+│ │      def snapshot_schedule_delete(
+│ │              self,
+│ │ @@ -7980,14 +8074,16 @@
+│ │              offsetMinutes='0',
+│ │              retentionCountHourlies='0',
+│ │              retentionCountDailies='0',
+│ │              retentionCountWeeklies='0',
+│ │              retentionCountMonthlies='0',
+│ │              retentionCountQuarterlies='0',
+│ │              lazyCloneSnaps=False,
+│ │ +            enableRecursiveNestedShares=False,
+│ │ +            enableConsistencyGroup=False,
+│ │              flags='0'):
+│ │          payload = {
+│ │              'schedule' : schedule,  #xsd:string
+│ │              'name' : name,  #xsd:string
+│ │              'description' : description,  #xsd:string
+│ │              'resourceGroupId' : resourceGroupId,  #xsd:string
+│ │              'setEnabled' : setEnabled,  #xsd:unsignedInt
+│ │ @@ -8000,14 +8096,16 @@
+│ │              'offsetMinutes' : offsetMinutes,  #xsd:unsignedInt
+│ │              'retentionCountHourlies' : retentionCountHourlies,  #xsd:unsignedInt
+│ │              'retentionCountDailies' : retentionCountDailies,  #xsd:unsignedInt
+│ │              'retentionCountWeeklies' : retentionCountWeeklies,  #xsd:unsignedInt
+│ │              'retentionCountMonthlies' : retentionCountMonthlies,  #xsd:unsignedInt
+│ │              'retentionCountQuarterlies' : retentionCountQuarterlies,  #xsd:unsignedInt
+│ │              'lazyCloneSnaps' : lazyCloneSnaps,  #xsd:boolean
+│ │ +            'enableRecursiveNestedShares' : enableRecursiveNestedShares,  #xsd:boolean
+│ │ +            'enableConsistencyGroup' : enableConsistencyGroup,  #xsd:boolean
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('snapshotScheduleModify', payload)
+│ │          return SnapshotScheduleModifyResponse.responseParse(jsonOutput)
+│ │  
+│ │      def snapshot_schedule_trigger(
+│ │              self,
+│ │ @@ -9931,56 +10029,14 @@
+│ │              'provisionableId' : provisionableId,  #xsd:string
+│ │              'accessMode' : accessMode,  #xsd:unsignedInt
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('storageVolumeClone', payload)
+│ │          return StorageVolumeCloneResponse.responseParse(jsonOutput)
+│ │  
+│ │ -    def storage_volume_cloud_backup_create(
+│ │ -            self,
+│ │ -            sourceVolumeId='',
+│ │ -            cloudContainerId='',
+│ │ -            backupVolumeName='',
+│ │ -            backupVolumeDescription='',
+│ │ -            priority='0',
+│ │ -            reserved='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'sourceVolumeId' : sourceVolumeId,  #xsd:string
+│ │ -            'cloudContainerId' : cloudContainerId,  #xsd:string
+│ │ -            'backupVolumeName' : backupVolumeName,  #xsd:string
+│ │ -            'backupVolumeDescription' : backupVolumeDescription,  #xsd:string
+│ │ -            'priority' : priority,  #xsd:unsignedInt
+│ │ -            'reserved' : reserved,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('storageVolumeCloudBackupCreate', payload)
+│ │ -        return StorageVolumeCloudBackupCreateResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def storage_volume_cloud_backup_restore(
+│ │ -            self,
+│ │ -            sourceVolumeId='',
+│ │ -            storagePoolId='',
+│ │ -            recoveredVolumeName='',
+│ │ -            recoveredVolumeDescription='',
+│ │ -            priority='0',
+│ │ -            reserved='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'sourceVolumeId' : sourceVolumeId,  #xsd:string
+│ │ -            'storagePoolId' : storagePoolId,  #xsd:string
+│ │ -            'recoveredVolumeName' : recoveredVolumeName,  #xsd:string
+│ │ -            'recoveredVolumeDescription' : recoveredVolumeDescription,  #xsd:string
+│ │ -            'priority' : priority,  #xsd:unsignedInt
+│ │ -            'reserved' : reserved,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('storageVolumeCloudBackupRestore', payload)
+│ │ -        return StorageVolumeCloudBackupRestoreResponse.responseParse(jsonOutput)
+│ │ -
+│ │      def storage_volume_create(
+│ │              self,
+│ │              name='',
+│ │              description='',
+│ │              provisionableId='',
+│ │              size='0',
+│ │              thinProvisioned=False,
+│ │ @@ -10095,19 +10151,21 @@
+│ │              }
+│ │          jsonOutput = self.make_call('storageVolumeCreatePassthru', payload)
+│ │          return StorageVolumeCreatePassthruResponse.responseParse(jsonOutput)
+│ │  
+│ │      def storage_volume_delete(
+│ │              self,
+│ │              storageVolumeList='',
+│ │ -            recursivelyDeleteSnapshots=False,
+│ │ +            searchParams='',
+│ │ +            deleteOptions='0',
+│ │              flags='0'):
+│ │          payload = {
+│ │              'storageVolumeList' : storageVolumeList,  #xsd:string
+│ │ -            'recursivelyDeleteSnapshots' : recursivelyDeleteSnapshots,  #xsd:boolean
+│ │ +            'searchParams' : searchParams,  #xsd:string
+│ │ +            'deleteOptions' : deleteOptions,  #xsd:unsignedInt
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('storageVolumeDelete', payload)
+│ │          return StorageVolumeDeleteResponse.responseParse(jsonOutput)
+│ │  
+│ │      def storage_volume_delete_ex(
+│ │              self,
+│ │ @@ -11256,40 +11314,14 @@
+│ │          payload = {
+│ │              'appToken' : appToken,  #xsd:string
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('userAppTokenRemove', payload)
+│ │          return UserAppTokenRemoveResponse.responseParse(jsonOutput)
+│ │  
+│ │ -    def user_authenticate(
+│ │ -            self,
+│ │ -            jwtToken='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'jwtToken' : jwtToken,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('userAuthenticate', payload)
+│ │ -        return UserAuthenticateResponse.responseParse(jsonOutput)
+│ │ -
+│ │ -    def user_authorization(
+│ │ -            self,
+│ │ -            jwtToken='',
+│ │ -            objectType='',
+│ │ -            operation='',
+│ │ -            flags='0'):
+│ │ -        payload = {
+│ │ -            'jwtToken' : jwtToken,  #xsd:string
+│ │ -            'objectType' : objectType,  #xsd:string
+│ │ -            'operation' : operation,  #xsd:string
+│ │ -            'flags' : flags,  #xsd:unsignedInt
+│ │ -            }
+│ │ -        jsonOutput = self.make_call('userAuthorization', payload)
+│ │ -        return UserAuthorizationResponse.responseParse(jsonOutput)
+│ │ -
+│ │      def user_enum(
+│ │              self,
+│ │              flags='0'):
+│ │          payload = {
+│ │              'flags' : flags,  #xsd:unsignedInt
+│ │              }
+│ │          jsonOutput = self.make_call('userEnum', payload)
+│ │ @@ -12619,14 +12651,16 @@
+│ │      _poolFreeSpaceWarningThreshold='0'
+│ │      _poolFreeSpaceAlertThreshold='0'
+│ │      _poolFreeSpaceCriticalAlertThreshold='0'
+│ │      _shareQuotaFreeSpaceWarningThreshold='0'
+│ │      _shareQuotaFreeSpaceAlertThreshold='0'
+│ │      _shareQuotaFreeSpaceCriticalThreshold='0'
+│ │      _enableSyslogAlerts=False
+│ │ +    _snmpUsername=''
+│ │ +    _snmpPassword=''
+│ │      _endpointList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(AlertConfigSettings, self).jsonParse(jsonObj)
+│ │ @@ -12682,14 +12716,22 @@
+│ │              self._shareQuotaFreeSpaceCriticalThreshold = jsonObj['shareQuotaFreeSpaceCriticalThreshold']
+│ │          else:
+│ │              self._shareQuotaFreeSpaceCriticalThreshold = '0'
+│ │          if 'enableSyslogAlerts' in jsonObj:
+│ │              self._enableSyslogAlerts = jsonObj['enableSyslogAlerts']
+│ │          else:
+│ │              self._enableSyslogAlerts = False
+│ │ +        if 'snmpUsername' in jsonObj:
+│ │ +            self._snmpUsername = jsonObj['snmpUsername']
+│ │ +        else:
+│ │ +            self._snmpUsername = ''
+│ │ +        if 'snmpPassword' in jsonObj:
+│ │ +            self._snmpPassword = jsonObj['snmpPassword']
+│ │ +        else:
+│ │ +            self._snmpPassword = ''
+│ │          if 'endpointList' in jsonObj:
+│ │              self._endpointList = jsonObj['endpointList']
+│ │          else:
+│ │              self._endpointList = ''
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │ @@ -12705,14 +12747,16 @@
+│ │              'poolFreeSpaceWarningThreshold' : self._poolFreeSpaceWarningThreshold,
+│ │              'poolFreeSpaceAlertThreshold' : self._poolFreeSpaceAlertThreshold,
+│ │              'poolFreeSpaceCriticalAlertThreshold' : self._poolFreeSpaceCriticalAlertThreshold,
+│ │              'shareQuotaFreeSpaceWarningThreshold' : self._shareQuotaFreeSpaceWarningThreshold,
+│ │              'shareQuotaFreeSpaceAlertThreshold' : self._shareQuotaFreeSpaceAlertThreshold,
+│ │              'shareQuotaFreeSpaceCriticalThreshold' : self._shareQuotaFreeSpaceCriticalThreshold,
+│ │              'enableSyslogAlerts' : self._enableSyslogAlerts,
+│ │ +            'snmpUsername' : self._snmpUsername,
+│ │ +            'snmpPassword' : self._snmpPassword,
+│ │              'endpointList' : self._endpointList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class AlertEnumResponse(object):
+│ │      _list=''
+│ │ @@ -12832,15 +12876,15 @@
+│ │      def responseParse(cls,jsonObj):
+│ │          obj = AlertType(jsonObj)
+│ │          return obj
+│ │  
+│ │  class AssocConfiguration(Object):
+│ │      _listCephFilesystemPoolAssoc=''
+│ │      _listCephClusterHealthEvent=''
+│ │ -    _listCloudBackupScheduleAssoc=''
+│ │ +    _listCephClientKeyringResourceAssoc=''
+│ │      _listContainerConfigOption=''
+│ │      _listMaintenanceScheduleAssoc=''
+│ │      _listNetworkShareNamespaceShareAssoc=''
+│ │      _listNetworkShareNamespaceSystemAssoc=''
+│ │      _listReplicationScheduleAssoc=''
+│ │      _listReportScheduleAssoc=''
+│ │      _listSiteVifLocationConstraint=''
+│ │ @@ -12862,18 +12906,18 @@
+│ │              self._listCephFilesystemPoolAssoc = jsonObj['listCephFilesystemPoolAssoc']
+│ │          else:
+│ │              self._listCephFilesystemPoolAssoc = ''
+│ │          if 'listCephClusterHealthEvent' in jsonObj:
+│ │              self._listCephClusterHealthEvent = jsonObj['listCephClusterHealthEvent']
+│ │          else:
+│ │              self._listCephClusterHealthEvent = ''
+│ │ -        if 'listCloudBackupScheduleAssoc' in jsonObj:
+│ │ -            self._listCloudBackupScheduleAssoc = jsonObj['listCloudBackupScheduleAssoc']
+│ │ +        if 'listCephClientKeyringResourceAssoc' in jsonObj:
+│ │ +            self._listCephClientKeyringResourceAssoc = jsonObj['listCephClientKeyringResourceAssoc']
+│ │          else:
+│ │ -            self._listCloudBackupScheduleAssoc = ''
+│ │ +            self._listCephClientKeyringResourceAssoc = ''
+│ │          if 'listContainerConfigOption' in jsonObj:
+│ │              self._listContainerConfigOption = jsonObj['listContainerConfigOption']
+│ │          else:
+│ │              self._listContainerConfigOption = ''
+│ │          if 'listMaintenanceScheduleAssoc' in jsonObj:
+│ │              self._listMaintenanceScheduleAssoc = jsonObj['listMaintenanceScheduleAssoc']
+│ │          else:
+│ │ @@ -12933,15 +12977,15 @@
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(AssocConfiguration,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'listCephFilesystemPoolAssoc' : self._listCephFilesystemPoolAssoc,
+│ │              'listCephClusterHealthEvent' : self._listCephClusterHealthEvent,
+│ │ -            'listCloudBackupScheduleAssoc' : self._listCloudBackupScheduleAssoc,
+│ │ +            'listCephClientKeyringResourceAssoc' : self._listCephClientKeyringResourceAssoc,
+│ │              'listContainerConfigOption' : self._listContainerConfigOption,
+│ │              'listMaintenanceScheduleAssoc' : self._listMaintenanceScheduleAssoc,
+│ │              'listNetworkShareNamespaceShareAssoc' : self._listNetworkShareNamespaceShareAssoc,
+│ │              'listNetworkShareNamespaceSystemAssoc' : self._listNetworkShareNamespaceSystemAssoc,
+│ │              'listReplicationScheduleAssoc' : self._listReplicationScheduleAssoc,
+│ │              'listReportScheduleAssoc' : self._listReportScheduleAssoc,
+│ │              'listSiteVifLocationConstraint' : self._listSiteVifLocationConstraint,
+│ │ @@ -13148,15 +13192,17 @@
+│ │      _smbUsername=''
+│ │      _smbPassword=''
+│ │      _maxSnapshots='0'
+│ │      _minFileAgeDays='0'
+│ │      _maxFileAgeDays='0'
+│ │      _smbPasswordAlg='0'
+│ │      _createLinks=False
+│ │ +    _lastTieringTimestamp=''
+│ │      _smbSalt=''
+│ │ +    _remoteExportSubPath=''
+│ │      _backupJobList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(BackupPolicy, self).jsonParse(jsonObj)
+│ │ @@ -13228,18 +13274,26 @@
+│ │              self._smbPasswordAlg = jsonObj['smbPasswordAlg']
+│ │          else:
+│ │              self._smbPasswordAlg = '0'
+│ │          if 'createLinks' in jsonObj:
+│ │              self._createLinks = jsonObj['createLinks']
+│ │          else:
+│ │              self._createLinks = False
+│ │ +        if 'lastTieringTimestamp' in jsonObj:
+│ │ +            self._lastTieringTimestamp = jsonObj['lastTieringTimestamp']
+│ │ +        else:
+│ │ +            self._lastTieringTimestamp = ''
+│ │          if 'smbSalt' in jsonObj:
+│ │              self._smbSalt = jsonObj['smbSalt']
+│ │          else:
+│ │              self._smbSalt = ''
+│ │ +        if 'remoteExportSubPath' in jsonObj:
+│ │ +            self._remoteExportSubPath = jsonObj['remoteExportSubPath']
+│ │ +        else:
+│ │ +            self._remoteExportSubPath = ''
+│ │          if 'backupJobList' in jsonObj:
+│ │              self._backupJobList = jsonObj['backupJobList']
+│ │          else:
+│ │              self._backupJobList = ''
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │ @@ -13259,15 +13313,17 @@
+│ │              'smbUsername' : self._smbUsername,
+│ │              'smbPassword' : self._smbPassword,
+│ │              'maxSnapshots' : self._maxSnapshots,
+│ │              'minFileAgeDays' : self._minFileAgeDays,
+│ │              'maxFileAgeDays' : self._maxFileAgeDays,
+│ │              'smbPasswordAlg' : self._smbPasswordAlg,
+│ │              'createLinks' : self._createLinks,
+│ │ +            'lastTieringTimestamp' : self._lastTieringTimestamp,
+│ │              'smbSalt' : self._smbSalt,
+│ │ +            'remoteExportSubPath' : self._remoteExportSubPath,
+│ │              'backupJobList' : self._backupJobList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class BackupPolicyCreateResponse(object):
+│ │      _task=''
+│ │ @@ -13436,15 +13492,18 @@
+│ │  class Bucket(Object):
+│ │      _cephClusterId=''
+│ │      _utilizedSpace='0'
+│ │      _owner=''
+│ │      _vendorType='0'
+│ │      _objectLockMode='0'
+│ │      _objectLockRetentionDays='0'
+│ │ +    _enableLifecyclePolicy=False
+│ │ +    _lifecyclePolicyDays='0'
+│ │      _enableNetworkShareAccess=False
+│ │ +    _tenantId=''
+│ │      _quotaList=''
+│ │      _userAssocList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │ @@ -13469,18 +13528,30 @@
+│ │              self._objectLockMode = jsonObj['objectLockMode']
+│ │          else:
+│ │              self._objectLockMode = '0'
+│ │          if 'objectLockRetentionDays' in jsonObj:
+│ │              self._objectLockRetentionDays = jsonObj['objectLockRetentionDays']
+│ │          else:
+│ │              self._objectLockRetentionDays = '0'
+│ │ +        if 'enableLifecyclePolicy' in jsonObj:
+│ │ +            self._enableLifecyclePolicy = jsonObj['enableLifecyclePolicy']
+│ │ +        else:
+│ │ +            self._enableLifecyclePolicy = False
+│ │ +        if 'lifecyclePolicyDays' in jsonObj:
+│ │ +            self._lifecyclePolicyDays = jsonObj['lifecyclePolicyDays']
+│ │ +        else:
+│ │ +            self._lifecyclePolicyDays = '0'
+│ │          if 'enableNetworkShareAccess' in jsonObj:
+│ │              self._enableNetworkShareAccess = jsonObj['enableNetworkShareAccess']
+│ │          else:
+│ │              self._enableNetworkShareAccess = False
+│ │ +        if 'tenantId' in jsonObj:
+│ │ +            self._tenantId = jsonObj['tenantId']
+│ │ +        else:
+│ │ +            self._tenantId = ''
+│ │          if 'quotaList' in jsonObj:
+│ │              self._quotaList = jsonObj['quotaList']
+│ │          else:
+│ │              self._quotaList = ''
+│ │          if 'userAssocList' in jsonObj:
+│ │              self._userAssocList = jsonObj['userAssocList']
+│ │          else:
+│ │ @@ -13492,15 +13563,18 @@
+│ │          thisJsonObj = {
+│ │              'cephClusterId' : self._cephClusterId,
+│ │              'utilizedSpace' : self._utilizedSpace,
+│ │              'owner' : self._owner,
+│ │              'vendorType' : self._vendorType,
+│ │              'objectLockMode' : self._objectLockMode,
+│ │              'objectLockRetentionDays' : self._objectLockRetentionDays,
+│ │ +            'enableLifecyclePolicy' : self._enableLifecyclePolicy,
+│ │ +            'lifecyclePolicyDays' : self._lifecyclePolicyDays,
+│ │              'enableNetworkShareAccess' : self._enableNetworkShareAccess,
+│ │ +            'tenantId' : self._tenantId,
+│ │              'quotaList' : self._quotaList,
+│ │              'userAssocList' : self._userAssocList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class BucketCreateResponse(object):
+│ │ @@ -13767,14 +13841,233 @@
+│ │              'defaultValue' : self._defaultValue,
+│ │              'isImmutable' : self._isImmutable,
+│ │              'allowedValues' : self._allowedValues
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │ +class CephClientConfExportResponse(object):
+│ │ +    _obj=''
+│ │ +    _msg=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        obj='',
+│ │ +        msg=''):
+│ │ +        self._obj = obj
+│ │ +        self._msg = msg
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        obj = CephCluster(jsonObj['obj'])
+│ │ +        msg = jsonObj['msg']
+│ │ +        return obj, msg
+│ │ +
+│ │ +class CephClientKeyring(Object):
+│ │ +    _cephClusterId=''
+│ │ +    _key=''
+│ │ +    _capsMon=''
+│ │ +    _capsOsd=''
+│ │ +    _capsMgr=''
+│ │ +    _capsMds=''
+│ │ +    _clientKeyType='0'
+│ │ +    _keyringResourceAssocList=''
+│ │ +
+│ │ +    def __init__(self,jsonObj):
+│ │ +        self.jsonParse(jsonObj)
+│ │ +
+│ │ +    def jsonParse(self,jsonObj):
+│ │ +        super(CephClientKeyring, self).jsonParse(jsonObj)
+│ │ +        if 'cephClusterId' in jsonObj:
+│ │ +            self._cephClusterId = jsonObj['cephClusterId']
+│ │ +        else:
+│ │ +            self._cephClusterId = ''
+│ │ +        if 'key' in jsonObj:
+│ │ +            self._key = jsonObj['key']
+│ │ +        else:
+│ │ +            self._key = ''
+│ │ +        if 'capsMon' in jsonObj:
+│ │ +            self._capsMon = jsonObj['capsMon']
+│ │ +        else:
+│ │ +            self._capsMon = ''
+│ │ +        if 'capsOsd' in jsonObj:
+│ │ +            self._capsOsd = jsonObj['capsOsd']
+│ │ +        else:
+│ │ +            self._capsOsd = ''
+│ │ +        if 'capsMgr' in jsonObj:
+│ │ +            self._capsMgr = jsonObj['capsMgr']
+│ │ +        else:
+│ │ +            self._capsMgr = ''
+│ │ +        if 'capsMds' in jsonObj:
+│ │ +            self._capsMds = jsonObj['capsMds']
+│ │ +        else:
+│ │ +            self._capsMds = ''
+│ │ +        if 'clientKeyType' in jsonObj:
+│ │ +            self._clientKeyType = jsonObj['clientKeyType']
+│ │ +        else:
+│ │ +            self._clientKeyType = '0'
+│ │ +        if 'keyringResourceAssocList' in jsonObj:
+│ │ +            self._keyringResourceAssocList = jsonObj['keyringResourceAssocList']
+│ │ +        else:
+│ │ +            self._keyringResourceAssocList = ''
+│ │ +        return self
+│ │ +
+│ │ +    def exportJson(self):
+│ │ +        superJsonObj = super(CephClientKeyring,self).exportJson()
+│ │ +        thisJsonObj = {
+│ │ +            'cephClusterId' : self._cephClusterId,
+│ │ +            'key' : self._key,
+│ │ +            'capsMon' : self._capsMon,
+│ │ +            'capsOsd' : self._capsOsd,
+│ │ +            'capsMgr' : self._capsMgr,
+│ │ +            'capsMds' : self._capsMds,
+│ │ +            'clientKeyType' : self._clientKeyType,
+│ │ +            'keyringResourceAssocList' : self._keyringResourceAssocList
+│ │ +        }
+│ │ +        thisJsonObj.update(superJsonObj)
+│ │ +        return thisJsonObj
+│ │ +
+│ │ +class CephClientKeyringCreateResponse(object):
+│ │ +    _task=''
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        task='',
+│ │ +        obj=''):
+│ │ +        self._task = task
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        task = Task(jsonObj['task'])
+│ │ +        obj = CephClientKeyring(jsonObj['obj'])
+│ │ +        return task, obj
+│ │ +
+│ │ +class CephClientKeyringDeleteResponse(object):
+│ │ +    _task=''
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        task='',
+│ │ +        obj=''):
+│ │ +        self._task = task
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        task = Task(jsonObj['task'])
+│ │ +        obj = CephClientKeyring(jsonObj['obj'])
+│ │ +        return task, obj
+│ │ +
+│ │ +class CephClientKeyringEnumResponse(object):
+│ │ +    _list=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        objList=''):
+│ │ +        self._list = objList
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        objList = []
+│ │ +        for var in jsonObj:
+│ │ +            objList.append(CephClientKeyring(var))
+│ │ +        return objList
+│ │ +
+│ │ +class CephClientKeyringExportResponse(object):
+│ │ +    _obj=''
+│ │ +    _msg=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        obj='',
+│ │ +        msg=''):
+│ │ +        self._obj = obj
+│ │ +        self._msg = msg
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        obj = CephClientKeyring(jsonObj['obj'])
+│ │ +        msg = jsonObj['msg']
+│ │ +        return obj, msg
+│ │ +
+│ │ +class CephClientKeyringGetResponse(object):
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        obj=''):
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        obj = CephClientKeyring(jsonObj)
+│ │ +        return obj
+│ │ +
+│ │ +class CephClientKeyringResourceAssoc(object):
+│ │ +    _cephClientKeyringId=''
+│ │ +    _resourceType='0'
+│ │ +    _resourceId=''
+│ │ +
+│ │ +    def __init__(self,jsonObj):
+│ │ +        self.jsonParse(jsonObj)
+│ │ +
+│ │ +    def jsonParse(self,jsonObj):
+│ │ +        if 'cephClientKeyringId' in jsonObj:
+│ │ +            self._cephClientKeyringId = jsonObj['cephClientKeyringId']
+│ │ +        else:
+│ │ +            self._cephClientKeyringId = ''
+│ │ +        if 'resourceType' in jsonObj:
+│ │ +            self._resourceType = jsonObj['resourceType']
+│ │ +        else:
+│ │ +            self._resourceType = '0'
+│ │ +        if 'resourceId' in jsonObj:
+│ │ +            self._resourceId = jsonObj['resourceId']
+│ │ +        else:
+│ │ +            self._resourceId = ''
+│ │ +        return self
+│ │ +
+│ │ +    def exportJson(self):
+│ │ +        thisJsonObj = {
+│ │ +            'cephClientKeyringId' : self._cephClientKeyringId,
+│ │ +            'resourceType' : self._resourceType,
+│ │ +            'resourceId' : self._resourceId
+│ │ +        }
+│ │ +        return thisJsonObj
+│ │ +
+│ │ +class CephClientKeyringResourceAssocEnumResponse(object):
+│ │ +    _list=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        objList=''):
+│ │ +        self._list = objList
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        objList = []
+│ │ +        for var in jsonObj:
+│ │ +            objList.append(CephClientKeyringResourceAssoc(var))
+│ │ +        return objList
+│ │ +
+│ │ +class CephClientKeyringResourceAssocGetResponse(object):
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        obj=''):
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        obj = CephClientKeyringResourceAssoc(jsonObj)
+│ │ +        return obj
+│ │ +
+│ │  class CephCluster(Object):
+│ │      _altName=''
+│ │      _description=''
+│ │      _status=''
+│ │      _statusSummary=''
+│ │      _clientadminkeyring=''
+│ │      _defaultmonitorkeyring=''
+│ │ @@ -16393,275 +16686,29 @@
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          task = Task(jsonObj['task'])
+│ │          obj = CephRadosGateway(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │ -class CloudBackupSchedule(Schedule):
+│ │ -    _resourceGroupId=''
+│ │ -    _cloudContainerId=''
+│ │ -    _maxBackups='0'
+│ │ -    _priority='0'
+│ │ -    _storageVolumeList=''
+│ │ -
+│ │ -    def __init__(self,jsonObj):
+│ │ -        self.jsonParse(jsonObj)
+│ │ -
+│ │ -    def jsonParse(self,jsonObj):
+│ │ -        super(CloudBackupSchedule, self).jsonParse(jsonObj)
+│ │ -        if 'resourceGroupId' in jsonObj:
+│ │ -            self._resourceGroupId = jsonObj['resourceGroupId']
+│ │ -        else:
+│ │ -            self._resourceGroupId = ''
+│ │ -        if 'cloudContainerId' in jsonObj:
+│ │ -            self._cloudContainerId = jsonObj['cloudContainerId']
+│ │ -        else:
+│ │ -            self._cloudContainerId = ''
+│ │ -        if 'maxBackups' in jsonObj:
+│ │ -            self._maxBackups = jsonObj['maxBackups']
+│ │ -        else:
+│ │ -            self._maxBackups = '0'
+│ │ -        if 'priority' in jsonObj:
+│ │ -            self._priority = jsonObj['priority']
+│ │ -        else:
+│ │ -            self._priority = '0'
+│ │ -        if 'storageVolumeList' in jsonObj:
+│ │ -            self._storageVolumeList = jsonObj['storageVolumeList']
+│ │ -        else:
+│ │ -            self._storageVolumeList = ''
+│ │ -        return self
+│ │ -
+│ │ -    def exportJson(self):
+│ │ -        superJsonObj = super(CloudBackupSchedule,self).exportJson()
+│ │ -        thisJsonObj = {
+│ │ -            'resourceGroupId' : self._resourceGroupId,
+│ │ -            'cloudContainerId' : self._cloudContainerId,
+│ │ -            'maxBackups' : self._maxBackups,
+│ │ -            'priority' : self._priority,
+│ │ -            'storageVolumeList' : self._storageVolumeList
+│ │ -        }
+│ │ -        thisJsonObj.update(superJsonObj)
+│ │ -        return thisJsonObj
+│ │ -
+│ │ -class CloudBackupScheduleAssoc(object):
+│ │ -    _cloudBackupScheduleId=''
+│ │ -    _storageVolumeId=''
+│ │ -
+│ │ -    def __init__(self,jsonObj):
+│ │ -        self.jsonParse(jsonObj)
+│ │ -
+│ │ -    def jsonParse(self,jsonObj):
+│ │ -        if 'cloudBackupScheduleId' in jsonObj:
+│ │ -            self._cloudBackupScheduleId = jsonObj['cloudBackupScheduleId']
+│ │ -        else:
+│ │ -            self._cloudBackupScheduleId = ''
+│ │ -        if 'storageVolumeId' in jsonObj:
+│ │ -            self._storageVolumeId = jsonObj['storageVolumeId']
+│ │ -        else:
+│ │ -            self._storageVolumeId = ''
+│ │ -        return self
+│ │ -
+│ │ -    def exportJson(self):
+│ │ -        thisJsonObj = {
+│ │ -            'cloudBackupScheduleId' : self._cloudBackupScheduleId,
+│ │ -            'storageVolumeId' : self._storageVolumeId
+│ │ -        }
+│ │ -        return thisJsonObj
+│ │ -
+│ │ -class CloudBackupScheduleAssocEnumResponse(object):
+│ │ -    _list=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        objList=''):
+│ │ -        self._list = objList
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        objList = []
+│ │ -        for var in jsonObj:
+│ │ -            objList.append(CloudBackupScheduleAssoc(var))
+│ │ -        return objList
+│ │ -
+│ │ -class CloudBackupScheduleAssocGetResponse(object):
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        obj=''):
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        obj = CloudBackupScheduleAssoc(jsonObj)
+│ │ -        return obj
+│ │ -
+│ │ -class CloudBackupScheduleCreateResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = CloudBackupSchedule(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │ -class CloudBackupScheduleDeleteResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = CloudBackupSchedule(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │ -class CloudBackupScheduleDisableResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = CloudBackupSchedule(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │ -class CloudBackupScheduleEnableResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = CloudBackupSchedule(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │ -class CloudBackupScheduleEnumResponse(object):
+│ │ -    _list=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        objList=''):
+│ │ -        self._list = objList
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        objList = []
+│ │ -        for var in jsonObj:
+│ │ -            objList.append(CloudBackupSchedule(var))
+│ │ -        return objList
+│ │ -
+│ │ -class CloudBackupScheduleGetResponse(object):
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        obj=''):
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        obj = CloudBackupSchedule(jsonObj)
+│ │ -        return obj
+│ │ -
+│ │ -class CloudBackupScheduleModifyResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = CloudBackupSchedule(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │ -class CloudBackupScheduleTriggerResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = CloudBackupSchedule(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │ -class CloudBackupScheduleVolumeAddRemoveResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = CloudBackupSchedule(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │  class CloudContainer(Object):
+│ │      _description=''
+│ │      _credentialsId=''
+│ │      _locationId=''
+│ │      _providerType='0'
+│ │      _encryptionKey=''
+│ │      _storageUrl=''
+│ │      _mountPoint=''
+│ │      _markedDisabled=False
+│ │      _enableNfs=False
+│ │      _spaceUtilized='0'
+│ │      _containerType='0'
+│ │      _mountOptions=''
+│ │      _configName=''
+│ │ -    _storageVolumeList=''
+│ │ +    _storageClass=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(CloudContainer, self).jsonParse(jsonObj)
+│ │          if 'description' in jsonObj:
+│ │ @@ -16712,18 +16759,18 @@
+│ │              self._mountOptions = jsonObj['mountOptions']
+│ │          else:
+│ │              self._mountOptions = ''
+│ │          if 'configName' in jsonObj:
+│ │              self._configName = jsonObj['configName']
+│ │          else:
+│ │              self._configName = ''
+│ │ -        if 'storageVolumeList' in jsonObj:
+│ │ -            self._storageVolumeList = jsonObj['storageVolumeList']
+│ │ +        if 'storageClass' in jsonObj:
+│ │ +            self._storageClass = jsonObj['storageClass']
+│ │          else:
+│ │ -            self._storageVolumeList = ''
+│ │ +            self._storageClass = ''
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(CloudContainer,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'description' : self._description,
+│ │              'credentialsId' : self._credentialsId,
+│ │ @@ -16734,15 +16781,15 @@
+│ │              'mountPoint' : self._mountPoint,
+│ │              'markedDisabled' : self._markedDisabled,
+│ │              'enableNfs' : self._enableNfs,
+│ │              'spaceUtilized' : self._spaceUtilized,
+│ │              'containerType' : self._containerType,
+│ │              'mountOptions' : self._mountOptions,
+│ │              'configName' : self._configName,
+│ │ -            'storageVolumeList' : self._storageVolumeList
+│ │ +            'storageClass' : self._storageClass
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class CloudContainerAddResponse(object):
+│ │      _task=''
+│ │      _obj=''
+│ │ @@ -16966,21 +17013,40 @@
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          task = Task(jsonObj['task'])
+│ │          obj = CloudContainer(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │ +class CloudContainerRescanResponse(object):
+│ │ +    _task=''
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        task='',
+│ │ +        obj=''):
+│ │ +        self._task = task
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        task = Task(jsonObj['task'])
+│ │ +        obj = CloudContainer(jsonObj['obj'])
+│ │ +        return task, obj
+│ │ +
+│ │  class CloudProvider(Object):
+│ │      _providerType='0'
+│ │      _description=''
+│ │      _driverPath=''
+│ │      _supportsS3Proxy=False
+│ │ +    _defaultLocation=''
+│ │      _credentialsList=''
+│ │      _locationList=''
+│ │ +    _storageClassList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(CloudProvider, self).jsonParse(jsonObj)
+│ │          if 'providerType' in jsonObj:
+│ │ @@ -16995,33 +17061,43 @@
+│ │              self._driverPath = jsonObj['driverPath']
+│ │          else:
+│ │              self._driverPath = ''
+│ │          if 'supportsS3Proxy' in jsonObj:
+│ │              self._supportsS3Proxy = jsonObj['supportsS3Proxy']
+│ │          else:
+│ │              self._supportsS3Proxy = False
+│ │ +        if 'defaultLocation' in jsonObj:
+│ │ +            self._defaultLocation = jsonObj['defaultLocation']
+│ │ +        else:
+│ │ +            self._defaultLocation = ''
+│ │          if 'credentialsList' in jsonObj:
+│ │              self._credentialsList = jsonObj['credentialsList']
+│ │          else:
+│ │              self._credentialsList = ''
+│ │          if 'locationList' in jsonObj:
+│ │              self._locationList = jsonObj['locationList']
+│ │          else:
+│ │              self._locationList = ''
+│ │ +        if 'storageClassList' in jsonObj:
+│ │ +            self._storageClassList = jsonObj['storageClassList']
+│ │ +        else:
+│ │ +            self._storageClassList = ''
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(CloudProvider,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'providerType' : self._providerType,
+│ │              'description' : self._description,
+│ │              'driverPath' : self._driverPath,
+│ │              'supportsS3Proxy' : self._supportsS3Proxy,
+│ │ +            'defaultLocation' : self._defaultLocation,
+│ │              'credentialsList' : self._credentialsList,
+│ │ -            'locationList' : self._locationList
+│ │ +            'locationList' : self._locationList,
+│ │ +            'storageClassList' : self._storageClassList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class CloudProviderAddResponse(object):
+│ │      _task=''
+│ │      _obj=''
+│ │ @@ -17308,14 +17384,110 @@
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          task = Task(jsonObj['task'])
+│ │          obj = CloudProvider(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │ +class CloudProviderStorageClass(Object):
+│ │ +    _storageClassTag=''
+│ │ +    _providerId=''
+│ │ +    _description=''
+│ │ +
+│ │ +    def __init__(self,jsonObj):
+│ │ +        self.jsonParse(jsonObj)
+│ │ +
+│ │ +    def jsonParse(self,jsonObj):
+│ │ +        super(CloudProviderStorageClass, self).jsonParse(jsonObj)
+│ │ +        if 'storageClassTag' in jsonObj:
+│ │ +            self._storageClassTag = jsonObj['storageClassTag']
+│ │ +        else:
+│ │ +            self._storageClassTag = ''
+│ │ +        if 'providerId' in jsonObj:
+│ │ +            self._providerId = jsonObj['providerId']
+│ │ +        else:
+│ │ +            self._providerId = ''
+│ │ +        if 'description' in jsonObj:
+│ │ +            self._description = jsonObj['description']
+│ │ +        else:
+│ │ +            self._description = ''
+│ │ +        return self
+│ │ +
+│ │ +    def exportJson(self):
+│ │ +        superJsonObj = super(CloudProviderStorageClass,self).exportJson()
+│ │ +        thisJsonObj = {
+│ │ +            'storageClassTag' : self._storageClassTag,
+│ │ +            'providerId' : self._providerId,
+│ │ +            'description' : self._description
+│ │ +        }
+│ │ +        thisJsonObj.update(superJsonObj)
+│ │ +        return thisJsonObj
+│ │ +
+│ │ +class CloudProviderStorageClassAddResponse(object):
+│ │ +    _task=''
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        task='',
+│ │ +        obj=''):
+│ │ +        self._task = task
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        task = Task(jsonObj['task'])
+│ │ +        obj = CloudProviderStorageClass(jsonObj['obj'])
+│ │ +        return task, obj
+│ │ +
+│ │ +class CloudProviderStorageClassEnumResponse(object):
+│ │ +    _list=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        objList=''):
+│ │ +        self._list = objList
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        objList = []
+│ │ +        for var in jsonObj:
+│ │ +            objList.append(CloudProviderStorageClass(var))
+│ │ +        return objList
+│ │ +
+│ │ +class CloudProviderStorageClassGetResponse(object):
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        obj=''):
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        obj = CloudProviderStorageClass(jsonObj)
+│ │ +        return obj
+│ │ +
+│ │ +class CloudProviderStorageClassRemoveResponse(object):
+│ │ +    _task=''
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        task='',
+│ │ +        obj=''):
+│ │ +        self._task = task
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        task = Task(jsonObj['task'])
+│ │ +        obj = CloudProviderStorageClass(jsonObj['obj'])
+│ │ +        return task, obj
+│ │ +
+│ │  class ClusterRing(Object):
+│ │      _siteClusterId=''
+│ │      _ring='0'
+│ │      _mcastPort='0'
+│ │      _bindNetAddress=''
+│ │      _status=''
+│ │      _ringMemberList=''
+│ │ @@ -18203,24 +18375,26 @@
+│ │                  objList.append(Object(var))
+│ │          return task, objList
+│ │  
+│ │  class ExternalSystem(Object):
+│ │      _altName=''
+│ │      _description=''
+│ │      _serialNumber=''
+│ │ +    _wwn=''
+│ │      _model=''
+│ │      _capabilities='0'
+│ │      _capacity='0'
+│ │      _slots='0'
+│ │      _slotNumber='0'
+│ │      _indicatorLed='0'
+│ │      _enclosureLayoutId=''
+│ │      _externalSystemCredentialsId=''
+│ │      _externalSystemPortGroupIdList=''
+│ │      _externalSystemControllerIdList=''
+│ │ +    _externalSystemPoolIdList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(ExternalSystem, self).jsonParse(jsonObj)
+│ │          if 'altName' in jsonObj:
+│ │ @@ -18231,14 +18405,18 @@
+│ │              self._description = jsonObj['description']
+│ │          else:
+│ │              self._description = ''
+│ │          if 'serialNumber' in jsonObj:
+│ │              self._serialNumber = jsonObj['serialNumber']
+│ │          else:
+│ │              self._serialNumber = ''
+│ │ +        if 'wwn' in jsonObj:
+│ │ +            self._wwn = jsonObj['wwn']
+│ │ +        else:
+│ │ +            self._wwn = ''
+│ │          if 'model' in jsonObj:
+│ │              self._model = jsonObj['model']
+│ │          else:
+│ │              self._model = ''
+│ │          if 'capabilities' in jsonObj:
+│ │              self._capabilities = jsonObj['capabilities']
+│ │          else:
+│ │ @@ -18271,40 +18449,48 @@
+│ │              self._externalSystemPortGroupIdList = jsonObj['externalSystemPortGroupIdList']
+│ │          else:
+│ │              self._externalSystemPortGroupIdList = ''
+│ │          if 'externalSystemControllerIdList' in jsonObj:
+│ │              self._externalSystemControllerIdList = jsonObj['externalSystemControllerIdList']
+│ │          else:
+│ │              self._externalSystemControllerIdList = ''
+│ │ +        if 'externalSystemPoolIdList' in jsonObj:
+│ │ +            self._externalSystemPoolIdList = jsonObj['externalSystemPoolIdList']
+│ │ +        else:
+│ │ +            self._externalSystemPoolIdList = ''
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(ExternalSystem,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'altName' : self._altName,
+│ │              'description' : self._description,
+│ │              'serialNumber' : self._serialNumber,
+│ │ +            'wwn' : self._wwn,
+│ │              'model' : self._model,
+│ │              'capabilities' : self._capabilities,
+│ │              'capacity' : self._capacity,
+│ │              'slots' : self._slots,
+│ │              'slotNumber' : self._slotNumber,
+│ │              'indicatorLed' : self._indicatorLed,
+│ │              'enclosureLayoutId' : self._enclosureLayoutId,
+│ │              'externalSystemCredentialsId' : self._externalSystemCredentialsId,
+│ │              'externalSystemPortGroupIdList' : self._externalSystemPortGroupIdList,
+│ │ -            'externalSystemControllerIdList' : self._externalSystemControllerIdList
+│ │ +            'externalSystemControllerIdList' : self._externalSystemControllerIdList,
+│ │ +            'externalSystemPoolIdList' : self._externalSystemPoolIdList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class ExternalSystemController(Object):
+│ │      _altName=''
+│ │      _externalSystemId=''
+│ │      _hostname=''
+│ │ +    _serialNumber=''
+│ │ +    _macAddress=''
+│ │      _isRebootable=False
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(ExternalSystemController, self).jsonParse(jsonObj)
+│ │ @@ -18316,26 +18502,36 @@
+│ │              self._externalSystemId = jsonObj['externalSystemId']
+│ │          else:
+│ │              self._externalSystemId = ''
+│ │          if 'hostname' in jsonObj:
+│ │              self._hostname = jsonObj['hostname']
+│ │          else:
+│ │              self._hostname = ''
+│ │ +        if 'serialNumber' in jsonObj:
+│ │ +            self._serialNumber = jsonObj['serialNumber']
+│ │ +        else:
+│ │ +            self._serialNumber = ''
+│ │ +        if 'macAddress' in jsonObj:
+│ │ +            self._macAddress = jsonObj['macAddress']
+│ │ +        else:
+│ │ +            self._macAddress = ''
+│ │          if 'isRebootable' in jsonObj:
+│ │              self._isRebootable = jsonObj['isRebootable']
+│ │          else:
+│ │              self._isRebootable = False
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(ExternalSystemController,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'altName' : self._altName,
+│ │              'externalSystemId' : self._externalSystemId,
+│ │              'hostname' : self._hostname,
+│ │ +            'serialNumber' : self._serialNumber,
+│ │ +            'macAddress' : self._macAddress,
+│ │              'isRebootable' : self._isRebootable
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class ExternalSystemControllerEnumResponse(object):
+│ │      _list=''
+│ │ @@ -18369,14 +18565,15 @@
+│ │      _username=''
+│ │      _password=''
+│ │      _primaryIp=''
+│ │      _secondaryIp=''
+│ │      _siteClusterId=''
+│ │      _portNumber='0'
+│ │      _insecure=False
+│ │ +    _externalSystemType='0'
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(ExternalSystemCredentials, self).jsonParse(jsonObj)
+│ │          if 'username' in jsonObj:
+│ │ @@ -18403,26 +18600,31 @@
+│ │              self._portNumber = jsonObj['portNumber']
+│ │          else:
+│ │              self._portNumber = '0'
+│ │          if 'insecure' in jsonObj:
+│ │              self._insecure = jsonObj['insecure']
+│ │          else:
+│ │              self._insecure = False
+│ │ +        if 'externalSystemType' in jsonObj:
+│ │ +            self._externalSystemType = jsonObj['externalSystemType']
+│ │ +        else:
+│ │ +            self._externalSystemType = '0'
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(ExternalSystemCredentials,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'username' : self._username,
+│ │              'password' : self._password,
+│ │              'primaryIp' : self._primaryIp,
+│ │              'secondaryIp' : self._secondaryIp,
+│ │              'siteClusterId' : self._siteClusterId,
+│ │              'portNumber' : self._portNumber,
+│ │ -            'insecure' : self._insecure
+│ │ +            'insecure' : self._insecure,
+│ │ +            'externalSystemType' : self._externalSystemType
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class ExternalSystemCredentialsAddRemoveResponse(object):
+│ │      _task=''
+│ │      _obj=''
+│ │ @@ -18625,14 +18827,100 @@
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          task = Task(jsonObj['task'])
+│ │          obj = ExternalSystem(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │ +class ExternalSystemPool(Object):
+│ │ +    _altName=''
+│ │ +    _externalSystemId=''
+│ │ +    _capacity='0'
+│ │ +    _externalSystemControllerId=''
+│ │ +    _serialNumber=''
+│ │ +    _raidtype='0'
+│ │ +    _externalSystemVolumeIdList=''
+│ │ +
+│ │ +    def __init__(self,jsonObj):
+│ │ +        self.jsonParse(jsonObj)
+│ │ +
+│ │ +    def jsonParse(self,jsonObj):
+│ │ +        super(ExternalSystemPool, self).jsonParse(jsonObj)
+│ │ +        if 'altName' in jsonObj:
+│ │ +            self._altName = jsonObj['altName']
+│ │ +        else:
+│ │ +            self._altName = ''
+│ │ +        if 'externalSystemId' in jsonObj:
+│ │ +            self._externalSystemId = jsonObj['externalSystemId']
+│ │ +        else:
+│ │ +            self._externalSystemId = ''
+│ │ +        if 'capacity' in jsonObj:
+│ │ +            self._capacity = jsonObj['capacity']
+│ │ +        else:
+│ │ +            self._capacity = '0'
+│ │ +        if 'externalSystemControllerId' in jsonObj:
+│ │ +            self._externalSystemControllerId = jsonObj['externalSystemControllerId']
+│ │ +        else:
+│ │ +            self._externalSystemControllerId = ''
+│ │ +        if 'serialNumber' in jsonObj:
+│ │ +            self._serialNumber = jsonObj['serialNumber']
+│ │ +        else:
+│ │ +            self._serialNumber = ''
+│ │ +        if 'raidtype' in jsonObj:
+│ │ +            self._raidtype = jsonObj['raidtype']
+│ │ +        else:
+│ │ +            self._raidtype = '0'
+│ │ +        if 'externalSystemVolumeIdList' in jsonObj:
+│ │ +            self._externalSystemVolumeIdList = jsonObj['externalSystemVolumeIdList']
+│ │ +        else:
+│ │ +            self._externalSystemVolumeIdList = ''
+│ │ +        return self
+│ │ +
+│ │ +    def exportJson(self):
+│ │ +        superJsonObj = super(ExternalSystemPool,self).exportJson()
+│ │ +        thisJsonObj = {
+│ │ +            'altName' : self._altName,
+│ │ +            'externalSystemId' : self._externalSystemId,
+│ │ +            'capacity' : self._capacity,
+│ │ +            'externalSystemControllerId' : self._externalSystemControllerId,
+│ │ +            'serialNumber' : self._serialNumber,
+│ │ +            'raidtype' : self._raidtype,
+│ │ +            'externalSystemVolumeIdList' : self._externalSystemVolumeIdList
+│ │ +        }
+│ │ +        thisJsonObj.update(superJsonObj)
+│ │ +        return thisJsonObj
+│ │ +
+│ │ +class ExternalSystemPoolEnumResponse(object):
+│ │ +    _list=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        objList=''):
+│ │ +        self._list = objList
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        objList = []
+│ │ +        for var in jsonObj:
+│ │ +            objList.append(ExternalSystemPool(var))
+│ │ +        return objList
+│ │ +
+│ │ +class ExternalSystemPoolGetResponse(object):
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        obj=''):
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        obj = ExternalSystemPool(jsonObj)
+│ │ +        return obj
+│ │ +
+│ │  class ExternalSystemPort(Object):
+│ │      _altName=''
+│ │      _externalSystemPortGroupId=''
+│ │      _externalSystemId=''
+│ │      _macAddress=''
+│ │      _ipAddress=''
+│ │      _subnetMask=''
+│ │ @@ -18854,14 +19142,118 @@
+│ │          task = Task(jsonObj['task'])
+│ │          objList = []
+│ │          if 'list' in jsonObj:
+│ │              for var in jsonObj['list']:
+│ │                  objList.append(SwController(var))
+│ │          return task, objList
+│ │  
+│ │ +class ExternalSystemVolume(Object):
+│ │ +    _altName=''
+│ │ +    _externalSystemId=''
+│ │ +    _externalSystemControllerId=''
+│ │ +    _externalSystemPoolId=''
+│ │ +    _capacity='0'
+│ │ +    _serialNumber=''
+│ │ +    _wwn=''
+│ │ +    _raidtype='0'
+│ │ +    _usedById=''
+│ │ +    _usedByType='0'
+│ │ +
+│ │ +    def __init__(self,jsonObj):
+│ │ +        self.jsonParse(jsonObj)
+│ │ +
+│ │ +    def jsonParse(self,jsonObj):
+│ │ +        super(ExternalSystemVolume, self).jsonParse(jsonObj)
+│ │ +        if 'altName' in jsonObj:
+│ │ +            self._altName = jsonObj['altName']
+│ │ +        else:
+│ │ +            self._altName = ''
+│ │ +        if 'externalSystemId' in jsonObj:
+│ │ +            self._externalSystemId = jsonObj['externalSystemId']
+│ │ +        else:
+│ │ +            self._externalSystemId = ''
+│ │ +        if 'externalSystemControllerId' in jsonObj:
+│ │ +            self._externalSystemControllerId = jsonObj['externalSystemControllerId']
+│ │ +        else:
+│ │ +            self._externalSystemControllerId = ''
+│ │ +        if 'externalSystemPoolId' in jsonObj:
+│ │ +            self._externalSystemPoolId = jsonObj['externalSystemPoolId']
+│ │ +        else:
+│ │ +            self._externalSystemPoolId = ''
+│ │ +        if 'capacity' in jsonObj:
+│ │ +            self._capacity = jsonObj['capacity']
+│ │ +        else:
+│ │ +            self._capacity = '0'
+│ │ +        if 'serialNumber' in jsonObj:
+│ │ +            self._serialNumber = jsonObj['serialNumber']
+│ │ +        else:
+│ │ +            self._serialNumber = ''
+│ │ +        if 'wwn' in jsonObj:
+│ │ +            self._wwn = jsonObj['wwn']
+│ │ +        else:
+│ │ +            self._wwn = ''
+│ │ +        if 'raidtype' in jsonObj:
+│ │ +            self._raidtype = jsonObj['raidtype']
+│ │ +        else:
+│ │ +            self._raidtype = '0'
+│ │ +        if 'usedById' in jsonObj:
+│ │ +            self._usedById = jsonObj['usedById']
+│ │ +        else:
+│ │ +            self._usedById = ''
+│ │ +        if 'usedByType' in jsonObj:
+│ │ +            self._usedByType = jsonObj['usedByType']
+│ │ +        else:
+│ │ +            self._usedByType = '0'
+│ │ +        return self
+│ │ +
+│ │ +    def exportJson(self):
+│ │ +        superJsonObj = super(ExternalSystemVolume,self).exportJson()
+│ │ +        thisJsonObj = {
+│ │ +            'altName' : self._altName,
+│ │ +            'externalSystemId' : self._externalSystemId,
+│ │ +            'externalSystemControllerId' : self._externalSystemControllerId,
+│ │ +            'externalSystemPoolId' : self._externalSystemPoolId,
+│ │ +            'capacity' : self._capacity,
+│ │ +            'serialNumber' : self._serialNumber,
+│ │ +            'wwn' : self._wwn,
+│ │ +            'raidtype' : self._raidtype,
+│ │ +            'usedById' : self._usedById,
+│ │ +            'usedByType' : self._usedByType
+│ │ +        }
+│ │ +        thisJsonObj.update(superJsonObj)
+│ │ +        return thisJsonObj
+│ │ +
+│ │ +class ExternalSystemVolumeEnumResponse(object):
+│ │ +    _list=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        objList=''):
+│ │ +        self._list = objList
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        objList = []
+│ │ +        for var in jsonObj:
+│ │ +            objList.append(ExternalSystemVolume(var))
+│ │ +        return objList
+│ │ +
+│ │ +class ExternalSystemVolumeGetResponse(object):
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        obj=''):
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        obj = ExternalSystemVolume(jsonObj)
+│ │ +        return obj
+│ │ +
+│ │  class FcTargetPort(Object):
+│ │      _description=''
+│ │      _isVirtualPort=False
+│ │      _firmwareVersion=''
+│ │      _driverVersion=''
+│ │      _pciInfo=''
+│ │      _isTargetModeEnabled=False
+│ │ @@ -19148,14 +19540,16 @@
+│ │  class HardwareConfiguration(Object):
+│ │      _listExternalSystem=''
+│ │      _listExternalSystemController=''
+│ │      _listExternalSystemCredentials=''
+│ │      _listExternalSystemMedia=''
+│ │      _listExternalSystemPort=''
+│ │      _listExternalSystemPortGroup=''
+│ │ +    _listExternalSystemPool=''
+│ │ +    _listExternalSystemVolume=''
+│ │      _listHwAlarm=''
+│ │      _listHwBbu=''
+│ │      _listHwController=''
+│ │      _listHwGroup=''
+│ │      _listHwDisk=''
+│ │      _listHwEnclosure=''
+│ │      _listHwEnclosureLayout=''
+│ │ @@ -19193,14 +19587,22 @@
+│ │              self._listExternalSystemPort = jsonObj['listExternalSystemPort']
+│ │          else:
+│ │              self._listExternalSystemPort = ''
+│ │          if 'listExternalSystemPortGroup' in jsonObj:
+│ │              self._listExternalSystemPortGroup = jsonObj['listExternalSystemPortGroup']
+│ │          else:
+│ │              self._listExternalSystemPortGroup = ''
+│ │ +        if 'listExternalSystemPool' in jsonObj:
+│ │ +            self._listExternalSystemPool = jsonObj['listExternalSystemPool']
+│ │ +        else:
+│ │ +            self._listExternalSystemPool = ''
+│ │ +        if 'listExternalSystemVolume' in jsonObj:
+│ │ +            self._listExternalSystemVolume = jsonObj['listExternalSystemVolume']
+│ │ +        else:
+│ │ +            self._listExternalSystemVolume = ''
+│ │          if 'listHwAlarm' in jsonObj:
+│ │              self._listHwAlarm = jsonObj['listHwAlarm']
+│ │          else:
+│ │              self._listHwAlarm = ''
+│ │          if 'listHwBbu' in jsonObj:
+│ │              self._listHwBbu = jsonObj['listHwBbu']
+│ │          else:
+│ │ @@ -19264,14 +19666,16 @@
+│ │          thisJsonObj = {
+│ │              'listExternalSystem' : self._listExternalSystem,
+│ │              'listExternalSystemController' : self._listExternalSystemController,
+│ │              'listExternalSystemCredentials' : self._listExternalSystemCredentials,
+│ │              'listExternalSystemMedia' : self._listExternalSystemMedia,
+│ │              'listExternalSystemPort' : self._listExternalSystemPort,
+│ │              'listExternalSystemPortGroup' : self._listExternalSystemPortGroup,
+│ │ +            'listExternalSystemPool' : self._listExternalSystemPool,
+│ │ +            'listExternalSystemVolume' : self._listExternalSystemVolume,
+│ │              'listHwAlarm' : self._listHwAlarm,
+│ │              'listHwBbu' : self._listHwBbu,
+│ │              'listHwController' : self._listHwController,
+│ │              'listHwGroup' : self._listHwGroup,
+│ │              'listHwDisk' : self._listHwDisk,
+│ │              'listHwEnclosure' : self._listHwEnclosure,
+│ │              'listHwEnclosureLayout' : self._listHwEnclosureLayout,
+│ │ @@ -22718,34 +23122,38 @@
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class LoginResponse(object):
+│ │      _authObj=''
+│ │      _roleObj=''
+│ │      _userObj=''
+│ │ +    _devMode=False
+│ │      _resourceGroupList=''
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          authObj='',
+│ │          roleObj='',
+│ │          userObj='',
+│ │ +        devMode=False,
+│ │          resourceGroupList=''):
+│ │          self._authObj = authObj
+│ │          self._roleObj = roleObj
+│ │          self._userObj = userObj
+│ │ +        self._devMode = devMode
+│ │          self._resourceGroupList = resourceGroupList
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          authObj = MfaLogin(jsonObj['authObj'])
+│ │          roleObj = Role(jsonObj['roleObj'])
+│ │          userObj = User(jsonObj['userObj'])
+│ │ +        devMode = jsonObj['devMode']
+│ │          resourceGroupList = ResourceGroup(jsonObj['resourceGroupList'])
+│ │ -        return authObj, roleObj, userObj, resourceGroupList
+│ │ +        return authObj, roleObj, userObj, devMode, resourceGroupList
+│ │  
+│ │  class LoginVerifyResponse(object):
+│ │      _authObj=''
+│ │      _userObj=''
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │ @@ -23333,14 +23741,15 @@
+│ │      _isEncrypted=False
+│ │      _requiresKeyPassphrase=False
+│ │      _cryptAlgorithm=''
+│ │      _cryptKeyFormat=''
+│ │      _cryptKeyLocation=''
+│ │      _cryptKeyStatus=''
+│ │      _cryptRoot=''
+│ │ +    _immutabilityMode='0'
+│ │      _snapshotIdList=''
+│ │      _subshareIdList=''
+│ │      _nfsClients=''
+│ │      _cifsUserAccessList=''
+│ │      _cifsOptionList=''
+│ │      _backupPolicies=''
+│ │  
+│ │ @@ -23469,14 +23878,18 @@
+│ │              self._cryptKeyStatus = jsonObj['cryptKeyStatus']
+│ │          else:
+│ │              self._cryptKeyStatus = ''
+│ │          if 'cryptRoot' in jsonObj:
+│ │              self._cryptRoot = jsonObj['cryptRoot']
+│ │          else:
+│ │              self._cryptRoot = ''
+│ │ +        if 'immutabilityMode' in jsonObj:
+│ │ +            self._immutabilityMode = jsonObj['immutabilityMode']
+│ │ +        else:
+│ │ +            self._immutabilityMode = '0'
+│ │          if 'snapshotIdList' in jsonObj:
+│ │              self._snapshotIdList = jsonObj['snapshotIdList']
+│ │          else:
+│ │              self._snapshotIdList = ''
+│ │          if 'subshareIdList' in jsonObj:
+│ │              self._subshareIdList = jsonObj['subshareIdList']
+│ │          else:
+│ │ @@ -23529,14 +23942,15 @@
+│ │              'isEncrypted' : self._isEncrypted,
+│ │              'requiresKeyPassphrase' : self._requiresKeyPassphrase,
+│ │              'cryptAlgorithm' : self._cryptAlgorithm,
+│ │              'cryptKeyFormat' : self._cryptKeyFormat,
+│ │              'cryptKeyLocation' : self._cryptKeyLocation,
+│ │              'cryptKeyStatus' : self._cryptKeyStatus,
+│ │              'cryptRoot' : self._cryptRoot,
+│ │ +            'immutabilityMode' : self._immutabilityMode,
+│ │              'snapshotIdList' : self._snapshotIdList,
+│ │              'subshareIdList' : self._subshareIdList,
+│ │              'nfsClients' : self._nfsClients,
+│ │              'cifsUserAccessList' : self._cifsUserAccessList,
+│ │              'cifsOptionList' : self._cifsOptionList,
+│ │              'backupPolicies' : self._backupPolicies
+│ │          }
+│ │ @@ -23921,31 +24335,14 @@
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          task = Task(jsonObj['task'])
+│ │          obj = NetworkShare(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │ -class NetworkShareEncryptedStartResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = NetworkShare(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │  class NetworkShareEncryptionKeyExportResponse(object):
+│ │      _task=''
+│ │      _obj=''
+│ │      _keyBlock=''
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │ @@ -24764,14 +25161,15 @@
+│ │      _idmapMode='0'
+│ │      _nfsKerberosMode='0'
+│ │      _nfs4BrowsingDisabled=False
+│ │      _sambaVersion=''
+│ │      _allowTrustedDomains=False
+│ │      _preserveAdUserAccessEntries=False
+│ │      _defaultNfsSecurityPolicy='0'
+│ │ +    _nfsServerType='0'
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(NetworkShareServiceConfig, self).jsonParse(jsonObj)
+│ │          if 'nfsMode' in jsonObj:
+│ │ @@ -24826,14 +25224,18 @@
+│ │              self._preserveAdUserAccessEntries = jsonObj['preserveAdUserAccessEntries']
+│ │          else:
+│ │              self._preserveAdUserAccessEntries = False
+│ │          if 'defaultNfsSecurityPolicy' in jsonObj:
+│ │              self._defaultNfsSecurityPolicy = jsonObj['defaultNfsSecurityPolicy']
+│ │          else:
+│ │              self._defaultNfsSecurityPolicy = '0'
+│ │ +        if 'nfsServerType' in jsonObj:
+│ │ +            self._nfsServerType = jsonObj['nfsServerType']
+│ │ +        else:
+│ │ +            self._nfsServerType = '0'
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(NetworkShareServiceConfig,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'nfsMode' : self._nfsMode,
+│ │              'nfs4KerberosEnabled' : self._nfs4KerberosEnabled,
+│ │ @@ -24844,15 +25246,16 @@
+│ │              'kdc' : self._kdc,
+│ │              'idmapMode' : self._idmapMode,
+│ │              'nfsKerberosMode' : self._nfsKerberosMode,
+│ │              'nfs4BrowsingDisabled' : self._nfs4BrowsingDisabled,
+│ │              'sambaVersion' : self._sambaVersion,
+│ │              'allowTrustedDomains' : self._allowTrustedDomains,
+│ │              'preserveAdUserAccessEntries' : self._preserveAdUserAccessEntries,
+│ │ -            'defaultNfsSecurityPolicy' : self._defaultNfsSecurityPolicy
+│ │ +            'defaultNfsSecurityPolicy' : self._defaultNfsSecurityPolicy,
+│ │ +            'nfsServerType' : self._nfsServerType
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class NetworkShareServicesRestartResponse(object):
+│ │      _task=''
+│ │  
+│ │ @@ -25453,15 +25856,16 @@
+│ │      _encryptionCipher=''
+│ │      _passthruVolumeId=''
+│ │      _sourceVolumeId=''
+│ │      _hasJournal=False
+│ │      _storagePoolDeviceId=''
+│ │      _cephOsdId=''
+│ │      _cephJournalGroupId=''
+│ │ -    _externalSystemMediaId=''
+│ │ +    _correlationDeviceId=''
+│ │ +    _correlationDeviceType='0'
+│ │      _iofenceTag=''
+│ │      _iofencePoolId=''
+│ │      _iofenceSystemId=''
+│ │      _isSsdDevice=False
+│ │      _trimSupported=False
+│ │      _blockSize='0'
+│ │      _lastShredSignature=''
+│ │ @@ -25607,18 +26011,22 @@
+│ │              self._cephOsdId = jsonObj['cephOsdId']
+│ │          else:
+│ │              self._cephOsdId = ''
+│ │          if 'cephJournalGroupId' in jsonObj:
+│ │              self._cephJournalGroupId = jsonObj['cephJournalGroupId']
+│ │          else:
+│ │              self._cephJournalGroupId = ''
+│ │ -        if 'externalSystemMediaId' in jsonObj:
+│ │ -            self._externalSystemMediaId = jsonObj['externalSystemMediaId']
+│ │ +        if 'correlationDeviceId' in jsonObj:
+│ │ +            self._correlationDeviceId = jsonObj['correlationDeviceId']
+│ │ +        else:
+│ │ +            self._correlationDeviceId = ''
+│ │ +        if 'correlationDeviceType' in jsonObj:
+│ │ +            self._correlationDeviceType = jsonObj['correlationDeviceType']
+│ │          else:
+│ │ -            self._externalSystemMediaId = ''
+│ │ +            self._correlationDeviceType = '0'
+│ │          if 'iofenceTag' in jsonObj:
+│ │              self._iofenceTag = jsonObj['iofenceTag']
+│ │          else:
+│ │              self._iofenceTag = ''
+│ │          if 'iofencePoolId' in jsonObj:
+│ │              self._iofencePoolId = jsonObj['iofencePoolId']
+│ │          else:
+│ │ @@ -25709,15 +26117,16 @@
+│ │              'encryptionCipher' : self._encryptionCipher,
+│ │              'passthruVolumeId' : self._passthruVolumeId,
+│ │              'sourceVolumeId' : self._sourceVolumeId,
+│ │              'hasJournal' : self._hasJournal,
+│ │              'storagePoolDeviceId' : self._storagePoolDeviceId,
+│ │              'cephOsdId' : self._cephOsdId,
+│ │              'cephJournalGroupId' : self._cephJournalGroupId,
+│ │ -            'externalSystemMediaId' : self._externalSystemMediaId,
+│ │ +            'correlationDeviceId' : self._correlationDeviceId,
+│ │ +            'correlationDeviceType' : self._correlationDeviceType,
+│ │              'iofenceTag' : self._iofenceTag,
+│ │              'iofencePoolId' : self._iofencePoolId,
+│ │              'iofenceSystemId' : self._iofenceSystemId,
+│ │              'isSsdDevice' : self._isSsdDevice,
+│ │              'trimSupported' : self._trimSupported,
+│ │              'blockSize' : self._blockSize,
+│ │              'lastShredSignature' : self._lastShredSignature,
+│ │ @@ -26424,15 +26833,15 @@
+│ │      _replicationProcessId='0'
+│ │      _replicationScheduleId=''
+│ │      _timeRemaining=''
+│ │      _transferSpeed=''
+│ │      _currentFileName=''
+│ │      _currentFileProgress='0'
+│ │      _estTotalTransfer='0'
+│ │ -    _amountTransfered='0'
+│ │ +    _amountTransferred='0'
+│ │      _pseudoParentTaskId=''
+│ │      _taskId=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │ @@ -26545,18 +26954,18 @@
+│ │              self._currentFileProgress = jsonObj['currentFileProgress']
+│ │          else:
+│ │              self._currentFileProgress = '0'
+│ │          if 'estTotalTransfer' in jsonObj:
+│ │              self._estTotalTransfer = jsonObj['estTotalTransfer']
+│ │          else:
+│ │              self._estTotalTransfer = '0'
+│ │ -        if 'amountTransfered' in jsonObj:
+│ │ -            self._amountTransfered = jsonObj['amountTransfered']
+│ │ +        if 'amountTransferred' in jsonObj:
+│ │ +            self._amountTransferred = jsonObj['amountTransferred']
+│ │          else:
+│ │ -            self._amountTransfered = '0'
+│ │ +            self._amountTransferred = '0'
+│ │          if 'pseudoParentTaskId' in jsonObj:
+│ │              self._pseudoParentTaskId = jsonObj['pseudoParentTaskId']
+│ │          else:
+│ │              self._pseudoParentTaskId = ''
+│ │          if 'taskId' in jsonObj:
+│ │              self._taskId = jsonObj['taskId']
+│ │          else:
+│ │ @@ -26590,15 +26999,15 @@
+│ │              'replicationProcessId' : self._replicationProcessId,
+│ │              'replicationScheduleId' : self._replicationScheduleId,
+│ │              'timeRemaining' : self._timeRemaining,
+│ │              'transferSpeed' : self._transferSpeed,
+│ │              'currentFileName' : self._currentFileName,
+│ │              'currentFileProgress' : self._currentFileProgress,
+│ │              'estTotalTransfer' : self._estTotalTransfer,
+│ │ -            'amountTransfered' : self._amountTransfered,
+│ │ +            'amountTransferred' : self._amountTransferred,
+│ │              'pseudoParentTaskId' : self._pseudoParentTaskId,
+│ │              'taskId' : self._taskId
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class ReplicaAssocDeleteResponse(object):
+│ │ @@ -26691,15 +27100,15 @@
+│ │      _replicationState='0'
+│ │      _progress='0'
+│ │      _syncStartedTimeStamp=''
+│ │      _syncCompletedTimeStamp=''
+│ │      _timeRemaining=''
+│ │      _transferSpeed=''
+│ │      _estTotalTransfer='0'
+│ │ -    _amountTransfered='0'
+│ │ +    _amountTransferred='0'
+│ │      _averageTransfer='0'
+│ │      _objectEntryType='0'
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │ @@ -26756,18 +27165,18 @@
+│ │              self._transferSpeed = jsonObj['transferSpeed']
+│ │          else:
+│ │              self._transferSpeed = ''
+│ │          if 'estTotalTransfer' in jsonObj:
+│ │              self._estTotalTransfer = jsonObj['estTotalTransfer']
+│ │          else:
+│ │              self._estTotalTransfer = '0'
+│ │ -        if 'amountTransfered' in jsonObj:
+│ │ -            self._amountTransfered = jsonObj['amountTransfered']
+│ │ +        if 'amountTransferred' in jsonObj:
+│ │ +            self._amountTransferred = jsonObj['amountTransferred']
+│ │          else:
+│ │ -            self._amountTransfered = '0'
+│ │ +            self._amountTransferred = '0'
+│ │          if 'averageTransfer' in jsonObj:
+│ │              self._averageTransfer = jsonObj['averageTransfer']
+│ │          else:
+│ │              self._averageTransfer = '0'
+│ │          if 'objectEntryType' in jsonObj:
+│ │              self._objectEntryType = jsonObj['objectEntryType']
+│ │          else:
+│ │ @@ -26787,15 +27196,15 @@
+│ │              'replicationState' : self._replicationState,
+│ │              'progress' : self._progress,
+│ │              'syncStartedTimeStamp' : self._syncStartedTimeStamp,
+│ │              'syncCompletedTimeStamp' : self._syncCompletedTimeStamp,
+│ │              'timeRemaining' : self._timeRemaining,
+│ │              'transferSpeed' : self._transferSpeed,
+│ │              'estTotalTransfer' : self._estTotalTransfer,
+│ │ -            'amountTransfered' : self._amountTransfered,
+│ │ +            'amountTransferred' : self._amountTransferred,
+│ │              'averageTransfer' : self._averageTransfer,
+│ │              'objectEntryType' : self._objectEntryType
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class ReplicaReportEntryEnumResponse(object):
+│ │ @@ -26833,15 +27242,15 @@
+│ │      _pseudoParentTaskId=''
+│ │      _replicationState='0'
+│ │      _syncStartedTimeStamp=''
+│ │      _syncCompletedTimeStamp=''
+│ │      _taskCount='0'
+│ │      _tasksCompleted='0'
+│ │      _tasksFailed='0'
+│ │ -    _amountTransfered='0'
+│ │ +    _amountTransferred='0'
+│ │      _errorStatus=''
+│ │      _averageTransfer='0'
+│ │      _linkType='0'
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │ @@ -26883,18 +27292,18 @@
+│ │              self._tasksCompleted = jsonObj['tasksCompleted']
+│ │          else:
+│ │              self._tasksCompleted = '0'
+│ │          if 'tasksFailed' in jsonObj:
+│ │              self._tasksFailed = jsonObj['tasksFailed']
+│ │          else:
+│ │              self._tasksFailed = '0'
+│ │ -        if 'amountTransfered' in jsonObj:
+│ │ -            self._amountTransfered = jsonObj['amountTransfered']
+│ │ +        if 'amountTransferred' in jsonObj:
+│ │ +            self._amountTransferred = jsonObj['amountTransferred']
+│ │          else:
+│ │ -            self._amountTransfered = '0'
+│ │ +            self._amountTransferred = '0'
+│ │          if 'errorStatus' in jsonObj:
+│ │              self._errorStatus = jsonObj['errorStatus']
+│ │          else:
+│ │              self._errorStatus = ''
+│ │          if 'averageTransfer' in jsonObj:
+│ │              self._averageTransfer = jsonObj['averageTransfer']
+│ │          else:
+│ │ @@ -26914,15 +27323,15 @@
+│ │              'pseudoParentTaskId' : self._pseudoParentTaskId,
+│ │              'replicationState' : self._replicationState,
+│ │              'syncStartedTimeStamp' : self._syncStartedTimeStamp,
+│ │              'syncCompletedTimeStamp' : self._syncCompletedTimeStamp,
+│ │              'taskCount' : self._taskCount,
+│ │              'tasksCompleted' : self._tasksCompleted,
+│ │              'tasksFailed' : self._tasksFailed,
+│ │ -            'amountTransfered' : self._amountTransfered,
+│ │ +            'amountTransferred' : self._amountTransferred,
+│ │              'errorStatus' : self._errorStatus,
+│ │              'averageTransfer' : self._averageTransfer,
+│ │              'linkType' : self._linkType
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │ @@ -27036,14 +27445,16 @@
+│ │      _retentionCountHourliesSrc='0'
+│ │      _retentionCountDailiesSrc='0'
+│ │      _retentionCountWeekliesSrc='0'
+│ │      _retentionCountMonthliesSrc='0'
+│ │      _retentionCountQuarterliesSrc='0'
+│ │      _scheduleActivationVifId=''
+│ │      _retentionCountSumReports='0'
+│ │ +    _enableRecursiveNestedShares=False
+│ │ +    _enableConsistencyGroup=False
+│ │      _storageVolumeList=''
+│ │      _networkShareList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │ @@ -27112,14 +27523,22 @@
+│ │              self._scheduleActivationVifId = jsonObj['scheduleActivationVifId']
+│ │          else:
+│ │              self._scheduleActivationVifId = ''
+│ │          if 'retentionCountSumReports' in jsonObj:
+│ │              self._retentionCountSumReports = jsonObj['retentionCountSumReports']
+│ │          else:
+│ │              self._retentionCountSumReports = '0'
+│ │ +        if 'enableRecursiveNestedShares' in jsonObj:
+│ │ +            self._enableRecursiveNestedShares = jsonObj['enableRecursiveNestedShares']
+│ │ +        else:
+│ │ +            self._enableRecursiveNestedShares = False
+│ │ +        if 'enableConsistencyGroup' in jsonObj:
+│ │ +            self._enableConsistencyGroup = jsonObj['enableConsistencyGroup']
+│ │ +        else:
+│ │ +            self._enableConsistencyGroup = False
+│ │          if 'storageVolumeList' in jsonObj:
+│ │              self._storageVolumeList = jsonObj['storageVolumeList']
+│ │          else:
+│ │              self._storageVolumeList = ''
+│ │          if 'networkShareList' in jsonObj:
+│ │              self._networkShareList = jsonObj['networkShareList']
+│ │          else:
+│ │ @@ -27142,14 +27561,16 @@
+│ │              'retentionCountHourliesSrc' : self._retentionCountHourliesSrc,
+│ │              'retentionCountDailiesSrc' : self._retentionCountDailiesSrc,
+│ │              'retentionCountWeekliesSrc' : self._retentionCountWeekliesSrc,
+│ │              'retentionCountMonthliesSrc' : self._retentionCountMonthliesSrc,
+│ │              'retentionCountQuarterliesSrc' : self._retentionCountQuarterliesSrc,
+│ │              'scheduleActivationVifId' : self._scheduleActivationVifId,
+│ │              'retentionCountSumReports' : self._retentionCountSumReports,
+│ │ +            'enableRecursiveNestedShares' : self._enableRecursiveNestedShares,
+│ │ +            'enableConsistencyGroup' : self._enableConsistencyGroup,
+│ │              'storageVolumeList' : self._storageVolumeList,
+│ │              'networkShareList' : self._networkShareList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class ReplicationScheduleActivateCheckpointsResponse(object):
+│ │ @@ -27401,14 +27822,15 @@
+│ │          obj = ReplicationSchedule(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │  class Report(Object):
+│ │      _passedCount='0'
+│ │      _failedCount='0'
+│ │      _reportOutput=''
+│ │ +    _reportOutputFormat='0'
+│ │      _entryList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(Report, self).jsonParse(jsonObj)
+│ │ @@ -27420,26 +27842,31 @@
+│ │              self._failedCount = jsonObj['failedCount']
+│ │          else:
+│ │              self._failedCount = '0'
+│ │          if 'reportOutput' in jsonObj:
+│ │              self._reportOutput = jsonObj['reportOutput']
+│ │          else:
+│ │              self._reportOutput = ''
+│ │ +        if 'reportOutputFormat' in jsonObj:
+│ │ +            self._reportOutputFormat = jsonObj['reportOutputFormat']
+│ │ +        else:
+│ │ +            self._reportOutputFormat = '0'
+│ │          if 'entryList' in jsonObj:
+│ │              self._entryList = jsonObj['entryList']
+│ │          else:
+│ │              self._entryList = ''
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(Report,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'passedCount' : self._passedCount,
+│ │              'failedCount' : self._failedCount,
+│ │              'reportOutput' : self._reportOutput,
+│ │ +            'reportOutputFormat' : self._reportOutputFormat,
+│ │              'entryList' : self._entryList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class ReportEntry(object):
+│ │      _id=''
+│ │ @@ -29199,14 +29626,15 @@
+│ │                  objList.append(S3Quota(var))
+│ │          return task, objList
+│ │  
+│ │  class S3Tenant(Object):
+│ │      _description=''
+│ │      _displayName=''
+│ │      _s3UserIdList=''
+│ │ +    _bucketIdList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │          super(S3Tenant, self).jsonParse(jsonObj)
+│ │          if 'description' in jsonObj:
+│ │ @@ -29217,22 +29645,27 @@
+│ │              self._displayName = jsonObj['displayName']
+│ │          else:
+│ │              self._displayName = ''
+│ │          if 's3UserIdList' in jsonObj:
+│ │              self._s3UserIdList = jsonObj['s3UserIdList']
+│ │          else:
+│ │              self._s3UserIdList = ''
+│ │ +        if 'bucketIdList' in jsonObj:
+│ │ +            self._bucketIdList = jsonObj['bucketIdList']
+│ │ +        else:
+│ │ +            self._bucketIdList = ''
+│ │          return self
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(S3Tenant,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'description' : self._description,
+│ │              'displayName' : self._displayName,
+│ │ -            's3UserIdList' : self._s3UserIdList
+│ │ +            's3UserIdList' : self._s3UserIdList,
+│ │ +            'bucketIdList' : self._bucketIdList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class S3TenantCreateResponse(object):
+│ │      _task=''
+│ │      _obj=''
+│ │ @@ -30000,14 +30433,15 @@
+│ │  
+│ │  class SiteCluster(Object):
+│ │      _location=''
+│ │      _description=''
+│ │      _clusterStatus=''
+│ │      _currentDc=''
+│ │      _corosyncVersion=''
+│ │ +    _maintenanceModeEnabled=False
+│ │      _siteClusterAssocList=''
+│ │      _ringList=''
+│ │      _vifResources=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │ @@ -30029,14 +30463,18 @@
+│ │              self._currentDc = jsonObj['currentDc']
+│ │          else:
+│ │              self._currentDc = ''
+│ │          if 'corosyncVersion' in jsonObj:
+│ │              self._corosyncVersion = jsonObj['corosyncVersion']
+│ │          else:
+│ │              self._corosyncVersion = ''
+│ │ +        if 'maintenanceModeEnabled' in jsonObj:
+│ │ +            self._maintenanceModeEnabled = jsonObj['maintenanceModeEnabled']
+│ │ +        else:
+│ │ +            self._maintenanceModeEnabled = False
+│ │          if 'siteClusterAssocList' in jsonObj:
+│ │              self._siteClusterAssocList = jsonObj['siteClusterAssocList']
+│ │          else:
+│ │              self._siteClusterAssocList = ''
+│ │          if 'ringList' in jsonObj:
+│ │              self._ringList = jsonObj['ringList']
+│ │          else:
+│ │ @@ -30051,14 +30489,15 @@
+│ │          superJsonObj = super(SiteCluster,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'location' : self._location,
+│ │              'description' : self._description,
+│ │              'clusterStatus' : self._clusterStatus,
+│ │              'currentDc' : self._currentDc,
+│ │              'corosyncVersion' : self._corosyncVersion,
+│ │ +            'maintenanceModeEnabled' : self._maintenanceModeEnabled,
+│ │              'siteClusterAssocList' : self._siteClusterAssocList,
+│ │              'ringList' : self._ringList,
+│ │              'vifResources' : self._vifResources
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │ @@ -30269,14 +30708,31 @@
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          task = Task(jsonObj['task'])
+│ │          obj = StorageSystem(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │ +class SiteClusterSetMaintenanceModeResponse(object):
+│ │ +    _task=''
+│ │ +    _obj=''
+│ │ +
+│ │ +    def __init__(
+│ │ +        self,
+│ │ +        task='',
+│ │ +        obj=''):
+│ │ +        self._task = task
+│ │ +        self._obj = obj
+│ │ +
+│ │ +    @classmethod
+│ │ +    def responseParse(cls,jsonObj):
+│ │ +        task = Task(jsonObj['task'])
+│ │ +        obj = SiteCluster(jsonObj['obj'])
+│ │ +        return task, obj
+│ │ +
+│ │  class SiteStorageSystemAddRemoveResponse(object):
+│ │      _task=''
+│ │      _obj=''
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          task='',
+│ │ @@ -30497,14 +30953,16 @@
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class SnapshotSchedule(Schedule):
+│ │      _resourceGroupId=''
+│ │      _provisionableId=''
+│ │      _maxSnapshots='0'
+│ │ +    _enableRecursiveNestedShares=False
+│ │ +    _enableConsistencyGroup=False
+│ │      _storageVolumeList=''
+│ │      _networkShareList=''
+│ │  
+│ │      def __init__(self,jsonObj):
+│ │          self.jsonParse(jsonObj)
+│ │  
+│ │      def jsonParse(self,jsonObj):
+│ │ @@ -30517,14 +30975,22 @@
+│ │              self._provisionableId = jsonObj['provisionableId']
+│ │          else:
+│ │              self._provisionableId = ''
+│ │          if 'maxSnapshots' in jsonObj:
+│ │              self._maxSnapshots = jsonObj['maxSnapshots']
+│ │          else:
+│ │              self._maxSnapshots = '0'
+│ │ +        if 'enableRecursiveNestedShares' in jsonObj:
+│ │ +            self._enableRecursiveNestedShares = jsonObj['enableRecursiveNestedShares']
+│ │ +        else:
+│ │ +            self._enableRecursiveNestedShares = False
+│ │ +        if 'enableConsistencyGroup' in jsonObj:
+│ │ +            self._enableConsistencyGroup = jsonObj['enableConsistencyGroup']
+│ │ +        else:
+│ │ +            self._enableConsistencyGroup = False
+│ │          if 'storageVolumeList' in jsonObj:
+│ │              self._storageVolumeList = jsonObj['storageVolumeList']
+│ │          else:
+│ │              self._storageVolumeList = ''
+│ │          if 'networkShareList' in jsonObj:
+│ │              self._networkShareList = jsonObj['networkShareList']
+│ │          else:
+│ │ @@ -30533,14 +30999,16 @@
+│ │  
+│ │      def exportJson(self):
+│ │          superJsonObj = super(SnapshotSchedule,self).exportJson()
+│ │          thisJsonObj = {
+│ │              'resourceGroupId' : self._resourceGroupId,
+│ │              'provisionableId' : self._provisionableId,
+│ │              'maxSnapshots' : self._maxSnapshots,
+│ │ +            'enableRecursiveNestedShares' : self._enableRecursiveNestedShares,
+│ │ +            'enableConsistencyGroup' : self._enableConsistencyGroup,
+│ │              'storageVolumeList' : self._storageVolumeList,
+│ │              'networkShareList' : self._networkShareList
+│ │          }
+│ │          thisJsonObj.update(superJsonObj)
+│ │          return thisJsonObj
+│ │  
+│ │  class SnapshotScheduleAssoc(object):
+│ │ @@ -35433,48 +35901,14 @@
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          task = Task(jsonObj['task'])
+│ │          obj = StorageVolume(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │ -class StorageVolumeCloudBackupCreateResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = StorageVolume(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │ -class StorageVolumeCloudBackupRestoreResponse(object):
+│ │ -    _task=''
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        task='',
+│ │ -        obj=''):
+│ │ -        self._task = task
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        task = Task(jsonObj['task'])
+│ │ -        obj = StorageVolume(jsonObj['obj'])
+│ │ -        return task, obj
+│ │ -
+│ │  class StorageVolumeCreateExResponse(object):
+│ │      _task=''
+│ │      _obj=''
+│ │      _list=''
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │ @@ -36981,33 +37415,34 @@
+│ │  class SystemConfiguration(Object):
+│ │      _listAlert=''
+│ │      _listAlertConfigSettings=''
+│ │      _listAlertConfigEndpoint=''
+│ │      _listAlertType=''
+│ │      _listBucket=''
+│ │      _listCephCluster=''
+│ │ +    _listCephClientKeyring=''
+│ │      _listCephClusterMember=''
+│ │      _listCephCrushRule=''
+│ │      _listCephFilesystem=''
+│ │      _listCephJournalDevice=''
+│ │      _listCephJournalGroup=''
+│ │      _listCephMds=''
+│ │      _listCephMonitor=''
+│ │      _listCephObjectPoolGroup=''
+│ │      _listCephOsd=''
+│ │      _listCephPgSet=''
+│ │      _listCephPool=''
+│ │      _listCephPoolProfile=''
+│ │      _listCephRadosGateway=''
+│ │ -    _listCloudBackupSchedule=''
+│ │      _listCloudContainer=''
+│ │      _listCloudContainerCacheSettings=''
+│ │      _listCloudProvider=''
+│ │      _listCloudProviderCredentials=''
+│ │      _listCloudProviderLocation=''
+│ │ +    _listCloudProviderStorageClass=''
+│ │      _listClusterRing=''
+│ │      _listClusterRingMember=''
+│ │      _listFcTargetPort=''
+│ │      _listHost=''
+│ │      _listHostGroup=''
+│ │      _listIbTargetPort=''
+│ │      _listInitiatorPort=''
+│ │ @@ -37073,14 +37508,16 @@
+│ │      _listStorageVolumeAclNA=''
+│ │      _listExternalSystem=''
+│ │      _listExternalSystemController=''
+│ │      _listExternalSystemCredentials=''
+│ │      _listExternalSystemMedia=''
+│ │      _listExternalSystemPort=''
+│ │      _listExternalSystemPortGroup=''
+│ │ +    _listExternalSystemPool=''
+│ │ +    _listExternalSystemVolume=''
+│ │      _listHwAlarm=''
+│ │      _listHwBbu=''
+│ │      _listHwController=''
+│ │      _listHwGroup=''
+│ │      _listHwDisk=''
+│ │      _listHwEnclosure=''
+│ │      _listHwEnclosureLayout=''
+│ │ @@ -37123,14 +37560,18 @@
+│ │              self._listBucket = jsonObj['listBucket']
+│ │          else:
+│ │              self._listBucket = ''
+│ │          if 'listCephCluster' in jsonObj:
+│ │              self._listCephCluster = jsonObj['listCephCluster']
+│ │          else:
+│ │              self._listCephCluster = ''
+│ │ +        if 'listCephClientKeyring' in jsonObj:
+│ │ +            self._listCephClientKeyring = jsonObj['listCephClientKeyring']
+│ │ +        else:
+│ │ +            self._listCephClientKeyring = ''
+│ │          if 'listCephClusterMember' in jsonObj:
+│ │              self._listCephClusterMember = jsonObj['listCephClusterMember']
+│ │          else:
+│ │              self._listCephClusterMember = ''
+│ │          if 'listCephCrushRule' in jsonObj:
+│ │              self._listCephCrushRule = jsonObj['listCephCrushRule']
+│ │          else:
+│ │ @@ -37175,18 +37616,14 @@
+│ │              self._listCephPoolProfile = jsonObj['listCephPoolProfile']
+│ │          else:
+│ │              self._listCephPoolProfile = ''
+│ │          if 'listCephRadosGateway' in jsonObj:
+│ │              self._listCephRadosGateway = jsonObj['listCephRadosGateway']
+│ │          else:
+│ │              self._listCephRadosGateway = ''
+│ │ -        if 'listCloudBackupSchedule' in jsonObj:
+│ │ -            self._listCloudBackupSchedule = jsonObj['listCloudBackupSchedule']
+│ │ -        else:
+│ │ -            self._listCloudBackupSchedule = ''
+│ │          if 'listCloudContainer' in jsonObj:
+│ │              self._listCloudContainer = jsonObj['listCloudContainer']
+│ │          else:
+│ │              self._listCloudContainer = ''
+│ │          if 'listCloudContainerCacheSettings' in jsonObj:
+│ │              self._listCloudContainerCacheSettings = jsonObj['listCloudContainerCacheSettings']
+│ │          else:
+│ │ @@ -37199,14 +37636,18 @@
+│ │              self._listCloudProviderCredentials = jsonObj['listCloudProviderCredentials']
+│ │          else:
+│ │              self._listCloudProviderCredentials = ''
+│ │          if 'listCloudProviderLocation' in jsonObj:
+│ │              self._listCloudProviderLocation = jsonObj['listCloudProviderLocation']
+│ │          else:
+│ │              self._listCloudProviderLocation = ''
+│ │ +        if 'listCloudProviderStorageClass' in jsonObj:
+│ │ +            self._listCloudProviderStorageClass = jsonObj['listCloudProviderStorageClass']
+│ │ +        else:
+│ │ +            self._listCloudProviderStorageClass = ''
+│ │          if 'listClusterRing' in jsonObj:
+│ │              self._listClusterRing = jsonObj['listClusterRing']
+│ │          else:
+│ │              self._listClusterRing = ''
+│ │          if 'listClusterRingMember' in jsonObj:
+│ │              self._listClusterRingMember = jsonObj['listClusterRingMember']
+│ │          else:
+│ │ @@ -37491,14 +37932,22 @@
+│ │              self._listExternalSystemPort = jsonObj['listExternalSystemPort']
+│ │          else:
+│ │              self._listExternalSystemPort = ''
+│ │          if 'listExternalSystemPortGroup' in jsonObj:
+│ │              self._listExternalSystemPortGroup = jsonObj['listExternalSystemPortGroup']
+│ │          else:
+│ │              self._listExternalSystemPortGroup = ''
+│ │ +        if 'listExternalSystemPool' in jsonObj:
+│ │ +            self._listExternalSystemPool = jsonObj['listExternalSystemPool']
+│ │ +        else:
+│ │ +            self._listExternalSystemPool = ''
+│ │ +        if 'listExternalSystemVolume' in jsonObj:
+│ │ +            self._listExternalSystemVolume = jsonObj['listExternalSystemVolume']
+│ │ +        else:
+│ │ +            self._listExternalSystemVolume = ''
+│ │          if 'listHwAlarm' in jsonObj:
+│ │              self._listHwAlarm = jsonObj['listHwAlarm']
+│ │          else:
+│ │              self._listHwAlarm = ''
+│ │          if 'listHwBbu' in jsonObj:
+│ │              self._listHwBbu = jsonObj['listHwBbu']
+│ │          else:
+│ │ @@ -37582,33 +38031,34 @@
+│ │          thisJsonObj = {
+│ │              'listAlert' : self._listAlert,
+│ │              'listAlertConfigSettings' : self._listAlertConfigSettings,
+│ │              'listAlertConfigEndpoint' : self._listAlertConfigEndpoint,
+│ │              'listAlertType' : self._listAlertType,
+│ │              'listBucket' : self._listBucket,
+│ │              'listCephCluster' : self._listCephCluster,
+│ │ +            'listCephClientKeyring' : self._listCephClientKeyring,
+│ │              'listCephClusterMember' : self._listCephClusterMember,
+│ │              'listCephCrushRule' : self._listCephCrushRule,
+│ │              'listCephFilesystem' : self._listCephFilesystem,
+│ │              'listCephJournalDevice' : self._listCephJournalDevice,
+│ │              'listCephJournalGroup' : self._listCephJournalGroup,
+│ │              'listCephMds' : self._listCephMds,
+│ │              'listCephMonitor' : self._listCephMonitor,
+│ │              'listCephObjectPoolGroup' : self._listCephObjectPoolGroup,
+│ │              'listCephOsd' : self._listCephOsd,
+│ │              'listCephPgSet' : self._listCephPgSet,
+│ │              'listCephPool' : self._listCephPool,
+│ │              'listCephPoolProfile' : self._listCephPoolProfile,
+│ │              'listCephRadosGateway' : self._listCephRadosGateway,
+│ │ -            'listCloudBackupSchedule' : self._listCloudBackupSchedule,
+│ │              'listCloudContainer' : self._listCloudContainer,
+│ │              'listCloudContainerCacheSettings' : self._listCloudContainerCacheSettings,
+│ │              'listCloudProvider' : self._listCloudProvider,
+│ │              'listCloudProviderCredentials' : self._listCloudProviderCredentials,
+│ │              'listCloudProviderLocation' : self._listCloudProviderLocation,
+│ │ +            'listCloudProviderStorageClass' : self._listCloudProviderStorageClass,
+│ │              'listClusterRing' : self._listClusterRing,
+│ │              'listClusterRingMember' : self._listClusterRingMember,
+│ │              'listFcTargetPort' : self._listFcTargetPort,
+│ │              'listHost' : self._listHost,
+│ │              'listHostGroup' : self._listHostGroup,
+│ │              'listIbTargetPort' : self._listIbTargetPort,
+│ │              'listInitiatorPort' : self._listInitiatorPort,
+│ │ @@ -37674,14 +38124,16 @@
+│ │              'listStorageVolumeAclNA' : self._listStorageVolumeAclNA,
+│ │              'listExternalSystem' : self._listExternalSystem,
+│ │              'listExternalSystemController' : self._listExternalSystemController,
+│ │              'listExternalSystemCredentials' : self._listExternalSystemCredentials,
+│ │              'listExternalSystemMedia' : self._listExternalSystemMedia,
+│ │              'listExternalSystemPort' : self._listExternalSystemPort,
+│ │              'listExternalSystemPortGroup' : self._listExternalSystemPortGroup,
+│ │ +            'listExternalSystemPool' : self._listExternalSystemPool,
+│ │ +            'listExternalSystemVolume' : self._listExternalSystemVolume,
+│ │              'listHwAlarm' : self._listHwAlarm,
+│ │              'listHwBbu' : self._listHwBbu,
+│ │              'listHwController' : self._listHwController,
+│ │              'listHwGroup' : self._listHwGroup,
+│ │              'listHwDisk' : self._listHwDisk,
+│ │              'listHwEnclosure' : self._listHwEnclosure,
+│ │              'listHwEnclosureLayout' : self._listHwEnclosureLayout,
+│ │ @@ -38890,44 +39342,14 @@
+│ │  
+│ │      @classmethod
+│ │      def responseParse(cls,jsonObj):
+│ │          task = Task(jsonObj['task'])
+│ │          obj = UserAppToken(jsonObj['obj'])
+│ │          return task, obj
+│ │  
+│ │ -class UserAuthenticateResponse(object):
+│ │ -    _obj=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        obj=''):
+│ │ -        self._obj = obj
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        obj = User(jsonObj)
+│ │ -        return obj
+│ │ -
+│ │ -class UserAuthorizationResponse(object):
+│ │ -    _obj=''
+│ │ -    _resourceAssocList=''
+│ │ -
+│ │ -    def __init__(
+│ │ -        self,
+│ │ -        obj='',
+│ │ -        resourceAssocList=''):
+│ │ -        self._obj = obj
+│ │ -        self._resourceAssocList = resourceAssocList
+│ │ -
+│ │ -    @classmethod
+│ │ -    def responseParse(cls,jsonObj):
+│ │ -        obj = RolePermissionAssignment(jsonObj['obj'])
+│ │ -        resourceAssocList = ResourceGroupResourceAssoc(jsonObj['resourceAssocList'])
+│ │ -        return obj, resourceAssocList
+│ │ -
+│ │  class UserEnumResponse(object):
+│ │      _task=''
+│ │      _list=''
+│ │  
+│ │      def __init__(
+│ │          self,
+│ │          task='',
+│ │   --- quantastor-qsclient-6.0.0/quantastor_qsclient.egg-info/PKG-INFO
+│ ├── +++ quantastor-qsclient-6.1.0/quantastor_qsclient.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: quantastor-qsclient
+│ │ -Version: 6.0.0
+│ │ +Version: 6.1.0
+│ │  Summary: QuantaStor REST API python library
+│ │  Home-page: https://github.com/OSNEXUS/QSPyClient
+│ │  Author: OSNEXUS Corporation
+│ │  Author-email: support@osnexus.com
+│ │  License: UNKNOWN
+│ │  Description: # QuantaStor
+│ │          ## OSNEXUS QuantaStor Python Client Library
+│ │   --- quantastor-qsclient-6.0.0/setup.py
+│ ├── +++ quantastor-qsclient-6.1.0/setup.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import setuptools
+│ │  
+│ │  with open("README.md", "r") as fh:
+│ │      long_description_txt = fh.read()
+│ │  
+│ │  setuptools.setup(
+│ │      name='quantastor-qsclient',
+│ │ -    version='6.0.0',
+│ │ +    version='6.1.0',
+│ │      scripts=['quantastor/qs_client.py'],
+│ │      author="OSNEXUS Corporation",
+│ │      author_email="support@osnexus.com",
+│ │      description="QuantaStor REST API python library",
+│ │      long_description=long_description_txt,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/OSNEXUS/QSPyClient",

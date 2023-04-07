@@ -1,0 +1,1275 @@
+--- tmp/mongodb_odm-0.2.0.tar.gz
++++ tmp/mongodb_odm-0.2.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "mongodb_odm-0.2.0.tar", max compression
+│ +gzip compressed data, was "mongodb_odm-0.2.1.tar", max compression
+│   --- mongodb_odm-0.2.0.tar
+├── +++ mongodb_odm-0.2.1.tar
+│ ├── file list
+│ │ @@ -1,15 +1,16 @@
+│ │ --rw-r--r--   0        0        0     1056 2023-03-31 21:02:56.437493 mongodb_odm-0.2.0/LICENSE
+│ │ --rw-r--r--   0        0        0     7004 2023-03-31 21:02:56.437493 mongodb_odm-0.2.0/README.md
+│ │ --rw-r--r--   0        0        0      497 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/__init__.py
+│ │ --rw-r--r--   0        0        0     1395 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/connection.py
+│ │ --rw-r--r--   0        0        0     1073 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/data_conversion.py
+│ │ --rw-r--r--   0        0        0       91 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/exceptions.py
+│ │ --rw-r--r--   0        0        0     2824 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/fields.py
+│ │ --rw-r--r--   0        0        0    13460 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/models.py
+│ │ --rw-r--r--   0        0        0      497 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/types.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/utils/__init__.py
+│ │ --rw-r--r--   0        0        0     5173 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/utils/apply_indexes.py
+│ │ --rw-r--r--   0        0        0     1310 2023-03-31 21:02:56.441493 mongodb_odm-0.2.0/mongodb_odm/utils/utils.py
+│ │ --rw-r--r--   0        0        0     2619 2023-03-31 21:04:44.879539 mongodb_odm-0.2.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0     7992 1970-01-01 00:00:00.000000 mongodb_odm-0.2.0/setup.py
+│ │ --rw-r--r--   0        0        0     8659 1970-01-01 00:00:00.000000 mongodb_odm-0.2.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1056 2023-03-31 21:18:41.236449 mongodb_odm-0.2.1/LICENSE
+│ │ +-rw-r--r--   0        0        0     7214 2023-04-07 17:33:31.447106 mongodb_odm-0.2.1/README.md
+│ │ +-rw-r--r--   0        0        0      497 2023-03-31 21:18:41.240449 mongodb_odm-0.2.1/mongodb_odm/__init__.py
+│ │ +-rw-r--r--   0        0        0     1540 2023-04-07 17:33:31.451106 mongodb_odm-0.2.1/mongodb_odm/connection.py
+│ │ +-rw-r--r--   0        0        0     1230 2023-04-07 17:33:31.451106 mongodb_odm-0.2.1/mongodb_odm/data_conversion.py
+│ │ +-rw-r--r--   0        0        0       91 2023-03-31 21:18:41.240449 mongodb_odm-0.2.1/mongodb_odm/exceptions.py
+│ │ +-rw-r--r--   0        0        0     2824 2023-03-31 21:18:41.240449 mongodb_odm-0.2.1/mongodb_odm/fields.py
+│ │ +-rw-r--r--   0        0        0    14281 2023-04-07 17:33:31.451106 mongodb_odm-0.2.1/mongodb_odm/models.py
+│ │ +-rw-r--r--   0        0        0      577 2023-04-07 17:33:31.451106 mongodb_odm-0.2.1/mongodb_odm/types.py
+│ │ +-rw-r--r--   0        0        0        0 2023-03-31 21:18:41.240449 mongodb_odm-0.2.1/mongodb_odm/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0      310 2023-04-07 17:33:31.451106 mongodb_odm-0.2.1/mongodb_odm/utils/_internal_models.py
+│ │ +-rw-r--r--   0        0        0     5453 2023-04-07 17:33:31.451106 mongodb_odm-0.2.1/mongodb_odm/utils/apply_indexes.py
+│ │ +-rw-r--r--   0        0        0     1566 2023-04-07 17:33:31.451106 mongodb_odm-0.2.1/mongodb_odm/utils/utils.py
+│ │ +-rw-r--r--   0        0        0     2619 2023-04-07 17:35:11.586345 mongodb_odm-0.2.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     8212 1970-01-01 00:00:00.000000 mongodb_odm-0.2.1/setup.py
+│ │ +-rw-r--r--   0        0        0     8869 1970-01-01 00:00:00.000000 mongodb_odm-0.2.1/PKG-INFO
+│ │   --- mongodb_odm-0.2.0/LICENSE
+│ ├── +++ mongodb_odm-0.2.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- mongodb_odm-0.2.0/README.md
+│ ├── +++ mongodb_odm-0.2.1/README.md
+│ │┄ Files 4% similar despite different names
+│ │ @@ -29,15 +29,15 @@
+│ │  
+│ │  **Repository**: <a href="https://github.com/nayan32biswas/mongodb-odm" target="_blank">https://github.com/nayan32biswas/mongodb-odm</a>
+│ │  
+│ │  ---
+│ │  
+│ │  ## Introduction
+│ │  
+│ │ -The purpose of this module is to provide easy access to the database with the python object feature with MongoDB and pymongo. With pymongo that was very easy to make spelling mistakes in a collection name when you are doing database operation. This module provides you with minimal ODM with a modeling feature so that you don’t have to look up the MongoDB dashboard(Mongo Compass) to know about field names or data types.
+│ │ +The purpose of this module is to provide easy access to the database with the python object feature with **MongoDB** and **PyMongo**. With PyMongo that was very easy to make spelling mistakes in a collection name when you are doing database operation. This module provides you with minimal ODM with a modeling feature so that you don’t have to look up the MongoDB dashboard(Mongo Compass) to know about field names or data types.
+│ │  
+│ │  **MongoDB-ODM** is based on Python type annotations, and powered by <a href="https://pymongo.readthedocs.io/en/stable/" class="external-link" target="_blank">PyMongo</a> and <a href="https://docs.pydantic.dev/" class="external-link" target="_blank">Pydantic</a>.
+│ │  
+│ │  The key features are:
+│ │  
+│ │  - **Intuitive to write**: Great editor support. Completion everywhere. Less time debugging. Designed to be easy to use and learn. Less time reading docs.
+│ │  - **Easy to use**: It has sensible defaults and does a lot of work underneath to simplify the code you write.
+│ │ @@ -45,41 +45,43 @@
+│ │  - **Extensible**: You have all the power of **PyMongo** and **Pydantic** underneath.
+│ │  - **Short**: Minimize code duplication. A single type annotation does a lot of work. No need to duplicate models in **PyMongo** and Pydantic.
+│ │  
+│ │  ---
+│ │  
+│ │  ## Requirement
+│ │  
+│ │ -**MongoDB-ODM** will work on <a href="https://www.python.org/downloads/" class="external-link" target="_blank">Python 3.7 and above</a>
+│ │ +**MongoDB-ODM** will work on <a href="https://www.python.org/downloads/" class="external-link" target="_blank">Python 3.8 and above</a>
+│ │  
+│ │  This **MongoDB-ODM** is built on top of **PyMongo** and **Pydantic**. Those packages are required and will auto-install while **MongoDB-ODM** was installed.
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```console
+│ │  $ pip install mongodb-odm
+│ │  ```
+│ │  
+│ │  ## Example
+│ │  
+│ │  ### Define model
+│ │  
+│ │  ```Python
+│ │ +import os
+│ │  from typing import Optional
+│ │ -from mongodb_odm import connect, Document, Field, IndexModel, ASCENDING
+│ │ +
+│ │ +from mongodb_odm import ASCENDING, Document, IndexModel, connect
+│ │  
+│ │  
+│ │  class Player(Document):
+│ │ -    name: str = Field(...)
+│ │ -    country: Optional[str] = None
+│ │ +    name: str
+│ │ +    country_code: str
+│ │ +    rating: Optional[int] = None
+│ │  
+│ │      class Config(Document.Config):
+│ │ -        collection_name = "player"
+│ │          indexes = [
+│ │ -            IndexModel([("country", ASCENDING)]),
+│ │ +            IndexModel([("rating", ASCENDING)]),
+│ │          ]
+│ │  ```
+│ │  
+│ │  ### Set Connection
+│ │  
+│ │  ```Python
+│ │  connect(os.environ.get("MONGO_URL", "mongodb://localhost:27017/testdb"))
+│ │ @@ -94,15 +96,15 @@
+│ │  ```
+│ │  
+│ │  ### Retrieve Document
+│ │  
+│ │  #### Find data from collection
+│ │  
+│ │  ```Python
+│ │ -for player in Player.find({"name": "ARG"}):
+│ │ +for player in Player.find():
+│ │      print(player)
+│ │  ```
+│ │  
+│ │  #### Find one object with filter
+│ │  
+│ │  ```Python
+│ │  player = Player.find_one({"name": "Pelé"})
+│ │ @@ -124,31 +126,37 @@
+│ │  if player:
+│ │      player.delete()
+│ │  ```
+│ │  
+│ │  ### Apply Indexes
+│ │  
+│ │  ```Python
+│ │ -from mongodb_odm import Document, IndexModel, ASCENDING
+│ │ +import os
+│ │ +from typing import Optional
+│ │ +
+│ │ +from mongodb_odm import ASCENDING, Document, IndexModel, connect
+│ │  
+│ │  
+│ │  class Player(Document):
+│ │ -    ...
+│ │ +    name: str
+│ │ +    country_code: str
+│ │ +    rating: Optional[int] = None
+│ │ +
+│ │      class Config(Document.Config):
+│ │          indexes = [
+│ │ -            IndexModel([("country", ASCENDING)]),
+│ │ +            IndexModel([("rating", ASCENDING)]),
+│ │          ]
+│ │  ```
+│ │  
+│ │  - To create indexes in the database declare [IndexModel](https://pymongo.readthedocs.io/en/stable/tutorial.html#indexing) and assign in indexes array in Config class. **IndexModel** modules that are directly imported from **pymongo**.
+│ │ -- Call the `apply_indexes` function from your CLI. You can use [Typer](https://typer.tiangolo.com/) to implement CLI.
+│ │ +- Import the `apply_indexes` from `mongodb_odm`. Call the `apply_indexes` function from your CLI. You can use <a href="https://typer.tiangolo.com" class="external-link" target="_blank">Typer</a> to implement CLI.
+│ │  
+│ │  ## Example Code
+│ │  
+│ │ -This is a short example of full code
+│ │ +This is the example of full code of above.
+│ │  
+│ │  ```python
+│ │  import os
+│ │  from typing import Optional
+│ │  
+│ │  from mongodb_odm import ASCENDING, Document, IndexModel, connect
+│ │  
+│ │ @@ -175,14 +183,16 @@
+│ │  
+│ │  player = Player.find_one({"name": "Pelé"})
+│ │  if player:
+│ │      player.rating = 98  # potential
+│ │      player.update()
+│ │  
+│ │  player = Player.find_one({"name": "Pelé"})
+│ │ +if player:
+│ │ +    player.delete()
+│ │  ```
+│ │  
+│ │  ### Supported Framework
+│ │  
+│ │  **MongoDB-ODM** is not framework dependent. We can use this package in any system. But we take special consideration being compatible with <a href="https://fastapi.tiangolo.com/" class="external-link" target="_blank">FastAPI</a> and <a href="https://flask.palletsprojects.com/en/2.2.x/" class="external-link" target="_blank">Flask</a>.
+│ │  
+│ │  ### Credit
+│ │   --- mongodb_odm-0.2.0/mongodb_odm/connection.py
+│ ├── +++ mongodb_odm-0.2.1/mongodb_odm/connection.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,54 +1,59 @@
+│ │  import logging
+│ │ +from typing import Any
+│ │  
+│ │  from pymongo import MongoClient
+│ │  from pymongo.database import Database
+│ │  
+│ │  from .exceptions import ConnectionExist
+│ │ +from .utils._internal_models import Connection
+│ │  
+│ │ -__connection = {}
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │ -def _get_connection_client(url: str) -> MongoClient:
+│ │ +__connection_obj = Connection()
+│ │ +
+│ │ +
+│ │ +def _get_connection_client(url: str) -> MongoClient[Any]:
+│ │      return MongoClient(url)
+│ │  
+│ │  
+│ │ -def connect(url: str) -> MongoClient:
+│ │ -    if "client" in __connection:
+│ │ +def connect(url: str) -> MongoClient[Any]:
+│ │ +    if __connection_obj.client is not None:
+│ │          logger.warning("Already have an connection.")
+│ │ -        return __connection["client"]
+│ │ -    __connection["url"] = url
+│ │ -    __connection["client"] = _get_connection_client(url)
+│ │ +        return __connection_obj.client
+│ │ +    __connection_obj.url = url
+│ │ +    __connection_obj.client = _get_connection_client(url)
+│ │      logger.info("Connection established successfully")
+│ │ -    return __connection["client"]
+│ │ +    return __connection_obj.client
+│ │  
+│ │  
+│ │  def disconnect() -> bool:
+│ │ -    if "client" in __connection:
+│ │ -        __connection["client"].close()
+│ │ -        del __connection["client"]
+│ │ +    if __connection_obj.client:
+│ │ +        __connection_obj.client.close()
+│ │ +        __connection_obj.client = None
+│ │      else:
+│ │          logger.warning("No client connection found")
+│ │ -    if "url" in __connection:
+│ │ -        del __connection["url"]
+│ │ +    if __connection_obj.url:
+│ │ +        __connection_obj.url = None
+│ │      else:
+│ │          logger.warning("No connection URL found.")
+│ │      logger.info("Disconnect the db connection")
+│ │  
+│ │      from .models import _clear_cache
+│ │  
+│ │      _clear_cache()
+│ │      return True
+│ │  
+│ │  
+│ │ -def get_client() -> MongoClient:
+│ │ -    if not __connection or "client" not in __connection:
+│ │ -        if "url" in __connection:
+│ │ -            connect(__connection["url"])
+│ │ +def get_client() -> MongoClient[Any]:
+│ │ +    if __connection_obj.client is None:
+│ │ +        if __connection_obj.url is not None:
+│ │ +            return connect(__connection_obj.url)
+│ │          else:
+│ │              raise ConnectionExist("DB connection is not provided")
+│ │ -    return __connection["client"]
+│ │ +    else:
+│ │ +        return __connection_obj.client
+│ │  
+│ │  
+│ │ -def db() -> Database:
+│ │ +def db() -> Database[Any]:
+│ │      return get_client().get_database()
+│ │   --- mongodb_odm-0.2.0/mongodb_odm/data_conversion.py
+│ ├── +++ mongodb_odm-0.2.1/mongodb_odm/data_conversion.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,49 +1,49 @@
+│ │ -from typing import Any
+│ │ +from typing import Any, Dict, Generator, List, Tuple, Union
+│ │  
+│ │  
+│ │  class ODMObj(object):
+│ │      def __repr__(self) -> str:
+│ │          items = ("{}={!r}".format(k, self.__dict__[k]) for k in self.__dict__)
+│ │          return "{}({})".format(type(self).__name__, ", ".join(items))
+│ │  
+│ │      def __str__(self) -> str:
+│ │          return self.__repr__()
+│ │  
+│ │ -    def __eq__(self, other) -> bool:
+│ │ +    def __eq__(self, other: object) -> bool:
+│ │          return self.__dict__ == other.__dict__
+│ │  
+│ │ -    def __iter__(self):
+│ │ +    def __iter__(self) -> Generator[Tuple[str, Any], None, None]:
+│ │          yield from self.__dict__.items()
+│ │  
+│ │ -    def dict(self):
+│ │ +    def dict(self) -> Any:
+│ │          return _to_dict(self)
+│ │  
+│ │  
+│ │ -def _to_dict(obj):
+│ │ +def _to_dict(obj: Any) -> Any:
+│ │      if isinstance(obj, list):
+│ │          obj = [_to_dict(x) for x in obj]
+│ │      if not isinstance(obj, ODMObj):
+│ │          return obj
+│ │  
+│ │      n_d = {}
+│ │      for k, v in obj:
+│ │          n_d[k] = _to_dict(v)
+│ │      return n_d
+│ │  
+│ │  
+│ │ -def _to_obj(d):
+│ │ +def _to_obj(d: Union[Dict[str, Any], List[Any]]) -> Any:
+│ │      if isinstance(d, list):
+│ │          d = [_to_obj(x) for x in d]
+│ │      if not isinstance(d, dict):
+│ │          return d
+│ │  
+│ │      obj = ODMObj()
+│ │      for k, v in d.items():
+│ │          obj.__dict__[k] = _to_obj(v)
+│ │          if k == "_id":
+│ │              obj.__dict__["id"] = obj.__dict__[k]
+│ │      return obj
+│ │  
+│ │  
+│ │ -def dict2obj(d: dict) -> Any:
+│ │ +def dict2obj(d: Dict[str, Any]) -> Any:
+│ │      return _to_obj(d)
+│ │   --- mongodb_odm-0.2.0/mongodb_odm/fields.py
+│ ├── +++ mongodb_odm-0.2.1/mongodb_odm/fields.py
+│ │┄ Files identical despite different names
+│ │   --- mongodb_odm-0.2.0/mongodb_odm/models.py
+│ ├── +++ mongodb_odm-0.2.1/mongodb_odm/models.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,56 +1,63 @@
+│ │  import logging
+│ │  from datetime import datetime
+│ │  from typing import Any, Dict, Iterator, List, Optional, Sequence, Set, Tuple, Union
+│ │  
+│ │  from bson import ObjectId
+│ │  from pydantic import BaseModel
+│ │ -from pymongo.collection import Collection, _DocumentType, _WriteOp  # type: ignore
+│ │ +from pymongo import IndexModel, client_session
+│ │ +from pymongo.collection import Collection, _WriteOp
+│ │  from pymongo.cursor import Cursor
+│ │  from pymongo.results import BulkWriteResult, DeleteResult, UpdateResult
+│ │  from typing_extensions import Self
+│ │  
+│ │  from .connection import db, get_client
+│ │  from .data_conversion import dict2obj
+│ │  from .exceptions import ObjectDoesNotExist
+│ │  from .fields import Field
+│ │ -from .types import SORT_TYPE, ODMObjectId  # type: ignore
+│ │ +from .types import DICT_TYPE, SORT_TYPE, ODMObjectId
+│ │ +from .utils._internal_models import RelationalFieldInfo
+│ │  from .utils.utils import convert_model_to_collection, get_relationship_fields_info
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  INHERITANCE_FIELD_NAME = "_cls"
+│ │  
+│ │ +RELATION_TYPE = Dict[str, RelationalFieldInfo]
+│ │ +
+│ │  _cashed_collection: Dict[Any, Tuple[str, Optional[str]]] = {}
+│ │ -_cashed_field_info: Dict[str, Dict] = {}
+│ │ +_cashed_field_info: Dict[str, RELATION_TYPE] = {}
+│ │  
+│ │  
+│ │ -def _clear_cache():
+│ │ +def _clear_cache() -> None:
+│ │      global _cashed_collection, _cashed_field_info
+│ │      for key in [key for key in _cashed_collection.keys()]:
+│ │          del _cashed_collection[key]
+│ │  
+│ │      for key in [key for key in _cashed_field_info.keys()]:
+│ │          del _cashed_field_info[key]
+│ │  
+│ │  
+│ │  class _BaseDocument(BaseModel):
+│ │ -    class Config(BaseModel.Config):
+│ │ +    class Config:
+│ │          # Those fields will work as the default value of any child class.
+│ │          orm_mode: bool = True
+│ │          allow_population_by_field_name: bool = True
+│ │          collection_name: Optional[str] = None
+│ │          allow_inheritance: bool = False
+│ │          index_inheritance_field: bool = True
+│ │ +        indexes: List[IndexModel] = []
+│ │  
+│ │ -    def __setattr__(self, key, value) -> None:
+│ │ -        """Add '# type: ignore' as a comment if get type error while getting this value"""
+│ │ +    def __setattr__(self, key: str, value: Any) -> None:
+│ │ +        """
+│ │ +        Add '# type: ignore' as a comment if get type error while getting this value
+│ │ +        """
+│ │          self.__dict__[key] = value
+│ │  
+│ │      @classmethod
+│ │ -    def __get_collection_class(cls):
+│ │ +    def __get_collection_class(cls) -> Tuple[str, Optional[str]]:
+│ │          model: Any = cls
+│ │          if model.__base__ != Document:
+│ │              base_model = model.__base__
+│ │              if (
+│ │                  not hasattr(base_model.Config, "allow_inheritance")
+│ │                  or base_model.Config.allow_inheritance is not True
+│ │              ):
+│ │ @@ -86,93 +93,103 @@
+│ │          return cls.__get_collection_config()[0]
+│ │  
+│ │      @classmethod
+│ │      def _get_child(cls) -> Optional[str]:
+│ │          return cls.__get_collection_config()[1]
+│ │  
+│ │      @classmethod
+│ │ -    def _get_collection(cls) -> Collection:
+│ │ +    def _get_collection(cls) -> Collection[Any]:
+│ │          return db()[cls._get_collection_name()]
+│ │  
+│ │      @classmethod
+│ │      def _db(cls) -> str:
+│ │          return cls._get_collection_name()
+│ │  
+│ │      @classmethod
+│ │ -    def get_inheritance_key(cls) -> dict:
+│ │ +    def get_inheritance_key(cls) -> Dict[str, Optional[str]]:
+│ │          return {INHERITANCE_FIELD_NAME: cls._get_child()}
+│ │  
+│ │      @classmethod
+│ │ -    def get_relational_field_info(cls) -> Dict[str, Dict]:
+│ │ +    def get_relational_field_info(cls) -> RELATION_TYPE:
+│ │          global _cashed_field_info
+│ │          field_info_key = f"{hash(cls)}-field_info"
+│ │  
+│ │          cached_field_info = _cashed_field_info.get(field_info_key)
+│ │          if not cached_field_info:
+│ │              cached_field_info = get_relationship_fields_info(cls)
+│ │              _cashed_field_info[field_info_key] = cached_field_info
+│ │          return cached_field_info
+│ │  
+│ │      @classmethod
+│ │      def get_exclude_fields(cls) -> Set[str]:
+│ │          relational_fields = cls.get_relational_field_info().keys()
+│ │          return {"_id", "id", *relational_fields}
+│ │  
+│ │ -    @classmethod
+│ │ -    def to_mongo(cls, self_obj) -> dict:
+│ │ -        return self_obj.dict(exclude=cls.get_exclude_fields(), exclude_none=True)
+│ │ +    # @classmethod
+│ │ +    # def to_mongo(cls, self_obj) -> dict:
+│ │ +    #     return self_obj.dict(
+│ │ +    #         exclude=cls.get_exclude_fields(), exclude_none=True
+│ │ +    #     )
+│ │ +
+│ │ +    def to_mongo(self) -> DICT_TYPE:
+│ │ +        return self.dict(exclude=self.get_exclude_fields(), exclude_none=True)
+│ │  
+│ │      @classmethod
+│ │ -    def start_session(cls):
+│ │ +    def start_session(cls) -> client_session.ClientSession:
+│ │          return get_client().start_session()
+│ │  
+│ │      def __str__(self) -> str:
+│ │          return super().__repr__()
+│ │  
+│ │  
+│ │  class Document(_BaseDocument):
+│ │      _id: ODMObjectId = Field(default_factory=ObjectId)
+│ │      id: ODMObjectId = Field(default_factory=ObjectId, alias="_id")
+│ │  
+│ │ -    def __init__(self, *args, **kwargs) -> None:
+│ │ +    def __init__(self, *args: List[Any], **kwargs: Any) -> None:
+│ │          super().__init__(*args, **kwargs)
+│ │          if "_id" in kwargs:
+│ │              object.__setattr__(self, "_id", kwargs["_id"])
+│ │          else:
+│ │              object.__setattr__(self, "_id", self._id.default_factory())  # type: ignore
+│ │  
+│ │ -    def create(self, **kwargs) -> Self:
+│ │ +    def create(self, **kwargs: Any) -> Self:
+│ │          _collection = self._get_collection()
+│ │  
+│ │ -        data = self.to_mongo(self)
+│ │ +        data = self.to_mongo()
+│ │          if self._get_child() is not None:
+│ │              data = {**self.get_inheritance_key(), **data}
+│ │  
+│ │          inserted_id = _collection.insert_one(data, **kwargs).inserted_id
+│ │          self.__dict__.update({"_id": inserted_id, "id": inserted_id})
+│ │          return self
+│ │  
+│ │      @classmethod
+│ │ -    def find_raw(cls, filter: dict = {}, projection: dict = {}, **kwargs) -> Cursor:
+│ │ +    def find_raw(
+│ │ +        cls,
+│ │ +        filter: DICT_TYPE = {},
+│ │ +        projection: Dict[str, int] = {},
+│ │ +        **kwargs: Any,
+│ │ +    ) -> Cursor[Any]:
+│ │          _collection = cls._get_collection()
+│ │          if cls._get_child() is not None:
+│ │              filter = {**cls.get_inheritance_key(), **filter}
+│ │          if projection:
+│ │              return _collection.find(filter, projection, **kwargs)
+│ │          return _collection.find(filter, **kwargs)
+│ │  
+│ │      @classmethod
+│ │      def find(
+│ │          cls,
+│ │ -        filter: dict = {},
+│ │ -        projection: dict = {},
+│ │ +        filter: DICT_TYPE = {},
+│ │ +        projection: Dict[str, int] = {},
+│ │          sort: Optional[SORT_TYPE] = None,
+│ │          skip: Optional[int] = None,
+│ │          limit: Optional[int] = None,
+│ │ -        **kwargs,
+│ │ +        **kwargs: Any,
+│ │      ) -> Iterator[Self]:
+│ │          qs = cls.find_raw(filter, projection, **kwargs)
+│ │          if sort:
+│ │              qs = qs.sort(sort)
+│ │          if skip:
+│ │              qs = qs.skip(skip)
+│ │          if limit:
+│ │ @@ -193,60 +210,72 @@
+│ │                  yield model_children[data[INHERITANCE_FIELD_NAME]](**data)
+│ │              else:
+│ │                  yield cls(**data)
+│ │  
+│ │      @classmethod
+│ │      def find_one(
+│ │          cls,
+│ │ -        filter: dict = {},
+│ │ -        projection: dict = {},
+│ │ +        filter: DICT_TYPE = {},
+│ │ +        projection: Dict[str, int] = {},
+│ │          sort: Optional[SORT_TYPE] = None,
+│ │ -        **kwargs,
+│ │ +        **kwargs: Any,
+│ │      ) -> Optional[Self]:
+│ │          qs = cls.find_raw(filter, projection=projection, **kwargs)
+│ │          if sort:
+│ │              qs = qs.sort(sort)
+│ │          for data in qs.limit(1):
+│ │              """limit 1 is equivalent to find_one and that is implemented in pymongo find_one"""
+│ │              return cls(**data)
+│ │          return None
+│ │  
+│ │      @classmethod
+│ │ -    def get(cls, filter: dict, sort: Optional[SORT_TYPE] = None, **kwargs) -> Self:
+│ │ +    def get(
+│ │ +        cls,
+│ │ +        filter: DICT_TYPE,
+│ │ +        sort: Optional[SORT_TYPE] = None,
+│ │ +        **kwargs: Any,
+│ │ +    ) -> Self:
+│ │          obj = cls.find_one(filter, sort=sort, **kwargs)
+│ │          if obj:
+│ │              return obj
+│ │          raise ObjectDoesNotExist("Object not found.")
+│ │  
+│ │      @classmethod
+│ │      def get_or_create(
+│ │ -        cls, filter: dict, sort: Optional[SORT_TYPE] = None, **kwargs
+│ │ +        cls,
+│ │ +        filter: DICT_TYPE,
+│ │ +        sort: Optional[SORT_TYPE] = None,
+│ │ +        **kwargs: Any,
+│ │      ) -> Tuple[Self, bool]:
+│ │          obj = cls.find_one(filter, sort=sort, **kwargs)
+│ │          if obj:
+│ │              return obj, False
+│ │          return cls(**filter).create(), True
+│ │  
+│ │      @classmethod
+│ │ -    def count_documents(cls, filter: dict = {}, **kwargs) -> int:
+│ │ +    def count_documents(cls, filter: DICT_TYPE = {}, **kwargs: Any) -> int:
+│ │          _collection = cls._get_collection()
+│ │          if cls._get_child() is not None:
+│ │              filter = {**cls.get_inheritance_key(), **filter}
+│ │          return _collection.count_documents(filter, **kwargs)
+│ │  
+│ │      @classmethod
+│ │ -    def exists(cls, filter: dict = {}, **kwargs) -> bool:
+│ │ +    def exists(cls, filter: DICT_TYPE = {}, **kwargs: Any) -> bool:
+│ │          _collection = cls._get_collection()
+│ │          if cls._get_child() is not None:
+│ │              filter = {**cls.get_inheritance_key(), **filter}
+│ │          return _collection.count_documents(filter, **kwargs, limit=1) >= 1
+│ │  
+│ │      @classmethod
+│ │      def aggregate(
+│ │ -        cls, pipeline: List[Any], get_raw=False, inheritance_filter=True, **kwargs
+│ │ +        cls,
+│ │ +        pipeline: List[Any],
+│ │ +        get_raw: bool = False,
+│ │ +        inheritance_filter: bool = True,
+│ │ +        **kwargs: Any,
+│ │      ) -> Iterator[Any]:
+│ │          _collection = cls._get_collection()
+│ │          if inheritance_filter and cls._get_child() is not None:
+│ │              if len(pipeline) > 0 and "$match" in pipeline[0]:
+│ │                  pipeline[0]["$match"] = {
+│ │                      f"{INHERITANCE_FIELD_NAME}": cls._get_child(),
+│ │                      **pipeline[0]["$match"],
+│ │ @@ -258,117 +287,121 @@
+│ │          for obj in _collection.aggregate(pipeline, **kwargs):
+│ │              if get_raw is True:
+│ │                  yield obj
+│ │              else:
+│ │                  yield dict2obj(obj)
+│ │  
+│ │      @classmethod
+│ │ -    def get_random_one(cls, filter: dict = {}, **kwargs) -> Self:
+│ │ +    def get_random_one(cls, filter: DICT_TYPE = {}, **kwargs: Any) -> Self:
+│ │          if cls._get_child() is not None:
+│ │              filter = {**cls.get_inheritance_key(), **filter}
+│ │          pipeline = [{"$match": filter}, {"$sample": {"size": 1}}]
+│ │          for data in cls.aggregate(pipeline, get_raw=True, **kwargs):
+│ │              return cls(**data)
+│ │          raise ObjectDoesNotExist("Object not found.")
+│ │  
+│ │ -    def update(self, raw: dict = {}, **kwargs) -> UpdateResult:
+│ │ +    def update(self, raw: DICT_TYPE = {}, **kwargs: Any) -> UpdateResult:
+│ │          filter = {"_id": self._id}
+│ │          if raw:
+│ │              updated_data = raw
+│ │          else:
+│ │ -            updated_data = {"$set": self.to_mongo(self)}
+│ │ +            updated_data = {"$set": self.to_mongo()}
+│ │          if hasattr(self, "updated_at"):
+│ │              datetime_now = datetime.utcnow()
+│ │              if "$set" not in updated_data:
+│ │                  updated_data["$set"] = {}
+│ │              updated_data["$set"]["updated_at"] = datetime_now
+│ │              self.__dict__.update({"updated_at": datetime_now})
+│ │  
+│ │          return self.update_one(filter, updated_data, **kwargs)
+│ │  
+│ │      @classmethod
+│ │ -    def update_one(cls, filter: dict = {}, data: dict = {}, **kwargs) -> UpdateResult:
+│ │ +    def update_one(
+│ │ +        cls, filter: DICT_TYPE = {}, data: DICT_TYPE = {}, **kwargs: Any
+│ │ +    ) -> UpdateResult:
+│ │          _collection = cls._get_collection()
+│ │          if cls._get_child() is not None:
+│ │              filter = {**cls.get_inheritance_key(), **filter}
+│ │          return _collection.update_one(filter, data, **kwargs)
+│ │  
+│ │      @classmethod
+│ │ -    def update_many(cls, filter: dict = {}, data: dict = {}, **kwargs) -> UpdateResult:
+│ │ +    def update_many(
+│ │ +        cls, filter: DICT_TYPE = {}, data: DICT_TYPE = {}, **kwargs: Any
+│ │ +    ) -> UpdateResult:
+│ │          _collection = cls._get_collection()
+│ │          if cls._get_child() is not None:
+│ │              filter = {**cls.get_inheritance_key(), **filter}
+│ │          return _collection.update_many(filter, data, **kwargs)
+│ │  
+│ │ -    def delete(self, **kwargs) -> DeleteResult:
+│ │ +    def delete(self, **kwargs: Any) -> DeleteResult:
+│ │          return self.delete_one({"_id": self._id}, **kwargs)
+│ │  
+│ │      @classmethod
+│ │ -    def delete_one(cls, filter: dict = {}, **kwargs) -> DeleteResult:
+│ │ +    def delete_one(cls, filter: DICT_TYPE = {}, **kwargs: Any) -> DeleteResult:
+│ │          _collection = cls._get_collection()
+│ │          if cls._get_child() is not None:
+│ │              filter = {**cls.get_inheritance_key(), **filter}
+│ │          return _collection.delete_one(filter, **kwargs)
+│ │  
+│ │      @classmethod
+│ │ -    def delete_many(cls, filter: dict = {}, **kwargs) -> DeleteResult:
+│ │ +    def delete_many(cls, filter: DICT_TYPE = {}, **kwargs: Any) -> DeleteResult:
+│ │          _collection = cls._get_collection()
+│ │          if cls._get_child() is not None:
+│ │              filter = {**cls.get_inheritance_key(), **filter}
+│ │          return _collection.delete_many(filter, **kwargs)
+│ │  
+│ │      @classmethod
+│ │      def bulk_write(
+│ │ -        cls, requests: Sequence[_WriteOp[_DocumentType]], **kwargs
+│ │ +        cls, requests: Sequence[_WriteOp[Any]], **kwargs: Any
+│ │      ) -> BulkWriteResult:
+│ │          _collection = cls._get_collection()
+│ │          return _collection.bulk_write(requests, **kwargs)
+│ │  
+│ │      @classmethod
+│ │      def load_related(
+│ │          cls,
+│ │          object_list: Union[Iterator[Self], Sequence[Self]],
+│ │          fields: List[str] = [],
+│ │ -        **kwargs,
+│ │ +        **kwargs: Any,
+│ │      ) -> Sequence[Self]:
+│ │          """Get model relational field from cache"""
+│ │          cached_field_info = cls.get_relational_field_info()
+│ │  
+│ │          """Match with user given fields"""
+│ │ -        loadable_fields_info = {}
+│ │ +        loadable_fields_info: DICT_TYPE = {}
+│ │          if fields:
+│ │              loadable_fields_info = {}
+│ │              for field in fields:
+│ │                  if field not in cached_field_info:
+│ │                      raise Exception(f'Invalid field "{field}"')
+│ │                  loadable_fields_info[field] = cached_field_info[field]
+│ │          else:
+│ │              loadable_fields_info = {**cached_field_info}
+│ │  
+│ │          field_keys = loadable_fields_info.keys()
+│ │ -        fields_id_dict = {field: [] for field in field_keys}
+│ │ +        fields_id_dict: Dict[str, List[RELATION_TYPE]] = {
+│ │ +            field: [] for field in field_keys
+│ │ +        }
+│ │  
+│ │          """Load all necessary id from given object_list"""
+│ │          results = []
+│ │          for obj in object_list:
+│ │              for field, field_info in loadable_fields_info.items():
+│ │ -                fields_id_dict[field].append(obj.__dict__[field_info["local_field"]])
+│ │ +                fields_id_dict[field].append(obj.__dict__[field_info.local_field])
+│ │              results.append(obj)
+│ │  
+│ │          """Load all document for all relational model"""
+│ │ -        field_data_data = {field: {} for field in field_keys}
+│ │ +        field_data_data: DICT_TYPE = {field: {} for field in field_keys}
+│ │          for field, ids in fields_id_dict.items():
+│ │              field_data_data[field] = {
+│ │                  obj.id: obj
+│ │ -                for obj in loadable_fields_info[field]["model"].find(
+│ │ -                    {"_id": {"$in": ids}}
+│ │ -                )
+│ │ +                for obj in loadable_fields_info[field].model.find({"_id": {"$in": ids}})
+│ │              }
+│ │  
+│ │          """Assign loaded document with results"""
+│ │          for obj in results:
+│ │              for field, field_info in loadable_fields_info.items():
+│ │                  obj.__dict__[field] = field_data_data[field].get(
+│ │ -                    obj.__dict__[field_info["local_field"]]
+│ │ +                    obj.__dict__[field_info.local_field]
+│ │                  )
+│ │  
+│ │          return results
+│ │   --- mongodb_odm-0.2.0/mongodb_odm/utils/apply_indexes.py
+│ ├── +++ mongodb_odm-0.2.1/mongodb_odm/utils/apply_indexes.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,20 +1,21 @@
+│ │  import logging
+│ │ -from typing import List
+│ │ +from typing import Any, Dict, List, Tuple, Type
+│ │  
+│ │  from bson import SON
+│ │ +from mongodb_odm.types import DICT_TYPE
+│ │  from pymongo import ASCENDING, IndexModel
+│ │  
+│ │  from ..connection import db
+│ │  from ..models import INHERITANCE_FIELD_NAME, Document
+│ │  
+│ │  logger = logging.getLogger(__name__)
+│ │  
+│ │  
+│ │ -def index_for_a_collection(operation):
+│ │ +def index_for_a_collection(operation: DICT_TYPE) -> Tuple[int, int]:
+│ │      """
+│ │      First get all indexes for a collection and match with operation.
+│ │      Remove full match object.
+│ │  
+│ │      If db_index partially match with operation_index then recreate/update it.
+│ │  
+│ │      For new_indexes unmatched with db_indexes create new index.
+│ │ @@ -24,36 +25,36 @@
+│ │          collection = db()[operation["collection_name"]]
+│ │          indexes = operation["create_indexes"]
+│ │      except Exception:
+│ │          raise Exception("Invalid index object")
+│ │  
+│ │      db_indexes = []
+│ │      for index in collection.list_indexes():
+│ │ -        temp_val = index.to_dict()  # type: ignore
+│ │ +        old_index = index.to_dict()  # type: ignore
+│ │          # Skip "_id" index since it's create by mongodb system
+│ │ -        if "_id" in temp_val["key"]:
+│ │ +        if "_id" in old_index["key"]:
+│ │              continue
+│ │ -        temp_val.pop("v", None)
+│ │ -        db_indexes.append(temp_val)
+│ │ +        old_index.pop("v", None)
+│ │ +        db_indexes.append(old_index)
+│ │  
+│ │      new_indexes = []
+│ │      new_indexes_store = {}
+│ │  
+│ │      for index in indexes:
+│ │ -        temp_val = index.document
+│ │ +        new_index: Any = index.document  # type: ignore
+│ │          # Replace SON object with dict
+│ │ -        if type(temp_val["key"]) == SON:
+│ │ -            temp_val["key"] = temp_val["key"].to_dict()
+│ │ +        if type(new_index["key"]) == SON:
+│ │ +            new_index["key"] = new_index["key"].to_dict()
+│ │          else:
+│ │              continue
+│ │ -        new_indexes.append(temp_val)
+│ │ +        new_indexes.append(new_index)
+│ │          # Store index object for future use
+│ │ -        new_indexes_store[temp_val["name"]] = index
+│ │ +        new_indexes_store[new_index["name"]] = index
+│ │  
+│ │ -    update_indexes = []
+│ │ +    update_indexes: List[Tuple[IndexModel, Dict[str, Any]]] = []
+│ │      for i in range(len(db_indexes)):
+│ │          partial_match = None
+│ │          for j in range(len(new_indexes)):
+│ │              if type(new_indexes[j]) is not dict:
+│ │                  continue
+│ │              if db_indexes[i] == new_indexes[j]:
+│ │                  db_indexes[i], new_indexes[j] = None, None
+│ │ @@ -95,50 +96,52 @@
+│ │      if ne > 0 or de > 0:
+│ │          logger.info(
+│ │              f'Applied for "{operation["collection_name"]}": {de} deleted, {ne} added'
+│ │          )
+│ │      return ne, de
+│ │  
+│ │  
+│ │ -def get_model_indexes(model) -> List:
+│ │ +def get_model_indexes(model: Type[Document]) -> List[IndexModel]:
+│ │      if hasattr(model.Config, "indexes"):
+│ │          return list(model.Config.indexes)
+│ │      return []
+│ │  
+│ │  
+│ │ -def get_all_indexes():
+│ │ +def get_all_indexes() -> List[DICT_TYPE]:
+│ │      """
+│ │      First imports all child models of Document since it's the abstract parent model.
+│ │      Then retrieve all the child modules and will try to get indexes inside the Config class.
+│ │      """
+│ │ -    operations = []
+│ │ +    operations: List[DICT_TYPE] = []
+│ │      for model in Document.__subclasses__():
+│ │          indexes = get_model_indexes(model)
+│ │          if indexes:
+│ │              collection_name = model._get_collection_name()
+│ │              obj = {
+│ │                  "collection_name": collection_name,
+│ │                  "create_indexes": indexes,
+│ │              }
+│ │              if (
+│ │                  hasattr(model.Config, "allow_inheritance")
+│ │                  and model.Config.allow_inheritance is True
+│ │              ):
+│ │                  """If a model has child model"""
+│ │                  if model.Config.index_inheritance_field is True:
+│ │ -                    """No _cls indexes will apply if index_inheritance_field = False"""
+│ │ +                    """
+│ │ +                    No _cls indexes will apply if index_inheritance_field = False
+│ │ +                    """
+│ │                      indexes.append(IndexModel([(INHERITANCE_FIELD_NAME, ASCENDING)]))
+│ │                  for child_model in model.__subclasses__():
+│ │                      """Get all indexes that are defined in child model"""
+│ │                      indexes += get_model_indexes(child_model)
+│ │              operations.append(obj)
+│ │      return operations
+│ │  
+│ │  
+│ │ -def apply_indexes():
+│ │ +def apply_indexes() -> None:
+│ │      """Run "python -m app.main apply-indexes" to apply and indexes."""
+│ │  
+│ │      """First get all indexes from all model."""
+│ │      operations = get_all_indexes()
+│ │  
+│ │      """Then execute each indexes operation for each model."""
+│ │      new_index, delete_index = 0, 0
+│ │   --- mongodb_odm-0.2.0/mongodb_odm/utils/utils.py
+│ ├── +++ mongodb_odm-0.2.1/mongodb_odm/utils/utils.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,45 +1,52 @@
+│ │  import re
+│ │ -from typing import Any, List
+│ │ +from typing import Any, Dict, List, Type
+│ │ +
+│ │ +from pydantic import BaseModel
+│ │  
+│ │  from ..fields import _RelationshipInfo
+│ │ +from ._internal_models import RelationalFieldInfo
+│ │  
+│ │  pattern = re.compile(r"(?<!^)(?=[A-Z])")
+│ │  
+│ │  
+│ │  def camel_to_snake(string: str) -> str:
+│ │      return pattern.sub("_", string).lower()
+│ │  
+│ │  
+│ │  def convert_model_to_collection(model: Any) -> str:
+│ │      if (
+│ │          hasattr(model.Config, "collection_name")
+│ │          and model.Config.collection_name is not None
+│ │      ):
+│ │          """By default model has Config in BaseModel"""
+│ │ -        return model.Config.collection_name
+│ │ +        return str(model.Config.collection_name)
+│ │      else:
+│ │          return camel_to_snake(model.__name__)
+│ │  
+│ │  
+│ │ -def _get_fields_info(cls, fields: List[str]):
+│ │ -    field_data = {}
+│ │ +def _get_fields_info(
+│ │ +    cls: Type[BaseModel], fields: List[str]
+│ │ +) -> Dict[str, RelationalFieldInfo]:
+│ │ +    field_data: Dict[str, RelationalFieldInfo] = {}
+│ │      for field in fields:
+│ │          obj = cls.__fields__[field]
+│ │          if obj.default.local_field not in cls.__fields__:
+│ │              raise Exception(
+│ │                  f'Invalid field "{obj.default.local_field}" in Relationship'
+│ │              )
+│ │ -        field_data[field] = {
+│ │ -            "model": obj.type_,
+│ │ -            "local_field": obj.default.local_field,
+│ │ -            "related_field": obj.default.related_field,
+│ │ -        }
+│ │ +        field_data[field] = RelationalFieldInfo(
+│ │ +            model=obj.type_,
+│ │ +            local_field=obj.default.local_field,
+│ │ +            related_field=obj.default.related_field,
+│ │ +        )
+│ │      return field_data
+│ │  
+│ │  
+│ │ -def get_relationship_fields_info(cls):
+│ │ +def get_relationship_fields_info(
+│ │ +    cls: Type[BaseModel],
+│ │ +) -> Dict[str, RelationalFieldInfo]:
+│ │      fields_name = []
+│ │      for field_name, field_info in cls.__fields__.items():
+│ │          if type(field_info.default) == _RelationshipInfo:
+│ │              fields_name.append(field_name)
+│ │      return _get_fields_info(cls, fields_name)
+│ │   --- mongodb_odm-0.2.0/pyproject.toml
+│ ├── +++ mongodb_odm-0.2.1/pyproject.toml
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "mongodb-odm"
+│ │ -version = "0.2.0"
+│ │ +version = "0.2.1"
+│ │  description = "MongoDB-ODM, NOSQL databases in Python, designed for simplicity, compatibility, and robustness."
+│ │  authors = ["Nayan Biswas <nayan32biswas@gmail.com>"]
+│ │  readme = "README.md"
+│ │  license = "MIT"
+│ │  # homepage = "https://github.com/nayan32biswas/mongodb-odm"
+│ │  documentation = "https://mongodb-odm.readthedocs.io"
+│ │  repository = "https://github.com/nayan32biswas/mongodb-odm"
+│ │   --- mongodb_odm-0.2.0/setup.py
+│ ├── +++ mongodb_odm-0.2.1/setup.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -8,17 +8,17 @@
+│ │  {'': ['*']}
+│ │  
+│ │  install_requires = \
+│ │  ['pydantic>=1.10.7,<2.0.0', 'pymongo[srv]>=4.3.3,<5.0.0']
+│ │  
+│ │  setup_kwargs = {
+│ │      'name': 'mongodb-odm',
+│ │ -    'version': '0.2.0',
+│ │ +    'version': '0.2.1',
+│ │      'description': 'MongoDB-ODM, NOSQL databases in Python, designed for simplicity, compatibility, and robustness.',
+│ │ -    'long_description': '# MongoDB-ODM\n\n<p align="center">\n    <em>MongoDB-ODM, NOSQL databases in Python, designed for simplicity, compatibility, and robustness.</em>\n</p>\n\n<p align="center">\n\n<a href="https://github.com/nayan32biswas/mongodb-odm/actions/workflows/test.yml" target="_blank">\n    <img src="https://github.com/nayan32biswas/mongodb-odm/actions/workflows/test.yml/badge.svg?branch=main&event=push" alt="Test">\n</a>\n<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/nayan32biswas/mongodb-odm" target="_blank">\n    <img src="https://coverage-badge.samuelcolvin.workers.dev/nayan32biswas/mongodb-odm.svg" alt="Coverage">\n<br />\n<a href="https://pypi.org/project/mongodb-odm/" target="_blank">\n    <img alt="PyPI" src="https://img.shields.io/pypi/v/mongodb-odm?color=%2334D058&label=PyPi%20Package">\n</a>\n<a href="https://pypi.org/project/mongodb-odm/" target="_blank">\n    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/mongodb-odm?color=%2334D058">\n</a>\n\n</p>\n\n---\n\n**Documentation**: <a href="https://mongodb-odm.readthedocs.io" target="_blank">https://mongodb-odm.readthedocs.io</a>\n\n**PyPi**: <a href="https://pypi.org/project/mongodb-odm" target="_blank">https://pypi.org/project/mongodb-odm</a>\n\n**Repository**: <a href="https://github.com/nayan32biswas/mongodb-odm" target="_blank">https://github.com/nayan32biswas/mongodb-odm</a>\n\n---\n\n## Introduction\n\nThe purpose of this module is to provide easy access to the database with the python object feature with MongoDB and pymongo. With pymongo that was very easy to make spelling mistakes in a collection name when you are doing database operation. This module provides you with minimal ODM with a modeling feature so that you don’t have to look up the MongoDB dashboard(Mongo Compass) to know about field names or data types.\n\n**MongoDB-ODM** is based on Python type annotations, and powered by <a href="https://pymongo.readthedocs.io/en/stable/" class="external-link" target="_blank">PyMongo</a> and <a href="https://docs.pydantic.dev/" class="external-link" target="_blank">Pydantic</a>.\n\nThe key features are:\n\n- **Intuitive to write**: Great editor support. Completion everywhere. Less time debugging. Designed to be easy to use and learn. Less time reading docs.\n- **Easy to use**: It has sensible defaults and does a lot of work underneath to simplify the code you write.\n- **Compatible**: It is designed to be compatible with **FastAPI**, **Pydantic**, and **PyMongo**.\n- **Extensible**: You have all the power of **PyMongo** and **Pydantic** underneath.\n- **Short**: Minimize code duplication. A single type annotation does a lot of work. No need to duplicate models in **PyMongo** and Pydantic.\n\n---\n\n## Requirement\n\n**MongoDB-ODM** will work on <a href="https://www.python.org/downloads/" class="external-link" target="_blank">Python 3.7 and above</a>\n\nThis **MongoDB-ODM** is built on top of **PyMongo** and **Pydantic**. Those packages are required and will auto-install while **MongoDB-ODM** was installed.\n\n## Installation\n\n```console\n$ pip install mongodb-odm\n```\n\n## Example\n\n### Define model\n\n```Python\nfrom typing import Optional\nfrom mongodb_odm import connect, Document, Field, IndexModel, ASCENDING\n\n\nclass Player(Document):\n    name: str = Field(...)\n    country: Optional[str] = None\n\n    class Config(Document.Config):\n        collection_name = "player"\n        indexes = [\n            IndexModel([("country", ASCENDING)]),\n        ]\n```\n\n### Set Connection\n\n```Python\nconnect(os.environ.get("MONGO_URL", "mongodb://localhost:27017/testdb"))\n```\n\n### Create Document\n\n```Python\npele = Player(name="Pelé", country_code="BRA").create()\nmaradona = Player(name="Diego Maradona", country_code="ARG", rating=97).create()\nzidane = Player(name="Zinedine Zidane", country_code="FRA", rating=96).create()\n```\n\n### Retrieve Document\n\n#### Find data from collection\n\n```Python\nfor player in Player.find({"name": "ARG"}):\n    print(player)\n```\n\n#### Find one object with filter\n\n```Python\nplayer = Player.find_one({"name": "Pelé"})\n```\n\n### Update Data\n\n```Python\nplayer = Player.find_one({"name": "Pelé"})\nif player:\n    player.rating = 98  # potential\n    player.update()\n```\n\n### Delete Data\n\n```Python\nplayer = Player.find_one({"name": "Pelé"})\nif player:\n    player.delete()\n```\n\n### Apply Indexes\n\n```Python\nfrom mongodb_odm import Document, IndexModel, ASCENDING\n\n\nclass Player(Document):\n    ...\n    class Config(Document.Config):\n        indexes = [\n            IndexModel([("country", ASCENDING)]),\n        ]\n```\n\n- To create indexes in the database declare [IndexModel](https://pymongo.readthedocs.io/en/stable/tutorial.html#indexing) and assign in indexes array in Config class. **IndexModel** modules that are directly imported from **pymongo**.\n- Call the `apply_indexes` function from your CLI. You can use [Typer](https://typer.tiangolo.com/) to implement CLI.\n\n## Example Code\n\nThis is a short example of full code\n\n```python\nimport os\nfrom typing import Optional\n\nfrom mongodb_odm import ASCENDING, Document, IndexModel, connect\n\n\nclass Player(Document):\n    name: str\n    country_code: str\n    rating: Optional[int] = None\n\n    class Config(Document.Config):\n        indexes = [\n            IndexModel([("rating", ASCENDING)]),\n        ]\n\n\nconnect(os.environ.get("MONGO_URL", "mongodb://localhost:27017/testdb"))\n\npele = Player(name="Pelé", country_code="BRA").create()\nmaradona = Player(name="Diego Maradona", country_code="ARG", rating=97).create()\nzidane = Player(name="Zinedine Zidane", country_code="FRA", rating=96).create()\n\nfor player in Player.find():\n    print(player)\n\nplayer = Player.find_one({"name": "Pelé"})\nif player:\n    player.rating = 98  # potential\n    player.update()\n\nplayer = Player.find_one({"name": "Pelé"})\n```\n\n### Supported Framework\n\n**MongoDB-ODM** is not framework dependent. We can use this package in any system. But we take special consideration being compatible with <a href="https://fastapi.tiangolo.com/" class="external-link" target="_blank">FastAPI</a> and <a href="https://flask.palletsprojects.com/en/2.2.x/" class="external-link" target="_blank">Flask</a>.\n\n### Credit\n\nThis package is built on top of <a href="https://pymongo.readthedocs.io/en/stable" class="external-link" target="_blank">PyMongo</a> and <a href="https://docs.pydantic.dev" class="external-link" target="_blank">Pydantic</a>.\n\nDocumentation generated by <a href="https://www.mkdocs.org/" class="external-link" target="_blank">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/" class="external-link" target="_blank">Material for MkDocs</a>.\n\nDocumentation inspired by <a href="https://sqlmodel.tiangolo.com" class="external-link" target="_blank">SQLModel</a>.\n\nBut we use other packages for development and other purposes. Check **pyproject.toml** to know about all packages we use to build this package.\n\n## License\n\nThis project is licensed under the terms of the [MIT license](https://github.com/nayan32biswas/mongodb-odm/blob/main/LICENSE).\n',
+│ │ +    'long_description': '# MongoDB-ODM\n\n<p align="center">\n    <em>MongoDB-ODM, NOSQL databases in Python, designed for simplicity, compatibility, and robustness.</em>\n</p>\n\n<p align="center">\n\n<a href="https://github.com/nayan32biswas/mongodb-odm/actions/workflows/test.yml" target="_blank">\n    <img src="https://github.com/nayan32biswas/mongodb-odm/actions/workflows/test.yml/badge.svg?branch=main&event=push" alt="Test">\n</a>\n<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/nayan32biswas/mongodb-odm" target="_blank">\n    <img src="https://coverage-badge.samuelcolvin.workers.dev/nayan32biswas/mongodb-odm.svg" alt="Coverage">\n<br />\n<a href="https://pypi.org/project/mongodb-odm/" target="_blank">\n    <img alt="PyPI" src="https://img.shields.io/pypi/v/mongodb-odm?color=%2334D058&label=PyPi%20Package">\n</a>\n<a href="https://pypi.org/project/mongodb-odm/" target="_blank">\n    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/mongodb-odm?color=%2334D058">\n</a>\n\n</p>\n\n---\n\n**Documentation**: <a href="https://mongodb-odm.readthedocs.io" target="_blank">https://mongodb-odm.readthedocs.io</a>\n\n**PyPi**: <a href="https://pypi.org/project/mongodb-odm" target="_blank">https://pypi.org/project/mongodb-odm</a>\n\n**Repository**: <a href="https://github.com/nayan32biswas/mongodb-odm" target="_blank">https://github.com/nayan32biswas/mongodb-odm</a>\n\n---\n\n## Introduction\n\nThe purpose of this module is to provide easy access to the database with the python object feature with **MongoDB** and **PyMongo**. With PyMongo that was very easy to make spelling mistakes in a collection name when you are doing database operation. This module provides you with minimal ODM with a modeling feature so that you don’t have to look up the MongoDB dashboard(Mongo Compass) to know about field names or data types.\n\n**MongoDB-ODM** is based on Python type annotations, and powered by <a href="https://pymongo.readthedocs.io/en/stable/" class="external-link" target="_blank">PyMongo</a> and <a href="https://docs.pydantic.dev/" class="external-link" target="_blank">Pydantic</a>.\n\nThe key features are:\n\n- **Intuitive to write**: Great editor support. Completion everywhere. Less time debugging. Designed to be easy to use and learn. Less time reading docs.\n- **Easy to use**: It has sensible defaults and does a lot of work underneath to simplify the code you write.\n- **Compatible**: It is designed to be compatible with **FastAPI**, **Pydantic**, and **PyMongo**.\n- **Extensible**: You have all the power of **PyMongo** and **Pydantic** underneath.\n- **Short**: Minimize code duplication. A single type annotation does a lot of work. No need to duplicate models in **PyMongo** and Pydantic.\n\n---\n\n## Requirement\n\n**MongoDB-ODM** will work on <a href="https://www.python.org/downloads/" class="external-link" target="_blank">Python 3.8 and above</a>\n\nThis **MongoDB-ODM** is built on top of **PyMongo** and **Pydantic**. Those packages are required and will auto-install while **MongoDB-ODM** was installed.\n\n## Installation\n\n```console\n$ pip install mongodb-odm\n```\n\n## Example\n\n### Define model\n\n```Python\nimport os\nfrom typing import Optional\n\nfrom mongodb_odm import ASCENDING, Document, IndexModel, connect\n\n\nclass Player(Document):\n    name: str\n    country_code: str\n    rating: Optional[int] = None\n\n    class Config(Document.Config):\n        indexes = [\n            IndexModel([("rating", ASCENDING)]),\n        ]\n```\n\n### Set Connection\n\n```Python\nconnect(os.environ.get("MONGO_URL", "mongodb://localhost:27017/testdb"))\n```\n\n### Create Document\n\n```Python\npele = Player(name="Pelé", country_code="BRA").create()\nmaradona = Player(name="Diego Maradona", country_code="ARG", rating=97).create()\nzidane = Player(name="Zinedine Zidane", country_code="FRA", rating=96).create()\n```\n\n### Retrieve Document\n\n#### Find data from collection\n\n```Python\nfor player in Player.find():\n    print(player)\n```\n\n#### Find one object with filter\n\n```Python\nplayer = Player.find_one({"name": "Pelé"})\n```\n\n### Update Data\n\n```Python\nplayer = Player.find_one({"name": "Pelé"})\nif player:\n    player.rating = 98  # potential\n    player.update()\n```\n\n### Delete Data\n\n```Python\nplayer = Player.find_one({"name": "Pelé"})\nif player:\n    player.delete()\n```\n\n### Apply Indexes\n\n```Python\nimport os\nfrom typing import Optional\n\nfrom mongodb_odm import ASCENDING, Document, IndexModel, connect\n\n\nclass Player(Document):\n    name: str\n    country_code: str\n    rating: Optional[int] = None\n\n    class Config(Document.Config):\n        indexes = [\n            IndexModel([("rating", ASCENDING)]),\n        ]\n```\n\n- To create indexes in the database declare [IndexModel](https://pymongo.readthedocs.io/en/stable/tutorial.html#indexing) and assign in indexes array in Config class. **IndexModel** modules that are directly imported from **pymongo**.\n- Import the `apply_indexes` from `mongodb_odm`. Call the `apply_indexes` function from your CLI. You can use <a href="https://typer.tiangolo.com" class="external-link" target="_blank">Typer</a> to implement CLI.\n\n## Example Code\n\nThis is the example of full code of above.\n\n```python\nimport os\nfrom typing import Optional\n\nfrom mongodb_odm import ASCENDING, Document, IndexModel, connect\n\n\nclass Player(Document):\n    name: str\n    country_code: str\n    rating: Optional[int] = None\n\n    class Config(Document.Config):\n        indexes = [\n            IndexModel([("rating", ASCENDING)]),\n        ]\n\n\nconnect(os.environ.get("MONGO_URL", "mongodb://localhost:27017/testdb"))\n\npele = Player(name="Pelé", country_code="BRA").create()\nmaradona = Player(name="Diego Maradona", country_code="ARG", rating=97).create()\nzidane = Player(name="Zinedine Zidane", country_code="FRA", rating=96).create()\n\nfor player in Player.find():\n    print(player)\n\nplayer = Player.find_one({"name": "Pelé"})\nif player:\n    player.rating = 98  # potential\n    player.update()\n\nplayer = Player.find_one({"name": "Pelé"})\nif player:\n    player.delete()\n```\n\n### Supported Framework\n\n**MongoDB-ODM** is not framework dependent. We can use this package in any system. But we take special consideration being compatible with <a href="https://fastapi.tiangolo.com/" class="external-link" target="_blank">FastAPI</a> and <a href="https://flask.palletsprojects.com/en/2.2.x/" class="external-link" target="_blank">Flask</a>.\n\n### Credit\n\nThis package is built on top of <a href="https://pymongo.readthedocs.io/en/stable" class="external-link" target="_blank">PyMongo</a> and <a href="https://docs.pydantic.dev" class="external-link" target="_blank">Pydantic</a>.\n\nDocumentation generated by <a href="https://www.mkdocs.org/" class="external-link" target="_blank">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/" class="external-link" target="_blank">Material for MkDocs</a>.\n\nDocumentation inspired by <a href="https://sqlmodel.tiangolo.com" class="external-link" target="_blank">SQLModel</a>.\n\nBut we use other packages for development and other purposes. Check **pyproject.toml** to know about all packages we use to build this package.\n\n## License\n\nThis project is licensed under the terms of the [MIT license](https://github.com/nayan32biswas/mongodb-odm/blob/main/LICENSE).\n',
+│ │      'author': 'Nayan Biswas',
+│ │      'author_email': 'nayan32biswas@gmail.com',
+│ │      'maintainer': 'None',
+│ │      'maintainer_email': 'None',
+│ │      'url': 'https://github.com/nayan32biswas/mongodb-odm',
+│ │      'packages': packages,
+│ │      'package_data': package_data,
+│ │ ├── html2text {}
+│ │ │ @@ -1,82 +1,85 @@
+│ │ │  # -*- coding: utf-8 -*- from setuptools import setup packages = \
+│ │ │  ['mongodb_odm', 'mongodb_odm.utils'] package_data = \ {'': ['*']}
+│ │ │  install_requires = \ ['pydantic>=1.10.7,<2.0.0', 'pymongo[srv]>=4.3.3,<5.0.0']
+│ │ │ -setup_kwargs = { 'name': 'mongodb-odm', 'version': '0.2.0', 'description':
+│ │ │ +setup_kwargs = { 'name': 'mongodb-odm', 'version': '0.2.1', 'description':
+│ │ │  'MongoDB-ODM, NOSQL databases in Python, designed for simplicity,
+│ │ │  compatibility, and robustness.', 'long_description': '# MongoDB-ODM\n\n
+│ │ │        \n MongoDB-ODM, NOSQL databases in Python, designed for simplicity,
+│ │ │                         compatibility, and robustness.\n
+│ │ │  \n\n
+│ │ │                         \n\n\n_[Test]\n\n\n_[Coverage]\n
+│ │ │                  \n\n_[PyPI]\n\n\n_[PyPI_-_Python_Version]\n\n\n
+│ │ │  \n\n---\n\n**Documentation**: https://mongodb-odm.readthedocs.io\n\n**PyPi**:
+│ │ │  https://pypi.org/project/mongodb-odm\n\n**Repository**: https://github.com/
+│ │ │  nayan32biswas/mongodb-odm\n\n---\n\n## Introduction\n\nThe purpose of this
+│ │ │  module is to provide easy access to the database with the python object feature
+│ │ │ -with MongoDB and pymongo. With pymongo that was very easy to make spelling
+│ │ │ -mistakes in a collection name when you are doing database operation. This
+│ │ │ -module provides you with minimal ODM with a modeling feature so that you
+│ │ │ +with **MongoDB** and **PyMongo**. With PyMongo that was very easy to make
+│ │ │ +spelling mistakes in a collection name when you are doing database operation.
+│ │ │ +This module provides you with minimal ODM with a modeling feature so that you
+│ │ │  donât have to look up the MongoDB dashboard(Mongo Compass) to know about
+│ │ │  field names or data types.\n\n**MongoDB-ODM** is based on Python type
+│ │ │  annotations, and powered by PyMongo and Pydantic.\n\nThe key features are:\n\n-
+│ │ │  **Intuitive to write**: Great editor support. Completion everywhere. Less time
+│ │ │  debugging. Designed to be easy to use and learn. Less time reading docs.\n-
+│ │ │  **Easy to use**: It has sensible defaults and does a lot of work underneath to
+│ │ │  simplify the code you write.\n- **Compatible**: It is designed to be compatible
+│ │ │  with **FastAPI**, **Pydantic**, and **PyMongo**.\n- **Extensible**: You have
+│ │ │  all the power of **PyMongo** and **Pydantic** underneath.\n- **Short**:
+│ │ │  Minimize code duplication. A single type annotation does a lot of work. No need
+│ │ │  to duplicate models in **PyMongo** and Pydantic.\n\n---\n\n##
+│ │ │ -Requirement\n\n**MongoDB-ODM** will work on Python_3.7_and_above\n\nThis
+│ │ │ +Requirement\n\n**MongoDB-ODM** will work on Python_3.8_and_above\n\nThis
+│ │ │  **MongoDB-ODM** is built on top of **PyMongo** and **Pydantic**. Those packages
+│ │ │  are required and will auto-install while **MongoDB-ODM** was installed.\n\n##
+│ │ │  Installation\n\n```console\n$ pip install mongodb-odm\n```\n\n## Example\n\n###
+│ │ │ -Define model\n\n```Python\nfrom typing import Optional\nfrom mongodb_odm import
+│ │ │ -connect, Document, Field, IndexModel, ASCENDING\n\n\nclass Player(Document):\n
+│ │ │ -name: str = Field(...)\n country: Optional[str] = None\n\n class Config
+│ │ │ -(Document.Config):\n collection_name = "player"\n indexes = [\n IndexModel([
+│ │ │ -("country", ASCENDING)]),\n ]\n```\n\n### Set Connection\n\n```Python\nconnect
+│ │ │ +Define model\n\n```Python\nimport os\nfrom typing import Optional\n\nfrom
+│ │ │ +mongodb_odm import ASCENDING, Document, IndexModel, connect\n\n\nclass Player
+│ │ │ +(Document):\n name: str\n country_code: str\n rating: Optional[int] = None\n\n
+│ │ │ +class Config(Document.Config):\n indexes = [\n IndexModel([("rating",
+│ │ │ +ASCENDING)]),\n ]\n```\n\n### Set Connection\n\n```Python\nconnect
+│ │ │  (os.environ.get("MONGO_URL", "mongodb://localhost:27017/testdb"))\n```\n\n###
+│ │ │  Create Document\n\n```Python\npele = Player(name="PelÃ©",
+│ │ │  country_code="BRA").create()\nmaradona = Player(name="Diego Maradona",
+│ │ │  country_code="ARG", rating=97).create()\nzidane = Player(name="Zinedine
+│ │ │  Zidane", country_code="FRA", rating=96).create()\n```\n\n### Retrieve
+│ │ │  Document\n\n#### Find data from collection\n\n```Python\nfor player in
+│ │ │ -Player.find({"name": "ARG"}):\n print(player)\n```\n\n#### Find one object with
+│ │ │ +Player.find():\n print(player)\n```\n\n#### Find one object with
+│ │ │  filter\n\n```Python\nplayer = Player.find_one({"name": "PelÃ©"})\n```\n\n###
+│ │ │  Update Data\n\n```Python\nplayer = Player.find_one({"name": "PelÃ©"})\nif
+│ │ │  player:\n player.rating = 98 # potential\n player.update()\n```\n\n### Delete
+│ │ │  Data\n\n```Python\nplayer = Player.find_one({"name": "PelÃ©"})\nif player:\n
+│ │ │ -player.delete()\n```\n\n### Apply Indexes\n\n```Python\nfrom mongodb_odm import
+│ │ │ -Document, IndexModel, ASCENDING\n\n\nclass Player(Document):\n ...\n class
+│ │ │ -Config(Document.Config):\n indexes = [\n IndexModel([("country",
+│ │ │ -ASCENDING)]),\n ]\n```\n\n- To create indexes in the database declare
+│ │ │ -[IndexModel](https://pymongo.readthedocs.io/en/stable/tutorial.html#indexing)
+│ │ │ -and assign in indexes array in Config class. **IndexModel** modules that are
+│ │ │ -directly imported from **pymongo**.\n- Call the `apply_indexes` function from
+│ │ │ -your CLI. You can use [Typer](https://typer.tiangolo.com/) to implement
+│ │ │ -CLI.\n\n## Example Code\n\nThis is a short example of full
+│ │ │ -code\n\n```python\nimport os\nfrom typing import Optional\n\nfrom mongodb_odm
+│ │ │ -import ASCENDING, Document, IndexModel, connect\n\n\nclass Player(Document):\n
+│ │ │ -name: str\n country_code: str\n rating: Optional[int] = None\n\n class Config
+│ │ │ -(Document.Config):\n indexes = [\n IndexModel([("rating", ASCENDING)]),\n
+│ │ │ -]\n\n\nconnect(os.environ.get("MONGO_URL", "mongodb://localhost:27017/
+│ │ │ -testdb"))\n\npele = Player(name="PelÃ©", country_code="BRA").create()\nmaradona
+│ │ │ -= Player(name="Diego Maradona", country_code="ARG", rating=97).create()\nzidane
+│ │ │ -= Player(name="Zinedine Zidane", country_code="FRA", rating=96).create()\n\nfor
+│ │ │ -player in Player.find():\n print(player)\n\nplayer = Player.find_one({"name":
+│ │ │ +player.delete()\n```\n\n### Apply Indexes\n\n```Python\nimport os\nfrom typing
+│ │ │ +import Optional\n\nfrom mongodb_odm import ASCENDING, Document, IndexModel,
+│ │ │ +connect\n\n\nclass Player(Document):\n name: str\n country_code: str\n rating:
+│ │ │ +Optional[int] = None\n\n class Config(Document.Config):\n indexes = [\n
+│ │ │ +IndexModel([("rating", ASCENDING)]),\n ]\n```\n\n- To create indexes in the
+│ │ │ +database declare [IndexModel](https://pymongo.readthedocs.io/en/stable/
+│ │ │ +tutorial.html#indexing) and assign in indexes array in Config class.
+│ │ │ +**IndexModel** modules that are directly imported from **pymongo**.\n- Import
+│ │ │ +the `apply_indexes` from `mongodb_odm`. Call the `apply_indexes` function from
+│ │ │ +your CLI. You can use Typer to implement CLI.\n\n## Example Code\n\nThis is the
+│ │ │ +example of full code of above.\n\n```python\nimport os\nfrom typing import
+│ │ │ +Optional\n\nfrom mongodb_odm import ASCENDING, Document, IndexModel,
+│ │ │ +connect\n\n\nclass Player(Document):\n name: str\n country_code: str\n rating:
+│ │ │ +Optional[int] = None\n\n class Config(Document.Config):\n indexes = [\n
+│ │ │ +IndexModel([("rating", ASCENDING)]),\n ]\n\n\nconnect(os.environ.get
+│ │ │ +("MONGO_URL", "mongodb://localhost:27017/testdb"))\n\npele = Player
+│ │ │ +(name="PelÃ©", country_code="BRA").create()\nmaradona = Player(name="Diego
+│ │ │ +Maradona", country_code="ARG", rating=97).create()\nzidane = Player
+│ │ │ +(name="Zinedine Zidane", country_code="FRA", rating=96).create()\n\nfor player
+│ │ │ +in Player.find():\n print(player)\n\nplayer = Player.find_one({"name":
+│ │ │  "PelÃ©"})\nif player:\n player.rating = 98 # potential\n player.update
+│ │ │ -()\n\nplayer = Player.find_one({"name": "PelÃ©"})\n```\n\n### Supported
+│ │ │ -Framework\n\n**MongoDB-ODM** is not framework dependent. We can use this
+│ │ │ -package in any system. But we take special consideration being compatible with
+│ │ │ -FastAPI and Flask.\n\n### Credit\n\nThis package is built on top of PyMongo and
+│ │ │ -Pydantic.\n\nDocumentation generated by MkDocs and Material_for
+│ │ │ -MkDocs.\n\nDocumentation inspired by SQLModel.\n\nBut we use other packages for
+│ │ │ -development and other purposes. Check **pyproject.toml** to know about all
+│ │ │ -packages we use to build this package.\n\n## License\n\nThis project is
+│ │ │ -licensed under the terms of the [MIT license](https://github.com/nayan32biswas/
+│ │ │ -mongodb-odm/blob/main/LICENSE).\n', 'author': 'Nayan Biswas', 'author_email':
+│ │ │ -'nayan32biswas@gmail.com', 'maintainer': 'None', 'maintainer_email': 'None',
+│ │ │ -'url': 'https://github.com/nayan32biswas/mongodb-odm', 'packages': packages,
+│ │ │ -'package_data': package_data, 'install_requires': install_requires,
+│ │ │ -'python_requires': '>=3.8,<4.0', } setup(**setup_kwargs)
+│ │ │ +()\n\nplayer = Player.find_one({"name": "PelÃ©"})\nif player:\n player.delete
+│ │ │ +()\n```\n\n### Supported Framework\n\n**MongoDB-ODM** is not framework
+│ │ │ +dependent. We can use this package in any system. But we take special
+│ │ │ +consideration being compatible with FastAPI and Flask.\n\n### Credit\n\nThis
+│ │ │ +package is built on top of PyMongo and Pydantic.\n\nDocumentation generated by
+│ │ │ +MkDocs and Material_for_MkDocs.\n\nDocumentation inspired by SQLModel.\n\nBut
+│ │ │ +we use other packages for development and other purposes. Check
+│ │ │ +**pyproject.toml** to know about all packages we use to build this
+│ │ │ +package.\n\n## License\n\nThis project is licensed under the terms of the [MIT
+│ │ │ +license](https://github.com/nayan32biswas/mongodb-odm/blob/main/LICENSE).\n',
+│ │ │ +'author': 'Nayan Biswas', 'author_email': 'nayan32biswas@gmail.com',
+│ │ │ +'maintainer': 'None', 'maintainer_email': 'None', 'url': 'https://github.com/
+│ │ │ +nayan32biswas/mongodb-odm', 'packages': packages, 'package_data': package_data,
+│ │ │ +'install_requires': install_requires, 'python_requires': '>=3.8,<4.0', } setup
+│ │ │ +(**setup_kwargs)
+│ │   --- mongodb_odm-0.2.0/PKG-INFO
+│ ├── +++ mongodb_odm-0.2.1/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: mongodb-odm
+│ │ -Version: 0.2.0
+│ │ +Version: 0.2.1
+│ │  Summary: MongoDB-ODM, NOSQL databases in Python, designed for simplicity, compatibility, and robustness.
+│ │  Home-page: https://github.com/nayan32biswas/mongodb-odm
+│ │  License: MIT
+│ │  Author: Nayan Biswas
+│ │  Author-email: nayan32biswas@gmail.com
+│ │  Requires-Python: >=3.8,<4.0
+│ │  Classifier: Development Status :: 4 - Beta
+│ │ @@ -67,15 +67,15 @@
+│ │  
+│ │  **Repository**: <a href="https://github.com/nayan32biswas/mongodb-odm" target="_blank">https://github.com/nayan32biswas/mongodb-odm</a>
+│ │  
+│ │  ---
+│ │  
+│ │  ## Introduction
+│ │  
+│ │ -The purpose of this module is to provide easy access to the database with the python object feature with MongoDB and pymongo. With pymongo that was very easy to make spelling mistakes in a collection name when you are doing database operation. This module provides you with minimal ODM with a modeling feature so that you don’t have to look up the MongoDB dashboard(Mongo Compass) to know about field names or data types.
+│ │ +The purpose of this module is to provide easy access to the database with the python object feature with **MongoDB** and **PyMongo**. With PyMongo that was very easy to make spelling mistakes in a collection name when you are doing database operation. This module provides you with minimal ODM with a modeling feature so that you don’t have to look up the MongoDB dashboard(Mongo Compass) to know about field names or data types.
+│ │  
+│ │  **MongoDB-ODM** is based on Python type annotations, and powered by <a href="https://pymongo.readthedocs.io/en/stable/" class="external-link" target="_blank">PyMongo</a> and <a href="https://docs.pydantic.dev/" class="external-link" target="_blank">Pydantic</a>.
+│ │  
+│ │  The key features are:
+│ │  
+│ │  - **Intuitive to write**: Great editor support. Completion everywhere. Less time debugging. Designed to be easy to use and learn. Less time reading docs.
+│ │  - **Easy to use**: It has sensible defaults and does a lot of work underneath to simplify the code you write.
+│ │ @@ -83,41 +83,43 @@
+│ │  - **Extensible**: You have all the power of **PyMongo** and **Pydantic** underneath.
+│ │  - **Short**: Minimize code duplication. A single type annotation does a lot of work. No need to duplicate models in **PyMongo** and Pydantic.
+│ │  
+│ │  ---
+│ │  
+│ │  ## Requirement
+│ │  
+│ │ -**MongoDB-ODM** will work on <a href="https://www.python.org/downloads/" class="external-link" target="_blank">Python 3.7 and above</a>
+│ │ +**MongoDB-ODM** will work on <a href="https://www.python.org/downloads/" class="external-link" target="_blank">Python 3.8 and above</a>
+│ │  
+│ │  This **MongoDB-ODM** is built on top of **PyMongo** and **Pydantic**. Those packages are required and will auto-install while **MongoDB-ODM** was installed.
+│ │  
+│ │  ## Installation
+│ │  
+│ │  ```console
+│ │  $ pip install mongodb-odm
+│ │  ```
+│ │  
+│ │  ## Example
+│ │  
+│ │  ### Define model
+│ │  
+│ │  ```Python
+│ │ +import os
+│ │  from typing import Optional
+│ │ -from mongodb_odm import connect, Document, Field, IndexModel, ASCENDING
+│ │ +
+│ │ +from mongodb_odm import ASCENDING, Document, IndexModel, connect
+│ │  
+│ │  
+│ │  class Player(Document):
+│ │ -    name: str = Field(...)
+│ │ -    country: Optional[str] = None
+│ │ +    name: str
+│ │ +    country_code: str
+│ │ +    rating: Optional[int] = None
+│ │  
+│ │      class Config(Document.Config):
+│ │ -        collection_name = "player"
+│ │          indexes = [
+│ │ -            IndexModel([("country", ASCENDING)]),
+│ │ +            IndexModel([("rating", ASCENDING)]),
+│ │          ]
+│ │  ```
+│ │  
+│ │  ### Set Connection
+│ │  
+│ │  ```Python
+│ │  connect(os.environ.get("MONGO_URL", "mongodb://localhost:27017/testdb"))
+│ │ @@ -132,15 +134,15 @@
+│ │  ```
+│ │  
+│ │  ### Retrieve Document
+│ │  
+│ │  #### Find data from collection
+│ │  
+│ │  ```Python
+│ │ -for player in Player.find({"name": "ARG"}):
+│ │ +for player in Player.find():
+│ │      print(player)
+│ │  ```
+│ │  
+│ │  #### Find one object with filter
+│ │  
+│ │  ```Python
+│ │  player = Player.find_one({"name": "Pelé"})
+│ │ @@ -162,31 +164,37 @@
+│ │  if player:
+│ │      player.delete()
+│ │  ```
+│ │  
+│ │  ### Apply Indexes
+│ │  
+│ │  ```Python
+│ │ -from mongodb_odm import Document, IndexModel, ASCENDING
+│ │ +import os
+│ │ +from typing import Optional
+│ │ +
+│ │ +from mongodb_odm import ASCENDING, Document, IndexModel, connect
+│ │  
+│ │  
+│ │  class Player(Document):
+│ │ -    ...
+│ │ +    name: str
+│ │ +    country_code: str
+│ │ +    rating: Optional[int] = None
+│ │ +
+│ │      class Config(Document.Config):
+│ │          indexes = [
+│ │ -            IndexModel([("country", ASCENDING)]),
+│ │ +            IndexModel([("rating", ASCENDING)]),
+│ │          ]
+│ │  ```
+│ │  
+│ │  - To create indexes in the database declare [IndexModel](https://pymongo.readthedocs.io/en/stable/tutorial.html#indexing) and assign in indexes array in Config class. **IndexModel** modules that are directly imported from **pymongo**.
+│ │ -- Call the `apply_indexes` function from your CLI. You can use [Typer](https://typer.tiangolo.com/) to implement CLI.
+│ │ +- Import the `apply_indexes` from `mongodb_odm`. Call the `apply_indexes` function from your CLI. You can use <a href="https://typer.tiangolo.com" class="external-link" target="_blank">Typer</a> to implement CLI.
+│ │  
+│ │  ## Example Code
+│ │  
+│ │ -This is a short example of full code
+│ │ +This is the example of full code of above.
+│ │  
+│ │  ```python
+│ │  import os
+│ │  from typing import Optional
+│ │  
+│ │  from mongodb_odm import ASCENDING, Document, IndexModel, connect
+│ │  
+│ │ @@ -213,14 +221,16 @@
+│ │  
+│ │  player = Player.find_one({"name": "Pelé"})
+│ │  if player:
+│ │      player.rating = 98  # potential
+│ │      player.update()
+│ │  
+│ │  player = Player.find_one({"name": "Pelé"})
+│ │ +if player:
+│ │ +    player.delete()
+│ │  ```
+│ │  
+│ │  ### Supported Framework
+│ │  
+│ │  **MongoDB-ODM** is not framework dependent. We can use this package in any system. But we take special consideration being compatible with <a href="https://fastapi.tiangolo.com/" class="external-link" target="_blank">FastAPI</a> and <a href="https://flask.palletsprojects.com/en/2.2.x/" class="external-link" target="_blank">Flask</a>.
+│ │  
+│ │  ### Credit

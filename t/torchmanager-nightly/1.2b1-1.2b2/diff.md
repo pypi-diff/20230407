@@ -1,0 +1,542 @@
+# Comparing `tmp/torchmanager-nightly-1.2b1.tar.gz` & `tmp/torchmanager-nightly-1.2b2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "torchmanager-nightly-1.2b1.tar", last modified: Tue Apr  4 16:31:54 2023, max compression
++gzip compressed data, was "torchmanager-nightly-1.2b2.tar", last modified: Fri Apr  7 17:36:34 2023, max compression
+```
+
+## Comparing `torchmanager-nightly-1.2b1.tar` & `torchmanager-nightly-1.2b2.tar`
+
+### file list
+
+```diff
+@@ -1,72 +1,74 @@
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.694327 torchmanager-nightly-1.2b1/
+--rw-r--r--   0 kisonho    (501) staff       (20)     1318 2023-03-16 14:38:14.000000 torchmanager-nightly-1.2b1/LICENSE
+--rw-r--r--   0 kisonho    (501) staff       (20)     2117 2023-04-04 16:31:54.693936 torchmanager-nightly-1.2b1/PKG-INFO
+--rw-r--r--   0 kisonho    (501) staff       (20)     1806 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b1/README.md
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.669685 torchmanager-nightly-1.2b1/core/
+--rw-r--r--   0 kisonho    (501) staff       (20)      450 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/core/__init__.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.671405 torchmanager-nightly-1.2b1/core/devices/
+--rw-r--r--   0 kisonho    (501) staff       (20)      109 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/core/devices/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     4870 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/core/devices/device.py
+--rw-r--r--   0 kisonho    (501) staff       (20)      264 2023-03-16 14:38:14.000000 torchmanager-nightly-1.2b1/core/devices/protocols.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.672921 torchmanager-nightly-1.2b1/core/errors/
+--rw-r--r--   0 kisonho    (501) staff       (20)      153 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/core/errors/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)      350 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/core/errors/runtime.py
+--rw-r--r--   0 kisonho    (501) staff       (20)      669 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/core/errors/train.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     2728 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/core/protocols.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.673911 torchmanager-nightly-1.2b1/core/random/
+--rw-r--r--   0 kisonho    (501) staff       (20)       44 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/core/random/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)      876 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/core/random/seed.py
+--rw-r--r--   0 kisonho    (501) staff       (20)      204 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/core/typing.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     1305 2023-04-04 16:29:21.000000 torchmanager-nightly-1.2b1/core/version.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.674935 torchmanager-nightly-1.2b1/core/view/
+--rw-r--r--   0 kisonho    (501) staff       (20)      439 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/core/view/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)      313 2023-03-16 14:38:14.000000 torchmanager-nightly-1.2b1/core/view/protocols.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.677661 torchmanager-nightly-1.2b1/lib/
+--rw-r--r--   0 kisonho    (501) staff       (20)      290 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)    10805 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b1/lib/basic.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.681992 torchmanager-nightly-1.2b1/lib/callbacks/
+--rw-r--r--   0 kisonho    (501) staff       (20)      476 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/callbacks/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     4255 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/callbacks/callback.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     4542 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/callbacks/ckpt.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     3523 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/callbacks/dynamic.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     1608 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/callbacks/early_stop.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     4611 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b1/lib/callbacks/experiment.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     2224 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/callbacks/lr.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     2440 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/callbacks/tensorboard.py
+--rw-r--r--   0 kisonho    (501) staff       (20)      810 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b1/lib/compatibility.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.682982 torchmanager-nightly-1.2b1/lib/configs/
+--rw-r--r--   0 kisonho    (501) staff       (20)       26 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/configs/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     2836 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b1/lib/configs/basic.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.683997 torchmanager-nightly-1.2b1/lib/data/
+--rw-r--r--   0 kisonho    (501) staff       (20)       69 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b1/lib/data/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     6866 2023-04-04 16:23:16.000000 torchmanager-nightly-1.2b1/lib/data/dataset.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.685018 torchmanager-nightly-1.2b1/lib/data/utils/
+--rw-r--r--   0 kisonho    (501) staff       (20)       35 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b1/lib/data/utils/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     2483 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b1/lib/data/utils/sliding.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.687181 torchmanager-nightly-1.2b1/lib/losses/
+--rw-r--r--   0 kisonho    (501) staff       (20)      156 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/losses/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     5386 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/losses/cross_entropy.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     1044 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/losses/dice.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     5757 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/losses/loss.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     3108 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/losses/mse.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.689848 torchmanager-nightly-1.2b1/lib/metrics/
+--rw-r--r--   0 kisonho    (501) staff       (20)      238 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/metrics/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     3056 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/metrics/accuracy.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     2126 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/metrics/conf_met.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     4185 2023-04-04 16:26:37.000000 torchmanager-nightly-1.2b1/lib/metrics/fid.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     2182 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/metrics/iou.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     4000 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/metrics/metric.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     9413 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/testing.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.691328 torchmanager-nightly-1.2b1/lib/train/
+--rw-r--r--   0 kisonho    (501) staff       (20)      164 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/train/__init__.py
+--rw-r--r--   0 kisonho    (501) staff       (20)     4964 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b1/lib/train/checkpoint.py
+--rw-r--r--   0 kisonho    (501) staff       (20)      694 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/train/learning_rate.py
+--rw-r--r--   0 kisonho    (501) staff       (20)    14905 2023-04-04 16:25:20.000000 torchmanager-nightly-1.2b1/lib/training.py
+--rw-r--r--   0 kisonho    (501) staff       (20)       38 2023-04-04 16:31:54.694435 torchmanager-nightly-1.2b1/setup.cfg
+--rw-r--r--   0 kisonho    (501) staff       (20)     1646 2023-04-04 16:29:21.000000 torchmanager-nightly-1.2b1/setup.py
+-drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-04 16:31:54.693503 torchmanager-nightly-1.2b1/torchmanager_nightly.egg-info/
+--rw-r--r--   0 kisonho    (501) staff       (20)     2117 2023-04-04 16:31:54.000000 torchmanager-nightly-1.2b1/torchmanager_nightly.egg-info/PKG-INFO
+--rw-r--r--   0 kisonho    (501) staff       (20)     1278 2023-04-04 16:31:54.000000 torchmanager-nightly-1.2b1/torchmanager_nightly.egg-info/SOURCES.txt
+--rw-r--r--   0 kisonho    (501) staff       (20)        1 2023-04-04 16:31:54.000000 torchmanager-nightly-1.2b1/torchmanager_nightly.egg-info/dependency_links.txt
+--rw-r--r--   0 kisonho    (501) staff       (20)       11 2023-04-04 16:31:54.000000 torchmanager-nightly-1.2b1/torchmanager_nightly.egg-info/requires.txt
+--rw-r--r--   0 kisonho    (501) staff       (20)       31 2023-04-04 16:31:54.000000 torchmanager-nightly-1.2b1/torchmanager_nightly.egg-info/top_level.txt
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.429159 torchmanager-nightly-1.2b2/
++-rw-r--r--   0 kisonho    (501) staff       (20)     1318 2023-03-16 14:38:14.000000 torchmanager-nightly-1.2b2/LICENSE
++-rw-r--r--   0 kisonho    (501) staff       (20)     2117 2023-04-07 17:36:34.428718 torchmanager-nightly-1.2b2/PKG-INFO
++-rw-r--r--   0 kisonho    (501) staff       (20)     1806 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b2/README.md
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.392858 torchmanager-nightly-1.2b2/core/
++-rw-r--r--   0 kisonho    (501) staff       (20)      457 2023-04-07 17:35:31.000000 torchmanager-nightly-1.2b2/core/__init__.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.395006 torchmanager-nightly-1.2b2/core/devices/
++-rw-r--r--   0 kisonho    (501) staff       (20)      109 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/core/devices/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     4870 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/core/devices/device.py
++-rw-r--r--   0 kisonho    (501) staff       (20)      264 2023-03-16 14:38:14.000000 torchmanager-nightly-1.2b2/core/devices/protocols.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.397213 torchmanager-nightly-1.2b2/core/errors/
++-rw-r--r--   0 kisonho    (501) staff       (20)      153 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/core/errors/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)      350 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/core/errors/runtime.py
++-rw-r--r--   0 kisonho    (501) staff       (20)      669 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/core/errors/train.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     2728 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/core/protocols.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.398715 torchmanager-nightly-1.2b2/core/random/
++-rw-r--r--   0 kisonho    (501) staff       (20)       44 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/core/random/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)      876 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/core/random/seed.py
++-rw-r--r--   0 kisonho    (501) staff       (20)      204 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/core/typing.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     1305 2023-04-07 17:35:31.000000 torchmanager-nightly-1.2b2/core/version.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.399854 torchmanager-nightly-1.2b2/core/view/
++-rw-r--r--   0 kisonho    (501) staff       (20)      439 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/core/view/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)      313 2023-03-16 14:38:14.000000 torchmanager-nightly-1.2b2/core/view/protocols.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.403638 torchmanager-nightly-1.2b2/lib/
++-rw-r--r--   0 kisonho    (501) staff       (20)      290 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)    10805 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/basic.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.410461 torchmanager-nightly-1.2b2/lib/callbacks/
++-rw-r--r--   0 kisonho    (501) staff       (20)      476 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/callbacks/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     4255 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/callbacks/callback.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     4542 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/callbacks/ckpt.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     3523 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/callbacks/dynamic.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     1608 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/callbacks/early_stop.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     4611 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/callbacks/experiment.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     2224 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/callbacks/lr.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     2440 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/callbacks/tensorboard.py
++-rw-r--r--   0 kisonho    (501) staff       (20)      810 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/compatibility.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.411966 torchmanager-nightly-1.2b2/lib/configs/
++-rw-r--r--   0 kisonho    (501) staff       (20)       26 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/configs/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     2836 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/configs/basic.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.413568 torchmanager-nightly-1.2b2/lib/data/
++-rw-r--r--   0 kisonho    (501) staff       (20)       69 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b2/lib/data/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     6866 2023-04-04 16:23:16.000000 torchmanager-nightly-1.2b2/lib/data/dataset.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.415266 torchmanager-nightly-1.2b2/lib/data/utils/
++-rw-r--r--   0 kisonho    (501) staff       (20)       35 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b2/lib/data/utils/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     2483 2023-04-04 16:25:31.000000 torchmanager-nightly-1.2b2/lib/data/utils/sliding.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.418532 torchmanager-nightly-1.2b2/lib/losses/
++-rw-r--r--   0 kisonho    (501) staff       (20)      156 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/losses/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     5386 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/losses/cross_entropy.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     1044 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/losses/dice.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     5757 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/losses/loss.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     3108 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/losses/mse.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.422337 torchmanager-nightly-1.2b2/lib/metrics/
++-rw-r--r--   0 kisonho    (501) staff       (20)      238 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/metrics/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     3056 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/metrics/accuracy.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     2126 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/metrics/conf_met.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     4539 2023-04-07 17:35:31.000000 torchmanager-nightly-1.2b2/lib/metrics/fid.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     2182 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/metrics/iou.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     4000 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/metrics/metric.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     9401 2023-04-04 16:43:13.000000 torchmanager-nightly-1.2b2/lib/testing.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.424806 torchmanager-nightly-1.2b2/lib/train/
++-rw-r--r--   0 kisonho    (501) staff       (20)      164 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/train/__init__.py
++-rw-r--r--   0 kisonho    (501) staff       (20)     4964 2023-03-19 20:02:58.000000 torchmanager-nightly-1.2b2/lib/train/checkpoint.py
++-rw-r--r--   0 kisonho    (501) staff       (20)      694 2023-04-04 16:43:23.000000 torchmanager-nightly-1.2b2/lib/train/learning_rate.py
++-rw-r--r--   0 kisonho    (501) staff       (20)    14893 2023-04-04 16:43:13.000000 torchmanager-nightly-1.2b2/lib/training.py
++-rw-r--r--   0 kisonho    (501) staff       (20)       38 2023-04-07 17:36:34.429296 torchmanager-nightly-1.2b2/setup.cfg
++-rw-r--r--   0 kisonho    (501) staff       (20)     1646 2023-04-07 17:36:26.000000 torchmanager-nightly-1.2b2/setup.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.425520 torchmanager-nightly-1.2b2/tests/
++-rw-r--r--   0 kisonho    (501) staff       (20)      646 2023-04-07 16:18:37.000000 torchmanager-nightly-1.2b2/tests/test_0102.py
++drwxr-xr-x   0 kisonho    (501) staff       (20)        0 2023-04-07 17:36:34.428100 torchmanager-nightly-1.2b2/torchmanager_nightly.egg-info/
++-rw-r--r--   0 kisonho    (501) staff       (20)     2117 2023-04-07 17:36:34.000000 torchmanager-nightly-1.2b2/torchmanager_nightly.egg-info/PKG-INFO
++-rw-r--r--   0 kisonho    (501) staff       (20)     1297 2023-04-07 17:36:34.000000 torchmanager-nightly-1.2b2/torchmanager_nightly.egg-info/SOURCES.txt
++-rw-r--r--   0 kisonho    (501) staff       (20)        1 2023-04-07 17:36:34.000000 torchmanager-nightly-1.2b2/torchmanager_nightly.egg-info/dependency_links.txt
++-rw-r--r--   0 kisonho    (501) staff       (20)       11 2023-04-07 17:36:34.000000 torchmanager-nightly-1.2b2/torchmanager_nightly.egg-info/requires.txt
++-rw-r--r--   0 kisonho    (501) staff       (20)       31 2023-04-07 17:36:34.000000 torchmanager-nightly-1.2b2/torchmanager_nightly.egg-info/top_level.txt
+```
+
+### Comparing `torchmanager-nightly-1.2b1/LICENSE` & `torchmanager-nightly-1.2b2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/PKG-INFO` & `torchmanager-nightly-1.2b2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ Metadata-Version: 2.1
+ Name: torchmanager-nightly
+-Version: 1.2b1
+-Summary: PyTorch Training Manager v1.2 (Beta 1)
++Version: 1.2b2
++Summary: PyTorch Training Manager v1.2 (Beta 2)
+ Home-page: https://github.com/kisonho/torchmanager.git
+ Author: Kison Ho
+ Author-email: unfit-gothic.0q@icloud.com
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `torchmanager-nightly-1.2b1/README.md` & `torchmanager-nightly-1.2b2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/core/devices/device.py` & `torchmanager-nightly-1.2b2/core/devices/device.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/core/errors/train.py` & `torchmanager-nightly-1.2b2/core/errors/train.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/core/protocols.py` & `torchmanager-nightly-1.2b2/core/protocols.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/core/random/seed.py` & `torchmanager-nightly-1.2b2/core/random/seed.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/core/version.py` & `torchmanager-nightly-1.2b2/core/version.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ import functools
+ from .view import warnings
+ 
+ API: str = "v1.2"
+-CURRENT: str = "v1.2b1"
+-DESCRIPTION: str = "PyTorch Training Manager v1.2 (Beta 1)"
++CURRENT: str = "v1.2b2"
++DESCRIPTION: str = "PyTorch Training Manager v1.2 (Beta 2)"
+ 
+ class VersionError(SystemError):
+     def __init__(self, method_name: str, maximum_supported_version: str) -> None:
+         super().__init__(f"`{method_name}` has been deprecated and removed from version {maximum_supported_version}. Current version: {CURRENT}.")
+ 
+ def deprecated(target_version: str, removing_version: str):
+     '''
+```
+
+### Comparing `torchmanager-nightly-1.2b1/lib/basic.py` & `torchmanager-nightly-1.2b2/lib/basic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/callbacks/callback.py` & `torchmanager-nightly-1.2b2/lib/callbacks/callback.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/callbacks/ckpt.py` & `torchmanager-nightly-1.2b2/lib/callbacks/ckpt.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/callbacks/dynamic.py` & `torchmanager-nightly-1.2b2/lib/callbacks/dynamic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/callbacks/early_stop.py` & `torchmanager-nightly-1.2b2/lib/callbacks/early_stop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/callbacks/experiment.py` & `torchmanager-nightly-1.2b2/lib/callbacks/experiment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/callbacks/lr.py` & `torchmanager-nightly-1.2b2/lib/callbacks/lr.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/callbacks/tensorboard.py` & `torchmanager-nightly-1.2b2/lib/callbacks/tensorboard.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/compatibility.py` & `torchmanager-nightly-1.2b2/lib/compatibility.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/configs/basic.py` & `torchmanager-nightly-1.2b2/lib/configs/basic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/data/dataset.py` & `torchmanager-nightly-1.2b2/lib/data/dataset.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/data/utils/sliding.py` & `torchmanager-nightly-1.2b2/lib/data/utils/sliding.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/losses/cross_entropy.py` & `torchmanager-nightly-1.2b2/lib/losses/cross_entropy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/losses/dice.py` & `torchmanager-nightly-1.2b2/lib/losses/dice.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/losses/loss.py` & `torchmanager-nightly-1.2b2/lib/losses/loss.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/losses/mse.py` & `torchmanager-nightly-1.2b2/lib/losses/mse.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/metrics/accuracy.py` & `torchmanager-nightly-1.2b2/lib/metrics/accuracy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/metrics/conf_met.py` & `torchmanager-nightly-1.2b2/lib/metrics/conf_met.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/metrics/fid.py` & `torchmanager-nightly-1.2b2/lib/metrics/fid.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,17 +1,20 @@
+-from torchmanager_core import torch
++from torchmanager_core import torch, view
+ from torchmanager_core.typing import Generic, List, Module, Optional
+ 
+ from .metric import Metric
+ 
+ 
+ class FID(Metric, Generic[Module]):
+     """
+     Fréchet Inception Distance (FID) metric
+ 
++    * Extends: `.metric.Metric`
++    * Generic class of `Module`
++
+     - Parameters:
+         - feature_extractor: A `Module` to extract the features
+         - input_features: A `list` of current features for generated images that extracted in `torch.Tensor`
+         - result: A `torch.Tensor` of the current FID result
+         - return_when_forwarding: A `bool` flag of if returning results when calculating the metrics, a `torch.nan` will be returned if set to `False` during forwarding
+         - target_features: A `list` of current features for real images that extracted in `torch.Tensor`
+     """
+@@ -22,35 +25,39 @@
+     return_when_forwarding: bool
+     """A `bool` flag of if returning results when calculating the metrics, a `torch.nan` will be returned if set to `False` during forwarding"""
+     target_features: List[torch.Tensor]
+     """A `list` of current features for real images that extracted in `torch.Tensor`"""
+ 
+     @property
+     def result(self) -> torch.Tensor:
+-        """A `torch.Tensor` of the mean of current FID result"""
+-        return self.results.mean()
+-    
+-    @property
+-    def results(self) -> torch.Tensor:
+-        """A `torch.Tensor` of the current FID results"""
++        """A `torch.Tensor` of the current FID result"""
+         # concat input and target
+         input = torch.cat(self.input_features)
+         target = torch.cat(self.target_features)
+ 
+         # calculate mean and covariance
+         mu_real = target.mean(0)
+         mu_gen = input.mean(0)
+         sigma_real = target.cov() / (target.shape[0] - 1)
+         sigma_gen = input.cov() / (input.shape[0] - 1)
++        sigma = sigma_real @ sigma_gen
++        diff = mu_real - mu_gen
++
++        # square root of sigma
++        try:
++            from scipy import linalg
++            covmean = linalg.sqrtm(sigma)
++            assert not isinstance(covmean, tuple), "The square root of `sigma` should not contain errest number."
++            sigma = torch.from_numpy(covmean.real).to(sigma.device)
++        except ImportError:
++            view.warnings.warn("The `scipy` package is not installed to calculate matrix square root. The matrix square root will be calculated as an element-wise square root, which may result in different calculation results than the actual matrix square root.")
++            sigma = sigma.sqrt()
+ 
+         # Calculate the squared Euclidean distance between the means
+-        fid_score = (mu_real - mu_gen) ** 2
+-        sigma = torch.trace(sigma_real + sigma_gen - 2 * (sigma_real @ sigma_gen).sqrt())
+-        fid_score += sigma
+-        return fid_score
++        return diff @ diff + torch.trace(sigma_real + sigma_gen - 2 * sigma)
+ 
+     def __init__(self, feature_extractor: Optional[Module] = None, return_when_forwarding: bool = True, target: Optional[str] = None) -> None:
+         """
+         Constructor
+ 
+         - Parameters:
+             - feature_extractor: An optional `Module` to extract features, a pre-trained InceptionV3 will be used if not given
+@@ -62,36 +69,34 @@
+         self.input_features = []
+         self.return_when_forwarding = return_when_forwarding
+         self.target_features = []
+ 
+     def forward(self, input: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
+         input_features = self.forward_features(input)
+         target_features = self.forward_features(target)
+-        self.input_features += [f.unsqueeze(0).cpu().detach() for f in input_features]
+-        self.target_features += [f.unsqueeze(0).cpu().detach() for f in target_features]
++        self.input_features += [input_features.cpu().detach()]
++        self.target_features += [target_features.cpu().detach()]
+         return self.result if self.return_when_forwarding else torch.tensor(torch.nan)
+ 
+     @torch.no_grad()
+     def forward_features(self, x: torch.Tensor) -> torch.Tensor:
+         """
+         Extract features
+ 
+         - Parameters:
+             - x: A `torch.Tensor` to extract
+         - Returns: A `torch.Tensor` of features if feature extractor is given
+         """
+         # get features]
+         if self.feature_extractor is not None:
+-            features: torch.Tensor = self.feature_extractor(x)
+-            features = features.squeeze(3).squeeze(2)
+-            return features
++            return self.feature_extractor(x)
+         else:
+             return x
+-    
++
+     def train(self, mode: bool = True):
+         self.training = mode
+         return self
+ 
+     def reset(self) -> None:
+         super().reset()
+         self.input_features.clear()
+-        self.target_features.clear()
++        self.target_features.clear()
+```
+
+### Comparing `torchmanager-nightly-1.2b1/lib/metrics/iou.py` & `torchmanager-nightly-1.2b2/lib/metrics/iou.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/metrics/metric.py` & `torchmanager-nightly-1.2b2/lib/metrics/metric.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/testing.py` & `torchmanager-nightly-1.2b2/lib/testing.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ from torch.utils.data import DataLoader
+-from torchmanager_core import devices, errors, torch, view, _raise, deprecated
++from torchmanager_core import devices, errors, torch, view, _raise
+ from torchmanager_core.protocols import Resulting
+ from torchmanager_core.typing import Any, Collection, Dict, List, Module, Optional, Union
+ 
+ from .basic import BaseManager
+ from .data import Dataset
+ from .losses import Loss, ParallelLoss
+```
+
+### Comparing `torchmanager-nightly-1.2b1/lib/train/checkpoint.py` & `torchmanager-nightly-1.2b2/lib/train/checkpoint.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/train/learning_rate.py` & `torchmanager-nightly-1.2b2/lib/train/learning_rate.py`
+
+ * *Files identical despite different names*
+
+### Comparing `torchmanager-nightly-1.2b1/lib/training.py` & `torchmanager-nightly-1.2b2/lib/training.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ from torch.utils.data import DataLoader
+-from torchmanager_core import devices, errors, math, torch, view, deprecated
++from torchmanager_core import devices, errors, math, torch, view
+ from torchmanager_core.protocols import Resulting
+ from torchmanager_core.typing import Any, Collection, Dict, List, Module, Optional, Self, Union
+ 
+ from .callbacks import Callback
+ from .data import Dataset
+ from .losses import Loss, ParallelLoss
+ from .metrics import Metric
+```
+
+### Comparing `torchmanager-nightly-1.2b1/setup.py` & `torchmanager-nightly-1.2b2/setup.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ from distutils.core import setup
+ 
+ from pathlib import Path
+ this_directory = Path(__file__).parent
+ long_description = (this_directory / "README.md").read_text()
+ 
+ setup(name='torchmanager-nightly',
+-    version="1.2b1",
+-    description="PyTorch Training Manager v1.2 (Beta 1)",
++    version="1.2b2",
++    description="PyTorch Training Manager v1.2 (Beta 2)",
+     long_description=long_description,
+     long_description_content_type='text/markdown',
+     author='Kison Ho',
+     author_email='unfit-gothic.0q@icloud.com',
+     packages=[
+         'torchmanager',
+         'torchmanager.callbacks',
+```
+
+### Comparing `torchmanager-nightly-1.2b1/torchmanager_nightly.egg-info/PKG-INFO` & `torchmanager-nightly-1.2b2/torchmanager_nightly.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ Metadata-Version: 2.1
+ Name: torchmanager-nightly
+-Version: 1.2b1
+-Summary: PyTorch Training Manager v1.2 (Beta 1)
++Version: 1.2b2
++Summary: PyTorch Training Manager v1.2 (Beta 2)
+ Home-page: https://github.com/kisonho/torchmanager.git
+ Author: Kison Ho
+ Author-email: unfit-gothic.0q@icloud.com
+ Requires-Python: >=3.8
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+```
+
+### Comparing `torchmanager-nightly-1.2b1/torchmanager_nightly.egg-info/SOURCES.txt` & `torchmanager-nightly-1.2b2/torchmanager_nightly.egg-info/SOURCES.txt`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -44,12 +44,13 @@
+ lib/metrics/conf_met.py
+ lib/metrics/fid.py
+ lib/metrics/iou.py
+ lib/metrics/metric.py
+ lib/train/__init__.py
+ lib/train/checkpoint.py
+ lib/train/learning_rate.py
++tests/test_0102.py
+ torchmanager_nightly.egg-info/PKG-INFO
+ torchmanager_nightly.egg-info/SOURCES.txt
+ torchmanager_nightly.egg-info/dependency_links.txt
+ torchmanager_nightly.egg-info/requires.txt
+ torchmanager_nightly.egg-info/top_level.txt
+```
+
