@@ -1,0 +1,809 @@
+--- tmp/ml-starter-0.0.5.tar.gz
++++ tmp/ml-starter-0.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ml-starter-0.0.5.tar", last modified: Fri Apr  7 00:48:10 2023, max compression
+│ +gzip compressed data, was "ml-starter-0.0.6.tar", last modified: Fri Apr  7 17:49:49 2023, max compression
+│   --- ml-starter-0.0.5.tar
+├── +++ ml-starter-0.0.6.tar
+│ ├── file list
+│ │ @@ -1,148 +1,149 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.815651 ml-starter-0.0.5/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      102 2023-04-07 00:47:54.000000 ml-starter-0.0.5/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4250 2023-04-07 00:48:10.815651 ml-starter-0.0.5/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3739 2023-04-07 00:47:54.000000 ml-starter-0.0.5/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.799650 ml-starter-0.0.5/ml/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/__version__.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2834 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/api.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.799650 ml-starter-0.0.5/ml/core/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/core/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      224 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/core/common_types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3332 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/core/config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5356 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/core/env.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    23463 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/core/registry.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2068 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/core/state.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.799650 ml-starter-0.0.5/ml/loggers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/loggers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4905 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/loggers/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2726 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/loggers/meter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    31809 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/loggers/multi.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4235 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/loggers/stdout.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8960 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/loggers/tensorboard.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.799650 ml-starter-0.0.5/ml/lr_schedulers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1916 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      474 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/constant.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1734 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/cosine.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2342 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/cosine_decay.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1639 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/linear.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      719 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/linear_no_decay.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.803650 ml-starter-0.0.5/ml/lr_schedulers/scripts/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/scripts/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1897 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/lr_schedulers/scripts/plot.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.803650 ml-starter-0.0.5/ml/models/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/models/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2060 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/models/activations.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2948 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/models/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3271 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/models/init.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11127 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/models/norms.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.803650 ml-starter-0.0.5/ml/optimizers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/optimizers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1164 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/optimizers/adam.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3057 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/optimizers/adamw.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3347 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/optimizers/adan.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      903 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/optimizers/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1120 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/optimizers/sgd.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6094 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/optimizers/shampoo.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      297 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/optimizers/types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/py.typed
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.803650 ml-starter-0.0.5/ml/scripts/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/scripts/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2815 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/scripts/cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      641 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/scripts/compiler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      465 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/scripts/mp_train.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      768 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/scripts/stage.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      722 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/scripts/train.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.803650 ml-starter-0.0.5/ml/tasks/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    17502 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/base.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.807650 ml-starter-0.0.5/ml/tasks/datasets/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1569 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/async_iterable.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3778 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/clippify.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7256 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/collate.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8725 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/error_handling.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.807650 ml-starter-0.0.5/ml/tasks/datasets/impl/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/impl/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2160 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/impl/kinetics.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5273 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/impl/pretraining.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      302 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/impl/types.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1232 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/impl/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2345 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/multi_iter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1552 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/samplers.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4439 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/streaming.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6687 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/transforms.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1451 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/datasets/video_file.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.807650 ml-starter-0.0.5/ml/tasks/environments/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/environments/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1599 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/environments/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1612 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/environments/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13383 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/environments/worker.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.807650 ml-starter-0.0.5/ml/tasks/losses/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/losses/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      931 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/losses/reduce.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.807650 ml-starter-0.0.5/ml/tasks/rl/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/rl/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    13501 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/rl/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3108 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/rl/replay.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.807650 ml-starter-0.0.5/ml/tasks/sl/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/sl/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1223 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/tasks/sl/base.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.811651 ml-starter-0.0.5/ml/trainers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16412 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4395 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/ddp.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.811651 ml-starter-0.0.5/ml/trainers/mixins/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4737 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/cpu_stats.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.811651 ml-starter-0.0.5/ml/trainers/mixins/device/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/device/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1413 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/device/auto.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7516 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/device/base.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      534 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/device/cpu.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1356 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/device/gpu.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      775 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/device/metal.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4144 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/gpu_stats.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2935 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/grad_clipping.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3148 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/mixed_precision.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5536 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/profiler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1262 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/mixins/step_wrapper.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8638 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/rl.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10088 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/sl.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    10349 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/slurm.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    11073 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/trainers/vanilla.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.815651 ml-starter-0.0.5/ml/utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2864 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/argparse.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2582 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/atomic.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1580 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/augmentation.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4608 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/caching.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      977 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/call_train.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/checks.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3009 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/cli.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1059 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/colors.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    12052 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/compiler.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      683 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/data.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      820 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/datetime.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2180 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/distributed.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2388 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/large_models.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4346 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/logging.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2525 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/meter.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      259 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/networking.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      426 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/paths.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      317 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/random.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2394 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/timer.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    14152 2023-04-07 00:47:54.000000 ml-starter-0.0.5/ml/utils/video.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 00:48:10.815651 ml-starter-0.0.5/ml_starter.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4250 2023-04-07 00:48:10.000000 ml-starter-0.0.5/ml_starter.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3116 2023-04-07 00:48:10.000000 ml-starter-0.0.5/ml_starter.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 00:48:10.000000 ml-starter-0.0.5/ml_starter.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-07 00:48:10.000000 ml-starter-0.0.5/ml_starter.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      146 2023-04-07 00:48:10.000000 ml-starter-0.0.5/ml_starter.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        3 2023-04-07 00:48:10.000000 ml-starter-0.0.5/ml_starter.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1446 2023-04-07 00:47:54.000000 ml-starter-0.0.5/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       56 2023-04-07 00:47:54.000000 ml-starter-0.0.5/requirements-dev.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      127 2023-04-07 00:47:54.000000 ml-starter-0.0.5/requirements.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 00:48:10.815651 ml-starter-0.0.5/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1211 2023-04-07 00:47:54.000000 ml-starter-0.0.5/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.768759 ml-starter-0.0.6/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      102 2023-04-07 17:49:36.000000 ml-starter-0.0.6/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1561 2023-04-07 17:49:49.768759 ml-starter-0.0.6/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1050 2023-04-07 17:49:36.000000 ml-starter-0.0.6/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.736759 ml-starter-0.0.6/ml/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        5 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/__version__.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2834 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/api.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.740759 ml-starter-0.0.6/ml/core/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/core/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      224 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/core/common_types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3332 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/core/config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5356 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/core/env.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    23469 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/core/registry.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2068 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/core/state.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.740759 ml-starter-0.0.6/ml/loggers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/loggers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4905 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/loggers/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2726 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/loggers/meter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    31809 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/loggers/multi.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4235 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/loggers/stdout.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8960 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/loggers/tensorboard.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.744759 ml-starter-0.0.6/ml/lr_schedulers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1916 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      474 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/constant.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1734 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/cosine.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2342 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/cosine_decay.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1639 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/linear.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      719 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/linear_no_decay.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.744759 ml-starter-0.0.6/ml/lr_schedulers/scripts/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/scripts/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1897 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/lr_schedulers/scripts/plot.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.744759 ml-starter-0.0.6/ml/models/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/models/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2060 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/models/activations.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2948 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/models/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3271 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/models/init.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11127 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/models/norms.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.748759 ml-starter-0.0.6/ml/optimizers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/optimizers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1164 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/optimizers/adam.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3057 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/optimizers/adamw.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3347 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/optimizers/adan.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      903 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/optimizers/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1120 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/optimizers/sgd.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6094 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/optimizers/shampoo.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      297 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/optimizers/types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/py.typed
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.748759 ml-starter-0.0.6/ml/scripts/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/scripts/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2815 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/scripts/cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      641 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/scripts/compiler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      465 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/scripts/mp_train.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      768 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/scripts/stage.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      722 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/scripts/train.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.748759 ml-starter-0.0.6/ml/tasks/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    17502 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/base.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.752759 ml-starter-0.0.6/ml/tasks/datasets/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1569 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/async_iterable.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3778 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/clippify.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7256 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/collate.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8725 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/error_handling.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.752759 ml-starter-0.0.6/ml/tasks/datasets/impl/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/impl/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2160 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/impl/kinetics.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5273 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/impl/pretraining.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      302 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/impl/types.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1232 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/impl/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2345 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/multi_iter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1552 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/samplers.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4439 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/streaming.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6687 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/transforms.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1451 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/datasets/video_file.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.752759 ml-starter-0.0.6/ml/tasks/environments/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/environments/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1599 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/environments/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1612 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/environments/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13383 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/environments/worker.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.756759 ml-starter-0.0.6/ml/tasks/losses/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/losses/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      931 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/losses/reduce.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.756759 ml-starter-0.0.6/ml/tasks/rl/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/rl/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    13501 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/rl/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3108 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/rl/replay.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.756759 ml-starter-0.0.6/ml/tasks/sl/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/sl/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1223 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/tasks/sl/base.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.756759 ml-starter-0.0.6/ml/trainers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16820 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4395 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/ddp.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.760759 ml-starter-0.0.6/ml/trainers/mixins/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4737 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/cpu_stats.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.760759 ml-starter-0.0.6/ml/trainers/mixins/device/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/device/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1413 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/device/auto.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7516 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/device/base.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      534 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/device/cpu.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1356 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/device/gpu.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      775 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/device/metal.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4144 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/gpu_stats.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2935 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/grad_clipping.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3148 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/mixed_precision.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5536 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/profiler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1262 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/mixins/step_wrapper.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8522 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/rl.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8298 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/sl.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10349 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/slurm.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    11073 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/trainers/vanilla.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.768759 ml-starter-0.0.6/ml/utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2864 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/argparse.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2582 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/atomic.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1580 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/augmentation.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4608 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/caching.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      977 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/call_train.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/checks.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3009 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/cli.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1059 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/colors.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    12052 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/compiler.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      683 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/data.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      820 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/datetime.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2180 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/distributed.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3181 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/io.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2388 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/large_models.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4346 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/logging.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2525 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/meter.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      259 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/networking.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      426 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/paths.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      317 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/random.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2394 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/timer.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    14152 2023-04-07 17:49:36.000000 ml-starter-0.0.6/ml/utils/video.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 17:49:49.768759 ml-starter-0.0.6/ml_starter.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1561 2023-04-07 17:49:49.000000 ml-starter-0.0.6/ml_starter.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3131 2023-04-07 17:49:49.000000 ml-starter-0.0.6/ml_starter.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 17:49:49.000000 ml-starter-0.0.6/ml_starter.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-07 17:49:49.000000 ml-starter-0.0.6/ml_starter.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      146 2023-04-07 17:49:49.000000 ml-starter-0.0.6/ml_starter.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        3 2023-04-07 17:49:49.000000 ml-starter-0.0.6/ml_starter.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1446 2023-04-07 17:49:36.000000 ml-starter-0.0.6/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       56 2023-04-07 17:49:36.000000 ml-starter-0.0.6/requirements-dev.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      127 2023-04-07 17:49:36.000000 ml-starter-0.0.6/requirements.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 17:49:49.768759 ml-starter-0.0.6/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1211 2023-04-07 17:49:36.000000 ml-starter-0.0.6/setup.py
+│ │   --- ml-starter-0.0.5/ml/api.py
+│ ├── +++ ml-starter-0.0.6/ml/api.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/core/config.py
+│ ├── +++ ml-starter-0.0.6/ml/core/config.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/core/env.py
+│ ├── +++ ml-starter-0.0.6/ml/core/env.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/core/registry.py
+│ ├── +++ ml-starter-0.0.6/ml/core/registry.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -112,15 +112,15 @@
+│ │      if not out_dir.exists():
+│ │          with Timer("copying files to staging directory"):
+│ │              tmp_dir = stage_dir / ".tmp" / str(uuid4())
+│ │              if tmp_dir.parent.exists():
+│ │                  shutil.rmtree(tmp_dir.parent)
+│ │              tmp_dir.mkdir(exist_ok=False, parents=True)
+│ │              for fpath in fpaths:
+│ │ -                new_fpath = tmp_dir / get_relative_path(fpath, base_dirs())
+│ │ +                new_fpath = tmp_dir / get_relative_path(fpath, base_dirs(), True)
+│ │                  new_fpath.parent.mkdir(exist_ok=True, parents=True)
+│ │                  shutil.copyfile(fpath, new_fpath)
+│ │              tmp_dir.rename(out_dir)
+│ │              tmp_dir.parent.rmdir()
+│ │  
+│ │      with Timer("removing old directories"):
+│ │          cur_time = datetime.datetime.now()
+│ │   --- ml-starter-0.0.5/ml/core/state.py
+│ ├── +++ ml-starter-0.0.6/ml/core/state.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/loggers/base.py
+│ ├── +++ ml-starter-0.0.6/ml/loggers/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/loggers/meter.py
+│ ├── +++ ml-starter-0.0.6/ml/loggers/meter.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/loggers/multi.py
+│ ├── +++ ml-starter-0.0.6/ml/loggers/multi.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/loggers/stdout.py
+│ ├── +++ ml-starter-0.0.6/ml/loggers/stdout.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/loggers/tensorboard.py
+│ ├── +++ ml-starter-0.0.6/ml/loggers/tensorboard.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/lr_schedulers/base.py
+│ ├── +++ ml-starter-0.0.6/ml/lr_schedulers/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/lr_schedulers/cosine.py
+│ ├── +++ ml-starter-0.0.6/ml/lr_schedulers/cosine.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/lr_schedulers/cosine_decay.py
+│ ├── +++ ml-starter-0.0.6/ml/lr_schedulers/cosine_decay.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/lr_schedulers/linear.py
+│ ├── +++ ml-starter-0.0.6/ml/lr_schedulers/linear.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/lr_schedulers/linear_no_decay.py
+│ ├── +++ ml-starter-0.0.6/ml/lr_schedulers/linear_no_decay.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/lr_schedulers/scripts/plot.py
+│ ├── +++ ml-starter-0.0.6/ml/lr_schedulers/scripts/plot.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/models/activations.py
+│ ├── +++ ml-starter-0.0.6/ml/models/activations.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/models/base.py
+│ ├── +++ ml-starter-0.0.6/ml/models/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/models/init.py
+│ ├── +++ ml-starter-0.0.6/ml/models/init.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/models/norms.py
+│ ├── +++ ml-starter-0.0.6/ml/models/norms.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/optimizers/adam.py
+│ ├── +++ ml-starter-0.0.6/ml/optimizers/adam.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/optimizers/adamw.py
+│ ├── +++ ml-starter-0.0.6/ml/optimizers/adamw.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/optimizers/adan.py
+│ ├── +++ ml-starter-0.0.6/ml/optimizers/adan.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/optimizers/base.py
+│ ├── +++ ml-starter-0.0.6/ml/optimizers/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/optimizers/sgd.py
+│ ├── +++ ml-starter-0.0.6/ml/optimizers/sgd.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/optimizers/shampoo.py
+│ ├── +++ ml-starter-0.0.6/ml/optimizers/shampoo.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/scripts/cli.py
+│ ├── +++ ml-starter-0.0.6/ml/scripts/cli.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/scripts/compiler.py
+│ ├── +++ ml-starter-0.0.6/ml/scripts/compiler.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/scripts/stage.py
+│ ├── +++ ml-starter-0.0.6/ml/scripts/stage.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/scripts/train.py
+│ ├── +++ ml-starter-0.0.6/ml/scripts/train.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/base.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/async_iterable.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/async_iterable.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/clippify.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/clippify.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/collate.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/collate.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/error_handling.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/error_handling.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/impl/kinetics.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/impl/kinetics.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/impl/pretraining.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/impl/pretraining.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/impl/utils.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/impl/utils.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/multi_iter.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/multi_iter.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/samplers.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/samplers.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/streaming.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/streaming.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/transforms.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/transforms.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/datasets/video_file.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/datasets/video_file.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/environments/base.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/environments/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/environments/utils.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/environments/utils.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/environments/worker.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/environments/worker.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/losses/reduce.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/losses/reduce.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/rl/base.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/rl/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/rl/replay.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/rl/replay.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/tasks/sl/base.py
+│ ├── +++ ml-starter-0.0.6/ml/tasks/sl/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/base.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/base.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -298,47 +298,49 @@
+│ │          return False
+│ │  
+│ │      def load_checkpoint(
+│ │          self,
+│ │          ckpt_path: Path,
+│ │          task: TaskT,
+│ │          model: ModelT,
+│ │ -        optim: Optimizer,
+│ │ -        lr_sched: SchedulerAdapter,
+│ │ +        optim: Optimizer | None = None,
+│ │ +        lr_sched: SchedulerAdapter | None = None,
+│ │      ) -> State:
+│ │          with Timer("loading checkpoint"):
+│ │              ckpt = torch.load(ckpt_path)
+│ │              task.on_after_load_checkpoint(ckpt)
+│ │              model.load_state_dict(ckpt["model"])
+│ │              task.load_state_dict(ckpt["task"])
+│ │ -            optim.load_state_dict(ckpt["optim"])
+│ │ -            lr_sched.load_state_dict(ckpt["lr_sched"])
+│ │ +            if optim is not None:
+│ │ +                optim.load_state_dict(ckpt["optim"])
+│ │ +            if lr_sched is not None:
+│ │ +                lr_sched.load_state_dict(ckpt["lr_sched"])
+│ │              self.load_state_dict(ckpt)
+│ │              state = ckpt["state"]
+│ │          return state
+│ │  
+│ │      def save_checkpoint(
+│ │          self,
+│ │          state: State,
+│ │          task: TaskT,
+│ │          model: ModelT,
+│ │ -        optim: Optimizer,
+│ │ -        lr_sched: SchedulerAdapter,
+│ │ +        optim: Optimizer | None = None,
+│ │ +        lr_sched: SchedulerAdapter | None = None,
+│ │      ) -> None:
+│ │          if is_master():
+│ │              with Timer("saving checkpoint"):
+│ │                  ckpt_path = self.get_ckpt_path(state)
+│ │                  logger.info("Saving checkpoint to %s", ckpt_path)
+│ │                  last_ckpt_path = self.get_ckpt_path()
+│ │                  ckpt_path.parent.mkdir(exist_ok=True, parents=True)
+│ │                  state_dict = {
+│ │                      "model": model.state_dict(),
+│ │                      "task": task.state_dict(),
+│ │ -                    "optim": optim.state_dict(),
+│ │ -                    "lr_sched": lr_sched.state_dict(),
+│ │ +                    "optim": None if optim is None else optim.state_dict(),
+│ │ +                    "lr_sched": None if lr_sched is None else lr_sched.state_dict(),
+│ │                      "state": state,
+│ │                  }
+│ │                  self.update_state_dict(state_dict)
+│ │                  if last_ckpt_path.exists():
+│ │                      if self.checkpoint_config.only_save_most_recent:
+│ │                          base_ckpt = last_ckpt_path.resolve()
+│ │                          if base_ckpt.is_file():
+│ │ @@ -363,23 +365,14 @@
+│ │          Args:
+│ │              model: The current model
+│ │              task: The current task
+│ │              optimizer: The current optimizer
+│ │              lr_scheduler: The current learning rate scheduler
+│ │          """
+│ │  
+│ │ -    @abstractmethod
+│ │ -    def evaluate(self, model: ModelT, task: TaskT) -> None:
+│ │ -        """Runs the evaluation loop.
+│ │ -
+│ │ -        Args:
+│ │ -            model: The current model
+│ │ -            task: The current task
+│ │ -        """
+│ │ -
+│ │      def write_logs(self, task: TaskT, model: ModelT, state: State) -> None:
+│ │          model.logger.write(self.loggers, state)
+│ │          task.logger.write(self.loggers, state)
+│ │          self.logger.write(self.loggers, state)
+│ │          for value_logger in self.loggers:
+│ │              if value_logger.should_write(state):
+│ │                  value_logger.write(state)
+│ │ @@ -441,7 +434,21 @@
+│ │          state: State,
+│ │          task: TaskT,
+│ │          model: ModelT,
+│ │          optim: Optimizer,
+│ │          lr_sched: SchedulerAdapter,
+│ │      ) -> None:
+│ │          task.on_epoch_end(state, model, optim, lr_sched)
+│ │ +
+│ │ +
+│ │ +class DummyBaseTrainer(BaseTrainer):
+│ │ +    """Defines a dummy trainer that does nothing.
+│ │ +
+│ │ +    This trainer can be used to access the base trainer's utility functions,
+│ │ +    such as saving and loading checkpoints.
+│ │ +    """
+│ │ +
+│ │ +    def launch(self) -> None:
+│ │ +        raise NotImplementedError
+│ │ +
+│ │ +    def train(self, model: ModelT, task: TaskT, optimizer: BaseOptimizer, lr_scheduler: BaseLRScheduler) -> None:
+│ │ +        raise NotImplementedError
+│ │   --- ml-starter-0.0.5/ml/trainers/ddp.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/ddp.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/cpu_stats.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/cpu_stats.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/device/auto.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/device/auto.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/device/base.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/device/base.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/device/cpu.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/device/cpu.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/device/gpu.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/device/gpu.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/device/metal.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/device/metal.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/gpu_stats.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/gpu_stats.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/grad_clipping.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/grad_clipping.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/mixed_precision.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/mixed_precision.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/profiler.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/profiler.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/mixins/step_wrapper.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/mixins/step_wrapper.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/rl.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/rl.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -179,17 +179,14 @@
+│ │              logger.exception("Caught exception during training loop")
+│ │  
+│ │          finally:
+│ │              if is_master():
+│ │                  self.remove_lock_file("running", missing_ok=True)
+│ │              logger.info("Exiting training job for %s", self.exp_dir / "config.yaml")
+│ │  
+│ │ -    def evaluate(self, model: ModelT, task: ReinforcementLearningTaskT) -> None:
+│ │ -        raise NotImplementedError
+│ │ -
+│ │  
+│ │  @register_trainer("ddp_rl", ReinforcementLearningTrainerConfig)
+│ │  class ReinforcementLearningDDPTrainer(
+│ │      ReinforcementLearningVanillaTrainer[ReinforcementLearningTrainerConfig, ModelT, ReinforcementLearningTaskT],
+│ │      DDPTrainer[ReinforcementLearningTrainerConfig, ModelT, ReinforcementLearningTaskT],
+│ │  ):
+│ │      pass
+│ │   --- ml-starter-0.0.5/ml/trainers/sl.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/sl.py
+│ │┄ Files 22% similar despite different names
+│ │ @@ -5,25 +5,19 @@
+│ │  from the task, and then train the model on the dataset.
+│ │  """
+│ │  
+│ │  import contextlib
+│ │  import logging
+│ │  import signal
+│ │  from dataclasses import dataclass
+│ │ -from pathlib import Path
+│ │  from types import FrameType
+│ │  from typing import Generic, TypeVar
+│ │  
+│ │ -import torch
+│ │ -from torch import nn
+│ │ -
+│ │  from ml.core.config import conf_field
+│ │  from ml.core.registry import register_trainer
+│ │ -from ml.core.state import State
+│ │ -from ml.loggers.meter import MeterLogger, MeterLoggerConfig
+│ │  from ml.lr_schedulers.base import BaseLRScheduler
+│ │  from ml.optimizers.base import BaseOptimizer
+│ │  from ml.tasks.sl.base import SupervisedLearningTask
+│ │  from ml.trainers.base import ModelT
+│ │  from ml.trainers.ddp import DDPTrainer
+│ │  from ml.trainers.mixins.device.base import InfinitePrefetcher
+│ │  from ml.trainers.slurm import SlurmTrainer, SlurmTrainerConfig
+│ │ @@ -190,62 +184,14 @@
+│ │              logger.exception("Caught exception during training loop")
+│ │  
+│ │          finally:
+│ │              if is_master():
+│ │                  self.remove_lock_file("running", missing_ok=True)
+│ │              logger.info("Exiting training job for %s", self.exp_dir / "config.yaml")
+│ │  
+│ │ -    def evaluate(self, model: ModelT, task: SupervisedLearningTaskT) -> None:
+│ │ -        """Runs the GPU-based evaluation loop.
+│ │ -
+│ │ -        Args:
+│ │ -            model: The current model
+│ │ -            task: The current task
+│ │ -        """
+│ │ -
+│ │ -        # Saves the config at the start of evaluation.
+│ │ -        self.save_config()
+│ │ -
+│ │ -        # Meter logger keeps track of value statistics.
+│ │ -        meter_logger = MeterLogger(MeterLoggerConfig())
+│ │ -        self.add_logger(meter_logger)
+│ │ -
+│ │ -        # Gets the dataset, dataloader and prefetcher.
+│ │ -        test_ds = task.get_dataset("test")
+│ │ -        test_dl = task.get_dataloader(test_ds, "test")
+│ │ -        test_pf = self._device.get_prefetcher(test_dl)
+│ │ -
+│ │ -        def load_checkpoint(ckpt_path: Path) -> State:
+│ │ -            with Timer("loading checkpoint"):
+│ │ -                ckpt = torch.load(ckpt_path)
+│ │ -                model.load_state_dict(ckpt["model"])
+│ │ -                state = ckpt["state"]
+│ │ -            return state
+│ │ -
+│ │ -        if (ckpt_path := self.get_ckpt_path()).exists():
+│ │ -            state = load_checkpoint(ckpt_path)
+│ │ -        else:
+│ │ -            logger.warning("Missing checkpoint to evaluate; using uninitialized model")
+│ │ -            state = State.init_state()
+│ │ -
+│ │ -        # Builds a mega-model.
+│ │ -        task_model: nn.Module = self.get_task_model(task, model)
+│ │ -
+│ │ -        for test_batch in test_pf:
+│ │ -            self.test_step(
+│ │ -                task_model=task_model,
+│ │ -                batch=test_batch,
+│ │ -                state=state,
+│ │ -                task=task,
+│ │ -                model=model,
+│ │ -            )
+│ │ -
+│ │ -        # Finally, saves meter logging results.
+│ │ -        self.logger.log_config(self.raw_config, meter_logger.get_value_dict())
+│ │ -
+│ │  
+│ │  @register_trainer("ddp_sl", SupervisedLearningTrainerConfig)
+│ │  class SupervisedLearningDDPTrainer(
+│ │      SupervisedLearningVanillaTrainer[SupervisedLearningTrainerConfig, ModelT, SupervisedLearningTaskT],
+│ │      DDPTrainer[SupervisedLearningTrainerConfig, ModelT, SupervisedLearningTaskT],
+│ │  ):
+│ │      pass
+│ │   --- ml-starter-0.0.5/ml/trainers/slurm.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/slurm.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/trainers/vanilla.py
+│ ├── +++ ml-starter-0.0.6/ml/trainers/vanilla.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/argparse.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/argparse.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/atomic.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/atomic.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/augmentation.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/augmentation.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/caching.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/caching.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/call_train.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/call_train.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/cli.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/cli.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/colors.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/colors.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/compiler.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/compiler.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/data.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/data.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/datetime.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/datetime.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/distributed.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/distributed.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/large_models.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/large_models.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/logging.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/logging.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/meter.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/meter.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/timer.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/timer.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml/utils/video.py
+│ ├── +++ ml-starter-0.0.6/ml/utils/video.py
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/ml_starter.egg-info/SOURCES.txt
+│ ├── +++ ml-starter-0.0.6/ml_starter.egg-info/SOURCES.txt
+│ │┄ Files 0% similar despite different names
+│ │ @@ -106,14 +106,15 @@
+│ │  ml/utils/checks.py
+│ │  ml/utils/cli.py
+│ │  ml/utils/colors.py
+│ │  ml/utils/compiler.py
+│ │  ml/utils/data.py
+│ │  ml/utils/datetime.py
+│ │  ml/utils/distributed.py
+│ │ +ml/utils/io.py
+│ │  ml/utils/large_models.py
+│ │  ml/utils/logging.py
+│ │  ml/utils/meter.py
+│ │  ml/utils/networking.py
+│ │  ml/utils/paths.py
+│ │  ml/utils/random.py
+│ │  ml/utils/timer.py
+│ │   --- ml-starter-0.0.5/pyproject.toml
+│ ├── +++ ml-starter-0.0.6/pyproject.toml
+│ │┄ Files identical despite different names
+│ │   --- ml-starter-0.0.5/setup.py
+│ ├── +++ ml-starter-0.0.6/setup.py
+│ │┄ Files identical despite different names

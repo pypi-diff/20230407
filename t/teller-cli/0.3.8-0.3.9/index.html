@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/teller_cli-0.3.8.tar.gz tmp/teller_cli-0.3.9.tar.gz --html 20230407/t/teller-cli/0.3.8-0.3.9/index.html --text 20230407/t/teller-cli/0.3.8-0.3.9/diff.txt --markdown 20230407/t/teller-cli/0.3.8-0.3.9/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">7.05 KB</span></div>
+  <div><span class="source">tmp/teller_cli-0.3.8.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/teller_cli-0.3.9.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">188 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;teller_cli-0.3.<del>8</del>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;teller_cli-0.3.<ins>9</ins>.tar&quot;,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">6.82 KB</span></div>
+    <div><span class="source">teller_cli-0.3.8.tar</span> vs.</div>
+    <div id="teller_cli--.-.-.tar"><span class="source">teller_cli-0.3.9.tar</span>
+      <a class="anchor" href="#teller_cli--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">2.38 KB</span></div>
+      <div id="teller_cli--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 11 lines modified</td><td colspan="2">Offset 1, 11 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1356<span class="dp">·</span>2023-04-02<span class="dp">·</span>06:28:41.263825<span class="dp">·</span>teller_cli-0.3.<del>8</del>/README.md</td><td class="diffline">1 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1356<span class="dp">·</span>2023-04-02<span class="dp">·</span>06:28:41.263825<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>562<span class="dp">·</span>2023-04-07<span class="dp">·</span>17:<del>47</del>:<del>17</del>.<del>62</del>4<del>65</del>8<span class="dp">·</span>teller_cli-0.3.<del>8</del>/pyproject.toml</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>562<span class="dp">·</span>2023-04-07<span class="dp">·</span>17:<ins>51</ins>:<ins>05</ins>.<ins>46</ins>4<ins>19</ins>8<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>51<del>05</del><span class="dp">·</span>2023-04-07<span class="dp">·</span>17:<del>48</del>:<del>12</del>.0<del>03483</del><span class="dp">·</span>teller_cli-0.3.<del>8</del>/teller_cli/__init__.py</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>51<ins>29</ins><span class="dp">·</span>2023-04-07<span class="dp">·</span>17:<ins>51</ins>:<ins>09</ins>.0<ins>17641</ins><span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/teller_cli/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>87<span class="dp">·</span>2023-03-10<span class="dp">·</span>04:52:35.334095<span class="dp">·</span>teller_cli-0.3.<del>8</del>/teller_cli/__main__.py</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>87<span class="dp">·</span>2023-03-10<span class="dp">·</span>04:52:35.334095<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/teller_cli/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-10<span class="dp">·</span>02:42:44.447116<span class="dp">·</span>teller_cli-0.3.<del>8</del>/teller_cli/core/__init__.py</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-10<span class="dp">·</span>02:42:44.447116<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/teller_cli/core/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3459<span class="dp">·</span>2023-03-31<span class="dp">·</span>04:55:21.543518<span class="dp">·</span>teller_cli-0.3.<del>8</del>/teller_cli/core/config.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3459<span class="dp">·</span>2023-03-31<span class="dp">·</span>04:55:21.543518<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/teller_cli/core/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>561<span class="dp">·</span>2023-04-02<span class="dp">·</span>06:16:14.851429<span class="dp">·</span>teller_cli-0.3.<del>8</del>/teller_cli/core/utils/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>561<span class="dp">·</span>2023-04-02<span class="dp">·</span>06:16:14.851429<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/teller_cli/core/utils/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13046<span class="dp">·</span>2023-04-07<span class="dp">·</span>17:48:12.059487<span class="dp">·</span>teller_cli-0.3.<del>8</del>/teller_cli/core/world/__init__.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13046<span class="dp">·</span>2023-04-07<span class="dp">·</span>17:48:12.059487<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/teller_cli/core/world/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6360<span class="dp">·</span>2023-04-07<span class="dp">·</span>08:52:01.716761<span class="dp">·</span>teller_cli-0.3.<del>8</del>/teller_cli/core/world/download.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6360<span class="dp">·</span>2023-04-07<span class="dp">·</span>08:52:01.716761<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/teller_cli/core/world/download.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2373<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>teller_cli-0.3.<del>8</del>/setup.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2373<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2092<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>teller_cli-0.3.<del>8</del>/PKG-INFO</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2092<span class="dp">·</span>1970-01-01<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>teller_cli-0.3.<ins>9</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">teller_cli-0.3.8/README.md</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--README.md"><span class="source">teller_cli-0.3.9/README.md</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">368 B</span></div>
+      <div><span class="source">teller_cli-0.3.8/pyproject.toml</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--pyproject.toml"><span class="source">teller_cli-0.3.9/pyproject.toml</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td><td class="diffline">1 </td><td class="diffpresent">[tool.poetry]</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;teller-cli&quot;</td><td class="diffline">2 </td><td class="diffpresent">name<span class="dp">·</span>=<span class="dp">·</span>&quot;teller-cli&quot;</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<del>8</del>&quot;</td><td class="diffline">3 </td><td class="diffpresent">version<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<ins>9</ins>&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td><td class="diffline">4 </td><td class="diffpresent">description<span class="dp">·</span>=<span class="dp">·</span>&quot;&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;JakePIXL<span class="dp">·</span>&lt;jakewjevans@gmail.com&gt;&quot;]</td><td class="diffline">5 </td><td class="diffpresent">authors<span class="dp">·</span>=<span class="dp">·</span>[&quot;JakePIXL<span class="dp">·</span>&lt;jakewjevans@gmail.com&gt;&quot;]</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td><td class="diffline">6 </td><td class="diffpresent">readme<span class="dp">·</span>=<span class="dp">·</span>&quot;README.md&quot;</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[{include<span class="dp">·</span>=<span class="dp">·</span>&quot;teller_cli&quot;}]</td><td class="diffline">7 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[{include<span class="dp">·</span>=<span class="dp">·</span>&quot;teller_cli&quot;}]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">[tool.poetry.dependencies]</td><td class="diffline">8 </td><td class="diffpresent">[tool.poetry.dependencies]</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.9&quot;</td><td class="diffline">9 </td><td class="diffpresent">python<span class="dp">·</span>=<span class="dp">·</span>&quot;^3.9&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.14 KB</span></div>
+      <div><span class="source">teller_cli-0.3.8/teller_cli/__init__.py</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-__init__.py"><span class="source">teller_cli-0.3.9/teller_cli/__init__.py</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 7, 14 lines modified</td><td colspan="2">Offset 7, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>teller_cli.core.world<span class="dp">·</span>import<span class="dp">·</span>(</td><td class="diffline">7 </td><td class="diffpresent">from<span class="dp">·</span>teller_cli.core.world<span class="dp">·</span>import<span class="dp">·</span>(</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>browse_worlds,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>browse_worlds,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>chunk_and_upload,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>chunk_and_upload,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>compress_folder,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>compress_folder,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>create_world,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>create_world,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>expand_downloaded,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>expand_downloaded,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>get_deep_info,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>get_deep_info,</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>get_folder_size,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>get_info,</td><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>get_info,</td></tr>
+<tr class="diffunmodified"><td class="diffline">15 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>grab_world,</td><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>grab_world,</td></tr>
+<tr class="diffunmodified"><td class="diffline">16 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>update_world_size,</td><td class="diffline">17 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>update_world_size,</td></tr>
+<tr class="diffunmodified"><td class="diffline">17 </td><td class="diffpresent">)</td><td class="diffline">18 </td><td class="diffpresent">)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">18 </td><td class="diffpresent">from<span class="dp">·</span>rich<span class="dp">·</span>import<span class="dp">·</span>print</td><td class="diffline">19 </td><td class="diffpresent">from<span class="dp">·</span>rich<span class="dp">·</span>import<span class="dp">·</span>print</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 50, 15 lines modified</td><td colspan="2">Offset 51, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>world_id:</td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>world_id:</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>world_id<span class="dp">·</span>=<span class="dp">·</span>create_world(api_token,<span class="dp">·</span>api_url,<span class="dp">·</span>folder_path)</td><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>world_id<span class="dp">·</span>=<span class="dp">·</span>create_world(api_token,<span class="dp">·</span>api_url,<span class="dp">·</span>folder_path)</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffunmodified"><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>zip_file<span class="dp">·</span>=<span class="dp">·</span>compress_folder(folder_path)</td><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>zip_file<span class="dp">·</span>=<span class="dp">·</span>compress_folder(folder_path)</td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception:</td><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception:</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(&quot;&gt;<span class="dp">·</span>[bold<span class="dp">·</span>red]Error<span class="dp">·</span>compressing<span class="dp">·</span>world.&quot;)</td><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(&quot;&gt;<span class="dp">·</span>[bold<span class="dp">·</span>red]Error<span class="dp">·</span>compressing<span class="dp">·</span>world.&quot;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>new_file_size<span class="dp">·</span>=<span class="dp">·</span><del>os.path.get</del>size(<del>zip</del>_<del>file</del>)</td><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>new_file_size<span class="dp">·</span>=<span class="dp">·</span><ins>get_folder_</ins>size(<ins>fol</ins><ins>der</ins>_<ins>path</ins>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>new_file_size<span class="dp">·</span>&gt;<span class="dp">·</span>world_size:</td><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>new_file_size<span class="dp">·</span>&gt;<span class="dp">·</span>world_size:</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>update_world_size(world_id,<span class="dp">·</span>new_file_size,<span class="dp">·</span>api_url,<span class="dp">·</span>api_token)</td><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>update_world_size(world_id,<span class="dp">·</span>new_file_size,<span class="dp">·</span>api_url,<span class="dp">·</span>api_token)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>try:</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>chunk_and_upload(zip_file,<span class="dp">·</span>world_id,<span class="dp">·</span>api_url,<span class="dp">·</span>api_token)</td><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>chunk_and_upload(zip_file,<span class="dp">·</span>world_id,<span class="dp">·</span>api_url,<span class="dp">·</span>api_token)</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception:</td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception:</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 186, 8 lines modified</td><td colspan="2">Offset 187, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">186 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception:</td><td class="diffline">187 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>except<span class="dp">·</span>Exception:</td></tr>
+<tr class="diffunmodified"><td class="diffline">187 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(&quot;&gt;<span class="dp">·</span>[bold<span class="dp">·</span>red]Error<span class="dp">·</span>downloading<span class="dp">·</span>world.&quot;)</td><td class="diffline">188 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>print(&quot;&gt;<span class="dp">·</span>[bold<span class="dp">·</span>red]Error<span class="dp">·</span>downloading<span class="dp">·</span>world.&quot;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">188 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>save:</td><td class="diffline">189 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>not<span class="dp">·</span>save:</td></tr>
+<tr class="diffunmodified"><td class="diffline">189 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.remove(file_name)</td><td class="diffline">190 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>os.remove(file_name)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">190 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<del>8</del>&quot;</td><td class="diffline">191 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;0.3.<ins>9</ins>&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">teller_cli-0.3.8/teller_cli/core/config.py</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-core-config.py"><span class="source">teller_cli-0.3.9/teller_cli/core/config.py</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-core-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">teller_cli-0.3.8/teller_cli/core/utils/__init__.py</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-core-utils-__init__.py"><span class="source">teller_cli-0.3.9/teller_cli/core/utils/__init__.py</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-core-utils-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">teller_cli-0.3.8/teller_cli/core/world/__init__.py</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-core-world-__init__.py"><span class="source">teller_cli-0.3.9/teller_cli/core/world/__init__.py</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-core-world-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">teller_cli-0.3.8/teller_cli/core/world/download.py</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-core-world-download.py"><span class="source">teller_cli-0.3.9/teller_cli/core/world/download.py</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--teller_cli-core-world-download.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">1.87 KB</span></div>
+      <div><span class="source">teller_cli-0.3.8/setup.py</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--setup.py"><span class="source">teller_cli-0.3.9/setup.py</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 4% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 21, 15 lines modified</td><td colspan="2">Offset 21, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span>&#x27;typer[all]&gt;=0.7.0,&lt;0.8.0&#x27;]</td><td class="diffline">21 </td><td class="diffpresent"><span class="dp">·</span>&#x27;typer[all]&gt;=0.7.0,&lt;0.8.0&#x27;]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td><td class="diffline">22 </td><td class="diffpresent">entry_points<span class="dp">·</span>=<span class="dp">·</span>\</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;teller-cli<span class="dp">·</span>=<span class="dp">·</span>teller_cli:app&#x27;]}</td><td class="diffline">23 </td><td class="diffpresent">{&#x27;console_scripts&#x27;:<span class="dp">·</span>[&#x27;teller-cli<span class="dp">·</span>=<span class="dp">·</span>teller_cli:app&#x27;]}</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td><td class="diffline">24 </td><td class="diffpresent">setup_kwargs<span class="dp">·</span>=<span class="dp">·</span>{</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;teller-cli&#x27;,</td><td class="diffline">25 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;name&#x27;:<span class="dp">·</span>&#x27;teller-cli&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.3.<del>8</del>&#x27;,</td><td class="diffline">26 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;version&#x27;:<span class="dp">·</span>&#x27;0.3.<ins>9</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;&#x27;,</td><td class="diffline">27 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;description&#x27;:<span class="dp">·</span>&#x27;&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>Teller-CLI<span class="dp">·</span>for<span class="dp">·</span>ChunkVault-Lite\n\nTeller-CLI<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>open<span class="dp">·</span>source<span class="dp">·</span>Python/Typer-based<span class="dp">·</span>CLI<span class="dp">·</span>tool<span class="dp">·</span>for<span class="dp">·</span>uploading<span class="dp">·</span>Minecraft<span class="dp">·</span>world<span class="dp">·</span>backups<span class="dp">·</span>to<span class="dp">·</span>ChunkVault-Lite,<span class="dp">·</span>an<span class="dp">·</span>open<span class="dp">·</span>source<span class="dp">·</span>backup<span class="dp">·</span>solution<span class="dp">·</span>provided<span class="dp">·</span>by<span class="dp">·</span>Valink<span class="dp">·</span>Solutions.\n\n##<span class="dp">·</span>Testing\n\nLimited<span class="dp">·</span>testing<span class="dp">·</span>was<span class="dp">·</span>done<span class="dp">·</span>on<span class="dp">·</span>MacOS<span class="dp">·</span>13<span class="dp">·</span>and<span class="dp">·</span>Windows<span class="dp">·</span>10\n\n##<span class="dp">·</span>Usage\n\nTo<span class="dp">·</span>use<span class="dp">·</span>Teller-CLI,<span class="dp">·</span>first<span class="dp">·</span>install<span class="dp">·</span>the<span class="dp">·</span>tool:\n\n```bash\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>teller-cli\n```\n\nThen,<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>command<span class="dp">·</span>to<span class="dp">·</span>create<span class="dp">·</span>a<span class="dp">·</span>snapshot:\n\n```bash\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>teller-cli<span class="dp">·</span>upload<span class="dp">·</span>&quot;/path/to/world&quot;\n```\n\nThis<span class="dp">·</span>will<span class="dp">·</span>upload<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>backup<span class="dp">·</span>to<span class="dp">·</span>ChunkVault-Lite.\n\n###<span class="dp">·</span>First<span class="dp">·</span>Launch\n\nOn<span class="dp">·</span>first<span class="dp">·</span>launch,<span class="dp">·</span>Teller-CLI<span class="dp">·</span>will<span class="dp">·</span>prompt<span class="dp">·</span>you<span class="dp">·</span>to<span class="dp">·</span>enter<span class="dp">·</span>the<span class="dp">·</span>API<span class="dp">·</span>URL<span class="dp">·</span>for<span class="dp">·</span>your<span class="dp">·</span>ChunkVault-Lite<span class="dp">·</span>instance.<span class="dp">·</span>The<span class="dp">·</span>trailing<span class="dp">·</span>slash<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>necessary,<span class="dp">·</span>so<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>enter<span class="dp">·</span>the<span class="dp">·</span>URL<span class="dp">·</span>without<span class="dp">·</span>it.\n\nAfter<span class="dp">·</span>entering<span class="dp">·</span>the<span class="dp">·</span>API<span class="dp">·</span>URL,<span class="dp">·</span>Teller-CLI<span class="dp">·</span>will<span class="dp">·</span>prompt<span class="dp">·</span>you<span class="dp">·</span>to<span class="dp">·</span>enter<span class="dp">·</span>your<span class="dp">·</span>API<span class="dp">·</span>token.<span class="dp">·</span>You<span class="dp">·</span>can<span class="dp">·</span>obtain<span class="dp">·</span>this<span class="dp">·</span>token<span class="dp">·</span>from<span class="dp">·</span>your<span class="dp">·</span>ChunkVault-Lite<span class="dp">·</span>instance.<span class="dp">·</span>This<span class="dp">·</span>token<span class="dp">·</span>is<span class="dp">·</span>required<span class="dp">·</span>for<span class="dp">·</span>authentication<span class="dp">·</span>purposes<span class="dp">·</span>and<span class="dp">·</span>allows<span class="dp">·</span>Teller-CLI<span class="dp">·</span>to<span class="dp">·</span>access<span class="dp">·</span>your<span class="dp">·</span>backups.\n\nOnce<span class="dp">·</span>you<span class="dp">·</span>have<span class="dp">·</span>entered<span class="dp">·</span>the<span class="dp">·</span>API<span class="dp">·</span>URL<span class="dp">·</span>and<span class="dp">·</span>token,<span class="dp">·</span>Teller-CLI<span class="dp">·</span>will<span class="dp">·</span>store<span class="dp">·</span>this<span class="dp">·</span>information<span class="dp">·</span>locally<span class="dp">·</span>for<span class="dp">·</span>future<span class="dp">·</span>use.<span class="dp">·</span>You<span class="dp">·</span>can<span class="dp">·</span>update<span class="dp">·</span>this<span class="dp">·</span>information<span class="dp">·</span>at<span class="dp">·</span>any<span class="dp">·</span>time<span class="dp">·</span>by<span class="dp">·</span>running<span class="dp">·</span>the<span class="dp">·</span>`teller-cli<span class="dp">·</span>config`<span class="dp">·</span>command.\n\n---\n\n##<span class="dp">·</span>Additional<span class="dp">·</span>Information\n\nChunkVault-Lite<span class="dp">·</span>is<span class="dp">·</span>hosted<span class="dp">·</span>in<span class="dp">·</span>a<span class="dp">·</span>separatly.<span class="dp">·</span>For<span class="dp">·</span>more<span class="dp">·</span>information<span class="dp">·</span>on<span class="dp">·</span>ChunkVault-Lite<span class="dp">·</span>visit<span class="dp">·</span>the<span class="dp">·</span>[Repository](https://github.com/Valink-Solutions/ChunkVault-Lite)\n&#x27;,</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;long_description&#x27;:<span class="dp">·</span>&#x27;#<span class="dp">·</span>Teller-CLI<span class="dp">·</span>for<span class="dp">·</span>ChunkVault-Lite\n\nTeller-CLI<span class="dp">·</span>is<span class="dp">·</span>an<span class="dp">·</span>open<span class="dp">·</span>source<span class="dp">·</span>Python/Typer-based<span class="dp">·</span>CLI<span class="dp">·</span>tool<span class="dp">·</span>for<span class="dp">·</span>uploading<span class="dp">·</span>Minecraft<span class="dp">·</span>world<span class="dp">·</span>backups<span class="dp">·</span>to<span class="dp">·</span>ChunkVault-Lite,<span class="dp">·</span>an<span class="dp">·</span>open<span class="dp">·</span>source<span class="dp">·</span>backup<span class="dp">·</span>solution<span class="dp">·</span>provided<span class="dp">·</span>by<span class="dp">·</span>Valink<span class="dp">·</span>Solutions.\n\n##<span class="dp">·</span>Testing\n\nLimited<span class="dp">·</span>testing<span class="dp">·</span>was<span class="dp">·</span>done<span class="dp">·</span>on<span class="dp">·</span>MacOS<span class="dp">·</span>13<span class="dp">·</span>and<span class="dp">·</span>Windows<span class="dp">·</span>10\n\n##<span class="dp">·</span>Usage\n\nTo<span class="dp">·</span>use<span class="dp">·</span>Teller-CLI,<span class="dp">·</span>first<span class="dp">·</span>install<span class="dp">·</span>the<span class="dp">·</span>tool:\n\n```bash\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pip<span class="dp">·</span>install<span class="dp">·</span>teller-cli\n```\n\nThen,<span class="dp">·</span>run<span class="dp">·</span>the<span class="dp">·</span>following<span class="dp">·</span>command<span class="dp">·</span>to<span class="dp">·</span>create<span class="dp">·</span>a<span class="dp">·</span>snapshot:\n\n```bash\n<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>teller-cli<span class="dp">·</span>upload<span class="dp">·</span>&quot;/path/to/world&quot;\n```\n\nThis<span class="dp">·</span>will<span class="dp">·</span>upload<span class="dp">·</span>the<span class="dp">·</span>specified<span class="dp">·</span>backup<span class="dp">·</span>to<span class="dp">·</span>ChunkVault-Lite.\n\n###<span class="dp">·</span>First<span class="dp">·</span>Launch\n\nOn<span class="dp">·</span>first<span class="dp">·</span>launch,<span class="dp">·</span>Teller-CLI<span class="dp">·</span>will<span class="dp">·</span>prompt<span class="dp">·</span>you<span class="dp">·</span>to<span class="dp">·</span>enter<span class="dp">·</span>the<span class="dp">·</span>API<span class="dp">·</span>URL<span class="dp">·</span>for<span class="dp">·</span>your<span class="dp">·</span>ChunkVault-Lite<span class="dp">·</span>instance.<span class="dp">·</span>The<span class="dp">·</span>trailing<span class="dp">·</span>slash<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>necessary,<span class="dp">·</span>so<span class="dp">·</span>you<span class="dp">·</span>can<span class="dp">·</span>enter<span class="dp">·</span>the<span class="dp">·</span>URL<span class="dp">·</span>without<span class="dp">·</span>it.\n\nAfter<span class="dp">·</span>entering<span class="dp">·</span>the<span class="dp">·</span>API<span class="dp">·</span>URL,<span class="dp">·</span>Teller-CLI<span class="dp">·</span>will<span class="dp">·</span>prompt<span class="dp">·</span>you<span class="dp">·</span>to<span class="dp">·</span>enter<span class="dp">·</span>your<span class="dp">·</span>API<span class="dp">·</span>token.<span class="dp">·</span>You<span class="dp">·</span>can<span class="dp">·</span>obtain<span class="dp">·</span>this<span class="dp">·</span>token<span class="dp">·</span>from<span class="dp">·</span>your<span class="dp">·</span>ChunkVault-Lite<span class="dp">·</span>instance.<span class="dp">·</span>This<span class="dp">·</span>token<span class="dp">·</span>is<span class="dp">·</span>required<span class="dp">·</span>for<span class="dp">·</span>authentication<span class="dp">·</span>purposes<span class="dp">·</span>and<span class="dp">·</span>allows<span class="dp">·</span>Teller-CLI<span class="dp">·</span>to<span class="dp">·</span>access<span class="dp">·</span>your<span class="dp">·</span>backups.\n\nOnce<span class="dp">·</span>you<span class="dp">·</span>have<span class="dp">·</span>entered<span class="dp">·</span>the<span class="dp">·</span>API<span class="dp">·</span>URL<span class="dp">·</span>and<span class="dp">·</span>token,<span class="dp">·</span>Teller-CLI<span class="dp">·</span>will<span class="dp">·</span>store<span class="dp">·</span>this<span class="dp">·</span>information<span class="dp">·</span>locally<span class="dp">·</span>for<span class="dp">·</span>future<span class="dp">·</span>use.<span class="dp">·</span>You<span class="dp">·</span>can<span class="dp">·</span>update<span class="dp">·</span>this<span class="dp">·</span>information<span class="dp">·</span>at<span class="dp">·</span>any<span class="dp">·</span>time<span class="dp">·</span>by<span class="dp">·</span>running<span class="dp">·</span>the<span class="dp">·</span>`teller-cli<span class="dp">·</span>config`<span class="dp">·</span>command.\n\n---\n\n##<span class="dp">·</span>Additional<span class="dp">·</span>Information\n\nChunkVault-Lite<span class="dp">·</span>is<span class="dp">·</span>hosted<span class="dp">·</span>in<span class="dp">·</span>a<span class="dp">·</span>separatly.<span class="dp">·</span>For<span class="dp">·</span>more<span class="dp">·</span>information<span class="dp">·</span>on<span class="dp">·</span>ChunkVault-Lite<span class="dp">·</span>visit<span class="dp">·</span>the<span class="dp">·</span>[Repository](https://github.com/Valink-Solutions/ChunkVault-Lite)\n&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;JakePIXL&#x27;,</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author&#x27;:<span class="dp">·</span>&#x27;JakePIXL&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;jakewjevans@gmail.com&#x27;,</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;author_email&#x27;:<span class="dp">·</span>&#x27;jakewjevans@gmail.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;maintainer_email&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&#x27;url&#x27;:<span class="dp">·</span>&#x27;None&#x27;,</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">428 B</span></div>
+      <div><span class="source">teller_cli-0.3.8/PKG-INFO</span> vs.</div>
+      <div id="teller_cli--.-.-.tar---teller_cli--.-.--PKG-INFO"><span class="source">teller_cli-0.3.9/PKG-INFO</span>
+        <a class="anchor" href="#teller_cli--.-.-.tar---teller_cli--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>teller-cli</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>teller-cli</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<del>8</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.3.<ins>9</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>JakePIXL</td><td class="diffline">5 </td><td class="diffpresent">Author:<span class="dp">·</span>JakePIXL</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>jakewjevans@gmail.com</td><td class="diffline">6 </td><td class="diffpresent">Author-email:<span class="dp">·</span>jakewjevans@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td><td class="diffline">7 </td><td class="diffpresent">Requires-Python:<span class="dp">·</span>&gt;=3.9,&lt;4.0</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td><td class="diffline">8 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td><td class="diffline">9 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.9</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Programming<span class="dp">·</span>Language<span class="dp">·</span>::<span class="dp">·</span>Python<span class="dp">·</span>::<span class="dp">·</span>3.10</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

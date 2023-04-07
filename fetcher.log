@@ -2033,3 +2033,133 @@
 [2023-04-07 19:38:36] INFO root fetch - main [MainThread]: success
 [2023-04-07 19:41:23] ERROR root fetch - processPackages [pulumi-google-native]: Timeout during execution of pkgdiff
 [2023-04-07 19:41:23] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:51:29] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17621547]
+[2023-04-07 19:51:34] INFO root fetch - main [MainThread]: Found 27 changed packages
+[2023-04-07 19:51:34] INFO root fetch - processPackages [electron]: New version: [0.0.3] Old Version: [0.0.2]
+[2023-04-07 19:51:34] WARNING root fetch - processPackages [corepluslib]: Skipping, unable to determine old version
+[2023-04-07 19:51:34] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:51:34] INFO root fetch - processPackages [execsql]: New version: [1.98.0] Old Version: [1.97.0]
+[2023-04-07 19:51:34] INFO root fetch - processPackages [openai-forward]: New version: [0.0.7] Old Version: [0.0.6]
+[2023-04-07 19:51:34] INFO root fetch - processPackages [coiled]: New version: [0.5.9.post0.dev8] Old Version: [0.5.9.post0.dev7]
+[2023-04-07 19:51:34] INFO root fetch - processPackages [coiled]: report already exists
+[2023-04-07 19:51:34] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:34] INFO root fetch - processPackages [hillclimbers]: New version: [1.0.1] Old Version: [1.0.0]
+[2023-04-07 19:51:34] INFO root fetch - processPackages [django-aux]: New version: [0.0.9] Old Version: [0.0.8]
+[2023-04-07 19:51:34] INFO root fetch - processPackages [openai-forward]: Downloading https://files.pythonhosted.org/packages/ed/cd/e8c1c53e4474accf9774aac1fd7657bf55e0fb631e2e3764823bf1984b47/openai_forward-0.0.6.tar.gz
+[2023-04-07 19:51:34] INFO root fetch - processPackages [electron]: Downloading https://files.pythonhosted.org/packages/34/3b/6238fed9c09d894d272283e47ef037aba33b6b5c52246378ad4e6facf241/electron-0.0.2.tar.gz
+[2023-04-07 19:51:34] INFO root fetch - processPackages [execsql]: Downloading https://files.pythonhosted.org/packages/91/8e/51da00d0618e95a78d658b8ba5ca02e29543fb296784ecffc9c3e13a9aff/execsql-1.97.0.tar.gz
+[2023-04-07 19:51:34] INFO root fetch - processPackages [django-aux]: Downloading https://files.pythonhosted.org/packages/b3/77/b70b4fac1967422ae4844a393f4aa7a484bc749c5cf23641abe81b73f341/django-aux-0.0.8.tar.gz
+[2023-04-07 19:51:34] INFO root fetch - processPackages [hillclimbers]: Downloading https://files.pythonhosted.org/packages/72/ee/cc9c32c72e6b22a4ecac50ad6657f2cfae86e6897c4110c60926de62c2cb/hillclimbers-1.0.0.tar.gz
+[2023-04-07 19:51:34] INFO root fetch - processPackages [openai-forward]: Downloading https://files.pythonhosted.org/packages/d1/aa/41ce3d7eb742ced05fd6c73181f4042a26f36eef651ba7185702ed7048b8/openai_forward-0.0.7.tar.gz
+[2023-04-07 19:51:35] INFO root fetch - processPackages [electron]: Downloading https://files.pythonhosted.org/packages/ae/41/5310f9f86103f64ce445d71fc66b994dce848ec6fffa0208fdb25779b2e9/electron-0.0.3.tar.gz
+[2023-04-07 19:51:35] INFO root fetch - processPackages [execsql]: Downloading https://files.pythonhosted.org/packages/af/c4/14198e9e025b1207415fad1d39bc1e6ebcc8fb846e1ba1b4e22742316993/execsql-1.98.0.tar.gz
+[2023-04-07 19:51:35] INFO root fetch - processPackages [django-aux]: Downloading https://files.pythonhosted.org/packages/f7/87/ff834263dbf515fce6cee5cb6627aed60ff1cbdd304291dc245420263330/django-aux-0.0.9.tar.gz
+[2023-04-07 19:51:35] INFO root fetch - processPackages [hillclimbers]: Downloading https://files.pythonhosted.org/packages/45/b6/e889858e91fe8f67951956184b60aa4ec0552047e3b75cb22de90f0e534d/hillclimbers-1.0.1.tar.gz
+[2023-04-07 19:51:35] INFO root fetch - processPackages [openai-forward]: executing diffoscope
+[2023-04-07 19:51:35] INFO root fetch - processPackages [openai-forward]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/openai_forward-0.0.6.tar.gz tmp/openai_forward-0.0.7.tar.gz --html 20230407/o/openai-forward/0.0.6-0.0.7/index.html --text 20230407/o/openai-forward/0.0.6-0.0.7/diff.txt --markdown 20230407/o/openai-forward/0.0.6-0.0.7/diff.md
+[2023-04-07 19:51:35] INFO root fetch - processPackages [electron]: executing diffoscope
+[2023-04-07 19:51:35] INFO root fetch - processPackages [electron]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/electron-0.0.2.tar.gz tmp/electron-0.0.3.tar.gz --html 20230407/e/electron/0.0.2-0.0.3/index.html --text 20230407/e/electron/0.0.2-0.0.3/diff.txt --markdown 20230407/e/electron/0.0.2-0.0.3/diff.md
+[2023-04-07 19:51:35] INFO root fetch - processPackages [django-aux]: executing diffoscope
+[2023-04-07 19:51:35] INFO root fetch - processPackages [django-aux]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/django-aux-0.0.8.tar.gz tmp/django-aux-0.0.9.tar.gz --html 20230407/d/django-aux/0.0.8-0.0.9/index.html --text 20230407/d/django-aux/0.0.8-0.0.9/diff.txt --markdown 20230407/d/django-aux/0.0.8-0.0.9/diff.md
+[2023-04-07 19:51:35] INFO root fetch - processPackages [execsql]: executing diffoscope
+[2023-04-07 19:51:35] INFO root fetch - processPackages [execsql]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/execsql-1.97.0.tar.gz tmp/execsql-1.98.0.tar.gz --html 20230407/e/execsql/1.97.0-1.98.0/index.html --text 20230407/e/execsql/1.97.0-1.98.0/diff.txt --markdown 20230407/e/execsql/1.97.0-1.98.0/diff.md
+[2023-04-07 19:51:35] INFO root fetch - processPackages [hillclimbers]: executing diffoscope
+[2023-04-07 19:51:35] INFO root fetch - processPackages [hillclimbers]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/hillclimbers-1.0.0.tar.gz tmp/hillclimbers-1.0.1.tar.gz --html 20230407/h/hillclimbers/1.0.0-1.0.1/index.html --text 20230407/h/hillclimbers/1.0.0-1.0.1/diff.txt --markdown 20230407/h/hillclimbers/1.0.0-1.0.1/diff.md
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:36] WARNING root fetch - processPackages [nonebot-plugin-genshinuid]: Skipping, unable to determine old version
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:51:36] INFO root fetch - processPackages [pulumi-aws-native]: New version: [0.9.1a1641826769] Old Version: [0.9.1a1641824984]
+[2023-04-07 19:51:36] INFO root fetch - processPackages [pulumi-aws-native]: report already exists
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:36] INFO root fetch - processPackages [PyroFork-dev]: New version: [2.1.4.dev202304071746] Old Version: [2.1.4.dev202303209834]
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:36] INFO root fetch - processPackages [inferelator-velocity]: New version: [0.2.0] Old Version: [0.1.0]
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:36] INFO root fetch - processPackages [geodesic-api]: New version: [0.9.0] Old Version: [0.8.7]
+[2023-04-07 19:51:36] INFO root fetch - processPackages [PyroFork-dev]: Downloading https://files.pythonhosted.org/packages/b8/81/9262b5f4a6d820aad614d6e15edb752962c35da02ed455b3061ffeaf5a31/PyroFork-dev-2.1.4.dev202303209834.tar.gz
+[2023-04-07 19:51:36] INFO root fetch - processPackages [inferelator-velocity]: Downloading https://files.pythonhosted.org/packages/dd/b5/b2f678851fd9bdd70197a69091c9c585c9e81ac3ba75422376733ed013d3/inferelator_velocity-0.1.0.tar.gz
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:36] WARNING root fetch - processPackages [cmds-helper]: Skipping, unable to determine old version
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:51:36] INFO root fetch - processPackages [geodesic-api]: Downloading https://files.pythonhosted.org/packages/6a/a8/14dfb83cda43cbac659279db5f70de1b36c3e82ad69a56b069a6770e1bc8/geodesic_api-0.8.7-py3-none-any.whl
+[2023-04-07 19:51:36] INFO root fetch - processPackages [teller-cli]: New version: [0.3.9] Old Version: [0.3.8]
+[2023-04-07 19:51:36] WARNING root fetch - processPackages [web-utils-soft]: Skipping, unable to determine old version
+[2023-04-07 19:51:36] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:51:36] INFO root fetch - processPackages [psicalc]: New version: [0.4.4] Old Version: [0.4.3]
+[2023-04-07 19:51:36] INFO root fetch - processPackages [teller-cli]: Downloading https://files.pythonhosted.org/packages/a9/d2/7ffa96cc05426827cdf5826f416c884dcc681117553d74910f74e78d3f59/teller_cli-0.3.8.tar.gz
+[2023-04-07 19:51:36] INFO root fetch - processPackages [inferelator-velocity]: Downloading https://files.pythonhosted.org/packages/c8/fa/dbc0091b173a459d678876bbebe82702c6daee941033a1c5ecfe8eff4527/inferelator_velocity-0.2.0.tar.gz
+[2023-04-07 19:51:36] INFO root fetch - processPackages [psicalc]: Downloading https://files.pythonhosted.org/packages/fb/21/59f58f19e8e1f4fca3b3580b5a9d3e5c19ae0ed549c577b3d72165c6e090/psicalc-0.4.3.tar.gz
+[2023-04-07 19:51:36] INFO root fetch - processPackages [geodesic-api]: Downloading https://files.pythonhosted.org/packages/b5/87/6f6437e716fb0cb26a0c09ae9e51e19882b0f84a7d7d8e55aaeca7125838/geodesic_api-0.9.0-py3-none-any.whl
+[2023-04-07 19:51:37] INFO root fetch - processPackages [PyroFork-dev]: Downloading https://files.pythonhosted.org/packages/a1/76/d5aeb33f13c26de9e450494d2deef5ff76c06f3efc08838b9688222e427a/PyroFork-dev-2.1.4.dev202304071746.tar.gz
+[2023-04-07 19:51:37] INFO root fetch - processPackages [geodesic-api]: executing diffoscope
+[2023-04-07 19:51:37] INFO root fetch - processPackages [geodesic-api]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/geodesic_api-0.8.7-py3-none-any.whl.zip tmp/geodesic_api-0.9.0-py3-none-any.whl.zip --html 20230407/g/geodesic-api/0.8.7-0.9.0/index.html --text 20230407/g/geodesic-api/0.8.7-0.9.0/diff.txt --markdown 20230407/g/geodesic-api/0.8.7-0.9.0/diff.md
+[2023-04-07 19:51:37] INFO root fetch - processPackages [inferelator-velocity]: executing diffoscope
+[2023-04-07 19:51:37] INFO root fetch - processPackages [inferelator-velocity]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/inferelator_velocity-0.1.0.tar.gz tmp/inferelator_velocity-0.2.0.tar.gz --html 20230407/i/inferelator-velocity/0.1.0-0.2.0/index.html --text 20230407/i/inferelator-velocity/0.1.0-0.2.0/diff.txt --markdown 20230407/i/inferelator-velocity/0.1.0-0.2.0/diff.md
+[2023-04-07 19:51:37] INFO root fetch - processPackages [psicalc]: Downloading https://files.pythonhosted.org/packages/12/10/7e150a41aa44426cd61be3f1b56838df4599ad9eff21ce48e569d343be3e/psicalc-0.4.4.tar.gz
+[2023-04-07 19:51:37] INFO root fetch - processPackages [PyroFork-dev]: executing diffoscope
+[2023-04-07 19:51:37] INFO root fetch - processPackages [PyroFork-dev]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/PyroFork-dev-2.1.4.dev202303209834.tar.gz tmp/PyroFork-dev-2.1.4.dev202304071746.tar.gz --html 20230407/P/PyroFork-dev/2.1.4.dev202303209834-2.1.4.dev202304071746/index.html --text 20230407/P/PyroFork-dev/2.1.4.dev202303209834-2.1.4.dev202304071746/diff.txt --markdown 20230407/P/PyroFork-dev/2.1.4.dev202303209834-2.1.4.dev202304071746/diff.md
+[2023-04-07 19:51:37] INFO root fetch - processPackages [psicalc]: executing diffoscope
+[2023-04-07 19:51:37] INFO root fetch - processPackages [psicalc]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/psicalc-0.4.3.tar.gz tmp/psicalc-0.4.4.tar.gz --html 20230407/p/psicalc/0.4.3-0.4.4/index.html --text 20230407/p/psicalc/0.4.3-0.4.4/diff.txt --markdown 20230407/p/psicalc/0.4.3-0.4.4/diff.md
+[2023-04-07 19:51:37] INFO root fetch - processPackages [teller-cli]: Downloading https://files.pythonhosted.org/packages/2b/71/46638c729a7ffd675d4342974c927c13b2ff0dd081397615f110fc3f2b90/teller_cli-0.3.9.tar.gz
+[2023-04-07 19:51:37] INFO root fetch - processPackages [teller-cli]: executing diffoscope
+[2023-04-07 19:51:37] INFO root fetch - processPackages [teller-cli]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/teller_cli-0.3.8.tar.gz tmp/teller_cli-0.3.9.tar.gz --html 20230407/t/teller-cli/0.3.8-0.3.9/index.html --text 20230407/t/teller-cli/0.3.8-0.3.9/diff.txt --markdown 20230407/t/teller-cli/0.3.8-0.3.9/diff.md
+[2023-04-07 19:51:38] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:38] INFO root fetch - processPackages [ml-starter]: New version: [0.0.6] Old Version: [0.0.5]
+[2023-04-07 19:51:38] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:38] INFO root fetch - processPackages [r3l3453]: New version: [0.9.1] Old Version: [0.9.0]
+[2023-04-07 19:51:38] INFO root fetch - processPackages [r3l3453]: report already exists
+[2023-04-07 19:51:38] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:38] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:38] INFO root fetch - processPackages [teller-cli]: New version: [0.3.9] Old Version: [0.3.8]
+[2023-04-07 19:51:38] INFO root fetch - processPackages [electron]: New version: [0.0.3] Old Version: [0.0.2]
+[2023-04-07 19:51:38] INFO root fetch - processPackages [electron]: report already exists
+[2023-04-07 19:51:38] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:38] INFO root fetch - processPackages [pyobfexecute]: New version: [1.0.5] Old Version: [1.0.4]
+[2023-04-07 19:51:38] INFO root fetch - processPackages [teller-cli]: executing diffoscope
+[2023-04-07 19:51:38] INFO root fetch - processPackages [teller-cli]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/teller_cli-0.3.8.tar.gz tmp/teller_cli-0.3.9.tar.gz --html 20230407/t/teller-cli/0.3.8-0.3.9/index.html --text 20230407/t/teller-cli/0.3.8-0.3.9/diff.txt --markdown 20230407/t/teller-cli/0.3.8-0.3.9/diff.md
+[2023-04-07 19:51:38] INFO root fetch - processPackages [ml-starter]: Downloading https://files.pythonhosted.org/packages/26/2a/08408c6a2222feb56d1864d82861057241a995757550526c675b1bca2e4d/ml-starter-0.0.5.tar.gz
+[2023-04-07 19:51:38] INFO root fetch - processPackages [pyobfexecute]: Downloading https://files.pythonhosted.org/packages/6e/82/f71225cecaa13e5b0afec2d0303fbefd10f45049f79ca85e5eefa553266b/pyobfexecute-1.0.5.tar.gz
+[2023-04-07 19:51:38] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:38] INFO root fetch - processPackages [hillclimbers]: New version: [1.0.1] Old Version: [1.0.0]
+[2023-04-07 19:51:38] INFO root fetch - processPackages [hillclimbers]: report already exists
+[2023-04-07 19:51:38] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:38] INFO root fetch - processPackages [dkist-processing-cryonirsp]: New version: [0.0.1rc2] Old Version: [0.0.1rc1]
+[2023-04-07 19:51:39] INFO root fetch - processPackages [pyobfexecute]: executing diffoscope
+[2023-04-07 19:51:39] INFO root fetch - processPackages [pyobfexecute]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pyobfexecute-1.0.4.tar.gz tmp/pyobfexecute-1.0.5.tar.gz --html 20230407/p/pyobfexecute/1.0.4-1.0.5/index.html --text 20230407/p/pyobfexecute/1.0.4-1.0.5/diff.txt --markdown 20230407/p/pyobfexecute/1.0.4-1.0.5/diff.md
+[2023-04-07 19:51:39] INFO root fetch - processPackages [dkist-processing-cryonirsp]: Downloading https://files.pythonhosted.org/packages/29/06/be02756e46e68f2a7282800282b345fcc6affe37702cb18a1ad87a760562/dkist_processing_cryonirsp-0.0.1rc1.tar.gz
+[2023-04-07 19:51:39] INFO root fetch - processPackages [ml-starter]: Downloading https://files.pythonhosted.org/packages/92/c3/01dd268a0d9618b7e906dd5d60547f947983c7cd1d4ff917d100099853ed/ml-starter-0.0.6.tar.gz
+[2023-04-07 19:51:39] INFO root fetch - processPackages [ml-starter]: executing diffoscope
+[2023-04-07 19:51:39] INFO root fetch - processPackages [ml-starter]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ml-starter-0.0.5.tar.gz tmp/ml-starter-0.0.6.tar.gz --html 20230407/m/ml-starter/0.0.5-0.0.6/index.html --text 20230407/m/ml-starter/0.0.5-0.0.6/diff.txt --markdown 20230407/m/ml-starter/0.0.5-0.0.6/diff.md
+[2023-04-07 19:51:39] INFO root fetch - processPackages [dkist-processing-cryonirsp]: Downloading https://files.pythonhosted.org/packages/60/07/a3b2bf47cac58e03b62d2a1975c0e37c65dc5ff390114c652e890ba50e37/dkist_processing_cryonirsp-0.0.1rc2.tar.gz
+[2023-04-07 19:51:39] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:39] INFO root fetch - processPackages [expose-localhost]: New version: [0.5] Old Version: [0.4.5]
+[2023-04-07 19:51:39] INFO root fetch - processPackages [dkist-processing-cryonirsp]: executing diffoscope
+[2023-04-07 19:51:39] INFO root fetch - processPackages [dkist-processing-cryonirsp]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/dkist_processing_cryonirsp-0.0.1rc1.tar.gz tmp/dkist_processing_cryonirsp-0.0.1rc2.tar.gz --html 20230407/d/dkist-processing-cryonirsp/0.0.1rc1-0.0.1rc2/index.html --text 20230407/d/dkist-processing-cryonirsp/0.0.1rc1-0.0.1rc2/diff.txt --markdown 20230407/d/dkist-processing-cryonirsp/0.0.1rc1-0.0.1rc2/diff.md
+[2023-04-07 19:51:39] INFO root fetch - processPackages [expose-localhost]: Downloading https://files.pythonhosted.org/packages/7e/d0/f95b7a5199876ef87babac6f98c63505930d322dbb0b5d1c0bebe6bdb08f/expose_localhost-0.4.5-py3-none-any.whl
+[2023-04-07 19:51:40] INFO root fetch - processPackages [expose-localhost]: Downloading https://files.pythonhosted.org/packages/fe/76/31e2baaa6b435336bc14508f7d65a3f32491da37c6c40a3fb401686a23b0/expose_localhost-0.5-py3-none-any.whl
+[2023-04-07 19:51:40] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:40] INFO root fetch - processPackages [gmap]: New version: [1.4.4] Old Version: [1.4.3]
+[2023-04-07 19:51:40] INFO root fetch - processPackages [gmap]: Downloading https://files.pythonhosted.org/packages/2e/14/1ff07ed28ee129be7cb641d19f08a7e9e99aceae0224d92275458fc47786/gmap-1.4.3.tar.gz
+[2023-04-07 19:51:40] INFO root fetch - processPackages [expose-localhost]: executing diffoscope
+[2023-04-07 19:51:40] INFO root fetch - processPackages [expose-localhost]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/expose_localhost-0.4.5-py3-none-any.whl.zip tmp/expose_localhost-0.5-py3-none-any.whl.zip --html 20230407/e/expose-localhost/0.4.5-0.5/index.html --text 20230407/e/expose-localhost/0.4.5-0.5/diff.txt --markdown 20230407/e/expose-localhost/0.4.5-0.5/diff.md
+[2023-04-07 19:51:40] INFO root fetch - processPackages [gmap]: Downloading https://files.pythonhosted.org/packages/e7/26/3b2197083d2d5129278f54431de01bdc29019704bb0952f02fac9c3dd1a5/gmap-1.4.4.tar.gz
+[2023-04-07 19:51:40] INFO root fetch - processPackages [gmap]: executing diffoscope
+[2023-04-07 19:51:40] INFO root fetch - processPackages [gmap]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/gmap-1.4.3.tar.gz tmp/gmap-1.4.4.tar.gz --html 20230407/g/gmap/1.4.3-1.4.4/index.html --text 20230407/g/gmap/1.4.3-1.4.4/diff.txt --markdown 20230407/g/gmap/1.4.3-1.4.4/diff.md
+[2023-04-07 19:51:41] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:41] INFO root fetch - processPackages [meteo-render]: New version: [0.4.4] Old Version: [0.4.3]
+[2023-04-07 19:51:41] INFO root fetch - processPackages [meteo-render]: Downloading https://files.pythonhosted.org/packages/de/60/c02751e047a3b7fede0cbefae4e1618922702d2676d7ce8e9179793803b6/meteo_render-0.4.3.tar.gz
+[2023-04-07 19:51:41] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:41] INFO root fetch - processPackages [pixelsort-cli]: New version: [0.1.3] Old Version: [0.1.2]
+[2023-04-07 19:51:42] INFO root fetch - processPackages [pixelsort-cli]: Downloading https://files.pythonhosted.org/packages/8f/3d/3210524a8a50f727fc40dcc0fa74372c0d17be47b8ba6e9878b85167961b/pixelsort-cli-0.1.2.tar.gz
+[2023-04-07 19:51:42] INFO root fetch - processPackages [meteo-render]: Downloading https://files.pythonhosted.org/packages/e4/8f/681454d22a35abd12c59c016b1791ce4a95a833a70c2eec510be5b127ee2/meteo_render-0.4.4.tar.gz
+[2023-04-07 19:51:42] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:42] INFO root fetch - processPackages [pixelsort-cli]: Downloading https://files.pythonhosted.org/packages/93/47/1d85036e294a8fa71afc7422f6767ef27202e999176beb9bbe8e09a45d91/pixelsort-cli-0.1.3.tar.gz
+[2023-04-07 19:51:42] INFO root fetch - processPackages [meteo-render]: executing diffoscope
+[2023-04-07 19:51:42] INFO root fetch - processPackages [meteo-render]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/meteo_render-0.4.3.tar.gz tmp/meteo_render-0.4.4.tar.gz --html 20230407/m/meteo-render/0.4.3-0.4.4/index.html --text 20230407/m/meteo-render/0.4.3-0.4.4/diff.txt --markdown 20230407/m/meteo-render/0.4.3-0.4.4/diff.md
+[2023-04-07 19:51:42] INFO root fetch - processPackages [pixelsort-cli]: executing diffoscope
+[2023-04-07 19:51:42] INFO root fetch - processPackages [pixelsort-cli]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pixelsort-cli-0.1.2.tar.gz tmp/pixelsort-cli-0.1.3.tar.gz --html 20230407/p/pixelsort-cli/0.1.2-0.1.3/index.html --text 20230407/p/pixelsort-cli/0.1.2-0.1.3/diff.txt --markdown 20230407/p/pixelsort-cli/0.1.2-0.1.3/diff.md
+[2023-04-07 19:51:42] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:43] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:43] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:51:47] INFO root fetch - main [MainThread]: success

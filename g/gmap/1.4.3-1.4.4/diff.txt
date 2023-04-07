@@ -1,0 +1,43 @@
+--- tmp/gmap-1.4.3.tar.gz
++++ tmp/gmap-1.4.4.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "gmap-1.4.3.tar", last modified: Fri Apr  7 11:25:09 2023, max compression
+│ +gzip compressed data, was "gmap-1.4.4.tar", last modified: Fri Apr  7 17:54:34 2023, max compression
+│   --- gmap-1.4.3.tar
+├── +++ gmap-1.4.4.tar
+│ ├── file list
+│ │ @@ -1,15 +1,15 @@
+│ │ -drwxr-xr-x   0 tahsin     (501) staff       (20)        0 2023-04-07 11:25:09.547934 gmap-1.4.3/
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)      150 2023-04-07 11:25:09.547793 gmap-1.4.3/PKG-INFO
+│ │ -drwxr-xr-x   0 tahsin     (501) staff       (20)        0 2023-04-07 11:25:09.546508 gmap-1.4.3/gmap/
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)        0 2023-03-20 06:32:04.000000 gmap-1.4.3/gmap/__init__.py
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)       22 2023-04-07 08:56:10.000000 gmap-1.4.3/gmap/__main__.py
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)     1360 2023-04-07 08:54:25.000000 gmap-1.4.3/gmap/app.py
+│ │ -drwxr-xr-x   0 tahsin     (501) staff       (20)        0 2023-04-07 11:25:09.547602 gmap-1.4.3/gmap.egg-info/
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)      150 2023-04-07 11:25:09.000000 gmap-1.4.3/gmap.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)      224 2023-04-07 11:25:09.000000 gmap-1.4.3/gmap.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)        1 2023-04-07 11:25:09.000000 gmap-1.4.3/gmap.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)       39 2023-04-07 11:25:09.000000 gmap-1.4.3/gmap.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)        9 2023-04-07 11:25:09.000000 gmap-1.4.3/gmap.egg-info/requires.txt
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)        5 2023-04-07 11:25:09.000000 gmap-1.4.3/gmap.egg-info/top_level.txt
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)       38 2023-04-07 11:25:09.547972 gmap-1.4.3/setup.cfg
+│ │ --rw-r--r--   0 tahsin     (501) staff       (20)      393 2023-04-07 11:25:06.000000 gmap-1.4.3/setup.py
+│ │ +drwxr-xr-x   0 tahsin     (501) staff       (20)        0 2023-04-07 17:54:34.008312 gmap-1.4.4/
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)      150 2023-04-07 17:54:34.008146 gmap-1.4.4/PKG-INFO
+│ │ +drwxr-xr-x   0 tahsin     (501) staff       (20)        0 2023-04-07 17:54:34.006590 gmap-1.4.4/gmap/
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)        0 2023-04-07 17:52:52.000000 gmap-1.4.4/gmap/__init__.py
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)       22 2023-04-07 08:56:10.000000 gmap-1.4.4/gmap/__main__.py
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)     1360 2023-04-07 08:54:25.000000 gmap-1.4.4/gmap/app.py
+│ │ +drwxr-xr-x   0 tahsin     (501) staff       (20)        0 2023-04-07 17:54:34.007920 gmap-1.4.4/gmap.egg-info/
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)      150 2023-04-07 17:54:33.000000 gmap-1.4.4/gmap.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)      224 2023-04-07 17:54:34.000000 gmap-1.4.4/gmap.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)        1 2023-04-07 17:54:33.000000 gmap-1.4.4/gmap.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)       39 2023-04-07 17:54:33.000000 gmap-1.4.4/gmap.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)        9 2023-04-07 17:54:33.000000 gmap-1.4.4/gmap.egg-info/requires.txt
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)        5 2023-04-07 17:54:33.000000 gmap-1.4.4/gmap.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)       38 2023-04-07 17:54:34.008351 gmap-1.4.4/setup.cfg
+│ │ +-rw-r--r--   0 tahsin     (501) staff       (20)      394 2023-04-07 17:54:31.000000 gmap-1.4.4/setup.py
+│ │   --- gmap-1.4.3/gmap/app.py
+│ ├── +++ gmap-1.4.4/gmap/app.py
+│ │┄ Files identical despite different names

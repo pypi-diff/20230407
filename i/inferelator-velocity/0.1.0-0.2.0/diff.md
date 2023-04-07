@@ -1,0 +1,1119 @@
+# Comparing `tmp/inferelator_velocity-0.1.0.tar.gz` & `tmp/inferelator_velocity-0.2.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "inferelator_velocity-0.1.0.tar", last modified: Mon May  9 18:15:37 2022, max compression
++gzip compressed data, was "/home/chris/PycharmProjects/inferelator-velocity/dist/.tmp-ed42wxf_/inferelator_velocity-0.2.0.tar", last modified: Fri Apr  7 17:45:57 2023, max compression
+```
+
+## Comparing `inferelator_velocity-0.1.0.tar` & `inferelator_velocity-0.2.0.tar`
+
+### file list
+
+```diff
+@@ -1,30 +1,51 @@
+-drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2022-05-09 18:15:37.685068 inferelator_velocity-0.1.0/
+--rw-rw-r--   0 chris     (1000) chris     (1000)     1064 2022-05-09 16:20:55.000000 inferelator_velocity-0.1.0/LICENSE
+--rw-rw-r--   0 chris     (1000) chris     (1000)      983 2022-05-09 18:15:37.685068 inferelator_velocity-0.1.0/PKG-INFO
+--rw-rw-r--   0 chris     (1000) chris     (1000)      577 2022-05-09 16:20:54.000000 inferelator_velocity-0.1.0/README.md
+-drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2022-05-09 18:15:37.681068 inferelator_velocity-0.1.0/inferelator_velocity/
+--rw-rw-r--   0 chris     (1000) chris     (1000)      207 2022-05-09 17:23:51.000000 inferelator_velocity-0.1.0/inferelator_velocity/__init__.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)     9943 2022-05-09 16:32:57.000000 inferelator_velocity-0.1.0/inferelator_velocity/decay.py
+-drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2022-05-09 18:15:37.681068 inferelator_velocity-0.1.0/inferelator_velocity/plotting/
+--rw-rw-r--   0 chris     (1000) chris     (1000)        0 2022-05-08 17:50:38.000000 inferelator_velocity-0.1.0/inferelator_velocity/plotting/__init__.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)    10162 2022-05-09 16:09:27.000000 inferelator_velocity-0.1.0/inferelator_velocity/plotting/program_times.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)    16232 2022-05-07 18:43:09.000000 inferelator_velocity-0.1.0/inferelator_velocity/programs.py
+-drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2022-05-09 18:15:37.685068 inferelator_velocity-0.1.0/inferelator_velocity/tests/
+--rw-rw-r--   0 chris     (1000) chris     (1000)        0 2022-05-09 16:24:29.000000 inferelator_velocity-0.1.0/inferelator_velocity/tests/__init__.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)     2518 2022-05-09 16:24:46.000000 inferelator_velocity-0.1.0/inferelator_velocity/tests/test_programs.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)     4385 2022-05-09 16:31:39.000000 inferelator_velocity-0.1.0/inferelator_velocity/tests/test_velocity.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)     6357 2022-05-09 16:31:42.000000 inferelator_velocity-0.1.0/inferelator_velocity/times.py
+-drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2022-05-09 18:15:37.685068 inferelator_velocity-0.1.0/inferelator_velocity/utils/
+--rw-rw-r--   0 chris     (1000) chris     (1000)       91 2022-05-07 18:45:51.000000 inferelator_velocity-0.1.0/inferelator_velocity/utils/__init__.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)     3577 2022-05-08 21:32:56.000000 inferelator_velocity-0.1.0/inferelator_velocity/utils/graph.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)     4259 2022-05-01 20:00:35.000000 inferelator_velocity-0.1.0/inferelator_velocity/utils/mcv.py
+--rw-rw-r--   0 chris     (1000) chris     (1000)     3419 2022-03-14 19:58:00.000000 inferelator_velocity-0.1.0/inferelator_velocity/velocity.py
+-drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2022-05-09 18:15:37.681068 inferelator_velocity-0.1.0/inferelator_velocity.egg-info/
+--rw-rw-r--   0 chris     (1000) chris     (1000)      983 2022-05-09 18:15:37.000000 inferelator_velocity-0.1.0/inferelator_velocity.egg-info/PKG-INFO
+--rw-rw-r--   0 chris     (1000) chris     (1000)      772 2022-05-09 18:15:37.000000 inferelator_velocity-0.1.0/inferelator_velocity.egg-info/SOURCES.txt
+--rw-rw-r--   0 chris     (1000) chris     (1000)        1 2022-05-09 18:15:37.000000 inferelator_velocity-0.1.0/inferelator_velocity.egg-info/dependency_links.txt
+--rw-rw-r--   0 chris     (1000) chris     (1000)        1 2022-05-09 16:30:45.000000 inferelator_velocity-0.1.0/inferelator_velocity.egg-info/not-zip-safe
+--rw-rw-r--   0 chris     (1000) chris     (1000)       64 2022-05-09 18:15:37.000000 inferelator_velocity-0.1.0/inferelator_velocity.egg-info/requires.txt
+--rw-rw-r--   0 chris     (1000) chris     (1000)       21 2022-05-09 18:15:37.000000 inferelator_velocity-0.1.0/inferelator_velocity.egg-info/top_level.txt
+--rw-rw-r--   0 chris     (1000) chris     (1000)       38 2022-05-09 18:15:37.685068 inferelator_velocity-0.1.0/setup.cfg
+--rw-rw-r--   0 chris     (1000) chris     (1000)     1027 2022-05-09 16:28:10.000000 inferelator_velocity-0.1.0/setup.py
++drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2023-04-07 17:45:57.767676 inferelator_velocity-0.2.0/
++-rw-rw-r--   0 chris     (1000) chris     (1000)     1064 2022-05-09 16:20:55.000000 inferelator_velocity-0.2.0/LICENSE
++-rw-rw-r--   0 chris     (1000) chris     (1000)     1228 2023-04-07 17:45:57.767676 inferelator_velocity-0.2.0/PKG-INFO
++-rw-rw-r--   0 chris     (1000) chris     (1000)      859 2023-04-07 17:19:37.000000 inferelator_velocity-0.2.0/README.md
++drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2023-04-07 17:45:57.763676 inferelator_velocity-0.2.0/inferelator_velocity/
++-rw-rw-r--   0 chris     (1000) chris     (1000)      342 2023-04-07 15:56:35.000000 inferelator_velocity-0.2.0/inferelator_velocity/__init__.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)    11955 2023-03-16 19:47:07.000000 inferelator_velocity-0.2.0/inferelator_velocity/decay.py
++drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2023-04-07 17:45:57.763676 inferelator_velocity-0.2.0/inferelator_velocity/metrics/
++-rw-rw-r--   0 chris     (1000) chris     (1000)      230 2023-04-05 20:42:35.000000 inferelator_velocity-0.2.0/inferelator_velocity/metrics/__init__.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     3841 2023-04-07 17:27:25.000000 inferelator_velocity-0.2.0/inferelator_velocity/metrics/circcorrcoef.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     6468 2023-04-07 17:39:47.000000 inferelator_velocity-0.2.0/inferelator_velocity/metrics/information.py
++drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2023-04-07 17:45:57.763676 inferelator_velocity-0.2.0/inferelator_velocity/plotting/
++-rw-rw-r--   0 chris     (1000) chris     (1000)      129 2022-12-01 20:16:02.000000 inferelator_velocity-0.2.0/inferelator_velocity/plotting/__init__.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     3702 2022-12-05 15:36:23.000000 inferelator_velocity-0.2.0/inferelator_velocity/plotting/mcv_summary.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)    16730 2023-03-21 20:20:26.000000 inferelator_velocity-0.2.0/inferelator_velocity/plotting/program_times.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     4647 2023-04-07 15:01:10.000000 inferelator_velocity-0.2.0/inferelator_velocity/plotting/programs.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     5949 2023-04-06 18:50:53.000000 inferelator_velocity-0.2.0/inferelator_velocity/program_genes.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     4703 2023-04-07 16:56:08.000000 inferelator_velocity-0.2.0/inferelator_velocity/program_graph.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     9442 2023-04-07 16:19:39.000000 inferelator_velocity-0.2.0/inferelator_velocity/programs.py
++drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2023-04-07 17:45:57.767676 inferelator_velocity-0.2.0/inferelator_velocity/tests/
++-rw-rw-r--   0 chris     (1000) chris     (1000)        0 2022-05-09 16:24:29.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/__init__.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     3202 2022-05-24 15:56:46.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_decay.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     4726 2022-06-02 18:01:30.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_graph.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     5126 2023-04-06 17:32:17.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_math.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)       76 2022-05-28 22:13:57.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_mcv.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     2754 2023-04-07 17:16:23.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_metrics.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)        0 2022-05-26 03:38:36.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_misc.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     5191 2022-12-01 17:22:53.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_noise2self.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     6790 2023-04-07 17:31:00.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_programs.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)      994 2023-04-07 17:22:03.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_times.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     3354 2022-05-26 16:09:19.000000 inferelator_velocity-0.2.0/inferelator_velocity/tests/test_velocity.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)    16923 2023-04-03 19:57:13.000000 inferelator_velocity-0.2.0/inferelator_velocity/times.py
++drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2023-04-07 17:45:57.767676 inferelator_velocity-0.2.0/inferelator_velocity/utils/
++-rw-rw-r--   0 chris     (1000) chris     (1000)      702 2023-04-06 17:30:12.000000 inferelator_velocity-0.2.0/inferelator_velocity/utils/__init__.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)      762 2022-09-03 16:09:03.000000 inferelator_velocity-0.2.0/inferelator_velocity/utils/aggregation.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     7650 2023-03-06 16:16:16.000000 inferelator_velocity-0.2.0/inferelator_velocity/utils/graph.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)      938 2022-12-01 17:19:54.000000 inferelator_velocity-0.2.0/inferelator_velocity/utils/keys.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     6320 2023-04-06 17:34:00.000000 inferelator_velocity-0.2.0/inferelator_velocity/utils/math.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     4470 2023-02-21 17:00:22.000000 inferelator_velocity-0.2.0/inferelator_velocity/utils/mcv.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     4945 2023-03-21 15:03:51.000000 inferelator_velocity-0.2.0/inferelator_velocity/utils/misc.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     7519 2023-04-07 16:59:36.000000 inferelator_velocity-0.2.0/inferelator_velocity/utils/noise2self.py
++-rw-rw-r--   0 chris     (1000) chris     (1000)     3551 2023-04-07 17:00:35.000000 inferelator_velocity-0.2.0/inferelator_velocity/velocity.py
++drwxrwxr-x   0 chris     (1000) chris     (1000)        0 2023-04-07 17:45:57.763676 inferelator_velocity-0.2.0/inferelator_velocity.egg-info/
++-rw-rw-r--   0 chris     (1000) chris     (1000)     1228 2023-04-07 17:45:57.000000 inferelator_velocity-0.2.0/inferelator_velocity.egg-info/PKG-INFO
++-rw-rw-r--   0 chris     (1000) chris     (1000)     1584 2023-04-07 17:45:57.000000 inferelator_velocity-0.2.0/inferelator_velocity.egg-info/SOURCES.txt
++-rw-rw-r--   0 chris     (1000) chris     (1000)        1 2023-04-07 17:45:57.000000 inferelator_velocity-0.2.0/inferelator_velocity.egg-info/dependency_links.txt
++-rw-rw-r--   0 chris     (1000) chris     (1000)        1 2022-05-09 16:30:45.000000 inferelator_velocity-0.2.0/inferelator_velocity.egg-info/not-zip-safe
++-rw-rw-r--   0 chris     (1000) chris     (1000)       84 2023-04-07 17:45:57.000000 inferelator_velocity-0.2.0/inferelator_velocity.egg-info/requires.txt
++-rw-rw-r--   0 chris     (1000) chris     (1000)       21 2023-04-07 17:45:57.000000 inferelator_velocity-0.2.0/inferelator_velocity.egg-info/top_level.txt
++-rw-rw-r--   0 chris     (1000) chris     (1000)       38 2023-04-07 17:45:57.767676 inferelator_velocity-0.2.0/setup.cfg
++-rw-rw-r--   0 chris     (1000) chris     (1000)     1164 2023-03-23 16:10:09.000000 inferelator_velocity-0.2.0/setup.py
+```
+
+### Comparing `inferelator_velocity-0.1.0/LICENSE` & `inferelator_velocity-0.2.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `inferelator_velocity-0.1.0/PKG-INFO` & `inferelator_velocity-0.2.0/PKG-INFO`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,32 +1,31 @@
+ Metadata-Version: 2.1
+ Name: inferelator_velocity
+-Version: 0.1.0
++Version: 0.2.0
+ Summary: Inferelator-Velocity Calcualtes Dynamic Latent Parameters
+ Home-page: https://github.com/flatironinstitute/inferelator-velocity
+ Author: Chris Jackson
+ Author-email: cj59@nyu.edu
+ Maintainer: Chris Jackson
+ Maintainer-email: cj59@nyu.edu
+-License: UNKNOWN
+-Platform: UNKNOWN
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # inferelator-velocity
++
++[![PyPI version](https://badge.fury.io/py/inferelator-velocity.svg)](https://badge.fury.io/py/inferelator-velocity)
+ [![CI](https://github.com/flatironinstitute/inferelator-velocity/actions/workflows/python-package.yml/badge.svg)](https://github.com/flatironinstitute/inferelator-velocity/actions/workflows/python-package.yml/)
++[![codecov](https://codecov.io/gh/flatironinstitute/inferelator-velocity/branch/main/graph/badge.svg)](https://codecov.io/gh/flatironinstitute/inferelator-velocity)
+ 
+ This is a package that calculates dynamic (time-dependent) latent parameters from 
+ single-cell expression data and associated experimental metadata or bulk RNA-seq data.
+ It is designed to create data that is compatible with the 
+ [inferelator](https://github.com/flatironinstitute/inferelator) package.
+ 
+ ### Usage
+ 
+ TBD
+ 
+ ### Requirements
+ 
+ TBD
+ 
+-
+-
+```
+
+### Comparing `inferelator_velocity-0.1.0/inferelator_velocity/decay.py` & `inferelator_velocity-0.2.0/inferelator_velocity/decay.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,238 +1,415 @@
+ import numpy as np
+ import scipy.stats
+ from tqdm import trange, tqdm
+ 
++from .utils.math import least_squares
++from .utils.misc import get_bins
+ 
+-def calc_decay_sliding_windows(expression_data, velocity_data, time_data, n_windows=None, centers=None, width=None,
+-                               include_alpha=True, bootstrap_estimates=False, **kwargs):
++MAX_ITER = 100
++TOL = 1e-6
++
++DECAY_QUANT = (0.0, 0.05)
++ALPHA_QUANT = 0.975
++
++
++def calc_decay_sliding_windows(
++    expression_data,
++    velocity_data,
++    time_data,
++    n_windows=None,
++    centers=None,
++    width=None,
++    include_alpha=True,
++    bootstrap_estimates=False,
++    **kwargs
++):
+     """
+-    Calculate decay constants in a sliding window across a time axis
++    Calculate decay constants in a sliding window
++    across a time axis
+ 
+-    :param expression_data: Gene expression data [N Observations x M Genes]
++    :param expression_data: Gene expression data
++        [N Observations x M Genes]
+     :type expression_data: np.ndarray (float)
+-    :param velocity_data: Gene velocity data [N Observations x M Genes]
++    :param velocity_data: Gene velocity data
++        [N Observations x M Genes]
+     :type velocity_data: np.ndarray (float)
+-    :param time_data: Time data [N Observations, ]
++    :param time_data: Time data
++        [N Observations]
+     :type time_data: np.ndarray (float)
+-    :param n_windows: Number of windows on the time_data axis, defaults to None.
++    :param n_windows: Number of windows on the time_data axis,
++        defaults to None.
+         Either this or centers & width must be set
+     :type n_windows: integer, optional
+-    :param centers: Center points for the windows, defaults to None
++    :param centers: Center points for the windows,
++        defaults to None
+     :type centers: np.ndarray, optional
+     :param width: Width of the windows, defaults to None
+     :type width: float, optional
+-    :param include_alpha: Include estimates of alpha parameter, defaults to True
++    :param include_alpha: Include estimates of alpha parameter,
++        defaults to True
+     :type include_alpha: bool, optional
+-    :param bootstrap_estimates: Bootstrap estimates of decay & confidence interval, defaults to False
++    :param bootstrap_estimates: Bootstrap estimates of decay &
++        confidence interval, defaults to False
+     :type bootstrap_estimates: bool, optional
+-    :raises ValueError: Raises ValueError when the wrong combination of kwargs is set
+-    :return: Returns
+-    :rtype: _type_
++    :raises ValueError: Raises ValueError when the wrong combination
++        of kwargs is set
++    :return: Returns estimates of decay constants, CI or SE estimates,
++        estimates of the transcriptional output, and the window centers.
++        All estimates are [M Genes x n_windows].
++        Window centers are [n_windows]
++    :rtype: np.ndarray, np.ndarray, np.ndarray, np.ndarray
+     """
+ 
+     n, m = expression_data.shape
+ 
+-    if n_windows is not None and centers is None and width is None:
+-        min_time, max_time = np.nanmin(time_data), np.nanmax(time_data)
+-
+-        half_width = (max_time - min_time) / (2 * n_windows + 1)
+-        centers = np.linspace(min_time + half_width, max_time - half_width, num=n_windows)
+-
+-    elif centers is not None and width is not None:
+-        half_width = width / 2
+-
+-    else:
+-        raise ValueError("Pass n_windows or pass both centers and width")
++    centers, half_width = get_bins(
++        time_data,
++        n_bins=n_windows,
++        centers=centers,
++        width=width
++    )
+ 
++    # Calculate decay for a subset of observations
++    # near a specific center point
+     def _calc_window_decay(center):
+-        lowend, highend = center - half_width, center + half_width
++        lowend = center - half_width
++        highend = center + half_width
+ 
+-        keep_idx = (time_data >= lowend) & (time_data <= highend) & ~np.isnan(time_data)
++        keep_idx = time_data >= lowend
++        keep_idx &= time_data <= highend
++        keep_idx &= ~np.isnan(time_data)
+ 
+         if np.sum(keep_idx) < 2:
+-            return (np.full(expression_data.shape[1], np.nan),
+-                    np.full(expression_data.shape[1], np.nan),
+-                    np.full(expression_data.shape[1], np.nan) if include_alpha else None)
+-
+-        decay_func = calc_decay_bootstraps if bootstrap_estimates else calc_decay
+-
+-        return decay_func(expression_data[keep_idx, :],
+-                          velocity_data[keep_idx, :],
+-                          lstatus=False,
+-                          include_alpha=include_alpha,
+-                          **kwargs)
+-
+-    results = [_calc_window_decay(x) for x in tqdm(centers)]
+-    return [x[0] for x in results], [x[1] for x in results], [x[2] for x in results], centers
+-
+-
+-def calc_decay_bootstraps(expression_data, velocity_data, n_bootstraps=15, bootstrap_ratio=1.0,
+-                          random_seed=8675309, lstatus=True, confidence_interval = 0.95,
+-                          **kwargs):
++            return (
++                np.full(m, np.nan),
++                np.full(m, np.nan),
++                np.full(m, np.nan) if include_alpha else None
++            )
++
++        if bootstrap_estimates:
++            decay_func = calc_decay_bootstraps
++        else:
++            decay_func = calc_decay
++
++        return decay_func(
++            expression_data[keep_idx, :],
++            velocity_data[keep_idx, :],
++            lstatus=False,
++            include_alpha=include_alpha,
++            **kwargs
++        )
++
++    results = [
++        _calc_window_decay(x)
++        for x in tqdm(centers)
++    ]
++
++    return (
++        [x[0] for x in results],
++        [x[1] for x in results],
++        [x[2] for x in results],
++        centers
++    )
++
++
++def calc_decay_bootstraps(
++    expression_data,
++    velocity_data,
++    n_bootstraps=15,
++    bootstrap_ratio=1.0,
++    random_seed=500,
++    lstatus=True,
++    confidence_interval=0.95,
++    **kwargs
++):
+     """
+-    Estimate decay constant lambda for dX/dt = -lambda X + alpha and calculate
++    Estimate decay constant lambda for
++    dX/dt = -lambda X + alpha and calculate
+     confidence intervals by bootstrapping.
+ 
+     :param expression_data: Gene expression data [N Observations x M Genes]
+     :type expression_data: np.ndarray (float)
+     :param velocity_data: Gene velocity data [N Observations x M Genes]
+     :type velocity_data: np.ndarray (float)
+     :param n_bootstraps: Number of bootstraps, defaults to 15
+     :type n_bootstraps: int, optional
+     :param bootstrap_ratio: Fraction of samples to select for each bootstrap,
+         defaults to 1.0
+     :type bootstrap_ratio: float, optional
+-    :param random_seed: Seed for bootstrapping RNG, defaults to 8675309
++    :param random_seed: Seed for bootstrapping RNG, defaults to 500
+     :type random_seed: int, optional
+     :param lstatus: Display status bar, defaults to True
+     :type lstatus: bool, optional
+-    :param confidence_interval: Confidence interval between 0 and 1, defaults to 0.95
++    :param confidence_interval: Confidence interval between 0 and 1,
++        defaults to 0.95
+     :type confidence_interval: float, optional
+     """
+ 
+     if n_bootstraps < 2:
+-        raise ValueError(f'n_bootstraps must be > 1, {n_bootstraps} provided')
++        raise ValueError(
++            f'n_bootstraps must be > 1, {n_bootstraps} provided'
++        )
++
++    n, m = expression_data.shape
+ 
+     lstatus = trange if lstatus else range
+     rng = np.random.RandomState(seed=random_seed)
+ 
+     # Number to select per bootstrap
+     # Minimum of 1
+-    n_to_choose = max(1, int(bootstrap_ratio * expression_data.shape[0]))
++    n_to_choose = max(1, int(bootstrap_ratio * n))
+ 
+     def _calc_boot():
+-        pick_idx = rng.choice(np.arange(expression_data.shape[0]), size=n_to_choose)
+-        return calc_decay(expression_data[pick_idx, :],
+-                          velocity_data[pick_idx, :],
+-                          lstatus=False, **kwargs)
++        pick_idx = rng.choice(
++            np.arange(n),
++            size=n_to_choose,
++            replace=True
++        )
++
++        return calc_decay(
++            expression_data[pick_idx, :],
++            velocity_data[pick_idx, :],
++            lstatus=False,
++            **kwargs
++        )
+ 
+     bootstrap_results = [_calc_boot() for _ in range(n_bootstraps)]
+-    decays = np.vstack([x[0] for x in bootstrap_results])
+-    alphas = np.vstack([x[2] for x in bootstrap_results]) if bootstrap_results[0][2] is not None else None
+ 
+-    t = scipy.stats.t.ppf((1 + confidence_interval) / 2, n_bootstraps - 1)
++    decays = np.vstack(
++        [x[0] for x in bootstrap_results]
++    )
++
++    if bootstrap_results[0][2] is not None:
++        alphas = np.vstack(
++            [x[2] for x in bootstrap_results]
++        )
++    else:
++        alphas = None
++
++    t = scipy.stats.t.ppf(
++        (1 + confidence_interval) / 2,
++        n_bootstraps - 1
++    )
++
+     ci = t * np.nanstd(decays, axis=0) / np.sqrt(n_bootstraps)
+ 
+     return np.nanmean(decays, axis=0), ci, alphas
+ 
+-def calc_decay(expression_data, velocity_data, include_alpha=True,
+-               decay_quantiles=(0.00, 0.025), alpha_quantile=0.975,
+-               add_pseudocount=False, log_expression=False, lstatus=True):
++
++def calc_decay(
++    expression_data,
++    velocity_data,
++    include_alpha=False,
++    decay_quantiles=DECAY_QUANT,
++    alpha_quantile=ALPHA_QUANT,
++    lstatus=True
++):
+     """
+     Estimate decay constant lambda for dX/dt = -lambda X + alpha
+ 
+     :param expression_data: Gene expression data [N Observations x M Genes]
+     :type expression_data: np.ndarray (float)
+     :param velocity_data: Gene velocity data [N Observations x M Genes]
+     :type velocity_data: np.ndarray (float)
+     :param decay_quantiles: The quantile of observations to fit lambda,
+-        defaults to (0.00, 0.025)
++        defaults to (0.00, 0.05)
+     :type decay_quantiles: tuple, optional
+     :param alpha_quantile: The quantile of observations to estimate alpha,
+         defaults to 0.975
+     :type alpha_quantile: float, optional
+-    :param add_pseudocount: Add a pseudocount to expression for ratio
+-        calculation, defaults to False
+-    :type add_pseudocount: bool, optional
+-    :param log_expression: Log expression for ratio calculation,
+-        defaults to False
+-    :type log_expression: bool, optional
+     :param lstatus: Display status bar, defaults to True
+     :type lstatus: bool, optional
+     :raises ValueError: Raises a ValueError if arguments are invalid
+     :return: Returns estimates for lambda [M,],
+         standard error of lambda estimate [M,],
+         and estimates of alpha [M,]
+     :rtype: np.ndarray, np.ndarray, np.ndarray
+     """
+ 
+     lstatus = trange if lstatus else range
+ 
+     if expression_data.shape != velocity_data.shape:
+-        raise ValueError(f"Expression data {expression_data.shape} ",
+-                         f"and velocity data {velocity_data.shape} ",
+-                         "are not the same size")
+-
+-    if ((len(decay_quantiles) != 2) or not isinstance(decay_quantiles, (tuple, list))):
+-        raise ValueError(f"decay_quantiles must be a tuple of two floats; {decay_quantiles} passed")
++        raise ValueError(
++            f"Expression data {expression_data.shape} ",
++            f"and velocity data {velocity_data.shape} ",
++            "are not the same size"
++        )
++
++    try:
++        if len(decay_quantiles) != 2:
++            raise TypeError
++    except TypeError:
++        raise ValueError(
++            "decay_quantiles must be a tuple of two floats; "
++            f"{decay_quantiles} passed"
++        )
+ 
+     n, m = expression_data.shape
+ 
+-    # Get the velocity / expression ratio
+-    # add_pseudocount and log_expression influence this only
+-    # not decay calculations later
+-    if add_pseudocount and log_expression:
+-        ratio_data = np.full_like(velocity_data, np.nan, dtype=float)
+-        ratio_data = np.divide(velocity_data, np.log1p(expression_data),
+-                               out=ratio_data, where=expression_data != 0)
+-    elif add_pseudocount:
+-        ratio_data = np.divide(velocity_data, expression_data + 1)
+-    else:
+-        ratio_data = np.full_like(velocity_data, np.nan, dtype=float)
+-        np.divide(velocity_data, np.log(expression_data) if log_expression else expression_data,
+-                  out=ratio_data, where=expression_data != 0)
+-
+-    # Find the quantile cutoffs for decay curve fitting
+-    ratio_cuts = np.nanquantile(ratio_data, decay_quantiles, axis=0)
+-
+-    # Find the observations which should not be included for decay constant model
+-    keep_observations = np.greater_equal(ratio_data, ratio_cuts[0, :][None, :])
+-    keep_observations &= np.less_equal(ratio_data, ratio_cuts[1, :][None, :])
+-
+-    # Estimate the maximum velocity
+-    if include_alpha:
+-        alpha_est = np.nanquantile(velocity_data, alpha_quantile, axis=0).flatten()
+-        np.maximum(alpha_est, 0, out=alpha_est)
+-    else:
+-        alpha_est = None
++    # Estimate parameters for each gene individually
++    results = np.array([
++        _estimate_for_gene(
++            expression_data[:, i],
++            velocity_data[:, i],
++            decay_quantiles,
++            alpha_quantile=alpha_quantile if include_alpha else None,
++        ) for i in lstatus(m)
++    ])
++
++    return results[:, 0] * -1, results[:, 2], results[:, 1]
++
++
++def _estimate_for_gene(
++    expression_data,
++    velocity_data,
++    decay_quantiles,
++    alpha_quantile=None,
++):
++    """
++    Estimate parameters for a single gene,
++    based on dx/dt = - \\lambda * x + \\alpha,
++    where \\lambda and \\alpha > 0
++
++    :param expression_data: Expression data
++    :type expression_data: np.ndarray
++    :param velocity_data: Velocity Data
++    :type velocity_data: np.ndarray
++    :param decay_quantiles: Min & max percentiles
++        for expression/velocity surface estimate
++    :type decay_quantiles: tuple(float, float)
++    :param alpha_quantile: Percentile for alpha surface estimate,
++        defaults to None
++    :type alpha_quantile: float, optional
++    :return: Decay parameter lambda, production parameter alpha,
++        decay paramater standard error
++    :rtype: float, float, float
++    """
+ 
+-    # Transpose so gene data is memory-contiguous
++    # Estimate alpha based on maximum velovity
++    if alpha_quantile is not None:
++        a = _estimate_alpha(
++            velocity_data,
++            alpha_quantile,
++        )
+ 
+-    if include_alpha:
+-        # Remove the maximum velocity from the velocity matrix
+-        velo = np.subtract(velocity_data.T, alpha_est[:, None])
+     else:
+-        velo = np.array(velocity_data.T, copy=True)
+-
+-
+-    expr = np.array(expression_data.T, copy=True)
+-    keep_observations = np.array(keep_observations.T, order="C")
+-
+-    def _lstsq(x, y):
+-        if x.shape[0] == 0:
+-            return 0
+-        sl, ssr, rank, s = np.linalg.lstsq(x, y, rcond=None)
+-        return sl[0][0]
++        a = 0.
+ 
+-    # Estimate lambda_hat via OLS slope and enforce positive lambda
+-    decay_est = np.array([_lstsq(expr[i, keep_observations[i, :]].reshape(-1, 1),
+-                                 velo[i, keep_observations[i, :]].reshape(-1, 1))
+-                          for i in lstatus(m)])
+-
+-    np.minimum(decay_est, 0, out=decay_est)
++    d, dse = _estimate_decay(
++        expression_data,
++        velocity_data,
++        decay_quantiles,
++        alpha_est=a
++    )
++
++    return d, a, dse
++
++
++def _estimate_decay(
++    expression_data,
++    velocity_data,
++    decay_quantiles,
++    alpha_est=None
++):
++    """
++    Estimate decay constant for a single gene.
++    Remove estimate of transcriptional output before estimating
++    decay constant, if provided.
++
++    :param expression_data: Expression data
++    :type expression_data: np.ndarray
++    :param velocity_data: Velocity Data
++    :type velocity_data: np.ndarray
++    :param decay_quantiles: Min & max percentiles
++        for expression/velocity surface estimate
++    :type decay_quantiles: tuple(float, float)
++    :param alpha_est: Estimate of alpha, defaults to None
++    :type alpha_est: float, optional
++    :return: Estimate of decay parameter & standard error
++    :rtype: float, float
++    """
+ 
+-    # Estimate standard error of lambda_hat
+-    se_est = np.array([_calc_se(expr[i, keep_observations[i, :]].reshape(-1, 1),
+-                                velo[i, keep_observations[i, :]].reshape(-1, 1),
+-                                decay_est[i])
+-                       for i in lstatus(m)])
++    # If there is an estimate for alpha,
++    # modify velocity to remove the alpha component
++    if alpha_est is not None:
++        velocity_data = np.subtract(
++            velocity_data,
++            alpha_est
++        )
+ 
+-    return decay_est * -1, se_est, alpha_est
++    # Get the velocity / expression ratio
++    # Mask to infinity where expression is 0
++    ratio_data = np.divide(
++        velocity_data,
++        expression_data,
++        out=np.full_like(
++            velocity_data,
++            np.inf,
++            dtype=float
++        ),
++        where=expression_data != 0
++    )
+ 
++    if np.all(np.isinf(ratio_data)):
++        return 0., 0.
+ 
+-def _calc_se(x, y, slope):
++    # Find the quantile cutoffs for decay curve fitting
++    ratio_cuts = np.nanquantile(ratio_data, decay_quantiles)
+ 
+-    if x.shape[0] == 0:
+-        return 0
++    # Find the observations at the edge of the velocity/expression surface
++    # Use those to estimate the decay constant
++    keep_observations = np.greater_equal(ratio_data, ratio_cuts[0])
++    keep_observations &= np.less_equal(ratio_data, ratio_cuts[1])
+ 
+-    mse_x = np.sum(np.square(x - np.nanmean(x)))
+-    if mse_x == 0:
+-        return 0
++    # Estimate lambda_hat via OLS slope and enforce positive lambda
++    ols_slope_se = least_squares(
++        expression_data[keep_observations],
++        velocity_data[keep_observations]
++    )
++
++    # Rectify decay slopes that are positive to zero
++    # Throw away errors for rectified decays
++    if ols_slope_se[0] >= 0:
++        ols_slope_se = (0., 0.)
++
++    return ols_slope_se
++
++
++def _estimate_alpha(
++    velocity_data,
++    alpha_quantile,
++    decay_est=None,
++    expression_data=None
++):
++    """
++    Estimate transcriptional output
++    If an estimate of decay is provided, remove
++    decay component before estimating transcriptional output
++
++    :param velocity_data: Velocity Data
++    :type velocity_data: np.ndarray
++    :param alpha_quantile: Percentile for alpha estimate
++    :type alpha_quantile: float
++    :param decay_est: Estimate of lambda (decay constant),
++        defaults to None
++    :type decay_est: float, optional
++    :param expression_data: Expression Data, defaults to None
++    :type expression_data: np.ndarray, optional
++    :return: Estimate of alpha
++    :rtype: float
++    """
+ 
+-    elif slope == 0:
+-        return np.mean(np.square(y - np.nanmean(y))) / mse_x
++    if decay_est is not None and expression_data is None:
++        raise ValueError(
++            "expression_data must be set if decay_est is"
++        )
++
++    if decay_est is not None and decay_est != 0:
++        velocity_data = velocity_data - expression_data * decay_est
++
++    alpha_est = np.nanquantile(
++        velocity_data,
++        alpha_quantile
++    )
+ 
+-    else:
+-        mse_y = np.sum(np.square(y - np.dot(x, slope)))
+-        se_y = mse_y / (len(y) - 1)
+-        return se_y / mse_x
++    return max(alpha_est, 0)
+```
+
+### Comparing `inferelator_velocity-0.1.0/inferelator_velocity/utils/mcv.py` & `inferelator_velocity-0.2.0/inferelator_velocity/utils/mcv.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,15 +1,26 @@
+ import tqdm
+ import numpy as np
+ import scipy.sparse as sps
+ import scanpy as sc
+-from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
++from sklearn.metrics import (
++    mean_absolute_error,
++    mean_squared_error,
++    r2_score
++)
+ 
+ 
+-def mcv_pcs(count_data, n=5, n_pcs=100, random_seed=800, p=0.5, metric='mse'):
++def mcv_pcs(
++    count_data,
++    n=5,
++    n_pcs=100,
++    random_seed=800,
++    p=0.5,
++    metric='mse'
++):
+     """
+     Calculate a loss metric based on molecular crossvalidation
+ 
+     :param count_data: Integer count data
+     :type count_data: np.ndarray, sp.sparse.csr_matrix, sp.sparse.csc_matrix
+     :param n: Number of crossvalidation resplits, defaults to 5
+     :type n: int, optional
+@@ -29,14 +40,16 @@
+     if metric == 'mse':
+         metric = mean_squared_error
+     elif metric == 'mae':
+         metric = mean_absolute_error
+     elif metric == 'r2':
+         metric = r2_score
+ 
++    n_pcs = min(n_pcs, *map(lambda x: x - 1, count_data.shape))
++
+     metric_arr = np.zeros((n, n_pcs + 1), dtype=float)
+ 
+     # Use a single progress bar for nested loop
+     with tqdm.tqdm(total=n * (n_pcs + 1)) as pbar:
+ 
+         for i in range(n):
+             A, B = _molecular_split(
+@@ -76,18 +89,18 @@
+     return metric_arr
+ 
+ 
+ def _normalize_for_pca(count_data, copy=True):
+     """
+     Depth normalize and log pseudocount
+ 
+-    :param count_data: _description_
+-    :type count_data: _type_
+-    :return: _description_
+-    :rtype: _type_
++    :param count_data: Integer data
++    :type count_data: np.ndarray, sp.sparse.spmatrix
++    :return: Standardized data
++    :rtype: np.ndarray, sp.sparse.spmatrix
+     """
+ 
+     return sc.pp.log1p(
+         sc.pp.normalize_per_cell(
+             count_data.astype(float),
+             min_counts=0,
+             copy=copy
+@@ -112,28 +125,31 @@
+     :rtype: np.ndarray or sp.sparse.csr_matrix or sp.sparse.csc_matrix
+     """
+ 
+     rng = np.random.default_rng(random_seed)
+ 
+     if sps.issparse(count_data):
+ 
+-        mat_func = sps.csr_matrix if sps.isspmatrix_csr else sps.csc_matrix
++        if sps.isspmatrix_csr(count_data):
++            mat_func = sps.csr_matrix
++        else:
++            mat_func = sps.csc_matrix
+ 
+         cv_data = mat_func((
+             rng.binomial(count_data.data, p=p),
+             count_data.indices,
+             count_data.indptr),
+-            shape = count_data.shape
++            shape=count_data.shape
+         )
+ 
+         count_data = mat_func((
+             count_data.data - cv_data.data,
+             count_data.indices,
+             count_data.indptr),
+-            shape = count_data.shape
++            shape=count_data.shape
+         )
+ 
+     else:
+ 
+         cv_data = np.zeros_like(count_data)
+ 
+         for i in range(count_data.shape[0]):
+```
+
+### Comparing `inferelator_velocity-0.1.0/inferelator_velocity/velocity.py` & `inferelator_velocity-0.2.0/inferelator_velocity/velocity.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,58 +1,68 @@
+ import numpy as _np
+ from scipy.sparse import issparse as _is_sparse
+ from tqdm import trange
+ 
+-def calc_velocity(expr, time_axis, neighbor_graph, n_neighbors, wrap_time=None):
++
++def calc_velocity(
++    expr,
++    time_axis,
++    neighbor_graph,
++    wrap_time=None
++):
+     """
+     Calculate local RNA velocity
+ 
+     :param expr: Samples x Genes numpy with expression data
+     :param time_axis: Samples, numpy array
+-    :param neighbor_graph: Samples x Samples numpy or scipy.sparse with nearest neighbor distances
+-    :param n_neighbors: Number of neighbors to use, int
++    :param neighbor_graph: Samples x Samples numpy or scipy.sparse
++        with nearest neighbor distances
+     :return: Samples x Genes numpy with velocity data
+     """
+ 
+-    n_gen = _find_local(expr, neighbor_graph, n_neighbors)
+-    return _np.vstack([_calc_local_velocity(expr[n_idx, :].copy(),
+-                                            time_axis[n_idx].copy(),
+-                                            (n_idx == i).nonzero()[0][0],
+-                                            wrap_time=wrap_time)
+-                       for i, n_idx in n_gen])
+-
+-
+-def _calc_local_velocity(expr, time_axis, center_index, wrap_time=None):
++    return _np.vstack(
++        [
++            _calc_local_velocity(
++                expr[n_idx, :].copy(),
++                time_axis[n_idx].copy(),
++                (n_idx == i).nonzero()[0][0],
++                wrap_time=wrap_time
++            )
++            for i, n_idx in _find_local(expr, neighbor_graph)
++        ]
++    )
++
++
++def _calc_local_velocity(
++    expr,
++    time_axis,
++    center_index,
++    wrap_time=None
++):
+     """
+     Calculate a local rate of change
+ 
+     :param expr: Samples x Genes numpy with expression data
+     :param time_axis: Samples, numpy array
+     :param center_index: The data point which we're calculating velocity for
+     :return:
+     """
+ 
+     n, m = expr.shape
+ 
+     if _np.isnan(time_axis[center_index]):
+         return _np.full(m, _np.nan)
+ 
+-    if wrap_time is not None:
+-
+-        wtime_l, wtime_r = wrap_time * 0.25, wrap_time * 0.75
++    time_axis = time_axis - time_axis[center_index]
+ 
+-        # Calculate change in time relative to the centerpoint
+-        if time_axis[center_index] > wtime_r:
+-            time_axis[time_axis < wtime_l] = time_axis[time_axis < wtime_l] + wrap_time
+-        elif time_axis[center_index] < wtime_l:
+-            time_axis[time_axis > wtime_r] = time_axis[time_axis > wtime_r] - wrap_time
++    if wrap_time is not None:
++        time_axis = _wrap_time(time_axis, wrap_time)
+ 
+     # Calculate change in expression and time relative to the centerpoint
+     y_diff = _np.subtract(expr, expr[center_index, :])
+-    time_axis = (time_axis - time_axis[center_index])
+ 
+     _time_nan = _np.isnan(time_axis)
+ 
+     # Remove any data where the time value is NaN
+     if _np.sum(_time_nan) > 0:
+ 
+         # If there's only 3 or fewer data points remaining, return NaN
+@@ -60,37 +70,79 @@
+             return _np.full(m, _np.nan)
+ 
+         time_axis = time_axis[~_time_nan]
+         y_diff = y_diff[~_time_nan, :]
+ 
+     # Calculate (XT * X)^-1 * XT
+     time_axis = time_axis.reshape(-1, 1)
+-    x_for_hat = _np.dot(_np.linalg.inv(_np.dot(time_axis.T, time_axis)), time_axis.T)
++    x_for_hat = _np.dot(
++        _np.linalg.inv(
++            _np.dot(
++                time_axis.T,
++                time_axis)
++        ),
++        time_axis.T
++    )
+ 
+     # Return the slope for each gene as velocity
+-    return _np.array([_np.dot(x_for_hat, y_diff[:, i])[0] for i in range(m)])
++    return _np.dot(x_for_hat, y_diff)
+ 
+ 
+-def _find_local(expr, neighbor_graph, n_neighbors):
++def _find_local(expr, neighbor_graph):
+     """
+     Find a return an expression matrix for a locally connected graph
+ 
+     :param expr: Samples x Genes numpy or scipy with expression data
+-    :param neighbor_graph: Samples x Samples numpy or scipy with neighbor distances as 1/dist.
+-    :param n_neighbors:
++    :type expr: np.ndarray, sp.sparse.csr_matrix
++    :param neighbor_graph: Samples x Samples connectivity matrix,
++        where any non-zero value is connected.
+     :return:
+     """
+ 
+     n, m = expr.shape
+     neighbor_sparse = _is_sparse(neighbor_graph)
+ 
+     for i in trange(n):
++
+         n_slice = neighbor_graph[i, :]
++
+         if neighbor_sparse:
+-            if n_slice.data.shape[0] > n_neighbors:
+-                keepers = n_slice.indices[_np.argsort(n_slice.data)[-1 * n_neighbors:]]
+-            else:
+-                keepers = n_slice.indices
++            keepers = n_slice.indices
+         else:
+-            keepers = _np.argsort(n_slice)[-1 * n_neighbors:]
++            keepers = _np.where(n_slice != 0)[0]
++
++        if all(keepers != i):
++            keepers = _np.insert(keepers, 0, i)
++
++        yield i, keepers
++
++
++def _wrap_time(times, wrap_time):
++    """
++    Wrap times by taking the minimum time difference
++    with and without wrapping
++
++    :param times: Centered time vector
++    :type times: np.ndarray
++    :param wrap_time: Time to wrap at
++    :type wrap_time: numeric
++    :return: Wrapped time vector
++    :rtype: np.ndarray
++    """
++
++    times = _np.vstack((
++        times + wrap_time,
++        times,
++        times - wrap_time
++    ))
++
++    times = times[
++        _np.argmin(
++            _np.abs(times),
++            axis=0
++        ),
++        _np.arange(
++            times.shape[1]
++        )
++    ]
+ 
+-        yield i, _np.insert(keepers, 0, i)
++    return times
+```
+
+### Comparing `inferelator_velocity-0.1.0/inferelator_velocity.egg-info/PKG-INFO` & `inferelator_velocity-0.2.0/inferelator_velocity.egg-info/PKG-INFO`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,32 +1,31 @@
+ Metadata-Version: 2.1
+ Name: inferelator-velocity
+-Version: 0.1.0
++Version: 0.2.0
+ Summary: Inferelator-Velocity Calcualtes Dynamic Latent Parameters
+ Home-page: https://github.com/flatironinstitute/inferelator-velocity
+ Author: Chris Jackson
+ Author-email: cj59@nyu.edu
+ Maintainer: Chris Jackson
+ Maintainer-email: cj59@nyu.edu
+-License: UNKNOWN
+-Platform: UNKNOWN
+ Description-Content-Type: text/markdown
+ License-File: LICENSE
+ 
+ # inferelator-velocity
++
++[![PyPI version](https://badge.fury.io/py/inferelator-velocity.svg)](https://badge.fury.io/py/inferelator-velocity)
+ [![CI](https://github.com/flatironinstitute/inferelator-velocity/actions/workflows/python-package.yml/badge.svg)](https://github.com/flatironinstitute/inferelator-velocity/actions/workflows/python-package.yml/)
++[![codecov](https://codecov.io/gh/flatironinstitute/inferelator-velocity/branch/main/graph/badge.svg)](https://codecov.io/gh/flatironinstitute/inferelator-velocity)
+ 
+ This is a package that calculates dynamic (time-dependent) latent parameters from 
+ single-cell expression data and associated experimental metadata or bulk RNA-seq data.
+ It is designed to create data that is compatible with the 
+ [inferelator](https://github.com/flatironinstitute/inferelator) package.
+ 
+ ### Usage
+ 
+ TBD
+ 
+ ### Requirements
+ 
+ TBD
+ 
+-
+-
+```
+
+### Comparing `inferelator_velocity-0.1.0/setup.py` & `inferelator_velocity-0.2.0/setup.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,28 +1,53 @@
+ import os
+ from setuptools import setup, find_packages
+ 
+-install_requires = ["numpy", "pandas>=1.0", "anndata>=0.8", "scanpy", "scipy", "joblib", "sklearn", "tqdm"]
+-tests_require = ["coverage", "pytest"]
+-version = "0.1.0"
++install_requires = [
++    "numpy",
++    "pandas>=1.0",
++    "anndata>=0.8",
++    "scanpy",
++    "scipy",
++    "joblib",
++    "scikit-learn",
++    "tqdm",
++    "sparse_dot_mkl"
++]
++
++tests_require = [
++    "coverage",
++    "pytest"
++]
++
++version = "0.2.0"
+ 
+ # Description from README.md
+-base_dir = os.path.dirname(os.path.abspath(__file__))
+-long_description = "\n\n".join([open(os.path.join(base_dir, "README.md"), "r").read()])
++long_description = "\n\n".join(
++    [open(
++        os.path.join(
++            os.path.dirname(os.path.abspath(__file__)),
++            "README.md"
++        ),
++        "r"
++    ).read()]
++)
+ 
+ setup(
+     name="inferelator_velocity",
+     version=version,
+     description="Inferelator-Velocity Calcualtes Dynamic Latent Parameters",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/flatironinstitute/inferelator-velocity",
+     author="Chris Jackson",
+     author_email="cj59@nyu.edu",
+     maintainer="Chris Jackson",
+     maintainer_email="cj59@nyu.edu",
+-    packages=find_packages(include=["inferelator_velocity", "inferelator_velocity.*"]),
++    packages=find_packages(include=[
++        "inferelator_velocity",
++        "inferelator_velocity.*"
++    ]),
+     zip_safe=False,
+     install_requires=install_requires,
+     tests_require=tests_require,
+     test_suite="pytest",
+ )
+```
+

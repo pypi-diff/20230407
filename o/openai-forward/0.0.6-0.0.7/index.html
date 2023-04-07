@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/openai_forward-0.0.6.tar.gz tmp/openai_forward-0.0.7.tar.gz --html 20230407/o/openai-forward/0.0.6-0.0.7/index.html --text 20230407/o/openai-forward/0.0.6-0.0.7/diff.txt --markdown 20230407/o/openai-forward/0.0.6-0.0.7/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">11.4 KB</span></div>
+  <div><span class="source">tmp/openai_forward-0.0.6.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/openai_forward-0.0.7.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">11.3 KB</span></div>
+    <div><span class="source">openai_forward-0.0.6.tar</span> vs.</div>
+    <div id="openai_forward--.-.-.tar"><span class="source">openai_forward-0.0.7.tar</span>
+      <a class="anchor" href="#openai_forward--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">3.24 KB</span></div>
+      <div id="openai_forward--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 14 lines modified</td><td colspan="2">Offset 1, 15 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/__init__.py</td><td class="diffline">1 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>22<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>291</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/__main__.py</td><td class="diffline">2 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>503</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4836<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/_base.py</td><td class="diffline">3 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4836<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/_base.py</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>760<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/app.py</td><td class="diffline">4 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>760<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/app.py</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1167<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/config.py</td><td class="diffline">5 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1167<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/config.py</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3215<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/openai.py</td><td class="diffline">6 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3215<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/openai.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/routers/__init__.py</td><td class="diffline">7 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/routers/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2897<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/routers/openai_v1.py</td><td class="diffline">8 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2897<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/routers/openai_v1.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2316<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/openai_forward/routers/schemas.py</td><td class="diffline">9 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2316<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/openai_forward/routers/schemas.py</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>84661<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.7/openai_forward/web/index.js</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1842<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/.gitignore</td><td class="diffline">11 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1842<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/.gitignore</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1064<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/LICENSE</td><td class="diffline">12 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1064<span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>291</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/README.md</td><td class="diffline">13 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>605</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-rw<del>x</del>r-<del>x</del>r-<del>x</del><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<del>66</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/pyproject.toml</td><td class="diffline">14 </td><td class="diffpresent">-rw<ins>-</ins>r-<ins>-</ins>r-<ins>-</ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<ins>84</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>290</del><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<del>6</del>/PKG-INFO</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>669</ins><span class="dp">·</span>2020-02-02<span class="dp">·</span>00:00:00.000000<span class="dp">·</span>openai_forward-0.0.<ins>7</ins>/PKG-INFO</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/openai_forward/_base.py</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-_base.py"><span class="source">openai_forward-0.0.7/openai_forward/_base.py</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-_base.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">123 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/openai_forward/app.py</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-app.py"><span class="source">openai_forward-0.0.7/openai_forward/app.py</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-app.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/openai_forward/config.py</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-config.py"><span class="source">openai_forward-0.0.7/openai_forward/config.py</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-config.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">129 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/openai_forward/openai.py</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-openai.py"><span class="source">openai_forward-0.0.7/openai_forward/openai.py</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-openai.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">151 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/openai_forward/routers/openai_v1.py</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-routers-openai_v-.py"><span class="source">openai_forward-0.0.7/openai_forward/routers/openai_v1.py</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-routers-openai_v-.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/openai_forward/routers/schemas.py</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-routers-schemas.py"><span class="source">openai_forward-0.0.7/openai_forward/routers/schemas.py</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--openai_forward-routers-schemas.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">101 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/.gitignore</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--.gitignore"><span class="source">openai_forward-0.0.7/.gitignore</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--.gitignore">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/LICENSE</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--LICENSE"><span class="source">openai_forward-0.0.7/LICENSE</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">3.63 KB</span></div>
+      <div><span class="source">openai_forward-0.0.6/README.md</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--README.md"><span class="source">openai_forward-0.0.7/README.md</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 25% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 65 lines modified</td><td colspan="2">Offset 1, 76 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>OpenAI<span class="dp">·</span><del>f</del>orward<del>ing<span class="dp">·</span>agent.</del></td><td class="diffline">1 </td><td class="diffpresent">#<span class="dp">·</span>OpenAI<span class="dp">·</span><ins>F</ins>orward</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>简介<del>.</del></td><td class="diffline">2 </td><td class="diffpresent">##<span class="dp">·</span>简介</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent"><del>o</del>pen<del>ai</del><span class="dp">·</span>接口转发服务.<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del>.</del></td><td class="diffline">3 </td><td class="diffpresent"><ins>O</ins>pen<ins>AI</ins><span class="dp">·</span>接口转发服务.<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">用途：<span class="dp">·</span><del>.</del></td><td class="diffline">4 </td><td class="diffpresent">用途：<span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">解决国内无法直接访问OpenAI的问题，将该服务部署在海外服务器上，通过该服务转发OpenAI的请求。即搭建反向代理服务<del>.</del></td><td class="diffline">5 </td><td class="diffpresent">解决国内无法直接访问OpenAI的问题，将该服务部署在海外服务器上，通过该服务转发OpenAI的请求。即搭建反向代理服务</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">测试地址：http://2.56.125.247:9999/v1/chat/completions<span class="dp">·</span><span class="dp">·</span><del>.</del></td><td class="diffline">6 </td><td class="diffpresent">测试地址：http://2.56.125.247:9999/v1/chat/completions<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffdeleted"><td class="diffline">7 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">8 </td><td class="diffpresent">###<span class="dp">·</span>已实现转发的接口<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">7 </td><td class="diffpresent">###<span class="dp">·</span>转发接口示例</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">`https://api.openai.com`<del>.</del></td><td class="diffline">8 </td><td class="diffpresent">`https://api.openai.com`</td></tr>
+<tr class="diffdeleted"><td class="diffline">10 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/dashboard/billing/usage`<del>.</del></td><td class="diffline">9 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/dashboard/billing/usage`</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/dashboard/billing/credit_grants`<del>.</del></td><td class="diffline">10 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/dashboard/billing/credit_grants`</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/chat/completions`<del>.</del></td><td class="diffline">11 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/chat/completions`</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/completions`<del>.</del></td><td class="diffline">12 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/completions`</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/models`<del>.</del></td><td class="diffline">13 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/models`</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/models/{model}`<del>.</del></td><td class="diffline">14 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/models/{model}`</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">17 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/edits`<em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">18 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">19 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">##<span class="dp">·</span>服务部署<del>.</del></td><td class="diffline">15 </td><td class="diffpresent">##<span class="dp">·</span>服务部署</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">提供两种服务部署方式,选择一种即可<del>.</del></td><td class="diffline">16 </td><td class="diffpresent">提供两种服务部署方式,选择一种即可</td></tr>
+<tr class="diffdeleted"><td class="diffline">22 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">###<span class="dp">·</span>方式一:<span class="dp">·</span><span class="dp">·</span>pip<del>.</del></td><td class="diffline">17 </td><td class="diffpresent">###<span class="dp">·</span>方式一:<span class="dp">·</span><span class="dp">·</span>pip</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">**安装**<del>.</del></td><td class="diffline">18 </td><td class="diffpresent">**安装**</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">```bash<del>.</del></td><td class="diffline">19 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>openai-forward<del>.</del></td><td class="diffline">20 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>openai-forward</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">```<del>.</del></td><td class="diffline">21 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">**运行转发服务**<span class="dp">·</span><span class="dp">·</span><del>.</del></td><td class="diffline">22 </td><td class="diffpresent">**运行转发服务**<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">23 </td><td class="diffpresent">###<span class="dp">·</span>Option<span class="dp">·</span>1</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">可通过`--port`指定端口号，默认为`9999`，可通过`--workers`指定工作进程数，默认为`1`<del>.</del></td><td class="diffline">24 </td><td class="diffpresent">可通过`--port`指定端口号，默认为`9999`，可通过`--workers`指定工作进程数，默认为`1`</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">```bash<del>.</del></td><td class="diffline">25 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">openai_forward<span class="dp">·</span>run<span class="dp">·</span>--port=9999<span class="dp">·</span>--wor<del>d</del>ers=1<del>.</del></td><td class="diffline">26 </td><td class="diffpresent">openai_forward<span class="dp">·</span>run<span class="dp">·</span>--port=9999<span class="dp">·</span>--wor<ins>k</ins>ers=1</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">```<del>.</del></td><td class="diffline">27 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">当然也可以将<span class="dp">·</span>OPENAI_API_KEY<span class="dp">·</span>作为环境变量传入作为默认api<span class="dp">·</span>key，<span class="dp">·</span>这样客户端在请求相关路由时可以无需在Header中传入Authorization。<del>.</del></td><td class="diffline">28 </td><td class="diffpresent">当然也可以将<span class="dp">·</span>OPENAI_API_KEY<span class="dp">·</span>作为环境变量传入作为默认api<span class="dp">·</span>key，<span class="dp">·</span>这样客户端在请求相关路由时可以无需在Header中传入Authorization。</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">带默认api<span class="dp">·</span>key的启动方式：<del>.</del></td><td class="diffline">29 </td><td class="diffpresent">带默认api<span class="dp">·</span>key的启动方式：</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">```bash<del>.</del></td><td class="diffline">30 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">OPENAI_API_KEY=&quot;sk-xxx&quot;<span class="dp">·</span>openai_forward<span class="dp">·</span>run<span class="dp">·</span>--port=9999<span class="dp">·</span>--wor<del>d</del>ers=1<del>.</del></td><td class="diffline">31 </td><td class="diffpresent">OPENAI_API_KEY=&quot;sk-xxx&quot;<span class="dp">·</span>openai_forward<span class="dp">·</span>run<span class="dp">·</span>--port=9999<span class="dp">·</span>--wor<ins>k</ins>ers=1</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">```<del>.</del></td><td class="diffline">32 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">注:<span class="dp">·</span>如果既存在默认api<span class="dp">·</span>key又在请求头中传入了api<span class="dp">·</span>key，则以请求头中的api<span class="dp">·</span>key会覆盖默认api<span class="dp">·</span>key.<del>.</del></td><td class="diffline">33 </td><td class="diffpresent">注:<span class="dp">·</span>如果既存在默认api<span class="dp">·</span>key又在请求头中传入了api<span class="dp">·</span>key，则以请求头中的api<span class="dp">·</span>key会覆盖默认api<span class="dp">·</span>key.</td></tr>
+<tr class="diffdeleted"><td class="diffline">39 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">34 </td><td class="diffpresent">###<span class="dp">·</span>Option<span class="dp">·</span>2</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">35 </td><td class="diffpresent">另一种使用nodejs的部署方式，环境中需已安装node,<span class="dp">·</span>优点是默认转发`https://api.openai.com`的所有接口路由，但是不支持设定默认api<span class="dp">·</span>key。</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">36 </td><td class="diffpresent">启动方式</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">37 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">38 </td><td class="diffpresent">openai_forward<span class="dp">·</span>node<span class="dp">·</span>--port=9999</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">39 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">###<span class="dp">·</span>方式二:<span class="dp">·</span>Docker<span class="dp">·</span>compose<del>.</del></td><td class="diffline">40 </td><td class="diffpresent">###<span class="dp">·</span>方式二:<span class="dp">·</span>Docker<span class="dp">·</span>compose</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">下载项目根目录下的`docker-compose.yaml`文件，然后在文件路径下执行以下命令即可。<del>.</del></td><td class="diffline">41 </td><td class="diffpresent">下载项目根目录下的`docker-compose.yaml`文件，然后在文件路径下执行以下命令即可。</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">```bash<del>.</del></td><td class="diffline">42 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">docker-compose<span class="dp">·</span>up<span class="dp">·</span>-d<del>.</del></td><td class="diffline">43 </td><td class="diffpresent">docker-compose<span class="dp">·</span>up<span class="dp">·</span>-d</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">```<del>.</del></td><td class="diffline">44 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">注：同样可以在docker-compose.yaml文件中传入环境变量OPENAI_API_KEY=sk-xxx作为默认api<span class="dp">·</span>key<del>.</del></td><td class="diffline">45 </td><td class="diffpresent">注：同样可以在docker-compose.yaml文件中传入环境变量OPENAI_API_KEY=sk-xxx作为默认api<span class="dp">·</span>key</td></tr>
+<tr class="diffdeleted"><td class="diffline">46 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">##<span class="dp">·</span>服务调用<del>.</del></td><td class="diffline">46 </td><td class="diffpresent">##<span class="dp">·</span>服务调用</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">替换openai的api地址为该服务的地址即可，如：<del>.</del></td><td class="diffline">47 </td><td class="diffpresent">替换openai的api地址为该服务的地址即可，如：</td></tr>
+<tr class="diffchanged"><td class="diffline">49 </td><td class="diffpresent">```bash<del>.</del></td><td class="diffline">48 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">50 </td><td class="diffpresent">https://api.openai.com/v1/chat/completions<del>.</del></td><td class="diffline">49 </td><td class="diffpresent">https://api.openai.com/v1/chat/completions</td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent">```<del>.</del></td><td class="diffline">50 </td><td class="diffpresent">```</td></tr>
+<tr class="diffchanged"><td class="diffline">52 </td><td class="diffpresent">替换为<del>.</del></td><td class="diffline">51 </td><td class="diffpresent">替换为</td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">```bash<del>.</del></td><td class="diffline">52 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">54 </td><td class="diffpresent">http://{ip}:{port}/v1/chat/completions<del>.</del></td><td class="diffline">53 </td><td class="diffpresent">http://{ip}:{port}/v1/chat/completions</td></tr>
+<tr class="diffchanged"><td class="diffline">55 </td><td class="diffpresent">```<del>.</del></td><td class="diffline">54 </td><td class="diffpresent">```</td></tr>
+<tr class="diffdeleted"><td class="diffline">56 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">57 </td><td class="diffpresent">个人搭建的代理服务(仅供测试,<span class="dp">·</span>不带默认api<span class="dp">·</span>key):<span class="dp">·</span><span class="dp">·</span><del>.</del></td><td class="diffline">55 </td><td class="diffpresent">个人搭建的代理服务(仅供测试,<span class="dp">·</span>不带默认api<span class="dp">·</span>key):<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">http://2.56.125.247:9999/v1/chat/completions<span class="dp">·</span><span class="dp">·</span><del>.</del></td><td class="diffline">56 </td><td class="diffpresent">http://2.56.125.247:9999/v1/chat/completions<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffdeleted"><td class="diffline">59 </td><td class="diffpresent"><em>\xd</em></td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">60 </td><td class="diffpresent">##<span class="dp">·</span>应用<del>.</del></td><td class="diffline">57 </td><td class="diffpresent">##<span class="dp">·</span>应用</td></tr>
+<tr class="diffchanged"><td class="diffline">61 </td><td class="diffpresent"><del>例如可以</del><del>在项目</del><span class="dp">·</span>[chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web)<del><span class="dp">·</span>中使用该服务<span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span><del>.</del></td><td class="diffline">58 </td><td class="diffpresent"><ins>###</ins><span class="dp">·</span>[chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web)<span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">62 </td><td class="diffpresent"><del>以其</del><span class="dp">·</span>[Docker<span class="dp">·</span>Compose](https://github.com/Chanzhaoyu/chatgpt-web#docker-compose)<span class="dp">·</span><del>启动方式为例，只需修改其</del>中的`OPENAI_API_BASE_URL`为我们搭建的代理服务地址即可：<del>.</del></td><td class="diffline">59 </td><td class="diffpresent"><ins>修改</ins><span class="dp">·</span>[Docker<span class="dp">·</span>Compose](https://github.com/Chanzhaoyu/chatgpt-web#docker-compose)<span class="dp">·</span>中的`OPENAI_API_BASE_URL`为我们搭建的代理服务地址即可：</td></tr>
+<tr class="diffchanged"><td class="diffline">63 </td><td class="diffpresent">```bash<del>.</del></td><td class="diffline">60 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">64 </td><td class="diffpresent">OPENAI_API_BASE_URL:<span class="dp">·</span>http://2.56.125.247:9999<span class="dp">·</span><del>.</del></td><td class="diffline">61 </td><td class="diffpresent">OPENAI_API_BASE_URL:<span class="dp">·</span>http://2.56.125.247:9999<span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">65 </td><td class="diffpresent">```<del>.</del></td><td class="diffline">62 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">63 </td><td class="diffpresent">###<span class="dp">·</span>[ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">64 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">65 </td><td class="diffpresent">docker<span class="dp">·</span>run<span class="dp">·</span>-d<span class="dp">·</span>-p<span class="dp">·</span>3000:3000<span class="dp">·</span>-e<span class="dp">·</span>OPENAI_API_KEY=&quot;sk-xxx&quot;<span class="dp">·</span>-e<span class="dp">·</span>CODE=&quot;&lt;your<span class="dp">·</span>password&gt;&quot;<span class="dp">·</span>BASE_URL=&quot;2.56.125.247:9999&quot;<span class="dp">·</span>PROTOCOL=&quot;http&quot;<span class="dp">·</span>yidadaa/chatgpt-next-web</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">66 </td><td class="diffpresent">```</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">374 B</span></div>
+      <div><span class="source">openai_forward-0.0.6/pyproject.toml</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--pyproject.toml"><span class="source">openai_forward-0.0.7/pyproject.toml</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--pyproject.toml">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 8% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 57, 14 lines modified</td><td colspan="2">Offset 57, 14 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent">[tool.hatch.build]</td><td class="diffline">57 </td><td class="diffpresent">[tool.hatch.build]</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent">include<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">58 </td><td class="diffpresent">include<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;openai_forward/**/*.py&quot;,</td><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;openai_forward/**/*.py&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">]</td><td class="diffline">60 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">exclude<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">61 </td><td class="diffpresent">exclude<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">]</td><td class="diffline">62 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">63 </td><td class="diffpresent"><del>#</del>artifacts<span class="dp">·</span>=<span class="dp">·</span>[</td><td class="diffline">63 </td><td class="diffpresent">artifacts<span class="dp">·</span>=<span class="dp">·</span>[</td></tr>
+<tr class="diffdeleted"><td class="diffline">64 </td><td class="diffpresent">#<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;*.yaml&quot;,</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">65 </td><td class="diffpresent"><del>#]</del></td><td class="diffline">64 </td><td class="diffpresent"><ins><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;openai_forward/web/index.js</ins><ins>&quot;,</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">65 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">[tool.hatch.build.targets.wheel]</td><td class="diffline">66 </td><td class="diffpresent">[tool.hatch.build.targets.wheel]</td></tr>
+<tr class="diffunmodified"><td class="diffline">67 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[&quot;openai_forward&quot;]</td><td class="diffline">67 </td><td class="diffpresent">packages<span class="dp">·</span>=<span class="dp">·</span>[&quot;openai_forward&quot;]</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">3.07 KB</span></div>
+      <div><span class="source">openai_forward-0.0.6/PKG-INFO</span> vs.</div>
+      <div id="openai_forward--.-.-.tar---openai_forward--.-.--PKG-INFO"><span class="source">openai_forward-0.0.7/PKG-INFO</span>
+        <a class="anchor" href="#openai_forward--.-.-.tar---openai_forward--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 13% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>openai_forward</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>openai_forward</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>6</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>7</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/beidongjiedeguang/openai-forward</td><td class="diffline">4 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Homepage,<span class="dp">·</span>https://github.com/beidongjiedeguang/openai-forward</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://github.com/beidongjiedeguang/openai-forward#openai-forwarding-agent</td><td class="diffline">5 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Documentation,<span class="dp">·</span>https://github.com/beidongjiedeguang/openai-forward#openai-forwarding-agent</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Issues,<span class="dp">·</span>https://github.com/beidongjiedeguang/openai-forward/issues</td><td class="diffline">6 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Issues,<span class="dp">·</span>https://github.com/beidongjiedeguang/openai-forward/issues</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/beidongjiedeguang/openai-forward</td><td class="diffline">7 </td><td class="diffpresent">Project-URL:<span class="dp">·</span>Source,<span class="dp">·</span>https://github.com/beidongjiedeguang/openai-forward</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kunyuan<span class="dp">·</span>&lt;beidongjiedeguang@gmail.com&gt;</td><td class="diffline">8 </td><td class="diffpresent">Author-email:<span class="dp">·</span>kunyuan<span class="dp">·</span>&lt;beidongjiedeguang@gmail.com&gt;</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td><td class="diffline">9 </td><td class="diffpresent">License-File:<span class="dp">·</span>LICENSE</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>chatbot,chatgpt,forward,openai</td><td class="diffline">10 </td><td class="diffpresent">Keywords:<span class="dp">·</span>chatbot,chatgpt,forward,openai</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 22, 53 lines modified</td><td colspan="2">Offset 22, 59 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">22 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>googlebard;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;bard&#x27;</td><td class="diffline">22 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>googlebard;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;bard&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">23 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>chatgpt</td><td class="diffline">23 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>chatgpt</td></tr>
+<tr class="diffunmodified"><td class="diffline">24 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>revchatgpt;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;chatgpt&#x27;</td><td class="diffline">24 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>revchatgpt;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;chatgpt&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">25 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>edge</td><td class="diffline">25 </td><td class="diffpresent">Provides-Extra:<span class="dp">·</span>edge</td></tr>
+<tr class="diffunmodified"><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>edgegpt;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;edge&#x27;</td><td class="diffline">26 </td><td class="diffpresent">Requires-Dist:<span class="dp">·</span>edgegpt;<span class="dp">·</span>extra<span class="dp">·</span>==<span class="dp">·</span>&#x27;edge&#x27;</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td><td class="diffline">27 </td><td class="diffpresent">Description-Content-Type:<span class="dp">·</span>text/markdown</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">#<span class="dp">·</span>OpenAI<span class="dp">·</span><del>f</del>orward<del>ing<span class="dp">·</span>agent</del></td><td class="diffline">28 </td><td class="diffpresent">#<span class="dp">·</span>OpenAI<span class="dp">·</span><ins>F</ins>orward</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">##<span class="dp">·</span>简介</td><td class="diffline">29 </td><td class="diffpresent">##<span class="dp">·</span>简介</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent"><del>o</del>pen<del>ai</del><span class="dp">·</span>接口转发服务.<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">30 </td><td class="diffpresent"><ins>O</ins>pen<ins>AI</ins><span class="dp">·</span>接口转发服务.<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent">用途：<span class="dp">·</span></td><td class="diffline">31 </td><td class="diffpresent">用途：<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">解决国内无法直接访问OpenAI的问题，将该服务部署在海外服务器上，通过该服务转发OpenAI的请求。即搭建反向代理服务</td><td class="diffline">32 </td><td class="diffpresent">解决国内无法直接访问OpenAI的问题，将该服务部署在海外服务器上，通过该服务转发OpenAI的请求。即搭建反向代理服务</td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">测试地址：http://2.56.125.247:9999/v1/chat/completions<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">33 </td><td class="diffpresent">测试地址：http://2.56.125.247:9999/v1/chat/completions<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">###<span class="dp">·</span><del>已实现</del>转发<del>的</del>接口</td><td class="diffline">34 </td><td class="diffpresent">###<span class="dp">·</span>转发接口<ins>示例</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent">`https://api.openai.com`</td><td class="diffline">35 </td><td class="diffpresent">`https://api.openai.com`</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/dashboard/billing/usage`</td><td class="diffline">36 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/dashboard/billing/usage`</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/dashboard/billing/credit_grants`</td><td class="diffline">37 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/dashboard/billing/credit_grants`</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/chat/completions`</td><td class="diffline">38 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/chat/completions`</td></tr>
+<tr class="diffunmodified"><td class="diffline">39 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/completions`</td><td class="diffline">39 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/completions`</td></tr>
+<tr class="diffunmodified"><td class="diffline">40 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/models`</td><td class="diffline">40 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/models`</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/models/{model}`</td><td class="diffline">41 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/models/{model}`</td></tr>
+<tr class="diffdeleted"><td class="diffline">42 </td><td class="diffpresent">-<span class="dp">·</span>[x]<span class="dp">·</span>`/v1/edits`</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">43 </td><td class="diffpresent">##<span class="dp">·</span>服务部署</td><td class="diffline">42 </td><td class="diffpresent">##<span class="dp">·</span>服务部署</td></tr>
+<tr class="diffunmodified"><td class="diffline">44 </td><td class="diffpresent">提供两种服务部署方式,选择一种即可</td><td class="diffline">43 </td><td class="diffpresent">提供两种服务部署方式,选择一种即可</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">45 </td><td class="diffpresent">###<span class="dp">·</span>方式一:<span class="dp">·</span><span class="dp">·</span>pip</td><td class="diffline">44 </td><td class="diffpresent">###<span class="dp">·</span>方式一:<span class="dp">·</span><span class="dp">·</span>pip</td></tr>
+<tr class="diffunmodified"><td class="diffline">46 </td><td class="diffpresent">**安装**</td><td class="diffline">45 </td><td class="diffpresent">**安装**</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent">```bash</td><td class="diffline">46 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>openai-forward</td><td class="diffline">47 </td><td class="diffpresent">pip<span class="dp">·</span>install<span class="dp">·</span>openai-forward</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent">```</td><td class="diffline">48 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent">**运行转发服务**<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">49 </td><td class="diffpresent">**运行转发服务**<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">50 </td><td class="diffpresent">###<span class="dp">·</span>Option<span class="dp">·</span>1</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent">可通过`--port`指定端口号，默认为`9999`，可通过`--workers`指定工作进程数，默认为`1`</td><td class="diffline">51 </td><td class="diffpresent">可通过`--port`指定端口号，默认为`9999`，可通过`--workers`指定工作进程数，默认为`1`</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">```bash</td><td class="diffline">52 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">openai_forward<span class="dp">·</span>run<span class="dp">·</span>--port=9999<span class="dp">·</span>--wor<del>d</del>ers=1</td><td class="diffline">53 </td><td class="diffpresent">openai_forward<span class="dp">·</span>run<span class="dp">·</span>--port=9999<span class="dp">·</span>--wor<ins>k</ins>ers=1</td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent">```</td><td class="diffline">54 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent">当然也可以将<span class="dp">·</span>OPENAI_API_KEY<span class="dp">·</span>作为环境变量传入作为默认api<span class="dp">·</span>key，<span class="dp">·</span>这样客户端在请求相关路由时可以无需在Header中传入Authorization。</td><td class="diffline">55 </td><td class="diffpresent">当然也可以将<span class="dp">·</span>OPENAI_API_KEY<span class="dp">·</span>作为环境变量传入作为默认api<span class="dp">·</span>key，<span class="dp">·</span>这样客户端在请求相关路由时可以无需在Header中传入Authorization。</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent">带默认api<span class="dp">·</span>key的启动方式：</td><td class="diffline">56 </td><td class="diffpresent">带默认api<span class="dp">·</span>key的启动方式：</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent">```bash</td><td class="diffline">57 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffchanged"><td class="diffline">58 </td><td class="diffpresent">OPENAI_API_KEY=&quot;sk-xxx&quot;<span class="dp">·</span>openai_forward<span class="dp">·</span>run<span class="dp">·</span>--port=9999<span class="dp">·</span>--wor<del>d</del>ers=1</td><td class="diffline">58 </td><td class="diffpresent">OPENAI_API_KEY=&quot;sk-xxx&quot;<span class="dp">·</span>openai_forward<span class="dp">·</span>run<span class="dp">·</span>--port=9999<span class="dp">·</span>--wor<ins>k</ins>ers=1</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent">```</td><td class="diffline">59 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent">注:<span class="dp">·</span>如果既存在默认api<span class="dp">·</span>key又在请求头中传入了api<span class="dp">·</span>key，则以请求头中的api<span class="dp">·</span>key会覆盖默认api<span class="dp">·</span>key.</td><td class="diffline">60 </td><td class="diffpresent">注:<span class="dp">·</span>如果既存在默认api<span class="dp">·</span>key又在请求头中传入了api<span class="dp">·</span>key，则以请求头中的api<span class="dp">·</span>key会覆盖默认api<span class="dp">·</span>key.</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">61 </td><td class="diffpresent">###<span class="dp">·</span>Option<span class="dp">·</span>2</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">62 </td><td class="diffpresent">另一种使用nodejs的部署方式，环境中需已安装node,<span class="dp">·</span>优点是默认转发`https://api.openai.com`的所有接口路由，但是不支持设定默认api<span class="dp">·</span>key。</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">63 </td><td class="diffpresent">启动方式</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">64 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">65 </td><td class="diffpresent">openai_forward<span class="dp">·</span>node<span class="dp">·</span>--port=9999</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">66 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">61 </td><td class="diffpresent">###<span class="dp">·</span>方式二:<span class="dp">·</span>Docker<span class="dp">·</span>compose</td><td class="diffline">67 </td><td class="diffpresent">###<span class="dp">·</span>方式二:<span class="dp">·</span>Docker<span class="dp">·</span>compose</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent">下载项目根目录下的`docker-compose.yaml`文件，然后在文件路径下执行以下命令即可。</td><td class="diffline">68 </td><td class="diffpresent">下载项目根目录下的`docker-compose.yaml`文件，然后在文件路径下执行以下命令即可。</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">```bash</td><td class="diffline">69 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">64 </td><td class="diffpresent">docker-compose<span class="dp">·</span>up<span class="dp">·</span>-d</td><td class="diffline">70 </td><td class="diffpresent">docker-compose<span class="dp">·</span>up<span class="dp">·</span>-d</td></tr>
+<tr class="diffunmodified"><td class="diffline">65 </td><td class="diffpresent">```</td><td class="diffline">71 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td class="diffline">66 </td><td class="diffpresent">注：同样可以在docker-compose.yaml文件中传入环境变量OPENAI_API_KEY=sk-xxx作为默认api<span class="dp">·</span>key</td><td class="diffline">72 </td><td class="diffpresent">注：同样可以在docker-compose.yaml文件中传入环境变量OPENAI_API_KEY=sk-xxx作为默认api<span class="dp">·</span>key</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 82, 12 lines modified</td><td colspan="2">Offset 88, 17 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">82 </td><td class="diffpresent">http://{ip}:{port}/v1/chat/completions</td><td class="diffline">88 </td><td class="diffpresent">http://{ip}:{port}/v1/chat/completions</td></tr>
+<tr class="diffunmodified"><td class="diffline">83 </td><td class="diffpresent">```</td><td class="diffline">89 </td><td class="diffpresent">```</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">84 </td><td class="diffpresent">个人搭建的代理服务(仅供测试,<span class="dp">·</span>不带默认api<span class="dp">·</span>key):<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">90 </td><td class="diffpresent">个人搭建的代理服务(仅供测试,<span class="dp">·</span>不带默认api<span class="dp">·</span>key):<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">85 </td><td class="diffpresent">http://2.56.125.247:9999/v1/chat/completions<span class="dp">·</span><span class="dp">·</span></td><td class="diffline">91 </td><td class="diffpresent">http://2.56.125.247:9999/v1/chat/completions<span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">86 </td><td class="diffpresent">##<span class="dp">·</span>应用</td><td class="diffline">92 </td><td class="diffpresent">##<span class="dp">·</span>应用</td></tr>
+<tr class="diffchanged"><td class="diffline">87 </td><td class="diffpresent"><del>例如可以</del><del>在项目</del><span class="dp">·</span>[chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web)<del><span class="dp">·</span>中使用该服务<span class="dp">·</span><span class="dp">·</span></del><span class="dp">·</span></td><td class="diffline">93 </td><td class="diffpresent"><ins>###</ins><span class="dp">·</span>[chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web)<span class="dp">·</span></td></tr>
+<tr class="diffchanged"><td class="diffline">88 </td><td class="diffpresent"><del>以其</del><span class="dp">·</span>[Docker<span class="dp">·</span>Compose](https://github.com/Chanzhaoyu/chatgpt-web#docker-compose)<span class="dp">·</span><del>启动方式为例，只需修改其</del>中的`OPENAI_API_BASE_URL`为我们搭建的代理服务地址即可：</td><td class="diffline">94 </td><td class="diffpresent"><ins>修改</ins><span class="dp">·</span>[Docker<span class="dp">·</span>Compose](https://github.com/Chanzhaoyu/chatgpt-web#docker-compose)<span class="dp">·</span>中的`OPENAI_API_BASE_URL`为我们搭建的代理服务地址即可：</td></tr>
+<tr class="diffunmodified"><td class="diffline">89 </td><td class="diffpresent">```bash</td><td class="diffline">95 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffunmodified"><td class="diffline">90 </td><td class="diffpresent">OPENAI_API_BASE_URL:<span class="dp">·</span>http://2.56.125.247:9999<span class="dp">·</span></td><td class="diffline">96 </td><td class="diffpresent">OPENAI_API_BASE_URL:<span class="dp">·</span>http://2.56.125.247:9999<span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td class="diffline">91 </td><td class="diffpresent">```</td><td class="diffline">97 </td><td class="diffpresent">```</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">98 </td><td class="diffpresent">###<span class="dp">·</span>[ChatGPT-Next-Web](https://github.com/Yidadaa/ChatGPT-Next-Web)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">99 </td><td class="diffpresent">```bash</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">100 </td><td class="diffpresent">docker<span class="dp">·</span>run<span class="dp">·</span>-d<span class="dp">·</span>-p<span class="dp">·</span>3000:3000<span class="dp">·</span>-e<span class="dp">·</span>OPENAI_API_KEY=&quot;sk-xxx&quot;<span class="dp">·</span>-e<span class="dp">·</span>CODE=&quot;&lt;your<span class="dp">·</span>password&gt;&quot;<span class="dp">·</span>BASE_URL=&quot;2.56.125.247:9999&quot;<span class="dp">·</span>PROTOCOL=&quot;http&quot;<span class="dp">·</span>yidadaa/chatgpt-next-web</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">101 </td><td class="diffpresent">```</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+

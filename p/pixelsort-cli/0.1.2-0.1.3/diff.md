@@ -1,0 +1,437 @@
+# Comparing `tmp/pixelsort-cli-0.1.2.tar.gz` & `tmp/pixelsort-cli-0.1.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pixelsort-cli-0.1.2.tar", last modified: Thu Apr  6 15:10:06 2023, max compression
++gzip compressed data, was "pixelsort-cli-0.1.3.tar", last modified: Fri Apr  7 17:55:16 2023, max compression
+```
+
+## Comparing `pixelsort-cli-0.1.2.tar` & `pixelsort-cli-0.1.3.tar`
+
+### file list
+
+```diff
+@@ -1,23 +1,23 @@
+-drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-06 15:10:06.617003 pixelsort-cli-0.1.2/
+--rw-r--r--   0 dionysus  (1000) wheel      (998)     1072 2023-04-02 00:49:40.000000 pixelsort-cli-0.1.2/LICENSE
+--rw-r--r--   0 dionysus  (1000) wheel      (998)     2049 2023-04-06 15:10:06.617003 pixelsort-cli-0.1.2/PKG-INFO
+--rw-r--r--   0 dionysus  (1000) wheel      (998)     1496 2023-04-06 15:02:57.000000 pixelsort-cli-0.1.2/README.md
+--rw-r--r--   0 dionysus  (1000) wheel      (998)      879 2023-04-06 15:09:31.000000 pixelsort-cli-0.1.2/pyproject.toml
+--rw-r--r--   0 dionysus  (1000) wheel      (998)       38 2023-04-06 15:10:06.617003 pixelsort-cli-0.1.2/setup.cfg
+--rw-r--r--   0 dionysus  (1000) wheel      (998)       67 2023-04-06 13:11:27.000000 pixelsort-cli-0.1.2/setup.py
+-drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-06 15:10:06.613669 pixelsort-cli-0.1.2/src/
+-drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-06 15:10:06.617003 pixelsort-cli-0.1.2/src/pixelsort/
+--rw-r--r--   0 dionysus  (1000) wheel      (998)       85 2023-04-06 15:01:03.000000 pixelsort-cli-0.1.2/src/pixelsort/__init__.py
+--rw-r--r--   0 dionysus  (1000) wheel      (998)       69 2023-04-06 14:55:57.000000 pixelsort-cli-0.1.2/src/pixelsort/__main__.py
+--rw-r--r--   0 dionysus  (1000) wheel      (998)     3330 2023-04-06 14:56:40.000000 pixelsort-cli-0.1.2/src/pixelsort/cli.py
+--rw-r--r--   0 dionysus  (1000) wheel      (998)      234 2023-04-02 00:47:56.000000 pixelsort-cli-0.1.2/src/pixelsort/direction.py
+--rw-r--r--   0 dionysus  (1000) wheel      (998)     4630 2023-04-06 14:55:54.000000 pixelsort-cli-0.1.2/src/pixelsort/image.py
+-drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-06 15:10:06.617003 pixelsort-cli-0.1.2/src/pixelsort_cli.egg-info/
+--rw-r--r--   0 dionysus  (1000) wheel      (998)     2049 2023-04-06 15:10:06.000000 pixelsort-cli-0.1.2/src/pixelsort_cli.egg-info/PKG-INFO
+--rw-r--r--   0 dionysus  (1000) wheel      (998)      431 2023-04-06 15:10:06.000000 pixelsort-cli-0.1.2/src/pixelsort_cli.egg-info/SOURCES.txt
+--rw-r--r--   0 dionysus  (1000) wheel      (998)        1 2023-04-06 15:10:06.000000 pixelsort-cli-0.1.2/src/pixelsort_cli.egg-info/dependency_links.txt
+--rw-r--r--   0 dionysus  (1000) wheel      (998)       49 2023-04-06 15:10:06.000000 pixelsort-cli-0.1.2/src/pixelsort_cli.egg-info/entry_points.txt
+--rw-r--r--   0 dionysus  (1000) wheel      (998)       44 2023-04-06 15:10:06.000000 pixelsort-cli-0.1.2/src/pixelsort_cli.egg-info/requires.txt
+--rw-r--r--   0 dionysus  (1000) wheel      (998)       10 2023-04-06 15:10:06.000000 pixelsort-cli-0.1.2/src/pixelsort_cli.egg-info/top_level.txt
+-drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-06 15:10:06.617003 pixelsort-cli-0.1.2/test/
+--rw-r--r--   0 dionysus  (1000) wheel      (998)      377 2023-04-06 14:55:49.000000 pixelsort-cli-0.1.2/test/test_image.py
++drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-07 17:55:16.037069 pixelsort-cli-0.1.3/
++-rw-r--r--   0 dionysus  (1000) wheel      (998)     1072 2023-04-02 00:49:40.000000 pixelsort-cli-0.1.3/LICENSE
++-rw-r--r--   0 dionysus  (1000) wheel      (998)     2043 2023-04-07 17:55:16.037069 pixelsort-cli-0.1.3/PKG-INFO
++-rw-r--r--   0 dionysus  (1000) wheel      (998)     1490 2023-04-07 16:20:14.000000 pixelsort-cli-0.1.3/README.md
++-rw-r--r--   0 dionysus  (1000) wheel      (998)      884 2023-04-07 17:54:45.000000 pixelsort-cli-0.1.3/pyproject.toml
++-rw-r--r--   0 dionysus  (1000) wheel      (998)       38 2023-04-07 17:55:16.037069 pixelsort-cli-0.1.3/setup.cfg
++-rw-r--r--   0 dionysus  (1000) wheel      (998)       69 2023-04-07 16:41:27.000000 pixelsort-cli-0.1.3/setup.py
++drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-07 17:55:16.033735 pixelsort-cli-0.1.3/src/
++drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-07 17:55:16.037069 pixelsort-cli-0.1.3/src/pixelsort/
++-rw-r--r--   0 dionysus  (1000) wheel      (998)      115 2023-04-07 16:35:52.000000 pixelsort-cli-0.1.3/src/pixelsort/__init__.py
++-rw-r--r--   0 dionysus  (1000) wheel      (998)     1945 2023-04-07 16:38:22.000000 pixelsort-cli-0.1.3/src/pixelsort/__main__.py
++-rw-r--r--   0 dionysus  (1000) wheel      (998)     1470 2023-04-07 16:36:33.000000 pixelsort-cli-0.1.3/src/pixelsort/cli.py
++-rw-r--r--   0 dionysus  (1000) wheel      (998)      231 2023-04-07 16:36:51.000000 pixelsort-cli-0.1.3/src/pixelsort/direction.py
++-rw-r--r--   0 dionysus  (1000) wheel      (998)     4616 2023-04-07 17:48:37.000000 pixelsort-cli-0.1.3/src/pixelsort/image.py
++drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-07 17:55:16.037069 pixelsort-cli-0.1.3/src/pixelsort_cli.egg-info/
++-rw-r--r--   0 dionysus  (1000) wheel      (998)     2043 2023-04-07 17:55:16.000000 pixelsort-cli-0.1.3/src/pixelsort_cli.egg-info/PKG-INFO
++-rw-r--r--   0 dionysus  (1000) wheel      (998)      431 2023-04-07 17:55:16.000000 pixelsort-cli-0.1.3/src/pixelsort_cli.egg-info/SOURCES.txt
++-rw-r--r--   0 dionysus  (1000) wheel      (998)        1 2023-04-07 17:55:16.000000 pixelsort-cli-0.1.3/src/pixelsort_cli.egg-info/dependency_links.txt
++-rw-r--r--   0 dionysus  (1000) wheel      (998)       54 2023-04-07 17:55:16.000000 pixelsort-cli-0.1.3/src/pixelsort_cli.egg-info/entry_points.txt
++-rw-r--r--   0 dionysus  (1000) wheel      (998)       44 2023-04-07 17:55:16.000000 pixelsort-cli-0.1.3/src/pixelsort_cli.egg-info/requires.txt
++-rw-r--r--   0 dionysus  (1000) wheel      (998)       10 2023-04-07 17:55:16.000000 pixelsort-cli-0.1.3/src/pixelsort_cli.egg-info/top_level.txt
++drwxr-xr-x   0 dionysus  (1000) wheel      (998)        0 2023-04-07 17:55:16.037069 pixelsort-cli-0.1.3/test/
++-rw-r--r--   0 dionysus  (1000) wheel      (998)      384 2023-04-07 17:01:38.000000 pixelsort-cli-0.1.3/test/test_image.py
+```
+
+### Comparing `pixelsort-cli-0.1.2/LICENSE` & `pixelsort-cli-0.1.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `pixelsort-cli-0.1.2/PKG-INFO` & `pixelsort-cli-0.1.3/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pixelsort-cli
+-Version: 0.1.2
++Version: 0.1.3
+ Summary: A Python CLI tool for sorting pixels in images.
+ Author-email: Ferdinand Theil <f.p.theil@proton.me>
+ Project-URL: Homepage, https://github.com/Blotz/pixelsort-cli
+ Project-URL: Bug Tracker, https://github.com/Blotz/pixelsort-cli/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -31,21 +31,21 @@
+ ```bash
+ pip install git+https://github.com/Blotz/pixelsort-cli
+ ```
+ 
+ or
+ 
+ ```bash
+-pip install pixelsorter-cli
++pip install pixelsort-cli
+ ```
+ 
+ ## Examples
+ 
+ ```bash
+-pixelsorter --help
++pixelsort --help
+ ```
+ 
+ ```bash
+ usage: pixelsort [-h] [--threshold THRESHOLD] [--invert INVERT] [--reverse_sorting REVERSE_SORTING] [--output OUTPUT] image_path {up,down,left,right}
+ 
+ Command line tool for sorting pixels
+ 
+@@ -60,15 +60,15 @@
+   --invert INVERT       invert the selected area
+   --reverse_sorting REVERSE_SORTING
+                         reverse the sorting direction
+   --output OUTPUT       path to output file
+ ```
+ 
+ ```bash
+-pixelsorter  data/mountains.jpg right --threshold 0.7 --invert True --output out.png
++pixelsort  data/mountains.jpg right --threshold 0.7 --invert True --output out.png
+ ```
+ 
+ ![example 1](https://raw.githubusercontent.com/Blotz/pixelsort-cli/main/data/example1.png)
+ 
+ ---
+ 
+ ## License
+```
+
+### Comparing `pixelsort-cli-0.1.2/README.md` & `pixelsort-cli-0.1.3/README.md`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -16,21 +16,21 @@
+ ```bash
+ pip install git+https://github.com/Blotz/pixelsort-cli
+ ```
+ 
+ or
+ 
+ ```bash
+-pip install pixelsorter-cli
++pip install pixelsort-cli
+ ```
+ 
+ ## Examples
+ 
+ ```bash
+-pixelsorter --help
++pixelsort --help
+ ```
+ 
+ ```bash
+ usage: pixelsort [-h] [--threshold THRESHOLD] [--invert INVERT] [--reverse_sorting REVERSE_SORTING] [--output OUTPUT] image_path {up,down,left,right}
+ 
+ Command line tool for sorting pixels
+ 
+@@ -45,15 +45,15 @@
+   --invert INVERT       invert the selected area
+   --reverse_sorting REVERSE_SORTING
+                         reverse the sorting direction
+   --output OUTPUT       path to output file
+ ```
+ 
+ ```bash
+-pixelsorter  data/mountains.jpg right --threshold 0.7 --invert True --output out.png
++pixelsort  data/mountains.jpg right --threshold 0.7 --invert True --output out.png
+ ```
+ 
+ ![example 1](https://raw.githubusercontent.com/Blotz/pixelsort-cli/main/data/example1.png)
+ 
+ ---
+ 
+ ## License
+```
+
+### Comparing `pixelsort-cli-0.1.2/pyproject.toml` & `pixelsort-cli-0.1.3/pyproject.toml`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools>=61.0"]
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "pixelsort-cli"
+-version = "0.1.2"
++version = "0.1.3"
+ authors = [
+     {name = "Ferdinand Theil", email = "f.p.theil@proton.me"},
+ ]
+ description = "A Python CLI tool for sorting pixels in images."
+ readme = "README.md"
+ requires-python = ">=3.7"
+ classifiers = [
+@@ -23,15 +23,15 @@
+ ]
+ 
+ [project.urls]
+ "Homepage" = "https://github.com/Blotz/pixelsort-cli"
+ "Bug Tracker" = "https://github.com/Blotz/pixelsort-cli/issues"
+ 
+ [project.scripts]
+-pixelsort = "pixelsort.cli:main"
++pixelsort = "pixelsort.__main__:main"
+ 
+ [project.optional-dependencies]
+ test = [
+     'pytest'
+ ]
+ 
+ [tool.pytest.ini_options]
+```
+
+### Comparing `pixelsort-cli-0.1.2/src/pixelsort/image.py` & `pixelsort-cli-0.1.3/src/pixelsort/image.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,103 +1,105 @@
+ """image.py
+ All image processing functions
+ """
+ from pixelsort.direction import Direction
+ import numpy as np
+ import cv2
+ 
+-def process(image: np.ndarray, direction: Direction, threshold: float, invert: bool, reverse_sort: bool) -> None:
++
++def process_image(image: np.ndarray, direction: Direction, threshold: float, invert: bool, reverse_sort: bool) -> None:
+     """process the given image
+ 
+     Args:
+         image (np.ndarray): the image to processed
+         direction (Direction): the direction to sort the pixels
+         threshold (float): the threshold for the contrast mask
+         invert (bool): True if the selected area should be inverted
+         reverse_sort (bool): True if the pixels should be sorted in reverse
+     """
+     is_sort_reverse = direction in [Direction.UP, Direction.LEFT]
+-    is_vertical     = direction in [Direction.UP, Direction.DOWN]
++    is_vertical = direction in [Direction.UP, Direction.DOWN]
+ 
+     print(f"Processing image with {direction.name} direction, threshold={threshold}, invert={invert}, reverse_sort={reverse_sort}")
+ 
+     if invert:  # invert image if sorting in reverse
+-        threshold =   1 - threshold
++        threshold = 1 - threshold
+         contrast: np.ndarray = create_contrast_mask(image, threshold)
+         contrast: np.ndarray = cv2.bitwise_not(contrast)
+     else:
+         contrast: np.ndarray = create_contrast_mask(image, threshold)
+     # show_image(contrast)
+ 
+     # flip sort direction if sorting in reverse
+     if reverse_sort:
+         is_sort_reverse = not is_sort_reverse
+ 
+     if is_vertical:
+         for x in range(image.shape[1]):
+             column_contrast = contrast[:, x]
+-            column_image    = image[:, x]
++            column_image = image[:, x]
+             process_slice(column_contrast, column_image, is_sort_reverse)
+     else:
+         for y in range(image.shape[0]):
+             row_contrast = contrast[y, :]
+-            row_image    = image[y, :]
++            row_image = image[y, :]
+             process_slice(row_contrast, row_image, is_sort_reverse)
+-    
++
+     print("Done")
+     # show_image(image)
+ 
+ 
+ def process_slice(contrast_slice: np.ndarray, image_slice: np.ndarray, is_sort_reverse: bool) -> None:
+     """process a slice of the image
+ 
+     Args:
+         contrast_slice (np.ndarray): 1d slice of the contrast mask
+         image_slice (np.ndarray): 1d slice of the image
+         is_sort_reverse (bool): True if the pixels should be sorted in reverse
+     """
+-    black_pixels,  = np.where(contrast_slice == 0)
+-    white_pixels,  = np.where(contrast_slice == 255)
++    black_pixels, = np.where(contrast_slice == 0)
++    white_pixels, = np.where(contrast_slice == 255)
+ 
+     # loop through black pixels in this row
+     while black_pixels.size > 0 or white_pixels.size > 0:
+         # get the next black pixel
+         if black_pixels.size == 0:
+             x1 = contrast_slice.shape[0]
+         else:
+             x1 = black_pixels[0]
+-        
++
+         # remove all white pixels before the next black pixel
+         white_pixels = white_pixels[white_pixels > x1]
+         # get the next white pixel
+         if white_pixels.size == 0:  # no more white pixels
+-            x2 = contrast_slice.shape[0] 
++            x2 = contrast_slice.shape[0]
+         else:
+             x2 = white_pixels[0] - 1
+-        
++
+         # sort pixels by luminance
+         sort_pixels(image_slice[x1:x2], reverse=is_sort_reverse)
+         # print(x1, x2, end=" ")
+ 
+         # remove all black pixels before the next white pixel
+         black_pixels = black_pixels[black_pixels > x2]
+ 
++
+ def create_contrast_mask(image: np.ndarray, threshold: float) -> np.ndarray:
+     """Create a contrast mask for the given image
+ 
+     Args:
+         image (np.ndarray): the image to create the mask for
+         threshold (float): the threshold for the contrast mask
+ 
+     Returns:
+         np.ndarray: a contrast mask
+     """
+     # create contrast mask
+     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+-    mean, std  = cv2.meanStdDev(gray_image)
++    mean, std = cv2.meanStdDev(gray_image)
+     # Calculate the lower and upper threshold values
+     lower_thresh = int(mean - threshold * std)
+     upper_thresh = int(mean + threshold * std)
+     # generate mask
+     contrast: np.ndarray = cv2.inRange(gray_image, lower_thresh, upper_thresh)
+     return contrast
+ 
+@@ -107,25 +109,27 @@
+ 
+     Args:
+         image (np.ndarray): the 1d array to sort
+         reverse (bool): sort in reverse order
+     """
+     # sort pixels by luminance
+     # luminance = (r * 0.3) + (g * 0.59) + (b * 0.11)
+-    if image.size < 2:  # no point in sorting
++    # no point in sorting if there are less than 2 pixels
++    if image.size <= 2*3:  # 2 pixels, 3 channels
+         return
+ 
+     # sort by luminance
+-    sorted_image = np.array(sorted(
+-        image,
+-        key=lambda x: (x[0] * 0.3) + (x[1] * 0.59) + (x[2] * 0.11),
+-        reverse=reverse
+-        ))
+-    # copy data to original array
+-    image[:] = sorted_image
++    luminance = np.sum(image * [0.3, 0.59, 0.11], axis=-1)
++    index = np.argsort(luminance)
++
++    if reverse:
++        index = index[::-1]
++
++    image[:] = image[index]
++
+ 
+ def show_image(image: np.ndarray) -> None:
+     cv2.imshow("image", image)
+     # wait for esc
+     while True:
+         key = cv2.waitKey(1)
+         if key == 27:
+```
+
+### Comparing `pixelsort-cli-0.1.2/src/pixelsort_cli.egg-info/PKG-INFO` & `pixelsort-cli-0.1.3/src/pixelsort_cli.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pixelsort-cli
+-Version: 0.1.2
++Version: 0.1.3
+ Summary: A Python CLI tool for sorting pixels in images.
+ Author-email: Ferdinand Theil <f.p.theil@proton.me>
+ Project-URL: Homepage, https://github.com/Blotz/pixelsort-cli
+ Project-URL: Bug Tracker, https://github.com/Blotz/pixelsort-cli/issues
+ Classifier: Programming Language :: Python :: 3
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Operating System :: OS Independent
+@@ -31,21 +31,21 @@
+ ```bash
+ pip install git+https://github.com/Blotz/pixelsort-cli
+ ```
+ 
+ or
+ 
+ ```bash
+-pip install pixelsorter-cli
++pip install pixelsort-cli
+ ```
+ 
+ ## Examples
+ 
+ ```bash
+-pixelsorter --help
++pixelsort --help
+ ```
+ 
+ ```bash
+ usage: pixelsort [-h] [--threshold THRESHOLD] [--invert INVERT] [--reverse_sorting REVERSE_SORTING] [--output OUTPUT] image_path {up,down,left,right}
+ 
+ Command line tool for sorting pixels
+ 
+@@ -60,15 +60,15 @@
+   --invert INVERT       invert the selected area
+   --reverse_sorting REVERSE_SORTING
+                         reverse the sorting direction
+   --output OUTPUT       path to output file
+ ```
+ 
+ ```bash
+-pixelsorter  data/mountains.jpg right --threshold 0.7 --invert True --output out.png
++pixelsort  data/mountains.jpg right --threshold 0.7 --invert True --output out.png
+ ```
+ 
+ ![example 1](https://raw.githubusercontent.com/Blotz/pixelsort-cli/main/data/example1.png)
+ 
+ ---
+ 
+ ## License
+```
+
