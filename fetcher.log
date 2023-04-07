@@ -3973,3 +3973,34 @@
 [2023-04-07 22:27:23] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:27:24] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:27:24] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:30:21] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622796]
+[2023-04-07 22:30:26] INFO root fetch - main [MainThread]: Found 5 changed packages
+[2023-04-07 22:30:26] INFO root fetch - processPackages [easy-reed]: New version: [0.1.5] Old Version: [0.1.4]
+[2023-04-07 22:30:26] INFO root fetch - processPackages [web-utils-soft]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 22:30:26] INFO root fetch - processPackages [igwn-alert-overseer]: New version: [0.6.0] Old Version: [0.5.2]
+[2023-04-07 22:30:26] INFO root fetch - processPackages [heartfelt-tools]: New version: [1.0.5] Old Version: [0.7.0]
+[2023-04-07 22:30:26] INFO root fetch - processPackages [histomicsui]: New version: [1.4.3.dev5] Old Version: [1.4.3.dev3]
+[2023-04-07 22:30:26] INFO root fetch - processPackages [easy-reed]: Downloading https://files.pythonhosted.org/packages/2a/c2/5243ad4e6b8269631927cc3fb4601454122357ee668803061a3e363c5b20/easy_reed-0.1.4.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [heartfelt-tools]: Downloading https://files.pythonhosted.org/packages/10/89/5fd09fdf1761ccbdbb352c67c7675a0fe57b6e77bdc3e5207a2ed5e92df7/heartfelt_tools-0.7.0.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [histomicsui]: Downloading https://files.pythonhosted.org/packages/c2/d8/639aa4de80217923239136af3a7e5e9113edc10b110458dc71408dae7635/histomicsui-1.4.3.dev3.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [igwn-alert-overseer]: Downloading https://files.pythonhosted.org/packages/cb/af/1d03fab3c453facc7557271568ef97e0c404cacf86d8f9b471c79ffef1a6/igwn-alert-overseer-0.5.2.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [web-utils-soft]: Downloading https://files.pythonhosted.org/packages/67/1e/ac6e6ef67018b30b685131ad574248825c5e74b777aece10ad6064a06963/web-utils-soft-0.1.1.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [easy-reed]: Downloading https://files.pythonhosted.org/packages/6e/6d/8df5d04d714e4a3dfb5f308953c6e6646250fb0e19ab128025adafbd59d2/easy_reed-0.1.5.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [easy-reed]: executing diffoscope
+[2023-04-07 22:30:26] INFO root fetch - processPackages [easy-reed]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/easy_reed-0.1.4.tar.gz tmp/easy_reed-0.1.5.tar.gz --markdown 20230407/e/easy-reed/0.1.4-0.1.5/diff.md
+[2023-04-07 22:30:26] INFO root fetch - processPackages [histomicsui]: Downloading https://files.pythonhosted.org/packages/7b/ea/1735482a359845530d06a6140f152894429ed35e7dd2b0bdd8245c5753ee/histomicsui-1.4.3.dev5.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [web-utils-soft]: executing diffoscope
+[2023-04-07 22:30:26] INFO root fetch - processPackages [web-utils-soft]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/web-utils-soft-0.1.0.tar.gz tmp/web-utils-soft-0.1.1.tar.gz --markdown 20230407/w/web-utils-soft/0.1.0-0.1.1/diff.md
+[2023-04-07 22:30:26] INFO root fetch - processPackages [heartfelt-tools]: Downloading https://files.pythonhosted.org/packages/c5/ec/6ae986f4cbe2bce26f18743456a0742814019cfdf98a5a180e4255ee1d2c/heartfelt_tools-1.0.5.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [igwn-alert-overseer]: Downloading https://files.pythonhosted.org/packages/0b/dc/cde32bf2459075fac3a820ad2b8be489e7d3424d60a39fa72595f7675ac8/igwn-alert-overseer-0.6.0.tar.gz
+[2023-04-07 22:30:26] INFO root fetch - processPackages [heartfelt-tools]: executing diffoscope
+[2023-04-07 22:30:26] INFO root fetch - processPackages [heartfelt-tools]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/heartfelt_tools-0.7.0.tar.gz tmp/heartfelt_tools-1.0.5.tar.gz --markdown 20230407/h/heartfelt-tools/0.7.0-1.0.5/diff.md
+[2023-04-07 22:30:26] INFO root fetch - processPackages [igwn-alert-overseer]: executing diffoscope
+[2023-04-07 22:30:26] INFO root fetch - processPackages [igwn-alert-overseer]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/igwn-alert-overseer-0.5.2.tar.gz tmp/igwn-alert-overseer-0.6.0.tar.gz --markdown 20230407/i/igwn-alert-overseer/0.5.2-0.6.0/diff.md
+[2023-04-07 22:30:26] INFO root fetch - processPackages [histomicsui]: executing diffoscope
+[2023-04-07 22:30:26] INFO root fetch - processPackages [histomicsui]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/histomicsui-1.4.3.dev3.tar.gz tmp/histomicsui-1.4.3.dev5.tar.gz --markdown 20230407/h/histomicsui/1.4.3.dev3-1.4.3.dev5/diff.md
+[2023-04-07 22:30:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:30:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:30:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:30:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:30:28] INFO root fetch - main [MainThread]: success
