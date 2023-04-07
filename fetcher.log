@@ -4004,3 +4004,16 @@
 [2023-04-07 22:30:27] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:30:27] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:30:28] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:31:21] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622807]
+[2023-04-07 22:31:26] INFO root fetch - main [MainThread]: Found 2 changed packages
+[2023-04-07 22:31:26] INFO root fetch - processPackages [web-utils-soft]: New version: [0.1.2] Old Version: [0.1.1]
+[2023-04-07 22:31:26] INFO root fetch - processPackages [ovos-utils]: New version: [0.0.9a1] Old Version: [0.0.9]
+[2023-04-07 22:31:26] INFO root fetch - processPackages [web-utils-soft]: Downloading https://files.pythonhosted.org/packages/f4/76/b33a166c3fcad3f85e480487f772bbb015c832bc444ea3ab3af6143e584b/web-utils-soft-0.1.2.tar.gz
+[2023-04-07 22:31:26] INFO root fetch - processPackages [ovos-utils]: Downloading https://files.pythonhosted.org/packages/d7/4b/e499972fb3bf80dfa8a9dd2f431fcad633697e759fa8f256a9945e45a75e/ovos_utils-0.0.9.tar.gz
+[2023-04-07 22:31:26] INFO root fetch - processPackages [web-utils-soft]: executing diffoscope
+[2023-04-07 22:31:26] INFO root fetch - processPackages [web-utils-soft]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/web-utils-soft-0.1.1.tar.gz tmp/web-utils-soft-0.1.2.tar.gz --markdown 20230407/w/web-utils-soft/0.1.1-0.1.2/diff.md
+[2023-04-07 22:31:27] INFO root fetch - processPackages [ovos-utils]: Downloading https://files.pythonhosted.org/packages/87/ec/09417f2334058aa6de64c90cd4a839ddd15a671ba16f1bed26c98da17d31/ovos_utils-0.0.9a1.tar.gz
+[2023-04-07 22:31:27] INFO root fetch - processPackages [ovos-utils]: executing diffoscope
+[2023-04-07 22:31:27] INFO root fetch - processPackages [ovos-utils]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ovos_utils-0.0.9.tar.gz tmp/ovos_utils-0.0.9a1.tar.gz --markdown 20230407/o/ovos-utils/0.0.9-0.0.9a1/diff.md
+[2023-04-07 22:31:28] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:31:28] INFO root fetch - main [MainThread]: success
