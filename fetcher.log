@@ -3709,3 +3709,44 @@
 [2023-04-07 22:07:04] INFO root fetch - processPackages [dive-into-graphs]: executing diffoscope
 [2023-04-07 22:07:04] INFO root fetch - processPackages [dive-into-graphs]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/dive_into_graphs-1.0.0.tar.gz tmp/dive_into_graphs-1.1.0.tar.gz --markdown 20230407/d/dive-into-graphs/1.0.0-1.1.0/diff.md
 [2023-04-07 22:07:08] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:08:41] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622615]
+[2023-04-07 22:08:46] INFO root fetch - main [MainThread]: Found 7 changed packages
+[2023-04-07 22:08:46] INFO root fetch - processPackages [metaseg]: New version: [0.2.2] Old Version: [0.2.1]
+[2023-04-07 22:08:46] INFO root fetch - processPackages [avasar]: New version: [0.7.1] Old Version: [0.7.0]
+[2023-04-07 22:08:46] INFO root fetch - processPackages [botocore-stubs]: New version: [1.29.99] Old Version: [1.29.98]
+[2023-04-07 22:08:46] INFO root fetch - processPackages [aim-ui]: New version: [4.0.0.dev2] Old Version: [4.0.0.dev1]
+[2023-04-07 22:08:46] INFO root fetch - processPackages [aim]: New version: [4.0.0.dev2] Old Version: [4.0.0.dev1]
+[2023-04-07 22:08:46] INFO root fetch - processPackages [botocore-stubs]: Downloading https://files.pythonhosted.org/packages/96/54/40b30a6094b51328e233ea7bcc80f355c48a2fafaf1ce3cec391a1d72598/botocore_stubs-1.29.98.tar.gz
+[2023-04-07 22:08:46] INFO root fetch - processPackages [aim-ui]: Downloading https://files.pythonhosted.org/packages/86/07/ef607509da84045ec5b3baed6629eb8646078cfbac6de7a821acabe9c217/aim-ui-4.0.0.dev1.tar.gz
+[2023-04-07 22:08:46] INFO root fetch - processPackages [metaseg]: Downloading https://files.pythonhosted.org/packages/c7/39/f51d3978e094cf765ae229e0e4f50dd163c465abf5793565de49f6b447e3/metaseg-0.2.1.tar.gz
+[2023-04-07 22:08:46] INFO root fetch - processPackages [avasar]: Downloading https://files.pythonhosted.org/packages/7a/65/af9d1fe775c3bc9eb4a708c7ac269d82cb87c23b066c13c3083ac3166064/avasar-0.7.1.tar.gz
+[2023-04-07 22:08:46] INFO root fetch - processPackages [botocore-stubs]: Downloading https://files.pythonhosted.org/packages/38/ab/72974332ff9e3d31c7c86072032f8f2cd0daa9a0af4a7e93ea71e8305b2a/botocore_stubs-1.29.99.tar.gz
+[2023-04-07 22:08:46] INFO root fetch - processPackages [avasar]: executing diffoscope
+[2023-04-07 22:08:46] INFO root fetch - processPackages [avasar]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/avasar-0.7.0.tar.gz tmp/avasar-0.7.1.tar.gz --markdown 20230407/a/avasar/0.7.0-0.7.1/diff.md
+[2023-04-07 22:08:46] INFO root fetch - processPackages [aim]: Downloading https://files.pythonhosted.org/packages/92/23/72195a2d9c5ea1f4a4b4484dc16391186da1869aa3655531843b6b9db49f/aim-4.0.0.dev1.tar.gz
+[2023-04-07 22:08:46] INFO root fetch - processPackages [botocore-stubs]: executing diffoscope
+[2023-04-07 22:08:46] INFO root fetch - processPackages [botocore-stubs]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/botocore_stubs-1.29.98.tar.gz tmp/botocore_stubs-1.29.99.tar.gz --markdown 20230407/b/botocore-stubs/1.29.98-1.29.99/diff.md
+[2023-04-07 22:08:46] INFO root fetch - processPackages [metaseg]: Downloading https://files.pythonhosted.org/packages/8b/36/b88dc8c7d1ad9a7299a2ec5f15012860f06e3cb4f73e66eaf3243d794f50/metaseg-0.2.2.tar.gz
+[2023-04-07 22:08:47] INFO root fetch - processPackages [metaseg]: executing diffoscope
+[2023-04-07 22:08:47] INFO root fetch - processPackages [metaseg]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/metaseg-0.2.1.tar.gz tmp/metaseg-0.2.2.tar.gz --markdown 20230407/m/metaseg/0.2.1-0.2.2/diff.md
+[2023-04-07 22:08:47] WARNING root fetch - processPackages [aim-ui]: Skipping package: exceeds size limit 22058272>=10485760
+[2023-04-07 22:08:47] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:08:47] INFO root fetch - processPackages [awsdf]: New version: [0.1.9] Old Version: [0.1.8]
+[2023-04-07 22:08:47] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:08:47] INFO root fetch - processPackages [awsdf]: Downloading https://files.pythonhosted.org/packages/06/65/1c5eb40f87c9f6f6d70c4b49bbfe394e42a2669c10abe51baf611c2ab4a5/awsdf-0.1.8.tar.gz
+[2023-04-07 22:08:47] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:08:47] INFO root fetch - processPackages [tdbug]: New version: [1.0.1] Old Version: [1.0.0]
+[2023-04-07 22:08:47] INFO root fetch - processPackages [tdbug]: Downloading https://files.pythonhosted.org/packages/46/47/d691c3afe07bdfcd502dda75b28df08d618ff04c403bb6bd23831428d2bd/tdbug-1.0.0.tar.gz
+[2023-04-07 22:08:48] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:08:48] INFO root fetch - processPackages [awsdf]: Downloading https://files.pythonhosted.org/packages/a0/3c/f071cb672b05a3feeabe3fc60450799bea945ff7055c6ad881656883f43b/awsdf-0.1.9.tar.gz
+[2023-04-07 22:08:48] INFO root fetch - processPackages [tdbug]: Downloading https://files.pythonhosted.org/packages/4e/c4/dbbaa2794e539cd4202aa9981401837b7bac674e8fcb0456ca7ea39c20c8/tdbug-1.0.1.tar.gz
+[2023-04-07 22:08:48] INFO root fetch - processPackages [tdbug]: executing diffoscope
+[2023-04-07 22:08:48] INFO root fetch - processPackages [tdbug]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/tdbug-1.0.0.tar.gz tmp/tdbug-1.0.1.tar.gz --markdown 20230407/t/tdbug/1.0.0-1.0.1/diff.md
+[2023-04-07 22:08:48] INFO root fetch - processPackages [awsdf]: executing diffoscope
+[2023-04-07 22:08:48] INFO root fetch - processPackages [awsdf]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/awsdf-0.1.8.tar.gz tmp/awsdf-0.1.9.tar.gz --markdown 20230407/a/awsdf/0.1.8-0.1.9/diff.md
+[2023-04-07 22:08:49] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:08:49] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:08:49] INFO root fetch - processPackages [aim]: Downloading https://files.pythonhosted.org/packages/08/0f/3ed478f7f380031719a707d8d9edc0bfd58bc341beb82735c76c5c3e0f00/aim-4.0.0.dev2.tar.gz
+[2023-04-07 22:08:57] INFO root fetch - processPackages [aim]: executing diffoscope
+[2023-04-07 22:08:57] INFO root fetch - processPackages [aim]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/aim-4.0.0.dev1.tar.gz tmp/aim-4.0.0.dev2.tar.gz --markdown 20230407/a/aim/4.0.0.dev1-4.0.0.dev2/diff.md
+[2023-04-07 22:09:06] INFO root fetch - main [MainThread]: success
