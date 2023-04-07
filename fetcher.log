@@ -4017,3 +4017,68 @@
 [2023-04-07 22:31:27] INFO root fetch - processPackages [ovos-utils]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ovos_utils-0.0.9.tar.gz tmp/ovos_utils-0.0.9a1.tar.gz --markdown 20230407/o/ovos-utils/0.0.9-0.0.9a1/diff.md
 [2023-04-07 22:31:28] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:31:28] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:15] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622823]
+[2023-04-07 22:36:20] INFO root fetch - main [MainThread]: Found 14 changed packages
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-bosun]: New version: [9.1.1b1] Old Version: [9.0.6]
+[2023-04-07 22:36:20] WARNING root fetch - processPackages [SteamCharts]: Skipping, unable to determine old version
+[2023-04-07 22:36:20] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-mlops-connected-client]: New version: [9.1.1b1] Old Version: [9.0.6]
+[2023-04-07 22:36:20] INFO root fetch - processPackages [robowebserver]: New version: [0.1.6] Old Version: [0.1.5]
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-mlops]: New version: [9.1.1b1] Old Version: [9.0.6]
+[2023-04-07 22:36:20] WARNING root fetch - processPackages [yaml-scripts]: Skipping, unable to determine old version
+[2023-04-07 22:36:20] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:36:20] INFO root fetch - processPackages [ipywidgets-gallery]: New version: [0.15] Old Version: [0.14]
+[2023-04-07 22:36:20] INFO root fetch - processPackages [robowebserver]: Downloading https://files.pythonhosted.org/packages/6d/5a/2bc8e098030a880c0f12d04adda4d5265e0a49fcea3e8aaba0aafa65fd4e/robowebserver-0.1.5.tar.gz
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-bosun]: Downloading https://files.pythonhosted.org/packages/5c/13/68c2edc9fd95346c850ae9348d95f4a137ba57ea3aa44cb9aa5fc0b7af31/datarobot_bosun-9.0.6-py3-none-any.whl
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-mlops-connected-client]: Downloading https://files.pythonhosted.org/packages/2b/e9/ec8b269595d4fe5823109786930c6d9032fd55f3594b9d010bb43c586602/datarobot_mlops_connected_client-9.0.6-py3-none-any.whl
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-mlops]: Downloading https://files.pythonhosted.org/packages/d0/8a/510cf36e99364d82b775d7fc2b7836d9852c939c5fa7625fa91967ea08a7/datarobot_mlops-9.0.6-py2.py3-none-any.whl
+[2023-04-07 22:36:20] INFO root fetch - processPackages [ipywidgets-gallery]: Downloading https://files.pythonhosted.org/packages/98/b1/3e960fcaadac142246e1bedc37d3a2f9b740beae4ca86cb5661b2b972262/ipywidgets_gallery-0.14.tar.gz
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-bosun]: Downloading https://files.pythonhosted.org/packages/15/c4/f5ed7326a891d20aa77f3d2c040f96cd019edccba0d30809b9657de93734/datarobot_bosun-9.1.1b1-py3-none-any.whl
+[2023-04-07 22:36:20] INFO root fetch - processPackages [ipywidgets-gallery]: Downloading https://files.pythonhosted.org/packages/11/4c/f6e7b1862e7bb2e539f31705244691488cb0e1b5eae00dc4a15ecf198b39/ipywidgets_gallery-0.15.tar.gz
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-mlops-connected-client]: Downloading https://files.pythonhosted.org/packages/61/2a/72cf291be99ab74b598b7ac90225f1c409dd45758085589933120f997d2d/datarobot_mlops_connected_client-9.1.1b1-py3-none-any.whl
+[2023-04-07 22:36:20] INFO root fetch - processPackages [datarobot-mlops]: Downloading https://files.pythonhosted.org/packages/5b/4e/df0b9f5d6804a2fd06a617d49314678e38de63d6e748358c64690f8cca00/datarobot_mlops-9.1.1b1-py3-none-any.whl
+[2023-04-07 22:36:21] INFO root fetch - processPackages [ipywidgets-gallery]: executing diffoscope
+[2023-04-07 22:36:21] INFO root fetch - processPackages [ipywidgets-gallery]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ipywidgets_gallery-0.14.tar.gz tmp/ipywidgets_gallery-0.15.tar.gz --markdown 20230407/i/ipywidgets-gallery/0.14-0.15/diff.md
+[2023-04-07 22:36:21] INFO root fetch - processPackages [datarobot-mlops-connected-client]: executing diffoscope
+[2023-04-07 22:36:21] INFO root fetch - processPackages [datarobot-mlops-connected-client]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/datarobot_mlops_connected_client-9.0.6-py3-none-any.whl.zip tmp/datarobot_mlops_connected_client-9.1.1b1-py3-none-any.whl.zip --markdown 20230407/d/datarobot-mlops-connected-client/9.0.6-9.1.1b1/diff.md
+[2023-04-07 22:36:21] INFO root fetch - processPackages [datarobot-bosun]: executing diffoscope
+[2023-04-07 22:36:21] INFO root fetch - processPackages [datarobot-bosun]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/datarobot_bosun-9.0.6-py3-none-any.whl.zip tmp/datarobot_bosun-9.1.1b1-py3-none-any.whl.zip --markdown 20230407/d/datarobot-bosun/9.0.6-9.1.1b1/diff.md
+[2023-04-07 22:36:21] INFO root fetch - processPackages [datarobot-mlops]: executing diffoscope
+[2023-04-07 22:36:21] INFO root fetch - processPackages [datarobot-mlops]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/datarobot_mlops-9.0.6-py2.py3-none-any.whl.zip tmp/datarobot_mlops-9.1.1b1-py3-none-any.whl.zip --markdown 20230407/d/datarobot-mlops/9.0.6-9.1.1b1/diff.md
+[2023-04-07 22:36:22] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:22] INFO root fetch - processPackages [temporal-lib]: New version: [0.0.6] Old Version: [0.0.5]
+[2023-04-07 22:36:22] INFO root fetch - processPackages [temporal-lib]: Downloading https://files.pythonhosted.org/packages/ad/68/4f1cda7f64401ce99ff1b735fa514ff7dc15301a328586a0b4c4e56813fa/temporal-lib-0.0.5.tar.gz
+[2023-04-07 22:36:22] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:22] WARNING root fetch - processPackages [startstop]: Skipping, unable to determine old version
+[2023-04-07 22:36:22] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:36:22] INFO root fetch - processPackages [robowebserver]: New version: [0.1.6] Old Version: [0.1.5]
+[2023-04-07 22:36:22] INFO root fetch - processPackages [robowebserver]: Downloading https://files.pythonhosted.org/packages/6d/5a/2bc8e098030a880c0f12d04adda4d5265e0a49fcea3e8aaba0aafa65fd4e/robowebserver-0.1.5.tar.gz
+[2023-04-07 22:36:22] INFO root fetch - processPackages [temporal-lib]: Downloading https://files.pythonhosted.org/packages/0a/46/0a942d0e3457987217c62168f0e2c374fc3383e0a52fc08ba1af15763765/temporal-lib-0.0.6.tar.gz
+[2023-04-07 22:36:22] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:22] INFO root fetch - processPackages [negar-gui]: New version: [0.7.3] Old Version: [0.7.2]
+[2023-04-07 22:36:22] INFO root fetch - processPackages [temporal-lib]: executing diffoscope
+[2023-04-07 22:36:22] INFO root fetch - processPackages [temporal-lib]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/temporal-lib-0.0.5.tar.gz tmp/temporal-lib-0.0.6.tar.gz --markdown 20230407/t/temporal-lib/0.0.5-0.0.6/diff.md
+[2023-04-07 22:36:22] INFO root fetch - processPackages [negar-gui]: Downloading https://files.pythonhosted.org/packages/3c/5f/0d6db43b1e23bb61652a795424e09f08699e391cabc0a3d63221727a7a9b/negar-gui-0.7.3.tar.gz
+[2023-04-07 22:36:23] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:23] INFO root fetch - processPackages [django-more-admin-filters]: New version: [1.6] Old Version: [1.4]
+[2023-04-07 22:36:23] INFO root fetch - processPackages [negar-gui]: executing diffoscope
+[2023-04-07 22:36:23] INFO root fetch - processPackages [negar-gui]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/negar-gui-0.7.2.tar.gz tmp/negar-gui-0.7.3.tar.gz --markdown 20230407/n/negar-gui/0.7.2-0.7.3/diff.md
+[2023-04-07 22:36:23] INFO root fetch - processPackages [django-more-admin-filters]: Downloading https://files.pythonhosted.org/packages/d1/5e/2c7071ce90de67c6cbdf6a6ea7b84fd168126d9701a7249c675370c64541/django-more-admin-filters-1.4.tar.gz
+[2023-04-07 22:36:23] INFO root fetch - processPackages [django-more-admin-filters]: Downloading https://files.pythonhosted.org/packages/40/1d/6e97682bd4d3cf5e7125e17255d6512f16cf59a46df2d84c6b0e7bc0e243/django-more-admin-filters-1.6.tar.gz
+[2023-04-07 22:36:23] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:23] ERROR root fetch - processPackages [binance-data-exporter]: Unable to get metadata: No such project 'binance-data-exporter'
+[2023-04-07 22:36:23] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:36:23] WARNING root fetch - processPackages [pandas2pg-adolfoj]: Skipping, unable to determine old version
+[2023-04-07 22:36:23] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:36:23] INFO root fetch - processPackages [django-more-admin-filters]: executing diffoscope
+[2023-04-07 22:36:23] INFO root fetch - processPackages [django-more-admin-filters]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/django-more-admin-filters-1.4.tar.gz tmp/django-more-admin-filters-1.6.tar.gz --markdown 20230407/d/django-more-admin-filters/1.4-1.6/diff.md
+[2023-04-07 22:36:24] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:24] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:37] INFO root fetch - processPackages [robowebserver]: Downloading https://files.pythonhosted.org/packages/20/b0/fea2ac9aa0bea9bc10903421ebab6d04800d31a5cfbbf2f0369d0318c8a1/robowebserver-0.1.6.tar.gz
+[2023-04-07 22:36:37] INFO root fetch - processPackages [robowebserver]: Downloading https://files.pythonhosted.org/packages/20/b0/fea2ac9aa0bea9bc10903421ebab6d04800d31a5cfbbf2f0369d0318c8a1/robowebserver-0.1.6.tar.gz
+[2023-04-07 22:36:48] INFO root fetch - processPackages [robowebserver]: executing diffoscope
+[2023-04-07 22:36:48] INFO root fetch - processPackages [robowebserver]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/robowebserver-0.1.5.tar.gz tmp/robowebserver-0.1.6.tar.gz --markdown 20230407/r/robowebserver/0.1.5-0.1.6/diff.md
+[2023-04-07 22:36:48] INFO root fetch - processPackages [robowebserver]: executing diffoscope
+[2023-04-07 22:36:48] INFO root fetch - processPackages [robowebserver]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/robowebserver-0.1.5.tar.gz tmp/robowebserver-0.1.6.tar.gz --markdown 20230407/r/robowebserver/0.1.5-0.1.6/diff.md
+[2023-04-07 22:36:51] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:36:51] INFO root fetch - main [MainThread]: success
