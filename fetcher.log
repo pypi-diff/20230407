@@ -1397,3 +1397,123 @@
 [2023-04-07 18:42:47] INFO root fetch - processPackages [ckanext-dcat-usmetadata]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ckanext-dcat_usmetadata-0.3.9.tar.gz tmp/ckanext-dcat_usmetadata-0.4.0.tar.gz --html 20230407/c/ckanext-dcat-usmetadata/0.3.9-0.4.0/index.html --text 20230407/c/ckanext-dcat-usmetadata/0.3.9-0.4.0/diff.txt --markdown 20230407/c/ckanext-dcat-usmetadata/0.3.9-0.4.0/diff.md
 [2023-04-07 18:42:48] INFO root fetch - main [MainThread]: success
 [2023-04-07 18:42:53] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:52:57] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17621007]
+[2023-04-07 18:53:02] INFO root fetch - main [MainThread]: Found 23 changed packages
+[2023-04-07 18:53:02] INFO root fetch - processPackages [reqauto]: New version: [0.1.7] Old Version: [0.1.6]
+[2023-04-07 18:53:02] INFO root fetch - processPackages [pulumi-aws-native]: New version: [0.9.1a1641826769] Old Version: [0.9.1a1641824984]
+[2023-04-07 18:53:02] INFO root fetch - processPackages [Digikam-DB]: New version: [0.2.1] Old Version: [0.2.0]
+[2023-04-07 18:53:02] INFO root fetch - processPackages [molfeat]: New version: [0.8.5] Old Version: [0.8.4]
+[2023-04-07 18:53:02] INFO root fetch - processPackages [pip-tools]: New version: [6.9.0] Old Version: [6.8.0]
+[2023-04-07 18:53:02] INFO root fetch - processPackages [reqauto]: Downloading https://files.pythonhosted.org/packages/1a/45/420c41f672501a1b711c184f868ca3640ea3889158ee300db67033d64ac1/reqauto-0.1.6.tar.gz
+[2023-04-07 18:53:02] INFO root fetch - processPackages [Digikam-DB]: Downloading https://files.pythonhosted.org/packages/d2/5c/a3568fe810d73dbc2f0b6cf24541b60302b24719c80801b1d2213608c118/Digikam-DB-0.2.0.tar.gz
+[2023-04-07 18:53:02] INFO root fetch - processPackages [pip-tools]: Downloading https://files.pythonhosted.org/packages/1f/79/1a4eee18c8ab0afc3b8f39460684951769053a0eda7d4d319af965e5701a/pip-tools-6.8.0.tar.gz
+[2023-04-07 18:53:03] INFO root fetch - processPackages [molfeat]: Downloading https://files.pythonhosted.org/packages/b7/a0/6374b1b8430d523388c79b23939968b94f1b7cbe18e240539595e661564a/molfeat-0.8.5.tar.gz
+[2023-04-07 18:53:03] INFO root fetch - processPackages [Digikam-DB]: Downloading https://files.pythonhosted.org/packages/12/53/73dccb8e159821d9fb5449774c35ef02d301735aaf2eeb0921cefd1077f3/Digikam-DB-0.2.1.tar.gz
+[2023-04-07 18:53:03] INFO root fetch - processPackages [pulumi-aws-native]: executing diffoscope
+[2023-04-07 18:53:03] INFO root fetch - processPackages [pulumi-aws-native]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pulumi_aws_native-0.9.1a1641824984.tar.gz tmp/pulumi_aws_native-0.9.1a1641826769.tar.gz --html 20230407/p/pulumi-aws-native/0.9.1a1641824984-0.9.1a1641826769/index.html --text 20230407/p/pulumi-aws-native/0.9.1a1641824984-0.9.1a1641826769/diff.txt --markdown 20230407/p/pulumi-aws-native/0.9.1a1641824984-0.9.1a1641826769/diff.md
+[2023-04-07 18:53:03] INFO root fetch - processPackages [reqauto]: Downloading https://files.pythonhosted.org/packages/cc/b7/a88445b5ec2dfc74679e67a701b5020ba1546023ff8a63a5a2f7301ceb43/reqauto-0.1.7.tar.gz
+[2023-04-07 18:53:03] INFO root fetch - processPackages [reqauto]: executing diffoscope
+[2023-04-07 18:53:03] INFO root fetch - processPackages [reqauto]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/reqauto-0.1.6.tar.gz tmp/reqauto-0.1.7.tar.gz --html 20230407/r/reqauto/0.1.6-0.1.7/index.html --text 20230407/r/reqauto/0.1.6-0.1.7/diff.txt --markdown 20230407/r/reqauto/0.1.6-0.1.7/diff.md
+[2023-04-07 18:53:03] INFO root fetch - processPackages [pip-tools]: Downloading https://files.pythonhosted.org/packages/cc/1c/dadd465f327dbe49d77d8d3bcd651607d3169a04ce06c7bf86fec8005425/pip-tools-6.9.0.tar.gz
+[2023-04-07 18:53:03] INFO root fetch - processPackages [Digikam-DB]: executing diffoscope
+[2023-04-07 18:53:03] INFO root fetch - processPackages [Digikam-DB]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/Digikam-DB-0.2.0.tar.gz tmp/Digikam-DB-0.2.1.tar.gz --html 20230407/D/Digikam-DB/0.2.0-0.2.1/index.html --text 20230407/D/Digikam-DB/0.2.0-0.2.1/diff.txt --markdown 20230407/D/Digikam-DB/0.2.0-0.2.1/diff.md
+[2023-04-07 18:53:03] INFO root fetch - processPackages [pip-tools]: executing diffoscope
+[2023-04-07 18:53:03] INFO root fetch - processPackages [pip-tools]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pip-tools-6.8.0.tar.gz tmp/pip-tools-6.9.0.tar.gz --html 20230407/p/pip-tools/6.8.0-6.9.0/index.html --text 20230407/p/pip-tools/6.8.0-6.9.0/diff.txt --markdown 20230407/p/pip-tools/6.8.0-6.9.0/diff.md
+[2023-04-07 18:53:03] INFO root fetch - processPackages [molfeat]: executing diffoscope
+[2023-04-07 18:53:03] INFO root fetch - processPackages [molfeat]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/molfeat-0.8.4.tar.gz tmp/molfeat-0.8.5.tar.gz --html 20230407/m/molfeat/0.8.4-0.8.5/index.html --text 20230407/m/molfeat/0.8.4-0.8.5/diff.txt --markdown 20230407/m/molfeat/0.8.4-0.8.5/diff.md
+[2023-04-07 18:53:04] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:04] INFO root fetch - processPackages [cargo-lambda]: New version: [0.9.0] Old Version: [0.8.3]
+[2023-04-07 18:53:04] INFO root fetch - processPackages [cargo-lambda]: Downloading https://files.pythonhosted.org/packages/de/6f/de700106a963b244008299c32f6339d4991a5148c8cd16cec9db723a50f5/cargo_lambda-0.8.3-py3-none-win_amd64.whl
+[2023-04-07 18:53:05] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:05] WARNING root fetch - processPackages [ibrahim-library]: Skipping, unable to determine old version
+[2023-04-07 18:53:05] INFO root fetch - main [MainThread]: error
+[2023-04-07 18:53:05] INFO root fetch - processPackages [django-autocomplete-light]: New version: [3.9.5rc3] Old Version: [3.9.5rc2]
+[2023-04-07 18:53:05] INFO root fetch - processPackages [django-autocomplete-light]: Downloading https://files.pythonhosted.org/packages/47/1d/129b2d5c05a9f7289bc244b16af00f907f2cf969bfbf461e5a5cc1aacd9e/django-autocomplete-light-3.9.5rc2.tar.gz
+[2023-04-07 18:53:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:06] INFO root fetch - processPackages [reqauto]: New version: [0.1.7] Old Version: [0.1.6]
+[2023-04-07 18:53:06] INFO root fetch - processPackages [reqauto]: report already exists
+[2023-04-07 18:53:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:06] INFO root fetch - processPackages [cli-sandbox]: New version: [0.2.0] Old Version: [0.1.0]
+[2023-04-07 18:53:06] INFO root fetch - processPackages [cli-sandbox]: Downloading https://files.pythonhosted.org/packages/a8/96/c979ae81e8443fc9c137120528fc017517d70987c6c4bd7014118a8058b9/cli-sandbox-0.1.0.tar.gz
+[2023-04-07 18:53:06] INFO root fetch - processPackages [cli-sandbox]: Downloading https://files.pythonhosted.org/packages/e0/5e/3d4b1385a284c6b5314d7bf99827fa7044a1ba8c98123b3ea048a28c0d92/cli-sandbox-0.2.0.tar.gz
+[2023-04-07 18:53:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:06] INFO root fetch - processPackages [django-autocomplete-light]: Downloading https://files.pythonhosted.org/packages/db/7a/b05f4dd3713b4c3e85875123ccc0f91f705393138c756fb71ad5cd9a06c8/django-autocomplete-light-3.9.5rc3.tar.gz
+[2023-04-07 18:53:06] INFO root fetch - processPackages [nonebot-plugin-blive-danmaku]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 18:53:07] INFO root fetch - processPackages [cli-sandbox]: executing diffoscope
+[2023-04-07 18:53:07] INFO root fetch - processPackages [cli-sandbox]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/cli-sandbox-0.1.0.tar.gz tmp/cli-sandbox-0.2.0.tar.gz --html 20230407/c/cli-sandbox/0.1.0-0.2.0/index.html --text 20230407/c/cli-sandbox/0.1.0-0.2.0/diff.txt --markdown 20230407/c/cli-sandbox/0.1.0-0.2.0/diff.md
+[2023-04-07 18:53:07] INFO root fetch - processPackages [nonebot-plugin-blive-danmaku]: Downloading https://files.pythonhosted.org/packages/f7/64/a43dbed4f8fde925f4e3dc63f230680f1954f6274751eac4482848dbedf2/nonebot_plugin_blive_danmaku-0.1.0.tar.gz
+[2023-04-07 18:53:07] INFO root fetch - processPackages [nonebot-plugin-blive-danmaku]: Downloading https://files.pythonhosted.org/packages/8c/d1/6647bc18cbe98dd7080c706e19afa9e12c164aa3508fb25b2544ccf35e8c/nonebot_plugin_blive_danmaku-0.1.1.tar.gz
+[2023-04-07 18:53:07] INFO root fetch - processPackages [nonebot-plugin-blive-danmaku]: executing diffoscope
+[2023-04-07 18:53:07] INFO root fetch - processPackages [nonebot-plugin-blive-danmaku]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/nonebot_plugin_blive_danmaku-0.1.0.tar.gz tmp/nonebot_plugin_blive_danmaku-0.1.1.tar.gz --html 20230407/n/nonebot-plugin-blive-danmaku/0.1.0-0.1.1/index.html --text 20230407/n/nonebot-plugin-blive-danmaku/0.1.0-0.1.1/diff.txt --markdown 20230407/n/nonebot-plugin-blive-danmaku/0.1.0-0.1.1/diff.md
+[2023-04-07 18:53:07] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:07] INFO root fetch - processPackages [cvgui]: New version: [0.3.0] Old Version: [0.2.0]
+[2023-04-07 18:53:08] INFO root fetch - processPackages [cvgui]: Downloading https://files.pythonhosted.org/packages/30/d6/cd6fbf2c8035d3ae1bcaae8ec000775750bdc96fd624fa1cdcf6ee57540f/cvgui-0.2.0.tar.gz
+[2023-04-07 18:53:08] INFO root fetch - processPackages [cvgui]: Downloading https://files.pythonhosted.org/packages/a0/a1/5b362b99478cc9ede453eb9634575cf03eb1e0f4201c22455153f9b2ef9d/cvgui-0.3.0.tar.gz
+[2023-04-07 18:53:08] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:08] INFO root fetch - processPackages [python-roborock]: New version: [0.5.9] Old Version: [0.5.8]
+[2023-04-07 18:53:08] INFO root fetch - processPackages [cvgui]: executing diffoscope
+[2023-04-07 18:53:08] INFO root fetch - processPackages [cvgui]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/cvgui-0.2.0.tar.gz tmp/cvgui-0.3.0.tar.gz --html 20230407/c/cvgui/0.2.0-0.3.0/index.html --text 20230407/c/cvgui/0.2.0-0.3.0/diff.txt --markdown 20230407/c/cvgui/0.2.0-0.3.0/diff.md
+[2023-04-07 18:53:08] INFO root fetch - processPackages [python-roborock]: Downloading https://files.pythonhosted.org/packages/ed/97/e2b741051b95eea1d5b1c51e6ffae487e88654fe6249488ff4d7bf058cf7/python_roborock-0.5.8.tar.gz
+[2023-04-07 18:53:08] INFO root fetch - processPackages [python-roborock]: Downloading https://files.pythonhosted.org/packages/7f/cc/3d4e6cb14f1b837f5b252752e576247dbf47d859dbff1e77d3b232a305b8/python_roborock-0.5.9.tar.gz
+[2023-04-07 18:53:09] INFO root fetch - processPackages [python-roborock]: executing diffoscope
+[2023-04-07 18:53:09] INFO root fetch - processPackages [python-roborock]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/python_roborock-0.5.8.tar.gz tmp/python_roborock-0.5.9.tar.gz --html 20230407/p/python-roborock/0.5.8-0.5.9/index.html --text 20230407/p/python-roborock/0.5.8-0.5.9/diff.txt --markdown 20230407/p/python-roborock/0.5.8-0.5.9/diff.md
+[2023-04-07 18:53:09] INFO root fetch - processPackages [django-autocomplete-light]: executing diffoscope
+[2023-04-07 18:53:09] INFO root fetch - processPackages [django-autocomplete-light]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/django-autocomplete-light-3.9.5rc2.tar.gz tmp/django-autocomplete-light-3.9.5rc3.tar.gz --html 20230407/d/django-autocomplete-light/3.9.5rc2-3.9.5rc3/index.html --text 20230407/d/django-autocomplete-light/3.9.5rc2-3.9.5rc3/diff.txt --markdown 20230407/d/django-autocomplete-light/3.9.5rc2-3.9.5rc3/diff.md
+[2023-04-07 18:53:10] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:10] INFO root fetch - processPackages [reqauto]: New version: [0.1.7] Old Version: [0.1.6]
+[2023-04-07 18:53:10] INFO root fetch - processPackages [reqauto]: report already exists
+[2023-04-07 18:53:10] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:10] INFO root fetch - processPackages [pySLALIB]: New version: [1.0.6] Old Version: [1.0.4]
+[2023-04-07 18:53:10] INFO root fetch - processPackages [pySLALIB]: Downloading https://files.pythonhosted.org/packages/3e/e1/e731f0b69d9145faa2aa321a82ff27d6da1d929ac02d7206ca5ae6ec23e3/pySLALIB-1.0.4.tar.gz
+[2023-04-07 18:53:10] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:10] INFO root fetch - processPackages [pySLALIB]: Downloading https://files.pythonhosted.org/packages/e6/bb/9266fd3671d16eead479c4caf4e87ca9ded64b53646c3aa5f89a4a69b473/pySLALIB-1.0.6.tar.gz
+[2023-04-07 18:53:10] INFO root fetch - processPackages [spade-client]: New version: [5.2.0] Old Version: [5.0.4]
+[2023-04-07 18:53:10] INFO root fetch - processPackages [spade-client]: Downloading https://files.pythonhosted.org/packages/bf/52/99472da9c65fdcfa52b6962444d1927ecf88a2c6df299f66e4c0e8313ec3/spade_client-5.0.4.tar.gz
+[2023-04-07 18:53:11] INFO root fetch - processPackages [spade-client]: Downloading https://files.pythonhosted.org/packages/28/db/c1caf25366bf4630ef1276e11c4c5269daf6fdae1c1883eb5372285a5cd9/spade_client-5.2.0-py2.py3-none-any.whl
+[2023-04-07 18:53:11] INFO root fetch - processPackages [pySLALIB]: executing diffoscope
+[2023-04-07 18:53:11] INFO root fetch - processPackages [pySLALIB]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pySLALIB-1.0.4.tar.gz tmp/pySLALIB-1.0.6.tar.gz --html 20230407/p/pySLALIB/1.0.4-1.0.6/index.html --text 20230407/p/pySLALIB/1.0.4-1.0.6/diff.txt --markdown 20230407/p/pySLALIB/1.0.4-1.0.6/diff.md
+[2023-04-07 18:53:11] INFO root fetch - processPackages [spade-client]: executing diffoscope
+[2023-04-07 18:53:11] INFO root fetch - processPackages [spade-client]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/spade_client-5.0.4.tar.gz tmp/spade_client-5.2.0-py2.py3-none-any.whl.zip --html 20230407/s/spade-client/5.0.4-5.2.0/index.html --text 20230407/s/spade-client/5.0.4-5.2.0/diff.txt --markdown 20230407/s/spade-client/5.0.4-5.2.0/diff.md
+[2023-04-07 18:53:12] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:12] INFO root fetch - processPackages [django-autocomplete-light]: New version: [3.9.5rc3] Old Version: [3.9.5rc2]
+[2023-04-07 18:53:12] INFO root fetch - processPackages [django-autocomplete-light]: executing diffoscope
+[2023-04-07 18:53:12] INFO root fetch - processPackages [django-autocomplete-light]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/django-autocomplete-light-3.9.5rc2.tar.gz tmp/django-autocomplete-light-3.9.5rc3.tar.gz --html 20230407/d/django-autocomplete-light/3.9.5rc2-3.9.5rc3/index.html --text 20230407/d/django-autocomplete-light/3.9.5rc2-3.9.5rc3/diff.txt --markdown 20230407/d/django-autocomplete-light/3.9.5rc2-3.9.5rc3/diff.md
+[2023-04-07 18:53:16] INFO root fetch - processPackages [cargo-lambda]: Downloading https://files.pythonhosted.org/packages/dc/c8/ac648132051a60e826bd95269e04382731351b8d7aca976817bb5b463767/cargo_lambda-0.9.0-py3-none-win_amd64.whl
+[2023-04-07 18:53:20] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:20] INFO root fetch - processPackages [skellycam]: New version: [2023.4.1082] Old Version: [2023.4.1081]
+[2023-04-07 18:53:20] INFO root fetch - processPackages [skellycam]: Downloading https://files.pythonhosted.org/packages/0a/d9/1ec1caff203f3e608bfdb36dc71e8ede842ebcf2e9ab22dd2a9cc5a418b3/skellycam-2023.4.1081.tar.gz
+[2023-04-07 18:53:21] INFO root fetch - processPackages [cargo-lambda]: executing diffoscope
+[2023-04-07 18:53:21] INFO root fetch - processPackages [cargo-lambda]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/cargo_lambda-0.8.3-py3-none-win_amd64.whl.zip tmp/cargo_lambda-0.9.0-py3-none-win_amd64.whl.zip --html 20230407/c/cargo-lambda/0.8.3-0.9.0/index.html --text 20230407/c/cargo-lambda/0.8.3-0.9.0/diff.txt --markdown 20230407/c/cargo-lambda/0.8.3-0.9.0/diff.md
+[2023-04-07 18:53:21] INFO root fetch - processPackages [skellycam]: Downloading https://files.pythonhosted.org/packages/d3/fc/f0fd8f3bf475dac6d8bf11dde0c63194143b3878b53050d3e15229dab73b/skellycam-2023.4.1082.tar.gz
+[2023-04-07 18:53:22] INFO root fetch - processPackages [skellycam]: executing diffoscope
+[2023-04-07 18:53:22] INFO root fetch - processPackages [skellycam]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/skellycam-2023.4.1081.tar.gz tmp/skellycam-2023.4.1082.tar.gz --html 20230407/s/skellycam/2023.4.1081-2023.4.1082/index.html --text 20230407/s/skellycam/2023.4.1081-2023.4.1082/diff.txt --markdown 20230407/s/skellycam/2023.4.1081-2023.4.1082/diff.md
+[2023-04-07 18:53:23] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:23] INFO root fetch - processPackages [skellycam]: New version: [2023.4.1082] Old Version: [2023.4.1081]
+[2023-04-07 18:53:23] INFO root fetch - processPackages [skellycam]: executing diffoscope
+[2023-04-07 18:53:23] INFO root fetch - processPackages [skellycam]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/skellycam-2023.4.1081.tar.gz tmp/skellycam-2023.4.1082.tar.gz --html 20230407/s/skellycam/2023.4.1081-2023.4.1082/index.html --text 20230407/s/skellycam/2023.4.1081-2023.4.1082/diff.txt --markdown 20230407/s/skellycam/2023.4.1081-2023.4.1082/diff.md
+[2023-04-07 18:53:24] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:25] INFO root fetch - processPackages [sonnen-api-v2]: New version: [0.3.9] Old Version: [0.3.8]
+[2023-04-07 18:53:25] INFO root fetch - processPackages [sonnen-api-v2]: report already exists
+[2023-04-07 18:53:25] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:25] INFO root fetch - processPackages [hmfs]: New version: [1.1.6] Old Version: [1.1.5134]
+[2023-04-07 18:53:25] INFO root fetch - processPackages [hmfs]: Downloading https://files.pythonhosted.org/packages/c5/60/47326edfa5486676c33b6125f0147da335a636efb24ea26ba1f308ef18d3/hmfs-1.1.5134.tar.gz
+[2023-04-07 18:53:25] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:25] INFO root fetch - processPackages [streamlitfront]: New version: [0.1.9] Old Version: [0.1.8]
+[2023-04-07 18:53:25] INFO root fetch - processPackages [hmfs]: Downloading https://files.pythonhosted.org/packages/9f/e2/2aeaa17665627542a9bcb80c17dcf663309ba83964369dd3ef9fa4ffc362/hmfs-1.1.6.tar.gz
+[2023-04-07 18:53:25] INFO root fetch - processPackages [streamlitfront]: Downloading https://files.pythonhosted.org/packages/e3/08/ec94600fb3ec8487cb86c929db02f19ece2e936402ebf82aefc68b418d8e/streamlitfront-0.1.8.tar.gz
+[2023-04-07 18:53:25] INFO root fetch - processPackages [streamlitfront]: Downloading https://files.pythonhosted.org/packages/58/88/e42ed88dd7fd3931fd96720ca9b33ff6187514eb9a13de8085587c054711/streamlitfront-0.1.9.tar.gz
+[2023-04-07 18:53:25] INFO root fetch - processPackages [streamlitfront]: executing diffoscope
+[2023-04-07 18:53:25] INFO root fetch - processPackages [streamlitfront]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/streamlitfront-0.1.8.tar.gz tmp/streamlitfront-0.1.9.tar.gz --html 20230407/s/streamlitfront/0.1.8-0.1.9/index.html --text 20230407/s/streamlitfront/0.1.8-0.1.9/diff.txt --markdown 20230407/s/streamlitfront/0.1.8-0.1.9/diff.md
+[2023-04-07 18:53:26] INFO root fetch - processPackages [hmfs]: executing diffoscope
+[2023-04-07 18:53:26] INFO root fetch - processPackages [hmfs]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/hmfs-1.1.5134.tar.gz tmp/hmfs-1.1.6.tar.gz --html 20230407/h/hmfs/1.1.5134-1.1.6/index.html --text 20230407/h/hmfs/1.1.5134-1.1.6/diff.txt --markdown 20230407/h/hmfs/1.1.5134-1.1.6/diff.md
+[2023-04-07 18:53:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:27] INFO root fetch - processPackages [sqlalchemy-redshift]: New version: [0.8.9] Old Version: [0.8.8]
+[2023-04-07 18:53:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:27] INFO root fetch - processPackages [sqlalchemy-redshift]: Downloading https://files.pythonhosted.org/packages/e2/17/144131cb96492eccacb398324d166897139289f3b918dd9a3fc6bd97554b/sqlalchemy-redshift-0.8.8.tar.gz
+[2023-04-07 18:53:27] INFO root fetch - processPackages [sqlalchemy-redshift]: Downloading https://files.pythonhosted.org/packages/41/4e/bfd803e4028ca0012c3488c46671304d8759e21a6d00b7772061e1c583b9/sqlalchemy-redshift-0.8.9.tar.gz
+[2023-04-07 18:53:28] INFO root fetch - processPackages [sqlalchemy-redshift]: executing diffoscope
+[2023-04-07 18:53:28] INFO root fetch - processPackages [sqlalchemy-redshift]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/sqlalchemy-redshift-0.8.8.tar.gz tmp/sqlalchemy-redshift-0.8.9.tar.gz --html 20230407/s/sqlalchemy-redshift/0.8.8-0.8.9/index.html --text 20230407/s/sqlalchemy-redshift/0.8.8-0.8.9/diff.txt --markdown 20230407/s/sqlalchemy-redshift/0.8.8-0.8.9/diff.md
+[2023-04-07 18:53:29] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:30] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:53:53] INFO root fetch - main [MainThread]: success
+[2023-04-07 18:54:28] INFO root fetch - main [MainThread]: success

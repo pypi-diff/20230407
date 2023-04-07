@@ -1,0 +1,54 @@
+# Comparing `tmp/reqauto-0.1.6.tar.gz` & `tmp/reqauto-0.1.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "reqauto-0.1.6.tar", max compression
++gzip compressed data, was "reqauto-0.1.7.tar", max compression
+```
+
+## Comparing `reqauto-0.1.6.tar` & `reqauto-0.1.7.tar`
+
+### file list
+
+```diff
+@@ -1,4 +1,4 @@
+--rwxr-xr-x   0        0        0      347 2023-04-07 16:50:00.910553 reqauto-0.1.6/pyproject.toml
+--rwxr-xr-x   0        0        0       24 2023-04-07 15:53:00.156807 reqauto-0.1.6/reqauto/__init__.py
+--rwxr-xr-x   0        0        0      734 2023-04-07 15:52:44.958418 reqauto-0.1.6/reqauto/main.py
+--rw-r--r--   0        0        0      558 1970-01-01 00:00:00.000000 reqauto-0.1.6/PKG-INFO
++-rwxr-xr-x   0        0        0      354 2023-04-07 16:53:07.831688 reqauto-0.1.7/pyproject.toml
++-rwxr-xr-x   0        0        0       24 2023-04-07 15:53:00.156807 reqauto-0.1.7/reqauto/__init__.py
++-rwxr-xr-x   0        0        0      734 2023-04-07 15:52:44.958418 reqauto-0.1.7/reqauto/main.py
++-rw-r--r--   0        0        0      565 1970-01-01 00:00:00.000000 reqauto-0.1.7/PKG-INFO
+```
+
+### Comparing `reqauto-0.1.6/reqauto/main.py` & `reqauto-0.1.7/reqauto/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `reqauto-0.1.6/PKG-INFO` & `reqauto-0.1.7/PKG-INFO`
+
+ * *Files 21% similar despite different names*
+
+```diff
+@@ -1,13 +1,13 @@
+ Metadata-Version: 2.1
+ Name: reqauto
+-Version: 0.1.6
++Version: 0.1.7
+ Summary: A Python package to automatically generate and install requirements.txt
+-Author: Your Name
+-Author-email: you@example.com
++Author: Jaseunda
++Author-email: opensource@jaseunda.com
+ Requires-Python: >=3.6,<4.0
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.6
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: Programming Language :: Python :: 3.9
+ Classifier: Programming Language :: Python :: 3.10
+```
+
