@@ -1,0 +1,453 @@
+--- tmp/dumpulator-0.2.1.tar.gz
++++ tmp/dumpulator-0.2.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dumpulator-0.2.1.tar", last modified: Thu Mar 16 18:54:03 2023, max compression
+│ +gzip compressed data, was "dumpulator-0.2.2.tar", last modified: Fri Apr  7 16:12:28 2023, max compression
+│   --- dumpulator-0.2.1.tar
+├── +++ dumpulator-0.2.2.tar
+│ ├── file list
+│ │ @@ -1,79 +1,79 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:03.670813 dumpulator-0.2.1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1359 2023-03-16 18:54:02.000000 dumpulator-0.2.1/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     7038 2023-03-16 18:54:03.670813 dumpulator-0.2.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6581 2023-03-16 18:54:02.000000 dumpulator-0.2.1/README.md
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      206 2023-03-16 18:54:02.000000 dumpulator-0.2.1/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      802 2023-03-16 18:54:03.670813 dumpulator-0.2.1/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1588 2023-03-16 18:54:02.000000 dumpulator-0.2.1/setup.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:03.658813 dumpulator-0.2.1/src/
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:03.662813 dumpulator-0.2.1/src/dumpulator/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      116 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    19646 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/details.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    73681 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/dumpulator.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    10865 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/handles.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    16474 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/memory.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5328 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/modules.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    21593 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/native.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3924 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/ntdevices.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)   123193 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/ntenums.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    12534 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/ntprimitives.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3826 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/ntstructs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)   235727 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/dumpulator/ntsyscalls.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:03.662813 dumpulator-0.2.1/src/dumpulator.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     7038 2023-03-16 18:54:03.000000 dumpulator-0.2.1/src/dumpulator.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2301 2023-03-16 18:54:03.000000 dumpulator-0.2.1/src/dumpulator.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        1 2023-03-16 18:54:03.000000 dumpulator-0.2.1/src/dumpulator.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       48 2023-03-16 18:54:03.000000 dumpulator-0.2.1/src/dumpulator.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       20 2023-03-16 18:54:03.000000 dumpulator-0.2.1/src/dumpulator.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:03.666813 dumpulator-0.2.1/src/minidump/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3269 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/__amain__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       17 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3501 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/__main__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      132 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/_version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     9689 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/aminidumpfile.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    11501 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/aminidumpreader.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     9452 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/common_structs.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2387 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/constants.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2349 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/directory.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      293 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/exceptions.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2828 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/header.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     9818 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/minidumpfile.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    11724 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/minidumpreader.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5238 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/minidumpshell.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:03.670813 dumpulator-0.2.1/src/minidump/streams/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      599 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/CommentStreamA.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      627 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/CommentStreamW.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    25274 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/ContextStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    11428 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/ExceptionStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      975 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/FunctionTableStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     8898 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/HandleDataStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      682 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/HandleOperationListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       86 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/JavaScriptDataStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      549 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/LastReservedStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3211 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/Memory64ListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    12532 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/MemoryInfoListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3252 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/MemoryListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6684 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/MiscInfoStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     8440 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/ModuleListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      109 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/ProcessVmCountersStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    14530 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/SystemInfoStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       94 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/SystemMemoryInfoStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2834 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/ThreadExListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6506 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/ThreadInfoListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3308 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/ThreadListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       99 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/TokenStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     4906 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/UnloadedModuleListStream.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3153 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/streams/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:03.670813 dumpulator-0.2.1/src/minidump/utils/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    11347 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/createminidump.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6644 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/privileges.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     7333 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/privileges_types.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:03.670813 dumpulator-0.2.1/src/minidump/utils/winapi/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        0 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/winapi/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)    23531 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/winapi/defines.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6286 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/winapi/kernel32.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2398 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/winapi/psapi.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3768 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/utils/winapi/version.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6137 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/win_datatypes.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     9188 2023-03-16 18:54:02.000000 dumpulator-0.2.1/src/minidump/writer.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:28.975669 dumpulator-0.2.2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1359 2023-04-07 16:12:27.000000 dumpulator-0.2.2/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    10452 2023-04-07 16:12:28.975669 dumpulator-0.2.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    10080 2023-04-07 16:12:27.000000 dumpulator-0.2.2/README.md
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      206 2023-04-07 16:12:27.000000 dumpulator-0.2.2/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      802 2023-04-07 16:12:28.975669 dumpulator-0.2.2/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     1588 2023-04-07 16:12:27.000000 dumpulator-0.2.2/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:28.959669 dumpulator-0.2.2/src/
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:28.963669 dumpulator-0.2.2/src/dumpulator/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      116 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    19646 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/details.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    74555 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/dumpulator.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    10865 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/handles.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    16474 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/memory.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     5328 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/modules.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    21593 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/native.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3924 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/ntdevices.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)   123193 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/ntenums.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    12534 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/ntprimitives.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3826 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/ntstructs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)   235727 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/dumpulator/ntsyscalls.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:28.963669 dumpulator-0.2.2/src/dumpulator.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    10452 2023-04-07 16:12:28.000000 dumpulator-0.2.2/src/dumpulator.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2301 2023-04-07 16:12:28.000000 dumpulator-0.2.2/src/dumpulator.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        1 2023-04-07 16:12:28.000000 dumpulator-0.2.2/src/dumpulator.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       48 2023-04-07 16:12:28.000000 dumpulator-0.2.2/src/dumpulator.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       20 2023-04-07 16:12:28.000000 dumpulator-0.2.2/src/dumpulator.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:28.967670 dumpulator-0.2.2/src/minidump/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3269 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/__amain__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       17 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3501 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/__main__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      132 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/_version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     9689 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/aminidumpfile.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    11501 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/aminidumpreader.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     9452 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/common_structs.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2387 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/constants.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2349 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/directory.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      293 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/exceptions.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2828 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/header.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     9818 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/minidumpfile.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    11724 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/minidumpreader.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     5238 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/minidumpshell.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:28.971670 dumpulator-0.2.2/src/minidump/streams/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      599 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/CommentStreamA.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      627 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/CommentStreamW.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    25274 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/ContextStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    11428 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/ExceptionStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      975 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/FunctionTableStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     8898 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/HandleDataStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      682 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/HandleOperationListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       86 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/JavaScriptDataStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      549 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/LastReservedStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3211 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/Memory64ListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    12532 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/MemoryInfoListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3252 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/MemoryListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     6684 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/MiscInfoStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     8440 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/ModuleListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)      109 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/ProcessVmCountersStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    14530 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/SystemInfoStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       94 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/SystemMemoryInfoStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2834 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/ThreadExListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     6506 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/ThreadInfoListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3308 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/ThreadListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)       99 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/TokenStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     4906 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/UnloadedModuleListStream.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3153 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/streams/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:28.971670 dumpulator-0.2.2/src/minidump/utils/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    11347 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/createminidump.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     6644 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/privileges.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     7333 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/privileges_types.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:28.971670 dumpulator-0.2.2/src/minidump/utils/winapi/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)        0 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/winapi/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)    23531 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/winapi/defines.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     6286 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/winapi/kernel32.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     2398 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/winapi/psapi.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     3768 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/utils/winapi/version.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     6137 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/win_datatypes.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (122)     9188 2023-04-07 16:12:27.000000 dumpulator-0.2.2/src/minidump/writer.py
+│ │   --- dumpulator-0.2.1/LICENSE
+│ ├── +++ dumpulator-0.2.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/setup.cfg
+│ ├── +++ dumpulator-0.2.2/setup.cfg
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = dumpulator
+│ │ -version = v0.2.1
+│ │ +version = v0.2.2
+│ │  author = Duncan Ogilvie
+│ │  author_email = dumpulator@mrexodia.re
+│ │  description = An easy-to-use library for emulating code in minidump files.
+│ │  long_description = file: README.md
+│ │  long_description_content_type = text/markdown
+│ │  url = https://github.com/mrexodia/dumpulator
+│ │  project_urls =
+│ │   --- dumpulator-0.2.1/setup.py
+│ ├── +++ dumpulator-0.2.2/setup.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/details.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/details.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/dumpulator.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/dumpulator.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -451,16 +451,42 @@
+│ │          if len(potential_hv) == 1:
+│ │              self.memory.set_region_info(potential_hv[0], "HYPERVISOR_SHARED_DATA")
+│ │          elif len(potential_hv) > 1:
+│ │              self.debug(f"Unexpected unaligned addresses: {' '.join([hex(x) for x in potential_hv])}")
+│ │  
+│ │      def _setup_pebteb(self, thread):
+│ │          self.teb = thread.Teb & 0xFFFFFFFFFFFFF000
+│ │ -        self.wow64 = self.modules["ntdll.dll"].find_export("Wow64Transition") is not None
+│ │  
+│ │ +        # Handle WoW64 support
+│ │ +        def patch_wow64(patch_addr):
+│ │ +            # See: https://opcode0x90.wordpress.com/2007/05/18/kifastsystemcall-hook/
+│ │ +            # mov edx, esp; sysenter; ret
+│ │ +            KiFastSystemCall = b"\x8B\xD4\x0F\x34\x90\x90\xC3"
+│ │ +            self.write(patch_addr, KiFastSystemCall)
+│ │ +            self.wow64 = True
+│ │ +
+│ │ +        ntdll = self.modules["ntdll.dll"]
+│ │ +        Wow64Transition = ntdll.find_export("Wow64Transition")
+│ │ +        ZwWow64ReadVirtualMemory64 = ntdll.find_export("ZwWow64ReadVirtualMemory64")
+│ │ +        if Wow64Transition:
+│ │ +            # This exists from Windows 10 1607 (Build: 14393)
+│ │ +            patch_addr = self.read_ptr(Wow64Transition.address)
+│ │ +            self.info(f"Patching Wow64Transition: [{hex(Wow64Transition.address)}] -> {hex(patch_addr)}")
+│ │ +            patch_wow64(patch_addr)
+│ │ +        elif ZwWow64ReadVirtualMemory64:
+│ │ +            # This function exists since Windows XP
+│ │ +            # TODO: Implement by finding EA ???????? 3300 in wow64cpu.dll instead
+│ │ +            # Reference: https://github.com/x64dbg/ScyllaHide/blob/a727ac39/InjectorCLI/RemoteHook.cpp#L354-L434
+│ │ +            patch_addr = self.read_ptr(self.teb + 0xC0)
+│ │ +            self.error(f"Unsupported WoW64 OS version detected, trampoline: {hex(patch_addr)}")
+│ │ +            patch_wow64(patch_addr)
+│ │ +        else:
+│ │ +            self.wow64 = False
+│ │ +
+│ │ +        # Get thread information
+│ │          for i in range(0, len(self._minidump.threads.threads)):
+│ │              thread = self._minidump.threads.threads[i]
+│ │              teb = thread.Teb & 0xFFFFFFFFFFFFF000
+│ │              tid = thread.ThreadId
+│ │              if self._x64:
+│ │                  # https://www.vergiliusproject.com/kernels/x64/Windows%2011/21H2%20(RTM)/_NT_TIB
+│ │                  stack_base = self.read_ptr(teb + 0x8)
+│ │ @@ -796,29 +822,21 @@
+│ │                  section.PointerToRawData = section.VirtualAddress
+│ │                  section.PointerToRawData_adj = section.VirtualAddress
+│ │              self.modules.add(pe, path)
+│ │  
+│ │      def _setup_syscalls(self):
+│ │          # Load the ntdll module from memory
+│ │          ntdll = self.modules["ntdll.dll"]
+│ │ +        self.KiUserExceptionDispatcher = ntdll.find_export("KiUserExceptionDispatcher").address
+│ │ +        self.LdrLoadDll = ntdll.find_export("LdrLoadDll").address
+│ │ +
+│ │          nt_syscalls = []
+│ │          for export in ntdll.exports:
+│ │              if export.name and export.name.startswith("Zw"):
+│ │                  nt_syscalls.append((export.address, export.name))
+│ │ -            elif export.name == "Wow64Transition":
+│ │ -                patch_addr = self.read_ptr(export.address)
+│ │ -                self.info(f"Patching Wow64Transition: {hex(export.address)} -> {hex(patch_addr)}")
+│ │ -                # See: https://opcode0x90.wordpress.com/2007/05/18/kifastsystemcall-hook/
+│ │ -                # mov edx, esp; sysenter; ret
+│ │ -                KiFastSystemCall = b"\x8B\xD4\x0F\x34\x90\x90\xC3"
+│ │ -                self.write(patch_addr, KiFastSystemCall)
+│ │ -            elif export.name == "KiUserExceptionDispatcher":
+│ │ -                self.KiUserExceptionDispatcher = export.address
+│ │ -            elif export.name == "LdrLoadDll":
+│ │ -                self.LdrLoadDll = export.address
+│ │  
+│ │          def add_syscalls(syscalls, table):
+│ │              # The index when sorting by RVA is the syscall index
+│ │              syscalls.sort()
+│ │              for index, (rva, name) in enumerate(syscalls):
+│ │                  cb = syscall_functions.get(name, None)
+│ │                  argcount = 0
+│ │ @@ -1489,14 +1507,16 @@
+│ │  
+│ │  def _arg_type_string(arg):
+│ │      if P.is_ptr(arg) and arg.type is not None:
+│ │          return arg.type.__name__ + "*"
+│ │      return type(arg).__name__
+│ │  
+│ │  def _hook_interrupt(uc: Uc, number, dp: Dumpulator):
+│ │ +    if dp.trace:
+│ │ +        dp.trace.flush()
+│ │      try:
+│ │          # Extract exception information
+│ │          exception = UnicornExceptionInfo()
+│ │          exception.type = ExceptionType.Interrupt
+│ │          exception.interrupt_number = number
+│ │          exception.context = uc.context_save()
+│ │          # TODO: this might crash if cip is not valid memory
+│ │ @@ -1639,14 +1659,16 @@
+│ │          # Unsupported instruction
+│ │          return False
+│ │      # Resume execution
+│ │      return True
+│ │  
+│ │  def _hook_invalid(uc: Uc, dp: Dumpulator):
+│ │      address = dp.regs.cip
+│ │ +    if dp.trace:
+│ │ +        dp.trace.flush()
+│ │      # HACK: unicorn cannot gracefully exit in all contexts
+│ │      if dp.kill_me:
+│ │          dp.error(f"terminating emulation...")
+│ │          return False
+│ │      dp.error(f"invalid instruction at {hex(address)}")
+│ │      try:
+│ │          code = dp.read(address, 15)
+│ │   --- dumpulator-0.2.1/src/dumpulator/handles.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/handles.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/memory.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/memory.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/modules.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/modules.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/native.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/native.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/ntdevices.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/ntdevices.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/ntenums.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/ntenums.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/ntprimitives.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/ntprimitives.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/ntstructs.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/ntstructs.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator/ntsyscalls.py
+│ ├── +++ dumpulator-0.2.2/src/dumpulator/ntsyscalls.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/dumpulator.egg-info/SOURCES.txt
+│ ├── +++ dumpulator-0.2.2/src/dumpulator.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/__amain__.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/__amain__.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/__main__.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/aminidumpfile.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/aminidumpfile.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/aminidumpreader.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/aminidumpreader.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/common_structs.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/common_structs.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/constants.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/constants.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/directory.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/directory.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/header.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/header.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/minidumpfile.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/minidumpfile.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/minidumpreader.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/minidumpreader.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/minidumpshell.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/minidumpshell.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/CommentStreamA.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/CommentStreamA.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/CommentStreamW.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/CommentStreamW.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/ContextStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/ContextStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/ExceptionStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/ExceptionStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/FunctionTableStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/FunctionTableStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/HandleDataStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/HandleDataStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/HandleOperationListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/HandleOperationListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/LastReservedStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/LastReservedStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/Memory64ListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/Memory64ListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/MemoryInfoListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/MemoryInfoListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/MemoryListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/MemoryListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/MiscInfoStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/MiscInfoStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/ModuleListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/ModuleListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/SystemInfoStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/SystemInfoStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/ThreadExListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/ThreadExListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/ThreadInfoListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/ThreadInfoListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/ThreadListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/ThreadListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/UnloadedModuleListStream.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/UnloadedModuleListStream.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/streams/__init__.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/streams/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/utils/createminidump.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/utils/createminidump.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/utils/privileges.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/utils/privileges.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/utils/privileges_types.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/utils/privileges_types.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/utils/winapi/defines.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/utils/winapi/defines.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/utils/winapi/kernel32.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/utils/winapi/kernel32.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/utils/winapi/psapi.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/utils/winapi/psapi.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/utils/winapi/version.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/utils/winapi/version.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/win_datatypes.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/win_datatypes.py
+│ │┄ Files identical despite different names
+│ │   --- dumpulator-0.2.1/src/minidump/writer.py
+│ ├── +++ dumpulator-0.2.2/src/minidump/writer.py
+│ │┄ Files identical despite different names

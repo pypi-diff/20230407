@@ -1,0 +1,111 @@
+# Comparing `tmp/to-pip-1.5.tar.gz` & `tmp/to-pip-1.6.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "to-pip-1.5.tar", last modified: Fri Apr  7 14:55:20 2023, max compression
++gzip compressed data, was "to-pip-1.6.tar", last modified: Fri Apr  7 16:18:47 2023, max compression
+```
+
+## Comparing `to-pip-1.5.tar` & `to-pip-1.6.tar`
+
+### file list
+
+```diff
+@@ -1,13 +1,13 @@
+-drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 14:55:20.817757 to-pip-1.5/
+--rw-r--r--   0 chiubowen   (501) staff       (20)     2065 2023-04-07 14:55:20.817594 to-pip-1.5/PKG-INFO
+--rw-r--r--   0 chiubowen   (501) staff       (20)     1903 2023-04-07 14:55:20.000000 to-pip-1.5/README.md
+--rw-r--r--   0 chiubowen   (501) staff       (20)       38 2023-04-07 14:55:20.817803 to-pip-1.5/setup.cfg
+--rw-r--r--   0 chiubowen   (501) staff       (20)      486 2023-04-07 14:55:20.000000 to-pip-1.5/setup.py
+-drwxr-xr-x   0 chiubowen   (501) staff       (20)        0 2023-04-07 14:55:20.817299 to-pip-1.5/to_pip.egg-info/
+--rw-r--r--   0 chiubowen   (501) staff       (20)     2065 2023-04-07 14:55:20.000000 to-pip-1.5/to_pip.egg-info/PKG-INFO
+--rw-r--r--   0 chiubowen   (501) staff       (20)      210 2023-04-07 14:55:20.000000 to-pip-1.5/to_pip.egg-info/SOURCES.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)        1 2023-04-07 14:55:20.000000 to-pip-1.5/to_pip.egg-info/dependency_links.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       40 2023-04-07 14:55:20.000000 to-pip-1.5/to_pip.egg-info/entry_points.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)       48 2023-04-07 14:55:20.000000 to-pip-1.5/to_pip.egg-info/requires.txt
+--rw-r--r--   0 chiubowen   (501) staff       (20)        7 2023-04-07 14:55:20.000000 to-pip-1.5/to_pip.egg-info/top_level.txt
+--rwxr-xr-x   0 chiubowen   (501) staff       (20)     4448 2023-04-07 14:55:20.000000 to-pip-1.5/to_pip.py
++drwxrwxr-x   0 root         (0) root         (0)        0 2023-04-07 16:18:47.198867 to-pip-1.6/
++-rw-rw-r--   0 root         (0) root         (0)     2065 2023-04-07 16:18:47.198578 to-pip-1.6/PKG-INFO
++-rw-rw-r--   0 root         (0) root         (0)     1903 2023-04-07 16:18:38.000000 to-pip-1.6/README.md
++-rw-rw-r--   0 root         (0) root         (0)       38 2023-04-07 16:18:47.198939 to-pip-1.6/setup.cfg
++-rw-rw-r--   0 root         (0) root         (0)      486 2023-04-07 16:18:38.000000 to-pip-1.6/setup.py
++drwxrwxr-x   0 root         (0) root         (0)        0 2023-04-07 16:18:47.198225 to-pip-1.6/to_pip.egg-info/
++-rw-rw-r--   0 root         (0) root         (0)     2065 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/PKG-INFO
++-rw-rw-r--   0 root         (0) root         (0)      210 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/SOURCES.txt
++-rw-rw-r--   0 root         (0) root         (0)        1 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/dependency_links.txt
++-rw-rw-r--   0 root         (0) root         (0)       40 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/entry_points.txt
++-rw-rw-r--   0 root         (0) root         (0)       56 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/requires.txt
++-rw-rw-r--   0 root         (0) root         (0)        7 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/top_level.txt
++-rwxrwxr-x   0 root         (0) root         (0)     4471 2023-04-07 16:18:38.000000 to-pip-1.6/to_pip.py
+```
+
+### Comparing `to-pip-1.5/PKG-INFO` & `to-pip-1.6/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: to-pip
+-Version: 1.5
++Version: 1.6
+ Summary: UNKNOWN
+ Home-page: UNKNOWN
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Description-Content-Type: text/markdown
+ 
+ # To-pip
+```
+
+### Comparing `to-pip-1.5/README.md` & `to-pip-1.6/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `to-pip-1.5/to_pip.egg-info/PKG-INFO` & `to-pip-1.6/to_pip.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: to-pip
+-Version: 1.5
++Version: 1.6
+ Summary: UNKNOWN
+ Home-page: UNKNOWN
+ License: UNKNOWN
+ Platform: UNKNOWN
+ Description-Content-Type: text/markdown
+ 
+ # To-pip
+```
+
+### Comparing `to-pip-1.5/to_pip.py` & `to-pip-1.6/to_pip.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -113,16 +113,15 @@
+         create_pypirc_file(pypi_username, pypi_password)
+ 
+     # Build the package before uploading
+     build_exit_code = os.system(f"cd {package_dir} && python setup.py sdist bdist_wheel")
+     if build_exit_code != 0:
+         print("Error: Failed to build the package.")
+         sys.exit(1)
+-
+-    exit_code = os.system(f"cd {package_dir} && twine upload dist/*")
++    exit_code = os.system(f"cd {package_dir} && twine upload --config-file ~/.pypirc dist/*")
+     if exit_code != 0:
+         print("Error: Failed to upload the package.")
+         sys.exit(1)
+ 
+ 
+ def to_pip_args():
+     args = parse_args()
+```
+

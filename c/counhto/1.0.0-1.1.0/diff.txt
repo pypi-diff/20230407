@@ -1,0 +1,611 @@
+--- tmp/counhto-1.0.0.tar.gz
++++ tmp/counhto-1.1.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "counhto-1.0.0.tar", last modified: Thu Apr  6 11:10:19 2023, max compression
+│ +gzip compressed data, was "counhto-1.1.0.tar", last modified: Fri Apr  7 16:18:57 2023, max compression
+│   --- counhto-1.0.0.tar
+├── +++ counhto-1.1.0.tar
+│ ├── file list
+│ │ @@ -1,19 +1,25 @@
+│ │ -drwxr-xr-x   0 dmalzl     (501) staff       (20)        0 2023-04-06 11:10:19.447349 counhto-1.0.0/
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)     1069 2023-04-06 11:05:33.000000 counhto-1.0.0/LICENSE
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)     3250 2023-04-06 11:10:19.446856 counhto-1.0.0/PKG-INFO
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)     1447 2023-04-06 10:21:39.000000 counhto-1.0.0/README.md
+│ │ -drwxr-xr-x   0 dmalzl     (501) staff       (20)        0 2023-04-06 11:10:19.322553 counhto-1.0.0/counhto/
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)       75 2023-04-06 08:18:39.000000 counhto-1.0.0/counhto/__init__.py
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)     4901 2023-04-06 08:37:03.000000 counhto-1.0.0/counhto/core.py
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)     3771 2023-04-06 10:51:56.000000 counhto-1.0.0/counhto/io.py
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)     2237 2023-04-06 10:56:24.000000 counhto-1.0.0/counhto/main.py
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)     2363 2023-04-05 16:04:55.000000 counhto-1.0.0/counhto/utils.py
+│ │ -drwxr-xr-x   0 dmalzl     (501) staff       (20)        0 2023-04-06 11:10:19.446159 counhto-1.0.0/counhto.egg-info/
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)     3250 2023-04-06 11:10:19.000000 counhto-1.0.0/counhto.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)      303 2023-04-06 11:10:19.000000 counhto-1.0.0/counhto.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)        1 2023-04-06 11:10:19.000000 counhto-1.0.0/counhto.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)       46 2023-04-06 11:10:19.000000 counhto-1.0.0/counhto.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)       26 2023-04-06 11:10:19.000000 counhto-1.0.0/counhto.egg-info/requires.txt
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)        8 2023-04-06 11:10:19.000000 counhto-1.0.0/counhto.egg-info/top_level.txt
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)      824 2023-04-06 10:28:02.000000 counhto-1.0.0/pyproject.toml
+│ │ --rw-r--r--   0 dmalzl     (501) staff       (20)       38 2023-04-06 11:10:19.447461 counhto-1.0.0/setup.cfg
+│ │ +drwxr-xr-x   0 dmalzl     (501) staff       (20)        0 2023-04-07 16:18:57.304736 counhto-1.1.0/
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     1069 2023-04-06 11:05:33.000000 counhto-1.1.0/LICENSE
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     3898 2023-04-07 16:18:57.304423 counhto-1.1.0/PKG-INFO
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     2027 2023-04-07 16:18:49.000000 counhto-1.1.0/README.md
+│ │ +drwxr-xr-x   0 dmalzl     (501) staff       (20)        0 2023-04-07 16:18:57.300943 counhto-1.1.0/counhto/
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)      169 2023-04-07 12:53:13.000000 counhto-1.1.0/counhto/__init__.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     2638 2023-04-07 10:01:15.000000 counhto-1.1.0/counhto/combinatorics.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)      522 2023-04-07 15:19:45.000000 counhto-1.1.0/counhto/constants.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     3706 2023-04-07 13:17:50.000000 counhto-1.1.0/counhto/count.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     3803 2023-04-07 14:55:41.000000 counhto-1.1.0/counhto/io.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     6059 2023-04-07 15:18:38.000000 counhto-1.1.0/counhto/jibes.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)    22929 2023-04-07 15:21:00.000000 counhto-1.1.0/counhto/jibes_core.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     1618 2021-06-15 18:32:22.000000 counhto-1.1.0/counhto/jibes_data.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     3860 2023-04-07 15:31:35.000000 counhto-1.1.0/counhto/main.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     2697 2023-04-07 15:15:47.000000 counhto-1.1.0/counhto/marginal.py
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)    10614 2023-04-07 16:06:33.000000 counhto-1.1.0/counhto/utils.py
+│ │ +drwxr-xr-x   0 dmalzl     (501) staff       (20)        0 2023-04-07 16:18:57.304015 counhto-1.1.0/counhto.egg-info/
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     3898 2023-04-07 16:18:57.000000 counhto-1.1.0/counhto.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)      431 2023-04-07 16:18:57.000000 counhto-1.1.0/counhto.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)        1 2023-04-07 16:18:57.000000 counhto-1.1.0/counhto.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)       46 2023-04-07 16:18:57.000000 counhto-1.1.0/counhto.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)       84 2023-04-07 16:18:57.000000 counhto-1.1.0/counhto.egg-info/requires.txt
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)        8 2023-04-07 16:18:57.000000 counhto-1.1.0/counhto.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)     1025 2023-04-07 12:31:38.000000 counhto-1.1.0/pyproject.toml
+│ │ +-rw-r--r--   0 dmalzl     (501) staff       (20)       38 2023-04-07 16:18:57.304829 counhto-1.1.0/setup.cfg
+│ │   --- counhto-1.0.0/LICENSE
+│ ├── +++ counhto-1.1.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- counhto-1.0.0/PKG-INFO
+│ ├── +++ counhto-1.1.0/PKG-INFO
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: counhto
+│ │ -Version: 1.0.0
+│ │ -Summary: Python package for generating hash tag oligo count matrices for demultiplexing cellranger output
+│ │ +Version: 1.1.0
+│ │ +Summary: Python package for generating and demultiplexing hash tag oligo count matrices from cellranger output
+│ │  Author-email: Daniel Malzl <daniel@menchelab.com>
+│ │  License: MIT License
+│ │          
+│ │          Copyright (c) 2023 Daniel Malzl
+│ │          
+│ │          Permission is hereby granted, free of charge, to any person obtaining a copy
+│ │          of this software and associated documentation files (the "Software"), to deal
+│ │ @@ -21,25 +21,28 @@
+│ │          IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ │          FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ │          AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ │          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ │          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│ │          SOFTWARE.
+│ │          
+│ │ -Project-URL: Homepage, https://github.com/dmalzl/countho
+│ │ -Keywords: bioinformatics,single cell sequencing,sequencing,NGS
+│ │ +Project-URL: Homepage, https://github.com/dmalzl/counhto
+│ │ +Keywords: bioinformatics,single cell sequencing,sequencing,NGS,hashtag oligo counting,hashtag oligo demultiplexing,cellranger
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Requires-Python: >=3.10
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # counhto
+│ │ -An easy to use tool to count hashtag oligos (HTOs) from 10x cellranger count output processed with Antibody Captures for sample multiplexing
+│ │ +
+│ │ +![img](https://img.shields.io/badge/pypi-1.1.0-blue)
+│ │ +
+│ │ +An easy to use tool to count hashtag oligos (HTOs) from 10x cellranger count output processed with Antibody Captures for sample multiplexing and assign tags to cells using the cellranger Jibes algorithm (this part is a minimal edit of the original algorithm as implemented in cellranger > 6.0)
+│ │  
+│ │  ## Install
+│ │  The most convenient and easy way to install the package is
+│ │  ```
+│ │  pip install countho
+│ │  ```
+│ │  
+│ │ @@ -60,15 +63,15 @@
+│ │  and invoking countho as follows
+│ │  ```
+│ │  countho --csv sample_csv.csv [-p n]
+│ │  ```
+│ │  
+│ │  The `-p` argument specifies the number of cpus to use for processing however this only has an effect if more than one samples are supplied.
+│ │  
+│ │ -The output for each sample will then be written to the specified output directories and will have the following structure
+│ │ +counhto then counts UMIs per HTO and automatically performes tag assignment using cellrangers Jibes algoritm (see [cell multiplexing documentation](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/algorithms/cellplex) for more info). The output for each sample will then be written to the specified output directories where the barcodes.tsv file contains the tag assignment information. The directory has following structure
+│ │  ```
+│ │  /path/to/outputdir/
+│ │  |__
+│ │ -   |__barcodes.tsv  # filtered barcodes
+│ │ +   |__barcodes.tsv  # filtered barcodes with tag assignment information
+│ │     |__features.tsv  # names of the HTOs as specified in the feature_ref.csv file
+│ │     |__matrix.mtx    # MatrixMarket formated count matrix of shape n_barcodes x n_HTOs
+│ │  ```
+│ │   --- counhto-1.0.0/README.md
+│ ├── +++ counhto-1.1.0/README.md
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,9 +1,12 @@
+│ │  # counhto
+│ │ -An easy to use tool to count hashtag oligos (HTOs) from 10x cellranger count output processed with Antibody Captures for sample multiplexing
+│ │ +
+│ │ +![img](https://img.shields.io/badge/pypi-1.1.0-blue)
+│ │ +
+│ │ +An easy to use tool to count hashtag oligos (HTOs) from 10x cellranger count output processed with Antibody Captures for sample multiplexing and assign tags to cells using the cellranger Jibes algorithm (this part is a minimal edit of the original algorithm as implemented in cellranger > 6.0)
+│ │  
+│ │  ## Install
+│ │  The most convenient and easy way to install the package is
+│ │  ```
+│ │  pip install countho
+│ │  ```
+│ │  
+│ │ @@ -24,15 +27,15 @@
+│ │  and invoking countho as follows
+│ │  ```
+│ │  countho --csv sample_csv.csv [-p n]
+│ │  ```
+│ │  
+│ │  The `-p` argument specifies the number of cpus to use for processing however this only has an effect if more than one samples are supplied.
+│ │  
+│ │ -The output for each sample will then be written to the specified output directories and will have the following structure
+│ │ +counhto then counts UMIs per HTO and automatically performes tag assignment using cellrangers Jibes algoritm (see [cell multiplexing documentation](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/algorithms/cellplex) for more info). The output for each sample will then be written to the specified output directories where the barcodes.tsv file contains the tag assignment information. The directory has following structure
+│ │  ```
+│ │  /path/to/outputdir/
+│ │  |__
+│ │ -   |__barcodes.tsv  # filtered barcodes
+│ │ +   |__barcodes.tsv  # filtered barcodes with tag assignment information
+│ │     |__features.tsv  # names of the HTOs as specified in the feature_ref.csv file
+│ │     |__matrix.mtx    # MatrixMarket formated count matrix of shape n_barcodes x n_HTOs
+│ │  ```
+│ │   --- counhto-1.0.0/counhto/core.py
+│ ├── +++ counhto-1.1.0/counhto/main.py
+│ │┄ Files 21% similar despite different names
+│ │ @@ -1,152 +1,120 @@
+│ │ +import sys
+│ │  import logging
+│ │ -import scipy
+│ │  
+│ │ -import pysam as ps
+│ │ +import argparse as ap
+│ │  import multiprocessing as mp
+│ │  
+│ │ -import scipy.sparse
+│ │ -
+│ │ -from .utils import (
+│ │ -    count_dict_to_csr_matrix,
+│ │ -    subset_called_cells,
+│ │ -    check_input_lengths
+│ │ -)
+│ │ -from .io import (
+│ │ -    read_hto_file,
+│ │ -    read_called_barcodes,
+│ │ -    write_counts
+│ │ -)
+│ │ -
+│ │ -from collections import defaultdict
+│ │ -
+│ │ -
+│ │ -def count_capture_per_cell_barcode(
+│ │ -        path_to_bamfile: str,
+│ │ -        htos: list[tuple[str]]
+│ │ -) -> tuple[scipy.sparse.csr_matrix, list[str], list[str]]:
+│ │ -    """
+│ │ -    parses a bamfile generated by cellranger and counts UMIs per HTO for each cell barcode
+│ │ -    assumes cepture library reads are unaligned reads in the given bamfile
+│ │ -
+│ │ -    :param path_to_bamfile:     path to possorted_bam.bam as generated by cellranger
+│ │ -    :param htos:                list of key, value tuples where key is the HTO sequence and value is the HTO name
+│ │ -
+│ │ -    :return:                    sparse count matrix,
+│ │ -                                cell barcodes corresponding to rows in counts,
+│ │ -                                HTO names corresponding to columns in counts
+│ │ -    """
+│ │ -    log_msg = f'processing bam_file for HTO counts: {path_to_bamfile}'
+│ │ -    logging.info(f'start {log_msg}')
+│ │ -
+│ │ -    bam = ps.AlignmentFile(path_to_bamfile, 'rb')
+│ │ -    feature_umis_per_cell_barcode: dict[str, dict[str, set]] = defaultdict(lambda: defaultdict(set))
+│ │ -    for capture_read in bam.fetch('*'):
+│ │ -        barcodes = {}
+│ │ -        for tag, alternative_tag, tag_label in zip(
+│ │ -                ['CB', 'fb', 'UB'],
+│ │ -                ['CR', 'fr', 'UR'],
+│ │ -                ['cell', 'feature', 'umi']
+│ │ -        ):
+│ │ -            corrected = capture_read.has_tag(tag)
+│ │ -            tag_to_fetch = tag if corrected else alternative_tag
+│ │ -
+│ │ -            if not capture_read.has_tag(tag_to_fetch):
+│ │ -                continue
+│ │ -
+│ │ -            barcode = capture_read.get_tag(tag_to_fetch)
+│ │ -
+│ │ -            if tag_label == 'CB' and not corrected:
+│ │ -                barcode = barcode + '-1'
+│ │ -
+│ │ -            barcodes[tag_label] = barcode
+│ │ -
+│ │ -        if 'feature' not in barcodes:
+│ │ -            continue
+│ │ -
+│ │ -        feature_umis_per_cell_barcode[barcodes['cell']][barcodes['feature']].add(barcodes['umi'])
+│ │ -
+│ │ -    bam.close()
+│ │ -
+│ │ -    count_matrix, cell_barcodes, feature_names = count_dict_to_csr_matrix(
+│ │ -        feature_umis_per_cell_barcode,
+│ │ -        htos
+│ │ +from .count import make_hto_count_matrix
+│ │ +from .utils import check_input_lengths, fill_unassigned_cells_entries
+│ │ +from .io import parse_input_csv, write_outputs
+│ │ +from .marginal import get_marginal_tag_assignment
+│ │ +from .jibes import get_jibes_tag_assignment
+│ │ +
+│ │ +FORMAT = '%(asctime)s %(message)s'
+│ │ +
+│ │ +
+│ │ +def argument_parser():
+│ │ +    parser = ap.ArgumentParser(
+│ │ +        formatter_class=ap.RawDescriptionHelpFormatter,
+│ │ +        description="""
+│ │ +            This tool is dedicated to counting hashtag oligos (HTOs) per cell barcode from 10x cellranger count output 
+│ │ +            with antibody capture libraries which is necessary in some cases because cellranger multi does not handle
+│ │ +            5'-chemistry libraries. In brief, this tool expects the possorted bam file and filtered barcodes.tsv file
+│ │ +            as generated by cellranger as well as the used feature reference csv and a output destination folder and
+│ │ +            will attempt to generate a filtered cell barcode x n HTOs count matrix which is written to the output
+│ │ +            given output folder. Each argument can handle multiple files which are matched by position so make sure that
+│ │ +            your supplied files line up when doing so.
+│ │ +        """,
+│ │ +        epilog='example usage:\n countho --csv samples.csv',
+│ │ +        conflict_handler='resolve'
+│ │ +    )
+│ │ +    required = parser.add_argument_group('Required arguments')
+│ │ +    required.add_argument(
+│ │ +        '--csv',
+│ │ +        metavar='SAMPLECSV',
+│ │ +        required=True
+│ │      )
+│ │  
+│ │ -    logging.info(f'done {log_msg}')
+│ │ -
+│ │ -    return count_matrix, cell_barcodes, feature_names
+│ │ +    optional = parser.add_argument_group('Optional arguments')
+│ │ +    optional.add_argument(
+│ │ +        '--processes', '-p',
+│ │ +        help='number of cores to use to process the input data. only has an effect if more than one samples are given',
+│ │ +        default=1,
+│ │ +        type=int
+│ │ +    )
+│ │  
+│ │ +    return parser
+│ │  
+│ │ -def make_hto_count_matrix(path_dict: dict[str, str]) -> None:
+│ │ -    """
+│ │ -    takes a dictionary containing paths to bam file, hto file, the filtered barcodes file and
+│ │ -    an output directory and generates an HTO count matrix per filtered cell barcode. The results
+│ │ -    are then written to the output directory
+│ │  
+│ │ -    :param path_dict:   dictionary with keys: 'bam_file', 'hto_file', 'barcode_file', output_directory
+│ │ -                        containing the path bam file, hto file, filtered barcode file and output directory respectively
+│ │ -    :return:            None
+│ │ -    """
+│ │ +def process_sample(path_dict: dict[str, str]):
+│ │      path_to_bam_file = path_dict['bam_file']
+│ │      path_to_hto_file = path_dict['hto_file']
+│ │      path_to_called_barcodes_file = path_dict['barcode_file']
+│ │      output_path_prefix = path_dict['output_directory']
+│ │  
+│ │ -    htos = read_hto_file(path_to_hto_file)
+│ │ -    counts, barcodes, features = count_capture_per_cell_barcode(
+│ │ +    tag_counts_matrix, barcodes, feature_names = make_hto_count_matrix(
+│ │          path_to_bam_file,
+│ │ -        htos
+│ │ +        path_to_hto_file,
+│ │ +        path_to_called_barcodes_file
+│ │      )
+│ │  
+│ │ -    compressed = True if path_to_called_barcodes_file.endswith('gz') else False
+│ │ -    called_barcodes = read_called_barcodes(
+│ │ -        path_to_called_barcodes_file,
+│ │ -        compressed=compressed
+│ │ +    marginal_features_per_cell_table = get_marginal_tag_assignment(
+│ │ +        tag_counts_matrix,
+│ │ +        feature_names,
+│ │ +        barcodes
+│ │ +    )
+│ │ +
+│ │ +    jibes_features_per_cell_table = get_jibes_tag_assignment(
+│ │ +        tag_counts_matrix,
+│ │ +        feature_names,
+│ │ +        barcodes,
+│ │ +        marginal_features_per_cell_table
+│ │      )
+│ │ -    subset_counts, subset_barcodes = subset_called_cells(
+│ │ -        counts,
+│ │ +
+│ │ +    jibes_features_per_cell_table = fill_unassigned_cells_entries(
+│ │ +        jibes_features_per_cell_table,
+│ │          barcodes,
+│ │ -        called_barcodes
+│ │ +        tag_counts_matrix
+│ │      )
+│ │ -    write_counts(
+│ │ -        subset_counts,
+│ │ -        subset_barcodes,
+│ │ -        features,
+│ │ +
+│ │ +    write_outputs(
+│ │ +        tag_counts_matrix,
+│ │ +        jibes_features_per_cell_table,
+│ │ +        feature_names,
+│ │          output_path_prefix
+│ │      )
+│ │  
+│ │  
+│ │ -def run_hto_counting(
+│ │ +def main():
+│ │ +    args = None
+│ │ +    if len(sys.argv) == 1:
+│ │ +        args = ["--help"]
+│ │ +
+│ │ +    args = argument_parser().parse_args(args)
+│ │ +
+│ │ +    logging.basicConfig(format=FORMAT)
+│ │ +    logging.getLogger().setLevel(logging.INFO)
+│ │ +
+│ │ +    bam_files, hto_files, barcode_files, output_directories = parse_input_csv(args.csv)
+│ │ +    check_input_lengths(
+│ │          bam_files,
+│ │          hto_files,
+│ │          barcode_files,
+│ │ -        output_directories,
+│ │ -        n_processes=1
+│ │ -):
+│ │ -    """
+│ │ -    runs the algorithm for each sample in the input lists. all lists must have the same length
+│ │ -
+│ │ -    :param bam_files:           list of bam files to process
+│ │ -    :param hto_files:           list of hto files corresponding to bam files
+│ │ -    :param barcode_files:       list of filtered barcode files corresponding to bam files
+│ │ -    :param output_directories:  list of output directories corresponding to bam files
+│ │ -    :param n_processes:
+│ │ -
+│ │ -    :return:                    None
+│ │ -    """
+│ │ +        output_directories
+│ │ +    )
+│ │      iterable = [
+│ │          {'bam_file': bam_file, 'hto_file': hto_file, 'barcode_file': barcode_file, 'output_directory': output_directory}
+│ │          for bam_file, hto_file, barcode_file, output_directory in
+│ │          zip(bam_files, hto_files, barcode_files, output_directories)
+│ │      ]
+│ │ -    if n_processes > 1:
+│ │ -        p = mp.Pool(n_processes)
+│ │ +    if args.processes > 1:
+│ │ +        p = mp.Pool(args.processes)
+│ │          _map = p.map
+│ │  
+│ │      else:
+│ │ -        _map = lambda func, iterable: list(map(func, iterable))  # necessary to invoke map
+│ │ +        _map = lambda func, iterable: list(map(func, iterable)) # necessary to invoke map
+│ │  
+│ │ -    _map(make_hto_count_matrix, iterable)
+│ │ +    _map(process_sample, iterable)
+│ │  
+│ │ -    if n_processes > 1:
+│ │ +    if args.processes > 1:
+│ │          p.close()
+│ │   --- counhto-1.0.0/counhto/io.py
+│ ├── +++ counhto-1.1.0/counhto/io.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,12 +1,15 @@
+│ │  import gzip
+│ │  import os
+│ │  import logging
+│ │  import scipy
+│ │  
+│ │ +import pandas as pd
+│ │ +import numpy as np
+│ │ +
+│ │  
+│ │  def parse_input_csv(path_to_csv_file: str) -> tuple[list[str], list[str], list[str], list[str]]:
+│ │      """
+│ │      parses the input csv file and returns a tuple of lists of bamfiles, htofiles, barcodefiles and outputdir
+│ │  
+│ │      :param path_to_csv_file:    csv file containing four columns with header bamfile,barcodefile,htofile,outputdir
+│ │  
+│ │ @@ -52,46 +55,46 @@
+│ │  
+│ │      return htos
+│ │  
+│ │  
+│ │  def read_called_barcodes(
+│ │          path_to_barcode_file: str,
+│ │          compressed: bool = True
+│ │ -) -> set[str]:
+│ │ +) -> list[str]:
+│ │      """
+│ │      read called barcodes from filtered barcodes.tsv files as returned by cellranger
+│ │  
+│ │      :param path_to_barcode_file:    path to filtered barcodes.tsv file
+│ │      :param compressed:              indicates if barcodes file is gzipped
+│ │  
+│ │      :return:                        set of filtered cell barcodes present in the final data
+│ │      """
+│ │      logging.info(f'reading called barcodes for count subsetting from {path_to_barcode_file}')
+│ │  
+│ │      _open = gzip.open if compressed else open
+│ │      mode = 'rt' if compressed else 'r'
+│ │      with _open(path_to_barcode_file, mode) as barcode_file:
+│ │ -        called_barcodes = set(
+│ │ +        called_barcodes = [
+│ │              barcode.rstrip() for barcode in barcode_file
+│ │ -        )
+│ │ +        ]
+│ │  
+│ │      return called_barcodes
+│ │  
+│ │  
+│ │ -def write_counts(
+│ │ +def write_outputs(
+│ │          counts: scipy.sparse.csr_matrix,
+│ │ -        barcodes: list[str],
+│ │ -        features: list[str],
+│ │ +        assignments: pd.DataFrame,
+│ │ +        features: np.ndarray,
+│ │          output_path_prefix: str
+│ │  ) -> None:
+│ │      """
+│ │      write results to files
+│ │  
+│ │      :param counts:              sparse count matrix
+│ │ -    :param barcodes:            list of cell barcodes corresponding to count matrix rows
+│ │ +    :param assignments:         dataframe containing the jibes tag assignments per cell
+│ │      :param features:            list of HTO names corresponding to count matrix columns
+│ │      :param output_path_prefix:  path to output directory
+│ │  
+│ │      :return:                    None
+│ │      """
+│ │      logging.info(f'writing output to {output_path_prefix}')
+│ │  
+│ │ @@ -99,14 +102,15 @@
+│ │          os.mkdir(output_path_prefix)
+│ │  
+│ │      scipy.io.mmwrite(
+│ │          os.path.join(output_path_prefix, 'matrix.mtx'),
+│ │          counts
+│ │      )
+│ │  
+│ │ -    for filename, data in zip(
+│ │ -            ['barcodes.tsv', 'features.tsv'],
+│ │ -            [barcodes, features]
+│ │ -    ):
+│ │ -        with open(os.path.join(output_path_prefix, filename), 'w') as ofile:
+│ │ -            for item in data:
+│ │ -                ofile.write(item + '\n')
+│ │ +    assignments.to_csv(
+│ │ +        os.path.join(output_path_prefix, 'barcodes.tsv'),
+│ │ +        sep='\t'
+│ │ +    )
+│ │ +
+│ │ +    with open(os.path.join(output_path_prefix, 'features.tsv'), 'w') as ofile:
+│ │ +        for item in features:
+│ │ +            ofile.write(item + '\n')
+│ │   --- counhto-1.0.0/counhto.egg-info/PKG-INFO
+│ ├── +++ counhto-1.1.0/counhto.egg-info/PKG-INFO
+│ │┄ Files 19% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: counhto
+│ │ -Version: 1.0.0
+│ │ -Summary: Python package for generating hash tag oligo count matrices for demultiplexing cellranger output
+│ │ +Version: 1.1.0
+│ │ +Summary: Python package for generating and demultiplexing hash tag oligo count matrices from cellranger output
+│ │  Author-email: Daniel Malzl <daniel@menchelab.com>
+│ │  License: MIT License
+│ │          
+│ │          Copyright (c) 2023 Daniel Malzl
+│ │          
+│ │          Permission is hereby granted, free of charge, to any person obtaining a copy
+│ │          of this software and associated documentation files (the "Software"), to deal
+│ │ @@ -21,25 +21,28 @@
+│ │          IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ │          FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ │          AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ │          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ │          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│ │          SOFTWARE.
+│ │          
+│ │ -Project-URL: Homepage, https://github.com/dmalzl/countho
+│ │ -Keywords: bioinformatics,single cell sequencing,sequencing,NGS
+│ │ +Project-URL: Homepage, https://github.com/dmalzl/counhto
+│ │ +Keywords: bioinformatics,single cell sequencing,sequencing,NGS,hashtag oligo counting,hashtag oligo demultiplexing,cellranger
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │  Classifier: Programming Language :: Python
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Requires-Python: >=3.10
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │  # counhto
+│ │ -An easy to use tool to count hashtag oligos (HTOs) from 10x cellranger count output processed with Antibody Captures for sample multiplexing
+│ │ +
+│ │ +![img](https://img.shields.io/badge/pypi-1.1.0-blue)
+│ │ +
+│ │ +An easy to use tool to count hashtag oligos (HTOs) from 10x cellranger count output processed with Antibody Captures for sample multiplexing and assign tags to cells using the cellranger Jibes algorithm (this part is a minimal edit of the original algorithm as implemented in cellranger > 6.0)
+│ │  
+│ │  ## Install
+│ │  The most convenient and easy way to install the package is
+│ │  ```
+│ │  pip install countho
+│ │  ```
+│ │  
+│ │ @@ -60,15 +63,15 @@
+│ │  and invoking countho as follows
+│ │  ```
+│ │  countho --csv sample_csv.csv [-p n]
+│ │  ```
+│ │  
+│ │  The `-p` argument specifies the number of cpus to use for processing however this only has an effect if more than one samples are supplied.
+│ │  
+│ │ -The output for each sample will then be written to the specified output directories and will have the following structure
+│ │ +counhto then counts UMIs per HTO and automatically performes tag assignment using cellrangers Jibes algoritm (see [cell multiplexing documentation](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/algorithms/cellplex) for more info). The output for each sample will then be written to the specified output directories where the barcodes.tsv file contains the tag assignment information. The directory has following structure
+│ │  ```
+│ │  /path/to/outputdir/
+│ │  |__
+│ │ -   |__barcodes.tsv  # filtered barcodes
+│ │ +   |__barcodes.tsv  # filtered barcodes with tag assignment information
+│ │     |__features.tsv  # names of the HTOs as specified in the feature_ref.csv file
+│ │     |__matrix.mtx    # MatrixMarket formated count matrix of shape n_barcodes x n_HTOs
+│ │  ```
+│ │   --- counhto-1.0.0/pyproject.toml
+│ ├── +++ counhto-1.1.0/pyproject.toml
+│ │┄ Files 15% similar despite different names
+│ │ @@ -2,29 +2,41 @@
+│ │  
+│ │  [build-system]
+│ │  requires      = ["setuptools>=61.0.0", "wheel"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "counhto"
+│ │ -version = "1.0.0"
+│ │ -description = "Python package for generating hash tag oligo count matrices for demultiplexing cellranger output"
+│ │ +version = "1.1.0"
+│ │ +description = "Python package for generating and demultiplexing hash tag oligo count matrices from cellranger output"
+│ │  readme = "README.md"
+│ │  authors = [{ name = "Daniel Malzl", email = "daniel@menchelab.com" }]
+│ │  license = { file = "LICENSE" }
+│ │  classifiers = [
+│ │      "License :: OSI Approved :: MIT License",
+│ │      "Programming Language :: Python",
+│ │      "Programming Language :: Python :: 3",
+│ │  ]
+│ │ -keywords = ['bioinformatics', 'single cell sequencing', 'sequencing', 'NGS']
+│ │ +keywords = [
+│ │ +    'bioinformatics',
+│ │ +    'single cell sequencing',
+│ │ +    'sequencing',
+│ │ +    'NGS',
+│ │ +    'hashtag oligo counting',
+│ │ +    'hashtag oligo demultiplexing',
+│ │ +    'cellranger'
+│ │ +]
+│ │  dependencies = [
+│ │ -    'pysam >= 0.20.0',
+│ │ -    'scipy >= 1.10'
+│ │ +    'pysam >= 0.20',
+│ │ +    'scipy >= 1.10',
+│ │ +    'pandas >= 1.5',
+│ │ +    'statsmodels >= 0.13',
+│ │ +    'scikit-learn >= 1.2',
+│ │ +    'numpy >= 1.23'
+│ │  ]
+│ │  requires-python = ">=3.10"
+│ │  
+│ │  [project.scripts]
+│ │  counhto = 'counhto.main:main'
+│ │  
+│ │  [project.urls]
+│ │ -Homepage = "https://github.com/dmalzl/countho"
+│ │ +Homepage = "https://github.com/dmalzl/counhto"

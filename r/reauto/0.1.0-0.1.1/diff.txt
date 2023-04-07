@@ -1,0 +1,91 @@
+--- tmp/reauto-0.1.0.tar.gz
++++ tmp/reauto-0.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "reauto-0.1.0.tar", last modified: Fri Apr  7 16:15:29 2023, max compression
+│ +gzip compressed data, was "reauto-0.1.1.tar", last modified: Fri Apr  7 16:15:37 2023, max compression
+│   --- reauto-0.1.0.tar
+├── +++ reauto-0.1.1.tar
+│ ├── file list
+│ │ @@ -1,14 +1,14 @@
+│ │ -drwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        0 2023-04-07 16:15:29.123160 reauto-0.1.0/
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)     1304 2023-04-07 16:15:29.120160 reauto-0.1.0/PKG-INFO
+│ │ -drwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        0 2023-04-07 16:15:29.035481 reauto-0.1.0/reauto.egg-info/
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)     1304 2023-04-07 16:15:28.000000 reauto-0.1.0/reauto.egg-info/PKG-INFO
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)      226 2023-04-07 16:15:28.000000 reauto-0.1.0/reauto.egg-info/SOURCES.txt
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        1 2023-04-07 16:15:28.000000 reauto-0.1.0/reauto.egg-info/dependency_links.txt
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)       37 2023-04-07 16:15:28.000000 reauto-0.1.0/reauto.egg-info/entry_points.txt
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)       11 2023-04-07 16:15:28.000000 reauto-0.1.0/reauto.egg-info/requires.txt
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        8 2023-04-07 16:15:28.000000 reauto-0.1.0/reauto.egg-info/top_level.txt
+│ │ -drwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        0 2023-04-07 16:15:29.090382 reauto-0.1.0/reqauto/
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)       24 2023-04-07 15:53:00.000000 reauto-0.1.0/reqauto/__init__.py
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)      734 2023-04-07 15:52:44.000000 reauto-0.1.0/reqauto/main.py
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)       38 2023-04-07 16:15:29.124160 reauto-0.1.0/setup.cfg
+│ │ --rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)     1183 2023-04-07 16:15:25.000000 reauto-0.1.0/setup.py
+│ │ +drwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        0 2023-04-07 16:15:37.982703 reauto-0.1.1/
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)     1304 2023-04-07 16:15:37.979702 reauto-0.1.1/PKG-INFO
+│ │ +drwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        0 2023-04-07 16:15:37.902472 reauto-0.1.1/reauto.egg-info/
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)     1304 2023-04-07 16:15:37.000000 reauto-0.1.1/reauto.egg-info/PKG-INFO
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)      226 2023-04-07 16:15:37.000000 reauto-0.1.1/reauto.egg-info/SOURCES.txt
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        1 2023-04-07 16:15:37.000000 reauto-0.1.1/reauto.egg-info/dependency_links.txt
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)       37 2023-04-07 16:15:37.000000 reauto-0.1.1/reauto.egg-info/entry_points.txt
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)       11 2023-04-07 16:15:37.000000 reauto-0.1.1/reauto.egg-info/requires.txt
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        8 2023-04-07 16:15:37.000000 reauto-0.1.1/reauto.egg-info/top_level.txt
+│ │ +drwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)        0 2023-04-07 16:15:37.953626 reauto-0.1.1/reqauto/
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)       24 2023-04-07 15:53:00.000000 reauto-0.1.1/reqauto/__init__.py
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)      734 2023-04-07 15:52:44.000000 reauto-0.1.1/reqauto/main.py
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)       38 2023-04-07 16:15:37.983732 reauto-0.1.1/setup.cfg
+│ │ +-rwxrwxrwx   0 jaseundaroot  (1000) jaseundaroot  (1000)     1183 2023-04-07 16:15:34.000000 reauto-0.1.1/setup.py
+│ │   --- reauto-0.1.0/PKG-INFO
+│ ├── +++ reauto-0.1.1/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: reauto
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: A Python package to automatically generate and install requirements.txt
+│ │  Home-page: https://github.com/yourusername/piply
+│ │  Author: Jaseunda
+│ │  Author-email: opensource@jaseunda.com
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- reauto-0.1.0/reauto.egg-info/PKG-INFO
+│ ├── +++ reauto-0.1.1/reauto.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: reauto
+│ │ -Version: 0.1.0
+│ │ +Version: 0.1.1
+│ │  Summary: A Python package to automatically generate and install requirements.txt
+│ │  Home-page: https://github.com/yourusername/piply
+│ │  Author: Jaseunda
+│ │  Author-email: opensource@jaseunda.com
+│ │  Classifier: Development Status :: 3 - Alpha
+│ │  Classifier: Intended Audience :: Developers
+│ │  Classifier: License :: OSI Approved :: MIT License
+│ │   --- reauto-0.1.0/reqauto/main.py
+│ ├── +++ reauto-0.1.1/reqauto/main.py
+│ │┄ Files identical despite different names
+│ │   --- reauto-0.1.0/setup.py
+│ ├── +++ reauto-0.1.1/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -3,15 +3,15 @@
+│ │  
+│ │  # Read the contents of your README file
+│ │  with open("docs/README.md", "r", encoding="utf-8") as fh:
+│ │      long_description = fh.read()
+│ │  
+│ │  setup(
+│ │      name="reauto",
+│ │ -    version="0.1.0",
+│ │ +    version="0.1.1",
+│ │      author="Jaseunda",
+│ │      author_email="opensource@jaseunda.com",
+│ │      description="A Python package to automatically generate and install requirements.txt",
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      url="https://github.com/yourusername/piply",
+│ │      packages=find_packages(),
