@@ -3864,3 +3864,37 @@
 [2023-04-07 22:19:08] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:19:08] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:19:09] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:21:19] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622718]
+[2023-04-07 22:21:24] INFO root fetch - main [MainThread]: Found 6 changed packages
+[2023-04-07 22:21:24] INFO root fetch - processPackages [binance-data-exporter]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 22:21:24] INFO root fetch - processPackages [negar-gui]: New version: [0.7.2] Old Version: [0.7.1]
+[2023-04-07 22:21:24] INFO root fetch - processPackages [inviz]: New version: [0.0.2] Old Version: [0.0.1]
+[2023-04-07 22:21:24] INFO root fetch - processPackages [lhf]: New version: [1.3.2] Old Version: [1.3.1]
+[2023-04-07 22:21:24] INFO root fetch - processPackages [phidata]: New version: [1.5.5] Old Version: [1.5.4]
+[2023-04-07 22:21:24] INFO root fetch - processPackages [negar-gui]: Downloading https://files.pythonhosted.org/packages/5a/71/69d1fbc16eec9c3d2b187dc11c6bc6112685a2236188497dd3fdef77a2cd/negar-gui-0.7.2.tar.gz
+[2023-04-07 22:21:24] INFO root fetch - processPackages [inviz]: Downloading https://files.pythonhosted.org/packages/91/ee/3ce6d186bf37d58f2d540fe612fa8d5027eeb82f62aa5f2e94d33db68b15/inviz-0.0.1.tar.gz
+[2023-04-07 22:21:24] INFO root fetch - processPackages [binance-data-exporter]: Downloading https://files.pythonhosted.org/packages/8d/22/6562f5436a595859be68e823366d99f986926d365b715134a5d3bc68a6c2/binance_data_exporter-0.1.0.tar.gz
+[2023-04-07 22:21:24] INFO root fetch - processPackages [lhf]: Downloading https://files.pythonhosted.org/packages/57/b4/bb20717b6f4bb9a7b96821586069bfb5162178f6d45535b4952727a0cc90/lhf-1.3.1-py3-none-manylinux_2_28_x86_64.whl
+[2023-04-07 22:21:24] INFO root fetch - processPackages [phidata]: Downloading https://files.pythonhosted.org/packages/e1/64/0e3a60c24a1f8108d9a7fc721205cfe57396c4171bf201fd91471eabcd45/phidata-1.5.5.tar.gz
+[2023-04-07 22:21:24] INFO root fetch - processPackages [negar-gui]: executing diffoscope
+[2023-04-07 22:21:24] INFO root fetch - processPackages [negar-gui]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/negar-gui-0.7.1.tar.gz tmp/negar-gui-0.7.2.tar.gz --markdown 20230407/n/negar-gui/0.7.1-0.7.2/diff.md
+[2023-04-07 22:21:25] INFO root fetch - processPackages [phidata]: executing diffoscope
+[2023-04-07 22:21:25] INFO root fetch - processPackages [phidata]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/phidata-1.5.4.tar.gz tmp/phidata-1.5.5.tar.gz --markdown 20230407/p/phidata/1.5.4-1.5.5/diff.md
+[2023-04-07 22:21:25] INFO root fetch - processPackages [inviz]: Downloading https://files.pythonhosted.org/packages/70/44/92e3c32a9cdc4ea9430f23db23d6c51a1bbedf17638248f6b714dde12ab0/inviz-0.0.2.tar.gz
+[2023-04-07 22:21:25] INFO root fetch - processPackages [binance-data-exporter]: Downloading https://files.pythonhosted.org/packages/52/2f/f1f2743cd32e7df9f9e1681430a0a87d455990c9788e9ebffe6fa05b965d/binance_data_exporter-0.1.1.tar.gz
+[2023-04-07 22:21:25] INFO root fetch - processPackages [inviz]: executing diffoscope
+[2023-04-07 22:21:25] INFO root fetch - processPackages [inviz]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/inviz-0.0.1.tar.gz tmp/inviz-0.0.2.tar.gz --markdown 20230407/i/inviz/0.0.1-0.0.2/diff.md
+[2023-04-07 22:21:25] INFO root fetch - processPackages [binance-data-exporter]: executing diffoscope
+[2023-04-07 22:21:25] INFO root fetch - processPackages [binance-data-exporter]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/binance_data_exporter-0.1.0.tar.gz tmp/binance_data_exporter-0.1.1.tar.gz --markdown 20230407/b/binance-data-exporter/0.1.0-0.1.1/diff.md
+[2023-04-07 22:21:26] INFO root fetch - processPackages [lhf]: Downloading https://files.pythonhosted.org/packages/85/d1/4496118eca6ce441372923a8227bcaf50744df629bebcd022cbe4391eae0/lhf-1.3.2-py3-none-manylinux_2_28_x86_64.whl
+[2023-04-07 22:21:26] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:21:26] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:21:26] INFO root fetch - processPackages [fastapi-poe]: New version: [0.0.4] Old Version: [0.0.3]
+[2023-04-07 22:21:26] INFO root fetch - processPackages [fastapi-poe]: executing diffoscope
+[2023-04-07 22:21:26] INFO root fetch - processPackages [fastapi-poe]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/fastapi_poe-0.0.3.tar.gz tmp/fastapi_poe-0.0.4.tar.gz --markdown 20230407/f/fastapi-poe/0.0.3-0.0.4/diff.md
+[2023-04-07 22:21:26] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:21:26] INFO root fetch - processPackages [lhf]: executing diffoscope
+[2023-04-07 22:21:26] INFO root fetch - processPackages [lhf]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/lhf-1.3.1-py3-none-manylinux_2_28_x86_64.whl.zip tmp/lhf-1.3.2-py3-none-manylinux_2_28_x86_64.whl.zip --markdown 20230407/l/lhf/1.3.1-1.3.2/diff.md
+[2023-04-07 22:21:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:21:28] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:21:46] INFO root fetch - main [MainThread]: success
