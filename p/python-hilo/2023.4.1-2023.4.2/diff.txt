@@ -1,0 +1,277 @@
+--- tmp/python_hilo-2023.4.1.tar.gz
++++ tmp/python_hilo-2023.4.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "python_hilo-2023.4.1.tar", max compression
+│ +gzip compressed data, was "python_hilo-2023.4.2.tar", max compression
+│   --- python_hilo-2023.4.1.tar
+├── +++ python_hilo-2023.4.2.tar
+│ ├── file list
+│ │ @@ -1,18 +1,18 @@
+│ │ --rw-r--r--   0        0        0     1082 2023-02-20 01:13:28.118104 python_hilo-2023.4.1/LICENSE
+│ │ --rw-r--r--   0        0        0     1124 2023-02-20 01:13:28.118273 python_hilo-2023.4.1/README.md
+│ │ --rw-r--r--   0        0        0      109 2022-03-03 03:33:56.401543 python_hilo-2023.4.1/pyhilo/__init__.py
+│ │ --rw-r--r--   0        0        0    28825 2023-03-06 23:53:51.346014 python_hilo-2023.4.1/pyhilo/api.py
+│ │ --rw-r--r--   0        0        0     6957 2023-04-07 15:00:18.615552 python_hilo-2023.4.1/pyhilo/const.py
+│ │ --rw-r--r--   0        0        0     9103 2022-03-03 03:33:56.402025 python_hilo-2023.4.1/pyhilo/device/__init__.py
+│ │ --rw-r--r--   0        0        0     1287 2023-02-20 01:13:28.119444 python_hilo-2023.4.1/pyhilo/device/climate.py
+│ │ --rw-r--r--   0        0        0      930 2023-02-20 01:13:28.119569 python_hilo-2023.4.1/pyhilo/device/light.py
+│ │ --rw-r--r--   0        0        0      446 2022-03-03 03:33:56.402237 python_hilo-2023.4.1/pyhilo/device/sensor.py
+│ │ --rw-r--r--   0        0        0      438 2022-03-03 03:33:56.402304 python_hilo-2023.4.1/pyhilo/device/switch.py
+│ │ --rw-r--r--   0        0        0     3824 2023-04-07 15:00:18.615734 python_hilo-2023.4.1/pyhilo/devices.py
+│ │ --rw-r--r--   0        0        0     4013 2022-03-03 03:33:56.402480 python_hilo-2023.4.1/pyhilo/event.py
+│ │ --rw-r--r--   0        0        0     1191 2022-03-03 03:33:56.402554 python_hilo-2023.4.1/pyhilo/exceptions.py
+│ │ --rw-r--r--   0        0        0     1257 2022-03-03 03:33:56.402675 python_hilo-2023.4.1/pyhilo/util/__init__.py
+│ │ --rw-r--r--   0        0        0     2988 2023-02-20 01:13:28.119721 python_hilo-2023.4.1/pyhilo/util/state.py
+│ │ --rw-r--r--   0        0        0    13003 2023-02-20 01:13:28.119881 python_hilo-2023.4.1/pyhilo/websocket.py
+│ │ --rw-r--r--   0        0        0     3151 2023-04-07 15:00:46.570201 python_hilo-2023.4.1/pyproject.toml
+│ │ --rw-r--r--   0        0        0     2529 1970-01-01 00:00:00.000000 python_hilo-2023.4.1/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1082 2023-02-20 01:13:28.118104 python_hilo-2023.4.2/LICENSE
+│ │ +-rw-r--r--   0        0        0     1124 2023-02-20 01:13:28.118273 python_hilo-2023.4.2/README.md
+│ │ +-rw-r--r--   0        0        0      109 2022-03-03 03:33:56.401543 python_hilo-2023.4.2/pyhilo/__init__.py
+│ │ +-rw-r--r--   0        0        0    28803 2023-04-07 15:37:20.467264 python_hilo-2023.4.2/pyhilo/api.py
+│ │ +-rw-r--r--   0        0        0     6950 2023-04-07 15:35:01.807968 python_hilo-2023.4.2/pyhilo/const.py
+│ │ +-rw-r--r--   0        0        0     9103 2022-03-03 03:33:56.402025 python_hilo-2023.4.2/pyhilo/device/__init__.py
+│ │ +-rw-r--r--   0        0        0     1303 2023-04-07 15:45:29.694634 python_hilo-2023.4.2/pyhilo/device/climate.py
+│ │ +-rw-r--r--   0        0        0      946 2023-04-07 15:43:25.840649 python_hilo-2023.4.2/pyhilo/device/light.py
+│ │ +-rw-r--r--   0        0        0      462 2023-04-07 15:43:10.973680 python_hilo-2023.4.2/pyhilo/device/sensor.py
+│ │ +-rw-r--r--   0        0        0      454 2023-04-07 15:42:51.429777 python_hilo-2023.4.2/pyhilo/device/switch.py
+│ │ +-rw-r--r--   0        0        0     3836 2023-04-07 15:41:59.052538 python_hilo-2023.4.2/pyhilo/devices.py
+│ │ +-rw-r--r--   0        0        0     4013 2022-03-03 03:33:56.402480 python_hilo-2023.4.2/pyhilo/event.py
+│ │ +-rw-r--r--   0        0        0     1191 2022-03-03 03:33:56.402554 python_hilo-2023.4.2/pyhilo/exceptions.py
+│ │ +-rw-r--r--   0        0        0     1257 2022-03-03 03:33:56.402675 python_hilo-2023.4.2/pyhilo/util/__init__.py
+│ │ +-rw-r--r--   0        0        0     2988 2023-02-20 01:13:28.119721 python_hilo-2023.4.2/pyhilo/util/state.py
+│ │ +-rw-r--r--   0        0        0    13020 2023-04-07 15:38:42.902984 python_hilo-2023.4.2/pyhilo/websocket.py
+│ │ +-rw-r--r--   0        0        0     3151 2023-04-07 15:46:51.125425 python_hilo-2023.4.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0     2529 1970-01-01 00:00:00.000000 python_hilo-2023.4.2/PKG-INFO
+│ │   --- python_hilo-2023.4.1/LICENSE
+│ ├── +++ python_hilo-2023.4.2/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- python_hilo-2023.4.1/README.md
+│ ├── +++ python_hilo-2023.4.2/README.md
+│ │┄ Files identical despite different names
+│ │   --- python_hilo-2023.4.1/pyhilo/api.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/api.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -49,15 +49,14 @@
+│ │      REQUEST_RETRY,
+│ │      SUBSCRIPTION_KEY,
+│ │  )
+│ │  from pyhilo.device import DeviceAttribute, HiloDevice, get_device_attributes
+│ │  from pyhilo.exceptions import InvalidCredentialsError, RequestError
+│ │  from pyhilo.util import schedule_callback
+│ │  from pyhilo.util.state import (
+│ │ -    RegistrationDict,
+│ │      TokenDict,
+│ │      WebsocketDict,
+│ │      WebsocketTransportsDict,
+│ │      get_state,
+│ │      set_state,
+│ │  )
+│ │  from pyhilo.websocket import WebsocketClient
+│ │   --- python_hilo-2023.4.1/pyhilo/const.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/const.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -45,23 +45,21 @@
+│ │  }
+│ │  
+│ │  # Automation server constants
+│ │  AUTOMATION_HOSTNAME: Final = "automation.hiloenergie.com"
+│ │  AUTOMATION_DEVICEHUB_ENDPOINT: Final = "/DeviceHub"
+│ │  
+│ │  # Request constants
+│ │ -DEFAULT_USER_AGENT: Final = (
+│ │ -    f"HomeAssistantHilo/{HILO_APP_VERSION} HomeAssistant/{homeassistant.core.__version__} aiohttp/{aiohttp.__version__} Python/{platform.python_version()}"
+│ │ -)
+│ │ +DEFAULT_USER_AGENT: Final = f"HomeAssistantHilo/{HILO_APP_VERSION} HomeAssistant/{homeassistant.core.__version__} aiohttp/{aiohttp.__version__} Python/{platform.python_version()}"
+│ │  
+│ │  
+│ │  # NOTE(dvd): Not sure how to get new ones so I'm using the ones from my emulator
+│ │  # We can't unfortunately randomize this device id, I believe it's generated when
+│ │  # an android device registers to the play store, but I'm no android dev.
+│ │ -#ANDROID_DEVICE_ID: Final = 3530136576518667218
+│ │ +# ANDROID_DEVICE_ID: Final = 3530136576518667218
+│ │  # NOTE(dvd): Based on issue #113, this can be set to 0
+│ │  ANDROID_DEVICE_ID: Final = 3530136576518667218
+│ │  
+│ │  ANDROID_DEVICE_SECURITY_TOKEN: Final = 7776414007788361535
+│ │  ANDROID_CERT: Final = "59F0B6042655AD8AE46120E42417F80641D14CEF"
+│ │  GOOGLE_API_KEY: Final = "AIzaSyAHZ8_vQRoZZshDkQ0gsPVxSJ_RWQynMWQ"
+│ │  ANDROID_SENDER: Final = 18450192328
+│ │   --- python_hilo-2023.4.1/pyhilo/device/__init__.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/device/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- python_hilo-2023.4.1/pyhilo/device/climate.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/device/climate.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -5,15 +5,15 @@
+│ │  from pyhilo import API
+│ │  from pyhilo.const import LOG
+│ │  from pyhilo.device import HiloDevice
+│ │  
+│ │  
+│ │  class Climate(HiloDevice):
+│ │      def __init__(self, api: API, **kwargs: dict[str, Union[str, int]]):
+│ │ -        super().__init__(api, **kwargs)
+│ │ +        super().__init__(api, **kwargs)  # type: ignore
+│ │          LOG.debug(f"Setting up Climate device: {self.name}")
+│ │  
+│ │      @property
+│ │      def current_temperature(self) -> float:
+│ │          return cast(float, self.get_value("current_temperature", 0))
+│ │  
+│ │      @property
+│ │   --- python_hilo-2023.4.1/pyhilo/device/light.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/device/light.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -5,15 +5,15 @@
+│ │  from pyhilo import API
+│ │  from pyhilo.const import LOG
+│ │  from pyhilo.device import HiloDevice
+│ │  
+│ │  
+│ │  class Light(HiloDevice):
+│ │      def __init__(self, api: API, **kwargs: dict[str, Union[str, int]]):
+│ │ -        super().__init__(api, **kwargs)
+│ │ +        super().__init__(api, **kwargs)  # type: ignore
+│ │          LOG.debug(f"Setting up Light device: {self.name}")
+│ │  
+│ │      @property
+│ │      def brightness(self) -> float:
+│ │          return self.get_value("intensity") * 255 or 0
+│ │  
+│ │      @property
+│ │   --- python_hilo-2023.4.1/pyhilo/devices.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/devices.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -76,17 +76,17 @@
+│ │              device_type = "Sensor"
+│ │          dev.__class__ = globals()[device_type]
+│ │          return dev
+│ │  
+│ │      async def update(self) -> None:
+│ │          fresh_devices = await self._api.get_devices(self.location_id)
+│ │          generated_devices = []
+│ │ -        for device in fresh_devices:
+│ │ -            LOG.debug(f"Generating device {device}")
+│ │ -            dev = self.generate_device(device)
+│ │ +        for raw_device in fresh_devices:
+│ │ +            LOG.debug(f"Generating device {raw_device}")
+│ │ +            dev = self.generate_device(raw_device)
+│ │              generated_devices.append(dev)
+│ │              if dev not in self.devices:
+│ │                  self.devices.append(dev)
+│ │          for device in self.devices:
+│ │              if device not in generated_devices:
+│ │                  LOG.debug(f"Device unpaired {device}")
+│ │                  # Don't do anything with unpaired device for now.
+│ │   --- python_hilo-2023.4.1/pyhilo/event.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/event.py
+│ │┄ Files identical despite different names
+│ │   --- python_hilo-2023.4.1/pyhilo/exceptions.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/exceptions.py
+│ │┄ Files identical despite different names
+│ │   --- python_hilo-2023.4.1/pyhilo/util/__init__.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/util/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- python_hilo-2023.4.1/pyhilo/util/state.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/util/state.py
+│ │┄ Files identical despite different names
+│ │   --- python_hilo-2023.4.1/pyhilo/websocket.py
+│ ├── +++ python_hilo-2023.4.2/pyhilo/websocket.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -177,14 +177,15 @@
+│ │  
+│ │          try:
+│ │              data = json.loads(msg.data[:-1])
+│ │          except ValueError as v_exc:
+│ │              raise InvalidMessageError("Received invalid JSON") from v_exc
+│ │          except json.decoder.JSONDecodeError as j_exc:
+│ │              LOG.error(f"Received invalid JSON: {msg.data}")
+│ │ +            LOG.exception(j_exc)
+│ │              data = {}
+│ │  
+│ │          self._watchdog.trigger()
+│ │  
+│ │          return cast(Dict[str, Any], data)
+│ │  
+│ │      async def _async_send_json(self, payload: dict[str, Any]) -> None:
+│ │ @@ -276,15 +277,15 @@
+│ │                  ),
+│ │                  heartbeat=55,
+│ │                  headers=headers,
+│ │                  **proxy_env,
+│ │              )
+│ │          except (ClientError, ServerDisconnectedError, WSServerHandshakeError) as err:
+│ │              LOG.error(f"Unable to connect to WS server {err}")
+│ │ -            if hasattr(err, "status") and err.status in (401, 403, 404, 409):  # type: ignore
+│ │ +            if hasattr(err, "status") and err.status in (401, 403, 404, 409):
+│ │                  raise InvalidCredentialsError("Invalid credentials") from err
+│ │          except Exception as err:
+│ │              LOG.error(f"Unable to connect to WS server {err}")
+│ │              raise CannotConnectError(err) from err
+│ │  
+│ │          LOG.info("Connected to websocket server")
+│ │          self._watchdog.trigger()
+│ │   --- python_hilo-2023.4.1/pyproject.toml
+│ ├── +++ python_hilo-2023.4.2/pyproject.toml
+│ │┄ Files 2% similar despite different names
+│ │ @@ -36,15 +36,15 @@
+│ │  warn_unreachable = true
+│ │  warn_unused_configs = true
+│ │  warn_unused_ignores = true
+│ │  exclude = ".venv/.*"
+│ │  
+│ │  [tool.poetry]
+│ │  name = "python-hilo"
+│ │ -version = "2023.04.01"
+│ │ +version = "2023.04.02"
+│ │  description = "A Python3, async interface to the Hilo API"
+│ │  readme = "README.md"
+│ │  authors = ["David Vallee Delisle <me@dvd.dev>"]
+│ │  maintainers = ["David Vallee Delisle <me@dvd.dev>"]
+│ │  license = "MIT"
+│ │  repository = "https://github.com/dvd-dev/python-hilo"
+│ │  packages = [
+│ │ @@ -71,23 +71,23 @@
+│ │  python-dateutil = ">=2.8.2"
+│ │  ruyaml = ">=0.91.0"
+│ │  python = "^3.9.0"
+│ │  voluptuous = ">=0.13.1"
+│ │  websockets = ">=8.1,<11.0"
+│ │  
+│ │  [tool.poetry.dev-dependencies]
+│ │ -Sphinx = "^5.3.0"
+│ │ +Sphinx = "^6.1.3"
+│ │  aresponses = "^2.1.4"
+│ │  asynctest = "^0.13.0"
+│ │ -pre-commit = "^2.0.1"
+│ │ +pre-commit = "^3.2.2"
+│ │  pytest = "^7.2.0"
+│ │  pytest-aiohttp = "^1.0.4"
+│ │  pytest-cov = "^4.0.0"
+│ │  sphinx-rtd-theme = "^1.0.0"
+│ │ -types-pytz = "^2022.7.0"
+│ │ +types-pytz = "^2023.3.0"
+│ │  
+│ │  [tool.pylint.BASIC]
+│ │  expected-line-ending-format = "LF"
+│ │  
+│ │  [tool.pylint."MESSAGES CONTROL"]
+│ │  # Reasons disabled:
+│ │  # bad-continuation - Invalid attack on black
+│ │   --- python_hilo-2023.4.1/PKG-INFO
+│ ├── +++ python_hilo-2023.4.2/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: python-hilo
+│ │ -Version: 2023.4.1
+│ │ +Version: 2023.4.2
+│ │  Summary: A Python3, async interface to the Hilo API
+│ │  Home-page: https://github.com/dvd-dev/python-hilo
+│ │  License: MIT
+│ │  Author: David Vallee Delisle
+│ │  Author-email: me@dvd.dev
+│ │  Maintainer: David Vallee Delisle
+│ │  Maintainer-email: me@dvd.dev

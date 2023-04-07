@@ -1,0 +1,1256 @@
+# Comparing `tmp/dcicutils-6.9.9.0b9.tar.gz` & `tmp/dcicutils-7.0.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "dcicutils-6.9.9.0b9.tar", max compression
++gzip compressed data, was "dcicutils-7.0.0.tar", max compression
+```
+
+## Comparing `dcicutils-6.9.9.0b9.tar` & `dcicutils-7.0.0.tar`
+
+### file list
+
+```diff
+@@ -1,43 +1,43 @@
+--rw-r--r--   0        0        0     1166 2020-06-26 13:31:34.710949 dcicutils-6.9.9.0b9/README.rst
+--rw-r--r--   0        0        0      396 2022-09-12 17:47:33.197662 dcicutils-6.9.9.0b9/dcicutils/__init__.py
+--rw-r--r--   0        0        0     5073 2022-09-12 17:47:33.198540 dcicutils-6.9.9.0b9/dcicutils/base.py
+--rwxr-xr-x   0        0        0    52659 2022-09-12 17:47:33.199849 dcicutils-6.9.9.0b9/dcicutils/beanstalk_utils.py
+--rw-r--r--   0        0        0    13786 2023-02-03 18:43:26.004805 dcicutils-6.9.9.0b9/dcicutils/cloudformation_utils.py
+--rw-r--r--   0        0        0     1155 2022-12-05 18:22:34.726889 dcicutils-6.9.9.0b9/dcicutils/codebuild_utils.py
+--rw-r--r--   0        0        0    13297 2022-09-12 17:47:33.200985 dcicutils-6.9.9.0b9/dcicutils/command_utils.py
+--rw-r--r--   0        0        0      764 2022-09-12 17:47:33.201479 dcicutils-6.9.9.0b9/dcicutils/common.py
+--rw-r--r--   0        0        0    11032 2022-09-12 17:47:33.201910 dcicutils-6.9.9.0b9/dcicutils/creds_utils.py
+--rw-r--r--   0        0        0     3098 2021-09-01 19:18:33.261747 dcicutils-6.9.9.0b9/dcicutils/data_utils.py
+--rw-r--r--   0        0        0    66844 2023-03-20 18:54:05.768446 dcicutils-6.9.9.0b9/dcicutils/deployment_utils.py
+--rw-r--r--   0        0        0     8118 2022-07-14 16:55:23.169003 dcicutils-6.9.9.0b9/dcicutils/diff_utils.py
+--rw-r--r--   0        0        0     1747 2022-07-14 16:55:23.169517 dcicutils-6.9.9.0b9/dcicutils/docker_utils.py
+--rw-r--r--   0        0        0    19474 2022-09-12 17:47:33.203186 dcicutils-6.9.9.0b9/dcicutils/ecr_scripts.py
+--rw-r--r--   0        0        0    13079 2022-09-12 17:47:33.203764 dcicutils-6.9.9.0b9/dcicutils/ecr_utils.py
+--rw-r--r--   0        0        0     3590 2022-09-12 17:47:33.204441 dcicutils-6.9.9.0b9/dcicutils/ecs_utils.py
+--rw-r--r--   0        0        0     6382 2022-09-12 17:47:33.204709 dcicutils-6.9.9.0b9/dcicutils/env_base.py
+--rw-r--r--   0        0        0     9444 2022-09-12 17:47:33.205392 dcicutils-6.9.9.0b9/dcicutils/env_manager.py
+--rw-r--r--   0        0        0     3909 2022-09-12 17:47:33.205684 dcicutils-6.9.9.0b9/dcicutils/env_scripts.py
+--rw-r--r--   0        0        0    46285 2023-01-20 17:23:34.652170 dcicutils-6.9.9.0b9/dcicutils/env_utils.py
+--rw-r--r--   0        0        0    29032 2022-09-12 17:47:33.207369 dcicutils-6.9.9.0b9/dcicutils/env_utils_legacy.py
+--rw-r--r--   0        0        0     7541 2022-12-05 18:22:34.728275 dcicutils-6.9.9.0b9/dcicutils/es_utils.py
+--rw-r--r--   0        0        0     9257 2022-09-12 17:47:33.208328 dcicutils-6.9.9.0b9/dcicutils/exceptions.py
+--rw-r--r--   0        0        0    37025 2023-03-07 19:14:54.669856 dcicutils-6.9.9.0b9/dcicutils/ff_mocks.py
+--rw-r--r--   0        0        0    64324 2023-03-07 19:14:54.670644 dcicutils-6.9.9.0b9/dcicutils/ff_utils.py
+--rw-r--r--   0        0        0    11502 2021-05-06 19:01:44.700749 dcicutils-6.9.9.0b9/dcicutils/jh_utils.py
+--rw-r--r--   0        0        0    16225 2020-05-15 15:45:42.789486 dcicutils-6.9.9.0b9/dcicutils/kibana/dashboards.json
+--rw-r--r--   0        0        0     2164 2020-05-15 15:45:42.789652 dcicutils-6.9.9.0b9/dcicutils/kibana/readme.md
+--rw-r--r--   0        0        0    27302 2022-11-30 15:39:36.604614 dcicutils-6.9.9.0b9/dcicutils/lang_utils.py
+--rw-r--r--   0        0        0    10883 2020-05-15 15:45:42.790150 dcicutils-6.9.9.0b9/dcicutils/log_utils.py
+--rw-r--r--   0        0        0    86651 2023-03-07 19:14:54.671646 dcicutils-6.9.9.0b9/dcicutils/misc_utils.py
+--rw-r--r--   0        0        0     5510 2023-01-20 17:23:34.654143 dcicutils-6.9.9.0b9/dcicutils/obfuscation_utils.py
+--rw-r--r--   0        0        0     1017 2022-12-05 18:22:34.729161 dcicutils-6.9.9.0b9/dcicutils/opensearch_utils.py
+--rw-r--r--   0        0        0    20232 2022-10-06 15:32:13.272174 dcicutils-6.9.9.0b9/dcicutils/qa_checkers.py
+--rw-r--r--   0        0        0   120561 2023-02-03 18:43:26.021996 dcicutils-6.9.9.0b9/dcicutils/qa_utils.py
+--rw-r--r--   0        0        0     6509 2023-03-15 14:26:01.956344 dcicutils-6.9.9.0b9/dcicutils/redis_tools.py
+--rw-r--r--   0        0        0     6462 2023-03-08 18:21:02.076038 dcicutils-6.9.9.0b9/dcicutils/redis_utils.py
+--rw-r--r--   0        0        0    25659 2023-02-17 15:03:15.632810 dcicutils-6.9.9.0b9/dcicutils/s3_utils.py
+--rw-r--r--   0        0        0    19745 2023-03-06 19:40:56.498568 dcicutils-6.9.9.0b9/dcicutils/secrets_utils.py
+--rw-r--r--   0        0        0    22961 2022-09-12 17:47:33.217026 dcicutils-6.9.9.0b9/dcicutils/snapshot_utils.py
+--rw-r--r--   0        0        0     3771 2023-03-20 18:50:36.855463 dcicutils-6.9.9.0b9/pyproject.toml
+--rw-r--r--   0        0        0     2427 2023-03-20 18:56:17.887493 dcicutils-6.9.9.0b9/setup.py
+--rw-r--r--   0        0        0     2722 2023-03-20 18:56:17.887780 dcicutils-6.9.9.0b9/PKG-INFO
++-rw-r--r--   0        0        0     1166 2020-06-26 13:31:34.710949 dcicutils-7.0.0/README.rst
++-rw-r--r--   0        0        0        0 2023-04-07 15:32:44.264637 dcicutils-7.0.0/dcicutils/__init__.py
++-rw-r--r--   0        0        0     5115 2023-04-07 15:32:44.269515 dcicutils-7.0.0/dcicutils/base.py
++-rwxr-xr-x   0        0        0    52659 2022-09-12 17:47:33.199849 dcicutils-7.0.0/dcicutils/beanstalk_utils.py
++-rw-r--r--   0        0        0    13786 2023-02-03 18:43:26.004805 dcicutils-7.0.0/dcicutils/cloudformation_utils.py
++-rw-r--r--   0        0        0     1155 2022-12-05 18:22:34.726889 dcicutils-7.0.0/dcicutils/codebuild_utils.py
++-rw-r--r--   0        0        0    13639 2023-04-07 15:32:44.270216 dcicutils-7.0.0/dcicutils/command_utils.py
++-rw-r--r--   0        0        0     1649 2023-04-07 15:32:44.275435 dcicutils-7.0.0/dcicutils/common.py
++-rw-r--r--   0        0        0    11032 2022-09-12 17:47:33.201910 dcicutils-7.0.0/dcicutils/creds_utils.py
++-rw-r--r--   0        0        0     3098 2021-09-01 19:18:33.261747 dcicutils-7.0.0/dcicutils/data_utils.py
++-rw-r--r--   0        0        0    68354 2023-04-07 15:32:44.281332 dcicutils-7.0.0/dcicutils/deployment_utils.py
++-rw-r--r--   0        0        0     8118 2022-07-14 16:55:23.169003 dcicutils-7.0.0/dcicutils/diff_utils.py
++-rw-r--r--   0        0        0     1747 2022-07-14 16:55:23.169517 dcicutils-7.0.0/dcicutils/docker_utils.py
++-rw-r--r--   0        0        0    19474 2022-09-12 17:47:33.203186 dcicutils-7.0.0/dcicutils/ecr_scripts.py
++-rw-r--r--   0        0        0    13079 2022-09-12 17:47:33.203764 dcicutils-7.0.0/dcicutils/ecr_utils.py
++-rw-r--r--   0        0        0     3590 2022-09-12 17:47:33.204441 dcicutils-7.0.0/dcicutils/ecs_utils.py
++-rw-r--r--   0        0        0     6356 2023-04-07 15:32:44.281748 dcicutils-7.0.0/dcicutils/env_base.py
++-rw-r--r--   0        0        0     9444 2022-09-12 17:47:33.205392 dcicutils-7.0.0/dcicutils/env_manager.py
++-rw-r--r--   0        0        0     3909 2022-09-12 17:47:33.205684 dcicutils-7.0.0/dcicutils/env_scripts.py
++-rw-r--r--   0        0        0    46318 2023-04-07 15:32:44.287107 dcicutils-7.0.0/dcicutils/env_utils.py
++-rw-r--r--   0        0        0    29032 2022-09-12 17:47:33.207369 dcicutils-7.0.0/dcicutils/env_utils_legacy.py
++-rw-r--r--   0        0        0     7541 2022-12-05 18:22:34.728275 dcicutils-7.0.0/dcicutils/es_utils.py
++-rw-r--r--   0        0        0     9257 2022-09-12 17:47:33.208328 dcicutils-7.0.0/dcicutils/exceptions.py
++-rw-r--r--   0        0        0    37025 2023-04-07 15:28:37.360372 dcicutils-7.0.0/dcicutils/ff_mocks.py
++-rw-r--r--   0        0        0    66453 2023-04-07 15:32:44.287768 dcicutils-7.0.0/dcicutils/ff_utils.py
++-rw-r--r--   0        0        0    11502 2021-05-06 19:01:44.700749 dcicutils-7.0.0/dcicutils/jh_utils.py
++-rw-r--r--   0        0        0    16225 2020-05-15 15:45:42.789486 dcicutils-7.0.0/dcicutils/kibana/dashboards.json
++-rw-r--r--   0        0        0     2164 2020-05-15 15:45:42.789652 dcicutils-7.0.0/dcicutils/kibana/readme.md
++-rw-r--r--   0        0        0    27302 2022-11-30 15:39:36.604614 dcicutils-7.0.0/dcicutils/lang_utils.py
++-rw-r--r--   0        0        0    10883 2020-05-15 15:45:42.790150 dcicutils-7.0.0/dcicutils/log_utils.py
++-rw-r--r--   0        0        0    86616 2023-04-07 15:32:44.288510 dcicutils-7.0.0/dcicutils/misc_utils.py
++-rw-r--r--   0        0        0     5510 2023-01-20 17:23:34.654143 dcicutils-7.0.0/dcicutils/obfuscation_utils.py
++-rw-r--r--   0        0        0     1017 2022-12-05 18:22:34.729161 dcicutils-7.0.0/dcicutils/opensearch_utils.py
++-rw-r--r--   0        0        0    20232 2022-10-06 15:32:13.272174 dcicutils-7.0.0/dcicutils/qa_checkers.py
++-rw-r--r--   0        0        0   120626 2023-04-07 15:32:44.289245 dcicutils-7.0.0/dcicutils/qa_utils.py
++-rw-r--r--   0        0        0     6509 2023-04-07 15:32:44.294803 dcicutils-7.0.0/dcicutils/redis_tools.py
++-rw-r--r--   0        0        0     6462 2023-04-07 15:32:44.300746 dcicutils-7.0.0/dcicutils/redis_utils.py
++-rw-r--r--   0        0        0    28713 2023-04-07 15:32:44.306949 dcicutils-7.0.0/dcicutils/s3_utils.py
++-rw-r--r--   0        0        0    19745 2023-04-07 15:32:44.312682 dcicutils-7.0.0/dcicutils/secrets_utils.py
++-rw-r--r--   0        0        0    22961 2022-09-12 17:47:33.217026 dcicutils-7.0.0/dcicutils/snapshot_utils.py
++-rw-r--r--   0        0        0     3654 2023-04-07 15:32:44.329792 dcicutils-7.0.0/pyproject.toml
++-rw-r--r--   0        0        0     2423 2023-04-07 15:33:00.136284 dcicutils-7.0.0/setup.py
++-rw-r--r--   0        0        0     2718 2023-04-07 15:33:00.136571 dcicutils-7.0.0/PKG-INFO
+```
+
+### Comparing `dcicutils-6.9.9.0b9/README.rst` & `dcicutils-7.0.0/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/base.py` & `dcicutils-7.0.0/dcicutils/base.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,12 +1,12 @@
+ import time
+ import urllib.parse
+ 
+ from botocore.exceptions import ClientError
+-from .common import APP_CGAP, APP_FOURFRONT
++from .common import APP_CGAP, APP_FOURFRONT, EnvName, UrlString
+ from .env_utils import (
+     is_cgap_env, is_fourfront_env, get_standard_mirror_env,
+     compute_prd_env_for_project, get_env_real_url,
+ )
+ from .misc_utils import PRINT
+ 
+ 
+@@ -87,15 +87,15 @@
+ 
+     return {
+         'EnvironmentName': env,
+         'CNAME': parsed_url.hostname,
+     }
+ 
+ 
+-def get_beanstalk_real_url(env):
++def get_beanstalk_real_url(env: EnvName) -> UrlString:
+     """
+     Return the real url for the portal with given environment name.
+     Name can be a special name (like 'cgap', 'data', 'staging'),
+     or an actual environment.
+ 
+     Note that because we are all-containerized now, this is now table-driven and does not actually do a beanstalk
+     call. We left the name for now, to not break things, but you should consider it deprecated and
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/beanstalk_utils.py` & `dcicutils-7.0.0/dcicutils/beanstalk_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/cloudformation_utils.py` & `dcicutils-7.0.0/dcicutils/cloudformation_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/codebuild_utils.py` & `dcicutils-7.0.0/dcicutils/codebuild_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/command_utils.py` & `dcicutils-7.0.0/dcicutils/command_utils.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -311,20 +311,30 @@
+ 
+ 
+ DEBUG_SCRIPT = environ_bool("DEBUG_SCRIPT")
+ 
+ SCRIPT_ERROR_HERALD = "Command exited in an unusual way. Please feel free to report this, citing the following message."
+ 
+ 
++class ScriptFailure(BaseException):
++    pass
++
++
+ @contextlib.contextmanager
+ def script_catch_errors():
++    def fail(*message):
++        raise ScriptFailure(' '.join(message))
+     try:
+-        yield
++        yield fail
+         exit(0)
+-    except Exception as e:
++    except (Exception, ScriptFailure) as e:
+         if DEBUG_SCRIPT:
+             # If debugging, let the error propagate, do not trap it.
+             raise
+         else:
+-            PRINT(SCRIPT_ERROR_HERALD)
+-            print_error_message(e)
++            if not isinstance(e, ScriptFailure):
++                PRINT(SCRIPT_ERROR_HERALD)
++                print_error_message(e)
++            else:
++                message = str(e)  # Note: We ignore the type, which isn't intended to be shown.
++                PRINT(message)
+             exit(1)
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/creds_utils.py` & `dcicutils-7.0.0/dcicutils/creds_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/data_utils.py` & `dcicutils-7.0.0/dcicutils/data_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/deployment_utils.py` & `dcicutils-7.0.0/dcicutils/deployment_utils.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -424,14 +424,15 @@
+                                      data_set=None, es_server=None, es_namespace=None, identity=None,
+                                      higlass_server=None,
+                                      indexer=None, index_server=None, sentry_dsn=None, tibanna_cwls_bucket=None,
+                                      tibanna_output_bucket=None,
+                                      application_bucket_prefix=None, foursight_bucket_prefix=None,
+                                      auth0_domain=DEFAULT_AUTH0_DOMAIN, auth0_client=None, auth0_secret=None,
+                                      auth0_allowed_connections=None,
++                                     re_captcha_key=None, re_captcha_secret=None,
+                                      redis_server=None,
+                                      file_upload_bucket=None, file_wfout_bucket=None,
+                                      blob_bucket=None, system_bucket=None, metadata_bundles_bucket=None):
+ 
+         """
+         Builds a .ini file from a given template file.
+ 
+@@ -462,14 +463,16 @@
+             tibanna_output_bucket (str): Specific name of the bucket to use on S3 for tibanna logs.
+             application_bucket_prefix (str): An application bucket prefix to use, overriding the default one.
+             foursight_bucket_prefix (str): A foursight bucket prefix to use, overriding the default one.
+             auth0_domain (str): A string identifying the Auth0 Domain to send auth requests to.
+             auth0_client (str): A string identifying the auth0 client application.
+             auth0_secret (str): A string secret that is passed with the auth0_client to authenticate that client.
+             auth0_allowed_connections (str): A comma separated string of allowed connections that can be used via auth0.
++            re_captcha_key (str): key used for reCaptcha for throttling/detecting humans on login
++            re_captcha_secret (str): secret used for reCaptcha
+             redis_server (str): A server URL to a Redis cluster, for use with sessions
+             file_upload_bucket (str): Specific name of the bucket to use on S3 for file upload data.
+             file_wfout_bucket (str): Specific name of the bucket to use on S3 for wfout data.
+             blob_bucket (str): Specific name of the bucket to use on S3 for blob data.
+             system_bucket (str): Specific name of the bucket to use on S3 for system data.
+             metadata_bundles_bucket (str): Specific name of the bucket to use on S3 for metadata bundles data.
+         """
+@@ -496,14 +499,17 @@
+                                                tibanna_output_bucket=tibanna_output_bucket,
+                                                application_bucket_prefix=application_bucket_prefix,
+                                                foursight_bucket_prefix=foursight_bucket_prefix,
+                                                auth0_domain=auth0_domain,
+                                                auth0_client=auth0_client,
+                                                auth0_secret=auth0_secret,
+                                                auth0_allowed_connections=auth0_allowed_connections,
++                                               re_captcha_key=re_captcha_key,
++                                               re_captcha_secret=re_captcha_secret,
++                                               redis_server=redis_server,
+                                                file_upload_bucket=file_upload_bucket,
+                                                file_wfout_bucket=file_wfout_bucket,
+                                                blob_bucket=blob_bucket,
+                                                system_bucket=system_bucket,
+                                                metadata_bundles_bucket=metadata_bundles_bucket,
+                                                )
+ 
+@@ -564,14 +570,15 @@
+                                        data_set=None, es_server=None, es_namespace=None, identity=None,
+                                        higlass_server=None,
+                                        indexer=None, index_server=None, sentry_dsn=None, tibanna_cwls_bucket=None,
+                                        tibanna_output_bucket=None,
+                                        application_bucket_prefix=None, foursight_bucket_prefix=None,
+                                        auth0_domain=None, auth0_client=None, auth0_secret=None,
+                                        auth0_allowed_connections=None,
++                                       re_captcha_key=None, re_captcha_secret=None,
+                                        redis_server=None,
+                                        file_upload_bucket=None,
+                                        file_wfout_bucket=None, blob_bucket=None, system_bucket=None,
+                                        metadata_bundles_bucket=None):
+         """
+         Sends output to init_file_stream corresponding to the data noe would want in an ini file
+         for the given template_file_name and available environment variables.
+@@ -599,14 +606,16 @@
+             tibanna_output_bucket (str): Specific name of the bucket to use on S3 for tibanna logs.
+             application_bucket_prefix (str): An application bucket prefix to use, overriding the default one.
+             foursight_bucket_prefix (str): A foursight bucket prefix to use, overriding the default one.
+             auth0_domain (str): A string identifying the Auth0 Domain to send auth requests to.
+             auth0_client (str): A string identifying the auth0 client application.
+             auth0_secret (str): A string secret that is passed with the auth0_client to authenticate that client.
+             auth0_allowed_connections (str): A comma separated string of allowed connections that can be used via auth0.
++            re_captcha_key (str): key used for reCaptcha for throttling/detecting humans on login
++            re_captcha_secret (str): secret used for reCaptcha
+             redis_server (str): A server URL to a Redis cluster, for use with sessions
+             file_upload_bucket (str): Specific name of the bucket to use on S3 for file upload data.
+             file_wfout_bucket (str): Specific name of the bucket to use on S3 for wfout data.
+             blob_bucket (str): Specific name of the bucket to use on S3 for blob data.
+             system_bucket (str): Specific name of the bucket to use on S3 for system data.
+             metadata_bundles_bucket (str): Specific name of the bucket to use on S3 for metadata bundles data.
+ 
+@@ -665,19 +674,25 @@
+         data_set = (data_set
+                     or os.environ.get("ENCODED_DATA_SET")
+                     or data_set_for_env(env_name)
+                     or "MISSING_ENCODED_DATA_SET")
+         es_namespace = es_namespace or os.environ.get("ENCODED_ES_NAMESPACE", env_name)
+         identity = identity or os.environ.get("ENCODED_IDENTITY", "")
+         sentry_dsn = sentry_dsn or os.environ.get("ENCODED_SENTRY_DSN", "")
++
++        # Auth0 Configuration
+         auth0_domain = auth0_domain or os.environ.get("ENCODED_AUTH0_DOMAIN", "")
+         auth0_client = auth0_client or os.environ.get("ENCODED_AUTH0_CLIENT", "")
+         auth0_secret = auth0_secret or os.environ.get("ENCODED_AUTH0_SECRET", "")
+         auth0_allowed_connections = auth0_allowed_connections or os.environ.get("ENCODED_AUTH0_ALLOWED_CONNECTIONS", "")
+ 
++        # reCatpcha Configuration
++        re_captcha_key = re_captcha_key or os.environ.get('reCaptchaKey', '')
++        re_captcha_secret = re_captcha_secret or os.environ.get('reCaptchaSecret', '')
++
+         create_mapping_on_deploy_skip = os.environ.get("ENCODED_CREATE_MAPPING_SKIP",
+                                                        cls.PRD_DEFAULT_CREATE_MAPPING_ON_DEPLOY_SKIP)
+         create_mapping_on_deploy_wipe_es = os.environ.get("ENCODED_CREATE_MAPPING_WIPE_ES",
+                                                           cls.PRD_DEFAULT_CREATE_MAPPING_ON_DEPLOY_WIPE_ES)
+         create_mapping_on_deploy_strict = os.environ.get("ENCODED_CREATE_MAPPING_STRICT",
+                                                          cls.PRD_DEFAULT_CREATE_MAPPING_ON_DEPLOY_STRICT)
+ 
+@@ -774,17 +789,19 @@
+             'SENTRY_DSN': sentry_dsn,
+             'TIBANNA_CWLS_BUCKET': tibanna_cwls_bucket,
+             'TIBANNA_OUTPUT_BUCKET': tibanna_output_bucket,
+             'AUTH0_DOMAIN': auth0_domain,
+             'AUTH0_CLIENT': auth0_client,
+             'AUTH0_SECRET': auth0_secret,
+             'AUTH0_ALLOWED_CONNECTIONS': auth0_allowed_connections,
+-            "CREATE_MAPPING_SKIP": create_mapping_on_deploy_skip,
+-            "CREATE_MAPPING_WIPE_ES": create_mapping_on_deploy_wipe_es,
+-            "CREATE_MAPPING_STRICT": create_mapping_on_deploy_strict,
++            'g.recaptcha.key': re_captcha_key,
++            'g.recaptcha.secret': re_captcha_secret,
++            'CREATE_MAPPING_SKIP': create_mapping_on_deploy_skip,
++            'CREATE_MAPPING_WIPE_ES': create_mapping_on_deploy_wipe_es,
++            'CREATE_MAPPING_STRICT': create_mapping_on_deploy_strict,
+             'FILE_UPLOAD_BUCKET': file_upload_bucket,
+             'FILE_WFOUT_BUCKET': file_wfout_bucket,
+             'BLOB_BUCKET': blob_bucket,
+             'SYSTEM_BUCKET': system_bucket,
+             'METADATA_BUNDLES_BUCKET': metadata_bundles_bucket,
+             'APPLICATION_BUCKET_PREFIX': application_bucket_prefix,
+             'FOURSIGHT_BUCKET_PREFIX': foursight_bucket_prefix,
+@@ -948,14 +965,20 @@
+                                 default=None)
+             parser.add_argument("--auth0_secret",
+                                 help="an auth0 secret to authorize auth0_client",
+                                 default=None)
+             parser.add_argument("--auth0_allowed_connections",
+                                 help="a comma separated list of compatible auth0 connections to use",
+                                 default=None)
++            parser.add_argument("--recaptcha-key",
++                                help="key for use with recaptcha",
++                                default=None)
++            parser.add_argument("--recaptcha-secret",
++                                help="secret for use with recaptcha",
++                                default=None)
+             parser.add_argument("--file_upload_bucket",
+                                 help="the name of the file upload bucket to use",
+                                 default=None)
+             parser.add_argument("--file_wfout_bucket",
+                                 help="the name of the file wfout bucket to use",
+                                 default=None)
+             parser.add_argument("--blob_bucket",
+@@ -995,14 +1018,15 @@
+                                              tibanna_output_bucket=args.tibanna_output_bucket,
+                                              application_bucket_prefix=args.application_bucket_prefix,
+                                              foursight_bucket_prefix=args.foursight_bucket_prefix,
+                                              auth0_domain=args.auth0_domain,
+                                              auth0_client=args.auth0_client,
+                                              auth0_secret=args.auth0_secret,
+                                              auth0_allowed_connections=args.auth0_allowed_connections,
++                                             re_captcha_key=args.recaptcha_key, re_captcha_secret=args.recaptcha_secret,
+                                              redis_server=args.redis_server,
+                                              file_upload_bucket=args.file_upload_bucket,
+                                              file_wfout_bucket=args.file_wfout_bucket,
+                                              blob_bucket=args.blob_bucket, system_bucket=args.system_bucket,
+                                              metadata_bundles_bucket=args.metadata_bundles_bucket)
+         except Exception as e:
+             PRINT("Error (%s): %s" % (e.__class__.__name__, e))
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/diff_utils.py` & `dcicutils-7.0.0/dcicutils/diff_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/docker_utils.py` & `dcicutils-7.0.0/dcicutils/docker_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/ecr_scripts.py` & `dcicutils-7.0.0/dcicutils/ecr_scripts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/ecr_utils.py` & `dcicutils-7.0.0/dcicutils/ecr_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/ecs_utils.py` & `dcicutils-7.0.0/dcicutils/ecs_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/env_base.py` & `dcicutils-7.0.0/dcicutils/env_base.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,17 +1,13 @@
+ import boto3
+-# import botocore.client
+ import contextlib
+-# import json
+-# import logging
+ import os
+-# import urllib.request
+ 
+-# from typing import Optional
+-from .common import LEGACY_GLOBAL_ENV_BUCKET
++from typing import Optional
++from .common import LEGACY_GLOBAL_ENV_BUCKET, S3BucketName
+ from .exceptions import (
+     # CannotInferEnvFromManyGlobalEnvs,
+     # MissingGlobalEnv,
+     SynonymousEnvironmentVariablesMismatched, LegacyDispatchDisabled,
+ )
+ from .misc_utils import (
+     override_environ,
+@@ -23,15 +19,15 @@
+ class LegacyController:
+     LEGACY_DISPATCH_ENABLED = False
+ 
+ 
+ class EnvBase:
+ 
+     @classmethod
+-    def global_env_bucket_name(cls):
++    def global_env_bucket_name(cls) -> Optional[S3BucketName]:
+         """
+         This class method returns the name of the current 'global env bucket', the bucket where meanings of
+         environment names are looked up in orchestrated environments.
+         """
+         global_bucket_env_var = 'GLOBAL_BUCKET_ENV'  # Deprecated. Supported for now since some tools started using it.
+         global_env_bucket_var = 'GLOBAL_ENV_BUCKET'  # Preferred name. Please transition code to use this.
+         global_bucket_env = os.environ.get(global_bucket_env_var)
+@@ -56,15 +52,15 @@
+ 
+     @classmethod
+     def set_global_env_bucket(cls, bucket_name):
+         os.environ['GLOBAL_ENV_BUCKET'] = bucket_name
+         os.environ['GLOBAL_BUCKET_ENV'] = bucket_name  # Deprecated, but set for consistency.
+ 
+     @classmethod
+-    def _legacy_global_env_bucket_for_testing(cls):
++    def _legacy_global_env_bucket_for_testing(cls) -> S3BucketName:
+         if not LegacyController.LEGACY_DISPATCH_ENABLED:
+             raise LegacyDispatchDisabled(operation="_legacy_global_env_bucket_for_testing", mode='setup-envbase')
+         # Strictly speaking, this isn't accessing the legacy state, but it's definitely not accessin gproduction state,
+         # so it does not want to be used in production. -kmp 18-Jul-2022
+         return LEGACY_GLOBAL_ENV_BUCKET
+ 
+     @classmethod
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/env_manager.py` & `dcicutils-7.0.0/dcicutils/env_manager.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/env_scripts.py` & `dcicutils-7.0.0/dcicutils/env_scripts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/env_utils.py` & `dcicutils-7.0.0/dcicutils/env_utils.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -7,15 +7,15 @@
+ import re
+ 
+ from botocore.exceptions import HTTPClientError, ClientError
+ from typing import Optional
+ from urllib.parse import urlparse
+ from . import env_utils_legacy as legacy
+ from .common import (
+-    EnvName, OrchestratedApp, APP_FOURFRONT, APP_CGAP, ChaliceStage, CHALICE_STAGE_DEV, CHALICE_STAGE_PROD,
++    EnvName, OrchestratedApp, APP_FOURFRONT, APP_CGAP, ChaliceStage, CHALICE_STAGE_DEV, CHALICE_STAGE_PROD, UrlString,
+ )
+ from .env_base import EnvBase, LegacyController
+ from .env_utils_legacy import ALLOW_ENVIRON_BY_DEFAULT
+ from .exceptions import (
+     EnvUtilsLoadError, BeanstalkOperationNotImplemented, MissingFoursightBucketTable, IncompleteFoursightBucketTable,
+     LegacyDispatchDisabled,
+ )
+@@ -687,15 +687,15 @@
+              find_association(EnvUtils.PUBLIC_URL_TABLE, **{p.ENVIRONMENT: full_env_name(envname)}) or
+              find_association(EnvUtils.PUBLIC_URL_TABLE, **{p.ENVIRONMENT: short_env_name(envname)}))
+     if entry:
+         return entry
+ 
+ 
+ @if_orchestrated
+-def get_env_real_url(envname):
++def get_env_real_url(envname: EnvName) -> UrlString:
+ 
+     entry = _find_public_url_entry(envname)
+     if entry:
+         return entry.get('url')
+ 
+     if not EnvUtils.DEV_ENV_DOMAIN_SUFFIX:
+         raise RuntimeError(f"DEV_ENV_DOMAIN_SUFFIX is not defined."
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/env_utils_legacy.py` & `dcicutils-7.0.0/dcicutils/env_utils_legacy.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/es_utils.py` & `dcicutils-7.0.0/dcicutils/es_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/exceptions.py` & `dcicutils-7.0.0/dcicutils/exceptions.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/ff_mocks.py` & `dcicutils-7.0.0/dcicutils/ff_mocks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/ff_utils.py` & `dcicutils-7.0.0/dcicutils/ff_utils.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -4,17 +4,22 @@
+ import random
+ import requests
+ import time
+ 
+ from collections import namedtuple
+ from dcicutils.lang_utils import disjoined_list
+ from elasticsearch.exceptions import AuthorizationException
+-from typing import Dict, List
++from typing import Optional, Dict, List
+ from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
+ from . import s3_utils, es_utils
++from .common import (
++    # KeyValuestringDictList, KeyValuestringDict,
++    AnyAuthDict, AuthDict, SimpleAuthPair, AuthData, AnyAuthData, PortalEnvName,
++    # S3BucketName, S3KeyName,
++)
+ from .misc_utils import PRINT
+ 
+ 
+ # TODO (C4-92, C4-102): Probably to centralize this information in env_utils. Also figure out relation to CGAP.
+ HIGLASS_BUCKETS = ['elasticbeanstalk-fourfront-webprod-wfoutput',
+                    'elasticbeanstalk-fourfront-webdev-wfoutput']
+ 
+@@ -238,17 +243,16 @@
+     use_auth = unified_authentication(auth, ff_env)
+     headers = kwargs.get('headers')
+     if not headers:
+         kwargs['headers'] = {'content-type': 'application/json', 'accept': 'application/json'}
+     if 'timeout' not in kwargs:
+         kwargs['timeout'] = 60  # default timeout
+ 
+-    verb_upper = verb
++    verb_upper = verb.upper()
+     try:
+-        verb_upper = verb.upper()
+         the_verb = REQUESTS_VERBS[verb_upper]
+     except KeyError:
+         raise ValueError(f"Provided verb {verb} is not valid. Must be one of {disjoined_list(REQUESTS_VERBS)}.")
+     # automatically detect a search and overwrite the retry if it is standard
+     if '/search/' in url and retry_fxn == standard_request_with_retries:
+         retry_fxn = search_request_with_retries
+     # use the given retry function. MUST TAKE THESE PARAMS!
+@@ -1207,46 +1211,94 @@
+     search_handler = SearchESMetadataHandler(key, ff_env)
+     return search_handler.execute_search(index, query, is_generator)
+ 
+ 
+ #####################
+ # Utility functions #
+ #####################
+-def unified_authentication(auth=None, ff_env=None):
+-    """
+-    One authentication function to rule them all.
+-    Has several options for authentication, which are:
+-    - manually provided tuple auth key (pass to key param)
+-    - manually provided dict key, like output of
+-      s3Utils.get_access_keys() (pass to key param)
+-    - string name of the fourfront environment (pass to ff_env param)
+-    (They are checked in this order).
+-    Handles errors for authentication and returns the tuple key to
+-    use with your request.
+-    """
+-    # first see if key should be obtained from using ff_env
+-    if not auth and ff_env:
+-        # TODO: The ff_env argument is mis-named, something we should fix sometime. It can be a cgap env, too.
+-        auth = s3_utils.s3Utils(env=ff_env).get_access_keys()
+-    # see if auth is directly from get_access_keys()
+-    use_auth = None
+-    # needed for old form of auth from get_key()
+-    if isinstance(auth, dict) and isinstance(auth.get('default'), dict):
+-        auth = auth['default']
+-    if isinstance(auth, dict) and 'key' in auth and 'secret' in auth:
+-        use_auth = (auth['key'], auth['secret'])
+-    elif isinstance(auth, tuple) and len(auth) == 2:
+-        use_auth = auth
+-    if not use_auth:
+-        raise ValueError("Must provide a valid authorization key or ff environment."
+-                         " You gave: %s (key), %s (ff_env)" % (auth, ff_env))
+-    return use_auth
+ 
+ 
+-def get_authentication_with_server(auth=None, ff_env=None):
++class UnifiedAuthenticator:
++
++    class AuthenticationError(Exception):
++
++        def __init__(self, message: str, auth: Optional[AnyAuthData], ff_env: Optional[PortalEnvName]):
++            self.auth = auth
++            self.ff_env = ff_env
++            super().__init__(f"{message} You gave auth={auth}, ff_env={ff_env}")
++
++    @classmethod
++    def unified_authentication(cls, auth: Optional[AnyAuthDict] = None,
++                               ff_env: Optional[PortalEnvName] = None) -> SimpleAuthPair:
++        """
++        One authentication function to rule them all.
++        Has several options for authentication, which are:
++        - manually provided tuple auth key (pass to key param)
++        - manually provided dict key, like output of
++          s3Utils.get_access_keys() (pass to key param)
++        - string name of the fourfront environment (pass to ff_env param)
++        (They are checked in this order).
++        Handles errors for authentication and returns the tuple key to
++        use with your request.
++        """
++
++        # If no auth is provided, we have to fetch it from s3 according to the indicated ff_env.
++        if not auth:
++            if ff_env:
++                # TODO: The ff_env argument is mis-named, something we should fix sometime. It can be a cgap env, too.
++                auth = cls.get_auth_from_s3(env=ff_env)
++            else:
++                raise cls.AuthenticationError("unified_authentication requires either auth or an ff_env.",
++                                              auth=auth, ff_env=ff_env)
++
++        # The result might be in a legacy format, so fix that if needed.
++        auth = cls.maybe_unwrap_legacy_auth(auth)
++
++        # There are also still multiple formats we intend to support, but normalize result to (key, secret) or None.
++        key_and_secret = cls.normalize_auth(auth)
++
++        if key_and_secret:  # Yay. We got a (key, secret) pair.
++            return key_and_secret
++        else:  # Oops, we got things in some bad format.
++            raise cls.AuthenticationError("Must provide a valid authorization key or ff environment.",
++                                          auth=auth, ff_env=ff_env)
++
++    @classmethod
++    def get_auth_from_s3(cls, env: Optional[PortalEnvName]) -> AuthDict:
++        """
++        Returns an AuthDict found on s3.
++
++        Unwrapping any remotely stored LegacyAuthDict happens internally to this function,
++        inside the call to s3Utils.get_access_keys.
++        """
++        return s3_utils.s3Utils(env=env).get_access_keys()
++
++    @classmethod
++    def maybe_unwrap_legacy_auth(cls, auth: AnyAuthDict) -> AuthDict:
++        # Compatibility with old form of auth from get_key()
++        # If {"default": {...auth...}, ...} is given, peel off outer wrapper and use the inner {...auth...} part.
++        if isinstance(auth, dict) and isinstance(auth.get('default'), dict):
++            return auth['default']
++        return auth
++
++    @classmethod
++    def normalize_auth(cls, auth: AuthData) -> Optional[SimpleAuthPair]:
++        if isinstance(auth, dict) and 'key' in auth and 'secret' in auth:
++            return (auth['key'],
++                    auth['secret'])
++        elif isinstance(auth, tuple) and len(auth) == 2:
++            return auth
++        else:
++            return None
++
++
++unified_authentication = UnifiedAuthenticator.unified_authentication
++
++
++def get_authentication_with_server(auth: AnyAuthDict = None, ff_env: Optional[PortalEnvName] = None):
+     """
+     Pass in authentication information and ff_env and attempts to either
+     retrieve the server info from the auth, or if it cannot, get the
+     key with s3_utils given
+     """
+     if isinstance(auth, dict) and isinstance(auth.get('default'), dict):
+         auth = auth['default']
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/jh_utils.py` & `dcicutils-7.0.0/dcicutils/jh_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/kibana/dashboards.json` & `dcicutils-7.0.0/dcicutils/kibana/dashboards.json`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/kibana/readme.md` & `dcicutils-7.0.0/dcicutils/kibana/readme.md`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/lang_utils.py` & `dcicutils-7.0.0/dcicutils/lang_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/log_utils.py` & `dcicutils-7.0.0/dcicutils/log_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/misc_utils.py` & `dcicutils-7.0.0/dcicutils/misc_utils.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -148,27 +148,25 @@
+                 "MSG: %s\n"
+                 "Raw Exception: %s\n" % (self.query_url, self.query_body, self.msg, self.raw_exception))
+ 
+     def __str__(self):
+         return self.__repr__()
+ 
+ 
+-class TestApp(webtest.TestApp):
+-    """
+-    Equivalent to webtest.TestApp, but pytest will not let the name confuse into thinking it's a test case.
++# So whether people import this from webtest or here, they will get the same object.
++TestApp = webtest.TestApp
+ 
+-    A test case in PyTest is something that contains "test" in its name. We didn't pick the name TestApp,
+-    but there may be tools that want to use TestApp for testing, and so this is a better place to inherit from,
+-    since we've added an appropriate declaration to keep PyTest from confusing it with a TestCase.
+-    """
++# This ("monkey patch") side-effect will affect webtest.TestApp, too, but that's OK for us.
++# https://en.wikipedia.org/wiki/Monkey_patch
++# We want any use of WebTest.TestApp to NOT be seen as a test for the purposes of PyTest.
+ 
+-    __test__ = False  # This declaration asserts to PyTest that this is not a test case.
++TestApp.__test__ = False
+ 
+ 
+-class _VirtualAppHelper(TestApp):
++class _VirtualAppHelper(webtest.TestApp):
+     """
+     A helper class equivalent to webtest.TestApp, except that it isn't intended for test use.
+     """
+ 
+     pass
+ 
+ 
+@@ -565,14 +563,19 @@
+     for k, v in overrides.items():
+         if v is not None:
+             dictionary[k] = v
+     # This function works by side effect, but getting back the changed dict may be sometimes useful.
+     return dictionary
+ 
+ 
++def utc_now_str():
++    # from jsonschema_serialize_fork date-time format requires a timezone
++    return datetime.datetime.utcnow().isoformat() + '+00:00'
++
++
+ def utc_today_str():
+     """Returns a YYYY-mm-dd date string, relative to the UTC timezone."""
+     return datetime.datetime.strftime(datetime.datetime.utcnow(), "%Y-%m-%d")
+ 
+ 
+ def as_seconds(*, seconds=0, minutes=0, hours=0, days=0, weeks=0, milliseconds=0, as_type=None):
+     """
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/obfuscation_utils.py` & `dcicutils-7.0.0/dcicutils/obfuscation_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/opensearch_utils.py` & `dcicutils-7.0.0/dcicutils/opensearch_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/qa_checkers.py` & `dcicutils-7.0.0/dcicutils/qa_checkers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/qa_utils.py` & `dcicutils-7.0.0/dcicutils/qa_utils.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -585,22 +585,21 @@
+     """
+ 
+     def __init__(self):
+         self.lines: List[str] = []
+         self.last: Optional[str] = None
+         self.file_lines: DefaultDict[Optional[str], List[str]] = self._file_lines_dict()
+         self.file_last: DefaultDict[Optional[str], Optional[str]] = self._file_last_dict()
+-        self.reset()
+ 
+     @classmethod
+-    def _file_lines_dict(cls):
++    def _file_lines_dict(cls) -> DefaultDict[Optional[str], List[str]]:
+         return defaultdict(lambda: [])
+ 
+     @classmethod
+-    def _file_last_dict(cls):
++    def _file_last_dict(cls) -> DefaultDict[Optional[str], Optional[str]]:
+         return defaultdict(lambda: None)
+ 
+     def mock_print_handler(self, *args, **kwargs):
+         """
+         For the simple case of stdout, .last has the last line and .lines contains all lines.
+         For all cases, even stdout, .file_lines[fp] and .lines[fp] contain it.
+         Notes:
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/redis_tools.py` & `dcicutils-7.0.0/dcicutils/redis_tools.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/redis_utils.py` & `dcicutils-7.0.0/dcicutils/redis_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/s3_utils.py` & `dcicutils-7.0.0/dcicutils/s3_utils.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,22 +1,29 @@
+ import boto3
+ import json
+ import logging
+ import mimetypes
+ import os
+ 
+ from io import BytesIO
+-from typing import Any
++from typing import Optional, Any, Union
++from typing_extensions import Literal
+ from zipfile import ZipFile
+ from .base import get_beanstalk_real_url
+-from .common import EnvName
++from .common import (
++    EnvName,
++    # LegacyAuthDict, AnyAuthDict, AuthDict,
++    AnyJsonData, KeyValuestringDictList,
++    # KeyValuestringDict, PortalEnvName,
++    S3KeyName, S3BucketName, ServerAuthDict
++)
+ from .env_base import s3Base
+ from .env_manager import EnvManager
+-from .env_utils import is_stg_or_prd_env, prod_bucket_env, full_env_name, get_env_real_url, EnvUtils
+-from .exceptions import InferredBucketConflict
++from .env_utils import full_env_name, get_env_real_url, EnvUtils
++from .exceptions import InferredBucketConflict, BeanstalkOperationNotImplemented
+ from .misc_utils import PRINT, exported, merge_key_value_dict_lists, key_value_dict
+ 
+ 
+ # For legacy reasons, other modules or repos might expect these names in this file.
+ # This isn't a full enumeration of all names they expect to find, though.
+ exported(get_beanstalk_real_url, EnvManager)
+ 
+@@ -151,58 +158,60 @@
+                 if tibanna_output_bucket and tibanna_output_bucket != tibanna_output_bucket_from_health_page:
+                     raise InferredBucketConflict(kind="tibanna output", specified=tibanna_output_bucket,
+                                                  inferred=tibanna_output_bucket_from_health_page)
+                 else:
+                     tibanna_output_bucket = tibanna_output_bucket_from_health_page
+                 logger.warning('Buckets resolved successfully.')
+             else:
+-                # raise BeanstalkOperationNotImplemented(
+-                #     operation="s3Utils.__init__",
+-                #     message="s3Utils bucket initialization with no global env bucket is not implemented"
+-                # )
++                raise BeanstalkOperationNotImplemented(
++                    operation="s3Utils.__init__",
++                    message="s3Utils bucket initialization with no global env bucket is no longer implemented."
++                )
+                 # We believe it would do the wrong thing in several places to continue into this...
+-
+-                # staging and production share same buckets
+-                # TODO: As noted in some of the comments on this conditional, when the new env_utils with
+-                #       orchestration support is in place, this same generality needs to be done
+-                #       upstream of the global env bucket branch, too. That's not needed for orchestrated cgap,
+-                #       which has no stage, but it will be needed for orchestrated fourfront. -kmp 31-Aug-2021
+-                if env:
+-                    if is_stg_or_prd_env(env):
+-                        self.url = get_beanstalk_real_url(env)  # done BEFORE prod_bucket_env blurring stg/prd
+-                        # this used to return fourfront-webprod for BOTH staging and data
+-                        # now in fact this doesn't even return, it throws an error.
+-                        env = prod_bucket_env(env)  # noQA - raises error if called
+-                    else:
+-                        env = full_env_name(env)
+-                        self.url = get_beanstalk_real_url(env)  # done AFTER maybe prepending cgap- or foursight-.
+-
+-                    es_url = self._infer_es_url()
+-                    self.env_manager = EnvManager.compose(portal_url=self.url, es_url=es_url, env_name=env, s3=self.s3)
+-                    self.s3_encrypt_key_id = self.health_page_get(HealthPageKey.S3_ENCRYPT_KEY_ID, default=None)
+-
+-                # TODO: This branch is not setting self.global_env_bucket_manager, but it _could_ do that from the
+-                #       description. -kmp 21-Aug-2021
+-                def apply_template(template, env):
+-                    return template % env if "%s" in template else template
+-                # we use standardized naming schema, so s3 buckets always have same prefix
+-                sys_bucket = apply_template(self.SYS_BUCKET_TEMPLATE, env)
+-                outfile_bucket = apply_template(self.OUTFILE_BUCKET_TEMPLATE, env)
+-                raw_file_bucket = apply_template(self.RAW_BUCKET_TEMPLATE, env)
+-                blob_bucket = apply_template(self.BLOB_BUCKET_TEMPLATE, env)
+-                metadata_bucket = apply_template(self.METADATA_BUCKET_TEMPLATE, env)
+-                tibanna_cwls_bucket = apply_template(self.TIBANNA_CWLS_BUCKET_TEMPLATE, env)
+-                tibanna_output_bucket = apply_template(self.TIBANNA_OUTPUT_BUCKET_TEMPLATE, env)
++                #
++                # # staging and production share same buckets
++                # # TODO: As noted in some of the comments on this conditional, when the new env_utils with
++                # #       orchestration support is in place, this same generality needs to be done
++                # #       upstream of the global env bucket branch, too. That's not needed for orchestrated cgap,
++                # #       which has no stage, but it will be needed for orchestrated fourfront. -kmp 31-Aug-2021
++                # if env:
++                #     if is_stg_or_prd_env(env):
++                #         self.url = get_beanstalk_real_url(env)  # done BEFORE prod_bucket_env blurring stg/prd
++                #         # this used to return fourfront-webprod for BOTH staging and data
++                #         # now in fact this doesn't even return, it throws an error.
++                #         env = prod_bucket_env(env)  # noQA - raises error if called
++                #     else:
++                #         env = full_env_name(env)
++                #         self.url = get_beanstalk_real_url(env)  # done AFTER maybe prepending cgap- or foursight-.
++                #
++                #     es_url = self._infer_es_url()
++                #     self.env_manager = EnvManager.compose(portal_url=self.url, es_url=es_url,
++                #                                           env_name=env, s3=self.s3)
++                #     self.s3_encrypt_key_id = self.health_page_get(HealthPageKey.S3_ENCRYPT_KEY_ID, default=None)
++                #
++                # # TODO: This branch is not setting self.global_env_bucket_manager, but it _could_ do that from the
++                # #       description. -kmp 21-Aug-2021
++                # def apply_template(template, env):
++                #     return template % env if "%s" in template else template
++                # # we use standardized naming schema, so s3 buckets always have same prefix
++                # sys_bucket = apply_template(self.SYS_BUCKET_TEMPLATE, env)
++                # outfile_bucket = apply_template(self.OUTFILE_BUCKET_TEMPLATE, env)
++                # raw_file_bucket = apply_template(self.RAW_BUCKET_TEMPLATE, env)
++                # blob_bucket = apply_template(self.BLOB_BUCKET_TEMPLATE, env)
++                # metadata_bucket = apply_template(self.METADATA_BUCKET_TEMPLATE, env)
++                # tibanna_cwls_bucket = apply_template(self.TIBANNA_CWLS_BUCKET_TEMPLATE, env)
++                # tibanna_output_bucket = apply_template(self.TIBANNA_OUTPUT_BUCKET_TEMPLATE, env)
+         else:
+             # If at least sys_bucket was given, for legacy reasons (see https://hms-dbmi.atlassian.net/browse/C4-674)
+             # we assume that the given buckets are exactly the ones we want and we don't set up any others.
+             # It follows from this that if not all the buckets are given, some may end up being None, but we assume
+             # those won't be needed. -kmp 23-Jun-2021
+             pass
+ 
++        # NOTE: At this point, self.url is set to the empty string. Use this initialization sequence only for debugging.
+         self.sys_bucket = sys_bucket
+         self.outfile_bucket = outfile_bucket
+         self.raw_file_bucket = raw_file_bucket
+         self.blob_bucket = blob_bucket
+         self.metadata_bucket = metadata_bucket
+         self.tibanna_cwls_bucket = tibanna_cwls_bucket
+         self.tibanna_output_bucket = tibanna_output_bucket
+@@ -260,72 +269,87 @@
+             logger.warning(f"health json url: {self._health_json_url}")
+             self._health_json = EnvManager.fetch_health_page_json(url=self._health_json_url)
+             # logger.warning(f"health json: {self._health_json}")
+         return self._health_json.get(health_page_key, default)
+ 
+     ACCESS_KEYS_S3_KEY = 'access_key_admin'
+ 
+-    def get_access_keys(self, name=ACCESS_KEYS_S3_KEY):
++    def get_access_keys(self, name: str = ACCESS_KEYS_S3_KEY, require_key=True) -> ServerAuthDict:
++
+         keys = self.get_key(keyfile_name=name)
+-        if not isinstance(keys, dict):
+-            raise ValueError("Remotely stored access keys are not in the expected form")
+ 
+-        if isinstance(keys.get('default'), dict):
++        if not isinstance(keys, dict):
++            raise ValueError(f"Remotely stored {name} access keys are not in the expected form.")
++        elif 'default' in keys:
++            # If we have a LegacyAuthDict of the form {'default': <actual-auth-dict>}, peek off the wrapper.
+             keys = keys['default']
++
+         if self.url:
++            if 'server' in keys and keys['server'] != self.url:
++                logger.info(f"get_access_keys is replacing server {keys['server']!r} with {self.url!r}.")
+             keys['server'] = self.url
+-        return keys
+ 
+-    def get_ff_key(self):
++        if (require_key and not keys.get('key')) or not keys.get('secret') or not keys.get('server'):
++            raise ValueError(f"After filling defaults, the {name} access keys are not in the expected form.")
++
++        return keys  # Might still have no server if self.url was not a URL
++
++    def get_ff_key(self) -> ServerAuthDict:
+         return self.get_access_keys()
+ 
+-    def get_higlass_key(self):
++    def get_higlass_key(self) -> Union[AnyJsonData, str]:  # parsed json or string that won't parse
++        # TODO: It would be nice if this could be returning something with a better promise. -kmp 1-Mar-2023
+         # higlass key corresponds to Django server super user credentials
+         return self.get_key(keyfile_name='api_key_higlass')
+ 
+-    def get_google_key(self):
++    def get_google_key(self) -> Union[AnyJsonData, str]:  # parsed json or string that won't parse
++        # TODO: It would be nice if this could be returning something with a better promise. -kmp 1-Mar-2023
+         return self.get_key(keyfile_name='api_key_google')
+ 
+-    def get_jupyterhub_key(self):
++    def get_jupyterhub_key(self) -> Union[AnyJsonData, str]:  # parsed json or string that won't parse
++        # TODO: It would be nice if this could be returning something with a better promise. -kmp 1-Mar-2023
+         # jupyterhub key is a Jupyterhub API token
+         return self.get_key(keyfile_name='api_key_jupyterhub')
+ 
+-    def get_key(self, keyfile_name='access_key_admin'):
++    def get_key(self, keyfile_name: str = 'access_key_admin'
++                ) -> Union[AnyJsonData, str]:  # parsed json or string that won't parse
+         # Share secret encrypted S3 File
+         response = self.s3.get_object(Bucket=self.sys_bucket,
+                                       Key=keyfile_name,
+                                       SSECustomerKey=os.environ['S3_ENCRYPT_KEY'],
+                                       SSECustomerAlgorithm='AES256')
+-        akey = response['Body'].read()
+-        if type(akey) == bytes:
+-            akey = akey.decode()
++        body_data: Union[bytes, str] = response['Body'].read()
++        auth_text: str = body_data.decode() if type(body_data) == bytes else body_data
+         try:
+-            return json.loads(akey)
++            return json.loads(auth_text)
+         except (ValueError, TypeError):
++            # TODO: Is there really a use case for this returning non-JSON data? If so, can we make a different
++            #       function that does this? Because this is just going to return garbage when peopla are expecting
++            #       key dictionaries and we really should raise an error in that case. -kmp 1-Mar-2023
+             # maybe its not json after all
+-            return akey
++            return auth_text
+ 
+-    def read_s3(self, filename):
++    def read_s3(self, filename: str):
+         response = self.s3.get_object(Bucket=self.outfile_bucket, Key=filename)
+         logger.info(str(response))
+         return response['Body'].read()
+ 
+-    def does_key_exist(self, key, bucket=None, print_error=True):
++    def does_key_exist(self, key: str, bucket: str = None, print_error: bool = True) -> Union[Literal[False], dict]:
+         if not bucket:
+             bucket = self.outfile_bucket
+         try:
+             file_metadata = self.s3.head_object(Bucket=bucket, Key=key)
+         except Exception as e:
+             if print_error:
+                 PRINT("object %s not found on bucket %s" % (str(key), str(bucket)))
+                 PRINT(str(e))
+             return False
+         return file_metadata
+ 
+-    def get_object_tags(self, *, bucket, key):
++    def get_object_tags(self, *, bucket, key) -> KeyValuestringDictList:
+         """
+         Get all tags of an object.
+ 
+         Args:
+             bucket (string): S3 bucket
+             key (string): object key
+ 
+@@ -340,15 +364,15 @@
+                 Key=key,
+             )
+             return response["TagSet"]
+         except Exception as e:
+             logger.warning(f'Could not get tags for object {bucket}/{key}: {str(e)}')
+             raise e
+ 
+-    def set_object_tag(self, *, bucket, key, tag_key, tag_value):
++    def set_object_tag(self, *, bucket: str, key: str, tag_key: str, tag_value: str):
+         """
+         Adds (tag_key,tag_value) pair to the object. If a tag with key tag_key is already present,
+         it will be overwritten.
+ 
+         Args:
+             bucket (string): S3 bucket
+             key (string): object key
+@@ -362,15 +386,15 @@
+         return self.set_object_tags(
+             bucket=bucket,
+             key=key,
+             tags=[key_value_dict(tag_key, tag_value)],
+             merge_existing_tags=True,
+         )
+ 
+-    def set_object_tags(self, *, bucket, key, tags, merge_existing_tags=True):
++    def set_object_tags(self, *, bucket: str, key: str, tags: KeyValuestringDictList, merge_existing_tags: bool = True):
+         """
+         Adds or replaces tags of an object with the ones specified in `tags`.
+ 
+         Args:
+             bucket (string): S3 bucket
+             key (string): object key
+             tags (list): List of tags of the form [{'Key': 'KEY1','Value': 'VALUE1'}, {...}]
+@@ -394,39 +418,45 @@
+                     'TagSet': new_tags,
+                 },
+             )
+         except Exception as e:
+             logger.warning(f'{bucket}/{key} could not be tagged: {str(e)}')
+             raise e
+ 
+-    def get_file_size(self, key, bucket=None, add_bytes=0, add_gb=0,
+-                      size_in_gb=False):
++    def get_file_size(self, key: S3KeyName, bucket: Optional[S3BucketName] = None,
++                      add_bytes: int = 0, add_gb: int = 0, size_in_gb: bool = False):
+         """
+         default returns file size in bytes,
+         unless size_in_gb = True
+         """
+         meta = self.does_key_exist(key, bucket)
+         if not meta:
+             raise Exception("key not found")
+         one_gb = 1073741824
+         add = add_bytes + (add_gb * one_gb)
+         size = meta['ContentLength'] + add  # noQA - PyCharm type inferencing is wrong about fussing here
+         if size_in_gb:
+             size = size / one_gb
+         return size
+ 
+-    def delete_key(self, key, bucket=None):
++    def delete_key(self, key, bucket: Optional[str] = None) -> None:
+         if not bucket:
+             bucket = self.outfile_bucket
+         self.s3.delete_object(Bucket=bucket, Key=key)
+ 
+     @classmethod
+-    def size(cls, bucket):
+-        sbuck = boto3.resource('s3').Bucket(bucket)
+-        # get only head of objects so we can count them
++    def size(cls, bucket: str) -> int:
++        """Slowly and expensively (if there are a lot of them), count the number of items in a bucket."""
++        sbuck = boto3.resource('s3').Bucket(bucket)  # get only head of objects so we can count them
++        # There is apparently no sbuck.objects.count(), so one has to enumerate them all.
++        # Although one avenue we didn't try that is mentioned in StackOverflow is to go to the billing department
++        # in the AWS console, whch knows how many objects there are.
++        # TODO: It is recommended that if there are expected to be a lot of objects, we should paginate through
++        #       them in chunks of 1000, rather than just pulling .all().
++        # Ref: https://stackoverflow.com/questions/2862617/how-can-i-tell-how-many-objects-ive-stored-in-an-s3-bucket
+         return sum(1 for _ in sbuck.objects.all())
+ 
+     def s3_put(self, obj, upload_key, acl=None):
+         """
+         try to guess content type
+         """
+         content_type = mimetypes.guess_type(upload_key)[0]
+```
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/secrets_utils.py` & `dcicutils-7.0.0/dcicutils/secrets_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/dcicutils/snapshot_utils.py` & `dcicutils-7.0.0/dcicutils/snapshot_utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `dcicutils-6.9.9.0b9/pyproject.toml` & `dcicutils-7.0.0/pyproject.toml`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ [tool.poetry]
+ name = "dcicutils"
+-version = "6.9.9.0b9"  # to become 7.0.0
++version = "7.0.0"
+ description = "Utility package for interacting with the 4DN Data Portal and other 4DN resources"
+ authors = ["4DN-DCIC Team <support@4dnucleome.org>"]
+ license = "MIT"
+ readme = "README.rst"
+ homepage = "https://github.com/4dn-dcic/utils"
+ repository = "https://github.com/4dn-dcic/utils"
+ packages = [
+@@ -23,16 +23,15 @@
+ 
+     # Pick your license as you wish (should match "license" above)
+     'License :: OSI Approved :: MIT License',
+ 
+     # Relevant topics
+     'Topic :: Database :: Database Engines/Servers',
+ 
+-    # Specify the Python versions you support here. In particular, ensure
+-    # that you indicate whether you support Python 2, Python 3 or both.
++    # Specify the Python versions you support here.
+     'Programming Language :: Python :: 3',
+     'Programming Language :: Python :: 3.7',
+     'Programming Language :: Python :: 3.8',
+     'Programming Language :: Python :: 3.9',
+ ]
+```
+
+### Comparing `dcicutils-6.9.9.0b9/setup.py` & `dcicutils-7.0.0/setup.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -28,15 +28,15 @@
+  'toml>=0.10.1,<1',
+  'typing-extensions>=3.8',
+  'urllib3>=1.26.6,<2.0.0',
+  'webtest>=2.0.34,<3.0.0']
+ 
+ setup_kwargs = {
+     'name': 'dcicutils',
+-    'version': '6.9.9.0b9',
++    'version': '7.0.0',
+     'description': 'Utility package for interacting with the 4DN Data Portal and other 4DN resources',
+     'long_description': '=====\nutils\n=====\n\nCheck out our full documentation `here <https://dcic-utils.readthedocs.io/en/latest/>`_\n\nThis repository contains various utility modules shared amongst several projects in the 4DN-DCIC. It is meant to be used internally by the DCIC team and externally as a Python API to `Fourfront <https://data.4dnucleome.org>`_\\ , the 4DN data portal.\n\npip installable as the ``dcicutils`` package with: ``pip install dcicutils``\n\nSee `this document <https://dcic-utils.readthedocs.io/en/latest/getting_started.html>`_ for tips on getting started. `Go here <https://dcic-utils.readthedocs.io/en/latest/examples.html>`_ for examples of some of the most useful functions.\n\n\n.. image:: https://travis-ci.org/4dn-dcic/utils.svg?branch=master\n   :target: https://travis-ci.org/4dn-dcic/utils\n   :alt: Build Status\n\n\n.. image:: https://coveralls.io/repos/github/4dn-dcic/utils/badge.svg?branch=master\n   :target: https://coveralls.io/github/4dn-dcic/utils?branch=master\n   :alt: Coverage\n\n.. image:: https://readthedocs.org/projects/dcic-utils/badge/?version=latest\n   :target: https://dcic-utils.readthedocs.io/en/latest/?badge=latest\n   :alt: Documentation Status\n',
+     'author': '4DN-DCIC Team',
+     'author_email': 'support@4dnucleome.org',
+     'maintainer': None,
+     'maintainer_email': None,
+     'url': 'https://github.com/4dn-dcic/utils',
+```
+
+### Comparing `dcicutils-6.9.9.0b9/PKG-INFO` & `dcicutils-7.0.0/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: dcicutils
+-Version: 6.9.9.0b9
++Version: 7.0.0
+ Summary: Utility package for interacting with the 4DN Data Portal and other 4DN resources
+ Home-page: https://github.com/4dn-dcic/utils
+ License: MIT
+ Author: 4DN-DCIC Team
+ Author-email: support@4dnucleome.org
+ Requires-Python: >=3.7,<3.10
+ Classifier: Development Status :: 4 - Beta
+```
+
