@@ -1,0 +1,552 @@
+# Comparing `tmp/residual2vec-0.0.8-py3-none-any.whl.zip` & `tmp/residual2vec-0.0.9-py3-none-any.whl.zip`
+
+## zipinfo {}
+
+```diff
+@@ -1,13 +1,13 @@
+-Zip file size: 16348 bytes, number of entries: 11
+--rw-r--r--  2.0 unx      125 b- defN 22-Apr-30 02:26 residual2vec/__init__.py
+--rw-r--r--  2.0 unx     5838 b- defN 22-Apr-30 02:26 residual2vec/node_samplers.py
+--rw-r--r--  2.0 unx     6246 b- defN 22-Apr-30 02:26 residual2vec/random_walk_sampler.py
+--rw-r--r--  2.0 unx    10651 b- defN 22-Apr-30 02:26 residual2vec/residual2vec.py
+--rw-r--r--  2.0 unx    14797 b- defN 22-Apr-30 02:26 residual2vec/residual2vec_sgd.py
+--rw-r--r--  2.0 unx     4208 b- defN 22-Apr-30 02:26 residual2vec/utils.py
+--rw-r--r--  2.0 unx     2510 b- defN 22-Apr-30 02:26 residual2vec/word2vec.py
+--rw-r--r--  2.0 unx     5998 b- defN 22-Apr-30 02:27 residual2vec-0.0.8.dist-info/METADATA
+--rw-r--r--  2.0 unx       92 b- defN 22-Apr-30 02:27 residual2vec-0.0.8.dist-info/WHEEL
+--rw-r--r--  2.0 unx       13 b- defN 22-Apr-30 02:27 residual2vec-0.0.8.dist-info/top_level.txt
+-?rw-rw-r--  2.0 unx      911 b- defN 22-Apr-30 02:27 residual2vec-0.0.8.dist-info/RECORD
+-11 files, 51389 bytes uncompressed, 14808 bytes compressed:  71.2%
++Zip file size: 17070 bytes, number of entries: 11
++-rw-r--r--  2.0 unx      125 b- defN 23-Apr-05 21:48 residual2vec/__init__.py
++-rw-r--r--  2.0 unx     4593 b- defN 23-Apr-05 21:48 residual2vec/node_samplers.py
++-rw-r--r--  2.0 unx     6246 b- defN 23-Apr-05 21:48 residual2vec/random_walk_sampler.py
++-rw-r--r--  2.0 unx    10651 b- defN 23-Apr-05 21:48 residual2vec/residual2vec.py
++-rw-r--r--  2.0 unx    16362 b- defN 23-Apr-05 21:48 residual2vec/residual2vec_sgd.py
++-rw-r--r--  2.0 unx     4208 b- defN 23-Apr-05 21:48 residual2vec/utils.py
++-rw-r--r--  2.0 unx     3381 b- defN 23-Apr-05 21:48 residual2vec/word2vec.py
++-rw-r--r--  2.0 unx     6028 b- defN 23-Apr-05 21:50 residual2vec-0.0.9.dist-info/METADATA
++-rw-r--r--  2.0 unx       92 b- defN 23-Apr-05 21:50 residual2vec-0.0.9.dist-info/WHEEL
++-rw-r--r--  2.0 unx       13 b- defN 23-Apr-05 21:50 residual2vec-0.0.9.dist-info/top_level.txt
++-rw-rw-r--  2.0 unx      911 b- defN 23-Apr-05 21:50 residual2vec-0.0.9.dist-info/RECORD
++11 files, 52610 bytes uncompressed, 15530 bytes compressed:  70.5%
+```
+
+## zipnote {}
+
+```diff
+@@ -15,20 +15,20 @@
+ 
+ Filename: residual2vec/utils.py
+ Comment: 
+ 
+ Filename: residual2vec/word2vec.py
+ Comment: 
+ 
+-Filename: residual2vec-0.0.8.dist-info/METADATA
++Filename: residual2vec-0.0.9.dist-info/METADATA
+ Comment: 
+ 
+-Filename: residual2vec-0.0.8.dist-info/WHEEL
++Filename: residual2vec-0.0.9.dist-info/WHEEL
+ Comment: 
+ 
+-Filename: residual2vec-0.0.8.dist-info/top_level.txt
++Filename: residual2vec-0.0.9.dist-info/top_level.txt
+ Comment: 
+ 
+-Filename: residual2vec-0.0.8.dist-info/RECORD
++Filename: residual2vec-0.0.9.dist-info/RECORD
+ Comment: 
+ 
+ Zip file comment:
+```
+
+## residual2vec/node_samplers.py
+
+```diff
+@@ -1,7 +1,12 @@
++# -*- coding: utf-8 -*-
++# @Author: Sadamori Kojaku
++# @Date:   2022-05-29 21:25:03
++# @Last Modified by:   Sadamori Kojaku
++# @Last Modified time: 2023-04-05 17:29:23
+ """Graph module to store a network and generate random walks from it."""
+ import numpy as np
+ from scipy import sparse
+ 
+ from residual2vec import utils
+ 
+ 
+@@ -31,15 +36,18 @@
+         raise NotImplementedError
+ 
+ 
+ class SBMNodeSampler(NodeSampler):
+     """Node Sampler based on the stochatic block model."""
+ 
+     def __init__(
+-        self, window_length=10, group_membership=None, dcsbm=True,
++        self,
++        window_length=10,
++        group_membership=None,
++        dcsbm=True,
+     ):
+         """Node Sampler based on the stochastic block model.
+ 
+         :param window_length: length of the context window, defaults to 10
+         :type window_length: int, optional
+         :param group_membership: group membership of nodes, defaults to None
+         :type group_membership: np.ndarray, optional
+@@ -65,14 +73,18 @@
+         if self.group_membership is None:
+             self.group_membership = np.zeros(self.n_nodes, dtype=np.int64)
+             self.node2group = utils.to_member_matrix(self.group_membership)
+         else:
+             self.node2group = utils.to_member_matrix(self.group_membership)
+ 
+         indeg = np.array(A.sum(axis=0)).reshape(-1)
++        self.p0 = indeg / np.sum(indeg)
++        self.p0 = np.maximum(self.p0, 1e-26)
++        self.p0 = self.p0 / np.sum(self.p0)
++
+         Lambda = (self.node2group.T @ A @ self.node2group).toarray()
+         Din = np.array(np.sum(Lambda, axis=0)).reshape(-1)
+         Nin = np.array(self.node2group.sum(axis=0)).reshape(-1)
+         Psbm = np.einsum(
+             "ij,i->ij", Lambda, 1 / np.maximum(1, np.array(np.sum(Lambda, axis=1)))
+         )
+         Psbm_pow = utils.matrix_sum_power(Psbm, self.window_length) / self.window_length
+@@ -95,71 +107,27 @@
+         )
+ 
+         # From block to node
+         self.block2node.data = utils._csr_row_cumsum(
+             self.block2node.indptr, self.block2node.data
+         )
+ 
+-    def sampling(self, center_nodes, context_nodes, padding_id):
++    def sampling(self, center_nodes=None, context_nodes=None, size=None, **params):
++
++        if center_nodes is None:
++            center_nodes = np.random.choice(self.n_nodes, p=self.p0, size=size)
++
+         block_ids = utils.csr_sampling(
+             self.group_membership[center_nodes], self.block2block
+         )
+         context = utils.csr_sampling(block_ids, self.block2node)
+-        return context.astype(np.int64)
++        return center_nodes.astype(np.int64), context.astype(np.int64)
+ 
+ 
+ class ConfigModelNodeSampler(SBMNodeSampler):
+     def __init__(self):
+         super(ConfigModelNodeSampler, self).__init__(window_length=1, dcsbm=True)
+ 
+ 
+ class ErdosRenyiNodeSampler(SBMNodeSampler):
+     def __init__(self):
+         super(ErdosRenyiNodeSampler, self).__init__(window_length=1, dcsbm=False)
+-
+-
+-class ConditionalContextSampler(NodeSampler):
+-    """Node Sampler conditioned on group membership."""
+-
+-    def __init__(
+-        self, group_membership,
+-    ):
+-        """Node Sampler conditioned on group membership.
+-
+-        :param window_length: length of the context window, defaults to 10
+-        :type window_length: int, optional
+-        :param group_membership: group membership of nodes, defaults to None
+-        :type group_membership: np.ndarray, optional
+-        :param dcsbm: Set dcsbm=True to take into account the degree of nodes, defaults to True
+-        :type dcsbm: bool, optional
+-        """
+-
+-        # Reindex the group membership
+-        labels, group_membership = np.unique(group_membership, return_inverse=True)
+-        self.group_membership = group_membership
+-        n = len(group_membership)
+-        k = len(labels)
+-        self.block2node = sparse.csr_matrix(
+-            (
+-                np.ones_like(self.group_membership),
+-                (self.group_membership, np.arange(n)),
+-            ),
+-            shape=(k, n),
+-        )
+-
+-    def fit(self, A):
+-        # Assuming that context is sampled from a random walk
+-        indeg = np.array(A.sum(axis=0)).reshape(-1)
+-        self.block2node = self.block2node @ sparse.diags(indeg)
+-        self.block2node.data = utils._csr_row_cumsum(
+-            self.block2node.indptr, self.block2node.data
+-        )
+-        return
+-
+-    def sampling(self, center_nodes, context_nodes, padding_id):
+-        mask = context_nodes == padding_id
+-        context_nodes[mask] = 0
+-        context = utils.csr_sampling(
+-            self.group_membership[context_nodes], self.block2node
+-        )
+-        context[mask] = padding_id
+-        return context.astype(np.int64)
+```
+
+## residual2vec/residual2vec_sgd.py
+
+```diff
+@@ -1,7 +1,12 @@
++# -*- coding: utf-8 -*-
++# @Author: Sadamori Kojaku
++# @Date:   2022-04-29 21:31:09
++# @Last Modified by:   Sadamori Kojaku
++# @Last Modified time: 2023-04-05 17:38:21
+ """A python implementation of residual2vec based on the stochastic gradient
+ descent algorithm. Suitable for large networks.
+ 
+ Usage:
+ 
+ ```python
+ import residual2vec as rv
+@@ -36,22 +41,25 @@
+ class CustomNodeSampler(rv.NodeSampler):
+     def fit(self, A):
+         #Fit the sampler
+         #:param A: adjacency matrix
+         #:type A: scipy.csr_matrix
+         pass
+ 
+-    def sampling(self, center_node, n_samples):
+-        #Sample context nodes from the graph for center nodes
++    def sampling(self, center_node=None, context_node = None, size = None):
++        # Sample context nodes from the graph for center nodes
+         #:param center_node: ID of center node
+         #:type center_node: int
+-        #:param n_samples: number of samples per center node
+-        #:type n_samples: int
++        #:param size: number of samples per center node
++        #:type size: int
+         pass
+-```
++
++The sampling function should return the random center nodes and random context nodes.
++The size should be the same as center_node if provided, otherwise should follow the specified size by `size`.
++If `center_node` is provided, the returned center_node should be the same. The function is expected to produce random context nodes conditioned on the center nodes. If not provided, however, the center nodes need to be sampled from the given network
+ """
+ import random
+ 
+ import numpy as np
+ import torch
+ from numba import njit
+ from scipy import sparse
+@@ -86,14 +94,15 @@
+         walk_length=40,
+         p=1,
+         q=1,
+         cuda=False,
+         buffer_size=100000,
+         context_window_type="double",
+         miniters=200,
++        learn_joint_probability=False,
+     ):
+         """Residual2Vec based on the stochastic gradient descent.
+ 
+         :param noise_sampler: Noise sampler
+         :type noise_sampler: NodeSampler
+         :param window_length: length of the context window, defaults to 10
+         :type window_length: int
+@@ -109,26 +118,29 @@
+         :type q: float, optional
+         :param buffer_size: Buffer size for sampled center and context pairs, defaults to 10000
+         :type buffer_size: int, optional
+         :param context_window_type: The type of context window. `context_window_type="double"` specifies a context window that extends both left and right of a focal node. context_window_type="left" and ="right" specifies that extends left and right, respectively.
+         :type context_window_type: str, optional
+         :param miniter: Minimum number of iterations, defaults to 200
+         :type miniter: int, optional
++        :param learn_joint_probability: Set `learn_joint_probability=True` to learn the joint probability P(i,j) of random walks, instead of transition probability, P(j | i). Default to False.
++        :type learn_joint_probability: bool, optional
+         """
+         self.window_length = window_length
+         self.sampler = noise_sampler
+         self.cuda = cuda
+         self.num_walks = num_walks
+         self.walk_length = walk_length
+         self.p = p
+         self.q = q
+         self.batch_size = batch_size
+         self.buffer_size = buffer_size
+         self.miniters = miniters
+         self.context_window_type = context_window_type
++        self.learn_joint_probability = learn_joint_probability
+ 
+     def fit(self, adjmat):
+         """Learn the graph structure to generate the node embeddings.
+ 
+         :param adjmat: Adjacency matrix of the graph.
+         :type adjmat: numpy.ndarray or scipy sparse matrix format (csr).
+         :return: self
+@@ -180,33 +192,34 @@
+             noise_sampler=self.sampler,
+             padding_id=PADDING_IDX,
+             walk_length=self.walk_length,
+             p=self.p,
+             q=self.q,
+             buffer_size=self.buffer_size,
+             context_window_type=self.context_window_type,
++            learn_joint_probability=self.learn_joint_probability,
+         )
+         dataloader = DataLoader(
+             dataset,
+             batch_size=self.batch_size,
+             shuffle=False,
+             num_workers=1,
+             pin_memory=True,
+         )
+ 
+         # Training
+         optim = Adam(model.parameters(), lr=0.003)
+         # scaler = torch.cuda.amp.GradScaler()
+         pbar = tqdm(dataloader, miniters=100)
+-        for iword, owords, nwords in pbar:
++        for batch in pbar:
+             # optim.zero_grad()
+             for param in model.parameters():
+                 param.grad = None
+             # with torch.cuda.amp.autocast():
+-            loss = neg_sampling(iword, owords, nwords)
++            loss = neg_sampling(*batch)
+             loss.backward()
+             torch.nn.utils.clip_grad_norm_(model.parameters(), 1)
+             optim.step()
+             pbar.set_postfix(loss=loss.item())
+ 
+         self.in_vec = model.ivectors.weight.data.cpu().numpy()[:PADDING_IDX, :]
+         self.out_vec = model.ovectors.weight.data.cpu().numpy()[:PADDING_IDX, :]
+@@ -224,14 +237,15 @@
+         noise_sampler,
+         padding_id,
+         walk_length=40,
+         p=1.0,
+         q=1.0,
+         context_window_type="double",
+         buffer_size=100000,
++        learn_joint_probability=True,
+     ):
+         """Dataset for training word2vec with negative sampling.
+ 
+         :param adjmat: Adjacency matrix of the graph.
+         :type adjmat: scipy sparse matrix format (csr).
+         :param num_walks: Number of random walkers per node
+         :type num_walks: int
+@@ -247,21 +261,24 @@
+         :type p: float, optional
+         :param q: node2vec parameter q (1/q) is the weights of the edges to nodes that are not directly connected to the previously visted node, defaults to 1
+         :type q: float, optional
+         :param context_window_type: The type of context window. `context_window_type="double"` specifies a context window that extends both left and right of a focal node. context_window_type="left" and ="right" specifies that extends left and right, respectively.
+         :type context_window_type: str, optional
+         :param buffer_size: Buffer size for sampled center and context pairs, defaults to 10000
+         :type buffer_size: int, optional
++        :param learn_joint_probability: If set True, the dataset will additionally generate the random center nodes as return it at the fourth variable.
++        :type learn_joint_probability: bool, optional
+         """
+         self.adjmat = adjmat
+         self.num_walks = num_walks
+         self.window_length = window_length
+         self.noise_sampler = noise_sampler
+         self.walk_length = walk_length
+         self.padding_id = padding_id
++        self.learn_joint_probability = learn_joint_probability
+         self.context_window_type = {"double": 0, "left": -1, "right": 1}[
+             context_window_type
+         ]
+         self.rw_sampler = RandomWalkSampler(
+             adjmat, walk_length=walk_length, p=p, q=q, padding_id=padding_id
+         )
+         self.node_order = np.random.choice(
+@@ -274,14 +291,15 @@
+         # Counter and Memory
+         self.n_sampled = 0
+         self.sample_id = 0
+         self.scanned_node_id = 0
+         self.buffer_size = buffer_size
+         self.contexts = None
+         self.centers = None
++        self.random_centers = None
+         self.random_contexts = None
+ 
+         # Initialize
+         self._generate_samples()
+ 
+     def __len__(self):
+         return self.n_nodes * self.num_walks * self.walk_length
+@@ -292,15 +310,19 @@
+ 
+         center = self.centers[self.sample_id]
+         cont = self.contexts[self.sample_id].astype(np.int64)
+         rand_cont = self.random_contexts[self.sample_id].astype(np.int64)
+ 
+         self.sample_id += 1
+ 
+-        return center, cont, rand_cont
++        if self.learn_joint_probability:
++            rand_center = self.random_centers[self.sample_id].astype(np.int64)
++            return center, cont, rand_cont, rand_center
++        else:
++            return center, cont, rand_cont
+ 
+     def _generate_samples(self):
+         next_scanned_node_id = np.minimum(
+             self.scanned_node_id + self.buffer_size, self.n_nodes
+         )
+         walks = self.rw_sampler.sampling(
+             self.node_order[self.scanned_node_id : next_scanned_node_id]
+@@ -309,18 +331,17 @@
+             context_window_type=self.context_window_type,
+             walks=walks,
+             n_walks=walks.shape[0],
+             walk_len=walks.shape[1],
+             window_length=self.window_length,
+             padding_id=self.padding_id,
+         )
+-        self.random_contexts = self.noise_sampler.sampling(
+-            center_nodes=self.centers,
+-            context_nodes=self.contexts,
+-            padding_id=self.padding_id,
++        self.random_centers, self.random_contexts = self.noise_sampler.sampling(
++            center_nodes=None if self.learn_joint_probability else self.centers,
++            size=len(self.centers),
+         )
+         self.n_sampled = len(self.centers)
+         self.scanned_node_id = next_scanned_node_id % self.n_nodes
+         self.sample_id = 0
+ 
+ 
+ def _get_center_context(
+```
+
+## residual2vec/word2vec.py
+
+```diff
+@@ -1,7 +1,12 @@
++# -*- coding: utf-8 -*-
++# @Author: Sadamori Kojaku
++# @Date:   2022-04-20 14:33:08
++# @Last Modified by:   Sadamori Kojaku
++# @Last Modified time: 2023-04-05 17:14:44
+ """Embedding module for Residual2Vec.
+ 
+ This module is a modified version of the Word2Vec module in
+ https://github.com/theeluwin/pytorch-sgn
+ """
+ import numpy as np
+ import torch
+@@ -60,14 +65,32 @@
+ class NegativeSampling(nn.Module):
+     def __init__(self, embedding):
+         super(NegativeSampling, self).__init__()
+         self.embedding = embedding
+         self.weights = None
+         self.logsigmoid = nn.LogSigmoid()
+ 
+-    def forward(self, iword, owords, nwords):
++    def forward(self, iword, owords, nwords, niwords=None):
++        """Loss
++
++        :param iword: center nodes
++        :type iword: torch.Tensor
++        :param owords: context nodes
++        :type owords: torch.Tensor
++        :param nwords: random context nodes
++        :type nwords: torch.Tensor
++        :param niwords: random center nodes, defaults to None. If set to None, the center nodes will be used for computing the negative loss.
++        :type niwords: torch.Tensor, optional
++        :return: _description_
++        :rtype: _type_
++        """
++
+         ivectors = self.embedding.forward_i(iword)
+         ovectors = self.embedding.forward_o(owords)
+         nvectors = self.embedding.forward_o(nwords)
+         oloss = self.logsigmoid((ovectors * ivectors).sum(dim=1))
+-        nloss = self.logsigmoid((nvectors * ivectors).sum(dim=1).neg())
++        if niwords is None:
++            nloss = self.logsigmoid((nvectors * ivectors).sum(dim=1).neg())
++        elif niwords is not None:
++            nivectors = self.embedding.forward_i(niwords)
++            nloss = self.logsigmoid((nvectors * nivectors).sum(dim=1).neg())
+         return -(oloss + nloss).mean()
+```
+
+## Comparing `residual2vec-0.0.8.dist-info/METADATA` & `residual2vec-0.0.9.dist-info/METADATA`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+ Metadata-Version: 2.1
+ Name: residual2vec
+-Version: 0.0.8
++Version: 0.0.9
+ Summary: residual2vec: debiasing graph embedding with random graphs
+ Home-page: https://github.com/skojaku/residual2vec
+ Author: Sadamori Kojaku
+ License: MIT
+ Keywords: graph embedding
+-Platform: UNKNOWN
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Science/Research
+ Classifier: Topic :: Software Development
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3.7
+ Classifier: Programming Language :: Python :: 3.8
++Classifier: Programming Language :: Python :: 3.9
+ Description-Content-Type: text/markdown
+ Requires-Dist: faiss-cpu
+ Requires-Dist: numpy
+ Requires-Dist: scikit-learn
+ Requires-Dist: scipy
+ Requires-Dist: numba
+ Requires-Dist: torch
+@@ -143,9 +143,7 @@
+         #:type center_node: int
+         #:param n_samples: number of samples per center node
+         #:type n_samples: int
+         pass
+ ```
+ 
+ See the `residual2vec/node_samplers` for examples.
+-
+-
+```
+
+## Comparing `residual2vec-0.0.8.dist-info/RECORD` & `residual2vec-0.0.9.dist-info/RECORD`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ residual2vec/__init__.py,sha256=u64MEJ-9Qb_JUKnqkH7QyqZQtj-_wU5xlt1h3F1xLEs,125
+-residual2vec/node_samplers.py,sha256=7qni2nLoXe7jmsFIgj3iatCeOV4M8Z0wNBW6URdVIRg,5838
++residual2vec/node_samplers.py,sha256=xFNQKl0UDiLD8hQl17Tl-nuaQyBi5XGDjQkA11eaMYg,4593
+ residual2vec/random_walk_sampler.py,sha256=pxA3AVf8Qj7ZGobsYB30ZB_DCcY0iaDgz7z__HO-N0k,6246
+ residual2vec/residual2vec.py,sha256=bgm-CXZSkANEUahMGvaDvEY-dQwQXz-pVVPLQW1M5I0,10651
+-residual2vec/residual2vec_sgd.py,sha256=BjYpOxanZvZnCB94ap1L0abjzOGm8Guk1K19WdYMRRA,14797
++residual2vec/residual2vec_sgd.py,sha256=mW5X2I9IOD4egLDA4D6G-hsPlDedkaxpbK1uBdSRPOg,16362
+ residual2vec/utils.py,sha256=cdeXSON4HnEQkHCRfRB3DKRDTmkMspS_9jra-0Z6iHM,4208
+-residual2vec/word2vec.py,sha256=QtDNrKGyCkiLe7epj9oKK9RSx9swePge8A97U2i_4DE,2510
+-residual2vec-0.0.8.dist-info/METADATA,sha256=u5R7krMHLv416RoXfHoe-F0CGt-l2EJD5ts4I6F56N8,5998
+-residual2vec-0.0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+-residual2vec-0.0.8.dist-info/top_level.txt,sha256=aGImobff2xiFLyErZEAMoErQi2KvlnJhTbiV_HmvB_M,13
+-residual2vec-0.0.8.dist-info/RECORD,,
++residual2vec/word2vec.py,sha256=fE4nE5Y4GAwtifXfYslnYBmHlXqIPwcoQuDOPvUf2e8,3381
++residual2vec-0.0.9.dist-info/METADATA,sha256=IDGYew7qZKfc2YD92dQUW2Mbz_ibTCkVHc86yO1xNPw,6028
++residual2vec-0.0.9.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
++residual2vec-0.0.9.dist-info/top_level.txt,sha256=aGImobff2xiFLyErZEAMoErQi2KvlnJhTbiV_HmvB_M,13
++residual2vec-0.0.9.dist-info/RECORD,,
+```
+

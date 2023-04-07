@@ -1,0 +1,94 @@
+# Comparing `tmp/isimport-0.2.tar.gz` & `tmp/isimport-0.3.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "isimport-0.2.tar", last modified: Fri Apr  7 16:31:13 2023, max compression
++gzip compressed data, was "isimport-0.3.tar", last modified: Fri Apr  7 16:35:42 2023, max compression
+```
+
+## Comparing `isimport-0.2.tar` & `isimport-0.3.tar`
+
+### file list
+
+```diff
+@@ -1,15 +1,15 @@
+-drwxrwxrwx   0        0        0        0 2023-04-07 16:31:13.974753 isimport-0.2/
+--rw-rw-rw-   0        0        0     1091 2023-04-07 15:33:16.000000 isimport-0.2/LICENSE
+--rw-rw-rw-   0        0        0      624 2023-04-07 16:31:13.961906 isimport-0.2/PKG-INFO
+--rw-rw-rw-   0        0        0      273 2023-04-07 15:44:00.000000 isimport-0.2/README.md
+-drwxrwxrwx   0        0        0        0 2023-04-07 16:31:13.939297 isimport-0.2/isimport/
+--rw-rw-rw-   0        0        0     2900 2023-04-07 15:14:51.000000 isimport-0.2/isimport/__init__.py
+--rw-rw-rw-   0        0        0       73 2023-04-07 14:53:40.000000 isimport-0.2/isimport/__main__.py
+-drwxrwxrwx   0        0        0        0 2023-04-07 16:31:13.959907 isimport-0.2/isimport.egg-info/
+--rw-rw-rw-   0        0        0      624 2023-04-07 16:31:13.000000 isimport-0.2/isimport.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      227 2023-04-07 16:31:13.000000 isimport-0.2/isimport.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-04-07 16:31:13.000000 isimport-0.2/isimport.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        5 2023-04-07 16:31:13.000000 isimport-0.2/isimport.egg-info/requires.txt
+--rw-rw-rw-   0        0        0        9 2023-04-07 16:31:13.000000 isimport-0.2/isimport.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-04-07 16:31:13.974753 isimport-0.2/setup.cfg
+--rw-rw-rw-   0        0        0     1125 2023-04-07 16:30:15.000000 isimport-0.2/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 16:35:42.562677 isimport-0.3/
++-rw-rw-rw-   0        0        0     1091 2023-04-07 15:33:16.000000 isimport-0.3/LICENSE
++-rw-rw-rw-   0        0        0      876 2023-04-07 16:35:42.551636 isimport-0.3/PKG-INFO
++-rw-rw-rw-   0        0        0      273 2023-04-07 15:44:00.000000 isimport-0.3/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 16:35:42.538392 isimport-0.3/isimport/
++-rw-rw-rw-   0        0        0     2900 2023-04-07 15:14:51.000000 isimport-0.3/isimport/__init__.py
++-rw-rw-rw-   0        0        0       73 2023-04-07 14:53:40.000000 isimport-0.3/isimport/__main__.py
++drwxrwxrwx   0        0        0        0 2023-04-07 16:35:42.550234 isimport-0.3/isimport.egg-info/
++-rw-rw-rw-   0        0        0      876 2023-04-07 16:35:42.000000 isimport-0.3/isimport.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      227 2023-04-07 16:35:42.000000 isimport-0.3/isimport.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 16:35:42.000000 isimport-0.3/isimport.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        5 2023-04-07 16:35:42.000000 isimport-0.3/isimport.egg-info/requires.txt
++-rw-rw-rw-   0        0        0        9 2023-04-07 16:35:42.000000 isimport-0.3/isimport.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 16:35:42.562677 isimport-0.3/setup.cfg
++-rw-rw-rw-   0        0        0     1167 2023-04-07 16:35:39.000000 isimport-0.3/setup.py
+```
+
+### Comparing `isimport-0.2/LICENSE` & `isimport-0.3/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `isimport-0.2/isimport/__init__.py` & `isimport-0.3/isimport/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `isimport-0.2/setup.py` & `isimport-0.3/setup.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -3,27 +3,28 @@
+ import os
+ 
+ here = os.path.abspath(os.path.dirname(__file__))
+ 
+ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+     long_description = "\n" + fh.read()
+ 
+-VERSION = '0.2'
++VERSION = '0.3'
+ DESCRIPTION = 'Check required pip module for program.'
+ LONG_DESCRIPTION = 'A package that check required pip module to be installed on system.'
+ 
+ # Setting up
+ setup(
+     name="isimport",
+     version=VERSION,
+     author="Ankush Bhagat (Ankush Bhagat)",
+     author_email="<ankushbhagatofficial@gmail.com>",
+     description=DESCRIPTION,
+     long_description_content_type="text/markdown",
+-    long_description=DESCRIPTION,
++    # long_description=DESCRIPTION,
++    long_description=long_description,
+     packages=find_packages(),
+     install_requires=['rich'],
+     keywords=['python', 'module', 'import', 'package', 'find'],
+     classifiers=[
+         "Development Status :: 1 - Planning",
+         "Intended Audience :: Developers",
+         "Programming Language :: Python :: 3",
+```
+

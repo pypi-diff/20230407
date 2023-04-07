@@ -1,0 +1,424 @@
+--- tmp/kiss_icp-0.2.6.tar.gz
++++ tmp/kiss_icp-0.2.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "kiss_icp-0.2.6.tar", last modified: Fri Apr  7 13:17:13 2023, max compression
+│ +gzip compressed data, was "kiss_icp-0.2.7.tar", last modified: Fri Apr  7 16:10:11 2023, max compression
+│   --- kiss_icp-0.2.6.tar
+├── +++ kiss_icp-0.2.7.tar
+│ ├── file list
+│ │ @@ -1,62 +1,62 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:17:13.428140 kiss_icp-0.2.6/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2019 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/CMakeLists.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1126 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      172 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5829 2023-04-07 13:17:13.428140 kiss_icp-0.2.6/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4732 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:17:13.424140 kiss_icp-0.2.6/kiss_icp/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1188 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:17:13.424140 kiss_icp-0.2.6/kiss_icp/config/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1225 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/config/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1688 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/config/config.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4007 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/config/parser.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:17:13.428140 kiss_icp-0.2.6/kiss_icp/datasets/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2605 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2761 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/apollo.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3698 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/boreas.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4192 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/generic.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4566 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/kitti.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    16194 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/kitti_raw.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4469 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/mcap.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4379 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/mulran.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4276 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/ncd.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5254 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/nclt.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5667 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/nuscenes.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     6297 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/ouster.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2896 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/paris_luco.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     4892 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/rosbag.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3556 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/datasets/tum.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1891 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/deskew.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3917 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/kiss_icp.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2971 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/mapping.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1819 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/metrics.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8587 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/pipeline.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1860 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/preprocess.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:17:13.428140 kiss_icp-0.2.6/kiss_icp/pybind/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2218 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/pybind/CMakeLists.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1166 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/pybind/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5215 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/pybind/kiss_icp_pybind.cpp
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:17:13.428140 kiss_icp-0.2.6/kiss_icp/pybind/pybind11/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1684 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/pybind/pybind11/LICENSE
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1374 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/pybind/pybind11/pybind11.cmake
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5753 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/pybind/stl_vector_eigen.h
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1734 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/registration.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     2307 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/threshold.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:17:13.428140 kiss_icp-0.2.6/kiss_icp/tools/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1166 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/tools/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7959 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/tools/cmd.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3082 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/tools/pipeline_results.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     7427 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/tools/point_cloud2.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1319 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/tools/progress_bar.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     9045 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/tools/visualizer.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1427 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/kiss_icp/voxelization.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 13:17:13.424140 kiss_icp-0.2.6/kiss_icp.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5829 2023-04-07 13:17:13.000000 kiss_icp-0.2.6/kiss_icp.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     1368 2023-04-07 13:17:13.000000 kiss_icp-0.2.6/kiss_icp.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 13:17:13.000000 kiss_icp-0.2.6/kiss_icp.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-07 13:17:13.000000 kiss_icp-0.2.6/kiss_icp.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 13:17:13.000000 kiss_icp-0.2.6/kiss_icp.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-07 13:17:13.000000 kiss_icp-0.2.6/kiss_icp.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      474 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/pyproject.toml
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      980 2023-04-07 13:17:13.428140 kiss_icp-0.2.6/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3115 2023-04-07 13:17:01.000000 kiss_icp-0.2.6/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 16:10:11.378833 kiss_icp-0.2.7/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2019 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/CMakeLists.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1126 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      172 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5829 2023-04-07 16:10:11.378833 kiss_icp-0.2.7/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4732 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 16:10:11.374833 kiss_icp-0.2.7/kiss_icp/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1188 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 16:10:11.374833 kiss_icp-0.2.7/kiss_icp/config/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1225 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/config/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1688 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/config/config.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4007 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/config/parser.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 16:10:11.374833 kiss_icp-0.2.7/kiss_icp/datasets/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2605 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2761 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/apollo.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3698 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/boreas.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4192 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/generic.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4566 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/kitti.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    16194 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/kitti_raw.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4469 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/mcap.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4379 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/mulran.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4276 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/ncd.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5254 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/nclt.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5667 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/nuscenes.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6297 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/ouster.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2896 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/paris_luco.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     4892 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/rosbag.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3556 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/datasets/tum.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1891 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/deskew.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3917 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/kiss_icp.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2971 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/mapping.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1819 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/metrics.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8587 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/pipeline.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1860 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/preprocess.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 16:10:11.378833 kiss_icp-0.2.7/kiss_icp/pybind/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2218 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/pybind/CMakeLists.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1166 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/pybind/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5215 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/pybind/kiss_icp_pybind.cpp
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 16:10:11.378833 kiss_icp-0.2.7/kiss_icp/pybind/pybind11/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1684 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/pybind/pybind11/LICENSE
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1374 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/pybind/pybind11/pybind11.cmake
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5753 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/pybind/stl_vector_eigen.h
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1734 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/registration.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2307 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/threshold.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 16:10:11.378833 kiss_icp-0.2.7/kiss_icp/tools/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1166 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/tools/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8020 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/tools/cmd.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3082 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/tools/pipeline_results.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     7427 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/tools/point_cloud2.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1319 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/tools/progress_bar.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     9045 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/tools/visualizer.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1427 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/kiss_icp/voxelization.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 16:10:11.374833 kiss_icp-0.2.7/kiss_icp.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5829 2023-04-07 16:10:11.000000 kiss_icp-0.2.7/kiss_icp.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1368 2023-04-07 16:10:11.000000 kiss_icp-0.2.7/kiss_icp.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 16:10:11.000000 kiss_icp-0.2.7/kiss_icp.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       61 2023-04-07 16:10:11.000000 kiss_icp-0.2.7/kiss_icp.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 16:10:11.000000 kiss_icp-0.2.7/kiss_icp.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        9 2023-04-07 16:10:11.000000 kiss_icp-0.2.7/kiss_icp.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      474 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/pyproject.toml
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      980 2023-04-07 16:10:11.378833 kiss_icp-0.2.7/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3115 2023-04-07 16:10:00.000000 kiss_icp-0.2.7/setup.py
+│ │   --- kiss_icp-0.2.6/CMakeLists.txt
+│ ├── +++ kiss_icp-0.2.7/CMakeLists.txt
+│ │┄ Files 2% similar despite different names
+│ │ @@ -17,15 +17,15 @@
+│ │  # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ │  # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ │  # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ │  # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ │  # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│ │  # SOFTWARE.
+│ │  cmake_minimum_required(VERSION 3.16...3.26)
+│ │ -project(kiss_icp_pybind VERSION 0.2.6 LANGUAGES CXX)
+│ │ +project(kiss_icp_pybind VERSION 0.2.7 LANGUAGES CXX)
+│ │  
+│ │  # Set build type
+│ │  set(CMAKE_BUILD_TYPE Release)
+│ │  set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+│ │  set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+│ │  
+│ │  if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/../cpp/kiss_icp/)
+│ │   --- kiss_icp-0.2.6/LICENSE
+│ ├── +++ kiss_icp-0.2.7/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/PKG-INFO
+│ ├── +++ kiss_icp-0.2.7/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kiss_icp
+│ │ -Version: 0.2.6
+│ │ +Version: 0.2.7
+│ │  Summary: Simple yet effective 3D LiDAR-Odometry registration pipeline
+│ │  Home-page: https://github.com/PRBonn/kiss-icp
+│ │  Author: Ignacio Vizzo
+│ │  Author-email: ignaciovizzo@gmail.com
+│ │  License: MIT
+│ │  Keywords: SLAM,LiDAR,Odometry,Localization
+│ │  Classifier: Operating System :: Unix
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: kiss_icp Version: 0.2.6 Summary: Simple yet
+│ │ │ +Metadata-Version: 2.1 Name: kiss_icp Version: 0.2.7 Summary: Simple yet
+│ │ │  effective 3D LiDAR-Odometry registration pipeline Home-page: https://
+│ │ │  github.com/PRBonn/kiss-icp Author: Ignacio Vizzo Author-email:
+│ │ │  ignaciovizzo@gmail.com License: MIT Keywords: SLAM,LiDAR,Odometry,Localization
+│ │ │  Classifier: Operating System :: Unix Classifier: Operating System :: MacOS
+│ │ │  Classifier: Operating System :: Microsoft :: Windows Classifier: Programming
+│ │ │  Language :: C++ Classifier: Programming Language :: Python :: 3 Classifier:
+│ │ │  Programming Language :: Python :: 3.7 Classifier: Programming Language ::
+│ │   --- kiss_icp-0.2.6/README.md
+│ ├── +++ kiss_icp-0.2.7/README.md
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/__init__.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -16,8 +16,8 @@
+│ │  # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+│ │  # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+│ │  # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+│ │  # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+│ │  # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+│ │  # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+│ │  # SOFTWARE.
+│ │ -__version__ = "0.2.6"
+│ │ +__version__ = "0.2.7"
+│ │   --- kiss_icp-0.2.6/kiss_icp/config/__init__.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/config/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/config/config.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/config/config.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/config/parser.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/config/parser.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/__init__.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/apollo.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/apollo.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/boreas.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/boreas.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/generic.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/generic.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/kitti.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/kitti.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/kitti_raw.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/kitti_raw.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/mcap.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/mcap.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/mulran.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/mulran.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/ncd.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/ncd.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/nclt.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/nclt.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/nuscenes.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/nuscenes.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/ouster.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/ouster.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/paris_luco.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/paris_luco.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/rosbag.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/rosbag.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/datasets/tum.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/datasets/tum.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/deskew.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/deskew.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/kiss_icp.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/kiss_icp.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/mapping.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/mapping.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/metrics.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/metrics.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/pipeline.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/preprocess.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/preprocess.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/pybind/CMakeLists.txt
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/pybind/CMakeLists.txt
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/pybind/__init__.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/pybind/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/pybind/kiss_icp_pybind.cpp
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/pybind/kiss_icp_pybind.cpp
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/pybind/pybind11/LICENSE
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/pybind/pybind11/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/pybind/pybind11/pybind11.cmake
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/pybind/pybind11/pybind11.cmake
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/pybind/stl_vector_eigen.h
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/pybind/stl_vector_eigen.h
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/registration.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/registration.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/threshold.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/threshold.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/tools/__init__.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/tools/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/tools/cmd.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/tools/cmd.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -64,14 +64,16 @@
+│ │          import kiss_icp
+│ │  
+│ │          print(f"KISS-ICP Version: {kiss_icp.__version__}")
+│ │          raise typer.Exit()
+│ │  
+│ │  
+│ │  def name_callback(value: str):
+│ │ +    if not value:
+│ │ +        return value
+│ │      dl = available_dataloaders()
+│ │      if value not in dl:
+│ │          raise typer.BadParameter(f"Supported dataloaders are:\n{', '.join(dl)}")
+│ │      return value
+│ │  
+│ │  
+│ │  app = typer.Typer(add_completion=False, rich_markup_mode="rich")
+│ │ @@ -108,15 +110,15 @@
+│ │  def kiss_icp_pipeline(
+│ │      data: Path = typer.Argument(
+│ │          ...,
+│ │          help="The data directory used by the specified dataloader",
+│ │          show_default=False,
+│ │      ),
+│ │      dataloader: str = typer.Option(
+│ │ -        "generic",
+│ │ +        None,
+│ │          show_default=False,
+│ │          case_sensitive=False,
+│ │          autocompletion=available_dataloaders,
+│ │          callback=name_callback,
+│ │          help="[Optional] Use a specific dataloader from those supported by KISS-ICP",
+│ │      ),
+│ │      config: Optional[Path] = typer.Option(
+│ │ @@ -192,22 +194,23 @@
+│ │          None,
+│ │          "--version",
+│ │          help="Show the current version of KISS-ICP",
+│ │          callback=version_callback,
+│ │          is_eager=True,
+│ │      ),
+│ │  ):
+│ │ +    # Attempt to guess some common file extensions to avoid using the --dataloader flag
+│ │ +    if not dataloader:
+│ │ +        dataloader, data = guess_dataloader(data, default_dataloader="generic")
+│ │ +
+│ │      # Validate some options
+│ │      if dataloader in sequence_dataloaders() and sequence is None:
+│ │          print('You must specify a sequence "--sequence"')
+│ │          raise typer.Exit(code=1)
+│ │  
+│ │ -    # Attempt to guess some common file extensions to avoid using the --dataloader flag
+│ │ -    dataloader, data = guess_dataloader(data, default_dataloader="generic")
+│ │ -
+│ │      # Lazy-loading for faster CLI
+│ │      from kiss_icp.datasets import dataset_factory
+│ │      from kiss_icp.pipeline import OdometryPipeline
+│ │  
+│ │      OdometryPipeline(
+│ │          dataset=dataset_factory(
+│ │              dataloader=dataloader,
+│ │   --- kiss_icp-0.2.6/kiss_icp/tools/pipeline_results.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/tools/pipeline_results.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/tools/point_cloud2.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/tools/point_cloud2.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/tools/progress_bar.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/tools/progress_bar.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/tools/visualizer.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/tools/visualizer.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp/voxelization.py
+│ ├── +++ kiss_icp-0.2.7/kiss_icp/voxelization.py
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/kiss_icp.egg-info/PKG-INFO
+│ ├── +++ kiss_icp-0.2.7/kiss_icp.egg-info/PKG-INFO
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: kiss-icp
+│ │ -Version: 0.2.6
+│ │ +Version: 0.2.7
+│ │  Summary: Simple yet effective 3D LiDAR-Odometry registration pipeline
+│ │  Home-page: https://github.com/PRBonn/kiss-icp
+│ │  Author: Ignacio Vizzo
+│ │  Author-email: ignaciovizzo@gmail.com
+│ │  License: MIT
+│ │  Keywords: SLAM,LiDAR,Odometry,Localization
+│ │  Classifier: Operating System :: Unix
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: kiss-icp Version: 0.2.6 Summary: Simple yet
+│ │ │ +Metadata-Version: 2.1 Name: kiss-icp Version: 0.2.7 Summary: Simple yet
+│ │ │  effective 3D LiDAR-Odometry registration pipeline Home-page: https://
+│ │ │  github.com/PRBonn/kiss-icp Author: Ignacio Vizzo Author-email:
+│ │ │  ignaciovizzo@gmail.com License: MIT Keywords: SLAM,LiDAR,Odometry,Localization
+│ │ │  Classifier: Operating System :: Unix Classifier: Operating System :: MacOS
+│ │ │  Classifier: Operating System :: Microsoft :: Windows Classifier: Programming
+│ │ │  Language :: C++ Classifier: Programming Language :: Python :: 3 Classifier:
+│ │ │  Programming Language :: Python :: 3.7 Classifier: Programming Language ::
+│ │   --- kiss_icp-0.2.6/kiss_icp.egg-info/SOURCES.txt
+│ ├── +++ kiss_icp-0.2.7/kiss_icp.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- kiss_icp-0.2.6/setup.cfg
+│ ├── +++ kiss_icp-0.2.7/setup.cfg
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [metadata]
+│ │  name = kiss_icp
+│ │ -version = 0.2.6
+│ │ +version = 0.2.7
+│ │  author = Ignacio Vizzo
+│ │  author_email = ignaciovizzo@gmail.com
+│ │  description = Simple yet effective 3D LiDAR-Odometry registration pipeline
+│ │  long_description = file:README.md,
+│ │  long_description_content_type = text/markdown
+│ │  url = https://github.com/PRBonn/kiss-icp
+│ │  license = MIT
+│ │   --- kiss_icp-0.2.6/setup.py
+│ ├── +++ kiss_icp-0.2.7/setup.py
+│ │┄ Files identical despite different names

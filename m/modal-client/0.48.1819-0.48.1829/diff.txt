@@ -1,0 +1,2182 @@
+--- tmp/modal_client-0.48.1819-py3-none-any.whl.zip
++++ tmp/modal_client-0.48.1829-py3-none-any.whl.zip
+├── zipinfo {}
+│ @@ -1,142 +1,142 @@
+│ -Zip file size: 233404 bytes, number of entries: 140
+│ --rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 03:15 client_test/__init__.py
+│ --rw-r--r--  2.0 unx     5409 b- defN 23-Apr-06 03:15 client_test/async_utils_test.py
+│ --rw-r--r--  2.0 unx     1507 b- defN 23-Apr-06 03:15 client_test/blob_test.py
+│ --rw-r--r--  2.0 unx     3958 b- defN 23-Apr-06 03:15 client_test/cli_imports_test.py
+│ --rw-r--r--  2.0 unx    11670 b- defN 23-Apr-06 03:15 client_test/cli_test.py
+│ --rw-r--r--  2.0 unx     4850 b- defN 23-Apr-06 03:15 client_test/client_test.py
+│ --rw-r--r--  2.0 unx     2606 b- defN 23-Apr-06 03:15 client_test/config_test.py
+│ --rw-r--r--  2.0 unx    28675 b- defN 23-Apr-06 03:15 client_test/conftest.py
+│ --rw-r--r--  2.0 unx     4556 b- defN 23-Apr-06 03:15 client_test/container_app_test.py
+│ --rw-r--r--  2.0 unx    18533 b- defN 23-Apr-06 03:15 client_test/container_test.py
+│ --rw-r--r--  2.0 unx     1240 b- defN 23-Apr-06 03:15 client_test/decorator_test.py
+│ --rw-r--r--  2.0 unx     1086 b- defN 23-Apr-06 03:15 client_test/deprecation_test.py
+│ --rw-r--r--  2.0 unx     2182 b- defN 23-Apr-06 03:15 client_test/e2e_test.py
+│ --rw-r--r--  2.0 unx      165 b- defN 23-Apr-06 03:15 client_test/error_test.py
+│ --rw-r--r--  2.0 unx    12887 b- defN 23-Apr-06 03:15 client_test/function_test.py
+│ --rw-r--r--  2.0 unx     3924 b- defN 23-Apr-06 03:15 client_test/gpu_test.py
+│ --rw-r--r--  2.0 unx     5047 b- defN 23-Apr-06 03:15 client_test/grpc_utils_test.py
+│ --rw-r--r--  2.0 unx    15156 b- defN 23-Apr-06 03:15 client_test/image_test.py
+│ --rw-r--r--  2.0 unx     2252 b- defN 23-Apr-06 03:15 client_test/live_reload_test.py
+│ --rw-r--r--  2.0 unx     2813 b- defN 23-Apr-06 03:15 client_test/lookup_test.py
+│ --rw-r--r--  2.0 unx     5305 b- defN 23-Apr-06 03:15 client_test/mount_test.py
+│ --rw-r--r--  2.0 unx     5329 b- defN 23-Apr-06 03:15 client_test/mounted_files_test.py
+│ --rw-r--r--  2.0 unx     2157 b- defN 23-Apr-06 03:15 client_test/notebook_test.py
+│ --rw-r--r--  2.0 unx     1434 b- defN 23-Apr-06 03:15 client_test/object_test.py
+│ --rw-r--r--  2.0 unx      413 b- defN 23-Apr-06 03:15 client_test/package_utils_test.py
+│ --rw-r--r--  2.0 unx     1675 b- defN 23-Apr-06 03:15 client_test/retries_test.py
+│ --rw-r--r--  2.0 unx      359 b- defN 23-Apr-06 03:15 client_test/schedule_test.py
+│ --rw-r--r--  2.0 unx      548 b- defN 23-Apr-06 03:15 client_test/secret_test.py
+│ --rw-r--r--  2.0 unx     1098 b- defN 23-Apr-06 03:15 client_test/serialization_test.py
+│ --rw-r--r--  2.0 unx     3925 b- defN 23-Apr-06 03:15 client_test/shared_volume_test.py
+│ --rw-r--r--  2.0 unx     8671 b- defN 23-Apr-06 03:15 client_test/stub_test.py
+│ --rw-r--r--  2.0 unx     2691 b- defN 23-Apr-06 03:15 client_test/utils_test.py
+│ --rw-r--r--  2.0 unx     1160 b- defN 23-Apr-06 03:15 client_test/watcher_test.py
+│ --rw-r--r--  2.0 unx     3687 b- defN 23-Apr-06 03:15 client_test/webhook_test.py
+│ --rw-r--r--  2.0 unx      937 b- defN 23-Apr-06 03:15 modal/__init__.py
+│ --rw-r--r--  2.0 unx      157 b- defN 23-Apr-06 03:15 modal/__main__.py
+│ --rw-r--r--  2.0 unx     2106 b- defN 23-Apr-06 03:15 modal/_asgi.py
+│ --rw-r--r--  2.0 unx    13386 b- defN 23-Apr-06 03:15 modal/_blob_utils.py
+│ --rw-r--r--  2.0 unx    24591 b- defN 23-Apr-06 03:15 modal/_container_entrypoint.py
+│ --rw-r--r--  2.0 unx     9857 b- defN 23-Apr-06 03:15 modal/_function_utils.py
+│ --rw-r--r--  2.0 unx      275 b- defN 23-Apr-06 03:15 modal/_ipython.py
+│ --rw-r--r--  2.0 unx     4535 b- defN 23-Apr-06 03:15 modal/_live_reload.py
+│ --rw-r--r--  2.0 unx      892 b- defN 23-Apr-06 03:15 modal/_location.py
+│ --rw-r--r--  2.0 unx      850 b- defN 23-Apr-06 03:15 modal/_object_meta.py
+│ --rw-r--r--  2.0 unx    17283 b- defN 23-Apr-06 03:15 modal/_output.py
+│ --rw-r--r--  2.0 unx     1259 b- defN 23-Apr-06 03:15 modal/_proxy_tunnel.py
+│ --rw-r--r--  2.0 unx     5043 b- defN 23-Apr-06 03:15 modal/_pty.py
+│ --rw-r--r--  2.0 unx     4286 b- defN 23-Apr-06 03:15 modal/_resolver.py
+│ --rw-r--r--  2.0 unx     1255 b- defN 23-Apr-06 03:15 modal/_serialization.py
+│ --rw-r--r--  2.0 unx     7598 b- defN 23-Apr-06 03:15 modal/_traceback.py
+│ --rw-r--r--  2.0 unx     1749 b- defN 23-Apr-06 03:15 modal/_tracing.py
+│ --rw-r--r--  2.0 unx      490 b- defN 23-Apr-06 03:15 modal/_types.py
+│ --rw-r--r--  2.0 unx     3960 b- defN 23-Apr-06 03:15 modal/_watcher.py
+│ --rw-r--r--  2.0 unx      900 b- defN 23-Apr-06 03:15 modal/aio.py
+│ --rw-r--r--  2.0 unx     9481 b- defN 23-Apr-06 03:15 modal/app.py
+│ --rw-r--r--  2.0 unx     5561 b- defN 23-Apr-06 03:15 modal/app.pyi
+│ --rw-r--r--  2.0 unx     2462 b- defN 23-Apr-06 03:15 modal/call_graph.py
+│ --rw-r--r--  2.0 unx     9185 b- defN 23-Apr-06 03:15 modal/client.py
+│ --rw-r--r--  2.0 unx     3507 b- defN 23-Apr-06 03:15 modal/client.pyi
+│ --rw-r--r--  2.0 unx     6439 b- defN 23-Apr-06 03:15 modal/config.py
+│ --rw-r--r--  2.0 unx     5577 b- defN 23-Apr-06 03:15 modal/dict.py
+│ --rw-r--r--  2.0 unx     2632 b- defN 23-Apr-06 03:15 modal/dict.pyi
+│ --rw-r--r--  2.0 unx     2423 b- defN 23-Apr-06 03:15 modal/exception.py
+│ --rw-r--r--  2.0 unx    44678 b- defN 23-Apr-06 03:15 modal/functions.py
+│ --rw-r--r--  2.0 unx    15001 b- defN 23-Apr-06 03:15 modal/functions.pyi
+│ --rw-r--r--  2.0 unx     3552 b- defN 23-Apr-06 03:15 modal/gpu.py
+│ --rw-r--r--  2.0 unx    42772 b- defN 23-Apr-06 03:15 modal/image.py
+│ --rw-r--r--  2.0 unx    14757 b- defN 23-Apr-06 03:15 modal/image.pyi
+│ --rw-r--r--  2.0 unx    16282 b- defN 23-Apr-06 03:15 modal/mount.py
+│ --rw-r--r--  2.0 unx     7047 b- defN 23-Apr-06 03:15 modal/mount.pyi
+│ --rw-r--r--  2.0 unx    11090 b- defN 23-Apr-06 03:15 modal/object.py
+│ --rw-r--r--  2.0 unx     7439 b- defN 23-Apr-06 03:15 modal/object.pyi
+│ --rw-r--r--  2.0 unx      652 b- defN 23-Apr-06 03:15 modal/proxy.py
+│ --rw-r--r--  2.0 unx      728 b- defN 23-Apr-06 03:15 modal/proxy.pyi
+│ --rw-r--r--  2.0 unx        0 b- defN 23-Apr-06 03:15 modal/py.typed
+│ --rw-r--r--  2.0 unx     5134 b- defN 23-Apr-06 03:15 modal/queue.py
+│ --rw-r--r--  2.0 unx     2271 b- defN 23-Apr-06 03:15 modal/queue.pyi
+│ --rw-r--r--  2.0 unx      523 b- defN 23-Apr-06 03:15 modal/requirements.txt
+│ --rw-r--r--  2.0 unx     3050 b- defN 23-Apr-06 03:15 modal/retries.py
+│ --rw-r--r--  2.0 unx     7239 b- defN 23-Apr-06 03:15 modal/runner.py
+│ --rw-r--r--  2.0 unx     2619 b- defN 23-Apr-06 03:15 modal/schedule.py
+│ --rw-r--r--  2.0 unx     1998 b- defN 23-Apr-06 03:15 modal/secret.py
+│ --rw-r--r--  2.0 unx      712 b- defN 23-Apr-06 03:15 modal/secret.pyi
+│ --rw-r--r--  2.0 unx     8173 b- defN 23-Apr-06 03:15 modal/shared_volume.py
+│ --rw-r--r--  2.0 unx     2950 b- defN 23-Apr-06 03:15 modal/shared_volume.pyi
+│ --rw-r--r--  2.0 unx    36674 b- defN 23-Apr-06 03:15 modal/stub.py
+│ --rw-r--r--  2.0 unx    21136 b- defN 23-Apr-06 03:15 modal/stub.pyi
+│ --rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 03:15 modal/cli/__init__.py
+│ --rw-r--r--  2.0 unx     3833 b- defN 23-Apr-06 03:15 modal/cli/app.py
+│ --rw-r--r--  2.0 unx      484 b- defN 23-Apr-06 03:15 modal/cli/config.py
+│ --rw-r--r--  2.0 unx     1881 b- defN 23-Apr-06 03:15 modal/cli/entry_point.py
+│ --rw-r--r--  2.0 unx      648 b- defN 23-Apr-06 03:15 modal/cli/env.py
+│ --rw-r--r--  2.0 unx    10457 b- defN 23-Apr-06 03:15 modal/cli/import_refs.py
+│ --rw-r--r--  2.0 unx     8096 b- defN 23-Apr-06 03:15 modal/cli/run.py
+│ --rw-r--r--  2.0 unx     3728 b- defN 23-Apr-06 03:15 modal/cli/secret.py
+│ --rw-r--r--  2.0 unx     3046 b- defN 23-Apr-06 03:15 modal/cli/token.py
+│ --rw-r--r--  2.0 unx      313 b- defN 23-Apr-06 03:15 modal/cli/utils.py
+│ --rw-r--r--  2.0 unx     9785 b- defN 23-Apr-06 03:15 modal/cli/volume.py
+│ --rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 03:15 modal/extensions/__init__.py
+│ --rw-r--r--  2.0 unx      997 b- defN 23-Apr-06 03:15 modal/extensions/ipython.py
+│ --rw-r--r--  2.0 unx     6493 b- defN 23-Apr-06 03:15 modal/extensions/pymc.py
+│ --rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 03:15 modal_base_images/__init__.py
+│ --rw-r--r--  2.0 unx      461 b- defN 23-Apr-06 03:15 modal_base_images/client_mount.py
+│ --rw-r--r--  2.0 unx      264 b- defN 23-Apr-06 03:15 modal_base_images/conda.py
+│ --rw-r--r--  2.0 unx      342 b- defN 23-Apr-06 03:15 modal_base_images/debian_slim.py
+│ --rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 03:15 modal_proto/__init__.py
+│ --rw-r--r--  2.0 unx    24985 b- defN 23-Apr-06 03:15 modal_proto/api.proto
+│ --rw-r--r--  2.0 unx    41356 b- defN 23-Apr-06 03:15 modal_proto/api_grpc.py
+│ --rw-r--r--  2.0 unx   105139 b- defN 23-Apr-06 03:15 modal_proto/api_pb2.py
+│ --rw-r--r--  2.0 unx    89508 b- defN 23-Apr-06 03:15 modal_proto/api_pb2_grpc.py
+│ --rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 03:15 modal_test_support/__init__.py
+│ --rw-r--r--  2.0 unx      134 b- defN 23-Apr-06 03:15 modal_test_support/assert_package.py
+│ --rw-r--r--  2.0 unx      171 b- defN 23-Apr-06 03:15 modal_test_support/consumed_map.py
+│ --rw-r--r--  2.0 unx     3310 b- defN 23-Apr-06 03:15 modal_test_support/functions.py
+│ --rw-r--r--  2.0 unx      185 b- defN 23-Apr-06 03:15 modal_test_support/missing_main_conditional.py
+│ --rw-r--r--  2.0 unx       59 b- defN 23-Apr-06 03:15 modal_test_support/module_1.py
+│ --rw-r--r--  2.0 unx       59 b- defN 23-Apr-06 03:15 modal_test_support/module_2.py
+│ --rw-r--r--  2.0 unx      197 b- defN 23-Apr-06 03:15 modal_test_support/package_mount.py
+│ --rw-r--r--  2.0 unx      171 b- defN 23-Apr-06 03:15 modal_test_support/progress_info.py
+│ --rw-r--r--  2.0 unx      153 b- defN 23-Apr-06 03:15 modal_test_support/script.py
+│ --rw-r--r--  2.0 unx      176 b- defN 23-Apr-06 03:15 modal_test_support/startup_failure.py
+│ --rw-r--r--  2.0 unx      175 b- defN 23-Apr-06 03:15 modal_test_support/stub.py
+│ --rw-r--r--  2.0 unx      144 b- defN 23-Apr-06 03:15 modal_test_support/unconsumed_map.py
+│ --rw-r--r--  2.0 unx       28 b- defN 23-Apr-06 03:15 modal_utils/__init__.py
+│ --rw-r--r--  2.0 unx      465 b- defN 23-Apr-06 03:15 modal_utils/app_utils.py
+│ --rw-r--r--  2.0 unx    11319 b- defN 23-Apr-06 03:15 modal_utils/async_utils.py
+│ --rw-r--r--  2.0 unx     1727 b- defN 23-Apr-06 03:15 modal_utils/decorator_utils.py
+│ --rw-r--r--  2.0 unx     9573 b- defN 23-Apr-06 03:15 modal_utils/grpc_utils.py
+│ --rw-r--r--  2.0 unx     1597 b- defN 23-Apr-06 03:15 modal_utils/hash_utils.py
+│ --rw-r--r--  2.0 unx     1426 b- defN 23-Apr-06 03:15 modal_utils/http_utils.py
+│ --rw-r--r--  2.0 unx      113 b- defN 23-Apr-06 03:15 modal_utils/logger.py
+│ --rw-r--r--  2.0 unx     1226 b- defN 23-Apr-06 03:15 modal_utils/package_utils.py
+│ --rw-r--r--  2.0 unx      458 b- defN 23-Apr-06 03:15 modal_version/__init__.py
+│ --rw-r--r--  2.0 unx       48 b- defN 23-Apr-06 03:15 modal_version/_version_generated.py
+│ --rw-r--r--  2.0 unx    10173 b- defN 23-Apr-06 03:15 modal_client-0.48.1819.dist-info/LICENSE
+│ --rw-r--r--  2.0 unx     1880 b- defN 23-Apr-06 03:15 modal_client-0.48.1819.dist-info/METADATA
+│ --rw-r--r--  2.0 unx       92 b- defN 23-Apr-06 03:15 modal_client-0.48.1819.dist-info/WHEEL
+│ --rw-r--r--  2.0 unx       46 b- defN 23-Apr-06 03:15 modal_client-0.48.1819.dist-info/entry_points.txt
+│ --rw-r--r--  2.0 unx       93 b- defN 23-Apr-06 03:15 modal_client-0.48.1819.dist-info/top_level.txt
+│ -?rw-rw-r--  2.0 unx    11210 b- defN 23-Apr-06 03:15 modal_client-0.48.1819.dist-info/RECORD
+│ -140 files, 940513 bytes uncompressed, 216096 bytes compressed:  77.0%
+│ +Zip file size: 233807 bytes, number of entries: 140
+│ +-rw-r--r--  2.0 unx       28 b- defN 23-Apr-07 16:33 client_test/__init__.py
+│ +-rw-r--r--  2.0 unx     5409 b- defN 23-Apr-07 16:33 client_test/async_utils_test.py
+│ +-rw-r--r--  2.0 unx     1507 b- defN 23-Apr-07 16:33 client_test/blob_test.py
+│ +-rw-r--r--  2.0 unx     3968 b- defN 23-Apr-07 16:33 client_test/cli_imports_test.py
+│ +-rw-r--r--  2.0 unx    11670 b- defN 23-Apr-07 16:33 client_test/cli_test.py
+│ +-rw-r--r--  2.0 unx     4850 b- defN 23-Apr-07 16:33 client_test/client_test.py
+│ +-rw-r--r--  2.0 unx     2606 b- defN 23-Apr-07 16:33 client_test/config_test.py
+│ +-rw-r--r--  2.0 unx    28675 b- defN 23-Apr-07 16:33 client_test/conftest.py
+│ +-rw-r--r--  2.0 unx     4562 b- defN 23-Apr-07 16:33 client_test/container_app_test.py
+│ +-rw-r--r--  2.0 unx    18533 b- defN 23-Apr-07 16:33 client_test/container_test.py
+│ +-rw-r--r--  2.0 unx     2247 b- defN 23-Apr-07 16:33 client_test/decorator_test.py
+│ +-rw-r--r--  2.0 unx     1086 b- defN 23-Apr-07 16:33 client_test/deprecation_test.py
+│ +-rw-r--r--  2.0 unx     2182 b- defN 23-Apr-07 16:33 client_test/e2e_test.py
+│ +-rw-r--r--  2.0 unx      165 b- defN 23-Apr-07 16:33 client_test/error_test.py
+│ +-rw-r--r--  2.0 unx    12923 b- defN 23-Apr-07 16:33 client_test/function_test.py
+│ +-rw-r--r--  2.0 unx     3924 b- defN 23-Apr-07 16:33 client_test/gpu_test.py
+│ +-rw-r--r--  2.0 unx     5047 b- defN 23-Apr-07 16:33 client_test/grpc_utils_test.py
+│ +-rw-r--r--  2.0 unx    15156 b- defN 23-Apr-07 16:33 client_test/image_test.py
+│ +-rw-r--r--  2.0 unx     2252 b- defN 23-Apr-07 16:33 client_test/live_reload_test.py
+│ +-rw-r--r--  2.0 unx     2817 b- defN 23-Apr-07 16:33 client_test/lookup_test.py
+│ +-rw-r--r--  2.0 unx     5305 b- defN 23-Apr-07 16:33 client_test/mount_test.py
+│ +-rw-r--r--  2.0 unx     5329 b- defN 23-Apr-07 16:33 client_test/mounted_files_test.py
+│ +-rw-r--r--  2.0 unx     2157 b- defN 23-Apr-07 16:33 client_test/notebook_test.py
+│ +-rw-r--r--  2.0 unx     1434 b- defN 23-Apr-07 16:33 client_test/object_test.py
+│ +-rw-r--r--  2.0 unx      413 b- defN 23-Apr-07 16:33 client_test/package_utils_test.py
+│ +-rw-r--r--  2.0 unx     1677 b- defN 23-Apr-07 16:33 client_test/retries_test.py
+│ +-rw-r--r--  2.0 unx      359 b- defN 23-Apr-07 16:33 client_test/schedule_test.py
+│ +-rw-r--r--  2.0 unx      548 b- defN 23-Apr-07 16:33 client_test/secret_test.py
+│ +-rw-r--r--  2.0 unx     1098 b- defN 23-Apr-07 16:33 client_test/serialization_test.py
+│ +-rw-r--r--  2.0 unx     3925 b- defN 23-Apr-07 16:33 client_test/shared_volume_test.py
+│ +-rw-r--r--  2.0 unx     8691 b- defN 23-Apr-07 16:33 client_test/stub_test.py
+│ +-rw-r--r--  2.0 unx     2691 b- defN 23-Apr-07 16:33 client_test/utils_test.py
+│ +-rw-r--r--  2.0 unx     1160 b- defN 23-Apr-07 16:33 client_test/watcher_test.py
+│ +-rw-r--r--  2.0 unx     3691 b- defN 23-Apr-07 16:33 client_test/webhook_test.py
+│ +-rw-r--r--  2.0 unx      937 b- defN 23-Apr-07 16:33 modal/__init__.py
+│ +-rw-r--r--  2.0 unx      157 b- defN 23-Apr-07 16:33 modal/__main__.py
+│ +-rw-r--r--  2.0 unx     2106 b- defN 23-Apr-07 16:33 modal/_asgi.py
+│ +-rw-r--r--  2.0 unx    13386 b- defN 23-Apr-07 16:33 modal/_blob_utils.py
+│ +-rw-r--r--  2.0 unx    24591 b- defN 23-Apr-07 16:33 modal/_container_entrypoint.py
+│ +-rw-r--r--  2.0 unx     9857 b- defN 23-Apr-07 16:33 modal/_function_utils.py
+│ +-rw-r--r--  2.0 unx      275 b- defN 23-Apr-07 16:33 modal/_ipython.py
+│ +-rw-r--r--  2.0 unx     4535 b- defN 23-Apr-07 16:33 modal/_live_reload.py
+│ +-rw-r--r--  2.0 unx      892 b- defN 23-Apr-07 16:33 modal/_location.py
+│ +-rw-r--r--  2.0 unx      850 b- defN 23-Apr-07 16:33 modal/_object_meta.py
+│ +-rw-r--r--  2.0 unx    17283 b- defN 23-Apr-07 16:33 modal/_output.py
+│ +-rw-r--r--  2.0 unx     1259 b- defN 23-Apr-07 16:33 modal/_proxy_tunnel.py
+│ +-rw-r--r--  2.0 unx     5043 b- defN 23-Apr-07 16:33 modal/_pty.py
+│ +-rw-r--r--  2.0 unx     4286 b- defN 23-Apr-07 16:33 modal/_resolver.py
+│ +-rw-r--r--  2.0 unx     1255 b- defN 23-Apr-07 16:33 modal/_serialization.py
+│ +-rw-r--r--  2.0 unx     7598 b- defN 23-Apr-07 16:33 modal/_traceback.py
+│ +-rw-r--r--  2.0 unx     1749 b- defN 23-Apr-07 16:33 modal/_tracing.py
+│ +-rw-r--r--  2.0 unx      490 b- defN 23-Apr-07 16:33 modal/_types.py
+│ +-rw-r--r--  2.0 unx     3960 b- defN 23-Apr-07 16:33 modal/_watcher.py
+│ +-rw-r--r--  2.0 unx      900 b- defN 23-Apr-07 16:33 modal/aio.py
+│ +-rw-r--r--  2.0 unx     9483 b- defN 23-Apr-07 16:33 modal/app.py
+│ +-rw-r--r--  2.0 unx     5561 b- defN 23-Apr-07 16:33 modal/app.pyi
+│ +-rw-r--r--  2.0 unx     2462 b- defN 23-Apr-07 16:33 modal/call_graph.py
+│ +-rw-r--r--  2.0 unx     9185 b- defN 23-Apr-07 16:33 modal/client.py
+│ +-rw-r--r--  2.0 unx     3507 b- defN 23-Apr-07 16:33 modal/client.pyi
+│ +-rw-r--r--  2.0 unx     6439 b- defN 23-Apr-07 16:33 modal/config.py
+│ +-rw-r--r--  2.0 unx     5577 b- defN 23-Apr-07 16:33 modal/dict.py
+│ +-rw-r--r--  2.0 unx     2632 b- defN 23-Apr-07 16:33 modal/dict.pyi
+│ +-rw-r--r--  2.0 unx     2430 b- defN 23-Apr-07 16:33 modal/exception.py
+│ +-rw-r--r--  2.0 unx    44688 b- defN 23-Apr-07 16:33 modal/functions.py
+│ +-rw-r--r--  2.0 unx    15001 b- defN 23-Apr-07 16:33 modal/functions.pyi
+│ +-rw-r--r--  2.0 unx     3552 b- defN 23-Apr-07 16:33 modal/gpu.py
+│ +-rw-r--r--  2.0 unx    42772 b- defN 23-Apr-07 16:33 modal/image.py
+│ +-rw-r--r--  2.0 unx    14757 b- defN 23-Apr-07 16:33 modal/image.pyi
+│ +-rw-r--r--  2.0 unx    16282 b- defN 23-Apr-07 16:33 modal/mount.py
+│ +-rw-r--r--  2.0 unx     7047 b- defN 23-Apr-07 16:33 modal/mount.pyi
+│ +-rw-r--r--  2.0 unx    11090 b- defN 23-Apr-07 16:33 modal/object.py
+│ +-rw-r--r--  2.0 unx     7439 b- defN 23-Apr-07 16:33 modal/object.pyi
+│ +-rw-r--r--  2.0 unx      652 b- defN 23-Apr-07 16:33 modal/proxy.py
+│ +-rw-r--r--  2.0 unx      728 b- defN 23-Apr-07 16:33 modal/proxy.pyi
+│ +-rw-r--r--  2.0 unx        0 b- defN 23-Apr-07 16:33 modal/py.typed
+│ +-rw-r--r--  2.0 unx     5134 b- defN 23-Apr-07 16:33 modal/queue.py
+│ +-rw-r--r--  2.0 unx     2271 b- defN 23-Apr-07 16:33 modal/queue.pyi
+│ +-rw-r--r--  2.0 unx      523 b- defN 23-Apr-07 16:33 modal/requirements.txt
+│ +-rw-r--r--  2.0 unx     3050 b- defN 23-Apr-07 16:33 modal/retries.py
+│ +-rw-r--r--  2.0 unx     7243 b- defN 23-Apr-07 16:33 modal/runner.py
+│ +-rw-r--r--  2.0 unx     2619 b- defN 23-Apr-07 16:33 modal/schedule.py
+│ +-rw-r--r--  2.0 unx     1998 b- defN 23-Apr-07 16:33 modal/secret.py
+│ +-rw-r--r--  2.0 unx      712 b- defN 23-Apr-07 16:33 modal/secret.pyi
+│ +-rw-r--r--  2.0 unx     8173 b- defN 23-Apr-07 16:33 modal/shared_volume.py
+│ +-rw-r--r--  2.0 unx     2950 b- defN 23-Apr-07 16:33 modal/shared_volume.pyi
+│ +-rw-r--r--  2.0 unx    36684 b- defN 23-Apr-07 16:33 modal/stub.py
+│ +-rw-r--r--  2.0 unx    21136 b- defN 23-Apr-07 16:33 modal/stub.pyi
+│ +-rw-r--r--  2.0 unx       28 b- defN 23-Apr-07 16:33 modal/cli/__init__.py
+│ +-rw-r--r--  2.0 unx     3833 b- defN 23-Apr-07 16:33 modal/cli/app.py
+│ +-rw-r--r--  2.0 unx      484 b- defN 23-Apr-07 16:33 modal/cli/config.py
+│ +-rw-r--r--  2.0 unx     1881 b- defN 23-Apr-07 16:33 modal/cli/entry_point.py
+│ +-rw-r--r--  2.0 unx      648 b- defN 23-Apr-07 16:33 modal/cli/env.py
+│ +-rw-r--r--  2.0 unx    10459 b- defN 23-Apr-07 16:33 modal/cli/import_refs.py
+│ +-rw-r--r--  2.0 unx     8096 b- defN 23-Apr-07 16:33 modal/cli/run.py
+│ +-rw-r--r--  2.0 unx     3728 b- defN 23-Apr-07 16:33 modal/cli/secret.py
+│ +-rw-r--r--  2.0 unx     3046 b- defN 23-Apr-07 16:33 modal/cli/token.py
+│ +-rw-r--r--  2.0 unx      313 b- defN 23-Apr-07 16:33 modal/cli/utils.py
+│ +-rw-r--r--  2.0 unx     9785 b- defN 23-Apr-07 16:33 modal/cli/volume.py
+│ +-rw-r--r--  2.0 unx       28 b- defN 23-Apr-07 16:33 modal/extensions/__init__.py
+│ +-rw-r--r--  2.0 unx      997 b- defN 23-Apr-07 16:33 modal/extensions/ipython.py
+│ +-rw-r--r--  2.0 unx     6495 b- defN 23-Apr-07 16:33 modal/extensions/pymc.py
+│ +-rw-r--r--  2.0 unx       28 b- defN 23-Apr-07 16:33 modal_base_images/__init__.py
+│ +-rw-r--r--  2.0 unx      461 b- defN 23-Apr-07 16:33 modal_base_images/client_mount.py
+│ +-rw-r--r--  2.0 unx      264 b- defN 23-Apr-07 16:33 modal_base_images/conda.py
+│ +-rw-r--r--  2.0 unx      342 b- defN 23-Apr-07 16:33 modal_base_images/debian_slim.py
+│ +-rw-r--r--  2.0 unx       28 b- defN 23-Apr-07 16:33 modal_proto/__init__.py
+│ +-rw-r--r--  2.0 unx    24985 b- defN 23-Apr-07 16:33 modal_proto/api.proto
+│ +-rw-r--r--  2.0 unx    41356 b- defN 23-Apr-07 16:33 modal_proto/api_grpc.py
+│ +-rw-r--r--  2.0 unx   105139 b- defN 23-Apr-07 16:33 modal_proto/api_pb2.py
+│ +-rw-r--r--  2.0 unx    89508 b- defN 23-Apr-07 16:33 modal_proto/api_pb2_grpc.py
+│ +-rw-r--r--  2.0 unx       28 b- defN 23-Apr-07 16:33 modal_test_support/__init__.py
+│ +-rw-r--r--  2.0 unx      134 b- defN 23-Apr-07 16:33 modal_test_support/assert_package.py
+│ +-rw-r--r--  2.0 unx      171 b- defN 23-Apr-07 16:33 modal_test_support/consumed_map.py
+│ +-rw-r--r--  2.0 unx     3340 b- defN 23-Apr-07 16:33 modal_test_support/functions.py
+│ +-rw-r--r--  2.0 unx      187 b- defN 23-Apr-07 16:33 modal_test_support/missing_main_conditional.py
+│ +-rw-r--r--  2.0 unx       59 b- defN 23-Apr-07 16:33 modal_test_support/module_1.py
+│ +-rw-r--r--  2.0 unx       59 b- defN 23-Apr-07 16:33 modal_test_support/module_2.py
+│ +-rw-r--r--  2.0 unx      197 b- defN 23-Apr-07 16:33 modal_test_support/package_mount.py
+│ +-rw-r--r--  2.0 unx      171 b- defN 23-Apr-07 16:33 modal_test_support/progress_info.py
+│ +-rw-r--r--  2.0 unx      153 b- defN 23-Apr-07 16:33 modal_test_support/script.py
+│ +-rw-r--r--  2.0 unx      178 b- defN 23-Apr-07 16:33 modal_test_support/startup_failure.py
+│ +-rw-r--r--  2.0 unx      177 b- defN 23-Apr-07 16:33 modal_test_support/stub.py
+│ +-rw-r--r--  2.0 unx      144 b- defN 23-Apr-07 16:33 modal_test_support/unconsumed_map.py
+│ +-rw-r--r--  2.0 unx       28 b- defN 23-Apr-07 16:33 modal_utils/__init__.py
+│ +-rw-r--r--  2.0 unx      465 b- defN 23-Apr-07 16:33 modal_utils/app_utils.py
+│ +-rw-r--r--  2.0 unx    11319 b- defN 23-Apr-07 16:33 modal_utils/async_utils.py
+│ +-rw-r--r--  2.0 unx     2412 b- defN 23-Apr-07 16:33 modal_utils/decorator_utils.py
+│ +-rw-r--r--  2.0 unx     9573 b- defN 23-Apr-07 16:33 modal_utils/grpc_utils.py
+│ +-rw-r--r--  2.0 unx     1597 b- defN 23-Apr-07 16:33 modal_utils/hash_utils.py
+│ +-rw-r--r--  2.0 unx     1426 b- defN 23-Apr-07 16:33 modal_utils/http_utils.py
+│ +-rw-r--r--  2.0 unx      113 b- defN 23-Apr-07 16:33 modal_utils/logger.py
+│ +-rw-r--r--  2.0 unx     1226 b- defN 23-Apr-07 16:33 modal_utils/package_utils.py
+│ +-rw-r--r--  2.0 unx      458 b- defN 23-Apr-07 16:33 modal_version/__init__.py
+│ +-rw-r--r--  2.0 unx       48 b- defN 23-Apr-07 16:33 modal_version/_version_generated.py
+│ +-rw-r--r--  2.0 unx    10173 b- defN 23-Apr-07 16:33 modal_client-0.48.1829.dist-info/LICENSE
+│ +-rw-r--r--  2.0 unx     1880 b- defN 23-Apr-07 16:33 modal_client-0.48.1829.dist-info/METADATA
+│ +-rw-r--r--  2.0 unx       92 b- defN 23-Apr-07 16:33 modal_client-0.48.1829.dist-info/WHEEL
+│ +-rw-r--r--  2.0 unx       46 b- defN 23-Apr-07 16:33 modal_client-0.48.1829.dist-info/entry_points.txt
+│ +-rw-r--r--  2.0 unx       93 b- defN 23-Apr-07 16:33 modal_client-0.48.1829.dist-info/top_level.txt
+│ +?rw-rw-r--  2.0 unx    11210 b- defN 23-Apr-07 16:33 modal_client-0.48.1829.dist-info/RECORD
+│ +140 files, 942360 bytes uncompressed, 216499 bytes compressed:  77.0%
+├── zipnote {}
+│ @@ -396,26 +396,26 @@
+│  
+│  Filename: modal_version/__init__.py
+│  Comment: 
+│  
+│  Filename: modal_version/_version_generated.py
+│  Comment: 
+│  
+│ -Filename: modal_client-0.48.1819.dist-info/LICENSE
+│ +Filename: modal_client-0.48.1829.dist-info/LICENSE
+│  Comment: 
+│  
+│ -Filename: modal_client-0.48.1819.dist-info/METADATA
+│ +Filename: modal_client-0.48.1829.dist-info/METADATA
+│  Comment: 
+│  
+│ -Filename: modal_client-0.48.1819.dist-info/WHEEL
+│ +Filename: modal_client-0.48.1829.dist-info/WHEEL
+│  Comment: 
+│  
+│ -Filename: modal_client-0.48.1819.dist-info/entry_points.txt
+│ +Filename: modal_client-0.48.1829.dist-info/entry_points.txt
+│  Comment: 
+│  
+│ -Filename: modal_client-0.48.1819.dist-info/top_level.txt
+│ +Filename: modal_client-0.48.1829.dist-info/top_level.txt
+│  Comment: 
+│  
+│ -Filename: modal_client-0.48.1819.dist-info/RECORD
+│ +Filename: modal_client-0.48.1829.dist-info/RECORD
+│  Comment: 
+│  
+│  Zip file comment:
+├── client_test/cli_imports_test.py
+│ @@ -14,48 +14,48 @@
+│  from modal_utils.async_utils import synchronizer
+│  
+│  # Some helper vars for import_stub tests:
+│  local_entrypoint_src = """
+│  import modal
+│  
+│  stub = modal.Stub()
+│ -@stub.local_entrypoint
+│ +@stub.local_entrypoint()
+│  def main():
+│      pass
+│  """
+│  python_module_src = """
+│  import modal
+│  stub = modal.Stub("FOO")
+│  other_stub = modal.Stub("BAR")
+│ -@other_stub.function
+│ +@other_stub.function()
+│  def func():
+│      pass
+│  class Parent:
+│ -    @stub.function
+│ +    @stub.function()
+│      def meth(self):
+│          pass
+│  
+│  assert not __package__
+│  """
+│  
+│  python_package_src = """
+│  import modal
+│  stub = modal.Stub("FOO")
+│  other_stub = modal.Stub("BAR")
+│ -@other_stub.function
+│ +@other_stub.function()
+│  def func():
+│      pass
+│  assert __package__ == "pack"
+│  """
+│  
+│  python_subpackage_src = """
+│  import modal
+│  stub = modal.Stub("FOO")
+│  other_stub = modal.Stub("BAR")
+│ -@other_stub.function
+│ +@other_stub.function()
+│  def func():
+│      pass
+│  assert __package__ == "pack.sub"
+│  """
+│  
+│  empty_dir_with_python_file = {"mod.py": python_module_src}
+├── client_test/container_app_test.py
+│ @@ -26,15 +26,15 @@
+│          "my_f_1": "fu-123",
+│          "my_f_2": "fu-456",
+│      }
+│  
+│      await AioApp.init_container(aio_container_client, "ap-123")
+│  
+│      stub = AioStub()
+│ -    # my_f_1_container = stub.function(my_f_1)
+│ +    # my_f_1_container = stub.function()(my_f_1)
+│  
+│      # Make sure these functions exist and have the right type
+│      my_f_1_app = aio_container_app["my_f_1"]
+│      my_f_2_app = aio_container_app["my_f_1"]
+│      assert isinstance(my_f_1_app, AioFunctionHandle)
+│      assert isinstance(my_f_2_app, AioFunctionHandle)
+│  
+│ @@ -42,15 +42,15 @@
+│      # assert await my_f_1_container.call(42) == 1764
+│      # TODO(erikbern): it's actually impossible for a stub function
+│      # to be created before the app inside a container, so let's
+│      # ignore this issue for now. It's just theoretical.
+│  
+│      # Now, let's create my_f_2 after the app started running
+│      # This might happen if some local module is imported lazily
+│ -    my_f_2_container = stub.function(my_f_2)
+│ +    my_f_2_container = stub.function()(my_f_2)
+│      assert await my_f_2_container.call(42) == 1764  # type: ignore
+│  
+│  
+│  @skip_windows_unix_socket
+│  @pytest.mark.asyncio
+│  async def test_is_inside(servicer, unix_servicer, aio_client, aio_container_client):
+│      image_1 = AioImage.debian_slim().pip_install(["abc"])
+│ @@ -98,15 +98,15 @@
+│      pass
+│  
+│  
+│  @skip_windows_unix_socket
+│  @pytest.mark.asyncio
+│  async def test_is_inside_default_image(servicer, unix_servicer, aio_client, aio_container_client):
+│      stub = AioStub()
+│ -    stub.function(f)
+│ +    stub.function()(f)
+│  
+│      assert not stub.is_inside()
+│  
+│      from modal.stub import _default_image
+│  
+│      app = await AioApp._init_new(aio_client)
+│      app_id = app.app_id
+├── client_test/decorator_test.py
+│ @@ -1,46 +1,71 @@
+│  # Copyright Modal Labs 2022
+│ +import pytest
+│ +
+│ +from modal.exception import DeprecationError
+│  from modal_utils.decorator_utils import decorator_with_options
+│  
+│  
+│  @decorator_with_options
+│  def dec(f, add=0):
+│      def wrapped(x):
+│          return f(x) + add
+│  
+│      return wrapped
+│  
+│  
+│ -def test_simple():
+│ -    @dec
+│ +def test_no_args_warns():
+│ +    with pytest.warns(DeprecationError, match="[^.]dec"):
+│ +
+│ +        @dec
+│ +        def f(x):
+│ +            return x + 7
+│ +
+│ +    assert f(42) == 49  # should still be usable
+│ +
+│ +
+│ +def test_empty_args():
+│ +    @dec()
+│      def f(x):
+│          return x + 7
+│  
+│ -    assert f(42) == 49
+│ +    assert f(42) == 49  # should still be usable
+│  
+│  
+│  def test_args():
+│      @dec(add=5)
+│      def g(x):
+│          return x + 1
+│  
+│      assert g(42) == 48
+│  
+│  
+│  def double(x):
+│      return 2 * x
+│  
+│  
+│ -def test_direct():
+│ -    p = dec(double)
+│ +def test_direct_no_args_warns():
+│ +    with pytest.warns(DeprecationError, match="[^.]dec"):
+│ +        p = dec(double)
+│      assert p(42) == 84
+│  
+│  
+│ -def test_direct_args():
+│ -    q = dec(double, add=9)
+│ +def test_direct_empty_args():
+│ +    p = dec()(double)
+│ +    assert p(42) == 84
+│ +
+│ +
+│ +def test_direct_args_warns():
+│ +    with pytest.warns(DeprecationError, match="[^.]dec"):
+│ +        q = dec(double, add=9)
+│ +    assert q(42) == 93
+│ +
+│ +
+│ +def test_indirect_args_nowarning():
+│ +    q = dec(add=9)(double)
+│      assert q(42) == 93
+│  
+│  
+│  # Test it as a method too
+│  
+│  
+│  class Cls:
+│ @@ -51,37 +76,53 @@
+│      def dec(self, f, add=0):
+│          def wrapped(x):
+│              return f(x) + add + self.add_more
+│  
+│          return wrapped
+│  
+│  
+│ -def test_method_simple():
+│ +def test_method_simple_warns():
+│      c = Cls(3)
+│  
+│ -    @c.dec
+│ -    def f(x):
+│ -        return x + 7
+│ +    with pytest.warns(DeprecationError, match="cls.dec"):
+│ +
+│ +        @c.dec
+│ +        def f(x):
+│ +            return x + 7
+│  
+│      assert f(42) == 52
+│  
+│  
+│  def test_method_args():
+│      c = Cls(4)
+│  
+│      @c.dec(add=5)
+│      def g(x):
+│          return x + 1
+│  
+│      assert g(42) == 52
+│  
+│  
+│ -def test_method_direct():
+│ +def test_method_direct_warns():
+│      c = Cls(5)
+│ -    p = c.dec(double)
+│ +    with pytest.warns(DeprecationError, match="cls.dec"):
+│ +        p = c.dec(double)
+│      assert p(42) == 89
+│  
+│  
+│ -def test_method_direct_args():
+│ +def test_method_indirect_ok():
+│ +    c = Cls(5)
+│ +    p = c.dec()(double)
+│ +    assert p(42) == 89
+│ +
+│ +
+│ +def test_method_direct_args_warns():
+│ +    c = Cls(6)
+│ +    with pytest.warns(DeprecationError, match="cls.dec"):
+│ +        q = c.dec(double, add=9)
+│ +    assert q(42) == 99
+│ +
+│ +
+│ +def test_method_indirect_args_ok():
+│      c = Cls(6)
+│ -    q = c.dec(double, add=9)
+│ +    q = c.dec(add=9)(double)
+│      assert q(42) == 99
+├── client_test/function_test.py
+│ @@ -40,15 +40,15 @@
+│  
+│  @pytest.mark.parametrize("slow_put_inputs", [False, True])
+│  @pytest.mark.timeout(120)
+│  def test_map(client, servicer, slow_put_inputs):
+│      servicer.slow_put_inputs = slow_put_inputs
+│  
+│      stub = Stub()
+│ -    dummy_modal = stub.function(dummy)
+│ +    dummy_modal = stub.function()(dummy)
+│  
+│      assert len(servicer.cleared_function_calls) == 0
+│      with stub.run(client=client):
+│          assert list(dummy_modal.map([5, 2], [4, 3])) == [41, 13]
+│          assert len(servicer.cleared_function_calls) == 1
+│          assert set(dummy_modal.map([5, 2], [4, 3], order_outputs=False)) == {13, 41}
+│          assert len(servicer.cleared_function_calls) == 2
+│ @@ -60,61 +60,61 @@
+│  def side_effect(_):
+│      global _side_effect_count
+│      _side_effect_count += 1
+│  
+│  
+│  def test_for_each(client, servicer):
+│      stub = Stub()
+│ -    side_effect_modal = stub.function(servicer.function_body(side_effect))
+│ +    side_effect_modal = stub.function()(servicer.function_body(side_effect))
+│      assert _side_effect_count == 0
+│      with stub.run(client=client):
+│          side_effect_modal.for_each(range(10))
+│      assert _side_effect_count == 10
+│  
+│  
+│  def custom_function(x):
+│      if x % 2 == 0:
+│          return x
+│  
+│  
+│  def test_map_none_values(client, servicer):
+│      stub = Stub()
+│  
+│ -    custom_function_modal = stub.function(servicer.function_body(custom_function))
+│ +    custom_function_modal = stub.function()(servicer.function_body(custom_function))
+│  
+│      with stub.run(client=client):
+│          assert list(custom_function_modal.map(range(4))) == [0, None, 2, None]
+│  
+│  
+│  def test_starmap(client):
+│      stub = Stub()
+│  
+│ -    dummy_modal = stub.function(dummy)
+│ +    dummy_modal = stub.function()(dummy)
+│      with stub.run(client=client):
+│          assert list(dummy_modal.starmap([[5, 2], [4, 3]])) == [29, 25]
+│  
+│  
+│  def test_function_memory_request(client):
+│      stub = Stub()
+│ -    stub.function(dummy, memory=2048)
+│ +    stub.function(memory=2048)(dummy)
+│  
+│  
+│  def test_function_cpu_request(client):
+│      stub = Stub()
+│ -    stub.function(dummy, cpu=2.0)
+│ +    stub.function(cpu=2.0)(dummy)
+│  
+│  
+│  def later():
+│      return "hello"
+│  
+│  
+│  def test_function_future(client, servicer):
+│      stub = Stub()
+│  
+│ -    later_modal = stub.function(servicer.function_body(later))
+│ +    later_modal = stub.function()(servicer.function_body(later))
+│      with stub.run(client=client):
+│          future = later_modal.spawn()
+│          assert isinstance(future, FunctionCall)
+│  
+│          servicer.function_is_running = True
+│          assert future.object_id == "fc-1"
+│  
+│ @@ -136,15 +136,15 @@
+│          assert future.object_id not in servicer.cleared_function_calls
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_function_future_async(client, servicer):
+│      stub = AioStub()
+│  
+│ -    later_modal = stub.function(servicer.function_body(later))
+│ +    later_modal = stub.function()(servicer.function_body(later))
+│  
+│      async with stub.run(client=client):
+│          future = await later_modal.spawn()
+│          servicer.function_is_running = True
+│  
+│          with pytest.raises(TimeoutError):
+│              await future.get(0.01)
+│ @@ -162,15 +162,15 @@
+│      yield "foo"
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_generator(client, servicer):
+│      stub = Stub()
+│  
+│ -    later_gen_modal = stub.function(later_gen)
+│ +    later_gen_modal = stub.function()(later_gen)
+│  
+│      def dummy():
+│          yield "bar"
+│          yield "baz"
+│          yield "boo"
+│  
+│      servicer.function_body(dummy)
+│ @@ -188,15 +188,15 @@
+│          assert len(servicer.cleared_function_calls) == 1
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_generator_async(aio_client, servicer):
+│      stub = AioStub()
+│  
+│ -    later_gen_modal = stub.function(async_later_gen)
+│ +    later_gen_modal = stub.function()(async_later_gen)
+│  
+│      async def async_dummy():
+│          yield "bar"
+│          yield "baz"
+│  
+│      servicer.function_body(async_dummy)
+│  
+│ @@ -214,43 +214,43 @@
+│          # assert len(servicer.cleared_function_calls) == 1
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_generator_future(client, servicer):
+│      stub = Stub()
+│  
+│ -    later_gen_modal = stub.function(later_gen)
+│ +    later_gen_modal = stub.function()(later_gen)
+│      with stub.run(client=client):
+│          assert later_gen_modal.spawn() is None  # until we have a nice interface for polling generator futures
+│  
+│  
+│  async def slo1(sleep_seconds):
+│      # need to use async function body in client test to run stuff in parallel
+│      # but calling interface is still non-asyncio
+│      await asyncio.sleep(sleep_seconds)
+│      return sleep_seconds
+│  
+│  
+│  def test_sync_parallelism(client, servicer):
+│      stub = Stub()
+│  
+│ -    slo1_modal = stub.function(servicer.function_body(slo1))
+│ +    slo1_modal = stub.function()(servicer.function_body(slo1))
+│      with stub.run(client=client):
+│          t0 = time.time()
+│          # NOTE tests breaks in macOS CI if the smaller time is smaller than ~300ms
+│          res = gather(slo1_modal.spawn(0.31), slo1_modal.spawn(0.3))
+│          t1 = time.time()
+│          assert res == [0.31, 0.3]  # results should be ordered as inputs, not by completion time
+│          assert t1 - t0 < 0.6  # less than the combined runtime, make sure they run in parallel
+│  
+│  
+│  def test_proxy(client, servicer):
+│      stub = Stub()
+│  
+│ -    stub.function(dummy, proxy=Proxy.from_name("my-proxy"))
+│ +    stub.function(proxy=Proxy.from_name("my-proxy"))(dummy)
+│      with stub.run(client=client):
+│          pass
+│  
+│  
+│  class CustomException(Exception):
+│      pass
+│  
+│ @@ -258,26 +258,26 @@
+│  def failure():
+│      raise CustomException("foo!")
+│  
+│  
+│  def test_function_exception(client, servicer):
+│      stub = Stub()
+│  
+│ -    failure_modal = stub.function(servicer.function_body(failure))
+│ +    failure_modal = stub.function()(servicer.function_body(failure))
+│      with stub.run(client=client):
+│          with pytest.raises(CustomException) as excinfo:
+│              failure_modal.call()
+│          assert "foo!" in str(excinfo.value)
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_function_exception_async(aio_client, servicer):
+│      stub = AioStub()
+│  
+│ -    failure_modal = stub.function(servicer.function_body(failure))
+│ +    failure_modal = stub.function()(servicer.function_body(failure))
+│      async with stub.run(client=aio_client):
+│          with pytest.raises(CustomException) as excinfo:
+│              await failure_modal.call()
+│          assert "foo!" in str(excinfo.value)
+│  
+│  
+│  def custom_exception_function(x):
+│ @@ -285,15 +285,15 @@
+│          raise CustomException("bad")
+│      return x * x
+│  
+│  
+│  def test_map_exceptions(client, servicer):
+│      stub = Stub()
+│  
+│ -    custom_function_modal = stub.function(servicer.function_body(custom_exception_function))
+│ +    custom_function_modal = stub.function()(servicer.function_body(custom_exception_function))
+│  
+│      with stub.run(client=client):
+│          assert list(custom_function_modal.map(range(4))) == [0, 1, 4, 9]
+│  
+│          with pytest.raises(CustomException) as excinfo:
+│              list(custom_function_modal.map(range(6)))
+│          assert "bad" in str(excinfo.value)
+│ @@ -306,15 +306,15 @@
+│  def import_failure():
+│      raise ImportError("attempted relative import with no known parent package")
+│  
+│  
+│  def test_function_relative_import_hint(client, servicer):
+│      stub = Stub()
+│  
+│ -    import_failure_modal = stub.function(servicer.function_body(import_failure))
+│ +    import_failure_modal = stub.function()(servicer.function_body(import_failure))
+│  
+│      with stub.run(client=client):
+│          with pytest.raises(ImportError) as excinfo:
+│              import_failure_modal.call()
+│          assert "HINT" in str(excinfo.value)
+│  
+│  
+│ @@ -343,15 +343,15 @@
+│  
+│  
+│  def test_nonglobal_function():
+│      stub = Stub()
+│  
+│      with pytest.raises(InvalidError) as excinfo:
+│  
+│ -        @stub.function
+│ +        @stub.function()
+│          def f():
+│              pass
+│  
+│      assert "global scope" in str(excinfo.value)
+│  
+│  
+│  def test_non_global_serialized_function():
+│ @@ -392,31 +392,31 @@
+│      # Used in a few examples to construct FunctionCall objects
+│      obj = FunctionCall.from_id("fc-123", client)
+│      assert obj.object_id == "fc-123"
+│  
+│  
+│  def test_panel(client, servicer):
+│      stub = Stub()
+│ -    stub.function(dummy)
+│ +    stub.function()(dummy)
+│      function = stub["dummy"]
+│      assert isinstance(function, Function)
+│      image = stub._get_default_image()
+│      assert function.get_panel_items() == [repr(image)]
+│  
+│  
+│  lc_stub = Stub()
+│  
+│  
+│ -@lc_stub.function
+│ +@lc_stub.function()
+│  def f(x):
+│      return x**2
+│  
+│  
+│  class Class:
+│ -    @lc_stub.function
+│ +    @lc_stub.function()
+│      def f(self, x):
+│          return x**2
+│  
+│  
+│  def test_raw_call():
+│      assert f(111) == 12321
+│      instance = Class()
+│ @@ -429,31 +429,31 @@
+│          assert instance.f.call(111) == 12321
+│  
+│  
+│  def test_allow_cross_region_volumes(client, servicer):
+│      stub = Stub()
+│      vol1, vol2 = SharedVolume(), SharedVolume()
+│      # Should pass flag for all the function's SharedVolumeMounts
+│ -    stub.function(dummy, shared_volumes={"/sv-1": vol1, "/sv-2": vol2}, allow_cross_region_volumes=True)
+│ +    stub.function(shared_volumes={"/sv-1": vol1, "/sv-2": vol2}, allow_cross_region_volumes=True)(dummy)
+│  
+│      with stub.run(client=client):
+│          assert len(servicer.app_functions) == 1
+│          for func in servicer.app_functions.values():
+│              assert len(func.shared_volume_mounts) == 2
+│              for svm in func.shared_volume_mounts:
+│                  assert svm.allow_cross_region
+│  
+│  
+│  def test_allow_cross_region_volumes_webhook(client, servicer):
+│      # TODO(erikbern): this stest seems a bit redundant
+│      stub = Stub()
+│      vol1, vol2 = SharedVolume(), SharedVolume()
+│      # Should pass flag for all the function's SharedVolumeMounts
+│ -    stub.function(
+│ -        stub.web_endpoint()(dummy), shared_volumes={"/sv-1": vol1, "/sv-2": vol2}, allow_cross_region_volumes=True
+│ +    stub.function(shared_volumes={"/sv-1": vol1, "/sv-2": vol2}, allow_cross_region_volumes=True)(
+│ +        stub.web_endpoint()(dummy)
+│      )
+│  
+│      with stub.run(client=client):
+│          assert len(servicer.app_functions) == 1
+│          for func in servicer.app_functions.values():
+│              assert len(func.shared_volume_mounts) == 2
+│              for svm in func.shared_volume_mounts:
+├── client_test/gpu_test.py
+│ @@ -10,21 +10,21 @@
+│      pass  # not actually used in test (servicer returns sum of square of all args)
+│  
+│  
+│  def test_gpu_true_function(client, servicer):
+│      stub = Stub()
+│  
+│      with pytest.raises(DeprecationError):
+│ -        stub.function(dummy, gpu=True)
+│ +        stub.function(gpu=True)(dummy)
+│  
+│  
+│  def test_gpu_any_function(client, servicer):
+│      stub = Stub()
+│  
+│ -    stub.function(dummy, gpu="any")
+│ +    stub.function(gpu="any")(dummy)
+│      with stub.run(client=client):
+│          pass
+│  
+│      assert len(servicer.app_functions) == 1
+│      func_def = next(iter(servicer.app_functions.values()))
+│      assert func_def.resources.gpu == 0
+│      assert func_def.resources.gpu_config.count == 1
+│ @@ -32,17 +32,17 @@
+│  
+│  
+│  def test_gpu_string_config(client, servicer):
+│      stub = Stub()
+│  
+│      # Invalid enum value.
+│      with pytest.raises(InvalidError):
+│ -        stub.function(dummy, gpu="foo")
+│ +        stub.function(gpu="foo")(dummy)
+│  
+│ -    stub.function(dummy, gpu="A100")
+│ +    stub.function(gpu="A100")(dummy)
+│      with stub.run(client=client):
+│          pass
+│  
+│      assert len(servicer.app_functions) == 1
+│      func_def = next(iter(servicer.app_functions.values()))
+│      assert func_def.resources.gpu == 0
+│      assert func_def.resources.gpu_config.count == 1
+│ @@ -50,15 +50,15 @@
+│  
+│  
+│  def test_gpu_config_function(client, servicer):
+│      import modal
+│  
+│      stub = Stub()
+│  
+│ -    stub.function(dummy, gpu=modal.gpu.A100())
+│ +    stub.function(gpu=modal.gpu.A100())(dummy)
+│      with stub.run(client=client):
+│          pass
+│  
+│      assert len(servicer.app_functions) == 1
+│      func_def = next(iter(servicer.app_functions.values()))
+│      assert func_def.resources.gpu == 0
+│      assert func_def.resources.gpu_config.count == 1
+│ @@ -66,40 +66,40 @@
+│  
+│  
+│  def test_cloud_provider_selection(client, servicer):
+│      import modal
+│  
+│      stub = Stub()
+│  
+│ -    stub.function(dummy, gpu=modal.gpu.A100(), cloud="gcp")
+│ +    stub.function(gpu=modal.gpu.A100(), cloud="gcp")(dummy)
+│      with stub.run(client=client):
+│          pass
+│  
+│      assert len(servicer.app_functions) == 1
+│      func_def = next(iter(servicer.app_functions.values()))
+│      assert func_def.cloud_provider == api_pb2.CLOUD_PROVIDER_GCP
+│  
+│      assert func_def.resources.gpu_config.count == 1
+│      assert func_def.resources.gpu_config.type == api_pb2.GPU_TYPE_A100
+│  
+│      # Invalid enum value.
+│      with pytest.raises(InvalidError):
+│ -        stub.function(dummy, cloud="foo")
+│ +        stub.function(cloud="foo")(dummy)
+│  
+│  
+│  A100_GPU_MEMORY_MAPPING = {0: api_pb2.GPU_TYPE_A100, 20: api_pb2.GPU_TYPE_A100_20G, 40: api_pb2.GPU_TYPE_A100}
+│  
+│  
+│  @pytest.mark.parametrize("memory,gpu_type", A100_GPU_MEMORY_MAPPING.items())
+│  def test_memory_selection_gpu_variant(client, servicer, memory, gpu_type):
+│      import modal
+│  
+│      stub = Stub()
+│  
+│ -    stub.function(dummy, gpu=modal.gpu.A100(memory=memory))
+│ +    stub.function(gpu=modal.gpu.A100(memory=memory))(dummy)
+│      with stub.run(client=client):
+│          pass
+│  
+│      func_def = next(iter(servicer.app_functions.values()))
+│  
+│      assert func_def.resources.gpu_config.count == 1
+│      assert func_def.resources.gpu_config.type == gpu_type
+│ @@ -114,21 +114,21 @@
+│      import modal
+│  
+│      stub = Stub()
+│  
+│      # Functions that use A100 20GB can only request one GPU
+│      # at a time.
+│      with pytest.raises(ValueError):
+│ -        stub.function(dummy, gpu=modal.gpu.A100(count=2, memory=20))
+│ +        stub.function(gpu=modal.gpu.A100(count=2, memory=20))(dummy)
+│          with stub.run(client=client):
+│              pass
+│  
+│      # Task type changes whenever user asks more than 1 GPU on
+│      # an A100.
+│ -    stub.function(dummy, gpu=modal.gpu.A100(count=count))
+│ +    stub.function(gpu=modal.gpu.A100(count=count))(dummy)
+│      with stub.run(client=client):
+│          pass
+│  
+│      func_def = next(iter(servicer.app_functions.values()))
+│  
+│      assert func_def.resources.gpu_config.count == count
+│      assert func_def.resources.gpu_config.type == gpu_type
+├── client_test/lookup_test.py
+│ @@ -26,15 +26,15 @@
+│      pass
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_lookup_function(servicer, aio_client):
+│      stub = AioStub()
+│  
+│ -    stub.function(square)
+│ +    stub.function()(square)
+│      await stub.deploy("my-function", client=aio_client)
+│  
+│      f = await AioFunction.lookup("my-function", client=aio_client)
+│      assert f.object_id == "fu-1"
+│  
+│      # Call it using two arguments
+│      f = await AioFunction.lookup("my-function", "square", client=aio_client)
+│ @@ -46,15 +46,15 @@
+│      assert await f.call(2, 4) == 20
+│      assert [r async for r in f.map([5, 2], [4, 3])] == [41, 13]
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_webhook_lookup(servicer, aio_client):
+│      stub = AioStub()
+│ -    stub.function(stub.web_endpoint(method="POST")(square))
+│ +    stub.function()(stub.web_endpoint(method="POST")(square))
+│      await stub.deploy("my-webhook", client=aio_client)
+│  
+│      f = await AioFunction.lookup("my-webhook", client=aio_client)
+│      assert f.web_url
+│  
+│  
+│  @pytest.mark.asyncio
+├── client_test/mount_test.py
+│ @@ -108,15 +108,15 @@
+│  
+│  
+│  def test_create_package_mounts(servicer, client, test_dir):
+│      stub = Stub()
+│  
+│      sys.path.append((test_dir / "supports").as_posix())
+│  
+│ -    stub.function(dummy, mounts=create_package_mounts(["pkg_a", "pkg_b", "standalone_file"]))
+│ +    stub.function(mounts=create_package_mounts(["pkg_a", "pkg_b", "standalone_file"]))(dummy)
+│  
+│      with stub.run(client=client):
+│          files = servicer.files_name2sha.keys()
+│          assert any(["/pkg/pkg_a/a.py" in f for f in files])
+│          assert any(["/pkg/pkg_a/b/c.py" in f for f in files])
+│          assert any(["/pkg/pkg_b/f.py" in f for f in files])
+│          assert any(["/pkg/pkg_b/g/h.py" in f for f in files])
+│ @@ -126,15 +126,15 @@
+│  
+│  
+│  def test_stub_mounts(servicer, client, test_dir):
+│      sys.path.append((test_dir / "supports").as_posix())
+│  
+│      stub = Stub(mounts=create_package_mounts(["pkg_b"]))
+│  
+│ -    stub.function(dummy, mounts=create_package_mounts(["pkg_a"]))
+│ +    stub.function(mounts=create_package_mounts(["pkg_a"]))(dummy)
+│  
+│      with stub.run(client=client):
+│          files = servicer.files_name2sha.keys()
+│          assert any(["pkg/pkg_a/a.py" in f for f in files])
+│          assert any(["pkg/pkg_a/b/c.py" in f for f in files])
+│          assert any(["pkg/pkg_b/f.py" in f for f in files])
+│          assert any(["pkg/pkg_b/g/h.py" in f for f in files])
+│ @@ -142,8 +142,8 @@
+│          assert not any(["pkg/pkg_c/j/k.py" in f for f in files])
+│  
+│  
+│  def test_create_package_mounts_missing_module(servicer, client, test_dir):
+│      stub = Stub()
+│  
+│      with pytest.raises(NotFoundError):
+│ -        stub.function(dummy, mounts=create_package_mounts(["nonexistent_package"]))
+│ +        stub.function(mounts=create_package_mounts(["nonexistent_package"]))(dummy)
+├── client_test/retries_test.py
+│ @@ -24,35 +24,37 @@
+│  def dummy():
+│      pass
+│  
+│  
+│  def test_retries(client):
+│      stub = modal.Stub()
+│  
+│ -    default_retries_from_int_modal = stub.function(default_retries_from_int, retries=5)
+│ -    fixed_delay_retries_modal = stub.function(
+│ -        fixed_delay_retries, retries=modal.Retries(max_retries=5, backoff_coefficient=1.0)
+│ +    default_retries_from_int_modal = stub.function(retries=5)(default_retries_from_int)
+│ +    fixed_delay_retries_modal = stub.function(retries=modal.Retries(max_retries=5, backoff_coefficient=1.0))(
+│ +        fixed_delay_retries
+│      )
+│ +
+│      exponential_backoff_modal = stub.function(
+│ -        exponential_backoff, retries=modal.Retries(max_retries=2, initial_delay=2.0, backoff_coefficient=2.0)
+│ -    )
+│ +        retries=modal.Retries(max_retries=2, initial_delay=2.0, backoff_coefficient=2.0)
+│ +    )(exponential_backoff)
+│ +
+│      exponential_with_max_delay_modal = stub.function(
+│ -        exponential_with_max_delay, retries=modal.Retries(max_retries=2, backoff_coefficient=2.0, max_delay=30.0)
+│ -    )
+│ +        retries=modal.Retries(max_retries=2, backoff_coefficient=2.0, max_delay=30.0)
+│ +    )(exponential_with_max_delay)
+│  
+│      with pytest.raises(TypeError):
+│          # Reject no-args constructions, which is unreadable and harder to support long-term
+│ -        stub.function(dummy, retries=modal.Retries())  # type: ignore
+│ +        stub.function(retries=modal.Retries())(dummy)  # type: ignore
+│  
+│      # Reject weird inputs:
+│      # Don't need server to detect and reject nonsensical input. Can do client-side.
+│      with pytest.raises(InvalidError):
+│ -        stub.function(dummy, retries=modal.Retries(max_retries=-2))
+│ +        stub.function(retries=modal.Retries(max_retries=-2))(dummy)
+│  
+│      with pytest.raises(InvalidError):
+│ -        stub.function(dummy, retries=modal.Retries(max_retries=2, backoff_coefficient=0.0))
+│ +        stub.function(retries=modal.Retries(max_retries=2, backoff_coefficient=0.0))(dummy)
+│  
+│      with stub.run(client=client):
+│          default_retries_from_int_modal.call()
+│          fixed_delay_retries_modal.call()
+│          exponential_backoff_modal.call()
+│          exponential_with_max_delay_modal.call()
+├── client_test/shared_volume_test.py
+│ @@ -29,25 +29,25 @@
+│  @skip_windows("TODO: implement client-side path check on Windows.")
+│  def test_shared_volume_bad_paths(client, test_dir, servicer):
+│      stub = modal.Stub()
+│  
+│      def _f():
+│          pass
+│  
+│ -    dummy_modal = stub.function(dummy, shared_volumes={"/root/../../foo": modal.SharedVolume()})
+│ +    dummy_modal = stub.function(shared_volumes={"/root/../../foo": modal.SharedVolume()})(dummy)
+│      with pytest.raises(InvalidError):
+│          with stub.run(client=client):
+│              dummy_modal.call()
+│  
+│ -    dummy_modal = stub.function(dummy, shared_volumes={"/": modal.SharedVolume()})
+│ +    dummy_modal = stub.function(shared_volumes={"/": modal.SharedVolume()})(dummy)
+│      with pytest.raises(InvalidError):
+│          with stub.run(client=client):
+│              dummy_modal.call()
+│  
+│ -    dummy_modal = stub.function(dummy, shared_volumes={"/tmp/": modal.SharedVolume()})
+│ +    dummy_modal = stub.function(shared_volumes={"/tmp/": modal.SharedVolume()})(dummy)
+│      with pytest.raises(InvalidError):
+│          with stub.run(client=client):
+│              dummy_modal.call()
+│  
+│  
+│  def test_shared_volume_handle_single_file(client, tmp_path, servicer):
+│      stub = modal.Stub()
+├── client_test/stub_test.py
+│ @@ -60,15 +60,15 @@
+│  def square(x):
+│      return x**2
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_redeploy(servicer, aio_client):
+│      stub = AioStub()
+│ -    stub.function(square)
+│ +    stub.function()(square)
+│  
+│      # Deploy app
+│      app = await stub.deploy("my-app", client=aio_client)
+│      assert app.app_id == "ap-1"
+│      assert servicer.app_objects["ap-1"]["square"] == "fu-1"
+│      assert servicer.app_state_history[app.app_id] == [api_pb2.APP_STATE_INITIALIZING, api_pb2.APP_STATE_DEPLOYED]
+│  
+│ @@ -95,15 +95,15 @@
+│  
+│  # Should exit without waiting for the "logs_timeout" grace period.
+│  @pytest.mark.timeout(5)
+│  def test_create_object_exception(servicer, client):
+│      servicer.function_create_error = True
+│  
+│      stub = Stub()
+│ -    stub.function(dummy)
+│ +    stub.function()(dummy)
+│  
+│      with pytest.raises(GRPCError) as excinfo:
+│          with stub.run(client=client):
+│              pass
+│  
+│      assert excinfo.value.status == Status.INTERNAL
+│  
+│ @@ -119,15 +119,15 @@
+│      named_stub.deploy("bar_app", client=client)
+│      assert "bar_app" in servicer.deployed_apps
+│      assert "foo_app" not in servicer.deployed_apps
+│  
+│  
+│  def test_run_function_without_app_error():
+│      stub = Stub()
+│ -    dummy_modal = stub.function(dummy)
+│ +    dummy_modal = stub.function()(dummy)
+│  
+│      with pytest.raises(InvalidError) as excinfo:
+│          dummy_modal.call()
+│  
+│      assert "stub.run" in str(excinfo.value)
+│  
+│  
+│ @@ -146,20 +146,20 @@
+│  
+│  
+│  def test_same_function_name(caplog):
+│      stub = Stub()
+│  
+│      # Add first function
+│      with caplog.at_level(logging.WARNING):
+│ -        stub.function(module_1.square)
+│ +        stub.function()(module_1.square)
+│      assert len(caplog.records) == 0
+│  
+│      # Add second function: check warning
+│      with caplog.at_level(logging.WARNING):
+│ -        stub.function(module_2.square)
+│ +        stub.function()(module_2.square)
+│      assert len(caplog.records) == 1
+│      assert "module_1" in caplog.text
+│      assert "module_2" in caplog.text
+│      assert "square" in caplog.text
+│  
+│  
+│  skip_in_github = pytest.mark.skipif(
+│ @@ -168,38 +168,38 @@
+│  )
+│  
+│  
+│  @skip_in_github
+│  def test_serve(client):
+│      stub = Stub()
+│  
+│ -    stub.function(stub.wsgi_app()(dummy))
+│ +    stub.function()(stub.wsgi_app()(dummy))
+│      with pytest.warns(DeprecationError):
+│          stub.serve(client=client, timeout=1)
+│  
+│  
+│  @skip_in_github
+│  def test_serve_teardown(client, servicer):
+│      stub = Stub()
+│      with Client(servicer.remote_addr, api_pb2.CLIENT_TYPE_CLIENT, ("foo-id", "foo-secret")) as client:
+│ -        stub.function(stub.wsgi_app()(dummy))
+│ +        stub.function()(stub.wsgi_app()(dummy))
+│          with pytest.warns(DeprecationError):
+│              stub.serve(client=client, timeout=1)
+│  
+│      disconnect_reqs = [s for s in servicer.requests if isinstance(s, api_pb2.AppClientDisconnectRequest)]
+│      assert len(disconnect_reqs) == 1
+│  
+│  
+│  # Required as failing to raise could cause test to never return.
+│  @skip_in_github
+│  @pytest.mark.timeout(7)
+│  def test_nested_serve_invocation(client):
+│      stub = Stub()
+│  
+│ -    stub.function(stub.wsgi_app()(dummy))
+│ +    stub.function()(stub.wsgi_app()(dummy))
+│      with pytest.raises(InvalidError) as excinfo:
+│          with stub.run(client=client):
+│              # This nested call creates a second web endpoint!
+│              with pytest.warns(DeprecationError):
+│                  stub.serve(client=client)
+│      assert "running" in str(excinfo.value)
+│  
+│ @@ -240,18 +240,18 @@
+│  
+│  async def web2(x):
+│      return {"cube": x**3}
+│  
+│  
+│  def test_registered_web_endpoints(client, servicer):
+│      stub = Stub()
+│ -    stub.function(square)
+│ +    stub.function()(square)
+│      with pytest.warns(DeprecationError):
+│          stub.webhook(web1)
+│ -    stub.function(stub.web_endpoint()(web2))
+│ +    stub.function()(stub.web_endpoint()(web2))
+│  
+│      assert stub.registered_web_endpoints == ["web1", "web2"]
+│  
+│  
+│  def test_init_types():
+│      with pytest.raises(InvalidError):
+│          # singular secret to plural argument
+├── client_test/webhook_test.py
+│ @@ -88,20 +88,20 @@
+│      async def g(x):
+│          pass
+│  
+│      with pytest.raises(InvalidError) as excinfo:
+│          async with stub.run(client=aio_client):
+│              pass
+│  
+│ -    assert "@stub.function" in str(excinfo.value)
+│ +    assert "@stub.function()" in str(excinfo.value)
+│  
+│      with pytest.raises(InvalidError) as excinfo:
+│          await stub.deploy("webhook-test", client=aio_client)
+│  
+│ -    assert "@stub.function" in str(excinfo.value)
+│ +    assert "@stub.function()" in str(excinfo.value)
+│  
+│  
+│  @pytest.mark.asyncio
+│  async def test_webhook_decorator_in_wrong_order(servicer, aio_client):
+│      stub = AioStub()
+│  
+│      with pytest.raises(InvalidError) as excinfo:
+├── modal/app.py
+│ @@ -220,15 +220,15 @@
+│  __doc__container_app = """A reference to the running `modal.App`, accessible from within a running Modal function.
+│  Useful for accessing object handles for any Modal objects declared on the stub, e.g:
+│  
+│  ```python
+│  stub = modal.Stub()
+│  stub.data = modal.Dict()
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def store_something(key, value):
+│      data: modal.DictHandle = modal.container_app.data
+│      data.put(key, value)
+│  ```
+│  """
+├── modal/client.pyi
+│ @@ -10,15 +10,15 @@
+│  
+│  
+│  async def _grpc_exc_string(exc: grpclib.exceptions.GRPCError, method_name: str, server_url: str, timeout: float) -> str:
+│      ...
+│  
+│  
+│  class _Client:
+│ -    def __init__(self, server_url, client_type, credentials, version='0.48.1819', *, no_verify=False):
+│ +    def __init__(self, server_url, client_type, credentials, version='0.48.1829', *, no_verify=False):
+│          ...
+│  
+│      @property
+│      def stub(self):
+│          ...
+│  
+│      async def _open(self):
+│ @@ -59,15 +59,15 @@
+│  
+│      @classmethod
+│      def set_env_client(cls, client):
+│          ...
+│  
+│  
+│  class Client:
+│ -    def __init__(self, server_url, client_type, credentials, version='0.48.1819', *, no_verify=False):
+│ +    def __init__(self, server_url, client_type, credentials, version='0.48.1829', *, no_verify=False):
+│          ...
+│  
+│      @property
+│      def stub(self):
+│          ...
+│  
+│      def _open(self):
+│ @@ -108,15 +108,15 @@
+│  
+│      @classmethod
+│      def set_env_client(cls, client):
+│          ...
+│  
+│  
+│  class AioClient:
+│ -    def __init__(self, server_url, client_type, credentials, version='0.48.1819', *, no_verify=False):
+│ +    def __init__(self, server_url, client_type, credentials, version='0.48.1829', *, no_verify=False):
+│          ...
+│  
+│      @property
+│      def stub(self):
+│          ...
+│  
+│      async def _open(self, *args, **kwargs):
+├── modal/exception.py
+│ @@ -6,15 +6,15 @@
+│  
+│  class Error(Exception):
+│      """
+│      Base error class for all Modal errors.
+│  
+│      **Usage**
+│  
+│ -    ```python
+│ +    ```python notest
+│      import modal
+│  
+│      try:
+│          with stub.run():
+│              f.call()
+│      except modal.Error:
+│          # Catch any exception raised by Modal's systems.
+├── modal/functions.py
+│ @@ -542,15 +542,15 @@
+│      ):
+│          """Parallel map over a set of inputs.
+│  
+│          Takes one iterator argument per argument in the function being mapped over.
+│  
+│          Example:
+│          ```python notest
+│ -        @stub.function
+│ +        @stub.function()
+│          def my_func(a):
+│              return a ** 2
+│  
+│          assert list(my_func.map([1, 2, 3, 4])) == [1, 4, 9, 16]
+│          ```
+│  
+│          If applied to a `stub.function`, `map()` returns one result per input and the output order
+│ @@ -559,15 +559,15 @@
+│  
+│          If applied to a `stub.generator`, the results are returned as they are finished and can be
+│          out of order. By yielding zero or more than once, mapping over generators can also be used
+│          as a "flat map".
+│  
+│          `return_exceptions` can be used to treat exceptions as successful results:
+│          ```python notest
+│ -        @stub.function
+│ +        @stub.function()
+│          def my_func(a):
+│              if a == 2:
+│                  raise Exception("ohno")
+│              return a ** 2
+│  
+│          # [0, 1, UserCodeException(Exception('ohno'))]
+│          print(list(my_func.map(range(3), return_exceptions=True)))
+│ @@ -595,15 +595,15 @@
+│      async def starmap(self, input_iterator, kwargs={}, order_outputs=None, return_exceptions=False):
+│          """Like `map` but spreads arguments over multiple function arguments
+│  
+│          Assumes every input is a sequence (e.g. a tuple).
+│  
+│          Example:
+│          ```python notest
+│ -        @stub.function
+│ +        @stub.function()
+│          def my_func(a, b):
+│              return a + b
+│  
+│          assert list(my_func.starmap([(1, 2), (3, 4)])) == [3, 7]
+│          ```
+│          """
+│          if order_outputs is None:
+│ @@ -703,15 +703,15 @@
+│  FunctionHandle, AioFunctionHandle = synchronize_apis(_FunctionHandle)
+│  
+│  
+│  class _Function(_Provider[_FunctionHandle]):
+│      """Functions are the basic units of serverless execution on Modal.
+│  
+│      Generally, you will not construct a `Function` directly. Instead, use the
+│ -    `@stub.function` decorator on the `Stub` object for your application.
+│ +    `@stub.function()` decorator on the `Stub` object for your application.
+│      """
+│  
+│      # TODO: more type annotations
+│      _secrets: Collection[_Secret]
+│      _info: FunctionInfo
+│      _mounts: Collection[_Mount]
+│      _shared_volumes: Dict[str, _SharedVolume]
+│ @@ -1116,15 +1116,15 @@
+│      """Returns the input ID for the currently processed input.
+│  
+│      Can only be called from Modal function (i.e. in a container context).
+│  
+│      ```python
+│      from modal import current_input_id
+│  
+│ -    @stub.function
+│ +    @stub.function()
+│      def process_stuff():
+│          print(f"Starting to process {current_input_id()}")
+│      ```
+│      """
+│      global _current_input_id
+│      return _current_input_id
+├── modal/runner.py
+│ @@ -33,15 +33,15 @@
+│      stdout=None,
+│      show_progress: Optional[bool] = None,
+│      detach: bool = False,
+│      output_mgr: Optional[OutputManager] = None,
+│  ) -> AsyncGenerator[_App, None]:
+│      if stub._loose_webhook_configs:
+│          raise InvalidError(
+│ -            f"Web endpoints {stub._loose_webhook_configs} need to be decorated with @stub.function too.\nUsage:\n\n"
+│ +            f"Web endpoints {stub._loose_webhook_configs} need to be decorated with @stub.function() too.\nUsage:\n\n"
+│              "@stub.function()\n@stub.web_endpoint()\ndef my_webhook():\n    ..."
+│          )
+│      if not is_local():
+│          raise InvalidError(
+│              "Can not run an app from within a container."
+│              " Are you calling stub.run() directly?"
+│              " Consider using the `modal run` shell command."
+│ @@ -132,15 +132,15 @@
+│      client=None,
+│      stdout=None,
+│      show_progress=None,
+│      object_entity="ap",
+│  ) -> _App:
+│      if stub._loose_webhook_configs:
+│          raise InvalidError(
+│ -            f"Web endpoints {stub._loose_webhook_configs} need to be decorated with @stub.function too. Usage:\n\n"
+│ +            f"Web endpoints {stub._loose_webhook_configs} need to be decorated with @stub.function() too. Usage:\n\n"
+│              "@stub.function()\n@stub.web_endpoint()\ndef my_webhook():\n    ..."
+│          )
+│      if not is_local():
+│          raise InvalidError("Cannot run a deploy from within a container.")
+│      if name is None:
+│          name = stub.name
+│      if name is None:
+├── modal/stub.py
+│ @@ -10,15 +10,15 @@
+│  from typing import AsyncGenerator, Callable, Dict, List, Optional, Union, Any, Sequence, Set
+│  
+│  from synchronicity.async_wrap import asynccontextmanager
+│  from modal._types import typechecked
+│  
+│  from modal_proto import api_pb2
+│  from modal_utils.async_utils import synchronize_apis
+│ -from modal_utils.decorator_utils import decorator_with_options, decorator_with_options_deprecated
+│ +from modal_utils.decorator_utils import decorator_with_options_unsupported, decorator_with_options
+│  from .retries import Retries
+│  
+│  from ._function_utils import FunctionInfo
+│  from ._ipython import is_notebook
+│  from ._output import OutputManager
+│  from ._pty import exec_cmd
+│  from .app import _App, _container_app, is_local
+│ @@ -76,15 +76,15 @@
+│      * Making Objects stay alive and not be garbage collected for as long as the
+│        app lives (see App lifetime below).
+│      * Manage log collection for everything that happens inside your code.
+│  
+│      **Registering functions with an app**
+│  
+│      The most common way to explicitly register an Object with an app is through the
+│ -    `@stub.function` decorator. It both registers the annotated function itself and
+│ +    `@stub.function()` decorator. It both registers the annotated function itself and
+│      other passed objects, like schedules and secrets, with the app:
+│  
+│      ```python
+│      import modal
+│  
+│      stub = modal.Stub()
+│  
+│ @@ -442,15 +442,15 @@
+│          and act as an entrypoint to start Modal functions from. Note that regular
+│          Modal functions can also be used as CLI entrypoints, but unlike `local_entrypoint`,
+│          those functions are executed remotely directly.
+│  
+│          **Example**
+│  
+│          ```python
+│ -        @stub.local_entrypoint
+│ +        @stub.local_entrypoint()
+│          def main():
+│              some_modal_function.call()
+│          ```
+│  
+│          You can call the function using `modal run` directly from the CLI:
+│  
+│          ```shell
+│ @@ -470,15 +470,15 @@
+│  
+│          **Parsing Arguments**
+│  
+│          If your entrypoint function take arguments with primitive types, `modal run` automatically parses them as
+│          CLI options. For example, the following function can be called with `modal run stub_module.py --foo 1 --bar "hello"`:
+│  
+│          ```python
+│ -        @stub.local_entrypoint
+│ +        @stub.local_entrypoint()
+│          def main(foo: int, bar: str):
+│              some_modal_function.call(foo, bar)
+│          ```
+│  
+│          Currently, `str`, `int`, `float`, `bool`, and `datetime.datetime` are supported. Use `modal run stub_module.py --help` for more
+│          information on usage.
+│  
+│ @@ -643,15 +643,15 @@
+│              cloud=cloud,
+│              webhook_config=webhook_config,
+│          )
+│  
+│          self._add_function(function, [*base_mounts, *mounts])
+│          return function_handle
+│  
+│ -    @decorator_with_options_deprecated
+│ +    @decorator_with_options_unsupported
+│      @typechecked
+│      def web_endpoint(
+│          self,
+│          raw_f: Optional[Callable[..., Any]] = None,
+│          method: str = "GET",  # REST method for the created endpoint.
+│          label: Optional[
+│              str
+│ @@ -698,15 +698,15 @@
+│                  type=api_pb2.WEBHOOK_TYPE_FUNCTION,
+│                  method=method,
+│                  requested_suffix=label,
+│                  async_mode=_response_mode,
+│              ),
+│          )
+│  
+│ -    @decorator_with_options_deprecated
+│ +    @decorator_with_options_unsupported
+│      @typechecked
+│      def asgi_app(
+│          self,
+│          raw_f=None,
+│          label: Optional[
+│              str
+│          ] = None,  # Label for created endpoint. Final subdomain will be <workspace>--<label>.modal.run.
+│ @@ -738,15 +738,15 @@
+│              api_pb2.WebhookConfig(
+│                  type=api_pb2.WEBHOOK_TYPE_ASGI_APP,
+│                  requested_suffix=label,
+│                  async_mode=_response_mode,
+│              ),
+│          )
+│  
+│ -    @decorator_with_options_deprecated
+│ +    @decorator_with_options_unsupported
+│      @typechecked
+│      def wsgi_app(
+│          self,
+│          raw_f=None,
+│          label: Optional[
+│              str
+│          ] = None,  # Label for created endpoint. Final subdomain will be <workspace>--<label>.modal.run.
+├── modal/cli/import_refs.py
+│ @@ -233,15 +233,15 @@
+│  Usage:
+│  {base_cmd} <file_or_module_path>::<function_name>
+│  
+│  Given the following example `app.py`:
+│  ```
+│  stub = modal.Stub()
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def foo():
+│      ...
+│  ```
+│  You would run foo as [bold green]{base_cmd} app.py::foo[/bold green]"""
+│      error_console.print(guidance_msg)
+├── modal/extensions/pymc.py
+│ @@ -58,15 +58,15 @@
+│  
+│  
+│  def rebuild_exc(exc, tb):
+│      exc.__cause__ = RemoteTraceback(tb)
+│      return exc
+│  
+│  
+│ -@aio_pymc_stub.function
+│ +@aio_pymc_stub.function()
+│  async def sample_process(
+│      draws: int,
+│      tune: int,
+│      step_method,
+│      chain: int,
+│      seed,
+│      start,  # Dict[str, np.ndarray],
+├── modal_test_support/functions.py
+│ @@ -10,52 +10,52 @@
+│  from modal.exception import DeprecationError, deprecation_warning
+│  
+│  SLEEP_DELAY = 0.1
+│  
+│  stub = Stub()
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def square(x):
+│      return x * x
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def delay(t):
+│      time.sleep(t)
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  async def square_async(x):
+│      await asyncio.sleep(SLEEP_DELAY)
+│      return x * x
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def raises(x):
+│      raise Exception("Failure!")
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def raises_sysexit(x):
+│      raise SystemExit(1)
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def raises_keyboardinterrupt(x):
+│      raise KeyboardInterrupt()
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def gen_n(n):
+│      for i in range(n):
+│          yield i**2
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def gen_n_fail_on_m(n, m):
+│      for i in range(n):
+│          if i == m:
+│              raise Exception("bad")
+│          yield i**2
+│  
+│  
+│ @@ -72,15 +72,15 @@
+│  
+│      def __enter__(self):
+│          self._events.append("enter")
+│  
+│      def __exit__(self, typ, exc, tb):
+│          self._events.append("exit")
+│  
+│ -    @stub.function
+│ +    @stub.function()
+│      def f(self, x):
+│          self._events.append("call")
+│          return x**3
+│  
+│  
+│  class CubeAsync:
+│      _events: list[str] = []
+│ @@ -90,21 +90,21 @@
+│  
+│      async def __aenter__(self):
+│          self._events.append("enter")
+│  
+│      async def __aexit__(self, typ, exc, tb):
+│          self._events.append("exit")
+│  
+│ -    @stub.function
+│ +    @stub.function()
+│      async def f(self, x):
+│          self._events.append("call")
+│          return x**3
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  @stub.web_endpoint()
+│  def webhook(arg="world"):
+│      return {"hello": arg}
+│  
+│  
+│  with pytest.warns(DeprecationError):
+│  
+│ @@ -121,42 +121,42 @@
+│  
+│      async def __aenter__(self):
+│          self._events.append("enter")
+│  
+│      async def __aexit__(self, typ, exc, tb):
+│          self._events.append("exit")
+│  
+│ -    @stub.function
+│ +    @stub.function()
+│      @stub.web_endpoint()
+│      def webhook(self, arg="world"):
+│          self._events.append("call")
+│          return {"hello": arg}
+│  
+│  
+│  def stream():
+│      for i in range(10):
+│          time.sleep(SLEEP_DELAY)
+│          yield f"{i}..."
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  @stub.web_endpoint()
+│  def webhook_streaming():
+│      from fastapi.responses import StreamingResponse
+│  
+│      return StreamingResponse(stream())
+│  
+│  
+│  async def stream_async():
+│      for i in range(10):
+│          await asyncio.sleep(SLEEP_DELAY)
+│          yield f"{i}..."
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  @stub.web_endpoint()
+│  async def webhook_streaming_async():
+│      from fastapi.responses import StreamingResponse
+│  
+│      return StreamingResponse(stream_async())
+│  
+│  
+│ @@ -170,15 +170,15 @@
+│  
+│  
+│  @stub.function(is_generator=True)
+│  def fun_returning_gen(n):
+│      return gen(n)
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  @stub.asgi_app()
+│  def fastapi_app():
+│      from fastapi import FastAPI
+│  
+│      web_app = FastAPI()
+│  
+│      @web_app.get("/foo")
+├── modal_test_support/missing_main_conditional.py
+│ @@ -1,14 +1,14 @@
+│  # Copyright Modal Labs 2022
+│  import modal
+│  
+│  stub = modal.Stub()
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def square(x):
+│      return x**2
+│  
+│  
+│  # This should fail in a container
+│  with stub.run():
+│      print(square(42))
+├── modal_test_support/startup_failure.py
+│ @@ -3,10 +3,10 @@
+│  
+│  stub = modal.Stub("hello-world")
+│  
+│  if not modal.is_local():
+│      import nonexistent_package  # noqa
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def f(i):
+│      pass
+├── modal_test_support/stub.py
+│ @@ -1,10 +1,10 @@
+│  # Copyright Modal Labs 2022
+│  import modal
+│  
+│  stub = modal.Stub()
+│  
+│  
+│ -@stub.function
+│ +@stub.function()
+│  def f(x):
+│      # not actually used in test (servicer returns sum of square of all args)
+│      pass
+├── modal_utils/decorator_utils.py
+│ @@ -1,12 +1,22 @@
+│  # Copyright Modal Labs 2022
+│ +import datetime
+│  import functools
+│  import inspect
+│  
+│  
+│ +def pretty_name(qualname):
+│ +    if "." in qualname:
+│ +        # convert _Stub.function to stub.function
+│ +        qualname = qualname.lstrip("_")
+│ +        qualname = qualname[0].lower() + qualname[1:]
+│ +
+│ +    return qualname
+│ +
+│ +
+│  def decorator_with_options(dec_fun):
+│      """Makes it possible for function fun to be used with and without arguments:
+│  
+│      @fun
+│      def f(x): ...
+│  
+│      @fun(foo=bar)
+│ @@ -18,28 +28,37 @@
+│          # Note: if the def_fun is a method, then args will contain the object the method is bound to.
+│          # TODO(erikbern): this could be solved using the descriptor protocol, but this would also require
+│          # synchronicity to implement the full descriptor protocol. This isn't trivial, but we should
+│          # do that some day!
+│          if len(args) >= 2 or (len(args) == 1 and inspect.isfunction(args[-1])):
+│              # The decorator is invoked with a function as its first argument
+│              # Call the decorator function directly
+│ +            name = pretty_name(dec_fun.__qualname__)
+│ +            from modal.exception import deprecation_warning
+│ +
+│ +            deprecation_warning(
+│ +                datetime.date(2023, 4, 5),
+│ +                f"The decorator {name} without arguments will soon be deprecated. Add empty parens to it, e.g. @{name}() if there are no arguments",
+│ +            )
+│              return dec_fun(*args, **kwargs)
+│          else:
+│              # The function is called with arguments
+│              # bind those arguments to the function and decorate the next token
+│              # args is only nonempty if it's the object the method is bound to
+│              return functools.partial(dec_fun, *args, **kwargs)
+│  
+│      return wrapper
+│  
+│  
+│ -def decorator_with_options_deprecated(dec_fun):
+│ +def decorator_with_options_unsupported(dec_fun):
+│      # Used when we are removing support for decorator_with_options
+│      @functools.wraps(dec_fun)
+│      def wrapper(*args, **kwargs):
+│          if len(args) >= 2 or (len(args) == 1 and inspect.isfunction(args[-1])):
+│ -            name = dec_fun.__name__
+│ -            raise RuntimeError(f"The function {name} needs to be used with arguments. Add () to it if there are none.")
+│ +            name = pretty_name(dec_fun.__qualname__)
+│ +            raise RuntimeError(
+│ +                f"The decorator {name} needs to be called before decorating a function. Add empty parens to it, e.g. @{name}() if there are no arguments"
+│ +            )
+│          else:
+│              return functools.partial(dec_fun, *args, **kwargs)
+│  
+│      return wrapper
+├── modal_version/_version_generated.py
+│ @@ -1,2 +1,2 @@
+│  # Copyright Modal Labs 2023
+│ -build_number = 1819
+│ +build_number = 1829
+│   --- modal_client-0.48.1819.dist-info/LICENSE
+├── +++ modal_client-0.48.1829.dist-info/LICENSE
+│┄ Files identical despite different names
+│   --- modal_client-0.48.1819.dist-info/METADATA
+├── +++ modal_client-0.48.1829.dist-info/METADATA
+│┄ Files 0% similar despite different names
+│ @@ -1,10 +1,10 @@
+│  Metadata-Version: 2.1
+│  Name: modal-client
+│ -Version: 0.48.1819
+│ +Version: 0.48.1829
+│  Summary: Python client library for Modal
+│  Author: Modal Labs
+│  Author-email: erik@modal.com
+│  Project-URL: Homepage, https://modal.com
+│  Keywords: modal,client,cloud,serverless,infrastructure
+│  Classifier: Topic :: System :: Distributed Computing
+│  Classifier: Operating System :: OS Independent
+│   --- modal_client-0.48.1819.dist-info/RECORD
+├── +++ modal_client-0.48.1829.dist-info/RECORD
+│┄ Files 5% similar despite different names
+│ @@ -1,41 +1,41 @@
+│  client_test/__init__.py,sha256=waLjl5c6IPDhSsdWAm9Bji4e2PVxamYABKAze6CHVXY,28
+│  client_test/async_utils_test.py,sha256=vhWOb8jRl3illb7UIVSVWnM1PeXrPADWKu8Ko4szsI8,5409
+│  client_test/blob_test.py,sha256=cRt3mfzUXFnogKyGAJs6ucYGedVBAFrooBbOCr4LzmM,1507
+│ -client_test/cli_imports_test.py,sha256=VHCaqM8FRUKoghdzTq-maHFku6Y41MJSwFNUmBwNTCo,3958
+│ +client_test/cli_imports_test.py,sha256=d7SoEpig5UAeJz4k9aDgMtRV96l_RXbIb-DjcJw_XAM,3968
+│  client_test/cli_test.py,sha256=YSjHQMAtBhB3fv22sRRVOJEAmYJ6Qk2jr4uvSWnbVRY,11670
+│  client_test/client_test.py,sha256=IHQE1ViPSXyzeMrZnPaG9h0hGmoI_b5BPhB3Dz1wgTU,4850
+│  client_test/config_test.py,sha256=DwVAlxlkPzHP0L9x6HjrnK2DlZXUbIUx9rxTi5pLOEg,2606
+│  client_test/conftest.py,sha256=HiXxSTUer4YEjKNSU3acvMoeXkpmsYlmr4B4n6w2V_Q,28675
+│ -client_test/container_app_test.py,sha256=G-_oNP8I4fsGPDcczmcXJjnKI7WyV26AhlVrW_SDKYY,4556
+│ +client_test/container_app_test.py,sha256=L6ZMGM85EIt5tGMYTCqD1nBbmZFmXz6p-dt35TE5hBM,4562
+│  client_test/container_test.py,sha256=8zpqAbgaMPaAxXVnIXxkvqWYJHRDHTKlhdZQYm92oNE,18533
+│ -client_test/decorator_test.py,sha256=Tm1cXV4o_N9sgr_5s8X6pF7r-qFBwDmkrzcDy5_mLjI,1240
+│ +client_test/decorator_test.py,sha256=qpYMQYDsHIP8QOFHTYmIWyxPTKWjrJAc6eG1MYjGJZs,2247
+│  client_test/deprecation_test.py,sha256=I74YCSVxiNnrMz7XFFm4bzZWpdkFcGQAVlDxSLCcqmE,1086
+│  client_test/e2e_test.py,sha256=UEDenuTYU7laTIDNurz-dsta_BuFX76sgHn7Ul16v_0,2182
+│  client_test/error_test.py,sha256=bDxKUwE4WJ1qwAfm0Jlzqkb3WetF0YLxplrgjevAv4U,165
+│ -client_test/function_test.py,sha256=f383dascK_1ZZfAbR5cvE3jhpa3OfDrMpPBT9-pknOc,12887
+│ -client_test/gpu_test.py,sha256=untc9c-6891l1GQ1WFzTqHe4JLNJQ4CSoHxJOxQyOo4,3924
+│ +client_test/function_test.py,sha256=ZQLjjbXCPijXp8Atu6IKVzdjO325cPqZgrpyqf0bUBA,12923
+│ +client_test/gpu_test.py,sha256=0sseHEuRKQJyYAMGWMO8GtO_J_pTL0gwJbBzy4EbSqo,3924
+│  client_test/grpc_utils_test.py,sha256=7BYCXGcRSzHeN4dk-a5AKFF4-t3wuIG3K_vs-rxJJ4w,5047
+│  client_test/image_test.py,sha256=UwnLkFfZYmw3NAPw-vK_utHui8w3RCW508S8us8rsjk,15156
+│  client_test/live_reload_test.py,sha256=GppDrVcjzknqCL7wLyg4YtLkY7APHepp2yZOIbppEts,2252
+│ -client_test/lookup_test.py,sha256=5kcr38QDN_0pRUarJPis6Nvk1SMoU0WMgfYAvSfZnPk,2813
+│ -client_test/mount_test.py,sha256=en3slkzCJZ0JRdpeel5zNplW-KFavyIGGz_JN5sS1i8,5305
+│ +client_test/lookup_test.py,sha256=JSG0_Y3FmlkZiMlVft8bnca2zPXxHHHSNk0m9Pf0Lfg,2817
+│ +client_test/mount_test.py,sha256=fq9sMAgxAJ8qBCjdHwi8AwxpXFcrp1L9hf6thTVQ1UM,5305
+│  client_test/mounted_files_test.py,sha256=ezC0_NhJyNwLz-rkXh_Ztck7HgKIdhOFf-ng3aLqrvI,5329
+│  client_test/notebook_test.py,sha256=AzzAfpXBwXvfD4zwyqAr9GW-rM0RY4aJlXKBJ3GqBp8,2157
+│  client_test/object_test.py,sha256=AIpd_jcShIHPcx0oXy_Q2GUc-_a0eEqszHztfE5WNbA,1434
+│  client_test/package_utils_test.py,sha256=5BHIMwW03ettWIZ2AqFHcD8n5FIXoEcy1g2qTyqFo3Y,413
+│ -client_test/retries_test.py,sha256=DmD2G7MgDQ1H8xa1-WXrFT3Ty18grG09yL4uPiX8myw,1675
+│ +client_test/retries_test.py,sha256=PeeXUZkhVMVk0pa5fL75-pv4vtGYLILqA04-z8W20hQ,1677
+│  client_test/schedule_test.py,sha256=lyj6pHchOg_CqyJNQY8NbRUTfh-RxwAugcX5-P4b-0k,359
+│  client_test/secret_test.py,sha256=oXb_ySSULPpi9ZdBX37vl1KtNJ1kixq4s252zNZqz8o,548
+│  client_test/serialization_test.py,sha256=wUeBePEEpx87foQpw9QhDRLlv_8GmxN6WOPm11cvAE8,1098
+│ -client_test/shared_volume_test.py,sha256=gM8HzdQXFfJMXVD5s2A-SerDPqFqg9HG7ji5My188mQ,3925
+│ -client_test/stub_test.py,sha256=6584NfR1UgSFwCqgq7paBUbqrOUtHpI0jmL3DPnStSI,8671
+│ +client_test/shared_volume_test.py,sha256=ndheEcyyiOWLj7XIFhcoOyl4Je1PsUTzezgZdb5e7SQ,3925
+│ +client_test/stub_test.py,sha256=0_H8tO_qqw-n-P6i-oS9bP1JyKz35HCYbfPuAfhNnEk,8691
+│  client_test/utils_test.py,sha256=AMlrnJQfGDjy1c8mnmaNwnCmDMUh726mFx8QHSAsaDc,2691
+│  client_test/watcher_test.py,sha256=kz--ZcsJC41gFr3-D7kKN7Co1ixn_yGqG13KdoGBomM,1160
+│ -client_test/webhook_test.py,sha256=n2c7Y3jszCaWGd8kbiAMnNjWSd5dSjFobXDGZ3hgdx4,3687
+│ +client_test/webhook_test.py,sha256=uFrPol0nWMojVK-vfJwDk4cz0fEXjsOTycxmfmCIHW4,3691
+│  modal/__init__.py,sha256=eapymf4U1tEgCzDke6RVR_Lq_E5dz80JeeogcsFqiT8,937
+│  modal/__main__.py,sha256=HIOFyoYAuCrSKzWKYrUhTYZMx-BzN9-XMWlgod1cKX0,157
+│  modal/_asgi.py,sha256=hNykuXf7d51S3tx_HO_mundH-L5RTltVSGWwXk5rHSk,2106
+│  modal/_blob_utils.py,sha256=INAmYjshcmxNRleSqmKMDmPWUJ9xmHIGLord-kqE6DY,13386
+│  modal/_container_entrypoint.py,sha256=PjeeqACRx9RT90l9YVZdxGNOmrPT7DBRHGnrPjBUm8A,24591
+│  modal/_function_utils.py,sha256=X3yPmOLGsUm3g7Z4lH7lonHFx7MZd6zEEQCe1BOGG9k,9857
+│  modal/_ipython.py,sha256=-4gdmpL5qoDOD_8Ql61HIbYdYAZmUtqIyvkEhW4bQWo,275
+│ @@ -48,24 +48,24 @@
+│  modal/_resolver.py,sha256=YhghbOoEQNjfJvySkPfVQcDGVJJDDGtOROmiyNWKI14,4286
+│  modal/_serialization.py,sha256=9YW5aXOgh-zcKCJN4u4P3xQj7pftPQ5OgR8UdAmZM6E,1255
+│  modal/_traceback.py,sha256=H8kaGplSQALs7nEdob2sNrv6wlpVONXbcSBDQklxWN8,7598
+│  modal/_tracing.py,sha256=hf480ngfycx5S3Kf3OC-8g9m6eorxK6YMECJy-amoPw,1749
+│  modal/_types.py,sha256=vUvweCqAt0S-mni_V_EGc_rDCKgJlU5g0P8r08zl1ko,490
+│  modal/_watcher.py,sha256=FnIoSs0vdnTp35RSuXcjxooyIyV-2CGMqECAdLpObzI,3960
+│  modal/aio.py,sha256=V49rcZmIiLehcLEBYQCUYn8SIFXpecHCDWHZ8gggjqM,900
+│ -modal/app.py,sha256=CQp_CzR4QaTL-yM1AQNi3TeqkywL2rIzgBITRTNUvec,9481
+│ +modal/app.py,sha256=91bmMUZxQWTUVSvrIScowbyN9VDtZltWYXx9oDNqni0,9483
+│  modal/app.pyi,sha256=xtCmVUU978l2BmapAs-di_NktYEwlrCN_0PZiusSzeE,5561
+│  modal/call_graph.py,sha256=_cCMOMg7IeWNiRXdd-gJbb7pUYw2Ahl-KbXsizM6Lcg,2462
+│  modal/client.py,sha256=vJ2tck1ewPDpYVGc4thblOFenzKeEDdKGw1OG_4QpJY,9185
+│ -modal/client.pyi,sha256=uNhzN-XqfplIGOzt20pJpo1B7cgCR8hybtQ4LCSgi0o,3507
+│ +modal/client.pyi,sha256=EAHKiFBtaHl2gCwguqaEjgJ1S40cxhdi8iXxAq7PAV4,3507
+│  modal/config.py,sha256=Zc9JKAQF5cci5meaQpxvDMzIcCDwMAYSrYdGrCYcvGE,6439
+│  modal/dict.py,sha256=P4tNftxVj71XheVLzZuxixwZ_bMlyqaBpqiemQ2WBBs,5577
+│  modal/dict.pyi,sha256=joF2JQUoHjdxPWTWCmbUDX9a0UhO3rhIQi2A6THGmpQ,2632
+│ -modal/exception.py,sha256=IeZfY8kNzYKrWXpBK_uSQX9-oxkETglVqfUEyEU7TQk,2423
+│ -modal/functions.py,sha256=P2nnQAWWIBYyFK_CxlFr9JhzEH3E-Pugw-wJWpB6G6s,44678
+│ +modal/exception.py,sha256=iJO5CdFuQMZ7xBFh7Nqava6prgqctlGr6GJ9TQbdWzk,2430
+│ +modal/functions.py,sha256=-4TV1-IEqaIb8mOc_UhYgZJK-_Mwf9YIdb6PDvoISbw,44688
+│  modal/functions.pyi,sha256=8IHJ6NfffXaIv7Py6M9zOoISY7YtX2sWXjxYT5Pc8Y4,15001
+│  modal/gpu.py,sha256=x-XC8WNWrCmoJ4HpUKbWKdfTMFZW8C77wZ6ziHuWnMA,3552
+│  modal/image.py,sha256=RQMoqKlVAyj6nkEzBsVJj9kn7Rrjl28cT02q5Wv6oxI,42772
+│  modal/image.pyi,sha256=iR8n5KoMT2goJlOSLb-xyn2eNnPGSLmmtMCnYEOS9s8,14757
+│  modal/mount.py,sha256=4MvoJW-LfKuBW1USSiWDQCLtOTtQlpPbCiZODtI2iM0,16282
+│  modal/mount.pyi,sha256=16mJis9Kk-ytbIUrrufca6kgZGk9SzBZTEcj7y7r51s,7047
+│  modal/object.py,sha256=fsYAFo2FffJ642GKKlkqUDOsgVafo07mwmoqzPIu67k,11090
+│ @@ -73,68 +73,68 @@
+│  modal/proxy.py,sha256=W4K4gAOzWTzyCQ9GJS9eHxh0REXW-j7PZfVALk2G2KY,652
+│  modal/proxy.pyi,sha256=6gIKHR1oBNpQ-nSQgqUxtJMyZ9_WVHgtUzHJlkV8iaQ,728
+│  modal/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+│  modal/queue.py,sha256=f-IbwzOGVIEd1j6M4WUQzzAH8kF36thiHnmowkIHQRs,5134
+│  modal/queue.pyi,sha256=V3OTioMGltA5C2WxERjo8orv_X_gL4p_-IRMF9dKe3Q,2271
+│  modal/requirements.txt,sha256=U-qfJvYZaQhyYXHjuq8VUXicIq1ObE8AN4SelJX8rbk,523
+│  modal/retries.py,sha256=QLFZcxLqlWcvot_2RhV-gjg9l8VfZAQbGIsvbVMmyww,3050
+│ -modal/runner.py,sha256=g5-A6O_sJqHbDp1kyr5bjaB1yZ8heTCJB8ahWJt3FUc,7239
+│ +modal/runner.py,sha256=CW8OeRCEPUC1iMwkPPsXKRoCJSvlSPJRVpOum872VZ0,7243
+│  modal/schedule.py,sha256=KUzkyV8bUZ1Oclx9thoR6q1ujX0JwPHkHKroJFS4X4k,2619
+│  modal/secret.py,sha256=iL5tS-n90L2NvSd54TidSzxC4_bqCOhb2tLNh0zwLAs,1998
+│  modal/secret.pyi,sha256=GsPck5dR6oZ_NWRaB-6vHOP5mHMqEvQyIdcNyOLO7R8,712
+│  modal/shared_volume.py,sha256=wROtGXjpFKGHxL7rd6N-3uehZWkT5guQrGDsmBO1f9Y,8173
+│  modal/shared_volume.pyi,sha256=dY1L58xZlD4HVuE3820VPTw82N7wH18JKOslo7wK2J0,2950
+│ -modal/stub.py,sha256=BZ-GJTtCEP5UzKHk8aFv_bgli_YpqZoQQvYz3B0D8m4,36674
+│ +modal/stub.py,sha256=ZO16eq-PtiQbSVQ51MB4b9YnBRan8QE6v8C4eJYHDpg,36684
+│  modal/stub.pyi,sha256=tF8bB3Fm7Yh2hZdARZ_QfbAhEWYdo6IJ6Jljl8gxDMM,21136
+│  modal/cli/__init__.py,sha256=waLjl5c6IPDhSsdWAm9Bji4e2PVxamYABKAze6CHVXY,28
+│  modal/cli/app.py,sha256=KEBJvp7dOenIxu8gvdU4isbaZgdTnAdMkyHgd594Y_I,3833
+│  modal/cli/config.py,sha256=yqBFZh5MLplDkpUKFG8BVDzAxe_n8cqHHJdQC_bhJL0,484
+│  modal/cli/entry_point.py,sha256=RAzDNgy-Ayvfji5gTMSosY2rXbp06xSBzqPuW1sAyz0,1881
+│  modal/cli/env.py,sha256=xbA80dlszGWC9A6c6qKapnW_K8sncgiJpa9oQJi_V58,648
+│ -modal/cli/import_refs.py,sha256=L1tQW2dkQgkHX-L3An8tfMvwa1rPg5biSa4g2EAKE1s,10457
+│ +modal/cli/import_refs.py,sha256=3oBdSGr5yFJUSmRbyZEBe_GypG3Y0D8WZs64YODITBg,10459
+│  modal/cli/run.py,sha256=ap-_5u649_dGggBy55Q8b0CHVhV4Jnkkbrlfn1Hme3Q,8096
+│  modal/cli/secret.py,sha256=yMEJlJ8ZY0r87IMgrJWGUj9gJR0wER14uZ--KirCPFY,3728
+│  modal/cli/token.py,sha256=CR6jYFCQMFvKxZsqkMZdhKeXRrMzo3YiNrkK7W325sE,3046
+│  modal/cli/utils.py,sha256=mAWr127UzAy_-SOT6726kAxFdTSRNiFDoQJ2ILeKLOI,313
+│  modal/cli/volume.py,sha256=gjkp6CKwzbUhiFU4j6JhPZypM8Lue8fJ9VJnguMFU8U,9785
+│  modal/extensions/__init__.py,sha256=waLjl5c6IPDhSsdWAm9Bji4e2PVxamYABKAze6CHVXY,28
+│  modal/extensions/ipython.py,sha256=abiOMLPfM1E-cdKV8-v0LFr2B9gWEObLTV4PAu13Jow,997
+│ -modal/extensions/pymc.py,sha256=nYoYTGjkAgMx9QfGTD3pwFNzmFfaorubg6MHxG3IJsU,6493
+│ +modal/extensions/pymc.py,sha256=j77kKcTus_U6PCs4gz6-NpN5yGLlopNDyt8AKrVwdHU,6495
+│  modal_base_images/__init__.py,sha256=waLjl5c6IPDhSsdWAm9Bji4e2PVxamYABKAze6CHVXY,28
+│  modal_base_images/client_mount.py,sha256=LasBYJja1AyV3IPScpKmW3FiomU5sEEwVNU5qJni9rM,461
+│  modal_base_images/conda.py,sha256=EDWIJ963RlBdGLZ_6nP30xI0_Mcz6SJeX_b0rGFJ5QI,264
+│  modal_base_images/debian_slim.py,sha256=-BTZ-BYssbfMDSAIYT3qJNr2Bho63yIYFEOn_IeBLBE,342
+│  modal_proto/__init__.py,sha256=waLjl5c6IPDhSsdWAm9Bji4e2PVxamYABKAze6CHVXY,28
+│  modal_proto/api.proto,sha256=xl1YCOpa4l9YAPTkaSDrRqXHNf2Z4_Kbf0-dPDfj8Ec,24985
+│  modal_proto/api_grpc.py,sha256=avJ20xGqS-tZvRs0vM0NZsSt4cd2McGWd2KLLmo-TTE,41356
+│  modal_proto/api_pb2.py,sha256=drnMOZxubqcSdOqOlxskahxd3Hy0nUzXaPzNgASziYI,105139
+│  modal_proto/api_pb2_grpc.py,sha256=JASTFtPQCIUPhE6hVdhQzCF6Du2LNjtcYSbOa3vyuDw,89508
+│  modal_test_support/__init__.py,sha256=waLjl5c6IPDhSsdWAm9Bji4e2PVxamYABKAze6CHVXY,28
+│  modal_test_support/assert_package.py,sha256=jDvK7mjZQKbm9GVsBaAm4wgTjELYBLbGsyB0_ZDr7yM,134
+│  modal_test_support/consumed_map.py,sha256=YkCQpaY_vJoafoPBwJJpHzcYdLkY86rQGY3DMOzvec4,171
+│ -modal_test_support/functions.py,sha256=swPP3XBBKEPbq2VGmcUZRkxO9K9w_GAmAdLDH8HogqM,3310
+│ -modal_test_support/missing_main_conditional.py,sha256=WJ2rtAFegy75Yii6_STa8rSLBQGvmNcG46eNJ5iUsmk,185
+│ +modal_test_support/functions.py,sha256=eFNJGsXhkxtZxLVS61wZeuCAAa29L6c_o-2F6b2MNEA,3340
+│ +modal_test_support/missing_main_conditional.py,sha256=XcBOXWdcdz0YRXiakD3WhPn2_gxQFrvYHKRp_ug4gjk,187
+│  modal_test_support/module_1.py,sha256=UYzBJ1qENH4j8o3vy7EDngz2xEfrHAKDL9G6Z3R8z4c,59
+│  modal_test_support/module_2.py,sha256=UYzBJ1qENH4j8o3vy7EDngz2xEfrHAKDL9G6Z3R8z4c,59
+│  modal_test_support/package_mount.py,sha256=i6My-uTJ_1NhoiXbvxQYTnYP7QiKlzB7Eg5ikIDTKNc,197
+│  modal_test_support/progress_info.py,sha256=4hRMj9TfJ1h-OYmrPs9d3lpct1ToSa_YYM4Rj-LBd2Y,171
+│  modal_test_support/script.py,sha256=_B88iWclU8TTpCq47gDlRRQGeBjqWf84IgtksN37iCs,153
+│ -modal_test_support/startup_failure.py,sha256=r2kWaPlUGvqhneYdWVz1PGee8OPd4mfEm7hhU0xM3zA,176
+│ -modal_test_support/stub.py,sha256=vjxqGJiyjzHWu5HQrGAkos-heiZ9hcxYfk7ckBHJV90,175
+│ +modal_test_support/startup_failure.py,sha256=gWwHoB78_96RJHuFaEVhCg01trgSaDD67w6m50umyoc,178
+│ +modal_test_support/stub.py,sha256=RJj_CM-KqucBkqszzTuBimp670tjOmHUm76GmAAF54A,177
+│  modal_test_support/unconsumed_map.py,sha256=UOPhJz4d87sQ3ngsbaJWDDTTF_SSYgpidTOMgQ2aac8,144
+│  modal_utils/__init__.py,sha256=waLjl5c6IPDhSsdWAm9Bji4e2PVxamYABKAze6CHVXY,28
+│  modal_utils/app_utils.py,sha256=Uf9oNKcC6wJg3wcHNygWxMlkXuIMVRYIE5nutDSafkQ,465
+│  modal_utils/async_utils.py,sha256=irSUCx_DNrlSGwWkLqEwf6MAq364aWm03AKtdkAto84,11319
+│ -modal_utils/decorator_utils.py,sha256=gTyEu1mCCCiFipxlTpzAVFlHdAx1A4PJGyPSWz9Q7VU,1727
+│ +modal_utils/decorator_utils.py,sha256=_Iu2WmM3rq_py93hHx1_CEEy2EVDfDSCHKkBtctoqmA,2412
+│  modal_utils/grpc_utils.py,sha256=Ak3X2_gWpygGZ2KCCm_7pFVrXPqwi9Lb9M8MBlACN3s,9573
+│  modal_utils/hash_utils.py,sha256=YOE1LZwyqaTQSZajrF-H_5_iJkjxMclJewC0SgH_8xA,1597
+│  modal_utils/http_utils.py,sha256=DGKvrSQxAHjP_LNdM6EaL-TIQPGDX5vt3gcMGg2xkz4,1426
+│  modal_utils/logger.py,sha256=odPE0R8_9GkufC_74wqolLikZVIbdxmwDF5xeoILklU,113
+│  modal_utils/package_utils.py,sha256=TLF7GygWqsqZpL-dVnchts55IcTwkMPFLBGeZjuRXCw,1226
+│  modal_version/__init__.py,sha256=nbRhOzfryjxXarGGcSRXfYZ2Qt2ki8icM2nLbbFQrTo,458
+│ -modal_version/_version_generated.py,sha256=NhFMZUY16Z2ur3bfuczOMOldageIAlQLZMcakDO_RTY,48
+│ -modal_client-0.48.1819.dist-info/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+│ -modal_client-0.48.1819.dist-info/METADATA,sha256=r6-ARKmrXhApmH3eLIggciui74vUoxpF9DKysNp1yHs,1880
+│ -modal_client-0.48.1819.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+│ -modal_client-0.48.1819.dist-info/entry_points.txt,sha256=An-wYgeEUnm6xzrAP9_NTSTSciYvvEWsMZILtYrvpAI,46
+│ -modal_client-0.48.1819.dist-info/top_level.txt,sha256=vTBZ60jGY6Z2jEeHlo3uEJRmrR3M1rZoXur0ZaqOrS4,93
+│ -modal_client-0.48.1819.dist-info/RECORD,,
+│ +modal_version/_version_generated.py,sha256=D75Xjht4Lvp_RGUXM54J6f1oi6iAL5yFPgy16EWAYgI,48
+│ +modal_client-0.48.1829.dist-info/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+│ +modal_client-0.48.1829.dist-info/METADATA,sha256=X9oguo2-OtT7rPOfu73WvUcLfLNUg25IApXjzGAkWGs,1880
+│ +modal_client-0.48.1829.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+│ +modal_client-0.48.1829.dist-info/entry_points.txt,sha256=An-wYgeEUnm6xzrAP9_NTSTSciYvvEWsMZILtYrvpAI,46
+│ +modal_client-0.48.1829.dist-info/top_level.txt,sha256=vTBZ60jGY6Z2jEeHlo3uEJRmrR3M1rZoXur0ZaqOrS4,93
+│ +modal_client-0.48.1829.dist-info/RECORD,,
