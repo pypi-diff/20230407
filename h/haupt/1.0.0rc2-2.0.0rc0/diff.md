@@ -1,0 +1,10480 @@
+# Comparing `tmp/haupt-1.0.0rc2.tar.gz` & `tmp/haupt-2.0.0rc0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "haupt-1.0.0rc2.tar", last modified: Wed Nov 23 12:40:42 2022, max compression
++gzip compressed data, was "haupt-2.0.0rc0.tar", last modified: Fri Apr  7 15:21:37 2023, max compression
+```
+
+## Comparing `haupt-1.0.0rc2.tar` & `haupt-2.0.0rc0.tar`
+
+### file list
+
+```diff
+@@ -1,557 +1,472 @@
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.973732 haupt-1.0.0rc2/
+--rw-r--r--   0 runner    (1001) docker     (122)      274 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (122)     1346 2022-11-23 12:40:42.973732 haupt-1.0.0rc2/PKG-INFO
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.909731 haupt-1.0.0rc2/haupt/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      271 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/__main__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.909731 haupt-1.0.0rc2/haupt/apis/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      993 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/apps.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.909731 haupt-1.0.0rc2/haupt/apis/endpoints/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/endpoints/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1783 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/endpoints/project.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3010 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/endpoints/run.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/apis/methods/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/methods/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4459 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/methods/project_resources.py
+--rw-r--r--   0 runner    (1001) docker     (122)      923 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/methods/run_lineage.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2644 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/methods/runs.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2526 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/patterns.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/apis/project_resources/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/project_resources/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1477 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/project_resources/urls.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4541 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/project_resources/views.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/apis/projects/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/projects/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      879 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/projects/urls.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2075 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/projects/views.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/apis/run_lineage/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/run_lineage/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1223 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/run_lineage/urls.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2561 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/run_lineage/views.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/apis/runs/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/runs/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1026 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/runs/urls.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4942 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/runs/views.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/apis/serializers/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2330 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/artifacts.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/apis/serializers/base/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      660 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/cloning.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1033 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/is_managed.py
+--rw-r--r--   0 runner    (1001) docker     (122)      968 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/names.py
+--rw-r--r--   0 runner    (1001) docker     (122)      616 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/pipeline.py
+--rw-r--r--   0 runner    (1001) docker     (122)      434 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/project.py
+--rw-r--r--   0 runner    (1001) docker     (122)      523 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/settings.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1833 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/tags.py
+--rw-r--r--   0 runner    (1001) docker     (122)      484 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/base/uuid_slug_related_field.py
+--rw-r--r--   0 runner    (1001) docker     (122)     6492 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/project_resources.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2008 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/projects.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3679 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/serializers/runs.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/apis/versions/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/versions/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      682 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/versions/urls.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1601 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/apis/versions/views.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.913731 haupt-1.0.0rc2/haupt/background/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/background/celeryp/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/celeryp/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      476 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/celeryp/app.py
+--rw-r--r--   0 runner    (1001) docker     (122)      979 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/celeryp/polyaxon_task.py
+--rw-r--r--   0 runner    (1001) docker     (122)      753 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/celeryp/queues.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1265 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/celeryp/routes.py
+--rw-r--r--   0 runner    (1001) docker     (122)      600 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/celeryp/tasks.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/background/queues/
+--rw-r--r--   0 runner    (1001) docker     (122)      122 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/queues/scheduler
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/background/scheduler/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/scheduler/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      831 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/scheduler/apps.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/background/scheduler/tasks/
+--rw-r--r--   0 runner    (1001) docker     (122)      335 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/scheduler/tasks/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      534 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/scheduler/tasks/health.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1947 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/background/scheduler/tasks/runs.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/cli/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1587 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/proxies.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/cli/runners/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/runners/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1853 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/runners/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1074 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/runners/sandbox.py
+--rw-r--r--   0 runner    (1001) docker     (122)      787 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/runners/server.py
+--rw-r--r--   0 runner    (1001) docker     (122)      738 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/runners/streams.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1488 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/sandbox.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1151 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/server.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1235 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/cli/streams.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/common/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/common/apis/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      390 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/apps.py
+--rw-r--r--   0 runner    (1001) docker     (122)     5050 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/filters.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1673 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/gzip.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/common/apis/index/
+--rw-r--r--   0 runner    (1001) docker     (122)     1978 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/index/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      627 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/index/errors.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1728 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/index/health.py
+--rw-r--r--   0 runner    (1001) docker     (122)      348 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/index/views.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1947 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/paginator.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1300 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/regex.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.905731 haupt-1.0.0rc2/haupt/common/apis/templates/
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/common/apis/templates/admin/
+--rw-r--r--   0 runner    (1001) docker     (122)      866 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/templates/admin/base_site.html
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/common/apis/templates/base/
+--rw-r--r--   0 runner    (1001) docker     (122)     4907 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/templates/base/index.html
+--rw-r--r--   0 runner    (1001) docker     (122)     1149 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/templates/base/modal_index.html
+--rw-r--r--   0 runner    (1001) docker     (122)        1 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/templates/base/wizard_error.html
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.917731 haupt-1.0.0rc2/haupt/common/apis/templates/common/
+--rw-r--r--   0 runner    (1001) docker     (122)     1123 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/templates/common/root.html
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.921731 haupt-1.0.0rc2/haupt/common/apis/urls/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/urls/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1531 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/urls/projects.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2536 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/urls/runs.py
+--rw-r--r--   0 runner    (1001) docker     (122)      538 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/apis/urls/versions.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.921731 haupt-1.0.0rc2/haupt/common/auditor/
+--rw-r--r--   0 runner    (1001) docker     (122)     1017 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/auditor/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      322 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/auditor/manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1884 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/auditor/service.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.921731 haupt-1.0.0rc2/haupt/common/checks/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/checks/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      314 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/checks/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)      289 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/checks/health_task.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1169 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/checks/results.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.921731 haupt-1.0.0rc2/haupt/common/commands/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/commands/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      365 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/commands/apps.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.921731 haupt-1.0.0rc2/haupt/common/commands/management/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/commands/management/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.921731 haupt-1.0.0rc2/haupt/common/commands/management/commands/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/commands/management/commands/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      552 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/commands/management/commands/create_exchange.py
+--rw-r--r--   0 runner    (1001) docker     (122)     5160 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/commands/management/commands/createuser.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1333 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/commands/management/commands/tables.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.921731 haupt-1.0.0rc2/haupt/common/conf/
+--rw-r--r--   0 runner    (1001) docker     (122)      844 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      333 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/conf_manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)      278 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/exceptions.py
+--rw-r--r--   0 runner    (1001) docker     (122)      726 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/handler.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.921731 haupt-1.0.0rc2/haupt/common/conf/handlers/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/handlers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1215 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/handlers/env_handler.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1602 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/handlers/settings_handler.py
+--rw-r--r--   0 runner    (1001) docker     (122)      327 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/option_manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4799 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/option_service.py
+--rw-r--r--   0 runner    (1001) docker     (122)      698 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/conf/service.py
+--rw-r--r--   0 runner    (1001) docker     (122)     6667 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/config_manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)      391 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/content_types.py
+--rw-r--r--   0 runner    (1001) docker     (122)      445 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/crypto.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.925731 haupt-1.0.0rc2/haupt/common/endpoints/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/endpoints/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     6513 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/endpoints/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)      403 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/endpoints/exceptions.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1269 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/endpoints/files.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1993 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/endpoints/mixins.py
+--rw-r--r--   0 runner    (1001) docker     (122)      372 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/endpoints/utils.py
+--rw-r--r--   0 runner    (1001) docker     (122)      528 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/endpoints/validation.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.925731 haupt-1.0.0rc2/haupt/common/events/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.925731 haupt-1.0.0rc2/haupt/common/events/auditor_subscriptions/
+--rw-r--r--   0 runner    (1001) docker     (122)      334 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/auditor_subscriptions/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1331 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/auditor_subscriptions/run.py
+--rw-r--r--   0 runner    (1001) docker     (122)     8141 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/event.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1223 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/event_actions.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4210 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/event_context.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1801 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/event_manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1697 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/event_service.py
+--rw-r--r--   0 runner    (1001) docker     (122)      279 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/event_subjects.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.925731 haupt-1.0.0rc2/haupt/common/events/registry/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/registry/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2303 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/registry/attributes.py
+--rw-r--r--   0 runner    (1001) docker     (122)     6525 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/events/registry/run.py
+--rw-r--r--   0 runner    (1001) docker     (122)      372 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/exceptions.py
+--rw-r--r--   0 runner    (1001) docker     (122)      673 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/hashing.py
+--rw-r--r--   0 runner    (1001) docker     (122)      943 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/headers.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2457 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/json_utils.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1853 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/memory_manager.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.929731 haupt-1.0.0rc2/haupt/common/options/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      305 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/cache.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.929731 haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/
+--rw-r--r--   0 runner    (1001) docker     (122)      334 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      416 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/containers.py
+--rw-r--r--   0 runner    (1001) docker     (122)      797 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/core.py
+--rw-r--r--   0 runner    (1001) docker     (122)      589 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/installation.py
+--rw-r--r--   0 runner    (1001) docker     (122)      374 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/k8s.py
+--rw-r--r--   0 runner    (1001) docker     (122)      359 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/scheduler.py
+--rw-r--r--   0 runner    (1001) docker     (122)      351 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/stats.py
+--rw-r--r--   0 runner    (1001) docker     (122)      280 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/exceptions.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1849 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/feature.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2994 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/option.py
+--rw-r--r--   0 runner    (1001) docker     (122)      851 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/option_manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)      427 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/option_namespaces.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1203 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/option_owners.py
+--rw-r--r--   0 runner    (1001) docker     (122)      375 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/option_subjects.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.929731 haupt-1.0.0rc2/haupt/common/options/registry/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/registry/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1946 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/registry/containers.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4593 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/registry/core.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2200 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/registry/installation.py
+--rw-r--r--   0 runner    (1001) docker     (122)      936 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/registry/k8s.py
+--rw-r--r--   0 runner    (1001) docker     (122)      904 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/registry/scheduler.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1005 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/options/registry/stats.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.929731 haupt-1.0.0rc2/haupt/common/query/
+--rw-r--r--   0 runner    (1001) docker     (122)      510 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/query/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      981 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/query/service.py
+--rw-r--r--   0 runner    (1001) docker     (122)      570 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/redis_db.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2559 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/service_interface.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.929731 haupt-1.0.0rc2/haupt/common/settings/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      638 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/admin.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1649 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/apps.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1796 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/assets.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3394 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/celery.py
+--rw-r--r--   0 runner    (1001) docker     (122)      936 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/context_processors.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2478 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/core.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1544 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/cors.py
+--rw-r--r--   0 runner    (1001) docker     (122)      799 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/defaults.py
+--rw-r--r--   0 runner    (1001) docker     (122)      680 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/encryption.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2442 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/logging.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1098 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/middlewares.py
+--rw-r--r--   0 runner    (1001) docker     (122)      643 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/secrets.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.929731 haupt-1.0.0rc2/haupt/common/settings/services/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/services/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1976 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/services/api.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1193 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/services/background.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1347 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/services/streams.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3875 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/settings/ui.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.929731 haupt-1.0.0rc2/haupt/common/test_cases/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1718 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/base.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.933731 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/
+--rw-r--r--   0 runner    (1001) docker     (122)     1853 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1808 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/backfill.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4044 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/bo.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2235 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/grid.py
+--rw-r--r--   0 runner    (1001) docker     (122)     9337 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/jobs.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3571 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/mapping.py
+--rw-r--r--   0 runner    (1001) docker     (122)    22362 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/pipelines.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2867 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/schedule.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2545 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_cases/fixtures/services.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.933731 haupt-1.0.0rc2/haupt/common/test_clients/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_clients/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2931 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/test_clients/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)      421 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/user_system.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.933731 haupt-1.0.0rc2/haupt/common/validation/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/validation/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2625 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/validation/blacklist.py
+--rw-r--r--   0 runner    (1001) docker     (122)      903 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/validation/slugs.py
+--rw-r--r--   0 runner    (1001) docker     (122)      818 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/common/workers.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.933731 haupt-1.0.0rc2/haupt/db/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.933731 haupt-1.0.0rc2/haupt/db/abstracts/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1356 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/artifacts.py
+--rw-r--r--   0 runner    (1001) docker     (122)      942 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/catalogs.py
+--rw-r--r--   0 runner    (1001) docker     (122)      401 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/color.py
+--rw-r--r--   0 runner    (1001) docker     (122)      491 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/describable.py
+--rw-r--r--   0 runner    (1001) docker     (122)      474 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/diff.py
+--rw-r--r--   0 runner    (1001) docker     (122)      578 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/duration.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1238 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/getter.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1868 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/live_state.py
+--rw-r--r--   0 runner    (1001) docker     (122)      868 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/nameable.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1127 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/projects.py
+--rw-r--r--   0 runner    (1001) docker     (122)      471 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/readme.py
+--rw-r--r--   0 runner    (1001) docker     (122)     4719 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/runs.py
+--rw-r--r--   0 runner    (1001) docker     (122)      651 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/spec.py
+--rw-r--r--   0 runner    (1001) docker     (122)      827 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/stage.py
+--rw-r--r--   0 runner    (1001) docker     (122)      529 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/state.py
+--rw-r--r--   0 runner    (1001) docker     (122)      836 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/status.py
+--rw-r--r--   0 runner    (1001) docker     (122)      870 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/tag.py
+--rw-r--r--   0 runner    (1001) docker     (122)      436 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/uid.py
+--rw-r--r--   0 runner    (1001) docker     (122)      454 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/abstracts/visibility.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.937731 haupt-1.0.0rc2/haupt/db/administration/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/administration/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      608 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/administration/artifacts.py
+--rw-r--r--   0 runner    (1001) docker     (122)      767 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/administration/projects.py
+--rw-r--r--   0 runner    (1001) docker     (122)      836 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/administration/register.py
+--rw-r--r--   0 runner    (1001) docker     (122)      800 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/administration/runs.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1564 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/administration/utils.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.937731 haupt-1.0.0rc2/haupt/db/factories/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/factories/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      605 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/factories/artifacts.py
+--rw-r--r--   0 runner    (1001) docker     (122)      464 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/factories/projects.py
+--rw-r--r--   0 runner    (1001) docker     (122)      662 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/factories/runs.py
+--rw-r--r--   0 runner    (1001) docker     (122)      853 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/factories/users.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.937731 haupt-1.0.0rc2/haupt/db/managers/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/managers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3539 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/managers/artifacts.py
+--rw-r--r--   0 runner    (1001) docker     (122)      842 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/managers/deleted.py
+--rw-r--r--   0 runner    (1001) docker     (122)      735 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/managers/dummy_key.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1898 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/managers/runs.py
+--rw-r--r--   0 runner    (1001) docker     (122)     6061 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/managers/statuses.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.937731 haupt-1.0.0rc2/haupt/db/mixins/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/mixins/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      562 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/mixins/cache.py
+--rw-r--r--   0 runner    (1001) docker     (122)      731 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/mixins/singleton.py
+--rw-r--r--   0 runner    (1001) docker     (122)      330 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/mixins/sub_paths.py
+--rw-r--r--   0 runner    (1001) docker     (122)      398 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/mixins/unique_name.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.937731 haupt-1.0.0rc2/haupt/db/models/
+--rw-r--r--   0 runner    (1001) docker     (122)      334 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/models/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      647 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/models/artifacts.py
+--rw-r--r--   0 runner    (1001) docker     (122)      404 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/models/projects.py
+--rw-r--r--   0 runner    (1001) docker     (122)      380 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/models/runs.py
+--rw-r--r--   0 runner    (1001) docker     (122)      438 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/models/users.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.937731 haupt-1.0.0rc2/haupt/db/pgsql/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.937731 haupt-1.0.0rc2/haupt/db/pgsql/db/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      403 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/apps.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/
+--rw-r--r--   0 runner    (1001) docker     (122)    20732 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0001_initial.py
+--rw-r--r--   0 runner    (1001) docker     (122)      530 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0002_auto_20200807_1247.py
+--rw-r--r--   0 runner    (1001) docker     (122)      786 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0003_run_pipeline.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1260 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0004_auto_20200905_1523.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1973 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0005_auto_20201005_0913.py
+--rw-r--r--   0 runner    (1001) docker     (122)      913 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0006_auto_20201020_1705.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3400 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0007_auto_20201121_1332.py
+--rw-r--r--   0 runner    (1001) docker     (122)      990 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0008_run_wait_time.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1112 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0009_project_unique_name.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1078 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0010_auto_20210429_1539.py
+--rw-r--r--   0 runner    (1001) docker     (122)      564 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0011_alter_artifact_state.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1841 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0012_alter_artifact_updated_at_and_more.py
+--rw-r--r--   0 runner    (1001) docker     (122)      596 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0013_alter_artifact_name.py
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      269 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/pgsql/db/models.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/db/queries/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/queries/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2025 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/queries/artifacts.py
+--rw-r--r--   0 runner    (1001) docker     (122)      324 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/queries/projects.py
+--rw-r--r--   0 runner    (1001) docker     (122)      830 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/queries/runs.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/db/query_managers/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/query_managers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1508 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/query_managers/artifact.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3220 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/query_managers/callback_conditions.py
+--rw-r--r--   0 runner    (1001) docker     (122)      434 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/query_managers/manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1891 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/query_managers/project.py
+--rw-r--r--   0 runner    (1001) docker     (122)     8687 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/query_managers/run.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/db/signals/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/signals/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1076 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/signals/runs.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/db/sqlite/
+--rw-r--r--   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/sqlite/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/db/sqlite/db/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/sqlite/db/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      404 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/sqlite/db/apps.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/db/sqlite/db/migrations/
+--rw-r--r--   0 runner    (1001) docker     (122)    22150 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/sqlite/db/migrations/0001_initial.py
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/sqlite/db/migrations/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      269 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/db/sqlite/db/models.py
+--rwxr-xr-x   0 runner    (1001) docker     (122)     1059 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/main.py
+--rw-r--r--   0 runner    (1001) docker     (122)      466 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/manage.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/managers/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/managers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      870 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/managers/proxies.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1060 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/managers/sandbox.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/orchestration/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/orchestration/executor/
+--rw-r--r--   0 runner    (1001) docker     (122)      908 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/executor/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.941732 haupt-1.0.0rc2/haupt/orchestration/executor/handlers/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/executor/handlers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3960 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/executor/handlers/run.py
+--rw-r--r--   0 runner    (1001) docker     (122)      322 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/executor/manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1658 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/executor/service.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.945731 haupt-1.0.0rc2/haupt/orchestration/executor/subscriptions/
+--rw-r--r--   0 runner    (1001) docker     (122)      334 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/executor/subscriptions/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      663 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/executor/subscriptions/run.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.945731 haupt-1.0.0rc2/haupt/orchestration/operations/
+--rw-r--r--   0 runner    (1001) docker     (122)      734 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/operations/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)    17594 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/operations/service.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.945731 haupt-1.0.0rc2/haupt/orchestration/scheduler/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/scheduler/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     9161 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/scheduler/manager.py
+--rw-r--r--   0 runner    (1001) docker     (122)     7104 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/orchestration/scheduler/resolver.py
+--rw-r--r--   0 runner    (1001) docker     (122)      516 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/pkg.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.945731 haupt-1.0.0rc2/haupt/polyconf/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/polyconf/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      628 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/polyconf/asgi.py
+--rw-r--r--   0 runner    (1001) docker     (122)      346 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/polyconf/config_manager.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.945731 haupt-1.0.0rc2/haupt/polyconf/config_settings/
+--rw-r--r--   0 runner    (1001) docker     (122)     1062 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/polyconf/config_settings/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      554 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/polyconf/config_settings/rest.py
+--rw-r--r--   0 runner    (1001) docker     (122)      284 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/polyconf/settings.py
+--rw-r--r--   0 runner    (1001) docker     (122)      412 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/polyconf/urls.py
+--rw-r--r--   0 runner    (1001) docker     (122)      627 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/polyconf/wsgi.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.945731 haupt-1.0.0rc2/haupt/proxies/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.945731 haupt-1.0.0rc2/haupt/proxies/generators/
+--rw-r--r--   0 runner    (1001) docker     (122)      496 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/generators/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      677 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/generators/api.py
+--rw-r--r--   0 runner    (1001) docker     (122)      411 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/generators/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)      503 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/generators/forward.py
+--rw-r--r--   0 runner    (1001) docker     (122)      834 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/generators/gateway.py
+--rw-r--r--   0 runner    (1001) docker     (122)      685 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/generators/streams.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.949732 haupt-1.0.0rc2/haupt/proxies/schemas/
+--rw-r--r--   0 runner    (1001) docker     (122)      334 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/__init__.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.949732 haupt-1.0.0rc2/haupt/proxies/schemas/api/
+--rw-r--r--   0 runner    (1001) docker     (122)      290 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/api/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      971 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/api/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1604 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/api/uwsgi.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2211 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/auth.py
+--rw-r--r--   0 runner    (1001) docker     (122)      735 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)      488 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/buffering.py
+--rw-r--r--   0 runner    (1001) docker     (122)      392 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/charset.py
+--rw-r--r--   0 runner    (1001) docker     (122)      919 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/dns.py
+--rw-r--r--   0 runner    (1001) docker     (122)      523 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/error_page.py
+--rw-r--r--   0 runner    (1001) docker     (122)      449 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/favicon.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1504 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/forward.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.949732 haupt-1.0.0rc2/haupt/proxies/schemas/gateway/
+--rw-r--r--   0 runner    (1001) docker     (122)      365 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/gateway/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3348 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/gateway/api.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2043 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/gateway/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)      515 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/gateway/healthz.py
+--rw-r--r--   0 runner    (1001) docker     (122)      623 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/gateway/redirect.py
+--rw-r--r--   0 runner    (1001) docker     (122)      507 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/gzip.py
+--rw-r--r--   0 runner    (1001) docker     (122)      648 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/listen.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3286 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/locations.py
+--rw-r--r--   0 runner    (1001) docker     (122)      666 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/logging.py
+--rw-r--r--   0 runner    (1001) docker     (122)      439 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/robots.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3208 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/scaffold.py
+--rw-r--r--   0 runner    (1001) docker     (122)      993 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/server.py
+--rw-r--r--   0 runner    (1001) docker     (122)     6515 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/services.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1283 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/ssl.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.949732 haupt-1.0.0rc2/haupt/proxies/schemas/streams/
+--rw-r--r--   0 runner    (1001) docker     (122)      294 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/streams/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2428 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/streams/api.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1667 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/streams/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1192 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/streams/k8s.py
+--rw-r--r--   0 runner    (1001) docker     (122)      667 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/timeout.py
+--rw-r--r--   0 runner    (1001) docker     (122)      924 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/proxies/schemas/urls.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.949732 haupt-1.0.0rc2/haupt/schemas/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/schemas/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     9425 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/schemas/proxies_config.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2235 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/schemas/sandbox_config.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1198 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/settings.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.909731 haupt-1.0.0rc2/haupt/static/
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.909731 haupt-1.0.0rc2/haupt/static/v1/
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.909731 haupt-1.0.0rc2/haupt/static/v1/dist/
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.949732 haupt-1.0.0rc2/haupt/static/v1/dist/css/
+--rw-r--r--   0 runner    (1001) docker     (122)     5905 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/css/global.min.css
+--rw-r--r--   0 runner    (1001) docker     (122)     2527 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/css/global_modal.min.css
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.957732 haupt-1.0.0rc2/haupt/static/v1/dist/js/
+--rw-r--r--   0 runner    (1001) docker     (122)  3767008 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/js/0.bundle.js
+--rw-r--r--   0 runner    (1001) docker     (122)     2940 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/js/1.bundle.js
+--rw-r--r--   0 runner    (1001) docker     (122)   409974 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/js/2.bundle.js
+--rw-r--r--   0 runner    (1001) docker     (122)   237559 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/js/3.bundle.js
+--rw-r--r--   0 runner    (1001) docker     (122)   408798 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/js/4.bundle.js
+--rw-r--r--   0 runner    (1001) docker     (122)   410133 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/js/5.bundle.js
+--rw-r--r--   0 runner    (1001) docker     (122)   411309 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/js/6.bundle.js
+--rw-r--r--   0 runner    (1001) docker     (122)  2307568 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/dist/js/7.bundle.js
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.957732 haupt-1.0.0rc2/haupt/static/v1/errors/
+--rw-r--r--   0 runner    (1001) docker     (122)     1085 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/errors/404.html
+--rw-r--r--   0 runner    (1001) docker     (122)     1068 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/errors/50x.html
+--rw-r--r--   0 runner    (1001) docker     (122)     1088 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/errors/permission.html
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.961732 haupt-1.0.0rc2/haupt/static/v1/images/
+--rw-r--r--   0 runner    (1001) docker     (122)    25380 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/403.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    13004 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/404.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    15858 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/50x.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    15086 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-danger.ico
+--rw-r--r--   0 runner    (1001) docker     (122)      768 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-danger.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    15086 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-primary.ico
+--rw-r--r--   0 runner    (1001) docker     (122)      768 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-primary.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    15086 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-running.ico
+--rw-r--r--   0 runner    (1001) docker     (122)      768 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-running.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    15086 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-stopped.ico
+--rw-r--r--   0 runner    (1001) docker     (122)      768 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-stopped.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    15086 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-success.ico
+--rw-r--r--   0 runner    (1001) docker     (122)      768 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-success.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    15086 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-warning.ico
+--rw-r--r--   0 runner    (1001) docker     (122)      768 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon-warning.svg
+--rw-r--r--   0 runner    (1001) docker     (122)     7406 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon.ico
+--rw-r--r--   0 runner    (1001) docker     (122)      873 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/favicon.svg
+--rw-r--r--   0 runner    (1001) docker     (122)     1299 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/logo_small.png
+--rw-r--r--   0 runner    (1001) docker     (122)     1474 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/images/logo_white.svg
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.909731 haupt-1.0.0rc2/haupt/static/v1/vendors/
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.961732 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.961732 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/dosis/
+--rw-r--r--   0 runner    (1001) docker     (122)     4506 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/dosis/OFL.txt
+--rw-r--r--   0 runner    (1001) docker     (122)    27069 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/dosis/dosis-v8-latin-500.eot
+--rw-r--r--   0 runner    (1001) docker     (122)    71085 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/dosis/dosis-v8-latin-500.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    66980 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/dosis/dosis-v8-latin-500.ttf
+--rw-r--r--   0 runner    (1001) docker     (122)    32948 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/dosis/dosis-v8-latin-500.woff
+--rw-r--r--   0 runner    (1001) docker     (122)    26508 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/dosis/dosis-v8-latin-500.woff2
+--rw-r--r--   0 runner    (1001) docker     (122)     5327 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/fonts.css
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.961732 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-code-pro/
+--rw-r--r--   0 runner    (1001) docker     (122)    15526 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-code-pro/source-code-pro-v10-latin-regular.eot
+--rw-r--r--   0 runner    (1001) docker     (122)    61056 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-code-pro/source-code-pro-v10-latin-regular.svg
+--rw-r--r--   0 runner    (1001) docker     (122)    30816 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-code-pro/source-code-pro-v10-latin-regular.ttf
+--rw-r--r--   0 runner    (1001) docker     (122)    17252 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-code-pro/source-code-pro-v10-latin-regular.woff
+--rw-r--r--   0 runner    (1001) docker     (122)    13436 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-code-pro/source-code-pro-v10-latin-regular.woff2
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.965732 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/
+--rw-r--r--   0 runner    (1001) docker     (122)     4420 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/OFL.txt
+--rw-r--r--   0 runner    (1001) docker     (122)    77083 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-300.eot
+--rw-r--r--   0 runner    (1001) docker     (122)    60850 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-300.svg
+--rw-r--r--   0 runner    (1001) docker     (122)   184424 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-300.ttf
+--rw-r--r--   0 runner    (1001) docker     (122)    80588 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-300.woff
+--rw-r--r--   0 runner    (1001) docker     (122)    62208 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-300.woff2
+--rw-r--r--   0 runner    (1001) docker     (122)    77159 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-600.eot
+--rw-r--r--   0 runner    (1001) docker     (122)    58839 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-600.svg
+--rw-r--r--   0 runner    (1001) docker     (122)   183688 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-600.ttf
+--rw-r--r--   0 runner    (1001) docker     (122)    80556 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-600.woff
+--rw-r--r--   0 runner    (1001) docker     (122)    62104 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-600.woff2
+--rw-r--r--   0 runner    (1001) docker     (122)    77546 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-regular.eot
+--rw-r--r--   0 runner    (1001) docker     (122)    60072 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-regular.svg
+--rw-r--r--   0 runner    (1001) docker     (122)   184592 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-regular.ttf
+--rw-r--r--   0 runner    (1001) docker     (122)    81008 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-regular.woff
+--rw-r--r--   0 runner    (1001) docker     (122)    62688 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/fonts/source-sans-pro/source-sans-pro-v12-latin-ext_cyrillic-ext_cyrillic_greek_greek-ext_latin-regular.woff2
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.973732 haupt-1.0.0rc2/haupt/static/v1/vendors/js/
+--rw-r--r--   0 runner    (1001) docker     (122)   799376 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/bokeh.2.4.2.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)    24508 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/create-plotly-component.2.5.1.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)   100277 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/highlight.10.1.2.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)     7051 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/moment-timezone.0.5.32.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)    58863 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/moment.2.29.1.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)  3664053 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/plotly.2.9.0.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)   120585 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/react-dom.production.17.0.2.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)    11440 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/react.production.17.0.2.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)    56197 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/vega-embed@6.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)   267407 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/vega-lite@4.min.js
+--rw-r--r--   0 runner    (1001) docker     (122)   494375 2022-11-23 12:40:35.000000 haupt-1.0.0rc2/haupt/static/v1/vendors/js/vega@5.min.js
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.973732 haupt-1.0.0rc2/haupt/streams/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      375 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/apps.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.973732 haupt-1.0.0rc2/haupt/streams/connections/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/connections/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)      781 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/connections/fs.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.973732 haupt-1.0.0rc2/haupt/streams/controllers/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/controllers/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     8408 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/controllers/events.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1913 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/controllers/k8s_check.py
+--rw-r--r--   0 runner    (1001) docker     (122)      605 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/controllers/k8s_crd.py
+--rw-r--r--   0 runner    (1001) docker     (122)      661 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/controllers/k8s_pods.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3461 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/controllers/logs.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1210 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/controllers/notebooks.py
+--rw-r--r--   0 runner    (1001) docker     (122)     3677 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/controllers/uploads.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.973732 haupt-1.0.0rc2/haupt/streams/endpoints/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     8499 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/artifacts.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1434 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/base.py
+--rw-r--r--   0 runner    (1001) docker     (122)     6792 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/events.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2795 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/k8s.py
+--rw-r--r--   0 runner    (1001) docker     (122)     5425 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/logs.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2558 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/notifications.py
+--rw-r--r--   0 runner    (1001) docker     (122)     5838 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/sandbox.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2218 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/endpoints/utils.py
+--rw-r--r--   0 runner    (1001) docker     (122)     1281 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/patterns.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.973732 haupt-1.0.0rc2/haupt/streams/tasks/
+--rw-r--r--   0 runner    (1001) docker     (122)      230 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/tasks/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2801 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/tasks/logs.py
+--rw-r--r--   0 runner    (1001) docker     (122)     2271 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/haupt/streams/tasks/notification.py
+-drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:42.909731 haupt-1.0.0rc2/haupt.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (122)     1346 2022-11-23 12:40:42.000000 haupt-1.0.0rc2/haupt.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (122)    17979 2022-11-23 12:40:42.000000 haupt-1.0.0rc2/haupt.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (122)        1 2022-11-23 12:40:42.000000 haupt-1.0.0rc2/haupt.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (122)       42 2022-11-23 12:40:42.000000 haupt-1.0.0rc2/haupt.egg-info/entry_points.txt
+--rw-r--r--   0 runner    (1001) docker     (122)      464 2022-11-23 12:40:42.000000 haupt-1.0.0rc2/haupt.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (122)        6 2022-11-23 12:40:42.000000 haupt-1.0.0rc2/haupt.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (122)     1271 2022-11-23 12:40:42.977732 haupt-1.0.0rc2/setup.cfg
+--rw-r--r--   0 runner    (1001) docker     (122)     3687 2022-11-23 12:40:34.000000 haupt-1.0.0rc2/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.099941 haupt-2.0.0rc0/
++-rw-r--r--   0 runner    (1001) docker     (123)      300 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     1907 2023-04-07 15:21:37.099941 haupt-2.0.0rc0/PKG-INFO
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.055940 haupt-2.0.0rc0/haupt/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      271 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/__main__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      993 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/apps.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/endpoints/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/endpoints/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1775 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/endpoints/project.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2994 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/endpoints/run.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/methods/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/methods/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4459 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/methods/project_resources.py
++-rw-r--r--   0 runner    (1001) docker     (123)      917 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/methods/run_lineage.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2635 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/methods/runs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2933 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/patterns.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/project_resources/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/project_resources/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1477 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/project_resources/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4541 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/project_resources/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/projects/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/projects/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      879 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/projects/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2075 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/projects/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/run_lineage/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/run_lineage/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1223 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/run_lineage/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2561 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/run_lineage/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/runs/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/runs/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1026 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/runs/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4942 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/runs/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/serializers/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2330 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/artifacts.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt/apis/serializers/base/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      660 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/cloning.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1033 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/is_managed.py
++-rw-r--r--   0 runner    (1001) docker     (123)      968 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/names.py
++-rw-r--r--   0 runner    (1001) docker     (123)      616 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/pipeline.py
++-rw-r--r--   0 runner    (1001) docker     (123)      434 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/project.py
++-rw-r--r--   0 runner    (1001) docker     (123)      523 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/settings.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1796 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/tags.py
++-rw-r--r--   0 runner    (1001) docker     (123)      484 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/base/uuid_slug_related_field.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6483 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/project_resources.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2008 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/projects.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3679 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/serializers/runs.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.063940 haupt-2.0.0rc0/haupt/apis/versions/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/versions/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      682 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/versions/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1601 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/apis/versions/views.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.063940 haupt-2.0.0rc0/haupt/background/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.063940 haupt-2.0.0rc0/haupt/background/celeryp/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/celeryp/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      476 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/celeryp/app.py
++-rw-r--r--   0 runner    (1001) docker     (123)      979 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/celeryp/polyaxon_task.py
++-rw-r--r--   0 runner    (1001) docker     (123)      753 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/celeryp/queues.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1265 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/celeryp/routes.py
++-rw-r--r--   0 runner    (1001) docker     (123)      600 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/celeryp/tasks.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.063940 haupt-2.0.0rc0/haupt/background/queues/
++-rw-r--r--   0 runner    (1001) docker     (123)      122 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/queues/scheduler
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.063940 haupt-2.0.0rc0/haupt/background/scheduler/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/scheduler/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      831 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/scheduler/apps.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.063940 haupt-2.0.0rc0/haupt/background/scheduler/tasks/
++-rw-r--r--   0 runner    (1001) docker     (123)      328 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/scheduler/tasks/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      534 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/scheduler/tasks/health.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1947 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/background/scheduler/tasks/runs.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.063940 haupt-2.0.0rc0/haupt/cli/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1587 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/proxies.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.063940 haupt-2.0.0rc0/haupt/cli/runners/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/runners/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2234 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/runners/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1309 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/runners/sandbox.py
++-rw-r--r--   0 runner    (1001) docker     (123)      884 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/runners/server.py
++-rw-r--r--   0 runner    (1001) docker     (123)      973 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/runners/streams.py
++-rw-r--r--   0 runner    (1001) docker     (123)      972 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/runners/viewer.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1139 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/sandbox.py
++-rw-r--r--   0 runner    (1001) docker     (123)      950 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/server.py
++-rw-r--r--   0 runner    (1001) docker     (123)      907 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/streams.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2448 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/cli/viewer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/apis/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      390 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/apps.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5043 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/filters.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1661 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/gzip.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/apis/index/
++-rw-r--r--   0 runner    (1001) docker     (123)     2026 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/index/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      627 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/index/errors.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1721 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/index/health.py
++-rw-r--r--   0 runner    (1001) docker     (123)      348 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/index/views.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1939 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/paginator.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1300 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/regex.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.047940 haupt-2.0.0rc0/haupt/common/apis/templates/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/apis/templates/admin/
++-rw-r--r--   0 runner    (1001) docker     (123)      866 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/templates/admin/base_site.html
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/apis/templates/base/
++-rw-r--r--   0 runner    (1001) docker     (123)     4039 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/templates/base/index.html
++-rw-r--r--   0 runner    (1001) docker     (123)     1149 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/templates/base/modal_index.html
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/templates/base/wizard_error.html
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/apis/templates/common/
++-rw-r--r--   0 runner    (1001) docker     (123)     1123 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/templates/common/root.html
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/apis/urls/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/urls/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1531 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/urls/projects.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2536 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/urls/runs.py
++-rw-r--r--   0 runner    (1001) docker     (123)      538 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/apis/urls/versions.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/auditor/
++-rw-r--r--   0 runner    (1001) docker     (123)     1017 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/auditor/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      322 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/auditor/manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1862 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/auditor/service.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/checks/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/checks/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      314 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/checks/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      289 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/checks/health_task.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1161 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/checks/results.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/commands/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/commands/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      365 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/commands/apps.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.067940 haupt-2.0.0rc0/haupt/common/commands/management/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/commands/management/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.071940 haupt-2.0.0rc0/haupt/common/commands/management/commands/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/commands/management/commands/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      544 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/commands/management/commands/create_exchange.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5129 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/commands/management/commands/createuser.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1317 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/commands/management/commands/tables.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.071940 haupt-2.0.0rc0/haupt/common/conf/
++-rw-r--r--   0 runner    (1001) docker     (123)      844 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      333 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/conf_manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)      278 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/exceptions.py
++-rw-r--r--   0 runner    (1001) docker     (123)      704 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/handler.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.071940 haupt-2.0.0rc0/haupt/common/conf/handlers/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/handlers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1185 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/handlers/env_handler.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1572 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/handlers/settings_handler.py
++-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/option_manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4822 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/option_service.py
++-rw-r--r--   0 runner    (1001) docker     (123)      690 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/conf/service.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6924 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/config_manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)      413 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/content_types.py
++-rw-r--r--   0 runner    (1001) docker     (123)      445 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/crypto.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.071940 haupt-2.0.0rc0/haupt/common/endpoints/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/endpoints/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6497 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/endpoints/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      403 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/endpoints/exceptions.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1262 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/endpoints/files.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1993 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/endpoints/mixins.py
++-rw-r--r--   0 runner    (1001) docker     (123)      372 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/endpoints/utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1003 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/endpoints/validation.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.071940 haupt-2.0.0rc0/haupt/common/events/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.071940 haupt-2.0.0rc0/haupt/common/events/auditor_subscriptions/
++-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/auditor_subscriptions/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1331 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/auditor_subscriptions/run.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8159 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/event.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1223 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/event_actions.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4204 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/event_context.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1787 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/event_manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1689 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/event_service.py
++-rw-r--r--   0 runner    (1001) docker     (123)      279 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/event_subjects.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.071940 haupt-2.0.0rc0/haupt/common/events/registry/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/registry/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2303 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/registry/attributes.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6525 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/events/registry/run.py
++-rw-r--r--   0 runner    (1001) docker     (123)      372 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/exceptions.py
++-rw-r--r--   0 runner    (1001) docker     (123)      673 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/hashing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3008 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/headers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1865 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/internal_auth.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2457 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/json_utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1829 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/memory_manager.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.075940 haupt-2.0.0rc0/haupt/common/options/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      305 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/cache.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.075940 haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/
++-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      416 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/containers.py
++-rw-r--r--   0 runner    (1001) docker     (123)      797 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/core.py
++-rw-r--r--   0 runner    (1001) docker     (123)      589 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/installation.py
++-rw-r--r--   0 runner    (1001) docker     (123)      374 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/k8s.py
++-rw-r--r--   0 runner    (1001) docker     (123)      359 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/scheduler.py
++-rw-r--r--   0 runner    (1001) docker     (123)      351 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/stats.py
++-rw-r--r--   0 runner    (1001) docker     (123)      280 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/exceptions.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1849 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/feature.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3023 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/option.py
++-rw-r--r--   0 runner    (1001) docker     (123)      837 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/option_manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)      427 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/option_namespaces.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1271 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/option_owners.py
++-rw-r--r--   0 runner    (1001) docker     (123)      375 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/option_subjects.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.075940 haupt-2.0.0rc0/haupt/common/options/registry/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/registry/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1946 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/registry/containers.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4593 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/registry/core.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2200 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/registry/installation.py
++-rw-r--r--   0 runner    (1001) docker     (123)      936 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/registry/k8s.py
++-rw-r--r--   0 runner    (1001) docker     (123)      904 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/registry/scheduler.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1005 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/options/registry/stats.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.075940 haupt-2.0.0rc0/haupt/common/query/
++-rw-r--r--   0 runner    (1001) docker     (123)      510 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/query/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      981 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/query/service.py
++-rw-r--r--   0 runner    (1001) docker     (123)      570 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/redis_db.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2552 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/service_interface.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.075940 haupt-2.0.0rc0/haupt/common/settings/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      638 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/admin.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1658 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/apps.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1814 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/assets.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3514 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/celery.py
++-rw-r--r--   0 runner    (1001) docker     (123)      936 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/context_processors.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2511 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/core.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1544 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/cors.py
++-rw-r--r--   0 runner    (1001) docker     (123)      799 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/defaults.py
++-rw-r--r--   0 runner    (1001) docker     (123)      680 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/encryption.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2440 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/logging.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1316 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/middlewares.py
++-rw-r--r--   0 runner    (1001) docker     (123)      694 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/secrets.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.075940 haupt-2.0.0rc0/haupt/common/settings/services/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/services/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1973 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/services/api.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1272 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/services/background.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1585 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/services/streams.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3987 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/settings/ui.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.075940 haupt-2.0.0rc0/haupt/common/test_cases/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/test_cases/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1718 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/test_cases/base.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.079940 haupt-2.0.0rc0/haupt/common/test_clients/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/test_clients/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2931 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/test_clients/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      459 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/user_system.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.079940 haupt-2.0.0rc0/haupt/common/validation/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/validation/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2617 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/validation/blacklist.py
++-rw-r--r--   0 runner    (1001) docker     (123)      896 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/validation/slugs.py
++-rw-r--r--   0 runner    (1001) docker     (123)      818 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/common/workers.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.079940 haupt-2.0.0rc0/haupt/db/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.079940 haupt-2.0.0rc0/haupt/db/abstracts/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1276 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/artifacts.py
++-rw-r--r--   0 runner    (1001) docker     (123)      942 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/catalogs.py
++-rw-r--r--   0 runner    (1001) docker     (123)      401 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/color.py
++-rw-r--r--   0 runner    (1001) docker     (123)      491 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/describable.py
++-rw-r--r--   0 runner    (1001) docker     (123)      474 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/diff.py
++-rw-r--r--   0 runner    (1001) docker     (123)      578 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/duration.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1238 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/getter.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1868 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/live_state.py
++-rw-r--r--   0 runner    (1001) docker     (123)      868 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/nameable.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1127 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/projects.py
++-rw-r--r--   0 runner    (1001) docker     (123)      471 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/readme.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4593 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/runs.py
++-rw-r--r--   0 runner    (1001) docker     (123)      651 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/spec.py
++-rw-r--r--   0 runner    (1001) docker     (123)      747 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/stage.py
++-rw-r--r--   0 runner    (1001) docker     (123)      529 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/state.py
++-rw-r--r--   0 runner    (1001) docker     (123)      756 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/status.py
++-rw-r--r--   0 runner    (1001) docker     (123)      870 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/tag.py
++-rw-r--r--   0 runner    (1001) docker     (123)      436 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/uid.py
++-rw-r--r--   0 runner    (1001) docker     (123)      454 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/abstracts/visibility.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.079940 haupt-2.0.0rc0/haupt/db/administration/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/administration/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      608 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/administration/artifacts.py
++-rw-r--r--   0 runner    (1001) docker     (123)      767 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/administration/projects.py
++-rw-r--r--   0 runner    (1001) docker     (123)      836 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/administration/register.py
++-rw-r--r--   0 runner    (1001) docker     (123)      800 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/administration/runs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1564 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/administration/utils.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.083940 haupt-2.0.0rc0/haupt/db/factories/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/factories/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      610 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/factories/artifacts.py
++-rw-r--r--   0 runner    (1001) docker     (123)      464 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/factories/projects.py
++-rw-r--r--   0 runner    (1001) docker     (123)      662 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/factories/runs.py
++-rw-r--r--   0 runner    (1001) docker     (123)      853 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/factories/users.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.083940 haupt-2.0.0rc0/haupt/db/managers/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/managers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3539 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/managers/artifacts.py
++-rw-r--r--   0 runner    (1001) docker     (123)      842 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/managers/deleted.py
++-rw-r--r--   0 runner    (1001) docker     (123)      735 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/managers/dummy_key.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2011 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/managers/runs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6105 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/managers/statuses.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.083940 haupt-2.0.0rc0/haupt/db/mixins/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/mixins/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      562 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/mixins/cache.py
++-rw-r--r--   0 runner    (1001) docker     (123)      731 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/mixins/singleton.py
++-rw-r--r--   0 runner    (1001) docker     (123)      330 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/mixins/sub_paths.py
++-rw-r--r--   0 runner    (1001) docker     (123)      398 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/mixins/unique_name.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.083940 haupt-2.0.0rc0/haupt/db/models/
++-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/models/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      647 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/models/artifacts.py
++-rw-r--r--   0 runner    (1001) docker     (123)      404 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/models/projects.py
++-rw-r--r--   0 runner    (1001) docker     (123)      380 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/models/runs.py
++-rw-r--r--   0 runner    (1001) docker     (123)      438 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/models/users.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.083940 haupt-2.0.0rc0/haupt/db/pgsql/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.083940 haupt-2.0.0rc0/haupt/db/pgsql/db/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      403 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/apps.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.083940 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/
++-rw-r--r--   0 runner    (1001) docker     (123)    20787 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0001_initial.py
++-rw-r--r--   0 runner    (1001) docker     (123)      529 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0002_auto_20200807_1247.py
++-rw-r--r--   0 runner    (1001) docker     (123)      785 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0003_run_pipeline.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1259 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0004_auto_20200905_1523.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1972 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0005_auto_20201005_0913.py
++-rw-r--r--   0 runner    (1001) docker     (123)      912 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0006_auto_20201020_1705.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3399 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0007_auto_20201121_1332.py
++-rw-r--r--   0 runner    (1001) docker     (123)      989 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0008_run_wait_time.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1111 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0009_project_unique_name.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1077 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0010_auto_20210429_1539.py
++-rw-r--r--   0 runner    (1001) docker     (123)      563 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0011_alter_artifact_state.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1840 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0012_alter_artifact_updated_at_and_more.py
++-rw-r--r--   0 runner    (1001) docker     (123)      595 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0013_alter_artifact_name.py
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      269 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/pgsql/db/models.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/db/queries/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/queries/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2025 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/queries/artifacts.py
++-rw-r--r--   0 runner    (1001) docker     (123)      324 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/queries/projects.py
++-rw-r--r--   0 runner    (1001) docker     (123)      830 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/queries/runs.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/db/query_managers/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/query_managers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1508 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/query_managers/artifact.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3277 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/query_managers/callback_conditions.py
++-rw-r--r--   0 runner    (1001) docker     (123)      434 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/query_managers/manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1891 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/query_managers/project.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8687 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/query_managers/run.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/db/signals/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/signals/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1069 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/signals/runs.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/db/sqlite/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/sqlite/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/db/sqlite/db/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/sqlite/db/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      404 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/sqlite/db/apps.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/db/sqlite/db/migrations/
++-rw-r--r--   0 runner    (1001) docker     (123)    22205 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/sqlite/db/migrations/0001_initial.py
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/sqlite/db/migrations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      269 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/db/sqlite/db/models.py
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1030 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/main.py
++-rw-r--r--   0 runner    (1001) docker     (123)      466 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/manage.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/managers/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/managers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      877 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/managers/proxies.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1033 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/managers/sandbox.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/orchestration/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/orchestration/executor/
++-rw-r--r--   0 runner    (1001) docker     (123)      908 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/executor/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/orchestration/executor/handlers/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/executor/handlers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3960 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/executor/handlers/run.py
++-rw-r--r--   0 runner    (1001) docker     (123)      322 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/executor/manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1652 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/executor/service.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/orchestration/executor/subscriptions/
++-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/executor/subscriptions/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      663 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/executor/subscriptions/run.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/orchestration/operations/
++-rw-r--r--   0 runner    (1001) docker     (123)      734 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/operations/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18171 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/operations/service.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.087941 haupt-2.0.0rc0/haupt/orchestration/scheduler/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/scheduler/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9211 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/scheduler/manager.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7206 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/orchestration/scheduler/resolver.py
++-rw-r--r--   0 runner    (1001) docker     (123)      486 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/pkg.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.091941 haupt-2.0.0rc0/haupt/polyconf/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.091941 haupt-2.0.0rc0/haupt/polyconf/asgi/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/asgi/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      992 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/asgi/sandbox.py
++-rw-r--r--   0 runner    (1001) docker     (123)      868 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/asgi/server.py
++-rw-r--r--   0 runner    (1001) docker     (123)      873 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/asgi/streams.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1084 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/asgi/viewer.py
++-rw-r--r--   0 runner    (1001) docker     (123)      323 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/config_manager.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.091941 haupt-2.0.0rc0/haupt/polyconf/config_settings/
++-rw-r--r--   0 runner    (1001) docker     (123)     1062 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/config_settings/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      554 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/config_settings/rest.py
++-rw-r--r--   0 runner    (1001) docker     (123)      334 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/settings.py
++-rw-r--r--   0 runner    (1001) docker     (123)      412 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/urls.py
++-rw-r--r--   0 runner    (1001) docker     (123)      627 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/polyconf/wsgi.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.091941 haupt-2.0.0rc0/haupt/proxies/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.091941 haupt-2.0.0rc0/haupt/proxies/generators/
++-rw-r--r--   0 runner    (1001) docker     (123)      496 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/generators/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      725 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/generators/api.py
++-rw-r--r--   0 runner    (1001) docker     (123)      455 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/generators/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      541 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/generators/forward.py
++-rw-r--r--   0 runner    (1001) docker     (123)      888 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/generators/gateway.py
++-rw-r--r--   0 runner    (1001) docker     (123)      733 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/generators/streams.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.091941 haupt-2.0.0rc0/haupt/proxies/schemas/
++-rw-r--r--   0 runner    (1001) docker     (123)      327 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/__init__.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.091941 haupt-2.0.0rc0/haupt/proxies/schemas/api/
++-rw-r--r--   0 runner    (1001) docker     (123)      290 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/api/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      971 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/api/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1604 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/api/uwsgi.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2366 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/auth.py
++-rw-r--r--   0 runner    (1001) docker     (123)      735 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      488 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/buffering.py
++-rw-r--r--   0 runner    (1001) docker     (123)      392 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/charset.py
++-rw-r--r--   0 runner    (1001) docker     (123)      919 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/dns.py
++-rw-r--r--   0 runner    (1001) docker     (123)      523 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/error_page.py
++-rw-r--r--   0 runner    (1001) docker     (123)      449 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/favicon.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1504 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/forward.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.095941 haupt-2.0.0rc0/haupt/proxies/schemas/gateway/
++-rw-r--r--   0 runner    (1001) docker     (123)      365 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/gateway/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3603 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/gateway/api.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1873 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/gateway/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)      515 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/gateway/healthz.py
++-rw-r--r--   0 runner    (1001) docker     (123)      623 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/gateway/redirect.py
++-rw-r--r--   0 runner    (1001) docker     (123)      507 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/gzip.py
++-rw-r--r--   0 runner    (1001) docker     (123)      648 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/listen.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3286 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/locations.py
++-rw-r--r--   0 runner    (1001) docker     (123)      666 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/logging.py
++-rw-r--r--   0 runner    (1001) docker     (123)      439 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/robots.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3328 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/scaffold.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1031 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/server.py
++-rw-r--r--   0 runner    (1001) docker     (123)     7967 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/services.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1283 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/ssl.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.095941 haupt-2.0.0rc0/haupt/proxies/schemas/streams/
++-rw-r--r--   0 runner    (1001) docker     (123)      294 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/streams/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1645 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/streams/api.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1670 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/streams/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1195 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/streams/k8s.py
++-rw-r--r--   0 runner    (1001) docker     (123)      667 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/timeout.py
++-rw-r--r--   0 runner    (1001) docker     (123)      924 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/proxies/schemas/urls.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.095941 haupt-2.0.0rc0/haupt/schemas/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/schemas/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5454 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/schemas/proxies_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1535 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/schemas/sandbox_config.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1254 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/settings.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.095941 haupt-2.0.0rc0/haupt/streams/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      534 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/apps.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.095941 haupt-2.0.0rc0/haupt/streams/connections/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/connections/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      781 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/connections/fs.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.095941 haupt-2.0.0rc0/haupt/streams/controllers/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/controllers/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8212 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/controllers/events.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1913 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/controllers/k8s_check.py
++-rw-r--r--   0 runner    (1001) docker     (123)      605 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/controllers/k8s_crd.py
++-rw-r--r--   0 runner    (1001) docker     (123)      661 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/controllers/k8s_pods.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3476 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/controllers/logs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1210 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/controllers/notebooks.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3880 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/controllers/uploads.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.095941 haupt-2.0.0rc0/haupt/streams/endpoints/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8575 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/artifacts.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5052 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/auth_request.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1433 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6819 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/events.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1886 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/k8s.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5904 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/local_sandbox.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6091 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/logs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2578 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/notifications.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2257 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/endpoints/utils.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2608 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/patterns.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.099941 haupt-2.0.0rc0/haupt/streams/tasks/
++-rw-r--r--   0 runner    (1001) docker     (123)      230 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/tasks/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2600 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/tasks/logs.py
++-rw-r--r--   0 runner    (1001) docker     (123)     2271 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/haupt/streams/tasks/notification.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:37.059940 haupt-2.0.0rc0/haupt.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     1907 2023-04-07 15:21:36.000000 haupt-2.0.0rc0/haupt.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)    13230 2023-04-07 15:21:37.000000 haupt-2.0.0rc0/haupt.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 15:21:36.000000 haupt-2.0.0rc0/haupt.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       42 2023-04-07 15:21:36.000000 haupt-2.0.0rc0/haupt.egg-info/entry_points.txt
++-rw-r--r--   0 runner    (1001) docker     (123)      443 2023-04-07 15:21:36.000000 haupt-2.0.0rc0/haupt.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        6 2023-04-07 15:21:36.000000 haupt-2.0.0rc0/haupt.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)     1298 2023-04-07 15:21:37.099941 haupt-2.0.0rc0/setup.cfg
++-rw-r--r--   0 runner    (1001) docker     (123)     4249 2023-04-07 15:21:27.000000 haupt-2.0.0rc0/setup.py
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/apps.py` & `haupt-2.0.0rc0/haupt/apis/apps.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ # isort: skip_file
+ 
+ from django.apps import AppConfig
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/endpoints/project.py` & `haupt-2.0.0rc0/haupt/apis/endpoints/project.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework.generics import get_object_or_404
+ 
+ from django.http import HttpRequest
+@@ -26,15 +26,15 @@
+     lookup_url_kwarg = PROJECT_NAME_KEY
+     CONTEXT_KEYS = (OWNER_NAME_KEY, PROJECT_NAME_KEY)
+     CONTEXT_OBJECTS = ("project",)
+ 
+     PROJECT_NAME_KEY = "name"
+     PROJECT_OWNER_NAME_KEY = OWNER_NAME_KEY
+ 
+-    def initialize_object_context(self, request: HttpRequest, *args, **kwargs) -> None:
++    def initialize_object_context(self, request: HttpRequest, *args, **kwargs):
+         #  pylint:disable=attribute-defined-outside-init
+         self.project = self.get_object()
+ 
+     def set_owner(self):
+         self._owner_id = self.project.owner.id
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/endpoints/run.py` & `haupt-2.0.0rc0/haupt/apis/endpoints/run.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.http import Http404, HttpRequest
+ from django.shortcuts import get_object_or_404
+ 
+@@ -31,15 +31,15 @@
+     def enrich_queryset(self, queryset):
+         return queryset.filter(project__name=self.project_name)
+ 
+     def set_owner(self):
+         self.project = self.run.project
+         self._owner_id = self.project.owner_id
+ 
+-    def initialize_object_context(self, request: HttpRequest, *args, **kwargs) -> None:
++    def initialize_object_context(self, request: HttpRequest, *args, **kwargs):
+         #  pylint:disable=attribute-defined-outside-init
+         self.run = self.get_object()
+ 
+ 
+ class RunResourceListEndpoint(RunEndpoint):
+     AUDITOR_EVENT_TYPES = None
+ 
+@@ -75,15 +75,15 @@
+             run__project__name=self.project_name,
+         )
+ 
+     def set_owner(self):
+         self.project = self.run_artifact.run.project
+         self._owner_id = self.project.owner_id
+ 
+-    def initialize_object_context(self, request: HttpRequest, *args, **kwargs) -> None:
++    def initialize_object_context(self, request: HttpRequest, *args, **kwargs):
+         #  pylint:disable=attribute-defined-outside-init
+         self.run_artifact = self.get_object()
+ 
+     def get_object(self):
+         queryset = self.filter_queryset(self.get_queryset())
+         try:
+             return queryset.get(artifact__name=self.artifact_name)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/methods/project_resources.py` & `haupt-2.0.0rc0/haupt/apis/methods/project_resources.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework import status
+ from rest_framework.response import Response
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/methods/run_lineage.py` & `haupt-2.0.0rc0/haupt/apis/methods/run_lineage.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,28 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from marshmallow import ValidationError as MarshmallowValidationError
++from clipped.list_utils import to_list
++from pydantic import ValidationError as PydanticValidationError
+ from rest_framework import status
+ from rest_framework.exceptions import ValidationError
+ from rest_framework.response import Response
+ 
+-from polyaxon.utils.list_utils import to_list
+ from traceml.artifacts import V1RunArtifact
+ 
+ 
+ def create(view, request, *args, **kwargs):
+     if not request.data:
+         raise ValidationError("Received no artifacts.")
+ 
+     data = to_list(request.data)
+     try:
+-        [V1RunArtifact(r) for r in data]
+-    except MarshmallowValidationError as e:
++        [V1RunArtifact.from_dict(r) for r in data]
++    except PydanticValidationError as e:
+         raise ValidationError(e)
+ 
+     view.audit(request, *args, **kwargs, artifacts=data)
+     return Response(status=status.HTTP_201_CREATED)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/methods/runs.py` & `haupt-2.0.0rc0/haupt/apis/methods/runs.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import ujson
+ 
+-from marshmallow import ValidationError as MarshmallowValidationError
++from pydantic import ValidationError as PydanticValidationError
+ from rest_framework import status
+ from rest_framework.exceptions import ValidationError
+ from rest_framework.response import Response
+ 
+ from haupt.db.managers.runs import base_approve_run
+ from haupt.db.managers.statuses import new_run_status, new_run_stopping_status
+ from polyaxon.exceptions import PolyaxonException
+@@ -33,15 +33,15 @@
+             obj=run,
+             content=content,
+             name=request.data.get("name"),
+             description=request.data.get("description"),
+             tags=request.data.get("tags"),
+             meta_info=request.data.get("meta_info"),
+         )
+-    except (MarshmallowValidationError, PolyaxonException, ValueError) as e:
++    except (PydanticValidationError, PolyaxonException, ValueError) as e:
+         raise ValidationError("Cloning was not successful, error: {}".format(e))
+ 
+     view.audit(request, *args, **kwargs)
+     serializer = view.get_serializer(new_obj)
+     return Response(status=status.HTTP_201_CREATED, data=serializer.data)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/patterns.py` & `haupt-2.0.0rc0/haupt/apis/patterns.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,24 +1,25 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.urls import include, re_path
+ 
+ from haupt.common.apis.index import get_urlpatterns, handler403, handler404, handler500
+ from haupt.common.apis.regex import OWNER_NAME_PATTERN, PROJECT_NAME_PATTERN
+ from haupt.streams.endpoints.artifacts import artifacts_routes
++from haupt.streams.endpoints.auth_request import auth_request_routes
+ from haupt.streams.endpoints.events import events_routes
+ from haupt.streams.endpoints.k8s import k8s_routes
+-from haupt.streams.endpoints.logs import logs_routes
++from haupt.streams.endpoints.logs import internal_logs_routes, logs_routes
+ from haupt.streams.endpoints.notifications import notifications_routes
+-from polyaxon.api import API_V1, STREAMS_V1
++from polyaxon.api import API_V1, AUTH_REQUEST_V1, INTERNAL_V1, STREAMS_V1
+ 
+ api_patterns = [
+     re_path(
+         r"", include(("haupt.apis.versions.urls", "versions"), namespace="versions")
+     ),
+ ]
+ 
+@@ -59,17 +60,24 @@
+     r"^{}/new.*/?".format(projects_urls),
+ ]
+ 
+ # Streams
+ streams_routes = (
+     logs_routes + k8s_routes + notifications_routes + artifacts_routes + events_routes
+ )
+-
+ app_urlpatterns = [
+     re_path(
++        r"^{}/".format(INTERNAL_V1),
++        include((internal_logs_routes, "internal-v1"), namespace="internal-v1"),
++    ),
++    re_path(
++        r"^{}/".format(AUTH_REQUEST_V1),
++        include((auth_request_routes, "auth-request-v1"), namespace="auth-request-v1"),
++    ),
++    re_path(
+         r"^{}/".format(STREAMS_V1),
+         include((streams_routes, "streams-v1"), namespace="streams-v1"),
+     ),
+     re_path(
+         r"^{}/".format(API_V1), include((api_patterns, "api-v1"), namespace="api-v1")
+     ),
+ ]
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/project_resources/urls.py` & `haupt-2.0.0rc0/haupt/apis/project_resources/urls.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework.urlpatterns import format_suffix_patterns
+ 
+ from django.urls import re_path
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/project_resources/views.py` & `haupt-2.0.0rc0/haupt/apis/project_resources/views.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from django.conf import settings
+ 
+ from haupt.apis.endpoints.project import ProjectResourceListEndpoint
+ from haupt.apis.methods import project_resources as methods
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/projects/urls.py` & `haupt-2.0.0rc0/haupt/apis/projects/urls.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework.urlpatterns import format_suffix_patterns
+ 
+ from django.urls import re_path
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/projects/views.py` & `haupt-2.0.0rc0/haupt/apis/projects/views.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from rest_framework.generics import CreateAPIView
+ 
+ from haupt.apis.endpoints.project import ProjectEndpoint
+ from haupt.apis.serializers.projects import (
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/run_lineage/urls.py` & `haupt-2.0.0rc0/haupt/apis/run_lineage/urls.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework.urlpatterns import format_suffix_patterns
+ 
+ from django.urls import re_path
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/run_lineage/views.py` & `haupt-2.0.0rc0/haupt/apis/run_lineage/views.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.apis.endpoints.run import RunArtifactEndpoint, RunResourceListEndpoint
+ from haupt.apis.methods import run_lineage as methods
+ from haupt.apis.serializers.artifacts import (
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/runs/urls.py` & `haupt-2.0.0rc0/haupt/apis/runs/urls.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework.urlpatterns import format_suffix_patterns
+ 
+ from django.urls import re_path
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/runs/views.py` & `haupt-2.0.0rc0/haupt/apis/runs/views.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from rest_framework.exceptions import ValidationError
+ from rest_framework.response import Response
+ 
+ from django.http import Http404
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/artifacts.py` & `haupt-2.0.0rc0/haupt/apis/serializers/artifacts.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework import fields, serializers
+ 
+ from haupt.db.abstracts.getter import get_lineage_model
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/base/cloning.py` & `haupt-2.0.0rc0/haupt/apis/serializers/base/cloning.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Dict, Optional
+ 
+ from rest_framework import serializers
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/base/is_managed.py` & `haupt-2.0.0rc0/haupt/apis/serializers/base/is_managed.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework import serializers
+ from rest_framework.exceptions import ValidationError
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/base/names.py` & `haupt-2.0.0rc0/haupt/apis/serializers/base/names.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework.exceptions import ValidationError
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/base/pipeline.py` & `haupt-2.0.0rc0/haupt/apis/serializers/base/pipeline.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework import serializers
+ 
+ from haupt.db.abstracts.runs import BaseRun
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/base/settings.py` & `haupt-2.0.0rc0/haupt/apis/serializers/base/settings.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework import serializers
+ 
+ from haupt.common import conf
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/base/tags.py` & `haupt-2.0.0rc0/haupt/apis/serializers/base/tags.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,26 +1,25 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from collections.abc import Mapping
+ from typing import Dict, List, Optional
+ 
+-from django.conf import settings
++from clipped.list_utils import to_list
+ 
+-from polyaxon.utils.list_utils import to_list
++from django.conf import settings
+ 
+ 
+ class TagsMixin:
+     def to_representation(self, instance):
+         representation = super().to_representation(instance)
+-        print(representation)
+         if settings.DB_ENGINE_NAME == "sqlite" and isinstance(
+             representation.get("tags"), Mapping
+         ):
+             representation["tags"] = list((representation.get("tags") or {}).keys())
+         return representation
+ 
+     def to_internal_value(self, data):
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/project_resources.py` & `haupt-2.0.0rc0/haupt/apis/serializers/project_resources.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from marshmallow import ValidationError as MarshmallowValidationError
++from pydantic import ValidationError as PydanticValidationError
+ from rest_framework import fields, serializers
+ from rest_framework.exceptions import ValidationError
+ 
+ from django.db import IntegrityError
+ 
+ from haupt.apis.serializers.base.cloning import CloningMixin
+ from haupt.apis.serializers.base.is_managed import IsManagedMixin
+@@ -184,15 +184,15 @@
+                     tags=tags,
+                     meta_info=meta_info,
+                     is_managed=is_managed,
+                     pending=pending,
+                     supported_kinds=validated_data.get("supported_kinds"),
+                     supported_owners=validated_data.get("supported_owners"),
+                 )
+-            except (MarshmallowValidationError, PolyaxonException, ValueError) as e:
++            except (PydanticValidationError, PolyaxonException, ValueError) as e:
+                 raise ValidationError(e)
+         else:
+             return create_run(
+                 project_id=project_id,
+                 user_id=user.id if user else None,
+                 name=name,
+                 description=description,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/projects.py` & `haupt-2.0.0rc0/haupt/apis/serializers/projects.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework import fields, serializers
+ from rest_framework.exceptions import ValidationError
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/serializers/runs.py` & `haupt-2.0.0rc0/haupt/apis/serializers/runs.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework import fields, serializers
+ 
+ from haupt.apis.serializers.base.is_managed import IsManagedMixin
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/versions/urls.py` & `haupt-2.0.0rc0/haupt/apis/versions/urls.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework.urlpatterns import format_suffix_patterns
+ 
+ from django.urls import re_path
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/apis/versions/views.py` & `haupt-2.0.0rc0/haupt/apis/versions/views.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from rest_framework import status
+ from rest_framework.response import Response
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/background/celeryp/polyaxon_task.py` & `haupt-2.0.0rc0/haupt/background/celeryp/polyaxon_task.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import logging
+ 
+ from celery import Task
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/background/celeryp/queues.py` & `haupt-2.0.0rc0/haupt/background/celeryp/queues.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ 
+ class CeleryCoreQueues:
+     """Celery Core Queues.
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/background/celeryp/routes.py` & `haupt-2.0.0rc0/haupt/background/celeryp/routes.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.background.celeryp.queues import CeleryCoreQueues
+ from haupt.background.celeryp.tasks import CoreSchedulerCeleryTasks
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/background/celeryp/tasks.py` & `haupt-2.0.0rc0/haupt/background/celeryp/tasks.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ 
+ class CoreSchedulerCeleryTasks:
+     """Scheduler celery tasks.
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/background/scheduler/apps.py` & `haupt-2.0.0rc0/haupt/background/scheduler/apps.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.apps import AppConfig
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/background/scheduler/tasks/health.py` & `haupt-2.0.0rc0/haupt/background/scheduler/tasks/health.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.background.celeryp.tasks import CoreSchedulerCeleryTasks
+ from haupt.common import workers
+ from haupt.common.checks import health_task
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/background/scheduler/tasks/runs.py` & `haupt-2.0.0rc0/haupt/background/scheduler/tasks/runs.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import logging
+ 
+ from typing import Dict, List
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/cli/proxies.py` & `haupt-2.0.0rc0/haupt/cli/proxies.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import os
+ 
+ import click
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/cli/runners/base.py` & `haupt-2.0.0rc0/haupt/cli/runners/base.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,29 +1,34 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import logging
+ import os
+ 
++from clipped.workers_utils import get_core_workers
++
+ import uvicorn
+ 
+-from polyaxon.utils.workers_utils import get_core_workers
++from polyaxon.env_vars.keys import EV_KEYS_PROXY_LOCAL_PORT
+ 
+ _logger = logging.getLogger("haupt.cli")
+ 
+ 
+ def migrate(
+     migrate_tables: bool = False,
+     migrate_db: bool = False,
+ ):
+     from django.core.management import execute_from_command_line
+ 
++    # Required env var to trigger a management command
++    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "haupt.polyconf.settings")
++
+     if migrate_tables:
+         argv = ["manage.py", "tables"]
+         _logger.info("Starting tables migration ...")
+         execute_from_command_line(argv)
+         _logger.info("Tables were migrated correctly!")
+ 
+     if migrate_db:
+@@ -31,31 +36,33 @@
+         execute_from_command_line(argv)
+         _logger.info("DB Migration finished!")
+ 
+ 
+ def start_app(
+     app,
+     app_name,
+-    host: str = None,
+-    port: int = None,
+-    log_level: str = None,
+-    workers: int = None,
++    host: Optional[str] = None,
++    port: Optional[int] = None,
++    log_level: Optional[str] = None,
++    workers: Optional[int] = None,
+     per_core: bool = False,
+-    uds: str = None,
++    max_workers: Optional[int] = None,
++    uds: Optional[str] = None,
+     migrate_tables: bool = False,
+     migrate_db: bool = False,
+ ):
+     migrate(migrate_tables=migrate_tables, migrate_db=migrate_db)
+     host = host or "0.0.0.0"
+     port = int(port or 8000)
++    os.environ[EV_KEYS_PROXY_LOCAL_PORT] = str(port)
+     log_level = log_level or "warning"
+     if per_core:
+-        workers = get_core_workers(per_core=workers or 2)
++        workers = get_core_workers(per_core=workers or 2, max_workers=max_workers)
+     else:
+-        workers = workers or get_core_workers(per_core=2)
++        workers = workers or get_core_workers(per_core=2, max_workers=max_workers)
+ 
+         _logger.info(
+             "{app_name} is running on http://{host}:{port} in process {pid}".format(
+                 app_name=app_name, host=host, port=port, pid=os.getpid()
+             )
+         )
+     uvicorn.run(
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/cli/runners/sandbox.py` & `haupt-2.0.0rc0/haupt/cli/runners/sandbox.py`
+
+ * *Files 23% similar despite different names*
+
+```diff
+@@ -1,34 +1,41 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++import os
++
++from typing import Optional
++
+ from haupt import settings
+ from haupt.cli.runners.base import start_app
+ from polyaxon import settings as plx_settings
++from polyaxon.env_vars.keys import EV_KEYS_SERVICE
+ from polyaxon.services.values import PolyaxonServices
+ 
+ 
+ def start(
+-    host: str = None,
+-    port: int = None,
+-    log_level: str = None,
+-    workers: int = None,
++    host: Optional[str] = None,
++    port: Optional[int] = None,
++    log_level: Optional[str] = None,
++    workers: Optional[int] = None,
+     per_core: bool = False,
+-    uds: str = None,
++    uds: Optional[str] = None,
+ ):
++    os.environ[EV_KEYS_SERVICE] = PolyaxonServices.API
+     settings.set_sandbox_config()
+-
++    host = host or settings.SANDBOX_CONFIG.host
++    port = port or settings.SANDBOX_CONFIG.port
+     start_app(
+-        app="haupt.polyconf.asgi:application",
++        app="haupt.polyconf.asgi.sandbox:application",
+         app_name=PolyaxonServices.SANDBOX,
+-        host=host or settings.SANDBOX_CONFIG.host,
+-        port=port or settings.SANDBOX_CONFIG.port,
++        host=host,
++        port=port,
+         log_level=log_level or plx_settings.CLIENT_CONFIG.log_level,
+         workers=workers or settings.SANDBOX_CONFIG.workers,
+         per_core=per_core or settings.SANDBOX_CONFIG.per_core,
+         uds=uds,
+         migrate_tables=True,
+         migrate_db=True,
+     )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/cli/runners/server.py` & `haupt-2.0.0rc0/haupt/cli/runners/server.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,27 +1,31 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++import os
++
++from typing import Optional
++
+ from haupt.cli.runners.base import start_app
+ from polyaxon.services.values import PolyaxonServices
+ 
+ 
+ def start(
+-    host: str = None,
+-    port: int = None,
+-    log_level: str = None,
+-    workers: int = None,
++    host: Optional[str] = None,
++    port: Optional[int] = None,
++    log_level: Optional[str] = None,
++    workers: Optional[int] = None,
+     per_core: bool = False,
+-    uds: str = None,
++    uds: Optional[str] = None,
+ ):
+     start_app(
+-        app="haupt.polyconf.asgi:application",
++        app="haupt.polyconf.asgi.server:application",
+         app_name=PolyaxonServices.API,
+         host=host,
+         port=port,
+         log_level=log_level,
+         workers=workers,
+         per_core=per_core,
+         uds=uds,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/cli/runners/streams.py` & `haupt-2.0.0rc0/haupt/cli/server.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,29 +1,46 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from haupt.cli.runners.base import start_app
+-from polyaxon.services.values import PolyaxonServices
++import click
+ 
+ 
+-def start(
+-    host: str = None,
+-    port: int = None,
+-    log_level: str = None,
+-    workers: int = None,
+-    per_core: bool = False,
+-    uds: str = None,
+-):
+-    start_app(
+-        app="haupt.polyconf.asgi:application",
+-        app_name=PolyaxonServices.STREAMS,
++@click.command()
++@click.option(
++    "--host",
++    help="The service host.",
++)
++@click.option(
++    "--port",
++    type=int,
++    help="The service port.",
++)
++@click.option(
++    "--workers",
++    type=int,
++    help="Number of workers.",
++)
++@click.option(
++    "--per-core",
++    is_flag=True,
++    default=False,
++    help="To enable workers per core.",
++)
++@click.option(
++    "--uds",
++    help="UNIX domain socket binding.",
++)
++def server(host: str, port: int, workers: int, per_core: bool, uds: str):
++    """Start a new sever session."""
++    from haupt.cli.runners.server import start
++
++    return start(
+         host=host,
+         port=port,
+-        log_level=log_level,
+         workers=workers,
+         per_core=per_core,
+         uds=uds,
+     )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/cli/sandbox.py` & `haupt-2.0.0rc0/haupt/cli/sandbox.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,33 +1,19 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++
+ import os
+ 
+ import click
+ 
+ 
+-def start_sandbox(
+-    host: str, port: int, workers: int, per_core: bool, path: str, uds: str
+-):
+-    """Start sandbox service."""
+-    from haupt.cli.runners.sandbox import start
+-    from polyaxon.env_vars.keys import EV_KEYS_SANDBOX_ROOT, EV_KEYS_SERVICE
+-    from polyaxon.services.values import PolyaxonServices
+-
+-    os.environ[EV_KEYS_SERVICE] = PolyaxonServices.SANDBOX
+-    if path:
+-        os.environ[EV_KEYS_SANDBOX_ROOT] = path
+-
+-    start(host=host, port=port, workers=workers, per_core=per_core, uds=uds)
+-
+-
+ @click.command()
+ @click.option(
+     "--host",
+     help="The service host.",
+ )
+ @click.option(
+     "--port",
+@@ -49,12 +35,23 @@
+     "--path",
+     help="The service host.",
+ )
+ @click.option(
+     "--uds",
+     help="UNIX domain socket binding.",
+ )
+-def sandbox(host: str, port: int, workers: int, per_core: bool, path: str, uds: str):
++def sandbox(
++    host: str,
++    port: int,
++    workers: int,
++    per_core: bool,
++    path: str,
++    uds: str,
++):
+     """Start a new sandbox session."""
+-    return start_sandbox(
+-        host=host, port=port, workers=workers, per_core=per_core, path=path, uds=uds
+-    )
++    from haupt.cli.runners.sandbox import start
++    from polyaxon.env_vars.keys import EV_KEYS_SANDBOX_ROOT
++
++    if path:
++        os.environ[EV_KEYS_SANDBOX_ROOT] = path
++
++    return start(host=host, port=port, workers=workers, per_core=per_core, uds=uds)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/cli/server.py` & `haupt-2.0.0rc0/haupt/cli/streams.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,24 +1,17 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import click
+ 
+ 
+-def start_server(host: str, port: int, workers: int, per_core: bool, uds: str):
+-    """Start sandbox service."""
+-    from haupt.cli.runners.server import start
+-
+-    start(host=host, port=port, workers=workers, per_core=per_core, uds=uds)
+-
+-
+ @click.command()
+ @click.option(
+     "--host",
+     help="The service host.",
+ )
+ @click.option(
+     "--port",
+@@ -36,16 +29,12 @@
+     default=False,
+     help="To enable workers per core.",
+ )
+ @click.option(
+     "--uds",
+     help="UNIX domain socket binding.",
+ )
+-def server(host: str, port: int, workers: int, per_core: bool, uds: str):
+-    """Start a new sandbox session."""
+-    return start_server(
+-        host=host,
+-        port=port,
+-        workers=workers,
+-        per_core=per_core,
+-        uds=uds,
+-    )
++def streams(host: str, port: int, workers: int, per_core: bool, uds: str):
++    """Start a new streams session."""
++    from haupt.cli.runners.streams import start
++
++    return start(host=host, port=port, workers=workers, per_core=per_core, uds=uds)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/filters.py` & `haupt-2.0.0rc0/haupt/common/apis/filters.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++from clipped.string_utils import strip_spaces
+ from rest_framework.exceptions import ValidationError
+ from rest_framework.filters import BaseFilterBackend
+ from rest_framework.filters import OrderingFilter as BaseOrderingFilter
+ 
+ from django.core.exceptions import ImproperlyConfigured
+ from django.db.models import F
+ from django.db.models.fields.json import KeyTransform
+ 
+ from haupt.common import query
+ from polyaxon.exceptions import PQLException
+-from polyaxon.utils.string_utils import strip_spaces
+ 
+ 
+ class QueryFilter(BaseFilterBackend):
+     # The URL query parameter used for the ordering.
+     query_param = "query"
+     query_manager = None
+     check_alive = False
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/gzip.py` & `haupt-2.0.0rc0/haupt/common/apis/gzip.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,22 +1,19 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from functools import wraps
+ 
+ from django.utils.text import compress_string
+ 
+-try:
+-    import config
+-except ImportError:
+-    config = None
++from haupt.polyconf.config_manager import config
+ 
+ 
+ class GzipDecorator:
+     """Gzip the response and set the respective header."""
+ 
+     def __call__(self, func):
+         @wraps(func)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/index/__init__.py` & `haupt-2.0.0rc0/haupt/common/apis/index/__init__.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from typing import List
++from typing import List, Optional
+ 
+ from django.contrib import admin
+ from django.urls import include, re_path
+ from django.views.decorators.csrf import ensure_csrf_cookie
+ 
+ from haupt.common import conf
+ from haupt.common.apis.index.errors import (
+@@ -52,19 +52,19 @@
+ 
+     return [
+         re_path(r"^healthz/?$", HealthView.as_view(), name="health_check"),
+     ]
+ 
+ 
+ def get_urlpatterns(
+-    app_patterns: List, no_healthz: bool = False, ui_urlpatterns: List = None
++    app_patterns: List, no_healthz: bool = False, ui_urlpatterns: Optional[List] = None
+ ):
+     if conf.get(UI_ADMIN_ENABLED):
+         app_patterns += [re_path(r"^{}/".format(ADMIN_V1), admin.site.urls)]
+ 
+     urlpatterns = app_patterns
+     if not no_healthz:
+-        get_base_health_urlpatterns()
++        urlpatterns = get_base_health_urlpatterns() + urlpatterns
+     if ui_urlpatterns:
+         urlpatterns += get_ui_urlpatterns(ui_urlpatterns)
+ 
+     return urlpatterns
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/index/errors.py` & `haupt-2.0.0rc0/haupt/common/apis/index/errors.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.http import HttpResponse
+ from django.views.generic import View
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/index/health.py` & `haupt-2.0.0rc0/haupt/common/apis/index/health.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,26 +1,26 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
++from clipped.tz_utils import now
+ from rest_framework import status
+ from rest_framework.response import Response
+ from rest_framework.views import APIView
+ 
+ from haupt import pkg
+ from haupt.common import conf
+ from haupt.common.options.registry.installation import ORGANIZATION_KEY
+ from haupt.db.managers.dummy_key import get_dummy_key
+ from polyaxon.cli.session import get_compatibility
+ from polyaxon.schemas.cli.cli_config import CliConfig
+ from polyaxon.services.values import PolyaxonServices
+-from polyaxon.utils.tz_utils import now
+ 
+ 
+ class HealthView(APIView):
+     authentication_classes = ()
+     throttle_scope = "checks"
+     HEALTH_FILE = "/tmp/.compatibility"
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/paginator.py` & `haupt-2.0.0rc0/haupt/common/apis/paginator.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,18 +1,17 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
++from clipped.bool_utils import to_bool
+ from rest_framework.pagination import LimitOffsetPagination
+ 
+-from polyaxon.utils.bool_utils import to_bool
+-
+ 
+ class PolyaxonBasePagination(LimitOffsetPagination):
+     no_page_query_param = "no_page"
+ 
+     def get_no_page(self, request):
+         try:
+             return to_bool(
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/regex.py` & `haupt-2.0.0rc0/haupt/common/apis/regex.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ UUID_KEY = "uuid"
+ OWNER_KEY = "uuid"
+ NAME_KEY = "name"
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/templates/admin/base_site.html` & `haupt-2.0.0rc0/haupt/common/apis/templates/admin/base_site.html`
+
+ * *Files identical despite different names*
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/templates/base/index.html` & `haupt-2.0.0rc0/haupt/common/apis/templates/base/index.html`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -72,50 +72,39 @@
+   <div id="root" class="plxLayout">
+     <div class="plxLoading"><div></div><div></div><div></div><div></div><div></div><div></div></div>
+   </div>
+ 
+   <!-- Dependencies -->
+   {% if ui_enabled %}
+   {% if ui_offline %}
+-  <script src="{% static 'vendors/js/react.production.17.0.2.min.js' %}"></script>
+-  <script src="{% static 'vendors/js/react-dom.production.17.0.2.min.js' %}"></script>
+-  <script src="{% static 'vendors/js/moment.2.29.1.min.js' %}"></script>
+-  <script src="{% static 'vendors/js/plotly.2.9.0.min.js' %}"></script>
+-  <script src="{% static 'vendors/js/create-plotly-component.2.5.1.min.js' %}"></script>
+-  <script src="{% static 'vendors/js/bokeh.2.4.2.min.js' %}"></script>
++  <script src="{% static 'vendors/js/react.production.18.0.2.min.js' %}"></script>
++  <script src="{% static 'vendors/js/react-dom.production.18.0.2.min.js' %}"></script>
++  <script src="{% static 'vendors/js/moment.2.29.3.min.js' %}"></script>
++  <script src="{% static 'vendors/js/plotly.2.18.2.min.js' %}"></script>
++  <script src="{% static 'vendors/js/create-plotly-component.2.6.0.min.js' %}"></script>
++  <script src="{% static 'vendors/js/bokeh.3.0.3.min.js' %}"></script>
+   <script src="{% static 'vendors/js/vega@5.min.js' %}"></script>
+   <script src="{% static 'vendors/js/vega-lite@4.min.js' %}"></script>
+   <script src="{% static 'vendors/js/vega-embed@6.min.js' %}"></script>
+   {% else %}
+-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+-  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+-  <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+-  <script src="https://unpkg.com/react-plotly.js@2.5.1/dist/create-plotly-component.min.js"></script>
+-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bokeh/2.4.2/bokeh.min.js"></script>
++  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
++  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
++  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
++  <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
++  <script src="https://unpkg.com/react-plotly.js@2.6.0/dist/create-plotly-component.min.js"></script>
++  <script src="https://cdnjs.cloudflare.com/ajax/libs/bokeh/3.0.3/bokeh.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+   {% endif %}
+-  {% if ui_in_sandbox %}
+-  <script src="{% static 'dist/sandjs/0.bundle.js' %}?version={{ ui_assets_version }}"></script>
+-  <script src="{% static 'dist/sandjs/1.bundle.js' %}?version={{ ui_assets_version }}"></script>
+-  <script src="{% static 'dist/sandjs/2.bundle.js' %}?version={{ ui_assets_version }}"></script>
+-  <script src="{% static 'dist/sandjs/3.bundle.js' %}?version={{ ui_assets_version }}"></script>
+-  <script src="{% static 'dist/sandjs/4.bundle.js' %}?version={{ ui_assets_version }}"></script>
+-  <script src="{% static 'dist/sandjs/5.bundle.js' %}?version={{ ui_assets_version }}"></script>
+-  <script src="{% static 'dist/sandjs/6.bundle.js' %}?version={{ ui_assets_version }}"></script>
+-  <script src="{% static 'dist/sandjs/7.bundle.js' %}?version={{ ui_assets_version }}"></script>
+-  {% else %}
+   <script src="{% static 'dist/js/0.bundle.js' %}?version={{ ui_assets_version }}"></script>
+   <script src="{% static 'dist/js/1.bundle.js' %}?version={{ ui_assets_version }}"></script>
+   <script src="{% static 'dist/js/2.bundle.js' %}?version={{ ui_assets_version }}"></script>
+   <script src="{% static 'dist/js/3.bundle.js' %}?version={{ ui_assets_version }}"></script>
+   <script src="{% static 'dist/js/4.bundle.js' %}?version={{ ui_assets_version }}"></script>
+   <script src="{% static 'dist/js/5.bundle.js' %}?version={{ ui_assets_version }}"></script>
+   <script src="{% static 'dist/js/6.bundle.js' %}?version={{ ui_assets_version }}"></script>
+   <script src="{% static 'dist/js/7.bundle.js' %}?version={{ ui_assets_version }}"></script>
+   {% endif %}
+-  {% endif %}
+ </body>
+ 
+ </html>
+```
+
+#### html2text {}
+
+```diff
+@@ -2,10 +2,9 @@
+ 
+ 
+ 
+ 
+ 
+  {% if ui_enabled %} {% if ui_offline %}
+  {% else %}
+- {% endif %} {% if ui_in_sandbox %}
+- {% else %}
+- {% endif %} {% endif %}
++ {% endif %}
++ {% endif %}
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/templates/base/modal_index.html` & `haupt-2.0.0rc0/haupt/common/apis/templates/base/modal_index.html`
+
+ * *Files identical despite different names*
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/templates/common/root.html` & `haupt-2.0.0rc0/haupt/common/apis/templates/common/root.html`
+
+ * *Files identical despite different names*
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/urls/projects.py` & `haupt-2.0.0rc0/haupt/common/apis/urls/projects.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.apis.regex import OWNER_NAME_PATTERN, PROJECT_NAME_PATTERN
+ 
+ # Projects
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/urls/runs.py` & `haupt-2.0.0rc0/haupt/common/apis/urls/runs.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.apis.regex import (
+     ARTIFACT_NAME_PATTERN,
+     OWNER_NAME_PATTERN,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/apis/urls/versions.py` & `haupt-2.0.0rc0/haupt/common/apis/urls/versions.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from haupt.common.apis.regex import INSTALLATION_PATTERN, NAME_PATTERN, VERSION_PATTERN
+ 
+ URLS_VERSIONS_INSTALLED = r"^installation/?$"
+ URLS_VERSIONS_LOG_HANDLER = r"^log_handler/?$"
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/auditor/__init__.py` & `haupt-2.0.0rc0/haupt/common/auditor/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.conf import settings
+ 
+ from haupt.common.auditor.manager import event_manager
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/auditor/service.py` & `haupt-2.0.0rc0/haupt/common/auditor/service.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import copy
+ 
++from clipped.imports import import_string
++
+ from haupt.common.auditor.manager import event_manager
+ from haupt.common.events.event import Event
+ from haupt.common.events.event_service import EventService
+-from polyaxon.utils.imports import import_string
+ 
+ 
+ class AuditorService(EventService):
+     """A service that just passes the event to other services."""
+ 
+     event_manager = event_manager
+ 
+@@ -22,15 +23,15 @@
+     ):
+         self.auditor_events_task = auditor_events_task
+         self.executor = None
+         self.workers = None
+         self.workers_service = workers_service
+         self.executor_service = executor_service
+ 
+-    def record_event(self, event: Event) -> None:
++    def record_event(self, event: Event):
+         """
+         Record the event async.
+         """
+         serialized_event = event.serialize(
+             dumps=False, include_actor_name=True, include_instance_info=True
+         )
+         if self.workers and self.auditor_events_task:
+@@ -42,14 +43,14 @@
+         if self.executor:
+             # We include the instance in the serialized event for executor
+             serialized_event["instance"] = event.instance
+             self.executor.record(
+                 event_type=event.event_type, event_data=serialized_event
+             )
+ 
+-    def setup(self) -> None:
++    def setup(self):
+         super().setup()
+ 
+         if self.workers_service:
+             self.workers = import_string(self.workers_service)
+         if self.executor_service:
+             self.executor = import_string(self.executor_service)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/checks/results.py` & `haupt-2.0.0rc0/haupt/common/checks/results.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Dict
+ 
+ 
+ class Result:
+     INFO = "info"
+     WARNING = "warning"
+     ERROR = "error"
+     SEVERITY_VALUES = {INFO, WARNING, ERROR}
+ 
+-    def __init__(self, message="Service is healthy", severity=INFO) -> None:
++    def __init__(self, message="Service is healthy", severity=INFO):
+         self.message = message
+         if severity not in self.SEVERITY_VALUES:
+             raise ValueError("Health check Error not recognized `{}`".format(severity))
+         self.severity = severity
+ 
+     def __str__(self) -> str:
+         return self.message
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/commands/management/commands/create_exchange.py` & `haupt-2.0.0rc0/haupt/common/commands/management/commands/create_exchange.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.core.management import BaseCommand
+ 
+ 
+ class Command(BaseCommand):
+-    def handle(self, *args, **options) -> None:
++    def handle(self, *args, **options):
+         from haupt.common import workers
+         from kombu import Exchange
+ 
+         Exchange(
+             "internal", type="topic", channel=workers.app.connection().channel()
+         ).declare()
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/commands/management/commands/createuser.py` & `haupt-2.0.0rc0/haupt/common/commands/management/commands/createuser.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,51 +1,51 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import logging
+ 
+ from typing import Dict
+ 
++from clipped.bool_utils import to_bool
++
+ from django.contrib.auth import get_user_model
+ from django.contrib.auth.password_validation import validate_password
+ from django.core import exceptions
+ from django.core.exceptions import ValidationError
+ from django.core.management.base import BaseCommand, CommandError
+ 
+-from polyaxon.utils.bool_utils import to_bool
+-
+ _logger = logging.getLogger("haupt.commands")
+ 
+ 
+ class Command(BaseCommand):
+     """Management utility to create users/superusers.
+ 
+     This is command is different than the django one, because:
+         1. does not prompt the user to enter a password, i.e. can be used inline.
+         2. validates and requires an email.
+     """
+ 
+     help = "Used to create a user/superuser."
+     requires_migrations_checks = True
+ 
+-    def __init__(self, *args, **kwargs) -> None:
++    def __init__(self, *args, **kwargs):
+         super().__init__(*args, **kwargs)
+         self.UserModel = get_user_model()
+         # pylint:disable= protected-access
+         self.username_field = self.UserModel._meta.get_field(
+             self.UserModel.USERNAME_FIELD
+         )
+         # pylint:disable= protected-access
+         self.email_field = self.UserModel._meta.get_field("email")
+ 
+-    def add_arguments(self, parser) -> None:
++    def add_arguments(self, parser):
+         parser.add_argument(
+             "--%s" % self.UserModel.USERNAME_FIELD,
+             required=True,
+             dest=self.UserModel.USERNAME_FIELD,
+             help="Specifies the login for the user/superuser.",
+         )
+         parser.add_argument(
+@@ -71,15 +71,15 @@
+             "--force",
+             dest="force",
+             action="store_true",
+             default=False,
+             help="To force create the user even if the user is not valid.",
+         )
+ 
+-    def validate_password(self, password: str, user_data: Dict, force: bool) -> None:
++    def validate_password(self, password: str, user_data: Dict, force: bool):
+         try:
+             validate_password(password, self.UserModel(**user_data))
+         except ValidationError as e:
+             _logger.warning("The password provided is not valid %s", e)
+             if force:
+                 _logger.warning(
+                     "The user will be created although the password does not meet the validation."
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/commands/management/commands/tables.py` & `haupt-2.0.0rc0/haupt/common/commands/management/commands/tables.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,19 +1,19 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.core.management import BaseCommand
+ 
+ 
+ class Command(BaseCommand):
+-    def add_arguments(self, parser) -> None:
++    def add_arguments(self, parser):
+         parser.add_argument(
+             "--app",
+             dest="app",
+             default="coredb",
+         )
+ 
+     @staticmethod
+@@ -29,15 +29,15 @@
+             )
+         )
+         cursor.execute(check_query)
+         if bool(cursor.fetchall()):
+             alter_query = "ALTER TABLE auth_user RENAME TO db_user"
+             cursor.execute(alter_query)
+ 
+-    def handle(self, *args, **options) -> None:
++    def handle(self, *args, **options):
+         from django.conf import settings
+         from django.db import connection
+ 
+         if settings.DB_ENGINE_NAME == "sqlite":
+             return
+ 
+         with connection.cursor() as cursor:
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/conf/__init__.py` & `haupt-2.0.0rc0/haupt/common/conf/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.conf import settings
+ 
+ from haupt.common.conf.option_manager import option_manager
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/conf/handler.py` & `haupt-2.0.0rc0/haupt/common/conf/handler.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,23 +1,21 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Any, Dict, Optional
+ 
+ from haupt.common.options.option import Option
+ 
+ 
+ class BaseConfHandler:
+     def get(self, option: Option, owners: Optional[Dict[str, int]] = None) -> Any:
+         raise NotImplementedError
+ 
+-    def set(
+-        self, option: Option, value: Any, owners: Optional[Dict[str, int]] = None
+-    ) -> None:
++    def set(self, option: Option, value: Any, owners: Optional[Dict[str, int]] = None):
+         raise NotImplementedError
+ 
+     def delete(self, option: Option, owners: Optional[Dict[str, int]] = None) -> Any:
+         raise NotImplementedError
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/conf/handlers/env_handler.py` & `haupt-2.0.0rc0/haupt/common/conf/handlers/settings_handler.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,37 +1,43 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-import os
+-
+ from typing import Any
+ 
+ from haupt.common.conf.exceptions import ConfException
+ from haupt.common.conf.handler import BaseConfHandler
+ from haupt.common.options.option import Option
+ 
+ 
+-class EnvConfHandler(BaseConfHandler):
++class SettingsConfHandler(BaseConfHandler):
++    def __init__(self):
++        from django.conf import settings
++
++        self.settings = settings
++
+     def get(self, option: Option, **kwargs) -> Any:  # pylint:disable=arguments-differ
+-        value = os.environ.get(option.key)
+-        if value:
+-            return option.parse(value)
++        if hasattr(self.settings, option.key):
++            return getattr(self.settings, option.key)
+         if not option.is_optional:
+             raise ConfException(
+                 "The config option `{}` was not found or not correctly "
+                 "set on the settings backend.".format(option.key)
+             )
+         return option.default_value()
+ 
+     def set(  # pylint:disable=arguments-differ
+         self, option: Option, value: Any, **kwargs
+-    ) -> None:
+-        os.environ[option.key] = str(value)
+-
+-    def delete(  # pylint:disable=arguments-differ
+-        self, option: Option, **kwargs
+-    ) -> None:
+-        os.environ.pop(option.key, None)
++    ):
++        raise ConfException(
++            "The settings backend does not allow to set values, "
++            "are you sure the key `{}` was correctly defined.".format(option.key)
++        )
++
++    def delete(self, option: Option, **kwargs):  # pylint:disable=arguments-differ
++        raise ConfException(
++            "The settings backend does not allow to delete values, "
++            "are you sure the key `{}` was correctly defined.".format(option.key)
++        )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/conf/handlers/settings_handler.py` & `haupt-2.0.0rc0/haupt/common/options/feature.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,45 +1,62 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from typing import Any
++from typing import Optional, Tuple
+ 
+-from haupt.common.conf.exceptions import ConfException
+-from haupt.common.conf.handler import BaseConfHandler
+-from haupt.common.options.option import Option
+-
+-
+-class SettingsConfHandler(BaseConfHandler):
+-    def __init__(self):
+-        from django.conf import settings
+-
+-        self.settings = settings
+-
+-    def get(self, option: Option, **kwargs) -> Any:  # pylint:disable=arguments-differ
+-        if hasattr(self.settings, option.key):
+-            return getattr(self.settings, option.key)
+-        if not option.is_optional:
+-            raise ConfException(
+-                "The config option `{}` was not found or not correctly "
+-                "set on the settings backend.".format(option.key)
+-            )
+-        return option.default_value()
++from django.conf import settings
+ 
+-    def set(  # pylint:disable=arguments-differ
+-        self, option: Option, value: Any, **kwargs
+-    ) -> None:
+-        raise ConfException(
+-            "The settings backend does not allow to set values, "
+-            "are you sure the key `{}` was correctly defined.".format(option.key)
+-        )
+-
+-    def delete(  # pylint:disable=arguments-differ
+-        self, option: Option, **kwargs
+-    ) -> None:
+-        raise ConfException(
+-            "The settings backend does not allow to delete values, "
+-            "are you sure the key `{}` was correctly defined.".format(option.key)
+-        )
++from haupt.common.options.exceptions import OptionException
++from haupt.common.options.option import (
++    NAMESPACE_DB_OPTION_MARKER,
++    Option,
++    OptionScope,
++    OptionStores,
++)
++from haupt.common.options.option_namespaces import FEATURES
++from polyaxon import types
++
++
++class Feature(Option):
++    scope = OptionScope.USER
++    is_secret = False
++    is_optional = True
++    is_list = False
++    store = OptionStores(settings.STORE_OPTION)
++    typing = types.BOOL
++    default = True
++    options = [True, False]
++    immutable = False  # If immutable, the feature cannot be update by the user
++    description = None
++
++    @classmethod
++    def get_marker(cls) -> str:
++        return NAMESPACE_DB_OPTION_MARKER
++
++    @classmethod
++    def parse_key(cls) -> Tuple[Optional[str], str]:
++        marker = cls.get_marker()
++        parts = cls.key.split(marker)
++        # First part is a Meta namespace `features`
++        if len(parts) > 3 or len(parts) < 1:  # pylint:disable=len-as-condition
++            raise OptionException(
++                "Feature declared with multi-namespace key `{}`.".format(cls.key)
++            )
++        if parts[0] != FEATURES:
++            raise OptionException(
++                "Feature declared with wrong namespace key `{}`.".format(cls.key)
++            )
++        if len(parts) == 2:
++            return None, parts[1]
++        return parts[1], parts[2]
++
++    @classmethod
++    def get_namespace(cls) -> Optional[str]:
++        return cls.parse_key()[0]
++
++    @classmethod
++    def get_key_subject(cls):
++        return cls.parse_key()[1]
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/conf/option_service.py` & `haupt-2.0.0rc0/haupt/common/conf/option_service.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Any, Optional
+ 
+ from haupt.common.conf.conf_manager import conf_cache_manager
+@@ -80,15 +80,15 @@
+         # Cache value
+         self.cache_manager.set_to_cache(
+             key=key, value=value, ttl=option.cache_ttl, owners=owners
+         )
+ 
+         return self._get_value(option=option, value=value, to_dict=to_dict)
+ 
+-    def set(self, key: str, value: Any, owners: Optional[OptionOwners] = None) -> None:
++    def set(self, key: str, value: Any, owners: Optional[OptionOwners] = None):
+         if not self.is_setup:
+             return
+         if not self.can_handle(key=key):
+             raise ConfException(
+                 "{} service request an unknown key `{}`.".format(self.service_name, key)
+             )
+         if value is None:
+@@ -107,31 +107,33 @@
+         store = self.get_store(option=option)
+         store.set(option=option, value=value, owners=owners)
+         # Cache value
+         self.cache_manager.set_to_cache(
+             key=key, value=value, ttl=option.cache_ttl, owners=owners
+         )
+ 
+-    def delete(self, key: str, owners: Optional[OptionOwners] = None) -> None:
++    def delete(self, key: str, owners: Optional[OptionOwners] = None):
+         if not self.is_setup:
+             return
+         if not self.can_handle(key=key):
+             raise ConfException(
+                 "{} service request an unknown key `{}`.".format(self.service_name, key)
+             )
+ 
+         option = self.get_option(key=key, owners=owners)
+         store = self.get_store(option=option)
+         store.delete(option=option, owners=owners)
+         # Clear Cache key
+         self.cache_manager.clear_key(key=key, owners=owners)
+ 
+-    def clear_cache(self) -> None:
++    def clear_cache(self):
+         self.cache_manager.clear()
+ 
+     @staticmethod
+     def get_owners(
+-        user: int = None, project: int = None, organization: int = None
++        user: Optional[int] = None,
++        project: Optional[int] = None,
++        organization: Optional[int] = None,
+     ) -> OptionOwners:
+         return OptionOwners.get_owners(
+             user=user, project=project, organization=organization
+         )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/conf/service.py` & `haupt-2.0.0rc0/haupt/common/conf/service.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.conf.handlers.env_handler import EnvConfHandler
+ from haupt.common.conf.handlers.settings_handler import SettingsConfHandler
+ from haupt.common.conf.option_service import OptionService
+ from haupt.common.options.option import OptionStores
+ 
+ 
+ class ConfService(OptionService):
+-    def setup(self) -> None:
++    def setup(self):
+         super().setup()
+         self.stores[OptionStores.SETTINGS] = SettingsConfHandler()
+         self.stores[OptionStores.ENV] = EnvConfHandler()
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/config_manager.py` & `haupt-2.0.0rc0/haupt/common/config_manager.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,45 +1,54 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import os
+ 
+ from pathlib import Path
+ from typing import List
+ 
+ from haupt import pkg
+ from polyaxon.config_reader.manager import ConfigManager as BaseConfigManager
+ from polyaxon.env_vars.keys import (
+     EV_KEYS_DEBUG,
++    EV_KEYS_ENVIRONMENT,
+     EV_KEYS_LOG_LEVEL,
+     EV_KEYS_PLATFORM_CONFIG,
++    EV_KEYS_SERVICE,
+     EV_KEYS_TIME_ZONE,
+ )
++from polyaxon.k8s.namespace import DEFAULT_NAMESPACE
+ 
+ 
+ class ConfigManager(BaseConfigManager):
+-    def __init__(self, **params) -> None:
++    def __init__(self, **params):
+         super().__init__(**params)
+-        self._env = self.get_string("POLYAXON_ENVIRONMENT")
++        self._env = self.get_string(
++            EV_KEYS_ENVIRONMENT, is_optional=True, default="local"
++        )
+         self._config_module = self.get_string(
+             "POLYAXON_CONFIG_MODULE", is_optional=True, default="polyconf"
+         )
+-        self._config_root_dir = self.get_value("POLYAXON_CONFIG_ROOT_DIR")
+-        self._service = self.get_string("POLYAXON_SERVICE", is_local=True)
++        self._root_dir = self.get_value("POLYAXON_CONFIG_ROOT_DIR")
++        self._service = self.get_string(
++            EV_KEYS_SERVICE, is_local=True, is_optional=True
++        )
+         self._is_debug_mode = self.get_boolean(
+             EV_KEYS_DEBUG, is_optional=True, default=False
+         )
+         self._db_engine_name = self.get_string(
+-            "POLYAXON_DB_ENGINE", default="pgsql", is_optional=True
++            "POLYAXON_DB_ENGINE", default="sqlite", is_optional=True
++        )
++        self._namespace = self.get_string(
++            "POLYAXON_K8S_NAMESPACE", is_optional=True, default=DEFAULT_NAMESPACE
+         )
+-        self._namespace = self.get_string("POLYAXON_K8S_NAMESPACE", is_optional=True)
+         self._log_level = self.get_string(
+             EV_KEYS_LOG_LEVEL, is_local=True, is_optional=True, default="WARNING"
+         ).upper()
+         self._timezone = self.get_string(
+             EV_KEYS_TIME_ZONE, is_optional=True, default="UTC"
+         )
+         self._scheduler_enabled = self.get_boolean(
+@@ -65,16 +74,16 @@
+         return self._namespace
+ 
+     @property
+     def config_module(self) -> str:
+         return self._config_module
+ 
+     @property
+-    def config_root_dir(self) -> str:
+-        return self._config_root_dir
++    def root_dir(self) -> Path:
++        return self._root_dir
+ 
+     @property
+     def db_engine_name(self) -> str:
+         return self._db_engine_name
+ 
+     @property
+     def is_sqlite_db_engine(self) -> bool:
+@@ -140,15 +149,15 @@
+ 
+     @property
+     def log_handlers(self) -> List[str]:
+         return ["console"]
+ 
+     @property
+     def log_level(self) -> str:
+-        if self.is_staging_env or self.is_local_env:
++        if self.is_staging_env or self.is_local_env or self.is_test_env:
+             return self._log_level
+         if self._log_level == "DEBUG":
+             return "INFO"
+         return self._log_level
+ 
+     @property
+     def timezone(self) -> str:
+@@ -195,23 +204,24 @@
+     def get_broker_url(self) -> str:
+         if self.is_redis_broker:
+             return self.get_redis_url("POLYAXON_REDIS_CELERY_BROKER_URL")
+         if self.is_rabbitmq_broker:
+             return self._get_rabbitmq_broker_url()
+ 
+ 
+-def get_config(file_path, config_prefix: str = None):
++def get_config(file_path):
+     def base_directory():
+         root = Path(os.path.abspath(file_path))
+         root.resolve()
+         return root.parent.parent
+ 
+     root_dir = base_directory()
+ 
+     config_module = "polyconf"
++    config_prefix = os.environ.get("CONFIG_PREFIX")
+     if config_prefix:
+         config_module = "{}.{}".format(config_prefix, config_module)
+     config_values = [
+         os.environ,
+         {"POLYAXON_CONFIG_MODULE": config_module, "POLYAXON_CONFIG_ROOT_DIR": root_dir},
+     ]
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/endpoints/base.py` & `haupt-2.0.0rc0/haupt/common/endpoints/base.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from rest_framework.generics import GenericAPIView
+ 
+ from django.http import HttpRequest, HttpResponse
+ 
+@@ -62,15 +62,15 @@
+ 
+     def enrich_queryset(self, queryset):
+         return queryset
+ 
+     def check_request(self, request: HttpRequest):
+         pass
+ 
+-    def initialize_context(self, request: HttpRequest, *args, **kwargs) -> None:
++    def initialize_context(self, request: HttpRequest, *args, **kwargs):
+         """
+         Initializes the endpoint with the context keys based on the passed
+         and/or based on the query parameters (request.GET).
+         """
+         self.check_request(request)
+ 
+         for key in self.CONTEXT_KEYS:
+@@ -87,15 +87,15 @@
+             assert OWNER_NAME_KEY in kwargs
+         if self.AUDIT_PROJECT:
+             assert PROJECT_NAME_KEY in kwargs
+         if self.AUDIT_PROJECT_RESOURCES:
+             assert self.PROJECT_RESOURCE_KEY is not None
+             assert self.PROJECT_RESOURCE_KEY in kwargs
+ 
+-    def initialize_object_context(self, request: HttpRequest, *args, **kwargs) -> None:
++    def initialize_object_context(self, request: HttpRequest, *args, **kwargs):
+         pass
+ 
+     def initial(self, request, *args, **kwargs):
+         super().initial(request, *args, **kwargs)
+         self.initialize_context(request, *args, **kwargs)
+         self.initialize_object_context(request, *args, **kwargs)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/endpoints/files.py` & `haupt-2.0.0rc0/haupt/common/endpoints/files.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,22 +1,22 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import os
+ 
+ from email.utils import formatdate
+ from typing import Dict, Optional
+ 
+-from django.http import FileResponse
++from clipped.hashing import hash_value
+ 
+-from polyaxon.utils.hashing import hash_value
++from django.http import FileResponse
+ 
+ 
+ class FilePathResponse(FileResponse):
+     def __init__(self, *args, as_attachment=False, filepath="", **kwargs):
+         filename = os.path.basename(filepath) if filepath else ""
+         headers = self.get_stat_headers(filepath)
+         super().__init__(
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/endpoints/mixins.py` & `haupt-2.0.0rc0/haupt/common/endpoints/mixins.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from rest_framework import status
+ from rest_framework.mixins import CreateModelMixin as DJRCreateModelMixin
+ from rest_framework.mixins import DestroyModelMixin as DJRDestroyModelMixin
+ from rest_framework.mixins import ListModelMixin as DRFListModelMixin
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/events/auditor_subscriptions/run.py` & `haupt-2.0.0rc0/haupt/common/events/auditor_subscriptions/run.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common import auditor
+ from haupt.common.events.registry import run
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/events/event.py` & `haupt-2.0.0rc0/haupt/common/events/event.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,38 +1,39 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import copy
+ 
+ from typing import Any, Dict, Iterable, Mapping, Optional, Union
+ from uuid import UUID, uuid1
+ 
++from clipped.date_utils import to_datetime, to_timestamp
++
+ from django.db.models import Model
+ from django.utils import timezone
+ 
+ from haupt.common import user_system
+ from haupt.common.events import event_context
+ from haupt.common.json_utils import dumps_htmlsafe
+ from polyaxon.types import AwareDT
+-from polyaxon.utils.date_utils import to_datetime, to_timestamp
+ 
+ 
+ class Attribute:
+     def __init__(
+         self,
+         name: str,
+         attr_type: Any = str,
+         is_datetime: bool = False,
+         is_uuid: bool = False,
+         is_required: bool = True,
+-    ) -> None:
++    ):
+         assert name != "instance"
+         self.name = name
+         self.attr_type = attr_type
+         self.is_datetime = is_datetime
+         self.is_uuid = is_uuid
+         self.is_required = is_required
+ 
+@@ -76,23 +77,23 @@
+                 Attribute(cls.actor_id, attr_type=int),
+                 Attribute(cls.actor_name, is_required=False),
+             )
+         return attributes
+ 
+     def __init__(
+         self,
+-        uid: str = None,
++        uid: Optional[str] = None,
+         datetime: AwareDT = None,
+         instance: Any = None,
+-        instance_id: int = None,
+-        instance_uuid: str = None,
+-        ref_id: str = None,
++        instance_id: Optional[int] = None,
++        instance_uuid: Optional[str] = None,
++        ref_id: Optional[str] = None,
+         event_data: Mapping = None,
+         **items
+-    ) -> None:
++    ):
+         self.uuid = UUID(uid) if uid else uuid1()
+         self.datetime = datetime or timezone.now()
+         self.instance = instance
+         self.instance_id = instance_id
+         self.instance_uuid = instance_uuid
+         self.ref_id = None
+         if ref_id:
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/events/event_actions.py` & `haupt-2.0.0rc0/haupt/common/events/event_actions.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ CREATED = "created"
+ UPDATED = "updated"
+ DELETED = "deleted"
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/events/event_context.py` & `haupt-2.0.0rc0/haupt/common/events/event_context.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,20 +1,21 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from collections import namedtuple
+ from typing import Any, Optional
+ 
++from clipped.http_utils import absolute_uri
++
+ from haupt.common import user_system
+ from haupt.common.events import event_subjects
+-from polyaxon.utils.http_utils import absolute_uri
+ from polyaxon.utils.urls_utils import get_fqn_run_url, get_owner_url, get_project_url
+ 
+ 
+ class EventItemContextSpec(namedtuple("EventItemContextSpec", "name url object_id")):
+     pass
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/events/event_manager.py` & `haupt-2.0.0rc0/haupt/common/events/event_manager.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,28 +1,29 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import List, Tuple
+ 
++from clipped.manager_interface import ManagerInterface
++
+ from haupt.common.events import event_actions
+ from haupt.common.events.event import Event
+-from polyaxon.utils.manager_interface import ManagerInterface
+ 
+ 
+ class EventManager(ManagerInterface):
+     def _get_state_data(  # pylint:disable=arguments-differ
+         self, event: Event
+     ) -> Tuple[str, Event]:
+         return event.event_type, event
+ 
+-    def subscribe(self, event: Event) -> None:  # pylint:disable=arguments-differ
++    def subscribe(self, event: Event):  # pylint:disable=arguments-differ
+         """
+         >>> subscribe(SomeEvent)
+         """
+         super().subscribe(obj=event)
+ 
+     def knows(self, event_type: str) -> bool:  # pylint:disable=arguments-differ
+         return super().knows(key=event_type)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/events/event_service.py` & `haupt-2.0.0rc0/haupt/common/events/event_service.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Any, Mapping, Optional
+ 
+ from haupt.common.events.event import Event
+@@ -50,12 +50,12 @@
+ 
+         event = self.get_event(
+             event_type=event_type, event_data=event_data, instance=instance, **kwargs
+         )
+         self.record_event(event)
+         return event
+ 
+-    def record_event(self, event: Event) -> None:
++    def record_event(self, event: Event):
+         """Record an event.
+ 
+         >>> record_event(Event())
+         """
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/events/registry/attributes.py` & `haupt-2.0.0rc0/haupt/common/events/registry/attributes.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.events.event import Attribute
+ 
+ OWNER_ATTRIBUTES = (Attribute("id"), Attribute("name"))
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/events/registry/run.py` & `haupt-2.0.0rc0/haupt/common/events/registry/run.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.events import event_actions, event_subjects
+ from haupt.common.events.event import ActorEvent, Attribute, Event
+ from haupt.common.events.registry.attributes import (
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/hashing.py` & `haupt-2.0.0rc0/haupt/common/hashing.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from hashlib import md5 as _md5
+ from hashlib import sha1 as _sha1
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/json_utils.py` & `haupt-2.0.0rc0/haupt/common/json_utils.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import datetime
+ import decimal
+ import uuid
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/memory_manager.py` & `haupt-2.0.0rc0/haupt/common/memory_manager.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from collections import namedtuple
+ from datetime import timedelta
+ from typing import Any, Optional
+@@ -21,20 +21,20 @@
+ 
+ class MemoryCacheManager:
+     INVALIDED_OPTION = "INVALIDED_OPTION"
+ 
+     def __init__(self):
+         self._state = {}
+ 
+-    def clear_key(self, key: str, owners: Optional[OptionOwners] = None) -> None:
++    def clear_key(self, key: str, owners: Optional[OptionOwners] = None):
+         if owners:
+             key = f"{key}:{owners}"
+         self._state.pop(key, None)
+ 
+-    def clear(self) -> None:
++    def clear(self):
+         self._state = {}
+ 
+     @classmethod
+     def is_valid_value(cls, value: Any):
+         return value != cls.INVALIDED_OPTION
+ 
+     @staticmethod
+@@ -48,15 +48,15 @@
+         if cached_option and self.is_valid_cache(cached_option.datetime):
+             return cached_option.value
+         self.clear_key(key=key)
+         return self.INVALIDED_OPTION
+ 
+     def set_to_cache(
+         self, key: str, value: Any, ttl: int, owners: Optional[OptionOwners] = None
+-    ) -> None:
++    ):
+         if ttl <= 0 or value is None:
+             return
+         if owners:
+             key = f"{key}:{owners}"
+         self._state[key] = CachedOptionSpec(
+             value=value, datetime=timezone.now() + timedelta(seconds=ttl)
+         )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/core.py` & `haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/core.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common import conf
+ from haupt.common.options.registry import core
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/conf_subscriptions/installation.py` & `haupt-2.0.0rc0/haupt/common/options/conf_subscriptions/installation.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common import conf
+ from haupt.common.options.registry import installation
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/feature.py` & `haupt-2.0.0rc0/haupt/common/options/registry/containers.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,62 +1,70 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from typing import Optional, Tuple
++from haupt.common.options import option_namespaces, option_subjects
++from haupt.common.options.option import Option, OptionScope, OptionStores
++from polyaxon import types
++from polyaxon.auxiliaries import (
++    V1PolyaxonInitContainer,
++    V1PolyaxonSidecarContainer,
++    get_default_init_container,
++    get_default_sidecar_container,
++)
+ 
+-from django.conf import settings
++INIT_CONTAINER = "{}_{}".format(option_namespaces.INIT, option_subjects.CONTAINER)
+ 
+-from haupt.common.options.exceptions import OptionException
+-from haupt.common.options.option import (
+-    NAMESPACE_DB_OPTION_MARKER,
+-    Option,
+-    OptionScope,
+-    OptionStores,
++SIDECAR_CONTAINER = "{}_{}".format(
++    option_namespaces.SIDECARS, option_subjects.CONTAINER
+ )
+-from haupt.common.options.option_namespaces import FEATURES
+-from polyaxon import types
+ 
++OPTIONS = {SIDECAR_CONTAINER, INIT_CONTAINER}
+ 
+-class Feature(Option):
+-    scope = OptionScope.USER
++
++class PolyaxonInitContainer(Option):
++    key = INIT_CONTAINER
++    description = "The docker image to use for init container"
++    scope = OptionScope.GLOBAL
+     is_secret = False
+     is_optional = True
+     is_list = False
+-    store = OptionStores(settings.STORE_OPTION)
+-    typing = types.BOOL
+-    default = True
+-    options = [True, False]
+-    immutable = False  # If immutable, the feature cannot be update by the user
+-    description = None
++    typing = types.STR
++    store = OptionStores.SETTINGS
++    options = None
++
++    @staticmethod
++    def get_default_value():
++        return get_default_init_container(schema=False)
+ 
+     @classmethod
+-    def get_marker(cls) -> str:
+-        return NAMESPACE_DB_OPTION_MARKER
++    def _extra_processing(cls, value):
++        if not value:
++            return value
++        V1PolyaxonInitContainer.from_dict(value)
++        return value
+ 
+-    @classmethod
+-    def parse_key(cls) -> Tuple[Optional[str], str]:
+-        marker = cls.get_marker()
+-        parts = cls.key.split(marker)
+-        # First part is a Meta namespace `features`
+-        if len(parts) > 3 or len(parts) < 1:  # pylint:disable=len-as-condition
+-            raise OptionException(
+-                "Feature declared with multi-namespace key `{}`.".format(cls.key)
+-            )
+-        if parts[0] != FEATURES:
+-            raise OptionException(
+-                "Feature declared with wrong namespace key `{}`.".format(cls.key)
+-            )
+-        if len(parts) == 2:
+-            return None, parts[1]
+-        return parts[1], parts[2]
+ 
+-    @classmethod
+-    def get_namespace(cls) -> Optional[str]:
+-        return cls.parse_key()[0]
++class PolyaxonSidecarContainer(Option):
++    key = SIDECAR_CONTAINER
++    description = "Sidecar container definition"
++    scope = OptionScope.GLOBAL
++    is_secret = False
++    is_optional = True
++    is_list = False
++    typing = types.DICT
++    store = OptionStores.SETTINGS
++    options = None
++
++    @staticmethod
++    def get_default_value():
++        return get_default_sidecar_container(schema=False)
+ 
+     @classmethod
+-    def get_key_subject(cls):
+-        return cls.parse_key()[1]
++    def _extra_processing(cls, value):
++        if not value:
++            return value
++        V1PolyaxonSidecarContainer.from_dict(value)
++        return value
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/option.py` & `haupt-2.0.0rc0/haupt/common/options/option.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,34 +1,35 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from enum import Enum
+ from typing import Optional, Tuple
+ 
++from clipped.enums_utils import PEnum
++
+ from haupt.common.options.exceptions import OptionException
+ from polyaxon.parser import parser
+ 
+ NAMESPACE_DB_OPTION_MARKER = ":"
+ NAMESPACE_DB_CONFIG_MARKER = "__"
+ NAMESPACE_SETTINGS_MARKER = "__"
+ NAMESPACE_ENV_MARKER = ":"
+ 
+ 
+-class OptionStores(Enum):
++class OptionStores(str, PEnum):
+     ENV = "env"
+     DB_OPTION = "db_option"
+     DB_CONFIG = "db_config"
+     SETTINGS = "settings"
+ 
+ 
+-class OptionScope(Enum):
++class OptionScope(str, PEnum):
+     GLOBAL = "global"
+     ORGANISATION = "organization"
+     TEAM = "team"
+     PROJECT = "project"
+     USER = "user"
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/option_manager.py` & `haupt-2.0.0rc0/haupt/common/options/option_manager.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,27 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Tuple
+ 
++from clipped.manager_interface import ManagerInterface
++
+ from haupt.common.options.option import Option
+-from polyaxon.utils.manager_interface import ManagerInterface
+ 
+ 
+ class OptionManager(ManagerInterface):
+     def _get_state_data(  # pylint:disable=arguments-differ
+         self, option: Option
+     ) -> Tuple[str, Option]:
+         return option.key, option
+ 
+-    def subscribe(self, option: Option) -> None:  # pylint:disable=arguments-differ
++    def subscribe(self, option: Option):  # pylint:disable=arguments-differ
+         """
+         >>> subscribe(SomeOption)
+         """
+         super().subscribe(obj=option)
+ 
+     def get(self, key: str) -> Option:  # pylint:disable=arguments-differ
+         return super().get(key=key)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/option_owners.py` & `haupt-2.0.0rc0/haupt/common/options/option_owners.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,27 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import uuid
+ 
+ from collections import namedtuple
++from typing import Optional
+ 
+ 
+ class OptionOwners(namedtuple("OptionOwners", "user project team organization")):
+     @classmethod
+     def get_owners(
+         cls,
+-        user: int = None,
+-        project: int = None,
+-        team: int = None,
+-        organization: int = None,
++        user: Optional[int] = None,
++        project: Optional[int] = None,
++        team: Optional[int] = None,
++        organization: Optional[int] = None,
+     ) -> "OptionOwners":
+         return cls(user=user, project=project, team=team, organization=organization)
+ 
+     def to_dict(self):
+         return dict(self._asdict())
+ 
+     def __eq__(self, other):
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/registry/core.py` & `haupt-2.0.0rc0/haupt/common/options/registry/core.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.options.option import Option, OptionScope, OptionStores
+ from polyaxon import types
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/registry/installation.py` & `haupt-2.0.0rc0/haupt/common/options/registry/installation.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.options.option import Option, OptionScope, OptionStores
+ from polyaxon import types
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/registry/k8s.py` & `haupt-2.0.0rc0/haupt/common/options/registry/k8s.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.options.option import Option, OptionScope, OptionStores
+ from polyaxon import types
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/registry/scheduler.py` & `haupt-2.0.0rc0/haupt/common/options/registry/scheduler.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.options import option_namespaces, option_subjects
+ from haupt.common.options.option import Option, OptionScope, OptionStores
+ from polyaxon import types
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/options/registry/stats.py` & `haupt-2.0.0rc0/haupt/common/options/registry/stats.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.conf import settings
+ 
+ from haupt.common.options import option_namespaces, option_subjects
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/query/service.py` & `haupt-2.0.0rc0/haupt/common/query/service.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Any, Optional, Tuple
+ 
+ from haupt.common.service_interface import Service
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/redis_db.py` & `haupt-2.0.0rc0/haupt/common/redis_db.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Any
+ 
+ import redis
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/service_interface.py` & `haupt-2.0.0rc0/haupt/common/service_interface.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import inspect
+ import itertools
+ 
+-from polyaxon.utils.imports import import_string
++from clipped.imports import import_string
+ 
+ try:
+     from django.utils.functional import LazyObject, empty  # pylint:disable=import-error
+ except ImportError:
+     raise ImportError("This module depends on django.")
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/admin.py` & `haupt-2.0.0rc0/haupt/common/settings/admin.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.config_manager import ConfigManager
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/apps.py` & `haupt-2.0.0rc0/haupt/common/settings/apps.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,30 +1,29 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from typing import Optional, Tuple
+ 
+ from haupt.common.config_manager import ConfigManager
+ 
+ 
+ def set_apps(
+     context,
+     config: ConfigManager,
+     third_party_apps: Optional[Tuple],
+     project_apps: Tuple,
+-    db_app: str = None,
++    db_app: Optional[str] = None,
+     use_db_apps: bool = True,
+     use_admin_apps: bool = False,
+     use_staticfiles_app: bool = True,
+ ):
+-
+     extra_apps = config.get_string(
+         "POLYAXON_EXTRA_APPS", is_list=True, is_optional=True
+     )
+     extra_apps = tuple(extra_apps) if extra_apps else ()
+ 
+     apps = ()
+     if use_db_apps:
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/assets.py` & `haupt-2.0.0rc0/haupt/common/settings/assets.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,51 +1,51 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.config_manager import ConfigManager
+ from polyaxon.api import STATIC_V1
+ from polyaxon.env_vars.keys import (
+     EV_KEYS_ARTIFACTS_ROOT,
+     EV_KEYS_STATIC_ROOT,
+     EV_KEYS_STATIC_URL,
+ )
+ 
+ 
+-def set_assets(context, root_dir, config: ConfigManager):
++def set_assets(context, config: ConfigManager):
+     context["MEDIA_ROOT"] = config.get_string(
+         "POLYAXON_MEDIA_ROOT", is_optional=True, default=""
+     )
+     context["MEDIA_URL"] = config.get_string(
+         "POLYAXON_MEDIA_URL", is_optional=True, default=""
+     )
+ 
+     context["STATIC_ROOT"] = config.get_string(
+-        EV_KEYS_STATIC_ROOT, is_optional=True, default=str(root_dir / "static")
++        EV_KEYS_STATIC_ROOT, is_optional=True, default=str(config.root_dir / "static")
+     )
+     context["STATIC_URL"] = config.get_string(
+         EV_KEYS_STATIC_URL,
+         is_optional=True,
+         default="/static/",
+     )
+ 
+     # Additional locations of static files
+-    context["STATICFILES_DIRS"] = (str(root_dir / "public"),)
++    context["STATICFILES_DIRS"] = (str(config.root_dir / "public"),)
+ 
+     context["STATICFILES_FINDERS"] = (
+         "django.contrib.staticfiles.finders.FileSystemFinder",
+         "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+     )
+ 
+     context["LOCALE_PATHS"] = (
+-        str(root_dir / "locale"),
+-        str(root_dir / "client" / "js" / "libs" / "locale"),
++        str(config.root_dir / "locale"),
++        str(config.root_dir / "client" / "js" / "libs" / "locale"),
+     )
+ 
+     context["STATICI18N_ROOT"] = STATIC_V1
+     context["STATICI18N_OUTPUT_DIR"] = "jsi18n"
+ 
+     context["ARTIFACTS_ROOT"] = config.get_string(
+         EV_KEYS_ARTIFACTS_ROOT,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/celery.py` & `haupt-2.0.0rc0/haupt/common/settings/celery.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,19 +1,21 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from typing import Dict
++from typing import Dict, Optional
+ 
+ from haupt.common.config_manager import ConfigManager
+ 
+ 
+-def set_celery(context, config: ConfigManager, routes: Dict):
++def set_celery(
++    context, config: ConfigManager, routes: Dict, schedules: Optional[Dict] = None
++):
+     context["CELERY_TASK_TRACK_STARTED"] = config.get_boolean(
+         "POLYAXON_CELERY_TASK_TRACK_STARTED", is_optional=True, default=True
+     )
+ 
+     context["CELERY_BROKER_POOL_LIMIT"] = config.get_int(
+         "POLYAXON_CELERY_BROKER_POOL_LIMIT", is_optional=True, default=100
+     )
+@@ -86,7 +88,9 @@
+         )
+         RUNS_SCHEDULER = config.get_int(
+             "POLYAXON_INTERVALS_RUNS_SCHEDULER", is_optional=True, default=30
+         )
+ 
+     context["Intervals"] = Intervals
+     context["CELERY_TASK_ROUTES"] = routes
++    if schedules:
++        context["CELERY_BEAT_SCHEDULE"] = schedules
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/context_processors.py` & `haupt-2.0.0rc0/haupt/common/settings/context_processors.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import pkg
+ from haupt.common import conf
+ from haupt.common.options.registry.core import (
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/core.py` & `haupt-2.0.0rc0/haupt/common/settings/core.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.config_manager import ConfigManager
+ 
+ 
+@@ -15,21 +15,19 @@
+     context["CHART_VERSION"] = config.chart_version
+     context["SCHEDULER_ENABLED"] = config.scheduler_enabled
+     context["K8S_NAMESPACE"] = config.namespace
+ 
+     context["FILE_UPLOAD_PERMISSIONS"] = 0o644
+ 
+     context["WSGI_APPLICATION"] = "{}.wsgi.application".format(config.config_module)
+-    context["ASGI_APPLICATION"] = "{}.asgi.application".format(config.config_module)
+     context["TIME_ZONE"] = config.timezone
+     context["LANGUAGE_CODE"] = "en"
+     context["LANGUAGES"] = (("en", "English"),)
+ 
+     context["USE_I18N"] = True
+-    context["USE_L10N"] = True
+     context["USE_TZ"] = True
+ 
+     context["INTERNAL_IPS"] = ("127.0.0.1",)
+     context["APPEND_SLASH"] = True
+ 
+     context["ROOT_URLCONF"] = ""
+ 
+@@ -38,17 +36,20 @@
+             "django.db.backends.sqlite3"
+             if config.is_sqlite_db_engine
+             else "django.db.backends.postgresql"
+         )
+         context["AUTH_USER_MODEL"] = "db.User"
+         context["DB_ENGINE_NAME"] = config.db_engine_name
+         context["DEFAULT_DB_ENGINE"] = db_engine
++        db_name = config.get_string("POLYAXON_DB_NAME", is_optional=True)
++        if not db_name:
++            db_name = "/tmp/plxdb" if config.is_sqlite_db_engine else "polyaxon"
+         db_definition = {
+             "ENGINE": db_engine,
+-            "NAME": config.get_string("POLYAXON_DB_NAME"),
++            "NAME": db_name,
+             "USER": config.get_string("POLYAXON_DB_USER", is_optional=True),
+             "PASSWORD": config.get_string(
+                 "POLYAXON_DB_PASSWORD", is_secret=True, is_optional=True
+             ),
+             "HOST": config.get_string("POLYAXON_DB_HOST", is_optional=True),
+             "PORT": config.get_string("POLYAXON_DB_PORT", is_optional=True),
+             "ATOMIC_REQUESTS": True,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/cors.py` & `haupt-2.0.0rc0/haupt/common/settings/cors.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from corsheaders.defaults import default_headers
+ 
+ from haupt.common.config_manager import ConfigManager
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/defaults.py` & `haupt-2.0.0rc0/haupt/common/settings/defaults.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ # Setting values to None means using defaults
+ 
+ from haupt import pkg
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/encryption.py` & `haupt-2.0.0rc0/haupt/common/settings/encryption.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.config_manager import ConfigManager
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/logging.py` & `haupt-2.0.0rc0/haupt/common/settings/logging.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,21 +1,22 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import os
+ 
+ from typing import Dict
+ 
++from clipped.logging_utils import DEFAULT_LOGS_ROOT
++
+ from haupt.common.config_manager import ConfigManager
+ from polyaxon.env_vars.keys import EV_KEYS_LOGS_ROOT
+-from polyaxon.utils.log_utils import DEFAULT_LOGS_ROOT
+ 
+ 
+ def set_logging(
+     context,
+     config: ConfigManager,
+ ) -> Dict:
+     log_dir = config.get_string(
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/middlewares.py` & `haupt-2.0.0rc0/haupt/common/settings/middlewares.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,27 +1,35 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.config_manager import ConfigManager
+ 
+ 
+ def set_middlewares(context, config: ConfigManager):
+     context["MIDDLEWARE"] = (
+         "django.middleware.security.SecurityMiddleware",
+         "django.contrib.sessions.middleware.SessionMiddleware",
+         "corsheaders.middleware.CorsMiddleware",
+         "django.middleware.common.CommonMiddleware",
+-        "django.middleware.csrf.CsrfViewMiddleware",
++    )
++
++    if not context["UI_IN_SANDBOX"]:
++        context["MIDDLEWARE"] += ("django.middleware.csrf.CsrfViewMiddleware",)
++
++    context["MIDDLEWARE"] += (
+         "django.contrib.auth.middleware.AuthenticationMiddleware",
+         "django.contrib.messages.middleware.MessageMiddleware",
+         "django.middleware.clickjacking.XFrameOptionsMiddleware",
+     )
++
+     if context["UI_IN_SANDBOX"]:
+         context["MIDDLEWARE"] += ("whitenoise.middleware.WhiteNoiseMiddleware",)
+ 
+ 
+ def set_base_middlewares(context, config: ConfigManager):
+     context["MIDDLEWARE"] = ("django.middleware.common.CommonMiddleware",)
++    if context["UI_IN_SANDBOX"]:
++        context["MIDDLEWARE"] += ("whitenoise.middleware.WhiteNoiseMiddleware",)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/secrets.py` & `haupt-2.0.0rc0/haupt/common/settings/secrets.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,20 +1,21 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.config_manager import ConfigManager
++from polyaxon.env_vars.keys import EV_KEYS_SECRET_KEY
+ 
+ 
+ def set_secrets(context, config: ConfigManager):
+     context["SECRET_KEY"] = config.get_string(
+-        "POLYAXON_SECRET_KEY",
++        EV_KEYS_SECRET_KEY,
+         is_secret=True,
+         is_optional=True,
+         default="default-secret",
+     )
+     context["SECRET_INTERNAL_TOKEN"] = config.get_string(
+         "POLYAXON_SECRET_INTERNAL_TOKEN", is_secret=True, is_optional=True
+     )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/services/api.py` & `haupt-2.0.0rc0/haupt/common/settings/services/api.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from typing import Dict, List, Tuple
++from typing import Dict, List, Optional, Tuple
+ 
+ from haupt.common.config_manager import ConfigManager
+ from haupt.common.settings.apps import set_apps
+ from haupt.common.settings.assets import set_assets
+ from haupt.common.settings.celery import set_celery
+ from haupt.common.settings.core import set_core
+ from haupt.common.settings.cors import set_cors
+@@ -17,16 +17,16 @@
+ 
+ 
+ def set_api_service(
+     context,
+     config: ConfigManager,
+     api_apps: Tuple,
+     routes: Dict,
+-    db_app: str = None,
+-    processors: List[str] = None,
++    db_app: Optional[str] = None,
++    processors: Optional[List[str]] = None,
+ ):
+     project_apps = (
+         "haupt.common.apis.apps.CommonApisConfig",
+         "haupt.common.commands.apps.CommandsConfig",
+     ) + api_apps
+     set_apps(
+         context=context,
+@@ -38,15 +38,15 @@
+         use_admin_apps=True,
+         use_staticfiles_app=True,
+     )
+     set_core(context=context, config=config, use_db=True)
+     set_cors(context=context, config=config)
+     set_ui(context=context, config=config, processors=processors)
+     set_middlewares(context=context, config=config)
+-    set_assets(context=context, root_dir=config.config_root_dir, config=config)
++    set_assets(context=context, config=config)
+     if config.scheduler_enabled:
+         set_celery(context=context, config=config, routes=routes)
+ 
+ 
+ def set_service(context, config: ConfigManager):
+     from haupt.background.celeryp.routes import get_routes
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/services/background.py` & `haupt-2.0.0rc0/haupt/polyconf/config_settings/__init__.py`
+
+ * *Files 25% similar despite different names*
+
+```diff
+@@ -1,39 +1,33 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from typing import Dict, Tuple
+ 
+-from haupt.common.config_manager import ConfigManager
+-from haupt.common.settings.apps import set_apps
+-from haupt.common.settings.celery import set_celery
+-from haupt.common.settings.core import set_core
+-
+-
+-def set_background_service(
+-    context,
+-    config: ConfigManager,
+-    scheduler_apps: Tuple,
+-    routes: Dict,
+-    db_app: str = None,
+-):
+-    set_apps(
+-        context=context,
+-        config=config,
+-        third_party_apps=None,
+-        project_apps=scheduler_apps,
+-        db_app=db_app,
+-    )
+-    set_core(context=context, config=config, use_db=True)
+-    set_celery(context=context, config=config, routes=routes)
+-
+-
+-def set_service(context, config: ConfigManager):
+-    from haupt.background.celeryp.routes import get_routes
+-
+-    scheduler_apps = ("haupt.background.scheduler.apps.SchedulerConfig",)
+-    set_background_service(
+-        context, config, scheduler_apps=scheduler_apps, routes=get_routes(), db_app=None
+-    )
++# isort: skip_file
++
++# Default configs
++
++from haupt.common.settings.logging import set_logging
++from haupt.common.settings.admin import set_admin
++from haupt.common.settings.secrets import set_secrets
++from haupt.polyconf.config_manager import config
++
++context = locals()
++set_logging(context=context, config=config)
++set_admin(context=context, config=config)
++set_secrets(context=context, config=config)
++if config.is_streams_service:
++    from haupt.common.settings.services.streams import set_service
++elif config.is_api_service:
++    from haupt.common.settings.services.api import set_service
++else:
++    from haupt.common.settings.services.background import set_service
++
++set_service(context=context, config=config)
++
++from haupt.common.settings.defaults import *
++
++if config.is_api_service or config.is_streams_service:
++    from .rest import *
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/services/streams.py` & `haupt-2.0.0rc0/haupt/common/settings/services/streams.py`
+
+ * *Files 16% similar despite different names*
+
+```diff
+@@ -1,36 +1,41 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from haupt.common.config_manager import ConfigManager
+ from haupt.common.settings.apps import set_apps
+ from haupt.common.settings.assets import set_assets
+ from haupt.common.settings.core import set_core
+ from haupt.common.settings.cors import set_cors
+ from haupt.common.settings.middlewares import set_base_middlewares
+ from haupt.common.settings.ui import set_ui
++from polyaxon.env_vars.keys import EV_KEYS_UI_IN_SANDBOX
+ 
+ 
+ def set_streams_apps(context, config: ConfigManager):
+     set_apps(
+         context=context,
+         config=config,
+         third_party_apps=("rest_framework", "corsheaders"),
+         project_apps=(
+             "haupt.common.apis.apps.CommonApisConfig",
+             "haupt.streams.apps.StreamsConfig",
+         ),
+         use_db_apps=False,
+-        use_staticfiles_app=False,
++        use_staticfiles_app=context["UI_IN_SANDBOX"],
+     )
+ 
+ 
+ def set_service(context, config: ConfigManager):
++    # This is repeated because it's required for using the staticfiles app
++    context["UI_IN_SANDBOX"] = config.get_boolean(
++        EV_KEYS_UI_IN_SANDBOX, is_optional=True, default=False
++    )
+     set_streams_apps(context, config)
+     set_core(context=context, config=config, use_db=False)
+     set_cors(context=context, config=config)
+     set_ui(context=context, config=config)
+     set_base_middlewares(context=context, config=config)
+-    set_assets(context=context, root_dir=config.config_root_dir, config=config)
++    set_assets(context=context, config=config)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/settings/ui.py` & `haupt-2.0.0rc0/haupt/common/settings/ui.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,28 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from typing import List
++from typing import List, Optional
+ 
+ from haupt.common.config_manager import ConfigManager
+ from polyaxon.env_vars.keys import (
+     EV_KEYS_PLATFORM_HOST,
+     EV_KEYS_UI_ADMIN_ENABLED,
+     EV_KEYS_UI_ASSETS_VERSION,
+     EV_KEYS_UI_BASE_URL,
+     EV_KEYS_UI_ENABLED,
+     EV_KEYS_UI_IN_SANDBOX,
+     EV_KEYS_UI_OFFLINE,
+ )
+ 
+ 
+-def set_ui(context, config: ConfigManager, processors: List[str] = None):
++def set_ui(context, config: ConfigManager, processors: Optional[List[str]] = None):
+     context["ROOT_URLCONF"] = "{}.urls".format(config.config_module)
+     platform_host = config.get_string(EV_KEYS_PLATFORM_HOST, is_optional=True)
+     context["PLATFORM_HOST"] = platform_host
+ 
+     def get_allowed_hosts():
+         allowed_hosts = config.get_string(
+             "POLYAXON_ALLOWED_HOSTS", is_optional=True, is_list=True, default=["*"]
+@@ -40,22 +40,25 @@
+             allowed_hosts += ["{}.{}".format(host_cidr, i) for i in range(255)]
+ 
+         return allowed_hosts
+ 
+     context["ALLOWED_HOSTS"] = get_allowed_hosts()
+ 
+     processors = processors or []
++    if not config.is_streams_service:
++        processors = [
++            "django.contrib.auth.context_processors.auth",
++            "django.contrib.messages.context_processors.messages",
++        ] + processors
+     processors = [
+-        "django.contrib.auth.context_processors.auth",
+         "django.template.context_processors.debug",
+         "django.template.context_processors.request",
+         "django.template.context_processors.media",
+         "django.template.context_processors.static",
+         "django.template.context_processors.tz",
+-        "django.contrib.messages.context_processors.messages",
+         "haupt.common.settings.context_processors.version",
+         "haupt.common.settings.context_processors.ui_assets_version",
+         "haupt.common.settings.context_processors.ui_base_url",
+         "haupt.common.settings.context_processors.ui_offline",
+         "haupt.common.settings.context_processors.ui_enabled",
+         "haupt.common.settings.context_processors.ui_in_sandbox",
+     ] + processors
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/test_cases/base.py` & `haupt-2.0.0rc0/haupt/common/test_cases/base.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.core.cache import cache
+ from django.test import TestCase
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/test_clients/base.py` & `haupt-2.0.0rc0/haupt/common/test_clients/base.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import datetime
+ import json
+ import uuid
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/validation/blacklist.py` & `haupt-2.0.0rc0/haupt/common/validation/blacklist.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ try:
+     from rest_framework.exceptions import ValidationError
+ except ImportError:
+@@ -144,14 +144,14 @@
+     "activitie",
+     "history",
+     "analytic",
+ }
+ NAME_BLACKLIST |= {"{}s".format(b) for b in NAME_BLACKLIST}
+ 
+ 
+-def validate_blacklist_name(name: str) -> None:
++def validate_blacklist_name(name: str):
+     """Validates slug name against a blacklist"""
+     if name is None:
+         raise ValidationError("A short name must be supplied.")
+ 
+     if name.lower() in NAME_BLACKLIST:
+         raise ValidationError("The name is a reserved word or already taken.")
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/validation/slugs.py` & `haupt-2.0.0rc0/haupt/common/validation/slugs.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,24 +1,24 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.core.validators import RegexValidator
+ from django.utils.regex_helper import _lazy_re_compile
+ 
+ try:
+     from django.utils.safestring import mark_safe
+ except ImportError:
+     raise ImportError("This module depends on django.")
+ 
+ 
+-from polyaxon.utils.string_utils import slugify as core_slugify
++from clipped.string_utils import slugify as core_slugify
+ 
+ 
+ def slugify(value: str) -> str:
+     return core_slugify(value, mark_safe)
+ 
+ 
+ slug_dots_re = _lazy_re_compile(r"^[-a-zA-Z0-9_.]+\Z")
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/common/workers.py` & `haupt-2.0.0rc0/haupt/common/workers.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import transaction
+ 
+ from haupt.background.celeryp.app import app
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/artifacts.py` & `haupt-2.0.0rc0/haupt/db/abstracts/artifacts.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,29 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import models
+ 
+ from haupt.db.abstracts.diff import DiffModel
+ from haupt.db.abstracts.getter import get_db_model_name
+ from haupt.db.abstracts.state import StateModel
+-from polyaxon.utils.enums_utils import values_to_choices
+ from traceml.artifacts import V1ArtifactKind
+ 
+ 
+ class BaseArtifact(DiffModel, StateModel):
+     name = models.CharField(max_length=256, db_index=True)
+     kind = models.CharField(
+         max_length=12,
+         db_index=True,
+-        choices=values_to_choices(V1ArtifactKind.allowable_values),
++        choices=V1ArtifactKind.to_choices(),
+     )
+     path = models.CharField(max_length=256, blank=True, null=True)
+     summary = models.JSONField()
+ 
+     class Meta:
+         abstract = True
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/catalogs.py` & `haupt-2.0.0rc0/haupt/db/abstracts/catalogs.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import models
+ 
+ from haupt.db.abstracts.describable import DescribableModel
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/duration.py` & `haupt-2.0.0rc0/haupt/db/abstracts/duration.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import models
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/getter.py` & `haupt-2.0.0rc0/haupt/db/abstracts/getter.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.apps import apps as django_apps
+ from django.conf import settings
+ from django.core.exceptions import ImproperlyConfigured
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/live_state.py` & `haupt-2.0.0rc0/haupt/db/abstracts/live_state.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import random
+ 
+ from django.db import models
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/nameable.py` & `haupt-2.0.0rc0/haupt/db/abstracts/nameable.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.core.validators import validate_slug
+ from django.db import models
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/projects.py` & `haupt-2.0.0rc0/haupt/db/abstracts/projects.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import uuid
+ 
+ from django.core.validators import validate_slug
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/runs.py` & `haupt-2.0.0rc0/haupt/db/abstracts/runs.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from django.conf import settings
+ from django.core.validators import validate_slug
+ from django.db import models
+ 
+@@ -18,15 +18,14 @@
+ from haupt.db.abstracts.spec import SpecModel
+ from haupt.db.abstracts.status import StatusModel
+ from haupt.db.abstracts.tag import TagModel
+ from haupt.db.abstracts.uid import UuidModel
+ from polyaxon.lifecycle import V1Statuses
+ from polyaxon.polyflow import V1CloningKind, V1RunKind
+ from polyaxon.schemas import V1RunPending
+-from polyaxon.utils.enums_utils import values_to_choices
+ 
+ 
+ class BaseRun(
+     UuidModel,
+     DiffModel,
+     DurationModel,
+     SpecModel,
+@@ -43,15 +42,15 @@
+         null=True,
+         default=None,
+         validators=[validate_slug],
+     )
+     kind = models.CharField(
+         max_length=12,
+         db_index=True,
+-        choices=values_to_choices(V1RunKind.allowable_values),
++        choices=V1RunKind.to_choices(),
+     )
+     runtime = models.CharField(max_length=12, db_index=True, null=True, blank=True)
+     user = models.ForeignKey(
+         settings.AUTH_USER_MODEL,
+         on_delete=models.CASCADE,
+         related_name="+",
+         null=True,
+@@ -64,15 +63,15 @@
+         default=True, help_text="If this entity is managed by the platform."
+     )
+     pending = models.CharField(
+         max_length=8,
+         null=True,
+         blank=True,
+         db_index=True,
+-        choices=values_to_choices(V1RunPending.allowable_values),
++        choices=V1RunPending.to_choices(),
+         help_text="If this entity requires approval before it should run.",
+     )
+     meta_info = models.JSONField(null=True, blank=True, default=dict)
+     params = models.JSONField(null=True, blank=True)
+     inputs = models.JSONField(null=True, blank=True)
+     outputs = models.JSONField(null=True, blank=True)
+     original = models.ForeignKey(
+@@ -89,15 +88,15 @@
+         on_delete=models.CASCADE,
+         related_name="pipeline_runs",
+     )
+     cloning_kind = models.CharField(
+         max_length=12,
+         blank=True,
+         null=True,
+-        choices=values_to_choices(V1CloningKind.allowable_values),
++        choices=V1CloningKind.to_choices(),
+     )
+     artifacts = models.ManyToManyField(
+         get_db_model_name("Artifact"),
+         blank=True,
+         through=get_db_model_name("ArtifactLineage"),
+         related_name="runs",
+     )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/spec.py` & `haupt-2.0.0rc0/haupt/db/abstracts/spec.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import models
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/stage.py` & `haupt-2.0.0rc0/haupt/db/abstracts/stage.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,29 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.core.serializers.json import DjangoJSONEncoder
+ from django.db import models
+ 
+ from polyaxon.lifecycle import V1Stages
+-from polyaxon.utils.enums_utils import values_to_choices
+ 
+ 
+ class StageModel(models.Model):
+     stage = models.CharField(
+         max_length=16,
+         blank=True,
+         null=True,
+         db_index=True,
+         default=V1Stages.TESTING,
+-        choices=values_to_choices(V1Stages.allowable_values),
++        choices=V1Stages.to_choices(),
+     )
+     stage_conditions = models.JSONField(
+         encoder=DjangoJSONEncoder, blank=True, null=True, default=dict
+     )
+ 
+     class Meta:
+         abstract = True
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/state.py` & `haupt-2.0.0rc0/haupt/db/abstracts/state.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import models
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/status.py` & `haupt-2.0.0rc0/haupt/db/abstracts/status.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -1,29 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.core.serializers.json import DjangoJSONEncoder
+ from django.db import models
+ 
+ from polyaxon.lifecycle import V1Statuses
+-from polyaxon.utils.enums_utils import values_to_choices
+ 
+ 
+ class StatusModel(models.Model):
+     status = models.CharField(
+         max_length=16,
+         blank=True,
+         null=True,
+         db_index=True,
+         default=V1Statuses.CREATED,
+-        choices=values_to_choices(V1Statuses.allowable_values),
++        choices=V1Statuses.to_choices(),
+     )
+     status_conditions = models.JSONField(
+         encoder=DjangoJSONEncoder, blank=True, null=True, default=dict
+     )
+ 
+     class Meta:
+         abstract = True
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/abstracts/tag.py` & `haupt-2.0.0rc0/haupt/db/abstracts/tag.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.conf import settings
+ from django.contrib.postgres.fields import ArrayField
+ from django.core.serializers.json import DjangoJSONEncoder
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/administration/artifacts.py` & `haupt-2.0.0rc0/haupt/db/administration/artifacts.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.db.administration.utils import DiffModelAdmin
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/administration/projects.py` & `haupt-2.0.0rc0/haupt/db/administration/projects.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.db.administration.utils import DiffModelAdmin
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/administration/register.py` & `haupt-2.0.0rc0/haupt/db/administration/register.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.contrib.admin import site
+ from django.contrib.auth import get_user_model
+ from django.contrib.auth.admin import UserAdmin
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/administration/runs.py` & `haupt-2.0.0rc0/haupt/db/administration/runs.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.db.administration.utils import DiffModelAdmin, ReadOnlyAdmin
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/administration/utils.py` & `haupt-2.0.0rc0/haupt/db/administration/utils.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ 
+ from django.contrib.admin import ModelAdmin
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/factories/artifacts.py` & `haupt-2.0.0rc0/haupt/db/factories/artifacts.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import factory
+ 
+ from haupt.db.abstracts.getter import get_artifact_model
+-from polyaxon_sdk import V1ArtifactKind
++from traceml.artifacts import V1ArtifactKind
+ 
+ 
+ class ArtifactFactory(factory.django.DjangoModelFactory):
+     name = "accuracy"
+     kind = V1ArtifactKind.METRIC
+     summary = {"last_value": 0.9, "max_value": 0.9, "min_value": 0.1}
+     path = "accuracy"
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/factories/runs.py` & `haupt-2.0.0rc0/haupt/db/factories/runs.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import factory
+ 
+ from haupt.db.abstracts.getter import get_run_model
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/factories/users.py` & `haupt-2.0.0rc0/haupt/db/factories/users.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import factory
+ 
+ from faker import Factory as FakerFactory
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/managers/artifacts.py` & `haupt-2.0.0rc0/haupt/db/managers/artifacts.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import time
+ import uuid
+ 
+ from functools import reduce
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/managers/deleted.py` & `haupt-2.0.0rc0/haupt/db/managers/deleted.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import models
+ 
+ from polyaxon import live_state
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/managers/dummy_key.py` & `haupt-2.0.0rc0/haupt/db/managers/dummy_key.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import uuid
+ 
+ from django.contrib.auth import get_user_model
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/managers/runs.py` & `haupt-2.0.0rc0/haupt/db/managers/runs.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,32 +1,32 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from typing import Dict, List
++from typing import Dict, List, Optional
+ 
+ from haupt.db.abstracts.getter import get_run_model
+ from haupt.db.abstracts.runs import BaseRun
+ from polyaxon.lifecycle import V1StatusCondition, V1Statuses
+ from polyaxon.polyflow import V1CompiledOperation, V1RunKind
+ from polyaxon.schemas import V1RunPending
+ 
+ 
+ def create_run(
+     project_id: int,
+     user_id: int,
+-    name: str = None,
+-    description: str = None,
+-    readme: str = None,
++    name: Optional[str] = None,
++    description: Optional[str] = None,
++    readme: Optional[str] = None,
+     tags: List[int] = None,
+-    raw_content: str = None,
+-    meta_info: Dict = None,
++    raw_content: Optional[str] = None,
++    meta_info: Optional[Dict] = None,
+ ) -> BaseRun:
+     instance = get_run_model().objects.create(
+         project_id=project_id,
+         user_id=user_id,
+         name=name,
+         description=description,
+         readme=readme,
+@@ -51,12 +51,14 @@
+     pending = run.pending
+     if pending:
+         new_pending = None
+         if (
+             (pending == V1RunPending.BUILD and run.status == V1Statuses.CREATED)
+             or pending == V1RunPending.UPLOAD
+         ) and run.content:
+-            compiled_operation = V1CompiledOperation.read(run.content)
++            compiled_operation = V1CompiledOperation.read(
++                run.content
++            )  # TODO: Use construct
+             if compiled_operation.is_approved is False:
+                 new_pending = V1RunPending.APPROVAL
+         run.pending = new_pending
+         run.save(update_fields=["pending", "updated_at"])
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/managers/statuses.py` & `haupt-2.0.0rc0/haupt/db/managers/statuses.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,29 +1,30 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from typing import Any, List
++from typing import Any, List, Optional
++
++from clipped.list_utils import to_list
+ 
+ from haupt.common import auditor
+ from haupt.common.events.registry.run import (
+     RUN_DONE,
+     RUN_FAILED,
+     RUN_NEW_STATUS,
+     RUN_RESUMED,
+     RUN_SKIPPED,
+     RUN_STOPPED,
+     RUN_SUCCEEDED,
+ )
+ from haupt.db.abstracts.getter import get_run_model
+ from haupt.db.abstracts.runs import BaseRun
+ from polyaxon.lifecycle import LifeCycle, V1StatusCondition, V1Statuses
+-from polyaxon.utils.list_utils import to_list
+ 
+ 
+ def get_run_conditions(entity) -> List[V1StatusCondition]:
+     if entity.status_conditions:
+         status_conditions = to_list(entity.status_conditions, check_none=True)
+     else:
+         status_conditions = []
+@@ -58,15 +59,15 @@
+ 
+     return entity
+ 
+ 
+ def new_status(
+     entity,
+     condition: V1StatusCondition,
+-    additional_fields: List[str] = None,
++    additional_fields: Optional[List[str]] = None,
+     force: bool = False,
+ ):
+     previous_status = entity.status
+     if condition.type == V1Statuses.CREATED:
+         return previous_status
+     if previous_status == V1Statuses.STOPPING and not LifeCycle.is_done(condition.type):
+         return previous_status
+@@ -95,41 +96,41 @@
+     return previous_status
+ 
+ 
+ def bulk_new_entity_status(
+     model_class,
+     entities: List[Any],
+     condition: V1StatusCondition,
+-    additional_fields: List[str] = None,
++    additional_fields: Optional[List[str]] = None,
+ ):
+     for entity in entities:
+         set_entity_status(entity=entity, condition=condition)
+     additional_fields = additional_fields or []
+     model_class.objects.bulk_update(
+         entities, additional_fields + ["status_conditions", "status"]
+     )
+ 
+ 
+ def bulk_new_run_status(
+     runs: List[BaseRun],
+     condition: V1StatusCondition,
+-    additional_fields: List[str] = None,
++    additional_fields: Optional[List[str]] = None,
+ ):
+     bulk_new_entity_status(
+         model_class=get_run_model(),
+         entities=runs,
+         condition=condition,
+         additional_fields=additional_fields,
+     )
+ 
+ 
+ def new_run_status(
+     run: BaseRun,
+     condition: V1StatusCondition,
+-    additional_fields: List[str] = None,
++    additional_fields: Optional[List[str]] = None,
+     force: bool = False,
+ ):
+     previous_status = new_status(
+         entity=run,
+         condition=condition,
+         additional_fields=additional_fields,
+         force=force,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/mixins/cache.py` & `haupt-2.0.0rc0/haupt/db/mixins/cache.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ 
+ class CachedMixin:
+     """
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/mixins/singleton.py` & `haupt-2.0.0rc0/haupt/db/mixins/singleton.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.core.cache import cache
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/models/artifacts.py` & `haupt-2.0.0rc0/haupt/db/models/artifacts.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.db.abstracts.artifacts import BaseArtifact, BaseArtifactLineage
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0001_initial.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0001_initial.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import re
+ import uuid
+ 
+@@ -20,15 +20,14 @@
+ from django.conf import settings
+ from django.db import migrations, models
+ 
+ import haupt.common.validation.blacklist
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     initial = True
+ 
+     dependencies = [
+         ("auth", "0011_update_proxy_permissions"),
+     ]
+ 
+     operations = [
+@@ -142,45 +141,45 @@
+                 ("updated_at", models.DateTimeField(auto_now=True)),
+                 ("state", models.UUIDField()),
+                 ("name", models.CharField(db_index=True, max_length=64)),
+                 (
+                     "kind",
+                     models.CharField(
+                         choices=[
+-                            ("analysis", "analysis"),
+-                            ("artifact", "artifact"),
++                            ("model", "model"),
+                             ("audio", "audio"),
++                            ("video", "video"),
++                            ("histogram", "histogram"),
++                            ("image", "image"),
++                            ("tensor", "tensor"),
++                            ("dataframe", "dataframe"),
+                             ("chart", "chart"),
+-                            ("coderef", "coderef"),
+-                            ("confusion", "confusion"),
+                             ("csv", "csv"),
+-                            ("curve", "curve"),
+-                            ("data", "data"),
+-                            ("dataframe", "dataframe"),
+-                            ("dir", "dir"),
+-                            ("docker_image", "docker_image"),
+-                            ("dockerfile", "dockerfile"),
++                            ("tsv", "tsv"),
++                            ("psv", "psv"),
++                            ("ssv", "ssv"),
++                            ("metric", "metric"),
+                             ("env", "env"),
+-                            ("file", "file"),
+-                            ("histogram", "histogram"),
+                             ("html", "html"),
+-                            ("image", "image"),
++                            ("text", "text"),
++                            ("file", "file"),
++                            ("dir", "dir"),
++                            ("dockerfile", "dockerfile"),
++                            ("docker_image", "docker_image"),
++                            ("data", "data"),
++                            ("coderef", "coderef"),
++                            ("table", "table"),
++                            ("tensorboard", "tensorboard"),
++                            ("curve", "curve"),
++                            ("confusion", "confusion"),
++                            ("analysis", "analysis"),
+                             ("iteration", "iteration"),
+                             ("markdown", "markdown"),
+-                            ("metric", "metric"),
+-                            ("model", "model"),
+-                            ("psv", "psv"),
+-                            ("ssv", "ssv"),
+                             ("system", "system"),
+-                            ("table", "table"),
+-                            ("tensor", "tensor"),
+-                            ("tensorboard", "tensorboard"),
+-                            ("text", "text"),
+-                            ("tsv", "tsv"),
+-                            ("video", "video"),
++                            ("artifact", "artifact"),
+                         ],
+                         db_index=True,
+                         max_length=12,
+                     ),
+                 ),
+                 ("path", models.CharField(blank=True, max_length=256, null=True)),
+                 ("summary", django.contrib.postgres.fields.jsonb.JSONField()),
+@@ -333,34 +332,34 @@
+                     ),
+                 ),
+                 (
+                     "status",
+                     models.CharField(
+                         blank=True,
+                         choices=[
+-                            ("compiled", "compiled"),
+                             ("created", "created"),
+-                            ("done", "done"),
+-                            ("failed", "failed"),
++                            ("resuming", "resuming"),
+                             ("on_schedule", "on_schedule"),
+-                            ("processing", "processing"),
++                            ("compiled", "compiled"),
+                             ("queued", "queued"),
+-                            ("resuming", "resuming"),
+-                            ("retrying", "retrying"),
+-                            ("running", "running"),
+                             ("scheduled", "scheduled"),
+-                            ("skipped", "skipped"),
+                             ("starting", "starting"),
+-                            ("stopped", "stopped"),
++                            ("running", "running"),
++                            ("processing", "processing"),
+                             ("stopping", "stopping"),
++                            ("failed", "failed"),
++                            ("stopped", "stopped"),
+                             ("succeeded", "succeeded"),
+-                            ("unknown", "unknown"),
++                            ("skipped", "skipped"),
++                            ("warning", "warning"),
+                             ("unschedulable", "unschedulable"),
+                             ("upstream_failed", "upstream_failed"),
+-                            ("warning", "warning"),
++                            ("retrying", "retrying"),
++                            ("unknown", "unknown"),
++                            ("done", "done"),
+                         ],
+                         db_index=True,
+                         default="created",
+                         max_length=64,
+                         null=True,
+                     ),
+                 ),
+@@ -373,33 +372,34 @@
+                         null=True,
+                     ),
+                 ),
+                 (
+                     "kind",
+                     models.CharField(
+                         choices=[
+-                            ("builder", "builder"),
+-                            ("cleaner", "cleaner"),
++                            ("job", "job"),
++                            ("service", "service"),
+                             ("dag", "dag"),
++                            ("spark", "spark"),
+                             ("dask", "dask"),
+                             ("flink", "flink"),
+-                            ("job", "job"),
+-                            ("matrix", "matrix"),
++                            ("ray", "ray"),
+                             ("mpijob", "mpijob"),
+-                            ("mxjob", "mxjob"),
+-                            ("notifier", "notifier"),
++                            ("tfjob", "tfjob"),
+                             ("pytorchjob", "pytorchjob"),
+-                            ("ray", "ray"),
++                            ("paddlejob", "paddlejob"),
++                            ("mxjob", "mxjob"),
++                            ("xgbjob", "xgbjob"),
++                            ("matrix", "matrix"),
+                             ("schedule", "schedule"),
+-                            ("service", "service"),
+-                            ("spark", "spark"),
+-                            ("tfjob", "tfjob"),
+                             ("tuner", "tuner"),
+                             ("watchdog", "watchdog"),
+-                            ("xgbjob", "xgbjob"),
++                            ("notifier", "notifier"),
++                            ("cleaner", "cleaner"),
++                            ("builder", "builder"),
+                         ],
+                         db_index=True,
+                         max_length=12,
+                     ),
+                 ),
+                 (
+                     "meta_info",
+@@ -426,17 +426,17 @@
+                     ),
+                 ),
+                 (
+                     "cloning_kind",
+                     models.CharField(
+                         blank=True,
+                         choices=[
+-                            ("cache", "cache"),
+                             ("copy", "copy"),
+                             ("restart", "restart"),
++                            ("cache", "cache"),
+                         ],
+                         max_length=12,
+                         null=True,
+                     ),
+                 ),
+                 (
+                     "artifacts",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0002_auto_20200807_1247.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0002_auto_20200807_1247.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,19 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import migrations
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0001_initial"),
+     ]
+ 
+     operations = [
+         migrations.RenameField(
+             model_name="run",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0003_run_pipeline.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0003_run_pipeline.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,21 +1,20 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import django.db.models.deletion
+ 
+ from django.db import migrations, models
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0002_auto_20200807_1247"),
+     ]
+ 
+     operations = [
+         migrations.AddField(
+             model_name="run",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0004_auto_20200905_1523.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0004_auto_20200905_1523.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,19 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import migrations, models
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0003_run_pipeline"),
+     ]
+ 
+     operations = [
+         migrations.RemoveField(
+             model_name="project",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0005_auto_20201005_0913.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0005_auto_20201005_0913.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,21 +1,20 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import django.core.serializers.json
+ 
+ from django.db import migrations, models
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0004_auto_20200905_1523"),
+     ]
+ 
+     operations = [
+         migrations.AlterField(
+             model_name="artifact",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0006_auto_20201020_1705.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0006_auto_20201020_1705.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ 
+ from django.db import migrations, models
+ 
+@@ -17,15 +17,14 @@
+         r.runtime = r.meta_info.pop("meta_kind", None)
+         runs.append(r)
+ 
+     Run.objects.bulk_update(runs, ["meta_info", "runtime"])
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0005_auto_20201005_0913"),
+     ]
+ 
+     operations = [
+         migrations.AddField(
+             model_name="run",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0007_auto_20201121_1332.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0007_auto_20201121_1332.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,25 +1,24 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import re
+ 
+ import django.core.validators
+ 
+ from django.db import migrations, models
+ 
+ import haupt.common.validation.blacklist
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0006_auto_20201020_1705"),
+     ]
+ 
+     operations = [
+         migrations.AddField(
+             model_name="run",
+@@ -68,34 +67,34 @@
+         ),
+         migrations.AlterField(
+             model_name="run",
+             name="status",
+             field=models.CharField(
+                 blank=True,
+                 choices=[
+-                    ("compiled", "compiled"),
+                     ("created", "created"),
+-                    ("done", "done"),
+-                    ("failed", "failed"),
++                    ("resuming", "resuming"),
+                     ("on_schedule", "on_schedule"),
+-                    ("processing", "processing"),
++                    ("compiled", "compiled"),
+                     ("queued", "queued"),
+-                    ("resuming", "resuming"),
+-                    ("retrying", "retrying"),
+-                    ("running", "running"),
+                     ("scheduled", "scheduled"),
+-                    ("skipped", "skipped"),
+                     ("starting", "starting"),
+-                    ("stopped", "stopped"),
++                    ("running", "running"),
++                    ("processing", "processing"),
+                     ("stopping", "stopping"),
++                    ("failed", "failed"),
++                    ("stopped", "stopped"),
+                     ("succeeded", "succeeded"),
+-                    ("unknown", "unknown"),
++                    ("skipped", "skipped"),
++                    ("warning", "warning"),
+                     ("unschedulable", "unschedulable"),
+                     ("upstream_failed", "upstream_failed"),
+-                    ("warning", "warning"),
++                    ("retrying", "retrying"),
++                    ("unknown", "unknown"),
++                    ("done", "done"),
+                 ],
+                 db_index=True,
+                 default="created",
+                 max_length=16,
+                 null=True,
+             ),
+         ),
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0008_run_wait_time.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0008_run_wait_time.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import migrations, models
+ 
+ 
+@@ -19,15 +19,14 @@
+             r.wait_time = r.calc_wait_time.seconds
+             runs.append(r)
+ 
+     Run.objects.bulk_update(runs, ["wait_time"])
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0007_auto_20201121_1332"),
+     ]
+ 
+     operations = [
+         migrations.AddField(
+             model_name="run",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0009_project_unique_name.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0009_project_unique_name.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,25 +1,24 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import re
+ 
+ import django.core.validators
+ 
+ from django.db import migrations, models
+ 
+ import haupt.common.validation.blacklist
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0008_run_wait_time"),
+     ]
+ 
+     operations = [
+         migrations.AlterField(
+             model_name="project",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0010_auto_20210429_1539.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0010_auto_20210429_1539.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,19 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import migrations, models
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0009_project_unique_name"),
+     ]
+ 
+     operations = [
+         migrations.RemoveField(
+             model_name="run",
+@@ -22,17 +21,17 @@
+         migrations.AddField(
+             model_name="run",
+             name="pending",
+             field=models.CharField(
+                 blank=True,
+                 choices=[
+                     ("approval", "approval"),
+-                    ("build", "build"),
+-                    ("cache", "cache"),
+                     ("upload", "upload"),
++                    ("cache", "cache"),
++                    ("build", "build"),
+                 ],
+                 db_index=True,
+                 help_text="If this entity requires approval before it should run.",
+                 max_length=8,
+                 null=True,
+             ),
+         ),
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0011_alter_artifact_state.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0011_alter_artifact_state.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,19 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import migrations, models
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0010_auto_20210429_1539"),
+     ]
+ 
+     operations = [
+         migrations.AlterField(
+             model_name="artifact",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0012_alter_artifact_updated_at_and_more.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0012_alter_artifact_updated_at_and_more.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,19 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.db import migrations, models
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0011_alter_artifact_state"),
+     ]
+ 
+     operations = [
+         migrations.AlterField(
+             model_name="artifact",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/pgsql/db/migrations/0013_alter_artifact_name.py` & `haupt-2.0.0rc0/haupt/db/pgsql/db/migrations/0013_alter_artifact_name.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,20 +1,19 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ 
+ from django.db import migrations, models
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     dependencies = [
+         ("db", "0012_alter_artifact_updated_at_and_more"),
+     ]
+ 
+     operations = [
+         migrations.AlterField(
+             model_name="artifact",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/queries/artifacts.py` & `haupt-2.0.0rc0/haupt/db/queries/artifacts.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from typing import Dict, List
+ 
+ from django.conf import settings
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/queries/runs.py` & `haupt-2.0.0rc0/haupt/db/queries/runs.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from haupt.db.abstracts.getter import get_run_model
+ 
+ STATUS_UPDATE_COLUMNS_ONLY = [
+     "id",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/query_managers/artifact.py` & `haupt-2.0.0rc0/haupt/db/query_managers/artifact.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.db.query_managers.manager import BaseQueryManager
+ from polyaxon.pql.builder import BoolCondition, SearchCondition, ValueCondition
+ from polyaxon.pql.parser import parse_search_operation, parse_value_operation
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/query_managers/callback_conditions.py` & `haupt-2.0.0rc0/haupt/db/query_managers/callback_conditions.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,27 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from typing import Any, Iterable, Union
++from typing import Any, Iterable, Optional, Union
++
++from clipped.bool_utils import to_bool
++from clipped.list_utils import to_list
+ 
+ from polyaxon import live_state
+-from polyaxon.utils.bool_utils import to_bool
+-from polyaxon.utils.list_utils import to_list
+ from traceml.artifacts import V1ArtifactKind
+ 
+ 
+ def archived_condition(
+     params: Union[str, Iterable],
+     negation: bool,
+     query_backend: Any,
+-    timezone: str = None,
++    timezone: Optional[str] = None,
+     queryset: Any = None,
+ ) -> Any:
+     """
+     Example:
+         >>>  {"archived": CallbackCondition(callback_conditions.archived_condition)}
+     """
+     params = to_list(params)
+@@ -34,42 +35,42 @@
+     return query_backend(live_state=live_state.STATE_LIVE)
+ 
+ 
+ def independent_condition(
+     params: Union[str, Iterable],
+     negation: bool,
+     query_backend: Any,
+-    timezone: str = None,
++    timezone: Optional[str] = None,
+     queryset: Any = None,
+ ) -> Any:
+     params = to_list(params)
+     if len(params) == 1 and to_bool(params[0]) is True:
+         return queryset.filter(experiment_group__isnull=True)
+     return queryset
+ 
+ 
+ def metric_condition(
+     queryset: Any,
+     params: Union[str, Iterable],
+     negation: bool,
+     query_backend: Any,
+-    timezone: str = None,
++    timezone: Optional[str] = None,
+ ) -> Any:
+     params = to_list(params)
+     if len(params) == 1 and to_bool(params[0]) is True:
+         return queryset.filter(metric_annotations__name=True)
+     return queryset
+ 
+ 
+ def commit_condition(
+     queryset: Any,
+     params: Union[str, Iterable],
+     negation: bool,
+     query_backend: Any,
+-    timezone: str = None,
++    timezone: Optional[str] = None,
+ ) -> Any:
+     params = to_list(params)
+     if len(params) == 1:
+         if negation:
+             return ~query_backend(
+                 artifacts__kind=V1ArtifactKind.CODEREF,
+                 artifacts__name=params[0],
+@@ -102,20 +103,20 @@
+ 
+ 
+ def in_artifact_kind_condition(
+     queryset: Any,
+     params: Union[str, Iterable],
+     negation: bool,
+     query_backend: Any,
+-    timezone: str = None,
++    timezone: Optional[str] = None,
+ ) -> Any:
+     return _artifact_kind_condition(True, queryset, params, negation)
+ 
+ 
+ def out_artifact_kind_condition(
+     queryset: Any,
+     params: Union[str, Iterable],
+     negation: bool,
+     query_backend: Any,
+-    timezone: str = None,
++    timezone: Optional[str] = None,
+ ) -> Any:
+     return _artifact_kind_condition(False, queryset, params, negation)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/query_managers/project.py` & `haupt-2.0.0rc0/haupt/db/query_managers/project.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from django.conf import settings
+ 
+ from haupt.db.query_managers.manager import BaseQueryManager
+ from polyaxon.pql.builder import (
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/query_managers/run.py` & `haupt-2.0.0rc0/haupt/db/query_managers/run.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from django.conf import settings
+ 
+ from haupt.db.query_managers import callback_conditions
+ from haupt.db.query_managers.manager import BaseQueryManager
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/signals/runs.py` & `haupt-2.0.0rc0/haupt/db/signals/runs.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,23 +1,23 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
++from clipped.signal_decorators import ignore_raw, ignore_updates
+ from rest_framework.exceptions import ValidationError
+ 
+ from django.db.models.signals import post_save
+ from django.dispatch import receiver
+ 
+ from haupt.common import auditor
+ from haupt.common.events.registry.run import RUN_CREATED
+ from haupt.db.abstracts.getter import get_run_model
+-from polyaxon.utils.signal_decorators import ignore_raw, ignore_updates
+ 
+ 
+ @receiver(post_save, sender=get_run_model(), dispatch_uid="run_created")
+ @ignore_updates
+ @ignore_raw
+ def run_created(sender, **kwargs):
+     instance = kwargs["instance"]
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/db/sqlite/db/migrations/0001_initial.py` & `haupt-2.0.0rc0/haupt/db/sqlite/db/migrations/0001_initial.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import re
+ import uuid
+ 
+@@ -18,15 +18,14 @@
+ from django.conf import settings
+ from django.db import migrations, models
+ 
+ import haupt.common.validation.blacklist
+ 
+ 
+ class Migration(migrations.Migration):
+-
+     initial = True
+ 
+     dependencies = [
+         ("auth", "0012_alter_user_first_name_max_length"),
+     ]
+ 
+     operations = [
+@@ -140,45 +139,45 @@
+                 ("updated_at", models.DateTimeField(auto_now=True, db_index=True)),
+                 ("state", models.UUIDField(db_index=True)),
+                 ("name", models.CharField(db_index=True, max_length=256)),
+                 (
+                     "kind",
+                     models.CharField(
+                         choices=[
+-                            ("analysis", "analysis"),
+-                            ("artifact", "artifact"),
++                            ("model", "model"),
+                             ("audio", "audio"),
++                            ("video", "video"),
++                            ("histogram", "histogram"),
++                            ("image", "image"),
++                            ("tensor", "tensor"),
++                            ("dataframe", "dataframe"),
+                             ("chart", "chart"),
+-                            ("coderef", "coderef"),
+-                            ("confusion", "confusion"),
+                             ("csv", "csv"),
+-                            ("curve", "curve"),
+-                            ("data", "data"),
+-                            ("dataframe", "dataframe"),
+-                            ("dir", "dir"),
+-                            ("docker_image", "docker_image"),
+-                            ("dockerfile", "dockerfile"),
++                            ("tsv", "tsv"),
++                            ("psv", "psv"),
++                            ("ssv", "ssv"),
++                            ("metric", "metric"),
+                             ("env", "env"),
+-                            ("file", "file"),
+-                            ("histogram", "histogram"),
+                             ("html", "html"),
+-                            ("image", "image"),
++                            ("text", "text"),
++                            ("file", "file"),
++                            ("dir", "dir"),
++                            ("dockerfile", "dockerfile"),
++                            ("docker_image", "docker_image"),
++                            ("data", "data"),
++                            ("coderef", "coderef"),
++                            ("table", "table"),
++                            ("tensorboard", "tensorboard"),
++                            ("curve", "curve"),
++                            ("confusion", "confusion"),
++                            ("analysis", "analysis"),
+                             ("iteration", "iteration"),
+                             ("markdown", "markdown"),
+-                            ("metric", "metric"),
+-                            ("model", "model"),
+-                            ("psv", "psv"),
+-                            ("ssv", "ssv"),
+                             ("system", "system"),
+-                            ("table", "table"),
+-                            ("tensor", "tensor"),
+-                            ("tensorboard", "tensorboard"),
+-                            ("text", "text"),
+-                            ("tsv", "tsv"),
+-                            ("video", "video"),
++                            ("artifact", "artifact"),
+                         ],
+                         db_index=True,
+                         max_length=12,
+                     ),
+                 ),
+                 ("path", models.CharField(blank=True, max_length=256, null=True)),
+                 ("summary", models.JSONField()),
+@@ -333,34 +332,34 @@
+                     ),
+                 ),
+                 (
+                     "status",
+                     models.CharField(
+                         blank=True,
+                         choices=[
+-                            ("compiled", "compiled"),
+                             ("created", "created"),
+-                            ("done", "done"),
+-                            ("failed", "failed"),
++                            ("resuming", "resuming"),
+                             ("on_schedule", "on_schedule"),
+-                            ("processing", "processing"),
++                            ("compiled", "compiled"),
+                             ("queued", "queued"),
+-                            ("resuming", "resuming"),
+-                            ("retrying", "retrying"),
+-                            ("running", "running"),
+                             ("scheduled", "scheduled"),
+-                            ("skipped", "skipped"),
+                             ("starting", "starting"),
+-                            ("stopped", "stopped"),
++                            ("running", "running"),
++                            ("processing", "processing"),
+                             ("stopping", "stopping"),
++                            ("failed", "failed"),
++                            ("stopped", "stopped"),
+                             ("succeeded", "succeeded"),
+-                            ("unknown", "unknown"),
++                            ("skipped", "skipped"),
++                            ("warning", "warning"),
+                             ("unschedulable", "unschedulable"),
+                             ("upstream_failed", "upstream_failed"),
+-                            ("warning", "warning"),
++                            ("retrying", "retrying"),
++                            ("unknown", "unknown"),
++                            ("done", "done"),
+                         ],
+                         db_index=True,
+                         default="created",
+                         max_length=16,
+                         null=True,
+                     ),
+                 ),
+@@ -389,33 +388,34 @@
+                         ],
+                     ),
+                 ),
+                 (
+                     "kind",
+                     models.CharField(
+                         choices=[
+-                            ("builder", "builder"),
+-                            ("cleaner", "cleaner"),
++                            ("job", "job"),
++                            ("service", "service"),
+                             ("dag", "dag"),
++                            ("spark", "spark"),
+                             ("dask", "dask"),
+                             ("flink", "flink"),
+-                            ("job", "job"),
+-                            ("matrix", "matrix"),
++                            ("ray", "ray"),
+                             ("mpijob", "mpijob"),
+-                            ("mxjob", "mxjob"),
+-                            ("notifier", "notifier"),
++                            ("tfjob", "tfjob"),
+                             ("pytorchjob", "pytorchjob"),
+-                            ("ray", "ray"),
++                            ("paddlejob", "paddlejob"),
++                            ("mxjob", "mxjob"),
++                            ("xgbjob", "xgbjob"),
++                            ("matrix", "matrix"),
+                             ("schedule", "schedule"),
+-                            ("service", "service"),
+-                            ("spark", "spark"),
+-                            ("tfjob", "tfjob"),
+                             ("tuner", "tuner"),
+                             ("watchdog", "watchdog"),
+-                            ("xgbjob", "xgbjob"),
++                            ("notifier", "notifier"),
++                            ("cleaner", "cleaner"),
++                            ("builder", "builder"),
+                         ],
+                         db_index=True,
+                         max_length=12,
+                     ),
+                 ),
+                 (
+                     "runtime",
+@@ -432,17 +432,17 @@
+                 ),
+                 (
+                     "pending",
+                     models.CharField(
+                         blank=True,
+                         choices=[
+                             ("approval", "approval"),
+-                            ("build", "build"),
+-                            ("cache", "cache"),
+                             ("upload", "upload"),
++                            ("cache", "cache"),
++                            ("build", "build"),
+                         ],
+                         db_index=True,
+                         help_text="If this entity requires approval before it should run.",
+                         max_length=8,
+                         null=True,
+                     ),
+                 ),
+@@ -451,17 +451,17 @@
+                 ("inputs", models.JSONField(blank=True, null=True)),
+                 ("outputs", models.JSONField(blank=True, null=True)),
+                 (
+                     "cloning_kind",
+                     models.CharField(
+                         blank=True,
+                         choices=[
+-                            ("cache", "cache"),
+                             ("copy", "copy"),
+                             ("restart", "restart"),
++                            ("cache", "cache"),
+                         ],
+                         max_length=12,
+                         null=True,
+                     ),
+                 ),
+                 (
+                     "artifacts",
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/main.py` & `haupt-2.0.0rc0/haupt/main.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,39 +1,39 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-import os
+ 
+ import click
+ 
+ from haupt.cli.proxies import proxy
+ from haupt.cli.sandbox import sandbox
+ from haupt.cli.server import server
+ from haupt.cli.streams import streams
++from haupt.cli.viewer import viewer
+ from polyaxon.logger import clean_outputs, configure_logger
+ 
+ 
+ @click.group()
+ @click.option(
+     "-v", "--verbose", is_flag=True, default=False, help="Turn on debug logging"
+ )
+ @clean_outputs
+ def cli(verbose):
+     """Haupt -  Lineage metadata API, artifacts streams, sandbox, ML-API, and spaces for Polyaxon.
+ 
+     Check the help available for each command listed below by appending `-h`.
+     """
+-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "haupt.polyconf.settings")
+     configure_logger(verbose)
+ 
+ 
++cli.add_command(proxy)
+ cli.add_command(sandbox)
+ cli.add_command(server)
+ cli.add_command(streams)
+-cli.add_command(proxy)
++cli.add_command(viewer)
+ 
+ 
+ def main():
+     cli(auto_envvar_prefix="HAUPT_CLI")
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/managers/proxies.py` & `haupt-2.0.0rc0/haupt/managers/proxies.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,28 +1,27 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import os
+ 
+ from haupt.schemas.proxies_config import ProxiesConfig
+ from polyaxon.config_reader.manager import ConfigManager
+-from polyaxon.managers.base import BaseConfigManager
++from polyaxon.managers.base import BaseConfigManager, ManagerVisibility
+ 
+ 
+ class ProxiesManager(BaseConfigManager):
+     """Manages proxies configuration file."""
+ 
+-    VISIBILITY = BaseConfigManager.VISIBILITY_GLOBAL
++    VISIBILITY = ManagerVisibility.GLOBAL
+     CONFIG_FILE_NAME = ".proxies"
+     CONFIG = ProxiesConfig
+ 
+     @classmethod
+     def get_config_from_env(cls, **kwargs) -> ProxiesConfig:
+-
+         config_paths = [os.environ, {"dummy": "dummy"}]
+ 
+         proxy_config = ConfigManager.read_configs(config_paths)
+         return ProxiesConfig.from_dict(proxy_config.data)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/managers/sandbox.py` & `haupt-2.0.0rc0/haupt/managers/sandbox.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,34 +1,31 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import os
+ 
+ from haupt.schemas.sandbox_config import SandboxConfig
+ from polyaxon.config_reader.manager import ConfigManager
+-from polyaxon.managers.base import BaseConfigManager
++from polyaxon.managers.base import BaseConfigManager, ManagerVisibility
+ 
+ 
+ class SandboxConfigManager(BaseConfigManager):
+     """Manages sandbox configuration .sandbox file."""
+ 
+-    VISIBILITY = BaseConfigManager.VISIBILITY_ALL
++    VISIBILITY = ManagerVisibility.ALL
+     CONFIG_FILE_NAME = ".sandbox"
+     CONFIG = SandboxConfig
+ 
+     @classmethod
+     def get_config_from_env(cls):
+-        config_paths = [
+-            os.environ,
+-            {"dummy": "dummy"},
+-        ]
++        config_paths = [os.environ, {"dummy": "dummy"}]
+ 
+         config = ConfigManager.read_configs(config_paths)
+         return cls.CONFIG.from_dict(config.data)
+ 
+     @classmethod
+     def get_config_or_default(cls) -> SandboxConfig:
+         if not cls.is_initialized():
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/orchestration/executor/__init__.py` & `haupt-2.0.0rc0/haupt/orchestration/executor/__init__.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.conf import settings
+ 
+ from haupt.common.service_interface import LazyServiceWrapper
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/orchestration/executor/handlers/run.py` & `haupt-2.0.0rc0/haupt/orchestration/executor/handlers/run.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.background.celeryp.tasks import CoreSchedulerCeleryTasks
+ from haupt.common import conf
+ from haupt.common.options.registry.core import SCHEDULER_ENABLED
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/orchestration/executor/service.py` & `haupt-2.0.0rc0/haupt/orchestration/executor/service.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
++from clipped.imports import import_string
++
+ from haupt.common.events.event_service import EventService
+ from haupt.common.events.registry import run
+ from haupt.orchestration.executor.handlers import run as run_handlers
+ from haupt.orchestration.executor.manager import event_manager
+-from polyaxon.utils.imports import import_string
+ 
+ 
+ class ExecutorService(EventService):
+     HANDLER_MAPPING = {
+         run.RUN_CREATED: run_handlers.handle_run_created,
+         run.RUN_RESUMED_ACTOR: run_handlers.handle_run_created,
+         run.RUN_APPROVED_ACTOR: run_handlers.handle_run_approved_triggered,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/orchestration/executor/subscriptions/run.py` & `haupt-2.0.0rc0/haupt/orchestration/executor/subscriptions/run.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.common.events.registry import run
+ from haupt.orchestration import executor
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/orchestration/operations/__init__.py` & `haupt-2.0.0rc0/haupt/orchestration/operations/__init__.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from django.conf import settings
+ 
+ from haupt.common.service_interface import LazyServiceWrapper
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/orchestration/operations/service.py` & `haupt-2.0.0rc0/haupt/orchestration/operations/service.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -1,17 +1,19 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from collections import namedtuple
+ from typing import Dict, List, Optional, Set, Tuple, Union
+ 
++from clipped.list_utils import to_list
++
+ from haupt.common.service_interface import Service
+ from haupt.db.abstracts.getter import get_run_model
+ from haupt.db.abstracts.runs import BaseRun
+ from haupt.db.managers.statuses import new_run_status
+ from polyaxon.constants.metadata import (
+     META_COPY_ARTIFACTS,
+     META_DESTINATION_IMAGE,
+@@ -29,15 +31,14 @@
+     V1CompiledOperation,
+     V1MatrixKind,
+     V1Operation,
+     V1RunKind,
+ )
+ from polyaxon.schemas import V1RunPending
+ from polyaxon.schemas.types import V1ArtifactsType
+-from polyaxon.utils.list_utils import to_list
+ 
+ 
+ class OperationInitSpec(
+     namedtuple(
+         "OperationInitSpec",
+         "compiled_operation instance related_instance",
+     )
+@@ -47,36 +48,38 @@
+         instance = instance or self.instance
+         related_instance = related_instance or self.related_instance
+         return OperationInitSpec(compiled_operation, instance, related_instance)
+ 
+ 
+ class OperationsService(Service):
+     SUPPORTS_OP_BUILD = False
+-    DEFAULT_KINDS = V1RunKind.default_runtime_values
++    DEFAULT_KINDS = V1RunKind.default_runtime_values()
+     __all__ = (
+         "init_run",
+         "init_and_save_run",
+         "resolve_build",
+         "save_build_relation",
+         "resume_run",
+         "restart_run",
+         "copy_run",
+     )
+ 
+     @staticmethod
+     def set_spec(spec: V1Operation, **kwargs) -> Tuple[V1Operation, Dict]:
+-        kwargs["raw_content"] = spec.to_dict(dump=True)
++        kwargs["raw_content"] = spec.to_json()
+         return spec, kwargs
+ 
+     @staticmethod
+     def get_kind(compiled_operation: V1CompiledOperation) -> Tuple[str, Optional[str]]:
+         if compiled_operation.is_tf_job_run:
+             return V1RunKind.JOB, V1RunKind.TFJOB
+         elif compiled_operation.is_pytorch_job_run:
+             return V1RunKind.JOB, V1RunKind.PYTORCHJOB
++        elif compiled_operation.is_paddle_job_run:
++            return V1RunKind.JOB, V1RunKind.PADDLEJOB
+         elif compiled_operation.is_mx_job_run:
+             return V1RunKind.JOB, V1RunKind.MXJOB
+         elif compiled_operation.is_xgb_job_run:
+             return V1RunKind.JOB, V1RunKind.XGBJOB
+         elif compiled_operation.is_mpi_job_run:
+             return V1RunKind.JOB, V1RunKind.MPIJOB
+         elif compiled_operation.is_dask_run:
+@@ -99,32 +102,32 @@
+         error_message = (
+             "You cannot create this operation. This can happen if "
+             "the current project has runtime restrictions, "
+             "your account has reached the allowed quota, "
+             "or your plan does not support operations of kind: {}"
+         )
+         if kind not in supported_kinds:
+-            if is_managed or kind not in V1RunKind.eager_values:
++            if is_managed or kind not in V1RunKind.eager_values():
+                 raise ValueError(error_message.format(kind))
+         if runtime and runtime not in supported_kinds:
+-            if is_managed or runtime not in V1MatrixKind.eager_values:
++            if is_managed or runtime not in V1MatrixKind.eager_values():
+                 raise ValueError(error_message.format(runtime))
+         return True
+ 
+     @classmethod
+     def _finalize_meta_info(cls, meta_info: Dict, **kwargs):
+         return meta_info
+ 
+     @classmethod
+     def get_meta_info(
+         cls,
+         compiled_operation: V1CompiledOperation,
+         kind: str,
+         runtime: str,
+-        meta_info: Dict = None,
++        meta_info: Optional[Dict] = None,
+         **kwargs,
+     ) -> Tuple[str, str, Dict]:
+         meta_info = meta_info or {}
+         if compiled_operation.hooks:
+             meta_info[META_HAS_HOOKS] = True
+         if compiled_operation.schedule:
+             if compiled_operation.matrix:
+@@ -170,16 +173,16 @@
+ 
+     def resolve_build(
+         self,
+         project_id: int,
+         user_id: int,
+         compiled_operation: V1CompiledOperation,
+         inputs: Dict,
+-        meta_info: Dict = None,
+-        pending: str = None,
++        meta_info: Optional[Dict] = None,
++        pending: Optional[str] = None,
+         **kwargs,
+     ):
+         raise ValueError(
+             "You cannot create this operation. "
+             "The build section is not supported in your plan."
+         )
+ 
+@@ -189,26 +192,26 @@
+ 
+     def init_run(
+         self,
+         project_id: int,
+         user_id: int,
+         op_spec: V1Operation = None,
+         compiled_operation: V1CompiledOperation = None,
+-        name: str = None,
+-        description: str = None,
+-        tags: str = None,
+-        override: Union[str, Dict] = None,
++        name: Optional[str] = None,
++        description: Optional[str] = None,
++        tags: Optional[str] = None,
++        override: Optional[Union[str, Dict]] = None,
+         use_override_patch_strategy: bool = False,
+-        params: Dict = None,
+-        readme: str = None,
+-        original_id: int = None,
+-        cloning_kind: str = None,
++        params: Optional[Dict] = None,
++        readme: Optional[str] = None,
++        original_id: Optional[int] = None,
++        cloning_kind: Optional[str] = None,
+         is_managed: bool = True,
+-        pending: str = None,
+-        meta_info: Dict = None,
++        pending: Optional[str] = None,
++        meta_info: Optional[Dict] = None,
+         supported_kinds: Set[str] = None,
+         **kwargs,
+     ) -> OperationInitSpec:
+         if op_spec:
+             op_spec, kwargs = self.set_spec(op_spec, **kwargs)
+         if op_spec:
+             if not compiled_operation or override:
+@@ -257,15 +260,15 @@
+             if tags:
+                 tags = to_list(tags, check_none=True, to_unique=True)
+             kind, runtime = self.get_kind(compiled_operation)
+             kind, runtime, meta_info = self.get_meta_info(
+                 compiled_operation, kind, runtime, meta_info, **kwargs
+             )
+             self.supports_kind(kind, runtime, supported_kinds, is_managed)
+-            kwargs["content"] = compiled_operation.to_dict(dump=True)
++            kwargs["content"] = compiled_operation.to_json()
+         instance = get_run_model()(
+             project_id=project_id,
+             user_id=user_id,
+             name=name,
+             description=description,
+             tags=tags,
+             readme=readme,
+@@ -292,25 +295,25 @@
+ 
+     def init_and_save_run(
+         self,
+         project_id: int,
+         user_id: int,
+         op_spec: V1Operation = None,
+         compiled_operation: V1CompiledOperation = None,
+-        name: str = None,
+-        description: str = None,
+-        tags: str = None,
+-        override: Union[str, Dict] = None,
+-        params: Dict = None,
+-        readme: str = None,
++        name: Optional[str] = None,
++        description: Optional[str] = None,
++        tags: Optional[str] = None,
++        override: Optional[Union[str, Dict]] = None,
++        params: Optional[Dict] = None,
++        readme: Optional[str] = None,
+         is_managed: bool = True,
+-        pending: str = None,
+-        meta_info: Dict = None,
+-        pipeline_id: int = None,
+-        controller_id: int = None,
++        pending: Optional[str] = None,
++        meta_info: Optional[Dict] = None,
++        pipeline_id: Optional[int] = None,
++        controller_id: Optional[int] = None,
+         supported_kinds: Set[str] = None,
+         supported_owners: Set[str] = None,
+     ):
+         run_init_spec = self.init_run(
+             project_id=project_id,
+             user_id=user_id,
+             name=name,
+@@ -333,25 +336,25 @@
+         if run_init_spec.related_instance:
+             self.save_build_relation(run_init_spec)
+         return run_init_spec.instance
+ 
+     def resume_run(
+         self,
+         run: BaseRun,
+-        user_id: int = None,
+-        name: str = None,
+-        description: str = None,
+-        content: str = None,
+-        readme: str = None,
+-        tags: List[str] = None,
++        user_id: Optional[int] = None,
++        name: Optional[str] = None,
++        description: Optional[str] = None,
++        content: Optional[str] = None,
++        readme: Optional[str] = None,
++        tags: Optional[List[str]] = None,
+         supported_kinds: Set[str] = None,
+         message=None,
+         **kwargs,
+     ):
+-        op_spec = V1Operation.read(run.raw_content)
++        op_spec = V1Operation.read(run.raw_content)  # TODO: Use constructor
+         instance = self.init_run(
+             project_id=run.project_id,
+             user_id=user_id or run.user_id,
+             name=name or run.name,
+             description=description or run.description,
+             readme=readme or run.readme,
+             op_spec=op_spec,
+@@ -386,25 +389,25 @@
+     def _clone_build(self, original_run: BaseRun, run: BaseRun):
+         pass
+ 
+     def _clone_run(
+         self,
+         run: BaseRun,
+         cloning_kind: str,
+-        user_id: int = None,
+-        name: str = None,
+-        description: str = None,
+-        content: str = None,
+-        readme: str = None,
++        user_id: Optional[int] = None,
++        name: Optional[str] = None,
++        description: Optional[str] = None,
++        content: Optional[str] = None,
++        readme: Optional[str] = None,
+         tags: List[int] = None,
+         supported_kinds: Set[str] = None,
+         supported_owners: Set[str] = None,
+         **kwargs,
+     ) -> BaseRun:
+-        op_spec = V1Operation.read(run.raw_content)
++        op_spec = V1Operation.read(run.raw_content)  # TODO: Use constructor
+         meta_info = kwargs.pop("meta_info", {}) or {}
+         original_meta_info = run.meta_info or {}
+         original_uuid = run.uuid.hex
+         upload_artifacts = original_meta_info.get(META_UPLOAD_ARTIFACTS)
+         build_destination = original_meta_info.get(META_DESTINATION_IMAGE)
+         if build_destination:
+             meta_info[META_DESTINATION_IMAGE] = build_destination
+@@ -442,19 +445,19 @@
+         if build_destination:
+             self._clone_build(original_run=run, run=instance)
+         return instance
+ 
+     def restart_run(
+         self,
+         run: BaseRun,
+-        user_id: int = None,
+-        name: str = None,
+-        description: str = None,
+-        content: str = None,
+-        readme: str = None,
++        user_id: Optional[int] = None,
++        name: Optional[str] = None,
++        description: Optional[str] = None,
++        content: Optional[str] = None,
++        readme: Optional[str] = None,
+         tags: List[int] = None,
+         supported_kinds: Set[str] = None,
+         supported_owners: Set[str] = None,
+         **kwargs,
+     ) -> BaseRun:
+         return self._clone_run(
+             run=run,
+@@ -469,19 +472,19 @@
+             supported_owners=supported_owners,
+             **kwargs,
+         )
+ 
+     def copy_run(
+         self,
+         run: BaseRun,
+-        user_id: int = None,
+-        name: str = None,
+-        description: str = None,
+-        content: str = None,
+-        readme: str = None,
++        user_id: Optional[int] = None,
++        name: Optional[str] = None,
++        description: Optional[str] = None,
++        content: Optional[str] = None,
++        readme: Optional[str] = None,
+         tags: List[int] = None,
+         supported_kinds: Set[str] = None,
+         supported_owners: Set[str] = None,
+         **kwargs,
+     ) -> BaseRun:
+         return self._clone_run(
+             run=run,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/orchestration/scheduler/manager.py` & `haupt-2.0.0rc0/haupt/orchestration/scheduler/manager.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import logging
+ import traceback
+ 
+@@ -34,17 +34,17 @@
+ _logger = logging.getLogger("polyaxon.scheduler")
+ 
+ 
+ def get_run(
+     run_id: int,
+     run: Optional[BaseRun],
+     use_all: bool = False,
+-    only: List[str] = None,
+-    defer: List[str] = None,
+-    prefetch: List[str] = None,
++    only: Optional[List[str]] = None,
++    defer: Optional[List[str]] = None,
++    prefetch: Optional[List[str]] = None,
+ ) -> Optional[BaseRun]:
+     if run:
+         return run
+     run_model = get_run_model()
+     query = run_model.all if use_all else run_model.objects
+     if only:
+         query = query.only(*only)
+@@ -106,15 +106,15 @@
+     run.delete()
+ 
+ 
+ def runs_prepare(
+     run_id: int,
+     run: Optional[BaseRun],
+     eager: bool = False,
+-    extra_message: str = None,
++    extra_message: Optional[str] = None,
+ ) -> bool:
+     run = get_run(run_id=run_id, run=run, prefetch=["project"])
+     if not run:
+         return False
+ 
+     if not LifeCycle.is_compilable(run.status):
+         _logger.info(
+@@ -192,15 +192,15 @@
+         type=V1Statuses.QUEUED,
+         status="True",
+         reason="SchedulerStart",
+         message="Run is queued",
+     )
+     new_run_status(run=run, condition=condition)
+ 
+-    def _log_error(exc: Exception, message: str = None):
++    def _log_error(exc: Exception, message: Optional[str] = None):
+         message = message or "Could not start the operation.\n"
+         message += "error: {}\n{}".format(repr(exc), traceback.format_exc())
+         cond = V1StatusCondition.get_condition(
+             type=V1Statuses.FAILED,
+             status="True",
+             reason="SchedulerStart",
+             message=message,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/orchestration/scheduler/resolver.py` & `haupt-2.0.0rc0/haupt/orchestration/scheduler/resolver.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,17 +1,17 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from datetime import datetime
+ from typing import List, Optional
+ 
+-from marshmallow import ValidationError as MarshmallowValidationError
++from pydantic import ValidationError as PydanticValidationError
+ from rest_framework.exceptions import ValidationError
+ 
+ from haupt.common.exceptions import AccessNotAuthorized, AccessNotFound
+ from haupt.db.abstracts.runs import BaseRun
+ from haupt.db.managers.artifacts import set_artifacts
+ from polyaxon.constants.metadata import (
+     META_COPY_ARTIFACTS,
+@@ -62,15 +62,15 @@
+             artifacts.dirs = [
+                 [d, get_relative_to_run_artifacts(d)] for d in artifacts.dirs
+             ]
+         if artifacts.files:
+             artifacts.files = [
+                 [d, get_relative_to_run_artifacts(d)] for d in artifacts.files
+             ]
+-        init = V1Init(artifacts=artifacts)
++        init = V1Init.construct(artifacts=artifacts)
+         return [{"runPatch": {"init": [init.to_dict()]}}]
+ 
+     def _get_meta_destination_image(self) -> Optional[str]:
+         meta_info = self.run.meta_info or {}
+         return meta_info.get(META_DESTINATION_IMAGE)
+ 
+     def resolve_presets(self):
+@@ -96,15 +96,15 @@
+     def _check_approval(self):
+         if self.compiled_operation.is_approved is False and self.run.pending is None:
+             self.run.pending = V1RunPending.APPROVAL
+             return True
+         return False
+ 
+     def persist_state(self):
+-        self.run.content = self.compiled_operation.to_dict(dump=True)
++        self.run.content = self.compiled_operation.to_json()
+         if (
+             self.compiled_operation.is_service_run
+             and self.compiled_operation.run.rewrite_path
+         ):
+             self.run.meta_info[META_REWRITE_PATH] = True
+         if (
+             self.compiled_operation.is_service_run
+@@ -115,19 +115,24 @@
+         if self._check_approval():
+             update_fields.append("pending")
+         self.run.save(update_fields=update_fields)
+         self._resolve_artifacts_lineage_state()
+ 
+ 
+ def resolve(
+-    run: BaseRun, compiled_at: datetime = None, eager: bool = False, resolver_cls=None
++    run: BaseRun,
++    compiled_at: Optional[datetime] = None,
++    eager: bool = False,
++    resolver_cls=None,
+ ):
+     resolver_cls = resolver_cls or CorePlatformResolver
+     try:
+-        compiled_operation = V1CompiledOperation.read(run.content)
++        compiled_operation = V1CompiledOperation.read(
++            run.content
++        )  # TODO: Use construct
+         project = run.project
+         return resolver.resolve(
+             run=run,
+             compiled_operation=compiled_operation,
+             owner_name=project.owner.name,
+             project_name=project.name,
+             project_uuid=project.uuid.hex,
+@@ -147,25 +152,27 @@
+         AccessNotAuthorized,
+         AccessNotFound,
+     ) as e:
+         raise PolyaxonCompilerError("Access Error: %s" % e) from e
+     except (
+         AccessNotAuthorized,
+         AccessNotFound,
+-        MarshmallowValidationError,
++        PydanticValidationError,
+         PolyaxonSchemaError,
+         ValidationError,
+     ) as e:
+         raise PolyaxonCompilerError("Compilation Error: %s" % e) from e
+ 
+ 
+ def resolve_hooks(run: BaseRun, resolver_cls=None) -> List[V1Operation]:
+     resolver_cls = resolver_cls or CorePlatformResolver
+     try:
+-        compiled_operation = V1CompiledOperation.read(run.content)
++        compiled_operation = V1CompiledOperation.read(
++            run.content
++        )  # TODO: Use construct
+         project = run.project
+         return resolver.resolve_hooks(
+             run=run,
+             compiled_operation=compiled_operation,
+             owner_name=project.owner.name,
+             project_name=project.name,
+             project_uuid=project.uuid.hex,
+@@ -183,12 +190,12 @@
+         AccessNotAuthorized,
+         AccessNotFound,
+     ) as e:
+         raise PolyaxonCompilerError("Access Error: %s" % e) from e
+     except (
+         AccessNotAuthorized,
+         AccessNotFound,
+-        MarshmallowValidationError,
++        PydanticValidationError,
+         PolyaxonSchemaError,
+         ValidationError,
+     ) as e:
+         raise PolyaxonCompilerError("Compilation Error: %s" % e) from e
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/polyconf/asgi.py` & `haupt-2.0.0rc0/haupt/polyconf/wsgi.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,23 +1,22 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ """
+-ASGI config for deploy project.
++WSGI config for search project.
+ 
+-It exposes the ASGI callable as a module-level variable named ``application``.
++It exposes the WSGI callable as a module-level variable named ``application``.
+ 
+ For more information on this file, see
+-https://docs.djangoproject.com/en/4.1/howto/deployment/asgi/
++https://docs.djangoproject.com/en/1.7/howto/deployment/wsgi/
+ """
+-
+ import os
+ 
+-from django.core.asgi import get_asgi_application
++from django.core.wsgi import get_wsgi_application
+ 
+ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "haupt.polyconf.settings")
+ 
+-application = get_asgi_application()
++application = get_wsgi_application()
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/polyconf/config_settings/rest.py` & `haupt-2.0.0rc0/haupt/polyconf/config_settings/rest.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ REST_FRAMEWORK = {
+     "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",),
+     "DEFAULT_THROTTLE_RATES": {"health": "{}/min".format(10)},
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/generators/api.py` & `haupt-2.0.0rc0/haupt/proxies/generators/api.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,19 +1,20 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++from typing import Optional
+ 
+ from haupt.proxies.generators.base import write_to_conf_file
+ from haupt.proxies.schemas.api import get_base_config
+ from haupt.proxies.schemas.server import get_server_config
+ 
+ 
+-def generate_api_conf(path: str = None, root: str = None):
++def generate_api_conf(path: Optional[str] = None, root: Optional[str] = None):
+     write_to_conf_file(
+         "polyaxon.main",
+         get_server_config(root=root, use_upstream=True, use_redirect=False),
+         path,
+     )
+     write_to_conf_file("polyaxon.base", get_base_config(), path)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/generators/gateway.py` & `haupt-2.0.0rc0/haupt/proxies/generators/gateway.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,20 +1,23 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++from typing import Optional
+ 
+ from haupt.proxies.generators.base import write_to_conf_file
+ from haupt.proxies.schemas.gateway import get_base_config, get_redirect_config
+ from haupt.proxies.schemas.server import get_server_config
+ 
+ 
+-def generate_gateway_conf(path: str = None, root: str = None, is_platform: bool = True):
++def generate_gateway_conf(
++    path: Optional[str] = None, root: Optional[str] = None, is_platform: bool = True
++):
+     write_to_conf_file(
+         "polyaxon.main",
+         get_server_config(root=root, use_upstream=is_platform, use_redirect=True),
+         path,
+     )
+     write_to_conf_file("polyaxon.base", get_base_config(is_platform=is_platform), path)
+     write_to_conf_file("polyaxon.redirect", get_redirect_config(), path)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/api/base.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/api/base.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.api.uwsgi import get_uwsgi_config
+ from haupt.proxies.schemas.base import clean_config
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/api/uwsgi.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/api/uwsgi.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from haupt import settings
+ from haupt.proxies.schemas.base import clean_config, get_config
+ from polyaxon.api import (
+     ADMIN_V1_LOCATION,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/auth.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/auth.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,35 +1,35 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+ from haupt.proxies.schemas.urls import (
+     get_header_host,
+     get_service_proxy,
+     get_service_url,
+     get_ssl_server_name,
+ )
+-from polyaxon.api import AUTH_V1_LOCATION
++from polyaxon.api import AUTH_REQUEST_V1_LOCATION, AUTH_V1_LOCATION
+ 
+ AUTH_OPTIONS = r"""
+     auth_request     {auth_api};
+     auth_request_set $auth_status $upstream_status;
+ """  # noqa
+ 
+ 
+-def get_auth_config():
++def get_auth_config(auth_api: str = AUTH_REQUEST_V1_LOCATION):
+     return get_config(
+         options=AUTH_OPTIONS if settings.PROXIES_CONFIG.auth_enabled else "",
+         indent=0,
+-        auth_api=AUTH_V1_LOCATION,
++        auth_api=auth_api,
+     )
+ 
+ 
+ AUTH_LOCATION_CONFIG = r"""
+ location = {auth_api} {{
+     {resolver}
+     {ssl_server_name}
+@@ -44,14 +44,15 @@
+     {header_host}
+     internal;
+ }}
+ """
+ 
+ 
+ def get_auth_location_config(resolver: str, is_local_service: bool = False):
++    """Note that this is not used anymore and was deprecated in favor of the new auth-request"""
+     if settings.PROXIES_CONFIG.auth_external:
+         service = settings.PROXIES_CONFIG.auth_external
+     elif is_local_service:
+         service = "http://polyaxon"
+     else:
+         service = get_service_url(
+             host=settings.PROXIES_CONFIG.api_host,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/base.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/base.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/dns.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/dns.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/error_page.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/error_page.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.proxies.schemas.base import get_config
+ 
+ OPTIONS = """
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/forward.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/forward.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/gateway/api.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/gateway/api.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import clean_config, get_config
+ from haupt.proxies.schemas.urls import (
+@@ -12,14 +12,15 @@
+     get_service_proxy,
+     get_service_url,
+     get_ssl_server_name,
+ )
+ from polyaxon.api import (
+     ADMIN_V1_LOCATION,
+     API_V1_LOCATION,
++    AUTH_V1_LOCATION,
+     SSO_V1_LOCATION,
+     UI_V1_LOCATION,
+ )
+ 
+ OPTIONS = r"""
+ location {path} {{
+     {auth}
+@@ -83,14 +84,22 @@
+             service=service,
+             resolver=resolver,
+             auth=auth,
+             ssl_server_name=ssl_server_name,
+             header_host=header_host,
+         ),
+         get_api_config(
++            path=AUTH_V1_LOCATION,
++            service=service,
++            resolver=resolver,
++            auth="",
++            ssl_server_name=ssl_server_name,
++            header_host=header_host,
++        ),
++        get_api_config(
+             path=UI_V1_LOCATION,
+             service=service,
+             resolver=resolver,
+             auth="",
+             ssl_server_name=ssl_server_name,
+             header_host=header_host,
+         ),
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/gateway/base.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/gateway/base.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,38 +1,32 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.auth import get_auth_config
+ from haupt.proxies.schemas.base import clean_config
+ from haupt.proxies.schemas.dns import get_resolver
+ from haupt.proxies.schemas.gateway.api import get_api_location_config
+ from haupt.proxies.schemas.gateway.healthz import get_healthz_location_config
+ from haupt.proxies.schemas.locations import get_platform_locations_config
+ from haupt.proxies.schemas.scaffold import get_scaffold_config
+-from haupt.proxies.schemas.streams.api import (
+-    get_k8s_auth_config,
+-    get_platform_config,
+-    get_streams_config,
+-)
++from haupt.proxies.schemas.streams.api import get_platform_config
+ from haupt.proxies.schemas.streams.k8s import get_k8s_root_location_config
+ 
+ 
+ def get_base_config(is_platform: bool = True):
+     resolver = get_resolver()
+     auth = get_auth_config()
+     if is_platform:
+         api_configs = [
+             get_platform_config(),
+-            get_streams_config(),
+-            get_k8s_auth_config(),
+         ]
+         api_location_configs = [
+             get_platform_locations_config(),
+             get_k8s_root_location_config(),
+         ]
+         port = settings.PROXIES_CONFIG.api_target_port
+     else:
+@@ -49,11 +43,10 @@
+         use_assets_config=True,
+         use_services_configs=True,
+         resolver=resolver,
+         auth=auth,
+         api_configs=api_configs,
+         api_location_configs=api_location_configs,
+         is_local_streams_service=is_platform,
+-        is_local_auth_service=is_platform,
+     )
+ 
+     return clean_config(config)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/gateway/healthz.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/gateway/healthz.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.proxies.schemas.base import get_config
+ 
+ HEALTHZ_LOCATION_OPTIONS = r"""
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/gateway/redirect.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/gateway/redirect.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/listen.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/listen.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/locations.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/locations.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+ from haupt.proxies.schemas.urls import get_ssl_server_name, has_https
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/logging.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/logging.py`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/scaffold.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/scaffold.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,46 +1,46 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from typing import List
++from typing import List, Optional
+ 
+ from haupt import settings
+-from haupt.proxies.schemas.auth import get_auth_location_config
+ from haupt.proxies.schemas.buffering import get_buffering_config
+ from haupt.proxies.schemas.charset import get_charset_config
+ from haupt.proxies.schemas.error_page import get_error_page_config
+ from haupt.proxies.schemas.favicon import get_favicon_config
+ from haupt.proxies.schemas.gzip import get_gzip_config
+ from haupt.proxies.schemas.listen import get_listen_config
+ from haupt.proxies.schemas.logging import get_logging_config
+ from haupt.proxies.schemas.robots import get_robots_config
+ from haupt.proxies.schemas.services import (
++    get_auth_request_config,
++    get_internal_location_config,
+     get_k8s_location_config,
+     get_services_location_config,
+     get_streams_location_config,
+ )
+ from haupt.proxies.schemas.ssl import get_ssl_config
+ from haupt.proxies.schemas.timeout import get_timeout_config
+ 
+ 
+ def get_scaffold_config(
+     is_proxy: bool,
+     port: int = 8000,
+     use_ssl_config: bool = False,
+     use_assets_config: bool = False,
+     use_services_configs: bool = False,
+-    resolver: str = None,
+-    auth: str = None,
+-    api_configs: List[str] = None,
+-    api_location_configs: List[str] = None,
++    resolver: Optional[str] = None,
++    auth: Optional[str] = None,
++    api_configs: Optional[List[str]] = None,
++    api_location_configs: Optional[List[str]] = None,
+     is_local_streams_service: bool = False,
+-    is_local_auth_service: bool = False,
+ ) -> List[str]:
+     config = [get_listen_config(is_proxy=is_proxy, port=port)]
+     if use_ssl_config and settings.PROXIES_CONFIG.ssl_enabled:
+         config.append(get_ssl_config())
+     config += [
+         get_logging_config(),
+         get_gzip_config(),
+@@ -52,18 +52,22 @@
+         config += api_configs
+     config.append(get_error_page_config())
+     if use_assets_config:
+         config += [
+             get_robots_config(),
+             get_favicon_config(),
+         ]
++    if is_local_streams_service:
++        config.append(
++            get_auth_request_config(),
++        )
+     if use_services_configs:
+         config += [
+-            get_auth_location_config(
+-                resolver=resolver, is_local_service=is_local_auth_service
++            get_internal_location_config(
++                resolver=resolver, is_local_service=is_local_streams_service
+             ),
+             get_streams_location_config(
+                 resolver=resolver, auth=auth, is_local_service=is_local_streams_service
+             ),
+             get_k8s_location_config(
+                 resolver=resolver, auth=auth, is_local_service=is_local_streams_service
+             ),
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/server.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/server.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++from typing import Optional
+ 
+ from haupt.proxies.schemas.base import clean_config, get_config
+ 
+ UPSTREAM_OPTIONS = """
+ upstream polyaxon {{
+   server unix:{root}/web/polyaxon.sock;
+ }}
+@@ -21,15 +22,15 @@
+ 
+ REDIRECT_OPTIONS = """
+ include polyaxon/polyaxon.redirect.conf;
+ """
+ 
+ 
+ def get_server_config(
+-    root: str = None, use_upstream: bool = False, use_redirect: bool = False
++    root: Optional[str] = None, use_upstream: bool = False, use_redirect: bool = False
+ ):
+     config = []
+     if use_upstream:
+         root = root or "/polyaxon"
+         config.append(get_config(options=UPSTREAM_OPTIONS, indent=0, root=root))
+ 
+     config.append(get_config(options=SERVER_OPTIONS, indent=0, root=root))
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/services.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/services.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,18 +1,19 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+ from haupt.proxies.schemas.urls import get_service_url
+ from polyaxon.api import (
++    AUTH_REQUEST_V1_LOCATION,
+     EXTERNAL_V1_LOCATION,
+     REWRITE_EXTERNAL_V1_LOCATION,
+     REWRITE_SERVICES_V1_LOCATION,
+     SERVICES_V1_LOCATION,
+ )
+ 
+ PLUGIN_OPTIONS = r"""
+@@ -124,15 +125,14 @@
+ }}
+ """  # noqa
+ 
+ 
+ def get_services_location_config(
+     resolver: str, auth: str, rewrite: bool = False, external: bool = False
+ ):
+-
+     dns_cluster_with_port = settings.PROXIES_CONFIG.dns_custom_cluster
+     if settings.PROXIES_CONFIG.services_port != 80:
+         dns_cluster_with_port = "{}:{}".format(
+             dns_cluster_with_port, settings.PROXIES_CONFIG.services_port
+         )
+     if external:
+         options = EXTERNAL_REWRITE_OPTIONS if rewrite else EXTERNAL_OPTIONS
+@@ -206,7 +206,56 @@
+ def get_k8s_location_config(resolver: str, auth: str, is_local_service: bool = False):
+     service = get_streams_service(is_local_service)
+     # Do not use resolve local streams service
+     resolver = "" if is_local_service else resolver
+     return get_config(
+         options=K8S_OPTIONS, resolver=resolver, auth=auth, service=service
+     )
++
++
++INTERNAL_OPTIONS = r"""
++location /internal/ {{
++    {resolver}
++    proxy_pass {service};
++    proxy_http_version 1.1;
++    proxy_set_header Upgrade $http_upgrade;
++    proxy_set_header Connection "upgrade";
++    proxy_set_header Origin "";
++    proxy_set_header Host $http_host;
++    proxy_set_header X-Real-IP $remote_addr;
++    proxy_buffering off;
++}}
++"""  # noqa
++
++
++def get_internal_location_config(resolver: str, is_local_service: bool = False):
++    service = get_streams_service(is_local_service)
++    # Do not use resolve local streams service
++    resolver = "" if is_local_service else resolver
++    return get_config(options=INTERNAL_OPTIONS, resolver=resolver, service=service)
++
++
++AUTH_REQUEST_OPTIONS = """
++location = {app} {{
++    proxy_pass {service};
++    proxy_pass_request_body off;
++    proxy_set_header Content-Length "";
++    proxy_set_header X-Real-IP $remote_addr;
++    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
++    proxy_set_header X-Forwarded-Proto $scheme;
++    proxy_set_header X-Origin-URI $request_uri;
++    proxy_set_header X-Origin-Method $request_method;
++    proxy_set_header Host $http_host;
++    proxy_intercept_errors {intercept_errors};
++    internal;
++}}
++"""
++
++
++def get_auth_request_config():
++    return get_config(
++        options=AUTH_REQUEST_OPTIONS,
++        app=AUTH_REQUEST_V1_LOCATION,
++        service=get_streams_service(True),
++        indent=0,
++        intercept_errors="off",
++    )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/ssl.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/ssl.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/streams/api.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/streams/api.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,22 +1,21 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from haupt import settings
+ from haupt.proxies.schemas.base import clean_config, get_config
+ from polyaxon.api import (
+     ADMIN_V1_LOCATION,
+     API_V1_LOCATION,
+     AUTH_V1_LOCATION,
+     HEALTHZ_LOCATION,
+     SSO_V1_LOCATION,
+-    STREAMS_V1_LOCATION,
+     UI_V1_LOCATION,
+ )
+ 
+ API_OPTIONS = """
+ location {path} {{
+     proxy_pass http://polyaxon;
+     proxy_http_version 1.1;
+@@ -33,48 +32,19 @@
+ 
+ def get_api_config(path: str, intercept_errors: str = "on"):
+     return get_config(
+         options=API_OPTIONS, indent=0, path=path, intercept_errors=intercept_errors
+     )
+ 
+ 
+-def get_streams_config():
+-    return get_api_config(path="/", intercept_errors="off")
+-
+-
+ def get_platform_config():
+     config = [
+         get_api_config(path="= /"),
+         get_api_config(path="= {}".format(HEALTHZ_LOCATION), intercept_errors="off"),
+         get_api_config(path=API_V1_LOCATION, intercept_errors="off"),
+         get_api_config(path=AUTH_V1_LOCATION, intercept_errors="off"),
+         get_api_config(path=SSO_V1_LOCATION, intercept_errors="off"),
+-        get_api_config(path=STREAMS_V1_LOCATION, intercept_errors="off"),
+         get_api_config(path=UI_V1_LOCATION),
+     ]
+     if settings.PROXIES_CONFIG.ui_admin_enabled:
+         config.append(get_api_config(path=ADMIN_V1_LOCATION))
+     return clean_config(config)
+-
+-
+-K8S_AUTH_OPTIONS = """
+-location {app}k8s/auth/ {{
+-    proxy_method      GET;
+-    proxy_pass http://polyaxon;
+-    proxy_http_version 1.1;
+-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+-    proxy_set_header Origin "";
+-    proxy_set_header Host $http_host;
+-    proxy_set_header X-Real-IP $remote_addr;
+-    proxy_set_header X-Origin-URI $request_uri;
+-    proxy_intercept_errors {intercept_errors};
+-}}
+-"""
+-
+-
+-def get_k8s_auth_config():
+-    return get_config(
+-        options=K8S_AUTH_OPTIONS,
+-        app=STREAMS_V1_LOCATION,
+-        indent=0,
+-        intercept_errors="off",
+-    )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/streams/base.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/streams/base.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,33 +1,31 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.auth import get_auth_config
+ from haupt.proxies.schemas.base import clean_config
+ from haupt.proxies.schemas.dns import get_resolver
+ from haupt.proxies.schemas.gateway.api import get_api_location_config
+ from haupt.proxies.schemas.locations import get_streams_locations_config
+ from haupt.proxies.schemas.scaffold import get_scaffold_config
+-from haupt.proxies.schemas.streams.api import get_k8s_auth_config, get_streams_config
++from haupt.proxies.schemas.streams.api import get_api_config
+ from haupt.proxies.schemas.streams.k8s import get_k8s_root_location_config
++from polyaxon.api import HEALTHZ_LOCATION
+ 
+ 
+ def get_base_config(is_gateway: bool = True):
+     resolver = get_resolver()
+     auth = get_auth_config()
+-    api_configs = [
+-        get_streams_config(),
+-        get_k8s_auth_config(),
+-    ]
+     api_location_configs = [
++        get_api_config(path="= {}".format(HEALTHZ_LOCATION), intercept_errors="off"),
+         get_streams_locations_config(),
+         get_k8s_root_location_config(),
+     ]
+     if is_gateway:
+         api_location_configs.append(
+             get_api_location_config(resolver=resolver, auth=auth)
+         )
+@@ -35,12 +33,12 @@
+         is_proxy=False,
+         port=settings.PROXIES_CONFIG.streams_target_port,
+         use_ssl_config=is_gateway,
+         use_assets_config=is_gateway,
+         use_services_configs=is_gateway,
+         resolver=resolver,
+         auth=auth,
+-        api_configs=api_configs,
++        api_configs=None,
+         api_location_configs=api_location_configs,
+-        is_local_streams_service=is_gateway,
++        is_local_streams_service=True,
+     )
+     return clean_config(config)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/streams/k8s.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/streams/k8s.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,20 +1,20 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt.proxies.schemas.base import get_config
+-from polyaxon.api import K8S_V1_LOCATION, STREAMS_V1_LOCATION
++from polyaxon.api import AUTH_REQUEST_V1_LOCATION, K8S_V1_LOCATION
+ 
+ K8S_LOCATION_OPTIONS = r"""
+ location {app} {{
+-    auth_request     {streams_api}k8s/auth/;
++    auth_request     {auth_request};
+     auth_request_set $auth_status $upstream_status;
+     auth_request_set $k8s_token $upstream_http_k8s_token;
+     auth_request_set $k8s_uri $upstream_http_k8s_uri;
+     proxy_pass $k8s_uri;
+     proxy_http_version 1.1;
+     proxy_redirect     off;
+     proxy_set_header Upgrade $http_upgrade;
+@@ -29,9 +29,9 @@
+ """  # noqa
+ 
+ 
+ def get_k8s_root_location_config():
+     return get_config(
+         options=K8S_LOCATION_OPTIONS,
+         app=K8S_V1_LOCATION,
+-        streams_api=STREAMS_V1_LOCATION,
++        auth_request=AUTH_REQUEST_V1_LOCATION,
+     )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/timeout.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/timeout.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from haupt import settings
+ from haupt.proxies.schemas.base import get_config
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/proxies/schemas/urls.py` & `haupt-2.0.0rc0/haupt/proxies/schemas/urls.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from urllib.parse import urlparse
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/schemas/sandbox_config.py` & `haupt-2.0.0rc0/haupt/schemas/sandbox_config.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -1,72 +1,47 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++from typing import Optional
+ 
+-from marshmallow import fields
++from clipped.http_utils import clean_host
++from pydantic import Field, StrictInt, StrictStr
+ 
+ from polyaxon.env_vars.keys import (
++    EV_KEYS_K8S_NAMESPACE,
+     EV_KEYS_SANDBOX_DEBUG,
+     EV_KEYS_SANDBOX_HOST,
++    EV_KEYS_SANDBOX_IS_LOCAL,
+     EV_KEYS_SANDBOX_PER_CORE,
+     EV_KEYS_SANDBOX_PORT,
+     EV_KEYS_SANDBOX_SSL_ENABLED,
+     EV_KEYS_SANDBOX_WORKERS,
+ )
+-from polyaxon.schemas.cli.agent_config import BaseAgentConfig, BaseAgentSchema
+-from polyaxon.utils.http_utils import clean_host
+-
+-
+-class SandboxSchema(BaseAgentSchema):
+-    REQUIRED_ARTIFACTS_STORE = False
+-
+-    port = fields.Int(allow_none=True, data_key=EV_KEYS_SANDBOX_PORT)
+-    host = fields.Str(allow_none=True, data_key=EV_KEYS_SANDBOX_HOST)
+-    ssl_enabled = fields.Bool(allow_none=True, data_key=EV_KEYS_SANDBOX_SSL_ENABLED)
+-    debug = fields.Bool(allow_none=True, data_key=EV_KEYS_SANDBOX_DEBUG)
+-    workers = fields.Int(allow_none=True, data_key=EV_KEYS_SANDBOX_WORKERS)
+-    per_core = fields.Bool(allow_none=True, data_key=EV_KEYS_SANDBOX_PER_CORE)
+-
+-    @staticmethod
+-    def schema_config():
+-        return SandboxConfig
++from polyaxon.schemas.cli.agent_config import BaseAgentConfig
+ 
+ 
+ class SandboxConfig(BaseAgentConfig):
+-    SCHEMA = SandboxSchema
+-    IDENTIFIER = "sandbox"
+-    REDUCED_ATTRIBUTES = BaseAgentConfig.REDUCED_ATTRIBUTES + [
+-        EV_KEYS_SANDBOX_PORT,
+-        EV_KEYS_SANDBOX_HOST,
+-        EV_KEYS_SANDBOX_SSL_ENABLED,
+-        EV_KEYS_SANDBOX_DEBUG,
+-        EV_KEYS_SANDBOX_WORKERS,
+-        EV_KEYS_SANDBOX_PER_CORE,
+-    ]
++    _IDENTIFIER = "sandbox"
++
++    namespace: Optional[StrictStr] = Field(
++        alias=EV_KEYS_K8S_NAMESPACE, default="sandbox"
++    )
++    port: Optional[StrictInt] = Field(alias=EV_KEYS_SANDBOX_PORT)
++    host: Optional[StrictStr] = Field(alias=EV_KEYS_SANDBOX_HOST)
++    ssl_enabled: Optional[bool] = Field(alias=EV_KEYS_SANDBOX_SSL_ENABLED)
++    debug: Optional[bool] = Field(alias=EV_KEYS_SANDBOX_DEBUG)
++    workers: Optional[StrictInt] = Field(alias=EV_KEYS_SANDBOX_WORKERS)
++    per_core: Optional[bool] = Field(alias=EV_KEYS_SANDBOX_PER_CORE)
++    is_local: Optional[bool] = Field(alias=EV_KEYS_SANDBOX_IS_LOCAL)
+ 
+     def __init__(
+         self,
+-        artifacts_store=None,
+-        connections=None,
+-        port: int = None,
+-        host: str = None,
+-        ssl_enabled: bool = None,
+-        debug: bool = None,
+-        workers: int = None,
+-        per_core: bool = None,
+-        **kwargs,
++        host: Optional[str] = None,
++        **data,
+     ):
+         super().__init__(
+-            artifacts_store=artifacts_store,
+-            connections=connections,
+-            namespace="sandbox",
+-            **kwargs,
++            host=clean_host(host) if host else host,
++            **data,
+         )
+-        self.host = clean_host(host) if host else host
+-        self.port = port
+-        self.ssl_enabled = ssl_enabled
+-        self.debug = debug
+-        self.workers = workers
+-        self.per_core = per_core
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/settings.py` & `haupt-2.0.0rc0/haupt/settings.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,18 +1,18 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from marshmallow import ValidationError
++from clipped.formatting import Printer
++from pydantic import ValidationError
+ 
+ from polyaxon.services.values import PolyaxonServices
+-from polyaxon.utils.formatting import Printer
+ 
+ PROXIES_CONFIG = None
+ SANDBOX_CONFIG = None
+ 
+ PolyaxonServices.set_service_name()
+ 
+ 
+@@ -23,20 +23,21 @@
+ 
+     PROXIES_CONFIG = ProxiesManager.get_config_from_env()
+ 
+ 
+ def set_sandbox_config():
+     from haupt.managers.sandbox import SandboxConfigManager
+     from polyaxon.contexts.paths import mount_sandbox
+-    from polyaxon.settings import set_agent_config
++    from polyaxon.settings import HOME_CONFIG, set_agent_config
+ 
++    SandboxConfigManager.set_config_path(HOME_CONFIG.path)
+     mount_sandbox()
+     PolyaxonServices.set_service_name(PolyaxonServices.SANDBOX)
+ 
+     global SANDBOX_CONFIG
+ 
+     try:
+         SANDBOX_CONFIG = SandboxConfigManager.get_config_or_default()
+         set_agent_config(SANDBOX_CONFIG)
+     except (TypeError, ValidationError):
+         SandboxConfigManager.purge()
+-        Printer.print_warning("Your sandbox configuration was purged!")
++        Printer.warning("Your sandbox configuration was purged!")
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/connections/fs.py` & `haupt-2.0.0rc0/haupt/streams/connections/fs.py`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from polyaxon.fs.fs import get_default_fs
+ from polyaxon.fs.types import FSSystem
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/controllers/events.py` & `haupt-2.0.0rc0/haupt/streams/controllers/events.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,24 +1,20 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import logging
+ import os
+ 
+ from typing import Dict, List, Optional, Set
+ 
+ import ujson
+ 
+-from rest_framework import status
+-
+-from django.http import HttpResponse
+-
+ import aiofiles
+ 
+ from asgiref.sync import sync_to_async
+ from polyaxon.fs.async_manager import (
+     download_file,
+     download_files,
+     list_files,
+@@ -48,15 +44,15 @@
+ 
+ 
+ async def process_operation_event(
+     event_path: str,
+     event_kind: str,
+     event_name: str,
+     orient: str = V1Events.ORIENT_CSV,
+-    sample: int = None,
++    sample: Optional[int] = None,
+     to_dict: bool = True,
+ ) -> Optional[Dict]:
+     if not event_path or not os.path.exists(event_path):
+         return None
+ 
+     async with aiofiles.open(event_path, mode="r") as f:
+         contents = await f.read()
+@@ -81,31 +77,29 @@
+                         logger.warning("Could not sample event dataframe, error %s", e)
+                 return {
+                     "name": event_name,
+                     "kind": event_kind,
+                     "data": event_df.to_dict() if to_dict else event_df,
+                 }
+             else:
+-                raise HttpResponse(
+-                    detail="received an unrecognisable orient value {}.".format(orient),
+-                    status=status.HTTP_400_BAD_REQUEST,
++                logger.warning(
++                    "received an unrecognisable orient value {}.".format(orient)
+                 )
+     return None
+ 
+ 
+ async def get_archived_operation_resource(
+     fs: FSSystem,
+     run_uuid: str,
+     event_kind: str,
+     event_name: str,
+     orient: str = V1Events.ORIENT_CSV,
+     check_cache: bool = True,
+-    sample: int = None,
++    sample: Optional[int] = None,
+ ) -> Optional[Dict]:
+-
+     subpath = get_resource_path(run_path=run_uuid, kind=event_kind, name=event_name)
+     event_path = await download_file(fs=fs, subpath=subpath, check_cache=check_cache)
+ 
+     return await process_operation_event(
+         event_path=event_path,
+         event_kind=event_kind,
+         event_name=event_name,
+@@ -117,17 +111,16 @@
+ async def get_archived_operation_event(
+     fs: FSSystem,
+     run_uuid: str,
+     event_kind: str,
+     event_name: str,
+     orient: str = V1Events.ORIENT_CSV,
+     check_cache: bool = True,
+-    sample: int = None,
++    sample: Optional[int] = None,
+ ) -> Optional[Dict]:
+-
+     subpath = get_event_path(run_path=run_uuid, kind=event_kind, name=event_name)
+     event_path = await download_file(fs=fs, subpath=subpath, check_cache=check_cache)
+ 
+     return await process_operation_event(
+         event_path=event_path,
+         event_kind=event_kind,
+         event_name=event_name,
+@@ -139,34 +132,29 @@
+ async def get_archived_operation_event_and_assets(
+     fs: FSSystem,
+     run_uuid: str,
+     event_kind: str,
+     event_name: str,
+     check_cache: bool = True,
+ ) -> List[str]:
+-
+     pkg_files = []
+     subpath = get_event_path(run_path=run_uuid, kind=event_kind, name=event_name)
+     event_path = await download_file(fs=fs, subpath=subpath, check_cache=check_cache)
+     pkg_files.append(event_path)
+ 
+-    try:
+-        event = await process_operation_event(
+-            event_path=event_path,
+-            event_kind=event_kind,
+-            event_name=event_name,
+-            orient=V1Events.ORIENT_DICT,
+-            sample=None,
+-            to_dict=False,
+-        )
+-    except Exception as e:
+-        logger.warning(
+-            "During the packaging of %s, the event download failed. Error %s"
+-            % (event_path, e)
+-        )
++    event = await process_operation_event(
++        event_path=event_path,
++        event_kind=event_kind,
++        event_name=event_name,
++        orient=V1Events.ORIENT_DICT,
++        sample=None,
++        to_dict=False,
++    )
++    if not event:
++        logger.warning("During the packaging of %s, the event download failed.")
+         return []
+     df = event["data"].df
+     try:
+         files = df[event_kind].map(lambda f: ujson.loads(f).get("path")).tolist()
+     except Exception as e:
+         logger.warning(
+             "During the packaging of %s, the event format found was not correct. "
+@@ -185,15 +173,14 @@
+ async def get_archived_operation_events_and_assets(
+     fs: FSSystem,
+     run_uuid: str,
+     event_kind: str,
+     event_names: Set[str],
+     check_cache: bool = True,
+ ) -> Optional[str]:
+-
+     pkg_files = []
+     for event_name in event_names:
+         event_pkg_files = await get_archived_operation_event_and_assets(
+             fs=fs,
+             run_uuid=run_uuid,
+             event_kind=event_kind,
+             event_name=event_name,
+@@ -210,15 +197,15 @@
+ async def get_archived_operation_resources(
+     fs: FSSystem,
+     run_uuid: str,
+     event_kind: str,
+     event_names: Set[str],
+     orient: str = V1Events.ORIENT_CSV,
+     check_cache: bool = True,
+-    sample: int = None,
++    sample: Optional[int] = None,
+ ) -> List[Dict]:
+     events = []
+     if not event_names:
+         files = await get_resources_files(fs=fs, run_uuid=run_uuid)
+         event_names = [f.split(".plx")[0] for f in files]
+     for event_name in event_names:
+         event = await get_archived_operation_resource(
+@@ -238,15 +225,15 @@
+ async def get_archived_operation_events(
+     fs: FSSystem,
+     run_uuid: str,
+     event_kind: str,
+     event_names: Set[str],
+     orient: str = V1Events.ORIENT_CSV,
+     check_cache: bool = True,
+-    sample: int = None,
++    sample: Optional[int] = None,
+ ) -> List[Dict]:
+     events = []
+     for event_name in event_names:
+         event = await get_archived_operation_event(
+             fs=fs,
+             run_uuid=run_uuid,
+             event_kind=event_kind,
+@@ -263,15 +250,15 @@
+ async def get_archived_operations_events(
+     fs: FSSystem,
+     event_kind: str,
+     run_uuids: Set[str],
+     event_names: Set[str],
+     orient: str = V1Events.ORIENT_CSV,
+     check_cache: bool = True,
+-    sample: int = None,
++    sample: Optional[int] = None,
+ ) -> Dict[str, List]:
+     events = {}
+     for run_uuid in run_uuids:
+         run_events = await get_archived_operation_events(
+             fs=fs,
+             run_uuid=run_uuid,
+             event_kind=event_kind,
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/controllers/k8s_check.py` & `haupt-2.0.0rc0/haupt/streams/controllers/k8s_check.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from typing import List, Tuple
+ from urllib.parse import urlparse
+ 
+ from rest_framework import status
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/controllers/k8s_crd.py` & `haupt-2.0.0rc0/haupt/streams/controllers/k8s_crd.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ from polyaxon.k8s.async_manager import AsyncK8SManager
+ from polyaxon.k8s.custom_resources import operation as op_crd
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/controllers/k8s_pods.py` & `haupt-2.0.0rc0/haupt/streams/controllers/k8s_pods.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from polyaxon.k8s.async_manager import AsyncK8SManager
+ 
+ 
+ async def get_pods(
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/controllers/logs.py` & `haupt-2.0.0rc0/haupt/streams/controllers/logs.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import os
+ 
+ from typing import List, Optional, Tuple
+@@ -27,15 +27,17 @@
+ async def get_logs_files(fs: FSSystem, run_uuid: str) -> List[str]:
+     files = await list_files(fs=fs, subpath="{}/plxlogs".format(run_uuid))
+     if not files["files"]:
+         return []
+     return sorted([f for f in files["files"].keys()])
+ 
+ 
+-async def get_next_file(files: List[str], last_file: str = None) -> Optional[str]:
++async def get_next_file(
++    files: List[str], last_file: Optional[str] = None
++) -> Optional[str]:
+     if not files:
+         return None
+ 
+     if not last_file:
+         return files[0]
+ 
+     i = 0
+@@ -73,15 +75,14 @@
+ 
+     return logs, last_file, files
+ 
+ 
+ async def get_tmp_operation_logs(
+     fs: FSSystem, run_uuid: str, last_time: Optional[AwareDT]
+ ) -> Tuple[List[V1Log], Optional[AwareDT]]:
+-
+     logs = []
+ 
+     tmp_logs = await download_tmp_logs(fs=fs, run_uuid=run_uuid)
+ 
+     if not tmp_logs or not os.path.exists(tmp_logs):
+         return logs, None
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/controllers/notebooks.py` & `haupt-2.0.0rc0/haupt/streams/controllers/notebooks.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import os
+ 
+ import aiofiles
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/controllers/uploads.py` & `haupt-2.0.0rc0/haupt/streams/controllers/uploads.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,28 +1,28 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-
+ import os
+ 
++import ujson
++
++from clipped.path_utils import check_or_create_path, delete_path, untar_file
+ from rest_framework import status
+ 
+ from django.core.handlers.asgi import ASGIRequest
+ from django.http import HttpResponse
+ 
+ from asgiref.sync import sync_to_async
+ from polyaxon import settings
+-from polyaxon.constants.globals import DEFAULT_UPLOADS_PATH
+ from polyaxon.fs.async_manager import upload_dir, upload_file
+ from polyaxon.fs.types import FSSystem
+ from polyaxon.lifecycle import V1ProjectFeature
+-from polyaxon.utils.path_utils import check_or_create_path, delete_path, untar_file
+ 
+ 
+ async def handle_posted_data(
+     fs: FSSystem,
+     content_file: any,
+     root_path: str,
+     path: str,
+@@ -35,26 +35,29 @@
+     tmp_path = "{}/{}".format(root_path, os.path.basename(filename)).rstrip("/")
+     if path:
+         root_path = "{}/{}".format(root_path, path).rstrip("/")
+         if is_file:
+             root_path = "{}/{}".format(root_path, os.path.basename(filename))
+     else:
+         if untar:
+-            root_path = "{}/{}".format(root_path, DEFAULT_UPLOADS_PATH).rstrip("/")
++            root_path = "{}/{}".format(root_path, path or "/").rstrip("/")
+         else:
+             root_path = tmp_path
+     if not untar:
+         tmp_path = root_path
+ 
+     full_tmppath = settings.AGENT_CONFIG.get_local_path(
+         subpath=tmp_path, entity=V1ProjectFeature.RUNTIME
+     )
+     full_filepath = settings.AGENT_CONFIG.get_local_path(
+         subpath=root_path, entity=V1ProjectFeature.RUNTIME
+     )
++    store_path = settings.AGENT_CONFIG.get_store_path(
++        subpath=root_path, entity=V1ProjectFeature.RUNTIME
++    )
+ 
+     if overwrite and os.path.exists(full_filepath):
+         delete_path(full_filepath)
+     if not overwrite and os.path.exists(full_filepath):
+         return full_filepath
+     # Always clean tmp path
+     if overwrite and os.path.exists(full_tmppath):
+@@ -67,43 +70,45 @@
+     with open(full_tmppath, "wb") as destination:
+         for chunk in content_file.chunks():
+             destination.write(chunk)
+     if untar:
+         await sync_to_async(untar_file)(
+             full_tmppath, extract_path=full_filepath, use_filepath=False
+         )
+-    if upload:
++    if upload and store_path != full_filepath:
+         if is_file:
+             await upload_file(fs=fs, subpath=root_path)
+         else:
+             await upload_dir(fs=fs, subpath=root_path)
+     return root_path
+ 
+ 
+ async def handle_upload(
+     fs: FSSystem, request: ASGIRequest, run_uuid: str, is_file: bool
+ ) -> HttpResponse:
+     content_file = request.FILES["upload_file"]
+-    overwrite = request.POST.get("overwrite", True)
+-    untar = request.POST.get("untar", True)
+-    path = request.POST.get("path", "")
++    content_json = request.POST.get("json")
++    content_json = ujson.loads(content_json) if content_json else {}
++    overwrite = content_json.get("overwrite", True)
++    untar = content_json.get("untar", True)
++    path = content_json.get("path", "")
+     try:
+         archived_path = await handle_posted_data(
+             fs=fs,
+             content_file=content_file,
+             root_path=run_uuid,
+             path=path,
+             upload=True,
+             is_file=is_file,
+             overwrite=overwrite,
+             untar=untar,
+         )
+     except Exception as e:
+         return HttpResponse(
+-            detail="Run's artifacts upload was unsuccessful, "
++            content="Run's artifacts upload was unsuccessful, "
+             "an error was raised while uploading the data %s." % e,
+             status=status.HTTP_400_BAD_REQUEST,
+         )
+     if not archived_path:
+         return HttpResponse(
+             content="Artifact not found and not uploaded: filepath={}".format(
+                 archived_path
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/endpoints/artifacts.py` & `haupt-2.0.0rc0/haupt/streams/endpoints/artifacts.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,15 +1,16 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from typing import Dict, Union
++from typing import Dict, Optional, Union
+ 
++from clipped.bool_utils import to_bool
+ from rest_framework import status
+ 
+ from django.core.handlers.asgi import ASGIRequest
+ from django.db import transaction
+ from django.http import FileResponse, HttpResponse
+ from django.urls import path
+ 
+@@ -23,29 +24,28 @@
+ from polyaxon.fs.async_manager import (
+     check_is_file,
+     delete_file_or_dir,
+     download_dir,
+     download_file,
+     list_files,
+ )
+-from polyaxon.utils.bool_utils import to_bool
+ 
+ 
+ def clean_path(filepath: str):
+     return filepath.strip("/")
+ 
+ 
+ @transaction.non_atomic_requests
+ async def handle_artifact(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
+     if request.method == "GET":
+         return await download_artifact(request, run_uuid=run_uuid)
+     if request.method == "DELETE":
+         return await delete_artifact(request, run_uuid=run_uuid)
+     if request.method == "POST":
+@@ -56,22 +56,25 @@
+ async def ro_artifact(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+     path: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
+     return await download_artifact(request, run_uuid, path, True)
+ 
+ 
+ async def download_artifact(
+-    request: ASGIRequest, run_uuid: str, path: str = None, stream: bool = None
++    request: ASGIRequest,
++    run_uuid: str,
++    path: Optional[str] = None,
++    stream: Optional[bool] = None,
+ ) -> Union[HttpResponse, FileResponse]:
+     filepath = request.GET.get("path", path or "")
+     stream = to_bool(request.GET.get("stream", stream), handle_none=True)
+     force = to_bool(request.GET.get("force"), handle_none=True)
+     render = to_bool(request.GET.get("render"), handle_none=True)
+     if not filepath:
+         return HttpResponse(
+@@ -133,15 +136,15 @@
+ @transaction.non_atomic_requests
+ async def handle_artifacts(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
+     if request.method == "GET":
+         return await download_artifacts(request, run_uuid=run_uuid)
+     if request.method == "DELETE":
+         return await delete_artifacts(request, run_uuid=run_uuid)
+     if request.method == "POST":
+@@ -194,15 +197,15 @@
+ @transaction.non_atomic_requests
+ async def tree_artifacts(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> UJSONResponse:
+     validate_methods(request, methods)
+     filepath = request.GET.get("path", "")
+     ls = await list_files(
+         fs=await AppFS.get_fs(),
+         subpath=run_uuid,
+         filepath=clean_path(filepath),
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/endpoints/base.py` & `haupt-2.0.0rc0/haupt/streams/endpoints/base.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import ujson
+ 
+ from rest_framework import status
+@@ -34,15 +34,15 @@
+         if json_dumps_params is None:
+             json_dumps_params = {}
+         kwargs.setdefault("content_type", "application/json")
+         data = ujson.dumps(data, ensure_ascii=False, **json_dumps_params)
+         super().__init__(content=data, **kwargs)
+ 
+ 
+-class ConfigResponse(UJSONResponse):
++class ConfigResponse(HttpResponse):
+     def __init__(
+         self,
+         data,
+         **kwargs,
+     ):
+         kwargs.setdefault("content_type", "application/json")
+         super().__init__(content=data, **kwargs)
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/endpoints/events.py` & `haupt-2.0.0rc0/haupt/streams/endpoints/events.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -1,16 +1,17 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+-from typing import Dict, Set, Union
++from typing import Dict, Optional, Set, Union
+ 
++from clipped.bool_utils import to_bool
+ from rest_framework import status
+ 
+ from django.core.handlers.asgi import ASGIRequest
+ from django.db import transaction
+ from django.http import HttpResponse
+ from django.urls import path
+ 
+@@ -20,32 +21,31 @@
+     get_archived_operation_events,
+     get_archived_operation_events_and_assets,
+     get_archived_operation_resources,
+     get_archived_operations_events,
+ )
+ from haupt.streams.endpoints.base import UJSONResponse
+ from haupt.streams.endpoints.utils import redirect_file
+-from polyaxon.utils.bool_utils import to_bool
+ from traceml.artifacts import V1ArtifactKind
+ from traceml.events import V1Events
+ from traceml.processors.importance_processors import calculate_importance_correlation
+ 
+ 
+ @transaction.non_atomic_requests
+ async def get_multi_run_events(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     event_kind: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> Union[UJSONResponse, HttpResponse]:
+     validate_methods(request, methods)
+     force = to_bool(request.GET.get("force"), handle_none=True)
+-    if event_kind not in V1ArtifactKind.allowable_values:
++    if event_kind not in V1ArtifactKind.to_set():
+         return HttpResponse(
+             content="received an unrecognisable event {}.".format(event_kind),
+             status=status.HTTP_400_BAD_REQUEST,
+         )
+     run_uuids = request.GET["runs"]
+     event_names = request.GET["names"]
+     orient = request.GET.get("orient")
+@@ -87,20 +87,20 @@
+ async def get_run_events(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+     event_kind: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> Union[UJSONResponse, HttpResponse]:
+     validate_methods(request, methods)
+     force = to_bool(request.GET.get("force"), handle_none=True)
+     pkg_assets = to_bool(request.GET.get("pkg_assets"), handle_none=True)
+-    if event_kind not in V1ArtifactKind.allowable_values:
++    if event_kind not in V1ArtifactKind.to_set():
+         return HttpResponse(
+             content="received an unrecognisable event {}.".format(event_kind),
+             status=status.HTTP_400_BAD_REQUEST,
+         )
+     event_names = request.GET["names"]
+     orient = request.GET.get("orient")
+     sample = request.GET.get("sample")
+@@ -128,15 +128,15 @@
+ @transaction.non_atomic_requests
+ async def get_run_resources(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> UJSONResponse:
+     validate_methods(request, methods)
+     event_names = request.GET.get("names")
+     orient = request.GET.get("orient")
+     force = to_bool(request.GET.get("force"), handle_none=True)
+     sample = request.GET.get("sample")
+     orient = orient or V1Events.ORIENT_DICT
+@@ -156,15 +156,15 @@
+ @transaction.non_atomic_requests
+ async def get_run_importance_correlation(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> UJSONResponse:
+     validate_methods(request, methods)
+     body = await request.json()
+     data = body.get("data")
+     data = data or {}
+     params = data.get("params")
+     metrics = data.get("metrics")
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/endpoints/k8s.py` & `haupt-2.0.0rc0/haupt/streams/endpoints/k8s.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,59 +1,37 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+-from typing import Dict
+-
+-from rest_framework import status
++from typing import Dict, Optional
+ 
+ from django.core.handlers.asgi import ASGIRequest
+ from django.db import transaction
+ from django.http import HttpResponse
+ from django.urls import path
+ 
+ from haupt.common.endpoints.validation import validate_methods
+-from haupt.streams.controllers.k8s_check import k8s_check, reverse_k8s
+ from haupt.streams.controllers.k8s_crd import get_k8s_operation
+ from haupt.streams.controllers.k8s_pods import get_pods
+ from haupt.streams.endpoints.base import UJSONResponse
+ from polyaxon import settings
+ from polyaxon.k8s.async_manager import AsyncK8SManager
+ from polyaxon.utils.fqn_utils import get_resource_name_for_kind
+ 
+ 
+ @transaction.non_atomic_requests
+-async def k8s_auth(request: ASGIRequest, methods: Dict = None) -> HttpResponse:
+-    validate_methods(request, methods)
+-    uri = request.headers.get("x-origin-uri")
+-    if not uri:
+-        return HttpResponse(
+-            content="This endpoint can only be a sub-requested.",
+-            status_code=status.HTTP_400_BAD_REQUEST,
+-        )
+-    try:
+-        path, params = k8s_check(uri)
+-    except ValueError as e:
+-        return HttpResponse(
+-            content="Error validating path. {}".format(e),
+-            status_code=status.HTTP_400_BAD_REQUEST,
+-        )
+-    return await reverse_k8s(path="{}?{}".format(path, params))
+-
+-
+-@transaction.non_atomic_requests
+ async def k8s_inspect(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
+     resource_name = get_resource_name_for_kind(run_uuid=run_uuid)
+     k8s_manager = AsyncK8SManager(
+         namespace=settings.CLIENT_CONFIG.namespace,
+         in_cluster=settings.CLIENT_CONFIG.in_cluster,
+     )
+@@ -65,27 +43,20 @@
+     if k8s_operation:
+         data = await get_pods(k8s_manager=k8s_manager, run_uuid=run_uuid)
+     if k8s_manager:
+         await k8s_manager.close()
+     return UJSONResponse(data or {})
+ 
+ 
+-URLS_RUNS_K8S_AUTH = "k8s/auth/"
+ URLS_RUNS_K8S_INSPECT = (
+     "<str:namespace>/<str:owner>/<str:project>/runs/<str:run_uuid>/k8s_inspect"
+ )
+ 
+ # fmt: off
+ k8s_routes = [
+     path(
+-        URLS_RUNS_K8S_AUTH,
+-        k8s_auth,
+-        name="k8s_auth",
+-        kwargs=dict(methods=["GET"]),
+-    ),
+-    path(
+         URLS_RUNS_K8S_INSPECT,
+         k8s_inspect,
+         name="k8s_inspect",
+         kwargs=dict(methods=["GET"]),
+     ),
+ ]
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/endpoints/logs.py` & `haupt-2.0.0rc0/haupt/streams/endpoints/logs.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,53 +1,53 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import logging
+ 
+-from typing import Dict
++from typing import Dict, Optional
+ 
++from clipped.bool_utils import to_bool
++from clipped.date_utils import parse_datetime
++from clipped.serialization import datetime_serialize
+ from rest_framework import status
+ 
+ from django.core.handlers.asgi import ASGIRequest
+ from django.db import transaction
+ from django.http import HttpResponse
+ from django.urls import path
+ 
+-from haupt.common.endpoints.validation import validate_methods
++from haupt.common.endpoints.validation import validate_internal_auth, validate_methods
+ from haupt.streams.connections.fs import AppFS
+ from haupt.streams.controllers.k8s_crd import get_k8s_operation
+ from haupt.streams.controllers.logs import (
+     get_archived_operation_logs,
+     get_operation_logs,
+     get_tmp_operation_logs,
+ )
+ from haupt.streams.endpoints.base import UJSONResponse
+ from haupt.streams.tasks.logs import clean_tmp_logs, upload_logs
+ from polyaxon import settings
+ from polyaxon.k8s.async_manager import AsyncK8SManager
+ from polyaxon.k8s.logging.async_monitor import query_k8s_operation_logs
+-from polyaxon.utils.bool_utils import to_bool
+-from polyaxon.utils.date_utils import parse_datetime
+ from polyaxon.utils.fqn_utils import get_resource_name, get_resource_name_for_kind
+-from polyaxon.utils.serialization import datetime_serialize
+ 
+ logger = logging.getLogger("polyaxon.streams.logs")
+ 
+ 
+ @transaction.non_atomic_requests
+ async def get_logs(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> UJSONResponse:
+     validate_methods(request, methods)
+     force = to_bool(request.GET.get("force"), handle_none=True)
+     last_time = request.GET.get("last_time")
+     if last_time:
+         last_time = parse_datetime(last_time).astimezone()
+     last_file = request.GET.get("last_file")
+@@ -82,27 +82,42 @@
+         operation_logs, last_file, files = await get_archived_operation_logs(
+             fs=await AppFS.get_fs(),
+             run_uuid=run_uuid,
+             last_file=last_file,
+             check_cache=not force,
+         )
+     data = dict(
+-        last_time=datetime_serialize("last_time", {"last_time": last_time}),
++        last_time=datetime_serialize(last_time),
+         last_file=last_file,
+         logs=operation_logs,
+         files=files,
+     )
+     return UJSONResponse(data)
+ 
+ 
+ @transaction.non_atomic_requests
+ async def collect_logs(
+-    request: ASGIRequest, run_uuid: str, run_kind: str, methods: Dict = None
++    request: ASGIRequest,
++    namespace: str,
++    owner: str,
++    project: str,
++    run_uuid: str,
++    run_kind: str,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
++    try:
++        validate_internal_auth(request)
++    except Exception as e:
++        return UJSONResponse(
++            data={
++                "errors": "Request requires an authenticated internal service %s" % e
++            },
++            status=status.HTTP_400_BAD_REQUEST,
++        )
+     resource_name = get_resource_name_for_kind(run_uuid=run_uuid, run_kind=run_kind)
+     k8s_manager = AsyncK8SManager(
+         namespace=settings.CLIENT_CONFIG.namespace,
+         in_cluster=settings.CLIENT_CONFIG.in_cluster,
+     )
+     await k8s_manager.setup()
+     k8s_operation = await get_k8s_operation(
+@@ -117,51 +132,60 @@
+         )
+     operation_logs, _ = await query_k8s_operation_logs(
+         instance=run_uuid, k8s_manager=k8s_manager, last_time=None
+     )
+     if k8s_manager:
+         await k8s_manager.close()
+     if not operation_logs:
+-        return HttpResponse(status=status.HTTP_404_NOT_FOUND)
++        return HttpResponse(
++            data={"errors": "Operation logs could not be fetched"},
++            status=status.HTTP_404_NOT_FOUND,
++        )
+ 
+     fs = await AppFS.get_fs()
+     try:
+         await upload_logs(fs=fs, run_uuid=run_uuid, logs=operation_logs)
+     except Exception as e:
+         errors = (
+-            "Run's logs was not collected, an error was raised while uploading the data %s."
+-            % e
++            "Run's logs was not collected, an error was raised while uploading the data. "
++            "Error %s." % e
+         )
+         logger.warning(errors)
+         return UJSONResponse(
+             data={"errors": errors},
+             status=status.HTTP_400_BAD_REQUEST,
+         )
+     if settings.AGENT_CONFIG.is_replica:
+-        await clean_tmp_logs(fs=fs, run_uuid=run_uuid)
++        try:
++            await clean_tmp_logs(fs=fs, run_uuid=run_uuid)
++        except Exception as e:
++            return HttpResponse(
++                content="Logs collection failed. Error: %s" % e,
++                status=status.HTTP_400_BAD_REQUEST,
++            )
+         return HttpResponse(status=status.HTTP_200_OK)
+     return HttpResponse(status=status.HTTP_200_OK)
+ 
+ 
+-URLS_RUNS_INTERNAL_LOGS = (
+-    "<str:namespace>"
+-    + "/_internal"
+-    + "/<str:owner>/<str:project>/runs/<str:run_uuid>/{run_kind:str}/logs"
++URLS_RUNS_COLLECT_LOGS = (
++    "<str:namespace>/<str:owner>/<str:project>/runs/<str:run_uuid>/<str:run_kind>/logs"
+ )
+ URLS_RUNS_LOGS = "<str:namespace>/<str:owner>/<str:project>/runs/<str:run_uuid>/logs"
+ 
+ 
+ # fmt: off
+ logs_routes = [
+     path(
+-        URLS_RUNS_INTERNAL_LOGS,
+-        collect_logs,
+-        name="collect_logs",
+-        kwargs=dict(methods=["POST"]),
+-    ),
+-    path(
+         URLS_RUNS_LOGS,
+         get_logs,
+         name="logs",
+         kwargs=dict(methods=["GET"]),
+     ),
+ ]
++internal_logs_routes = [
++    path(
++        URLS_RUNS_COLLECT_LOGS,
++        collect_logs,
++        name="collect_logs",
++        kwargs=dict(methods=["POST"]),
++    ),
++]
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/endpoints/notifications.py` & `haupt-2.0.0rc0/haupt/streams/endpoints/notifications.py`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -1,16 +1,16 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import logging
+ 
+-from typing import Dict
++from typing import Dict, Optional
+ 
+ import ujson
+ 
+ from rest_framework import status
+ 
+ from django.core.handlers.asgi import ASGIRequest
+ from django.db import transaction
+@@ -29,15 +29,15 @@
+ @transaction.non_atomic_requests
+ async def notify(
+     request: ASGIRequest,
+     namespace: str,
+     owner: str,
+     project: str,
+     run_uuid: str,
+-    methods: Dict = None,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
+     body = ujson.loads(request.body)
+     run_name = body.get("name")
+     condition = body.get("condition")
+     if not condition:
+         errors = "Received a notification request without condition."
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/endpoints/sandbox.py` & `haupt-2.0.0rc0/haupt/streams/endpoints/local_sandbox.py`
+
+ * *Files 18% similar despite different names*
+
+```diff
+@@ -1,33 +1,36 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import os
+ 
+-from typing import Dict
++from typing import Dict, Optional
+ 
+ from rest_framework import status
+ 
+ from django.core.handlers.asgi import ASGIRequest
+ from django.http import HttpResponse
+ from django.urls import path
+ 
++from haupt import settings
+ from haupt.common.endpoints.validation import validate_methods
+ from haupt.streams.endpoints.base import ConfigResponse, UJSONResponse
+-from polyaxon import settings
+-from polyaxon.api import API_V1_LOCATION
+ from polyaxon.contexts import paths as ctx_paths
+ from polyaxon.lifecycle import V1ProjectFeature
+ 
+ 
+ async def get_run_details(
+-    request: ASGIRequest, run_uuid: str, methods: Dict = None
++    request: ASGIRequest,
++    owner: str,
++    project: str,
++    run_uuid: str,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
+     subpath = os.path.join(run_uuid, ctx_paths.CONTEXT_LOCAL_RUN)
+     data_path = settings.SANDBOX_CONFIG.get_store_path(
+         subpath=subpath, entity=V1ProjectFeature.RUNTIME
+     )
+     if not os.path.exists(data_path) or not os.path.isfile(data_path):
+@@ -35,15 +38,19 @@
+ 
+     with open(data_path, "r") as config_file:
+         config_str = config_file.read()
+     return ConfigResponse(config_str)
+ 
+ 
+ async def get_run_artifact_lineage(
+-    request: ASGIRequest, run_uuid: str, methods: Dict = None
++    request: ASGIRequest,
++    owner: str,
++    project: str,
++    run_uuid: str,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
+     subpath = os.path.join(run_uuid, ctx_paths.CONTEXT_LOCAL_LINEAGES)
+     data_path = settings.SANDBOX_CONFIG.get_store_path(
+         subpath=subpath, entity=V1ProjectFeature.RUNTIME
+     )
+     if not os.path.exists(data_path) or not os.path.isfile(data_path):
+@@ -52,15 +59,17 @@
+     with open(data_path, "r") as config_file:
+         config_str = config_file.read()
+         config_str = f'{{"results": {config_str}}}'
+ 
+     return ConfigResponse(config_str)
+ 
+ 
+-async def list_runs(request: ASGIRequest, methods: Dict = None) -> HttpResponse:
++async def list_runs(
++    request: ASGIRequest, owner: str, project: str, methods: Optional[Dict] = None
++) -> HttpResponse:
+     validate_methods(request, methods)
+     # project = request.path_params["project"]
+     data_path = settings.SANDBOX_CONFIG.get_store_path(
+         subpath="", entity=V1ProjectFeature.RUNTIME
+     )
+     if not os.path.exists(data_path) or not os.path.isdir(data_path):
+         return HttpResponse(status=status.HTTP_404_NOT_FOUND)
+@@ -75,15 +84,18 @@
+             data.append(config_file.read())
+     data_str = ",".join(data)
+     config_str = f'{{"results": [{data_str}], "count": {len(data)}}}'
+     return ConfigResponse(config_str)
+ 
+ 
+ async def get_project_details(
+-    request: ASGIRequest, project: str, methods: Dict = None
++    request: ASGIRequest,
++    owner: str,
++    project: str,
++    methods: Optional[Dict] = None,
+ ) -> HttpResponse:
+     validate_methods(request, methods)
+     data_path = settings.SANDBOX_CONFIG.get_store_path(
+         subpath=project, entity="project"
+     )
+     if not os.path.exists(data_path) or not os.path.isdir(data_path):
+         return HttpResponse(status=status.HTTP_404_NOT_FOUND)
+@@ -94,48 +106,47 @@
+             config_str = config_file.read()
+         return ConfigResponse(config_str)
+ 
+     # Use basic project configuration
+     return UJSONResponse({"name": project})
+ 
+ 
+-async def list_projects(request: ASGIRequest, methods: Dict = None) -> HttpResponse:
++async def list_projects(
++    request: ASGIRequest, owner: str, methods: Optional[Dict] = None
++) -> HttpResponse:
+     validate_methods(request, methods)
+     data_path = settings.SANDBOX_CONFIG.get_store_path(subpath="", entity="project")
+     if not os.path.exists(data_path) or not os.path.isdir(data_path):
+         return HttpResponse(status=status.HTTP_404_NOT_FOUND)
+ 
+     data = []
+     for proj in os.listdir(data_path):
+-
+         data_path = os.path.join(data_path, proj, ctx_paths.CONTEXT_LOCAL_PROJECT)
+         if os.path.exists(data_path) and os.path.isfile(data_path):
+             with open(data_path, "r") as config_file:
+                 data.append(config_file.read())
+         else:
+             data.append(f'{{"name": "{proj}"}}')
+ 
+     data_str = ",".join(data)
+     config_str = f'{{"results": [{data_str}], "count": {len(data)}}}'
+     return ConfigResponse(config_str)
+ 
+ 
+-URLS_RUNS_DETAILS = API_V1_LOCATION + "<str:owner>/<str:project>/runs/<str:run_uuid>/"
+-URLS_RUNS_STATUSES = (
+-    API_V1_LOCATION + "<str:owner>/<str:project>/runs/<str:run_uuid>/statuses"
+-)
++URLS_RUNS_DETAILS = "<str:owner>/<str:project>/runs/<str:run_uuid>/"
++URLS_RUNS_STATUSES = "<str:owner>/<str:project>/runs/<str:run_uuid>/statuses"
+ URLS_RUNS_LINEAGE_ARTIFACTS = (
+-    API_V1_LOCATION + "<str:owner>/<str:project>/runs/<str:run_uuid>/lineage/artifacts"
++    "<str:owner>/<str:project>/runs/<str:run_uuid>/lineage/artifacts"
+ )
+-URLS_RUNS_LIST = API_V1_LOCATION + "<str:owner>/<str:project>/runs/"
+-URLS_PROJECTS_LIST = API_V1_LOCATION + "<str:owner>/projects/list"
+-URLS_PROJECTS_DETAILS = API_V1_LOCATION + "<str:owner>/<str:project>/"
++URLS_RUNS_LIST = "<str:owner>/<str:project>/runs/"
++URLS_PROJECTS_LIST = "<str:owner>/projects/list"
++URLS_PROJECTS_DETAILS = "<str:owner>/<str:project>/"
+ 
+ # fmt: off
+-sandbox_routes = [
++local_sandbox_routes = [
+     path(
+         URLS_RUNS_DETAILS,
+         get_run_details,
+         name="run_details",
+         kwargs=dict(methods=["GET"]),
+     ),
+     path(
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/endpoints/utils.py` & `haupt-2.0.0rc0/haupt/streams/endpoints/utils.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -1,46 +1,45 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import os
+ 
+-from typing import Dict, Union
++from typing import Dict, Optional, Union
+ 
+ from rest_framework import status
+ 
+ from django.core.handlers.asgi import ASGIRequest
+ from django.http import FileResponse, HttpResponse
+ 
+ from aiofiles.os import stat as aio_stat
+ from haupt.common.endpoints.files import FilePathResponse
+ from polyaxon.services.values import PolyaxonServices
+ 
+ 
+ async def _redirect(
+-    redirect_path: str, is_file: bool = False, additional_headers: Dict = None
++    redirect_path: str, is_file: bool = False, additional_headers: Optional[Dict] = None
+ ) -> HttpResponse:
+-
+     headers = {"Content-Type": "", "X-Accel-Redirect": redirect_path}
+     if additional_headers:
+         headers.update(additional_headers)
+     if is_file:
+         stat_result = await aio_stat(redirect_path)
+         headers["X-Content-Length"] = str(stat_result.st_size)
+         headers["Content-Disposition"] = 'attachment; filename="{}"'.format(
+             os.path.basename(redirect_path)
+         )
+ 
+     return HttpResponse(headers=headers)
+ 
+ 
+ async def redirect_file(
+-    archived_path: str, additional_headers: Dict = None
++    archived_path: str, additional_headers: Optional[Dict] = None
+ ) -> Union[HttpResponse, FileResponse]:
+     if not archived_path:
+         return HttpResponse(
+             content="Artifact not found: filepath={}",
+             status=status.HTTP_404_NOT_FOUND,
+         )
+ 
+@@ -48,15 +47,15 @@
+         return FilePathResponse(filepath=archived_path)
+     return await _redirect(
+         redirect_path=archived_path, is_file=True, additional_headers=additional_headers
+     )
+ 
+ 
+ async def redirect_api(
+-    redirect_path: str, additional_headers: Dict = None
++    redirect_path: str, additional_headers: Optional[Dict] = None
+ ) -> HttpResponse:
+     if not redirect_path:
+         return HttpResponse(
+             content="API not found",
+             status=status.HTTP_404_NOT_FOUND,
+         )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/patterns.py` & `haupt-2.0.0rc0/haupt/cli/runners/viewer.py`
+
+ * *Files 27% similar despite different names*
+
+```diff
+@@ -1,40 +1,34 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
++import os
+ 
+-from django.urls import include, re_path
++from typing import Optional
+ 
+-from haupt.common.apis.index import get_urlpatterns, handler403, handler404, handler500
+-from haupt.streams.endpoints.artifacts import artifacts_routes
+-from haupt.streams.endpoints.base import base_health_route
+-from haupt.streams.endpoints.events import events_routes
+-from haupt.streams.endpoints.k8s import k8s_routes
+-from haupt.streams.endpoints.logs import logs_routes
+-from haupt.streams.endpoints.notifications import notifications_routes
+-from haupt.streams.endpoints.sandbox import sandbox_routes
+-from polyaxon.api import STREAMS_V1
++from haupt.cli.runners.base import start_app
++from polyaxon.env_vars.keys import EV_KEYS_PROXY_STREAMS_TARGET_PORT
++from polyaxon.services.values import PolyaxonServices
+ 
+-streams_routes = (
+-    logs_routes
+-    + k8s_routes
+-    + notifications_routes
+-    + artifacts_routes
+-    + events_routes
+-    + sandbox_routes
+-)
+ 
+-app_urlpatterns = [
+-    re_path(
+-        r"^{}/".format(STREAMS_V1),
+-        include((streams_routes, "streams-v1"), namespace="streams-v1"),
+-    ),
+-    base_health_route,
+-]
+-
+-handler404 = handler404
+-handler403 = handler403
+-handler500 = handler500
+-urlpatterns = get_urlpatterns(app_patterns=app_urlpatterns, no_healthz=True)
++def start(
++    host: Optional[str] = None,
++    port: Optional[int] = None,
++    log_level: Optional[str] = None,
++    workers: Optional[int] = None,
++    per_core: bool = False,
++    uds: Optional[str] = None,
++):
++    port = port or os.environ.get(EV_KEYS_PROXY_STREAMS_TARGET_PORT)
++    start_app(
++        app="haupt.polyconf.asgi.viewer:application",
++        app_name=PolyaxonServices.STREAMS,
++        host=host,
++        port=port,
++        log_level=log_level,
++        workers=workers,
++        per_core=per_core,
++        uds=uds,
++    )
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/tasks/logs.py` & `haupt-2.0.0rc0/haupt/streams/tasks/logs.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,64 +1,57 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ from datetime import datetime
+ from typing import List
+ 
+ import ujson
+ 
+-from rest_framework import status
++from clipped.path_utils import delete_path
+ 
+-from django.http import HttpResponse
++from django.core.exceptions import BadRequest
+ 
+ from asgiref.sync import sync_to_async
+ from polyaxon import settings
+ from polyaxon.fs.async_manager import (
+     delete_file_or_dir,
+     download_dir,
+     open_file,
+     upload_data,
+ )
+ from polyaxon.fs.types import FSSystem
+-from polyaxon.utils.path_utils import delete_path
+ from traceml.logging import V1Log, V1Logs
+ 
+ 
+ async def clean_tmp_logs(fs: FSSystem, run_uuid: str):
+     if not settings.AGENT_CONFIG.artifacts_store:
+-        raise HttpResponse(
+-            detail="Run's logs was not collected, resource was not found.",
+-            status=status.HTTP_400_BAD_REQUEST,
+-        )
++        raise BadRequest("Run's logs was not collected, resource was not found.")
+     subpath = "{}/.tmpplxlogs".format(run_uuid)
+     delete_path(subpath)
+     await delete_file_or_dir(fs=fs, subpath=subpath, is_file=False)
+ 
+ 
+ async def upload_logs(fs: FSSystem, run_uuid: str, logs: List[V1Log]):
+     if not settings.AGENT_CONFIG.artifacts_store:
+-        raise HttpResponse(
+-            detail="Run's logs was not collected, resource was not found.",
+-            status=status.HTTP_400_BAD_REQUEST,
+-        )
++        raise BadRequest("Run's logs was not collected, resource was not found.")
+     for c_logs in V1Logs.chunk_logs(logs):
+         last_file = datetime.timestamp(c_logs.logs[-1].timestamp)
+         if settings.AGENT_CONFIG.compressed_logs:
+             subpath = "{}/plxlogs/{}.plx".format(run_uuid, last_file)
+             await upload_data(
+                 fs=fs,
+                 subpath=subpath,
+                 data="{}\n{}".format(c_logs.get_csv_header(), c_logs.to_csv()),
+             )
+         else:
+             subpath = "{}/plxlogs/{}".format(run_uuid, last_file)
+-            await upload_data(fs=fs, subpath=subpath, data=c_logs.to_dict(dump=True))
++            await upload_data(fs=fs, subpath=subpath, data=c_logs.to_json())
+ 
+ 
+ async def content_to_logs(content, logs_path):
+     if not content:
+         return []
+ 
+     @sync_to_async
+```
+
+### Comparing `haupt-1.0.0rc2/haupt/streams/tasks/notification.py` & `haupt-2.0.0rc0/haupt/streams/tasks/notification.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ import logging
+ 
+ from typing import List
+```
+
+### Comparing `haupt-1.0.0rc2/setup.cfg` & `haupt-2.0.0rc0/setup.cfg`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -5,17 +5,17 @@
+ honor_noqa = True
+ profile = black
+ line_length = 88
+ lines_between_sections = 1
+ lines_between_types = 1
+ order_by_type = true
+ known_future_library = future,pies
+-extra_standard_library = typing,mock,pytest,factory,faker,flaky,numpy,pandas,requests,websocket,jinja2,yaml,pytz
+-known_third_party = rest_framework,scipy,sklearn,datadog,docker,corsheaders,celery,picklefield,sentry_sdk,ujson,marshmallow
+-known_first_party = polyaxon_sdk,polyaxon,traceml,datatile,hypertune,tests
++extra_standard_library = typing,typing_extensions,mock,pytest,factory,faker,flaky,numpy,pandas,requests,websocket,jinja2,yaml,pytz
++known_third_party = rest_framework,scipy,sklearn,datadog,docker,corsheaders,celery,picklefield,sentry_sdk,ujson,pydantic,clipped
++known_first_party = polyaxon,traceml,hypertune,tests
+ indent = '    '
+ multi_line_output = 3
+ include_trailing_comma = True
+ force_grid_wrap = 0
+ use_parentheses = True
+ known_django = django
+ default_section = FIRSTPARTY
+@@ -41,14 +41,15 @@
+ 	serializers_mark
+ 	schemas_mark
+ 	managers_mark
+ 	background_mark
+ 
+ [mypy]
+ python_version = 3.9
++namespace_packages = true
+ ignore_missing_imports = True
+ show_error_codes = True
+ allow_redefinition = True
+ exclude = (setup.py$)|(tests/)|(vendor/)
+ 
+ [egg_info]
+ tag_build =
+```
+
+### Comparing `haupt-1.0.0rc2/setup.py` & `haupt-2.0.0rc0/setup.py`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ #!/usr/bin/python
+ #
+-# Copyright 2018-2022 Polyaxon, Inc.
++# Copyright 2018-2023 Polyaxon, Inc.
+ # This file and its contents are licensed under the AGPLv3 License.
+ # Please see the included NOTICE for copyright information and
+ # LICENSE-AGPL for a copy of the license.
+ 
+ import os
+ import sys
+ 
+@@ -96,35 +96,46 @@
+         "kubernetes",
+         "aws",
+         "microsoft",
+         "azure",
+         "google cloud",
+         "tensorFlow",
+         "pytorch",
++        "paddlepaddle",
+         "matplotlib",
+         "plotly",
+         "visualization",
+         "analytics",
+         "hyperopt",
+         "scikit-learn",
+         "optimization",
+         "bayesian-optimization",
+     ],
+     install_requires=[requirements],
+     extras_require=extra,
+     entry_points={"console_scripts": ["haupt = haupt.main:cli"]},
+-    python_requires=">=3.5",
++    python_requires=">=3.7",
+     classifiers=[
+-        "Programming Language :: Python",
++        "Intended Audience :: Information Technology",
++        "Intended Audience :: System Administrators",
++        "Intended Audience :: Developers",
++        "Intended Audience :: Science/Research",
++        "Operating System :: OS Independent",
+         "Programming Language :: Python :: 3",
+-        "Programming Language :: Python :: 3.5",
++        "Programming Language :: Python",
++        "Topic :: Software Development :: Libraries :: Application Frameworks",
++        "Topic :: Software Development :: Libraries :: Python Modules",
++        "Topic :: Software Development :: Libraries",
++        "Topic :: Software Development",
++        "Topic :: Scientific/Engineering :: Artificial Intelligence",
++        "Typing :: Typed",
++        "Programming Language :: Python :: 3 :: Only",
+         "Programming Language :: Python :: 3.6",
+         "Programming Language :: Python :: 3.7",
+         "Programming Language :: Python :: 3.8",
+-        "Operating System :: OS Independent",
+-        "Intended Audience :: Developers",
+-        "Intended Audience :: Science/Research",
+-        "Topic :: Scientific/Engineering :: Artificial Intelligence",
++        "Programming Language :: Python :: 3.9",
++        "Programming Language :: Python :: 3.10",
++        "Programming Language :: Python :: 3.11",
+     ],
+     tests_require=["pytest"],
+     cmdclass={"test": PyTest},
+ )
+```
+

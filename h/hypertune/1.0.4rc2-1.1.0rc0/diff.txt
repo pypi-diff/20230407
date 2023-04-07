@@ -1,0 +1,1221 @@
+--- tmp/hypertune-1.0.4rc2.tar.gz
++++ tmp/hypertune-1.1.0rc0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "hypertune-1.0.4rc2.tar", last modified: Wed Nov 23 12:40:41 2022, max compression
+│ +gzip compressed data, was "hypertune-1.1.0rc0.tar", last modified: Fri Apr  7 15:21:36 2023, max compression
+│   --- hypertune-1.0.4rc2.tar
+├── +++ hypertune-1.1.0rc0.tar
+│ ├── file list
+│ │ @@ -1,50 +1,47 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      149 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/MANIFEST.in
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1320 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/PKG-INFO
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.151649 hypertune-1.0.4rc2/hypertune/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3468 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/iteration_lineage.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      661 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/logger.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.151649 hypertune-1.0.4rc2/hypertune/matrix/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/matrix/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2047 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/matrix/dist.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3052 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/matrix/hyperopt.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     9470 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/matrix/utils.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      849 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/pkg.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/hypertune/schemas/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/schemas/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1326 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/schemas/iteration.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/hypertune/search_managers/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1141 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/base.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5317 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/acquisition_function.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1873 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1909 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/optimizer.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5871 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/space.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/hypertune/search_managers/grid_search/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/grid_search/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1360 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/grid_search/manager.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/hypertune/search_managers/hyperband/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/hyperband/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     5575 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/hyperband/manager.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/hypertune/search_managers/hyperopt/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/hyperopt/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     6495 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/hyperopt/manager.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/hypertune/search_managers/mapping/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/mapping/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1218 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/mapping/manager.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/hypertune/search_managers/random_search/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      604 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/random_search/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     2436 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/random_search/manager.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1330 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/spec.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      725 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/hypertune/search_managers/utils.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (122)        0 2022-11-23 12:40:41.151649 hypertune-1.0.4rc2/hypertune.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1320 2022-11-23 12:40:41.000000 hypertune-1.0.4rc2/hypertune.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1417 2022-11-23 12:40:41.000000 hypertune-1.0.4rc2/hypertune.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)        1 2022-11-23 12:40:41.000000 hypertune-1.0.4rc2/hypertune.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)      122 2022-11-23 12:40:41.000000 hypertune-1.0.4rc2/hypertune.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)       10 2022-11-23 12:40:41.000000 hypertune-1.0.4rc2/hypertune.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     1065 2022-11-23 12:40:41.155649 hypertune-1.0.4rc2/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (122)     3292 2022-11-23 12:40:33.000000 hypertune-1.0.4rc2/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.152829 hypertune-1.1.0rc0/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      175 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/MANIFEST.in
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1868 2023-04-07 15:21:36.152829 hypertune-1.1.0rc0/PKG-INFO
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.144829 hypertune-1.1.0rc0/hypertune/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3492 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/iteration_lineage.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      661 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/logger.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.144829 hypertune-1.1.0rc0/hypertune/matrix/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/matrix/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2047 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/matrix/dist.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2781 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/matrix/hyperopt.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    10059 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/matrix/utils.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      849 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/pkg.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.148829 hypertune-1.1.0rc0/hypertune/search_managers/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1143 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/base.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.148829 hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5317 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/acquisition_function.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1873 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1909 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/optimizer.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5871 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/space.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.148829 hypertune-1.1.0rc0/hypertune/search_managers/grid_search/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/grid_search/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1360 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/grid_search/manager.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.148829 hypertune-1.1.0rc0/hypertune/search_managers/hyperband/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/hyperband/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5575 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/hyperband/manager.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.148829 hypertune-1.1.0rc0/hypertune/search_managers/hyperopt/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/hyperopt/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6500 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/hyperopt/manager.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.148829 hypertune-1.1.0rc0/hypertune/search_managers/mapping/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/mapping/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1238 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/mapping/manager.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.152829 hypertune-1.1.0rc0/hypertune/search_managers/random_search/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      604 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/random_search/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     2456 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/random_search/manager.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1330 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/spec.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      725 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/hypertune/search_managers/utils.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:21:36.144829 hypertune-1.1.0rc0/hypertune.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1868 2023-04-07 15:21:36.000000 hypertune-1.1.0rc0/hypertune.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1348 2023-04-07 15:21:36.000000 hypertune-1.1.0rc0/hypertune.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 15:21:36.000000 hypertune-1.1.0rc0/hypertune.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      122 2023-04-07 15:21:36.000000 hypertune-1.1.0rc0/hypertune.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-07 15:21:36.000000 hypertune-1.1.0rc0/hypertune.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     1076 2023-04-07 15:21:36.152829 hypertune-1.1.0rc0/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3830 2023-04-07 15:21:28.000000 hypertune-1.1.0rc0/setup.py
+│ │   --- hypertune-1.0.4rc2/hypertune/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/iteration_lineage.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/iteration_lineage.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -12,29 +12,30 @@
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │  import traceback
+│ │  
+│ │ -from typing import Dict, List
+│ │ +from typing import Dict, List, Optional
+│ │ +
+│ │ +from clipped.np_utils import sanitize_dict, sanitize_np_types
+│ │  
+│ │  from hypertune.logger import logger
+│ │  from polyaxon.client import RunClient
+│ │  from polyaxon.polyflow import V1Join
+│ │ -from polyaxon.utils.np_utils import sanitize_dict, sanitize_np_types
+│ │  from traceml.artifacts import V1ArtifactKind, V1RunArtifact
+│ │  
+│ │  
+│ │  def get_iteration_definition(
+│ │      client: RunClient,
+│ │      iteration: int,
+│ │      join: V1Join,
+│ │      optimization_metric: str,
+│ │ -    name: str = None,
+│ │ +    name: Optional[str] = None,
+│ │  ):
+│ │      def handler():
+│ │          runs = (
+│ │              client.list(
+│ │                  query=join.query,
+│ │                  sort=join.sort,
+│ │                  limit=join.limit,
+│ │ @@ -48,15 +49,15 @@
+│ │          for run in runs:
+│ │              if optimization_metric in run.outputs:
+│ │                  run_uuids.append(run.uuid)
+│ │                  configs.append(run.inputs)
+│ │                  metrics.append(run.outputs[optimization_metric])
+│ │  
+│ │          if configs or metrics or run_uuids:
+│ │ -            artifact_run = V1RunArtifact(
+│ │ +            artifact_run = V1RunArtifact.construct(
+│ │                  name=name or "in-iteration-{}".format(iteration),
+│ │                  kind=V1ArtifactKind.ITERATION,
+│ │                  summary={
+│ │                      "iteration": iteration,
+│ │                      "configs": [sanitize_dict(s) for s in configs],
+│ │                      "metrics": [sanitize_np_types(s) for s in metrics],
+│ │                      "uuid": run_uuids,
+│ │   --- hypertune-1.0.4rc2/hypertune/logger.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/logger.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/matrix/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/matrix/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/matrix/dist.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/matrix/dist.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/matrix/utils.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/matrix/utils.py
+│ │┄ Files 27% similar despite different names
+│ │ @@ -1,29 +1,28 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │ -import copy
+│ │  import numpy as np
+│ │  
+│ │  from datetime import date, datetime
+│ │  
+│ │ -from marshmallow import ValidationError
+│ │ +from pydantic import ValidationError
+│ │  
+│ │  from hypertune.matrix import dist
+│ │  from polyaxon.polyflow import (
+│ │      V1HpChoice,
+│ │      V1HpDateRange,
+│ │      V1HpDateTimeRange,
+│ │      V1HpGeomSpace,
+│ │ @@ -70,237 +69,253 @@
+│ │      except (ValueError, AttributeError):
+│ │          return int(np.where(array == value)[0][0])
+│ │  
+│ │  
+│ │  def dist_sample(fct, value, size, rand_generator):
+│ │      size = None if size == 1 else size
+│ │      rand_generator = rand_generator or np.random
+│ │ -    value = copy.deepcopy(value)
+│ │      value["size"] = size
+│ │      value["rand_generator"] = rand_generator
+│ │      return fct(**value)
+│ │  
+│ │  
+│ │  def get_length(matrix):
+│ │ -    if matrix.IDENTIFIER == V1HpChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpChoice._IDENTIFIER:
+│ │          return len(matrix.value)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpPChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpPChoice._IDENTIFIER:
+│ │          return len(matrix.value)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpDateRange.IDENTIFIER:
+│ │ -        return len(np.arange(**matrix.value))
+│ │ +    if matrix._IDENTIFIER == V1HpDateRange._IDENTIFIER:
+│ │ +        return len(np.arange(**matrix.value.to_dict()))
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpDateTimeRange.IDENTIFIER:
+│ │ -        return len(np.arange(**matrix.value))
+│ │ +    if matrix._IDENTIFIER == V1HpDateTimeRange._IDENTIFIER:
+│ │ +        return len(np.arange(**matrix.value.to_dict()))
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpRange.IDENTIFIER:
+│ │ -        return len(np.arange(**matrix.value))
+│ │ +    if matrix._IDENTIFIER == V1HpRange._IDENTIFIER:
+│ │ +        return len(np.arange(**matrix.value.to_dict()))
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpLinSpace.IDENTIFIER:
+│ │ -        return len(np.linspace(**matrix.value))
+│ │ -
+│ │ -    if matrix.IDENTIFIER == V1HpLogSpace.IDENTIFIER:
+│ │ -        return len(np.logspace(**matrix.value))
+│ │ -
+│ │ -    if matrix.IDENTIFIER == V1HpGeomSpace.IDENTIFIER:
+│ │ -        return len(np.geomspace(**matrix.value))
+│ │ -
+│ │ -    if matrix.IDENTIFIER in {
+│ │ -        V1HpUniform.IDENTIFIER,
+│ │ -        V1HpQUniform.IDENTIFIER,
+│ │ -        V1HpLogUniform.IDENTIFIER,
+│ │ -        V1HpQLogUniform.IDENTIFIER,
+│ │ -        V1HpNormal.IDENTIFIER,
+│ │ -        V1HpQNormal.IDENTIFIER,
+│ │ -        V1HpLogNormal.IDENTIFIER,
+│ │ -        V1HpQLogNormal.IDENTIFIER,
+│ │ +    if matrix._IDENTIFIER == V1HpLinSpace._IDENTIFIER:
+│ │ +        return len(np.linspace(**matrix.value.to_dict()))
+│ │ +
+│ │ +    if matrix._IDENTIFIER == V1HpLogSpace._IDENTIFIER:
+│ │ +        return len(np.logspace(**matrix.value.to_dict()))
+│ │ +
+│ │ +    if matrix._IDENTIFIER == V1HpGeomSpace._IDENTIFIER:
+│ │ +        return len(np.geomspace(**matrix.value.to_dict()))
+│ │ +
+│ │ +    if matrix._IDENTIFIER in {
+│ │ +        V1HpUniform._IDENTIFIER,
+│ │ +        V1HpQUniform._IDENTIFIER,
+│ │ +        V1HpLogUniform._IDENTIFIER,
+│ │ +        V1HpQLogUniform._IDENTIFIER,
+│ │ +        V1HpNormal._IDENTIFIER,
+│ │ +        V1HpQNormal._IDENTIFIER,
+│ │ +        V1HpLogNormal._IDENTIFIER,
+│ │ +        V1HpQLogNormal._IDENTIFIER,
+│ │      }:
+│ │ -        raise ValidationError("Distribution should not call `length`")
+│ │ +        raise ValidationError(
+│ │ +            ["Distribution should not call `length`"], matrix.__class__
+│ │ +        )
+│ │  
+│ │  
+│ │  def get_min(matrix):
+│ │ -    if matrix.IDENTIFIER == V1HpChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpChoice._IDENTIFIER:
+│ │          if matrix.is_categorical:
+│ │              return None
+│ │          return min(to_numpy(matrix))
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpPChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpPChoice._IDENTIFIER:
+│ │          return None
+│ │  
+│ │ -    if matrix.IDENTIFIER in {
+│ │ -        V1HpDateRange.IDENTIFIER,
+│ │ -        V1HpDateTimeRange.IDENTIFIER,
+│ │ -        V1HpRange.IDENTIFIER,
+│ │ -        V1HpLinSpace.IDENTIFIER,
+│ │ -        V1HpLogSpace.IDENTIFIER,
+│ │ -        V1HpGeomSpace.IDENTIFIER,
+│ │ +    if matrix._IDENTIFIER in {
+│ │ +        V1HpDateRange._IDENTIFIER,
+│ │ +        V1HpDateTimeRange._IDENTIFIER,
+│ │ +        V1HpRange._IDENTIFIER,
+│ │ +        V1HpLinSpace._IDENTIFIER,
+│ │ +        V1HpLogSpace._IDENTIFIER,
+│ │ +        V1HpGeomSpace._IDENTIFIER,
+│ │      }:
+│ │ -        return matrix.value.get("start")
+│ │ +        return matrix.value.start
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpUniform.IDENTIFIER:
+│ │ -        return matrix.value.get("low")
+│ │ +    if matrix._IDENTIFIER == V1HpUniform._IDENTIFIER:
+│ │ +        return matrix.value.low
+│ │  
+│ │ -    if matrix.IDENTIFIER in {
+│ │ -        V1HpQUniform.IDENTIFIER,
+│ │ -        V1HpLogUniform.IDENTIFIER,
+│ │ -        V1HpQLogUniform.IDENTIFIER,
+│ │ -        V1HpNormal.IDENTIFIER,
+│ │ -        V1HpQNormal.IDENTIFIER,
+│ │ -        V1HpLogNormal.IDENTIFIER,
+│ │ -        V1HpQLogNormal.IDENTIFIER,
+│ │ +    if matrix._IDENTIFIER in {
+│ │ +        V1HpQUniform._IDENTIFIER,
+│ │ +        V1HpLogUniform._IDENTIFIER,
+│ │ +        V1HpQLogUniform._IDENTIFIER,
+│ │ +        V1HpNormal._IDENTIFIER,
+│ │ +        V1HpQNormal._IDENTIFIER,
+│ │ +        V1HpLogNormal._IDENTIFIER,
+│ │ +        V1HpQLogNormal._IDENTIFIER,
+│ │      }:
+│ │          return None
+│ │  
+│ │  
+│ │  def get_max(matrix):
+│ │ -    if matrix.IDENTIFIER == V1HpChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpChoice._IDENTIFIER:
+│ │          if matrix.is_categorical:
+│ │              return None
+│ │          return max(to_numpy(matrix))
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpPChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpPChoice._IDENTIFIER:
+│ │          return None
+│ │  
+│ │ -    if matrix.IDENTIFIER in {
+│ │ -        V1HpDateRange.IDENTIFIER,
+│ │ -        V1HpDateTimeRange.IDENTIFIER,
+│ │ -        V1HpRange.IDENTIFIER,
+│ │ -        V1HpLinSpace.IDENTIFIER,
+│ │ -        V1HpLogSpace.IDENTIFIER,
+│ │ -        V1HpGeomSpace.IDENTIFIER,
+│ │ +    if matrix._IDENTIFIER in {
+│ │ +        V1HpDateRange._IDENTIFIER,
+│ │ +        V1HpDateTimeRange._IDENTIFIER,
+│ │ +        V1HpRange._IDENTIFIER,
+│ │ +        V1HpLinSpace._IDENTIFIER,
+│ │ +        V1HpLogSpace._IDENTIFIER,
+│ │ +        V1HpGeomSpace._IDENTIFIER,
+│ │      }:
+│ │ -        return matrix.value.get("stop")
+│ │ +        return matrix.value.stop
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpUniform.IDENTIFIER:
+│ │ -        return matrix.value.get("high")
+│ │ +    if matrix._IDENTIFIER == V1HpUniform._IDENTIFIER:
+│ │ +        return matrix.value.high
+│ │  
+│ │ -    if matrix.IDENTIFIER in {
+│ │ -        V1HpQUniform.IDENTIFIER,
+│ │ -        V1HpLogUniform.IDENTIFIER,
+│ │ -        V1HpQLogUniform.IDENTIFIER,
+│ │ -        V1HpNormal.IDENTIFIER,
+│ │ -        V1HpQNormal.IDENTIFIER,
+│ │ -        V1HpLogNormal.IDENTIFIER,
+│ │ -        V1HpQLogNormal.IDENTIFIER,
+│ │ +    if matrix._IDENTIFIER in {
+│ │ +        V1HpQUniform._IDENTIFIER,
+│ │ +        V1HpLogUniform._IDENTIFIER,
+│ │ +        V1HpQLogUniform._IDENTIFIER,
+│ │ +        V1HpNormal._IDENTIFIER,
+│ │ +        V1HpQNormal._IDENTIFIER,
+│ │ +        V1HpLogNormal._IDENTIFIER,
+│ │ +        V1HpQLogNormal._IDENTIFIER,
+│ │      }:
+│ │          return None
+│ │  
+│ │  
+│ │  def to_numpy(matrix):
+│ │ -    if matrix.IDENTIFIER == V1HpChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpChoice._IDENTIFIER:
+│ │          return matrix.value
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpPChoice.IDENTIFIER:
+│ │ -        raise ValidationError(
+│ │ -            "Distribution should not call `to_numpy`, "
+│ │ -            "instead it should call `sample`."
+│ │ +    if matrix._IDENTIFIER == V1HpPChoice._IDENTIFIER:
+│ │ +        raise ValidationError(  # TODO: Fix error message
+│ │ +            [
+│ │ +                "Distribution should not call `to_numpy`, "
+│ │ +                "instead it should call `sample`."
+│ │ +            ],
+│ │ +            matrix.__class__,
+│ │          )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpDateRange.IDENTIFIER:
+│ │ -        return np.arange(**matrix.value).astype(date)
+│ │ -
+│ │ -    if matrix.IDENTIFIER == V1HpDateTimeRange.IDENTIFIER:
+│ │ -        return np.arange(**matrix.value).astype(datetime)
+│ │ -
+│ │ -    if matrix.IDENTIFIER == V1HpRange.IDENTIFIER:
+│ │ -        return np.arange(**matrix.value)
+│ │ +    if matrix._IDENTIFIER == V1HpDateRange._IDENTIFIER:
+│ │ +        return np.arange(**matrix.value.to_dict()).astype(date)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpLinSpace.IDENTIFIER:
+│ │ -        return np.linspace(**matrix.value)
+│ │ +    if matrix._IDENTIFIER == V1HpDateTimeRange._IDENTIFIER:
+│ │ +        return np.arange(**matrix.value.to_dict()).astype(datetime)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpLogSpace.IDENTIFIER:
+│ │ -        return np.logspace(**matrix.value)
+│ │ +    if matrix._IDENTIFIER == V1HpRange._IDENTIFIER:
+│ │ +        return np.arange(**matrix.value.to_dict())
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpGeomSpace.IDENTIFIER:
+│ │ -        return np.geomspace(**matrix.value)
+│ │ -
+│ │ -    if matrix.IDENTIFIER in {
+│ │ -        V1HpUniform.IDENTIFIER,
+│ │ -        V1HpQUniform.IDENTIFIER,
+│ │ -        V1HpLogUniform.IDENTIFIER,
+│ │ -        V1HpQLogUniform.IDENTIFIER,
+│ │ -        V1HpNormal.IDENTIFIER,
+│ │ -        V1HpQNormal.IDENTIFIER,
+│ │ -        V1HpLogNormal.IDENTIFIER,
+│ │ -        V1HpQLogNormal.IDENTIFIER,
+│ │ +    if matrix._IDENTIFIER == V1HpLinSpace._IDENTIFIER:
+│ │ +        return np.linspace(**matrix.value.to_dict())
+│ │ +
+│ │ +    if matrix._IDENTIFIER == V1HpLogSpace._IDENTIFIER:
+│ │ +        return np.logspace(**matrix.value.to_dict())
+│ │ +
+│ │ +    if matrix._IDENTIFIER == V1HpGeomSpace._IDENTIFIER:
+│ │ +        return np.geomspace(**matrix.value.to_dict())
+│ │ +
+│ │ +    if matrix._IDENTIFIER in {
+│ │ +        V1HpUniform._IDENTIFIER,
+│ │ +        V1HpQUniform._IDENTIFIER,
+│ │ +        V1HpLogUniform._IDENTIFIER,
+│ │ +        V1HpQLogUniform._IDENTIFIER,
+│ │ +        V1HpNormal._IDENTIFIER,
+│ │ +        V1HpQNormal._IDENTIFIER,
+│ │ +        V1HpLogNormal._IDENTIFIER,
+│ │ +        V1HpQLogNormal._IDENTIFIER,
+│ │      }:
+│ │          raise ValidationError(
+│ │ -            "Distribution should not call `to_numpy`, "
+│ │ -            "instead it should call `sample`."
+│ │ +            [
+│ │ +                "Distribution should not call `to_numpy`, "
+│ │ +                "instead it should call `sample`."
+│ │ +            ],
+│ │ +            matrix.__class__,
+│ │          )
+│ │  
+│ │  
+│ │  def _sample(matrix, size=None, rand_generator=None):
+│ │      size = None if size == 1 else size
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpChoice._IDENTIFIER:
+│ │          return space_sample(
+│ │              value=to_numpy(matrix), size=size, rand_generator=rand_generator
+│ │          )
+│ │ -    if matrix.IDENTIFIER == V1HpPChoice.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpPChoice._IDENTIFIER:
+│ │          return pchoice(values=matrix.value, size=size, rand_generator=rand_generator)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpDateRange.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpDateRange._IDENTIFIER:
+│ │          return space_sample(
+│ │              value=to_numpy(matrix), size=size, rand_generator=rand_generator
+│ │          )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpDateTimeRange.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpDateTimeRange._IDENTIFIER:
+│ │          return space_sample(
+│ │              value=to_numpy(matrix), size=size, rand_generator=rand_generator
+│ │          )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpRange.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpRange._IDENTIFIER:
+│ │          return space_sample(
+│ │              value=to_numpy(matrix), size=size, rand_generator=rand_generator
+│ │          )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpLinSpace.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpLinSpace._IDENTIFIER:
+│ │          return space_sample(
+│ │              value=to_numpy(matrix), size=size, rand_generator=rand_generator
+│ │          )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpLogSpace.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpLogSpace._IDENTIFIER:
+│ │          return space_sample(
+│ │              value=to_numpy(matrix), size=size, rand_generator=rand_generator
+│ │          )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpGeomSpace.IDENTIFIER:
+│ │ +    if matrix._IDENTIFIER == V1HpGeomSpace._IDENTIFIER:
+│ │          return space_sample(
+│ │              value=to_numpy(matrix), size=size, rand_generator=rand_generator
+│ │          )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpUniform.IDENTIFIER:
+│ │ -        return dist_sample(dist.uniform, matrix.value, size, rand_generator)
+│ │ +    if matrix._IDENTIFIER == V1HpUniform._IDENTIFIER:
+│ │ +        return dist_sample(dist.uniform, matrix.value.to_dict(), size, rand_generator)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpQUniform.IDENTIFIER:
+│ │ -        return dist_sample(dist.quniform, matrix.value, size, rand_generator)
+│ │ +    if matrix._IDENTIFIER == V1HpQUniform._IDENTIFIER:
+│ │ +        return dist_sample(dist.quniform, matrix.value.to_dict(), size, rand_generator)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpLogUniform.IDENTIFIER:
+│ │ -        return dist_sample(dist.loguniform, matrix.value, size, rand_generator)
+│ │ +    if matrix._IDENTIFIER == V1HpLogUniform._IDENTIFIER:
+│ │ +        return dist_sample(
+│ │ +            dist.loguniform, matrix.value.to_dict(), size, rand_generator
+│ │ +        )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpQLogUniform.IDENTIFIER:
+│ │ -        return dist_sample(dist.qloguniform, matrix.value, size, rand_generator)
+│ │ +    if matrix._IDENTIFIER == V1HpQLogUniform._IDENTIFIER:
+│ │ +        return dist_sample(
+│ │ +            dist.qloguniform, matrix.value.to_dict(), size, rand_generator
+│ │ +        )
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpNormal.IDENTIFIER:
+│ │ -        return dist_sample(dist.normal, matrix.value, size, rand_generator)
+│ │ +    if matrix._IDENTIFIER == V1HpNormal._IDENTIFIER:
+│ │ +        return dist_sample(dist.normal, matrix.value.to_dict(), size, rand_generator)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpQNormal.IDENTIFIER:
+│ │ -        return dist_sample(dist.qnormal, matrix.value, size, rand_generator)
+│ │ +    if matrix._IDENTIFIER == V1HpQNormal._IDENTIFIER:
+│ │ +        return dist_sample(dist.qnormal, matrix.value.to_dict(), size, rand_generator)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpLogNormal.IDENTIFIER:
+│ │ -        return dist_sample(dist.lognormal, matrix.value, size, rand_generator)
+│ │ +    if matrix._IDENTIFIER == V1HpLogNormal._IDENTIFIER:
+│ │ +        return dist_sample(dist.lognormal, matrix.value.to_dict(), size, rand_generator)
+│ │  
+│ │ -    if matrix.IDENTIFIER == V1HpQLogNormal.IDENTIFIER:
+│ │ -        return dist_sample(dist.qlognormal, matrix.value, size, rand_generator)
+│ │ +    if matrix._IDENTIFIER == V1HpQLogNormal._IDENTIFIER:
+│ │ +        return dist_sample(
+│ │ +            dist.qlognormal, matrix.value.to_dict(), size, rand_generator
+│ │ +        )
+│ │  
+│ │  
+│ │  def sample(matrix, size=None, rand_generator=None):
+│ │      try:
+│ │          return _sample(matrix, size=size, rand_generator=rand_generator)
+│ │      except Exception as e:
+│ │          raise ValidationError(
+│ │ -            "Could not sample from matrix value: {} for kind: {} with size: {}".format(
+│ │ -                matrix.value, matrix.IDENTIFIER, size
+│ │ -            )
+│ │ +            [
+│ │ +                "Could not sample from matrix value: {} for kind: {} with size: {}".format(
+│ │ +                    matrix.value, matrix._IDENTIFIER, size
+│ │ +                )
+│ │ +            ],
+│ │ +            matrix.__class__,
+│ │          ) from e
+│ │   --- hypertune-1.0.4rc2/hypertune/pkg.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/pkg.py
+│ │┄ Files 13% similar despite different names
+│ │ @@ -1,23 +1,23 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │  NAME = "hypertune"
+│ │ -VERSION = "1.0.4-rc2"
+│ │ +VERSION = "1.1.0-rc0"
+│ │  DESC = "A library for performing hyperparameter optimization with Polyaxon."
+│ │  URL = "https://github.com/polyaxon/hypertune"
+│ │  AUTHOR = "Polyaxon, Inc."
+│ │  EMAIL = "contact@polyaxon.com"
+│ │  LICENSE = "Apache 2.0"
+│ │   --- hypertune-1.0.4rc2/hypertune/schemas/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/base.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/base.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -20,14 +20,14 @@
+│ │      CONFIG = None
+│ │  
+│ │      def __init__(self, config):
+│ │          if not isinstance(config, self.CONFIG):
+│ │              raise ValueError(
+│ │                  "The current search manager `{}` is not compatible "
+│ │                  "with the search kind `{}` defined in the config.".format(
+│ │ -                    self.CONFIG.IDENTIFIER, config.IDENTIFIER
+│ │ +                    self.CONFIG._IDENTIFIER, config._IDENTIFIER
+│ │                  )
+│ │              )
+│ │          self.config = config
+│ │  
+│ │      def get_suggestions(self, **kwargs) -> List[Dict]:
+│ │          raise NotImplementedError
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/grid_search/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/acquisition_function.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/acquisition_function.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/manager.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/manager.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/optimizer.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/optimizer.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/bayesian_optimization/space.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/bayesian_optimization/space.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/grid_search/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/hyperband/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/grid_search/manager.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/grid_search/manager.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/hyperband/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/hyperopt/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/hyperband/manager.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/hyperband/manager.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/hyperopt/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/mapping/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/hyperopt/manager.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/hyperopt/manager.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -49,20 +49,20 @@
+│ │          self._set_search_space()
+│ │          self.max_iterations = self.config.max_iterations
+│ │  
+│ │      def _set_search_space(self):
+│ │          for k, v in self.config.params.items():
+│ │              self._search_space[k] = to_hyperopt(k, v)
+│ │  
+│ │ -            if v.IDENTIFIER in {
+│ │ -                V1HpChoice.IDENTIFIER,
+│ │ -                V1HpRange.IDENTIFIER,
+│ │ -                V1HpLinSpace.IDENTIFIER,
+│ │ -                V1HpLogSpace.IDENTIFIER,
+│ │ -                V1HpGeomSpace.IDENTIFIER,
+│ │ +            if v._IDENTIFIER in {
+│ │ +                V1HpChoice._IDENTIFIER,
+│ │ +                V1HpRange._IDENTIFIER,
+│ │ +                V1HpLinSpace._IDENTIFIER,
+│ │ +                V1HpLogSpace._IDENTIFIER,
+│ │ +                V1HpGeomSpace._IDENTIFIER,
+│ │              }:
+│ │                  # Get the categorical/discrete values mapping
+│ │                  self._param_to_value[k] = to_numpy(v)
+│ │  
+│ │      def _get_previous_observations(
+│ │          self, hyperopt_domain, configs: List[Dict] = None, metrics: List[float] = None
+│ │      ):
+│ │ @@ -82,15 +82,14 @@
+│ │              miscs_vals = {}
+│ │              observation_ids.append(tid)
+│ │              trial_misc = dict(
+│ │                  tid=tid, cmd=hyperopt_domain.cmd, workdir=hyperopt_domain.workdir
+│ │              )
+│ │  
+│ │              for param in observation_config:
+│ │ -
+│ │                  observation_value = observation_config[param]
+│ │                  if param in self._param_to_value:
+│ │                      index_of_value = space_get_index(
+│ │                          self._param_to_value[param], observation_value
+│ │                      )
+│ │                      miscs_idxs[param] = [tid]
+│ │                      miscs_vals[param] = [index_of_value]
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/mapping/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/random_search/__init__.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/mapping/manager.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/mapping/manager.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -12,26 +12,26 @@
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │  import copy
+│ │  
+│ │ -from typing import Dict, List
+│ │ +from typing import Dict, List, Optional
+│ │  
+│ │  from hypertune.search_managers.base import BaseManager
+│ │  from polyaxon.polyflow import V1Mapping
+│ │  
+│ │  
+│ │  class MappingManager(BaseManager):
+│ │      """Mapping strategy manager for running parallel operations."""
+│ │  
+│ │      CONFIG = V1Mapping
+│ │  
+│ │ -    def get_suggestions(self, params: Dict = None) -> List[Dict]:
+│ │ +    def get_suggestions(self, params: Optional[Dict] = None) -> List[Dict]:
+│ │          suggestions = []
+│ │          params = params or {}
+│ │          for v in self.config.values:
+│ │              suggestion_params = copy.deepcopy(params)
+│ │              suggestion_params.update(copy.deepcopy(v))
+│ │              suggestions.append(suggestion_params)
+│ │          return suggestions
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/random_search/__init__.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/utils.py
+│ │┄ Files 14% similar despite different names
+│ │ @@ -1,15 +1,21 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │  # Unless required by applicable law or agreed to in writing, software
+│ │  # distributed under the License is distributed on an "AS IS" BASIS,
+│ │  # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │ +
+│ │ +import numpy as np
+│ │ +
+│ │ +
+│ │ +def get_random_generator(seed=None):
+│ │ +    return np.random.RandomState(seed) if seed else np.random
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/random_search/manager.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/random_search/manager.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -14,29 +14,29 @@
+│ │  # See the License for the specific language governing permissions and
+│ │  # limitations under the License.
+│ │  
+│ │  import copy
+│ │  
+│ │  from functools import reduce
+│ │  from operator import mul
+│ │ -from typing import Dict, List
+│ │ +from typing import Dict, List, Optional
+│ │  
+│ │  from hypertune.matrix.utils import get_length, sample
+│ │  from hypertune.search_managers.base import BaseManager
+│ │  from hypertune.search_managers.spec import SuggestionSpec
+│ │  from hypertune.search_managers.utils import get_random_generator
+│ │  from polyaxon.polyflow import V1RandomSearch
+│ │  
+│ │  
+│ │  class RandomSearchManager(BaseManager):
+│ │      """Random search strategy manager for hyperparameter optimization."""
+│ │  
+│ │      CONFIG = V1RandomSearch
+│ │  
+│ │ -    def get_suggestions(self, params: Dict = None) -> List[Dict]:
+│ │ +    def get_suggestions(self, params: Optional[Dict] = None) -> List[Dict]:
+│ │          if not self.config.num_runs:
+│ │              raise ValueError("This search strategy requires `num_runs`.")
+│ │          suggestions = []
+│ │          params = params or {}
+│ │          rand_generator = get_random_generator(seed=self.config.seed)
+│ │          # Validate number of suggestions and total space
+│ │          all_discrete = True
+│ │   --- hypertune-1.0.4rc2/hypertune/search_managers/spec.py
+│ ├── +++ hypertune-1.1.0rc0/hypertune/search_managers/spec.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │   --- hypertune-1.0.4rc2/hypertune.egg-info/SOURCES.txt
+│ ├── +++ hypertune-1.1.0rc0/hypertune.egg-info/SOURCES.txt
+│ │┄ Files 5% similar despite different names
+│ │ @@ -1,27 +1,25 @@
+│ │  MANIFEST.in
+│ │  setup.cfg
+│ │  setup.py
+│ │ -../CONTRIBUTING.md
+│ │ +../LICENSE
+│ │  ../README.md
+│ │  hypertune/__init__.py
+│ │  hypertune/iteration_lineage.py
+│ │  hypertune/logger.py
+│ │  hypertune/pkg.py
+│ │  hypertune.egg-info/PKG-INFO
+│ │  hypertune.egg-info/SOURCES.txt
+│ │  hypertune.egg-info/dependency_links.txt
+│ │  hypertune.egg-info/requires.txt
+│ │  hypertune.egg-info/top_level.txt
+│ │  hypertune/matrix/__init__.py
+│ │  hypertune/matrix/dist.py
+│ │  hypertune/matrix/hyperopt.py
+│ │  hypertune/matrix/utils.py
+│ │ -hypertune/schemas/__init__.py
+│ │ -hypertune/schemas/iteration.py
+│ │  hypertune/search_managers/__init__.py
+│ │  hypertune/search_managers/base.py
+│ │  hypertune/search_managers/spec.py
+│ │  hypertune/search_managers/utils.py
+│ │  hypertune/search_managers/bayesian_optimization/__init__.py
+│ │  hypertune/search_managers/bayesian_optimization/acquisition_function.py
+│ │  hypertune/search_managers/bayesian_optimization/manager.py
+│ │   --- hypertune-1.0.4rc2/setup.cfg
+│ ├── +++ hypertune-1.1.0rc0/setup.cfg
+│ │┄ Files 10% similar despite different names
+│ │ @@ -5,17 +5,17 @@
+│ │  honor_noqa = True
+│ │  profile = black
+│ │  line_length = 88
+│ │  lines_between_sections = 1
+│ │  lines_between_types = 1
+│ │  order_by_type = true
+│ │  known_future_library = future,pies
+│ │ -extra_standard_library = typing,mock,pytest,factory,faker,flaky,numpy,pandas,requests,websocket,jinja2,yaml,pytz
+│ │ -known_third_party = rest_framework,scipy,sklearn,datadog,docker,corsheaders,celery,picklefield,sentry_sdk,ujson,marshmallow
+│ │ -known_first_party = polyaxon_sdk,polyaxon_deploy,polyaxon,traceml,datatile,hypertune
+│ │ +extra_standard_library = typing,typing_extensions,mock,pytest,factory,faker,flaky,numpy,pandas,requests,websocket,jinja2,yaml,pytz
+│ │ +known_third_party = rest_framework,scipy,sklearn,datadog,docker,corsheaders,celery,picklefield,sentry_sdk,ujson,pydantic,clipped
+│ │ +known_first_party = polyaxon,traceml,hypertune
+│ │  indent = '    '
+│ │  multi_line_output = 3
+│ │  include_trailing_comma = True
+│ │  force_grid_wrap = 0
+│ │  use_parentheses = True
+│ │  known_django = django
+│ │  forced_separate = django.contrib,django.utils
+│ │ @@ -25,14 +25,15 @@
+│ │  [tool:pytest]
+│ │  addopts = --doctest-glob='*.rst'
+│ │  markers = 
+│ │  	tuninig_mark
+│ │  
+│ │  [mypy]
+│ │  python_version = 3.9
+│ │ +namespace_packages = true
+│ │  ignore_missing_imports = True
+│ │  show_error_codes = True
+│ │  allow_redefinition = True
+│ │  exclude = (setup.py$)|(tests/)|(vendor/)
+│ │  
+│ │  [egg_info]
+│ │  tag_build =
+│ │   --- hypertune-1.0.4rc2/setup.py
+│ ├── +++ hypertune-1.1.0rc0/setup.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  #!/usr/bin/python
+│ │  #
+│ │ -# Copyright 2018-2022 Polyaxon, Inc.
+│ │ +# Copyright 2018-2023 Polyaxon, Inc.
+│ │  #
+│ │  # Licensed under the Apache License, Version 2.0 (the "License");
+│ │  # you may not use this file except in compliance with the License.
+│ │  # You may obtain a copy of the License at
+│ │  #
+│ │  #      http://www.apache.org/licenses/LICENSE-2.0
+│ │  #
+│ │ @@ -101,23 +101,33 @@
+│ │          "hyperopt",
+│ │          "scikit-learn",
+│ │          "optimization",
+│ │          "bayesian-optimization",
+│ │      ],
+│ │      install_requires=[],
+│ │      extras_require=extra,
+│ │ -    python_requires=">=3.5",
+│ │ +    python_requires=">=3.7",
+│ │      classifiers=[
+│ │ -        "Programming Language :: Python",
+│ │ +        "Intended Audience :: Information Technology",
+│ │ +        "Intended Audience :: System Administrators",
+│ │ +        "Intended Audience :: Developers",
+│ │ +        "Intended Audience :: Science/Research",
+│ │ +        "Operating System :: OS Independent",
+│ │          "Programming Language :: Python :: 3",
+│ │ -        "Programming Language :: Python :: 3.5",
+│ │ +        "Programming Language :: Python",
+│ │ +        "Topic :: Software Development :: Libraries :: Application Frameworks",
+│ │ +        "Topic :: Software Development :: Libraries :: Python Modules",
+│ │ +        "Topic :: Software Development :: Libraries",
+│ │ +        "Topic :: Software Development",
+│ │ +        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+│ │ +        "Typing :: Typed",
+│ │ +        "Programming Language :: Python :: 3 :: Only",
+│ │          "Programming Language :: Python :: 3.6",
+│ │          "Programming Language :: Python :: 3.7",
+│ │          "Programming Language :: Python :: 3.8",
+│ │ -        "Operating System :: OS Independent",
+│ │ -        "Intended Audience :: Developers",
+│ │ -        "Intended Audience :: Science/Research",
+│ │ -        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+│ │ +        "Programming Language :: Python :: 3.9",
+│ │ +        "Programming Language :: Python :: 3.10",
+│ │ +        "Programming Language :: Python :: 3.11",
+│ │      ],
+│ │      tests_require=["pytest"],
+│ │      cmdclass={"test": PyTest},
+│ │  )

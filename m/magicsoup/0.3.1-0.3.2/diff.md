@@ -1,0 +1,268 @@
+# Comparing `tmp/magicsoup-0.3.1.tar.gz` & `tmp/magicsoup-0.3.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "magicsoup-0.3.1.tar", last modified: Fri Apr  7 15:10:47 2023, max compression
++gzip compressed data, was "magicsoup-0.3.2.tar", last modified: Fri Apr  7 15:22:03 2023, max compression
+```
+
+## Comparing `magicsoup-0.3.1.tar` & `magicsoup-0.3.2.tar`
+
+### file list
+
+```diff
+@@ -1,32 +1,32 @@
+-drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:10:47.536224 magicsoup-0.3.1/
+--rw-rw-r--   0 marc      (1000) marc      (1003)    34888 2023-01-23 15:27:37.000000 magicsoup-0.3.1/LICENSE
+--rw-rw-r--   0 marc      (1000) marc      (1003)     5297 2023-04-07 15:10:47.536224 magicsoup-0.3.1/PKG-INFO
+--rw-rw-r--   0 marc      (1000) marc      (1003)     4360 2023-04-07 09:06:36.000000 magicsoup-0.3.1/README.md
+--rw-rw-r--   0 marc      (1000) marc      (1003)     1092 2023-01-26 15:22:43.000000 magicsoup-0.3.1/pyproject.toml
+--rw-rw-r--   0 marc      (1000) marc      (1003)       38 2023-04-07 15:10:47.536224 magicsoup-0.3.1/setup.cfg
+-drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:10:47.532224 magicsoup-0.3.1/src/
+-drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:10:47.536224 magicsoup-0.3.1/src/magicsoup/
+--rw-rw-r--   0 marc      (1000) marc      (1003)      151 2023-04-07 15:10:29.000000 magicsoup-0.3.1/src/magicsoup/__init__.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)     1108 2023-02-09 12:51:19.000000 magicsoup-0.3.1/src/magicsoup/constants.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)    23599 2023-04-07 15:09:15.000000 magicsoup-0.3.1/src/magicsoup/containers.py
+-drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:10:47.536224 magicsoup-0.3.1/src/magicsoup/examples/
+--rw-rw-r--   0 marc      (1000) marc      (1003)        0 2023-01-23 15:27:37.000000 magicsoup-0.3.1/src/magicsoup/examples/__init__.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)      833 2023-01-23 15:27:37.000000 magicsoup-0.3.1/src/magicsoup/examples/n2_fixing.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)     1473 2023-01-23 15:27:37.000000 magicsoup-0.3.1/src/magicsoup/examples/reverse_krebs.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)     1930 2023-02-16 21:19:27.000000 magicsoup-0.3.1/src/magicsoup/examples/wood_ljungdahl.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)    11993 2023-04-06 09:43:57.000000 magicsoup-0.3.1/src/magicsoup/genetics.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)    28598 2023-04-07 13:24:41.000000 magicsoup-0.3.1/src/magicsoup/kinetics.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)     4140 2023-03-31 15:15:22.000000 magicsoup-0.3.1/src/magicsoup/mutations.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)     5288 2023-04-07 13:25:00.000000 magicsoup-0.3.1/src/magicsoup/util.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)    41788 2023-04-07 13:26:16.000000 magicsoup-0.3.1/src/magicsoup/world.py
+-drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:10:47.536224 magicsoup-0.3.1/src/magicsoup.egg-info/
+--rw-rw-r--   0 marc      (1000) marc      (1003)     5297 2023-04-07 15:10:47.000000 magicsoup-0.3.1/src/magicsoup.egg-info/PKG-INFO
+--rw-rw-r--   0 marc      (1000) marc      (1003)      647 2023-04-07 15:10:47.000000 magicsoup-0.3.1/src/magicsoup.egg-info/SOURCES.txt
+--rw-rw-r--   0 marc      (1000) marc      (1003)        1 2023-04-07 15:10:47.000000 magicsoup-0.3.1/src/magicsoup.egg-info/dependency_links.txt
+--rw-rw-r--   0 marc      (1000) marc      (1003)       10 2023-04-07 15:10:47.000000 magicsoup-0.3.1/src/magicsoup.egg-info/top_level.txt
+-drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:10:47.536224 magicsoup-0.3.1/tests/
+--rw-rw-r--   0 marc      (1000) marc      (1003)      710 2023-02-09 10:42:28.000000 magicsoup-0.3.1/tests/test_containers.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)     6012 2023-04-06 09:44:07.000000 magicsoup-0.3.1/tests/test_genetics.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)    46955 2023-04-06 09:24:16.000000 magicsoup-0.3.1/tests/test_kinetics.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)     1433 2023-04-03 15:10:20.000000 magicsoup-0.3.1/tests/test_util.py
+--rw-rw-r--   0 marc      (1000) marc      (1003)    12836 2023-04-07 15:08:43.000000 magicsoup-0.3.1/tests/test_world.py
++drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:22:03.608255 magicsoup-0.3.2/
++-rw-rw-r--   0 marc      (1000) marc      (1003)    34888 2023-01-23 15:27:37.000000 magicsoup-0.3.2/LICENSE
++-rw-rw-r--   0 marc      (1000) marc      (1003)     5297 2023-04-07 15:22:03.608255 magicsoup-0.3.2/PKG-INFO
++-rw-rw-r--   0 marc      (1000) marc      (1003)     4360 2023-04-07 09:06:36.000000 magicsoup-0.3.2/README.md
++-rw-rw-r--   0 marc      (1000) marc      (1003)     1092 2023-01-26 15:22:43.000000 magicsoup-0.3.2/pyproject.toml
++-rw-rw-r--   0 marc      (1000) marc      (1003)       38 2023-04-07 15:22:03.608255 magicsoup-0.3.2/setup.cfg
++drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:22:03.600255 magicsoup-0.3.2/src/
++drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:22:03.604255 magicsoup-0.3.2/src/magicsoup/
++-rw-rw-r--   0 marc      (1000) marc      (1003)      151 2023-04-07 15:21:48.000000 magicsoup-0.3.2/src/magicsoup/__init__.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)     1108 2023-02-09 12:51:19.000000 magicsoup-0.3.2/src/magicsoup/constants.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)    23599 2023-04-07 15:09:15.000000 magicsoup-0.3.2/src/magicsoup/containers.py
++drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:22:03.604255 magicsoup-0.3.2/src/magicsoup/examples/
++-rw-rw-r--   0 marc      (1000) marc      (1003)        0 2023-01-23 15:27:37.000000 magicsoup-0.3.2/src/magicsoup/examples/__init__.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)      833 2023-01-23 15:27:37.000000 magicsoup-0.3.2/src/magicsoup/examples/n2_fixing.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)     1473 2023-01-23 15:27:37.000000 magicsoup-0.3.2/src/magicsoup/examples/reverse_krebs.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)     1930 2023-02-16 21:19:27.000000 magicsoup-0.3.2/src/magicsoup/examples/wood_ljungdahl.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)    11993 2023-04-06 09:43:57.000000 magicsoup-0.3.2/src/magicsoup/genetics.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)    28797 2023-04-07 15:20:43.000000 magicsoup-0.3.2/src/magicsoup/kinetics.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)     4140 2023-03-31 15:15:22.000000 magicsoup-0.3.2/src/magicsoup/mutations.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)     5288 2023-04-07 13:25:00.000000 magicsoup-0.3.2/src/magicsoup/util.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)    41788 2023-04-07 13:26:16.000000 magicsoup-0.3.2/src/magicsoup/world.py
++drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:22:03.604255 magicsoup-0.3.2/src/magicsoup.egg-info/
++-rw-rw-r--   0 marc      (1000) marc      (1003)     5297 2023-04-07 15:22:03.000000 magicsoup-0.3.2/src/magicsoup.egg-info/PKG-INFO
++-rw-rw-r--   0 marc      (1000) marc      (1003)      647 2023-04-07 15:22:03.000000 magicsoup-0.3.2/src/magicsoup.egg-info/SOURCES.txt
++-rw-rw-r--   0 marc      (1000) marc      (1003)        1 2023-04-07 15:22:03.000000 magicsoup-0.3.2/src/magicsoup.egg-info/dependency_links.txt
++-rw-rw-r--   0 marc      (1000) marc      (1003)       10 2023-04-07 15:22:03.000000 magicsoup-0.3.2/src/magicsoup.egg-info/top_level.txt
++drwxrwxr-x   0 marc      (1000) marc      (1003)        0 2023-04-07 15:22:03.608255 magicsoup-0.3.2/tests/
++-rw-rw-r--   0 marc      (1000) marc      (1003)      710 2023-02-09 10:42:28.000000 magicsoup-0.3.2/tests/test_containers.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)     6012 2023-04-06 09:44:07.000000 magicsoup-0.3.2/tests/test_genetics.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)    46955 2023-04-06 09:24:16.000000 magicsoup-0.3.2/tests/test_kinetics.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)     1433 2023-04-03 15:10:20.000000 magicsoup-0.3.2/tests/test_util.py
++-rw-rw-r--   0 marc      (1000) marc      (1003)    12836 2023-04-07 15:08:43.000000 magicsoup-0.3.2/tests/test_world.py
+```
+
+### Comparing `magicsoup-0.3.1/LICENSE` & `magicsoup-0.3.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/PKG-INFO` & `magicsoup-0.3.2/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: magicsoup
+-Version: 0.3.1
++Version: 0.3.2
+ Summary: Simulation for cell metabolic and transduction pathway evolution
+ Author-email: Marc <schweringmarc01@gmail.com>
+ Project-URL: Documentation, https://magic-soup.readthedocs.io/
+ Project-URL: Homepage, https://github.com/mRcSchwering/magic-soup
+ Project-URL: Bug Tracker, https://github.com/mRcSchwering/magic-soup/issues
+ Classifier: Environment :: Console
+ Classifier: Environment :: GPU
+```
+
+### Comparing `magicsoup-0.3.1/README.md` & `magicsoup-0.3.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/pyproject.toml` & `magicsoup-0.3.2/pyproject.toml`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/constants.py` & `magicsoup-0.3.2/src/magicsoup/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/containers.py` & `magicsoup-0.3.2/src/magicsoup/containers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/examples/n2_fixing.py` & `magicsoup-0.3.2/src/magicsoup/examples/n2_fixing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/examples/reverse_krebs.py` & `magicsoup-0.3.2/src/magicsoup/examples/reverse_krebs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/examples/wood_ljungdahl.py` & `magicsoup-0.3.2/src/magicsoup/examples/wood_ljungdahl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/genetics.py` & `magicsoup-0.3.2/src/magicsoup/genetics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/kinetics.py` & `magicsoup-0.3.2/src/magicsoup/kinetics.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -343,18 +343,18 @@
+         """
+         N_d, A_d, Km_d, Vmax_d, dom_types = self._get_proteome_tensors(
+             proteomes=[proteome]
+         )
+ 
+         prots: list[Protein] = []
+         for pi in range(dom_types.size(1)):
++            is_useful = False
+ 
+             doms: list[DomainType] = []
+             for di in range(dom_types.size(2)):
+-
+                 # catalytic domain (N has positive and negative integers)
+                 if dom_types[0][pi][di].item() == 1:
+                     lfts: list[Molecule] = []
+                     rgts: list[Molecule] = []
+                     for mi, n in enumerate(N_d[0][pi][di].tolist()):
+                         if n >= 1:
+                             rgts.extend(([self.mi_2_mol[mi]] * int(n)))
+@@ -365,27 +365,29 @@
+                         doms.append(
+                             CatalyticDomain(
+                                 reaction=(lfts, rgts),
+                                 km=Km_d[0][pi][di][mi].item(),
+                                 vmax=Vmax_d[0][pi][di].item(),
+                             )
+                         )
++                        is_useful = True
+ 
+                 # transporter domain (N has one +1 and one -1)
+                 if dom_types[0][pi][di].item() == 2:
+                     lft = int(torch.argwhere(N_d[0][pi][di] == -1)[0].item())
+                     rgt = int(torch.argwhere(N_d[0][pi][di] == 1)[0].item())
+                     mi = lft if lft in self.mi_2_mol else rgt
+                     doms.append(
+                         TransporterDomain(
+                             molecule=self.mi_2_mol[mi],
+                             km=Km_d[0][pi][di][mi].item(),
+                             vmax=Vmax_d[0][pi][di].item(),
+                         )
+                     )
++                    is_useful = True
+ 
+                 # regulatory domain (A has values != 0)
+                 if dom_types[0][pi][di].item() == 3:
+                     mi = int(torch.argwhere(A_d[0][pi][di] != 0)[0].item())
+                     if mi in self.mi_2_mol:
+                         is_trnsm = False
+                         mol = self.mi_2_mol[mi]
+@@ -397,15 +399,17 @@
+                             effector=mol,
+                             km=Km_d[0][pi][di][mi].item(),
+                             is_inhibiting=bool((A_d[0][pi][di][mi] == -1).item()),
+                             is_transmembrane=is_trnsm,
+                         )
+                     )
+ 
+-            prots.append(Protein(domains=doms))
++            # ignore proteins without a non-regulatory domain
++            if is_useful:
++                prots.append(Protein(domains=doms))
+ 
+         return prots
+ 
+     def set_cell_params(
+         self,
+         cell_idxs: list[int],
+         proteomes: list[list[list[tuple[int, int, int, int, int]]]],
+```
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/mutations.py` & `magicsoup-0.3.2/src/magicsoup/mutations.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/util.py` & `magicsoup-0.3.2/src/magicsoup/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup/world.py` & `magicsoup-0.3.2/src/magicsoup/world.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/src/magicsoup.egg-info/PKG-INFO` & `magicsoup-0.3.2/src/magicsoup.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: magicsoup
+-Version: 0.3.1
++Version: 0.3.2
+ Summary: Simulation for cell metabolic and transduction pathway evolution
+ Author-email: Marc <schweringmarc01@gmail.com>
+ Project-URL: Documentation, https://magic-soup.readthedocs.io/
+ Project-URL: Homepage, https://github.com/mRcSchwering/magic-soup
+ Project-URL: Bug Tracker, https://github.com/mRcSchwering/magic-soup/issues
+ Classifier: Environment :: Console
+ Classifier: Environment :: GPU
+```
+
+### Comparing `magicsoup-0.3.1/src/magicsoup.egg-info/SOURCES.txt` & `magicsoup-0.3.2/src/magicsoup.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/tests/test_containers.py` & `magicsoup-0.3.2/tests/test_containers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/tests/test_genetics.py` & `magicsoup-0.3.2/tests/test_genetics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/tests/test_kinetics.py` & `magicsoup-0.3.2/tests/test_kinetics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/tests/test_util.py` & `magicsoup-0.3.2/tests/test_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `magicsoup-0.3.1/tests/test_world.py` & `magicsoup-0.3.2/tests/test_world.py`
+
+ * *Files identical despite different names*
+

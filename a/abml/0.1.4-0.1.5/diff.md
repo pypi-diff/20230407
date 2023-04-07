@@ -1,0 +1,222 @@
+# Comparing `tmp/abml-0.1.4.tar.gz` & `tmp/abml-0.1.5.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "abml-0.1.4.tar", max compression
++gzip compressed data, was "abml-0.1.5.tar", max compression
+```
+
+## Comparing `abml-0.1.4.tar` & `abml-0.1.5.tar`
+
+### file list
+
+```diff
+@@ -1,24 +1,24 @@
+--rw-r--r--   0        0        0      586 2023-03-22 07:33:36.000000 abml-0.1.4/abml/__init__.py
+--rw-r--r--   0        0        0    12263 2023-04-03 09:51:54.771609 abml-0.1.4/abml/abml_assembly.py
+--rw-r--r--   0        0        0     3969 2023-03-22 07:48:31.000000 abml-0.1.4/abml/abml_bcs.py
+--rw-r--r--   0        0        0        0 2023-03-27 09:39:35.423232 abml-0.1.4/abml/abml_config.py
+--rw-r--r--   0        0        0     1280 2023-03-15 10:30:19.000000 abml-0.1.4/abml/abml_constraints.py
+--rw-r--r--   0        0        0    18544 2023-04-06 12:53:25.948291 abml-0.1.4/abml/abml_dataclass.py
+--rw-r--r--   0        0        0     6639 2023-04-05 08:01:55.000000 abml-0.1.4/abml/abml_helpers.py
+--rw-r--r--   0        0        0     4223 2023-04-03 10:04:11.809675 abml-0.1.4/abml/abml_interaction_prop.py
+--rw-r--r--   0        0        0     2378 2023-04-05 08:02:24.000000 abml-0.1.4/abml/abml_interactions.py
+--rw-r--r--   0        0        0     5198 2023-03-28 12:54:48.000000 abml-0.1.4/abml/abml_jnl_loader.py
+--rw-r--r--   0        0        0     2494 2023-04-06 10:13:01.267344 abml-0.1.4/abml/abml_jobs.py
+--rw-r--r--   0        0        0     2028 2023-04-05 08:25:23.000000 abml-0.1.4/abml/abml_loads.py
+--rw-r--r--   0        0        0     1680 2023-04-05 06:54:56.000000 abml-0.1.4/abml/abml_loggers.py
+--rw-r--r--   0        0        0     4833 2023-03-30 12:29:52.222897 abml-0.1.4/abml/abml_materials.py
+--rw-r--r--   0        0        0     6246 2023-03-30 14:44:49.120625 abml-0.1.4/abml/abml_mesh.py
+--rw-r--r--   0        0        0    23005 2023-04-03 11:14:38.410167 abml-0.1.4/abml/abml_parts.py
+--rw-r--r--   0        0        0      823 2023-03-14 07:49:32.000000 abml-0.1.4/abml/abml_sections.py
+--rw-r--r--   0        0        0     4338 2023-04-05 07:47:19.000000 abml-0.1.4/abml/abml_sketch.py
+--rw-r--r--   0        0        0      552 2023-03-14 09:57:29.000000 abml-0.1.4/abml/abml_steps.py
+--rw-r--r--   0        0        0       22 2023-04-05 06:54:54.000000 abml-0.1.4/abml/logging.yaml
+--rw-r--r--   0        0        0      381 2023-04-06 14:17:11.729760 abml-0.1.4/pyproject.toml
+--rw-r--r--   0        0        0        0 2023-03-07 14:05:32.000000 abml-0.1.4/README.md
+--rw-r--r--   0        0        0      673 1970-01-01 00:00:00.000000 abml-0.1.4/setup.py
+--rw-r--r--   0        0        0      303 1970-01-01 00:00:00.000000 abml-0.1.4/PKG-INFO
++-rw-r--r--   0        0        0      586 2023-03-22 07:33:36.000000 abml-0.1.5/abml/__init__.py
++-rw-r--r--   0        0        0    12263 2023-04-03 09:51:54.771609 abml-0.1.5/abml/abml_assembly.py
++-rw-r--r--   0        0        0     3969 2023-03-22 07:48:31.000000 abml-0.1.5/abml/abml_bcs.py
++-rw-r--r--   0        0        0        0 2023-03-27 09:39:35.423232 abml-0.1.5/abml/abml_config.py
++-rw-r--r--   0        0        0     1280 2023-03-15 10:30:19.000000 abml-0.1.5/abml/abml_constraints.py
++-rw-r--r--   0        0        0    18544 2023-04-07 14:37:44.840721 abml-0.1.5/abml/abml_dataclass.py
++-rw-r--r--   0        0        0     6639 2023-04-05 08:01:55.000000 abml-0.1.5/abml/abml_helpers.py
++-rw-r--r--   0        0        0     4223 2023-04-03 10:04:11.809675 abml-0.1.5/abml/abml_interaction_prop.py
++-rw-r--r--   0        0        0     2678 2023-04-07 15:07:46.560016 abml-0.1.5/abml/abml_interactions.py
++-rw-r--r--   0        0        0     5198 2023-03-28 12:54:48.000000 abml-0.1.5/abml/abml_jnl_loader.py
++-rw-r--r--   0        0        0     2691 2023-04-07 15:17:38.239648 abml-0.1.5/abml/abml_jobs.py
++-rw-r--r--   0        0        0     2028 2023-04-05 08:25:23.000000 abml-0.1.5/abml/abml_loads.py
++-rw-r--r--   0        0        0     1680 2023-04-05 06:54:56.000000 abml-0.1.5/abml/abml_loggers.py
++-rw-r--r--   0        0        0     4833 2023-03-30 12:29:52.222897 abml-0.1.5/abml/abml_materials.py
++-rw-r--r--   0        0        0     6246 2023-03-30 14:44:49.120625 abml-0.1.5/abml/abml_mesh.py
++-rw-r--r--   0        0        0    23005 2023-04-03 11:14:38.410167 abml-0.1.5/abml/abml_parts.py
++-rw-r--r--   0        0        0      823 2023-03-14 07:49:32.000000 abml-0.1.5/abml/abml_sections.py
++-rw-r--r--   0        0        0     4338 2023-04-05 07:47:19.000000 abml-0.1.5/abml/abml_sketch.py
++-rw-r--r--   0        0        0      552 2023-03-14 09:57:29.000000 abml-0.1.5/abml/abml_steps.py
++-rw-r--r--   0        0        0       22 2023-04-05 06:54:54.000000 abml-0.1.5/abml/logging.yaml
++-rw-r--r--   0        0        0      381 2023-04-07 15:20:54.603904 abml-0.1.5/pyproject.toml
++-rw-r--r--   0        0        0        0 2023-03-07 14:05:32.000000 abml-0.1.5/README.md
++-rw-r--r--   0        0        0      673 1970-01-01 00:00:00.000000 abml-0.1.5/setup.py
++-rw-r--r--   0        0        0      303 1970-01-01 00:00:00.000000 abml-0.1.5/PKG-INFO
+```
+
+### Comparing `abml-0.1.4/abml/__init__.py` & `abml-0.1.5/abml/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_assembly.py` & `abml-0.1.5/abml/abml_assembly.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_bcs.py` & `abml-0.1.5/abml/abml_bcs.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_constraints.py` & `abml-0.1.5/abml/abml_constraints.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_dataclass.py` & `abml-0.1.5/abml/abml_dataclass.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_helpers.py` & `abml-0.1.5/abml/abml_helpers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_interaction_prop.py` & `abml-0.1.5/abml/abml_interaction_prop.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_interactions.py` & `abml-0.1.5/abml/abml_interactions.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -39,15 +39,21 @@
+             "master": Region(side1Faces=self.model.assembly.get_seq_from_surface_list(self.kwargs["master"])),
+             "slave": Region(side1Faces=self.model.assembly.get_seq_from_surface_list(self.kwargs["slave"])),
+             "createStepName": self.kwargs.get("step", "Initial"),
+             "sliding": self.sliding_map[self.kwargs.get("sliding", "finite").lower()],
+             "interactionProperty": self.kwargs["interaction_prop"],
+         }
+ 
+-        self.model.m.SurfaceToSurfaceContactStd(**kwargs)
++        try:
++            self.model.m.SurfaceToSurfaceContactStd(**kwargs)
++        except ValueError as e:
++            error_str = "interaction_name = {}\n".format(self.name)
++            error_str += "interactionProperty = {}\n".format(self.kwargs["interaction_prop"])
++            error_str += "{e}".format(e=e)
++            raise ValueError(error_str)
+ 
+     def elastic_foundation(self):
+         try:
+             surface_region = Region(side1Faces=self.model.assembly.get_seq_from_surface_list(self.kwargs["faces"]))
+         except TypeError as e:
+             error_msg = """
+             model_name: {model_name}
+```
+
+### Comparing `abml-0.1.4/abml/abml_jnl_loader.py` & `abml-0.1.5/abml/abml_jnl_loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_jobs.py` & `abml-0.1.5/abml/abml_jobs.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -35,22 +35,28 @@
+             "multiprocessingMode": DEFAULT,
+         }
+ 
+         mdb.Job(**kwargs)
+ 
+         if self.kwargs.get("write_input", False):
+             self.write_input()
+-            self.add_to_header(subroutine="{}.inp".format(self.name), priority=self.kwargs.get("priority", "default"))
++            self.add_to_header(subroutine=self.sub_name, priority=self.kwargs.get("priority", "default"))
+ 
+     def write_input(self):
+         mdb.jobs[self.name].writeInput(consistencyChecking=OFF)
+ 
++    def load_subname(self):
++        if "subroutine_queue" in self.kwargs:
++            self.sub_name = self.kwargs["subroutine_queue"]
++        else:
++            self.sub_name = "{}.for".format(self.name)
++
+     def write_and_copy_input_to_path(self, path):
+         self.write_input()
+-        self.add_to_header(subroutine="{}.inp".format(self.name), priority=self.kwargs.get("priority", "default"))
++        self.add_to_header(subroutine="{}.for".format(self.name), priority=self.kwargs.get("priority", "default"))
+         filename = "{}.inp".format(self.name)
+         copy(filename, os.path.join(path, filename))
+ 
+     def write_and_move_input_to_path(self, path):
+         self.write_input()
+         self.add_to_header(subroutine="{}.inp".format(self.name), priority=self.kwargs.get("priority", "default"))
+         filename = "{}.inp".format(self.name)
+```
+
+### Comparing `abml-0.1.4/abml/abml_loads.py` & `abml-0.1.5/abml/abml_loads.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_loggers.py` & `abml-0.1.5/abml/abml_loggers.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_materials.py` & `abml-0.1.5/abml/abml_materials.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_mesh.py` & `abml-0.1.5/abml/abml_mesh.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_parts.py` & `abml-0.1.5/abml/abml_parts.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_sections.py` & `abml-0.1.5/abml/abml_sections.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_sketch.py` & `abml-0.1.5/abml/abml_sketch.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/abml/abml_steps.py` & `abml-0.1.5/abml/abml_steps.py`
+
+ * *Files identical despite different names*
+
+### Comparing `abml-0.1.4/setup.py` & `abml-0.1.5/setup.py`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -11,15 +11,15 @@
+ {'': ['*']}
+ 
+ install_requires = \
+ ['pyaml>=21.10.1,<22.0.0']
+ 
+ setup_kwargs = {
+     'name': 'abml',
+-    'version': '0.1.4',
++    'version': '0.1.5',
+     'description': '',
+     'long_description': '',
+     'author': 'DavidNaizheZhou',
+     'author_email': '70525024+DavidNaizheZhou@users.noreply.github.com',
+     'maintainer': 'None',
+     'maintainer_email': 'None',
+     'url': 'None',
+```
+
