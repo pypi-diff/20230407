@@ -3799,3 +3799,68 @@
 [2023-04-07 22:14:08] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:14:08] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:14:10] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:00] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622664]
+[2023-04-07 22:19:05] INFO root fetch - main [MainThread]: Found 14 changed packages
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: New version: [202304.0.2] Old Version: [202304.0.1]
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: New version: [202304.0.2] Old Version: [202304.0.1]
+[2023-04-07 22:19:05] INFO root fetch - processPackages [nbsite]: New version: [0.8.0rc9] Old Version: [0.8.0rc8]
+[2023-04-07 22:19:05] INFO root fetch - processPackages [web-utils-soft]: New version: [0.1.0] Old Version: [0.0.1]
+[2023-04-07 22:19:05] INFO root fetch - processPackages [acryl-datahub-airflow-plugin]: New version: [0.9.6rc1] Old Version: [0.9.6rc0]
+[2023-04-07 22:19:05] INFO root fetch - processPackages [acryl-datahub-airflow-plugin]: report already exists
+[2023-04-07 22:19:05] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:05] INFO root fetch - processPackages [acryl-datahub]: New version: [0.9.6rc1] Old Version: [0.9.6rc0]
+[2023-04-07 22:19:05] INFO root fetch - processPackages [acryl-datahub]: report already exists
+[2023-04-07 22:19:05] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-services]: New version: [202304.0.2] Old Version: [202304.0.1]
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: Downloading https://files.pythonhosted.org/packages/e8/6f/b252ff98b7d0ca53cc2652aa2cd5b08e2bc45c800a05b7039f3db378f9af/data_ecosystem_dependencies-202304.0.1.tar.gz
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: Downloading https://files.pythonhosted.org/packages/e8/6f/b252ff98b7d0ca53cc2652aa2cd5b08e2bc45c800a05b7039f3db378f9af/data_ecosystem_dependencies-202304.0.1.tar.gz
+[2023-04-07 22:19:05] INFO root fetch - processPackages [web-utils-soft]: Downloading https://files.pythonhosted.org/packages/dd/d3/d53e5c166324cd5cb5923c6cf3ac0a510a8a714b62375d4a2cff7353f4c5/web-utils-soft-0.0.1.tar.gz
+[2023-04-07 22:19:05] INFO root fetch - processPackages [nbsite]: Downloading https://files.pythonhosted.org/packages/d8/77/7a773de2f4564f3e9b8c5f3550f287afaec9d423d1400de69ed30bcf6770/nbsite-0.8.0rc8.tar.gz
+[2023-04-07 22:19:05] INFO root fetch - processPackages [web-utils-soft]: executing diffoscope
+[2023-04-07 22:19:05] INFO root fetch - processPackages [web-utils-soft]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/web-utils-soft-0.0.1.tar.gz tmp/web-utils-soft-0.1.0.tar.gz --markdown 20230407/w/web-utils-soft/0.0.1-0.1.0/diff.md
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-services]: Downloading https://files.pythonhosted.org/packages/c6/24/4d3729f704ecc5738e018422c98e6b0663682e53c0594053564c088afd90/data_ecosystem_services-202304.0.2.tar.gz
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: Downloading https://files.pythonhosted.org/packages/36/2c/1ca3db774ce574957f0379b7534423b3f4ae56be05f41c524b7d1a273be7/data_ecosystem_dependencies-202304.0.2.tar.gz
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: Downloading https://files.pythonhosted.org/packages/36/2c/1ca3db774ce574957f0379b7534423b3f4ae56be05f41c524b7d1a273be7/data_ecosystem_dependencies-202304.0.2.tar.gz
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-services]: executing diffoscope
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-services]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/data_ecosystem_services-202304.0.1.tar.gz tmp/data_ecosystem_services-202304.0.2.tar.gz --markdown 20230407/d/data-ecosystem-services/202304.0.1-202304.0.2/diff.md
+[2023-04-07 22:19:05] INFO root fetch - processPackages [nbsite]: Downloading https://files.pythonhosted.org/packages/89/00/df63ef46b2f3732468f4ef3acbe06bcfab442ca275dc0c175fcad6a4cb4c/nbsite-0.8.0rc9.tar.gz
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: executing diffoscope
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/data_ecosystem_dependencies-202304.0.1.tar.gz tmp/data_ecosystem_dependencies-202304.0.2.tar.gz --markdown 20230407/d/data-ecosystem-dependencies/202304.0.1-202304.0.2/diff.md
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: executing diffoscope
+[2023-04-07 22:19:05] INFO root fetch - processPackages [data-ecosystem-dependencies]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/data_ecosystem_dependencies-202304.0.1.tar.gz tmp/data_ecosystem_dependencies-202304.0.2.tar.gz --markdown 20230407/d/data-ecosystem-dependencies/202304.0.1-202304.0.2/diff.md
+[2023-04-07 22:19:05] INFO root fetch - processPackages [nbsite]: executing diffoscope
+[2023-04-07 22:19:05] INFO root fetch - processPackages [nbsite]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/nbsite-0.8.0rc8.tar.gz tmp/nbsite-0.8.0rc9.tar.gz --markdown 20230407/n/nbsite/0.8.0rc8-0.8.0rc9/diff.md
+[2023-04-07 22:19:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:06] INFO root fetch - processPackages [globalsearch]: New version: [0.1.9] Old Version: [0.1.8]
+[2023-04-07 22:19:06] INFO root fetch - processPackages [globalsearch]: Downloading https://files.pythonhosted.org/packages/06/ab/5d6e9cc542d116f17e006efccae5292142dcb1f3b0fde0c439976a6eee97/globalsearch-0.1.8.tar.gz
+[2023-04-07 22:19:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:06] INFO root fetch - processPackages [bacpypes3]: New version: [0.0.68] Old Version: [0.0.67]
+[2023-04-07 22:19:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:06] INFO root fetch - processPackages [cli-sandbox]: New version: [0.2.9] Old Version: [0.2.8]
+[2023-04-07 22:19:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:06] INFO root fetch - processPackages [cli-sandbox]: executing diffoscope
+[2023-04-07 22:19:06] INFO root fetch - processPackages [cli-sandbox]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/cli-sandbox-0.2.8.tar.gz tmp/cli-sandbox-0.2.9.tar.gz --markdown 20230407/c/cli-sandbox/0.2.8-0.2.9/diff.md
+[2023-04-07 22:19:06] WARNING root fetch - processPackages [iamlogic-idm]: Skipping, unable to determine old version
+[2023-04-07 22:19:06] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:19:07] INFO root fetch - processPackages [bacpypes3]: Downloading https://files.pythonhosted.org/packages/5c/98/7297e1c6b9c2b97c3398bf360fa03049661cd76bfc50176665c1cccabe1b/bacpypes3-0.0.67-py3-none-any.whl
+[2023-04-07 22:19:07] INFO root fetch - processPackages [spanishconjugator]: New version: [2.3.999] Old Version: [2.3.998]
+[2023-04-07 22:19:07] INFO root fetch - processPackages [spanishconjugator]: report already exists
+[2023-04-07 22:19:07] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:07] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:07] INFO root fetch - processPackages [data-ecosystem-dependencies]: New version: [202304.0.3] Old Version: [202304.0.2]
+[2023-04-07 22:19:07] INFO root fetch - processPackages [spanishconjugator]: New version: [2.3.999] Old Version: [2.3.998]
+[2023-04-07 22:19:07] INFO root fetch - processPackages [spanishconjugator]: report already exists
+[2023-04-07 22:19:07] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:07] INFO root fetch - processPackages [globalsearch]: Downloading https://files.pythonhosted.org/packages/f4/84/166bfdeefe21db9f1287341c54fb781cfc20b1608cf497ffa84e261a4e22/globalsearch-0.1.9.tar.gz
+[2023-04-07 22:19:07] INFO root fetch - processPackages [globalsearch]: executing diffoscope
+[2023-04-07 22:19:07] INFO root fetch - processPackages [globalsearch]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/globalsearch-0.1.8.tar.gz tmp/globalsearch-0.1.9.tar.gz --markdown 20230407/g/globalsearch/0.1.8-0.1.9/diff.md
+[2023-04-07 22:19:07] INFO root fetch - processPackages [data-ecosystem-dependencies]: Downloading https://files.pythonhosted.org/packages/88/cb/91b4feb9b6b3c4e35514cb01fa0a3b99e9eac019dc7692213b5aafe76d5f/data_ecosystem_dependencies-202304.0.3.tar.gz
+[2023-04-07 22:19:07] INFO root fetch - processPackages [bacpypes3]: Downloading https://files.pythonhosted.org/packages/68/b7/f5b7ad236c87bd318979cddc18b56ca7af9825cb09426a336e2dc15bcc28/bacpypes3-0.0.68-py3-none-any.whl
+[2023-04-07 22:19:07] INFO root fetch - processPackages [bacpypes3]: executing diffoscope
+[2023-04-07 22:19:07] INFO root fetch - processPackages [bacpypes3]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/bacpypes3-0.0.67-py3-none-any.whl.zip tmp/bacpypes3-0.0.68-py3-none-any.whl.zip --markdown 20230407/b/bacpypes3/0.0.67-0.0.68/diff.md
+[2023-04-07 22:19:07] INFO root fetch - processPackages [data-ecosystem-dependencies]: executing diffoscope
+[2023-04-07 22:19:07] INFO root fetch - processPackages [data-ecosystem-dependencies]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/data_ecosystem_dependencies-202304.0.2.tar.gz tmp/data_ecosystem_dependencies-202304.0.3.tar.gz --markdown 20230407/d/data-ecosystem-dependencies/202304.0.2-202304.0.3/diff.md
+[2023-04-07 22:19:07] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:08] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:08] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:19:09] INFO root fetch - main [MainThread]: success
