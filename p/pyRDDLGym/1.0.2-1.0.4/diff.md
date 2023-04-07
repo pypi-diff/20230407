@@ -1,0 +1,6385 @@
+# Comparing `tmp/pyRDDLGym-1.0.2.tar.gz` & `tmp/pyRDDLGym-1.0.4.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "pyRDDLGym-1.0.2.tar", last modified: Thu Feb 23 20:06:33 2023, max compression
++gzip compressed data, was "pyRDDLGym-1.0.4.tar", last modified: Fri Apr  7 15:21:51 2023, max compression
+```
+
+## Comparing `pyRDDLGym-1.0.2.tar` & `pyRDDLGym-1.0.4.tar`
+
+### file list
+
+```diff
+@@ -1,221 +1,241 @@
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.556517 pyRDDLGym-1.0.2/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1264 2022-12-08 22:55:23.000000 pyRDDLGym-1.0.2/LICENSE.MD
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)       87 2023-02-23 17:15:45.000000 pyRDDLGym-1.0.2/MANIFEST.in
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      911 2023-02-23 20:06:33.556309 pyRDDLGym-1.0.2/PKG-INFO
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     8094 2023-02-23 18:07:12.000000 pyRDDLGym-1.0.2/README.md
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.518059 pyRDDLGym-1.0.2/pyRDDLGym/
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.519171 pyRDDLGym-1.0.2/pyRDDLGym/Core/
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.520706 pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     8347 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLDecompiler.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    11135 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLLevelAnalysis.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    17227 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLLiftedModel.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    18658 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLModel.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    45639 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLObjectsTracer.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     5203 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLValueInitializer.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/__init__.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.521103 pyRDDLGym-1.0.2/pyRDDLGym/Core/Debug/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2000 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Debug/Logger.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-01-27 22:40:35.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Debug/__init__.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.521702 pyRDDLGym-1.0.2/pyRDDLGym/Core/Env/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     5797 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Env/RDDLConstraints.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     9900 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Env/RDDLEnv.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Env/__init__.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.522020 pyRDDLGym-1.0.2/pyRDDLGym/Core/ErrorHandling/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1330 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/ErrorHandling/RDDLException.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/ErrorHandling/__init__.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.522373 pyRDDLGym-1.0.2/pyRDDLGym/Core/Grounder/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    27395 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Grounder/RDDLGrounder.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Grounder/__init__.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.523573 pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    31852 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/JaxRDDLBackpropPlanner.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    62639 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/JaxRDDLCompiler.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     9112 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/JaxRDDLLogic.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     6745 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/JaxRDDLSimulator.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/__init__.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.526747 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1620 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/RDDLReader.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        1 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1146 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/cpf.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    10193 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/domain.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     7819 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/expr.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1293 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/instance.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1221 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/nonfluents.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    38755 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/parser.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)   123443 2023-02-22 22:24:57.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/parsetab.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     3242 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/pvariable.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    10773 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/rddl.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      801 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/utils.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.527183 pyRDDLGym-1.0.2/pyRDDLGym/Core/Simulator/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    49061 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Simulator/RDDLSimulator.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/Simulator/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Core/__init__.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.527614 pyRDDLGym-1.0.2/pyRDDLGym/Examples/
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.512886 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.528376 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Continuous/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      238 2023-02-23 16:39:26.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Continuous/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     3419 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Continuous/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      943 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Continuous/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.529060 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Discrete/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      256 2023-02-23 16:39:26.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Discrete/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     3510 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Discrete/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      926 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Discrete/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.529898 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Elevators/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      218 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Elevators/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    10524 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Elevators/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1407 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Elevators/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1627 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Elevators/instance1.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4320 2023-02-23 16:38:53.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/ExampleManager.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.530962 pyRDDLGym-1.0.2/pyRDDLGym/Examples/HVAC/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      107 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/HVAC/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4664 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/HVAC/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      364 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/HVAC/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      389 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/HVAC/instance1.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      455 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/HVAC/instance2.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.531558 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MarsRover/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      146 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MarsRover/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4463 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MarsRover/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1409 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MarsRover/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.532607 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      151 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4145 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2551 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/domain_old.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    14857 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      960 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/instance0_old.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.513518 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.533234 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      101 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2890 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      653 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.533821 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      105 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1401 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      191 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.534347 pyRDDLGym-1.0.2/pyRDDLGym/Examples/PowerGen/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      155 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/PowerGen/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     3383 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/PowerGen/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1624 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/PowerGen/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.534848 pyRDDLGym-1.0.2/pyRDDLGym/Examples/PropDBN/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)       87 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/PropDBN/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2283 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/PropDBN/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      266 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/PropDBN/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.535513 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RaceCar/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      116 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RaceCar/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4995 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RaceCar/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     9476 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RaceCar/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      993 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RaceCar/instance1.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.536377 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      131 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4153 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1327 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    15525 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/instance1.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    85747 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/instance2.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.514108 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.537192 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Continuous/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      173 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Continuous/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4435 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Continuous/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      386 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Continuous/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      705 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Continuous/instance1.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.538073 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Discrete/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      162 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Discrete/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4544 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Discrete/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      386 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Discrete/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      705 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Discrete/instance1.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.538550 pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChain/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      118 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChain/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     3550 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChain/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      633 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChain/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.539024 pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChainNet/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      129 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChainNet/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4622 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChainNet/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1745 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChainNet/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.540013 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.544222 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    20054 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/TrafficViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 16:46:08.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    20730 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     7653 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     9656 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance1.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    24387 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance2.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    24711 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/netgen.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 16:46:08.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)       91 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    16214 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4949 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    25148 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/instance1.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    17812 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/netgen.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.514753 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.544988 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Continuous/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      188 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Continuous/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     5492 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Continuous/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1049 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Continuous/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1059 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Continuous/instance1.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.545567 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Discrete/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      184 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Discrete/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     5440 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Discrete/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      828 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Discrete/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.546220 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Mixed/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      178 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Mixed/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     5491 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Mixed/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      828 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Mixed/instance0.rddl
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.546895 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Wildfire/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      121 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Wildfire/domain.info
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4280 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Wildfire/domain.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1399 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/Wildfire/instance0.rddl
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 16:32:22.000000 pyRDDLGym-1.0.2/pyRDDLGym/Examples/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2064 2023-02-23 16:53:16.000000 pyRDDLGym-1.0.2/pyRDDLGym/GymExample.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2570 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/JaxExample.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.547385 pyRDDLGym-1.0.2/pyRDDLGym/Planner/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2112 2023-02-23 16:33:54.000000 pyRDDLGym-1.0.2/pyRDDLGym/Planner/JaxConfigManager.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Planner/__init__.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.548068 pyRDDLGym-1.0.2/pyRDDLGym/Policies/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1340 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.2/pyRDDLGym/Policies/Agents.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     9818 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Policies/RDDLSimAgent.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Policies/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      396 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/RDDLSimClientExample.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.552186 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2924 2023-01-23 22:29:35.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/CartPoleViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     7420 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/ChartViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     5528 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/ColorViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     8708 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/ElevatorViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    12057 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/HVACViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     6278 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/MarsRoverViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     3596 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/MountainCarViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     3950 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/MovieGenerator.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     8522 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/PowerGenViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2880 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/RacecarViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     7180 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/RecSimViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    11691 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/ReservoirViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      516 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/StateViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2767 2023-01-23 22:29:35.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/TextViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    20744 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/TrafficViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     4754 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/UAVsViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     5987 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/WildfireViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    20131 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/visualize_dbn.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.553302 pyRDDLGym-1.0.2/pyRDDLGym/XADD/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2383 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.2/pyRDDLGym/XADD/RDDLLevelAnalysisXADD.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    16992 2023-01-23 22:29:35.000000 pyRDDLGym-1.0.2/pyRDDLGym/XADD/RDDLModelXADD.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     6162 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.2/pyRDDLGym/XADD/RDDLSimulatorXADD.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)       41 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.2/pyRDDLGym/XADD/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      111 2023-02-23 16:33:54.000000 pyRDDLGym-1.0.2/pyRDDLGym/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      701 2022-12-29 01:36:27.000000 pyRDDLGym-1.0.2/pyRDDLGym/testDiscrete.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.555990 pyRDDLGym-1.0.2/pyRDDLGym/tests/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     7362 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/RDDLGenerator.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/__init__.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)    13792 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/_deprecated.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1265 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/testGymDrone.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1672 2022-10-24 03:39:07.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/testViz.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1267 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/test_basic.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      589 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/test_dbn_vis.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     1055 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/test_termination.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2337 2023-01-23 22:26:47.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/test_xadd.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     5114 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/unit_test_mars_rover.py
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2782 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.2/pyRDDLGym/tests/unit_test_power_gen.py
+-drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 20:06:33.519010 pyRDDLGym-1.0.2/pyRDDLGym.egg-info/
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)      911 2023-02-23 20:06:33.000000 pyRDDLGym-1.0.2/pyRDDLGym.egg-info/PKG-INFO
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     6972 2023-02-23 20:06:33.000000 pyRDDLGym-1.0.2/pyRDDLGym.egg-info/SOURCES.txt
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)        1 2023-02-23 20:06:33.000000 pyRDDLGym-1.0.2/pyRDDLGym.egg-info/dependency_links.txt
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)       67 2023-02-23 20:06:33.000000 pyRDDLGym-1.0.2/pyRDDLGym.egg-info/requires.txt
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)       10 2023-02-23 20:06:33.000000 pyRDDLGym-1.0.2/pyRDDLGym.egg-info/top_level.txt
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)       38 2023-02-23 20:06:33.556578 pyRDDLGym-1.0.2/setup.cfg
+--rw-r--r--   0 ayaltaitler   (501) staff       (20)     2810 2023-02-23 17:29:05.000000 pyRDDLGym-1.0.2/setup.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.021423 pyRDDLGym-1.0.4/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1264 2022-12-08 22:55:23.000000 pyRDDLGym-1.0.4/LICENSE.MD
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)       87 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/MANIFEST.in
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      911 2023-04-07 15:21:51.021094 pyRDDLGym-1.0.4/PKG-INFO
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     8094 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/README.md
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.970905 pyRDDLGym-1.0.4/pyRDDLGym/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.972403 pyRDDLGym-1.0.4/pyRDDLGym/Core/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.974969 pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     8347 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLDecompiler.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    11135 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLLevelAnalysis.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    17227 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLLiftedModel.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    18950 2023-04-06 22:49:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLModel.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    45925 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLObjectsTracer.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5216 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLValueInitializer.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.975483 pyRDDLGym-1.0.4/pyRDDLGym/Core/Debug/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2168 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Debug/Logger.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-01-27 22:40:35.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Debug/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.976020 pyRDDLGym-1.0.4/pyRDDLGym/Core/Env/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5797 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Env/RDDLConstraints.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    11038 2023-04-06 22:49:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Env/RDDLEnv.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Env/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.976325 pyRDDLGym-1.0.4/pyRDDLGym/Core/ErrorHandling/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1330 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/ErrorHandling/RDDLException.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/ErrorHandling/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.976653 pyRDDLGym-1.0.4/pyRDDLGym/Core/Grounder/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    27395 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Grounder/RDDLGrounder.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Grounder/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.979788 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    20098 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxParameterTuning.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    32816 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLBackpropPlanner.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    11953 2023-04-06 22:49:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLBackpropPlannerUCT.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    69234 2023-04-07 15:03:00.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLCompiler.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    18597 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLLogic.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    12925 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLModelError.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     6948 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLSimulator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.983971 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1620 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/RDDLReader.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        1 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1146 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/cpf.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    10193 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/domain.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     7819 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/expr.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1293 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/instance.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1221 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/nonfluents.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    38755 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/parser.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)   123443 2023-02-22 22:24:57.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/parsetab.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3242 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/pvariable.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    10773 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/rddl.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      801 2022-11-16 01:54:24.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/utils.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.984554 pyRDDLGym-1.0.4/pyRDDLGym/Core/Simulator/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    49061 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Simulator/RDDLSimulator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/Simulator/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Core/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.986439 pyRDDLGym-1.0.4/pyRDDLGym/Examples/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.963405 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.987338 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Continuous/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      238 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Continuous/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3419 2023-03-21 16:55:28.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Continuous/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      945 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Continuous/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.988439 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Discrete/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      256 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Discrete/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3510 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Discrete/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      928 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Discrete/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.989790 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Elevators/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      218 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Elevators/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    10524 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Elevators/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1408 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Elevators/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1628 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Elevators/instance1.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5211 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/ExampleManager.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.990958 pyRDDLGym-1.0.4/pyRDDLGym/Examples/HVAC/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      161 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/HVAC/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5768 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/HVAC/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      364 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/HVAC/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      389 2023-04-07 02:46:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/HVAC/instance1.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      455 2023-04-07 02:46:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/HVAC/instance2.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3652 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerator.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.992913 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2687 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/HVACInstanceGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1630 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/MarsRoverInstanceGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3058 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/MountainCarInstanceGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3264 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/PowerGenInstanceGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3594 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/RaceCarInstanceGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4086 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/RecSimInstanceGen.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2285 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/ReservoirInstanceGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1819 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/UAVInstanceGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/InstanceGenerators/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.993537 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MarsRover/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      210 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MarsRover/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4495 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MarsRover/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1411 2023-03-30 14:37:35.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MarsRover/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.994973 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      219 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4408 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2551 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/domain_old.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    14859 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      960 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/instance0_old.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.964645 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.995971 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      101 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2890 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      655 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.996775 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      105 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1401 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      193 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.964977 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.997589 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Continuous/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      239 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Continuous/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4403 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Continuous/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1610 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Continuous/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.998446 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Discrete/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      164 2023-02-27 22:52:10.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Discrete/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3383 2023-02-27 22:52:10.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Discrete/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1630 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Discrete/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.999104 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PropDBN/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)       87 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PropDBN/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2283 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PropDBN/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      268 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/PropDBN/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.000085 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RaceCar/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      176 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RaceCar/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4995 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RaceCar/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     9478 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RaceCar/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      995 2023-04-07 02:51:57.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RaceCar/instance1.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.001321 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      189 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4153 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1327 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    15525 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/instance1.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    85747 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/instance2.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.965557 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.002291 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Continuous/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      237 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Continuous/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4435 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Continuous/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      391 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Continuous/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      710 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Continuous/instance1.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.003033 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Discrete/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      162 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Discrete/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4544 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Discrete/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      390 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Discrete/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      709 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Discrete/instance1.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.003565 pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChain/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      118 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChain/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3550 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChain/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      635 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChain/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.004123 pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChainNet/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      129 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChainNet/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4622 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChainNet/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1747 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChainNet/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.005186 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.966046 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.006196 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    20730 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     7653 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     9656 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance1.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    24387 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance2.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.006401 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Experiments/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     6386 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Experiments/webster_exp_equal_split.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)       91 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    16438 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4951 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    25150 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/instance1.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    23064 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/netgen.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.966487 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.007204 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Continuous/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      241 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Continuous/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5492 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Continuous/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1053 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Continuous/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1063 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Continuous/instance1.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.007873 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Discrete/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      185 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Discrete/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5440 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Discrete/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      831 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Discrete/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.008569 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Mixed/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      179 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Mixed/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5491 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Mixed/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      831 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Mixed/instance0.rddl
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.009314 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Wildfire/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      121 2023-03-12 16:41:04.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Wildfire/domain.info
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4280 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Wildfire/domain.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1398 2023-03-22 19:40:02.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/Wildfire/instance0.rddl
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Examples/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2603 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/GymExample.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5499 2023-04-06 22:49:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/JaxExample.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1704 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/JaxTuningExample.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.009898 pyRDDLGym-1.0.4/pyRDDLGym/Planner/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3415 2023-03-26 19:09:06.000000 pyRDDLGym-1.0.4/pyRDDLGym/Planner/JaxConfigManager.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Planner/__init__.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.010602 pyRDDLGym-1.0.4/pyRDDLGym/Policies/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1340 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.4/pyRDDLGym/Policies/Agents.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     9818 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Policies/RDDLSimAgent.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Policies/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      396 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/RDDLSimClientExample.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.015569 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2924 2023-01-23 22:29:35.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/CartPoleViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     7420 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/ChartViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5528 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/ColorViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     8708 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/ElevatorViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    12057 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/HVACViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     6278 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/MarsRoverViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4797 2023-04-07 15:12:54.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/MountainCarViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     3950 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/MovieGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     8522 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/PowerGenViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2880 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/RacecarViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     7180 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/RecSimViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    11691 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/ReservoirViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      516 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/StateViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2767 2023-01-23 22:29:35.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/TextViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    20753 2023-03-02 18:32:16.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/TrafficViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     4754 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/UAVsViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5987 2023-02-23 16:31:20.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/WildfireViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    20186 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/visualize_dbn.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.017189 pyRDDLGym-1.0.4/pyRDDLGym/XADD/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2383 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.4/pyRDDLGym/XADD/RDDLLevelAnalysisXADD.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    17224 2023-03-22 17:18:24.000000 pyRDDLGym-1.0.4/pyRDDLGym/XADD/RDDLModelXADD.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     6162 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.4/pyRDDLGym/XADD/RDDLSimulatorXADD.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)       41 2022-12-24 22:28:03.000000 pyRDDLGym-1.0.4/pyRDDLGym/XADD/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      111 2023-02-27 22:16:49.000000 pyRDDLGym-1.0.4/pyRDDLGym/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      701 2022-12-29 01:36:27.000000 pyRDDLGym-1.0.4/pyRDDLGym/testDiscrete.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:51.020769 pyRDDLGym-1.0.4/pyRDDLGym/tests/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     7362 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/RDDLGenerator.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        0 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/__init__.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)    13792 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/_deprecated.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1265 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/testGymDrone.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1672 2022-10-24 03:39:07.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/testViz.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1267 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/test_basic.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      658 2023-03-22 00:25:03.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/test_dbn_vis.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     1055 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/test_termination.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2534 2023-03-22 00:25:03.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/test_xadd.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     5114 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/unit_test_mars_rover.py
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2782 2022-10-24 04:41:01.000000 pyRDDLGym-1.0.4/pyRDDLGym/tests/unit_test_power_gen.py
++drwxr-xr-x   0 ayaltaitler   (501) staff       (20)        0 2023-04-07 15:21:50.972240 pyRDDLGym-1.0.4/pyRDDLGym.egg-info/
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)      911 2023-04-07 15:21:50.000000 pyRDDLGym-1.0.4/pyRDDLGym.egg-info/PKG-INFO
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     7859 2023-04-07 15:21:50.000000 pyRDDLGym-1.0.4/pyRDDLGym.egg-info/SOURCES.txt
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)        1 2023-04-07 15:21:50.000000 pyRDDLGym-1.0.4/pyRDDLGym.egg-info/dependency_links.txt
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)       67 2023-04-07 15:21:50.000000 pyRDDLGym-1.0.4/pyRDDLGym.egg-info/requires.txt
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)       10 2023-04-07 15:21:50.000000 pyRDDLGym-1.0.4/pyRDDLGym.egg-info/top_level.txt
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)       38 2023-04-07 15:21:51.021499 pyRDDLGym-1.0.4/setup.cfg
++-rw-r--r--   0 ayaltaitler   (501) staff       (20)     2810 2023-04-07 15:18:53.000000 pyRDDLGym-1.0.4/setup.py
+```
+
+### Comparing `pyRDDLGym-1.0.2/LICENSE.MD` & `pyRDDLGym-1.0.4/LICENSE.MD`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/PKG-INFO` & `pyRDDLGym-1.0.4/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyRDDLGym
+-Version: 1.0.2
++Version: 1.0.4
+ Summary: pyRDDLGym: RDDL automatic generation tool for OpenAI Gym
+ Home-page: https://github.com/ataitler/pyRDDLGym
+ Author: Ayal Taitler, Michael Gimelfarb, Scott Sanner, Jihwan Jeong, Sriram Gopalakrishnan, Martin Mladenov, jack liu
+ Author-email: ataitler@gmail.com, mike.gimelfarb@mail.utoronto.ca, ssanner@mie.utoronto.ca, jhjeong@mie.utoronto.ca, ariram.gopalakrishnan@jpmchase.com, mmladenov@google.com, xiaotian.liu@mail.utoronto.ca
+ License: MIT License
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Science/Research
+```
+
+### Comparing `pyRDDLGym-1.0.2/README.md` & `pyRDDLGym-1.0.4/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLDecompiler.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLDecompiler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLLevelAnalysis.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLLevelAnalysis.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLLiftedModel.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLLiftedModel.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLModel.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLModel.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -60,15 +60,27 @@
+         
+     # ===========================================================================
+     # properties
+     # ===========================================================================
+     
+     def SetAST(self, AST):
+         self._AST = AST
+-
++    
++    def domainName(self):
++        if self._AST is None:
++            return None
++        else:
++            return self._AST.domain.name
++    
++    def instanceName(self):
++        if self._AST is None:
++            return None
++        else:
++            return self._AST.instance.name
++        
+     @property
+     def objects(self):
+         return self._objects
+ 
+     @objects.setter
+     def objects(self, value):
+         self._objects = value
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLObjectsTracer.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLObjectsTracer.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -18,34 +18,41 @@
+     '''A generic container for storing traced information for a RDDL file.'''
+     
+     def __init__(self) -> None:
+         self._current_id = 0
+         self._cached_objects_in_scope = []
+         self._cached_enum_type = []
+         self._cached_sim_info = []
++        self._expr_from_id = {}
+         
+     def _append(self, expr, objects, enum_type, info) -> None:
+         expr.id = self._current_id
+         self._current_id += 1
+                 
+         self._cached_objects_in_scope.append(objects)
+         self._cached_enum_type.append(enum_type)
+         self._cached_sim_info.append(info)
++        self._expr_from_id[expr.id] = expr
+         
+     def cached_objects_in_scope(self, expr: Expression):
+         '''Returns the free variables/parameters in the scope of expression.'''
+         return self._cached_objects_in_scope[expr.id]
+     
+     def cached_enum_type(self, expr: Expression) -> Union[str, None]:
+         '''Returns the returned enum type of expression or None if not an enum.'''
+         return self._cached_enum_type[expr.id]
+     
+     def cached_sim_info(self, expr: Expression) -> object:
+         '''Returns compiled info that is specific to the expression.'''
+         return self._cached_sim_info[expr.id]
++    
++    def lookup(self, identifier: int) -> Expression:
++        '''Returns the expression with given identifier, or None if does not 
++        exist.'''
++        return self._expr_from_id.get(identifier, None)
+ 
+ 
+ def py_enum(**enums):
+     return type('Enum', (), enums)
+ 
+     
+ class RDDLObjectsTracer:
+@@ -717,15 +724,15 @@
+         # strip @ from any cases       
+         case_dict = {rddl.object_name(key): value 
+                      for (key, value) in case_dict.items()}
+         
+         # no duplicate cases are allowed
+         if len(case_dict) != len(cases):
+             raise RDDLInvalidNumberOfArgumentsError(
+-                f'Duplicated literal or default case(s).\n' +
++                f'Duplicated literal or default case(s).\n' + 
+                 print_stack_trace(expr))
+         
+         # no default cases are allowed
+         if 'default' in case_dict:
+             raise RDDLNotImplementedError(
+                 f'Default case not allowed in Discrete distribution.\n' + 
+                 print_stack_trace(expr))
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Compiler/RDDLValueInitializer.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Compiler/RDDLValueInitializer.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -85,15 +85,15 @@
+             if ptypes:
+                 shape = rddl.object_counts(ptypes)
+                 if var in init_values:
+                     values = [(default if v is None else v) for v in init_values[var]]
+                     values = np.asarray(values, dtype=dtype)
+                     values = np.reshape(values, newshape=shape, order='C')
+                 else:
+-                    values = np.full(shape=shape, fill_value=default)
++                    values = np.full(shape=shape, fill_value=default, dtype=dtype)
+             else:
+                 values = dtype(init_values.get(var, default))   
+             np_init_values[var] = values
+         
+         # log shapes of initial values
+         if self.logger is not None:
+             tensor_info = '\n\t'.join((
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Debug/Logger.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Debug/Logger.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -21,17 +21,20 @@
+         
+ class SimLogger:
+     '''Provides functionality for writing simulation data to a log file.'''
+     
+     def __init__(self, filename: str, write_freq: int=1000) -> None:
+         self.filename = filename
+         self.write_freq = write_freq
+-    
+-    def clear(self) -> None:
+-        fp = open(self.filename, 'w')
++
++    def clear(self, overwrite: bool = True) -> None:
++        if overwrite:
++            fp = open(self.filename, 'w')
++        else:
++            fp = open(self.filename, 'a')
+         fp.write('')
+         fp.close()
+         self.data = []
+         self.write_head = True
+         self.iteration = 0
+ 
+     def _write_data(self):
+@@ -57,11 +60,14 @@
+         row += ',' + ','.join(map(str, action.values()))
+         row += ',' + str(reward)
+         row += ',' + str(done)
+         self.data.append(row)
+         self.iteration += 1
+         if len(self.data) >= self.write_freq:
+             self._write_data()
+-    
++
++    def log_free(self, text) -> None:
++        self.data.append(text)
++
+     def close(self):
+         if self.data:
+             self._write_data()
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Env/RDDLConstraints.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Env/RDDLConstraints.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Env/RDDLEnv.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Env/RDDLEnv.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,12 +1,13 @@
+ import copy
+ import gym
+ from gym.spaces import Discrete, Dict, Box
+ import numpy as np
+ import pygame
++import os
+ 
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLInvalidNumberOfArgumentsError
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLTypeError
+ 
+ from pyRDDLGym.Core.Compiler.RDDLLiftedModel import RDDLLiftedModel
+ from pyRDDLGym.Core.Debug.Logger import Logger, SimLogger
+ from pyRDDLGym.Core.Env.RDDLConstraints import RDDLConstraints
+@@ -19,46 +20,64 @@
+ class RDDLEnv(gym.Env):
+     
+     def __init__(self, domain: str,
+                  instance: str=None,
+                  enforce_action_constraints: bool=False,
+                  debug: bool=False,
+                  log: bool=False,
++                 simlogname: str=None,
+                  backend: object=RDDLSimulator):
+         '''Creates a new gym environment from the given RDDL domain + instance.
+         
+         :param domain: the RDDL domain
+         :param instance: the RDDL instance
+         :param enforce_action_constraints: whether to raise an exception if the
+         action constraints are violated
+         :param debug: whether to log compilation information to a log file
+         :param log: whether to log simulation data to file
+         :param backend: the subclass of RDDLSimulator to use as backend for
+         simulation (currently supports numpy and Jax)
+         '''
+         super(RDDLEnv, self).__init__()
++        self.domain_text = domain
++        self.instance_text = instance
+         self.enforce_action_constraints = enforce_action_constraints
+-        
++
++        # time budget for applications limiting time on episodes.
++        # hardcoded so cannot be changed externally.
++        self.budget = 120
++
+         # read and parse domain and instance
+         reader = RDDLReader(domain, instance)
+         domain = reader.rddltxt
+ 
+         # parse RDDL file
+         parser = RDDLParser(lexer=None, verbose=False)
+         parser.build()
+         rddl = parser.parse(domain)
+         self.model = RDDLLiftedModel(rddl)
+         
+         # for logging
+         ast = self.model._AST
+-        fname = f'{ast.domain.name}_{ast.instance.name}'
+-        logger = Logger(f'{fname}_debug.log') if debug else None
+-        self.simlogger = SimLogger(f'{fname}_log.csv') if log else None
++        self.trial = 0
++        log_fname = f'{ast.domain.name}_{ast.instance.name}'
++        logger = Logger(f'{log_fname}_debug.log') if debug else None
++        self.simlogger = None
++        if log:
++            curpath = os.path.abspath(__file__)
++            for _ in range(3):
++                curpath = os.path.split(curpath)[0]
++            dir = os.path.join(curpath, 'Logs', simlogname, ast.domain.name)
++            if not os.path.exists(dir):
++                os.makedirs(dir)
++            simlog_fname = os.path.join(dir, ast.instance.name)
++            self.simlogger = SimLogger(f'{simlog_fname}_log.csv')
++        # self.simlogger = SimLogger(f'{log_fname}_log.csv') if log else None
+         if self.simlogger:
+-            self.simlogger.clear()
++            self.simlogger.clear(overwrite=False)
+         
+         # define the model sampler and bounds    
+         self.sampler = backend(self.model, logger=logger)
+         bounds = RDDLConstraints(self.sampler).bounds
+ 
+         # set roll-out parameters
+         self.horizon = self.model.horizon
+@@ -205,14 +224,23 @@
+         if self._movie_generator is not None:
+             if self._movie_per_episode:
+                 self._movie_generator.save_animation(
+                     self._movie_generator.env_name + '_' + str(self._movies))
+                 self._movies += 1
+             self._movie_generator.save_frame(image)            
+         self.image_size = image.size
++
++        # Logging
++        if self.simlogger:
++            self.trial += 1
++            text = '######################################################\n'
++            text += 'New Trial\n'
++            text += '######################################################'
++            self.simlogger.log_free(text)
++
+         return obs
+ 
+     def pilImageToSurface(self, pilImage):
+         return pygame.image.fromstring(
+             pilImage.tobytes(), pilImage.size, pilImage.mode).convert()
+ 
+     def render(self, to_display=True):
+@@ -250,7 +278,11 @@
+     @property
+     def numConcurrentActions(self):
+         return self.max_allowed_actions
+     
+     @property
+     def non_fluents(self):
+         return self.model.groundnonfluents()
++
++    @property
++    def Budget(self):
++        return self.budget
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/ErrorHandling/RDDLException.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/ErrorHandling/RDDLException.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Grounder/RDDLGrounder.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Grounder/RDDLGrounder.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/JaxRDDLBackpropPlanner.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLBackpropPlanner.py`
+
+ * *Files 26% similar despite different names*
+
+```diff
+@@ -1,21 +1,20 @@
+ import jax
+ import jax.numpy as jnp
+ import jax.random as random
+ import jax.nn.initializers as initializers
+-import matplotlib.pyplot as plt
+ import numpy as np
++np.seterr(all='raise')
+ import optax
+-from typing import Callable, Dict, Iterable, Set, Tuple
++from typing import Dict, Iterable, Set, Tuple
+ import warnings
+ 
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLTypeError
+ 
+ from pyRDDLGym.Core.Compiler.RDDLLiftedModel import RDDLLiftedModel
+-from pyRDDLGym.Core.Compiler.RDDLValueInitializer import RDDLValueInitializer
+ from pyRDDLGym.Core.Jax.JaxRDDLCompiler import JaxRDDLCompiler
+ from pyRDDLGym.Core.Jax.JaxRDDLLogic import FuzzyLogic
+ 
+ 
+ class JaxRDDLCompilerWithGrad(JaxRDDLCompiler):
+     '''Compiles a RDDL AST representation to an equivalent JAX representation. 
+     Unlike its parent class, this class treats all fluents as real-valued, and
+@@ -43,98 +42,93 @@
+         self.logic = logic
+         self.cpfs_without_grad = cpfs_without_grad
+         
+         # actions and CPFs must be continuous
+         warnings.warn(f'Initial values of pvariables will be cast to real.',
+                       stacklevel=2)   
+         for (var, values) in self.init_values.items():
+-            self.init_values[var] = np.asarray(values, dtype=RDDLValueInitializer.REAL) 
++            self.init_values[var] = np.asarray(values, dtype=self.REAL) 
+         
+         # overwrite basic operations with fuzzy ones
+         self.RELATIONAL_OPS = {
+-            '>=': logic.greaterEqual,
+-            '<=': logic.lessEqual,
+-            '<': logic.less,
+-            '>': logic.greater,
+-            '==': logic.equal,
+-            '~=': logic.notEqual
++            '>=': logic.greaterEqual(),
++            '<=': logic.lessEqual(),
++            '<': logic.less(),
++            '>': logic.greater(),
++            '==': logic.equal(),
++            '~=': logic.notEqual()
+         }
+-        self.LOGICAL_NOT = logic.Not  
++        self.LOGICAL_NOT = logic.Not()
+         self.LOGICAL_OPS = {
+-            '^': logic.And,
+-            '&': logic.And,
+-            '|': logic.Or,
+-            '~': logic.xor,
+-            '=>': logic.implies,
+-            '<=>': logic.equiv
++            '^': logic.And(),
++            '&': logic.And(),
++            '|': logic.Or(),
++            '~': logic.xor(),
++            '=>': logic.implies(),
++            '<=>': logic.equiv()
+         }
+-        self.AGGREGATION_OPS = {
+-            'sum': jnp.sum,
+-            'avg': jnp.mean,
+-            'prod': jnp.prod,
+-            'minimum': jnp.min,
+-            'maximum': jnp.max,
+-            'forall': logic.forall,
+-            'exists': logic.exists,
+-            'argmin': logic.argmin,
+-            'argmax': logic.argmax
+-        }
+-        self.KNOWN_UNARY['sgn'] = logic.signum   
+-        self.KNOWN_UNARY['floor'] = logic.floor   
+-        self.KNOWN_UNARY['ceil'] = logic.ceil   
+-        self.KNOWN_UNARY['round'] = logic.round
+-        self.KNOWN_UNARY['sqrt'] = logic.sqrt
++        self.AGGREGATION_OPS['forall'] = logic.forall()
++        self.AGGREGATION_OPS['exists'] = logic.exists()
++        self.AGGREGATION_OPS['argmin'] = logic.argmin()
++        self.AGGREGATION_OPS['argmax'] = logic.argmax()
++        self.KNOWN_UNARY['sgn'] = logic.signum()
++        self.KNOWN_UNARY['floor'] = logic.floor()   
++        self.KNOWN_UNARY['ceil'] = logic.ceil()   
++        self.KNOWN_UNARY['round'] = logic.round()
++        self.KNOWN_UNARY['sqrt'] = logic.sqrt()
++        self.KNOWN_BINARY['div'] = logic.floorDiv()
++        self.KNOWN_BINARY['mod'] = logic.mod()
+     
+     def _jax_stop_grad(self, jax_expr):
+         
+-        def _jax_wrapped_stop_grad(x, key):
+-            sample, key, error = jax_expr(x, key)
++        def _jax_wrapped_stop_grad(x, params, key):
++            sample, key, error = jax_expr(x, params, key)
+             sample = jax.lax.stop_gradient(sample)
+             return sample, key, error
+         
+         return _jax_wrapped_stop_grad
+         
+-    def _compile_cpfs(self):
++    def _compile_cpfs(self, info):
+         warnings.warn('CPFs outputs will be cast to real.', stacklevel=2)      
+         jax_cpfs = {}
+         for (_, cpfs) in self.levels.items():
+             for cpf in cpfs:
+                 _, expr = self.rddl.cpfs[cpf]
+-                jax_cpfs[cpf] = self._jax(expr, dtype=JaxRDDLCompiler.REAL)
++                jax_cpfs[cpf] = self._jax(expr, info, dtype=self.REAL)
+                 if cpf in self.cpfs_without_grad:
+                     warnings.warn(f'CPF <{cpf}> stops gradient.', stacklevel=2)      
+                     jax_cpfs[cpf] = self._jax_stop_grad(jax_cpfs[cpf])
+         return jax_cpfs
+     
+     def _jax_if_helper(self):
+-        return self.logic.If
++        return self.logic.If()
+     
+     def _jax_switch_helper(self):
+-        return self.logic.Switch
++        return self.logic.Switch()
+         
+-    def _jax_kron(self, expr):
++    def _jax_kron(self, expr, info):
+         warnings.warn('KronDelta will be ignored.', stacklevel=2)                       
+         arg, = expr.args
+-        arg = self._jax(arg)
++        arg = self._jax(arg, info)
+         return arg
+     
+     def _jax_bernoulli_helper(self):
+-        return self.logic.bernoulli
++        return self.logic.bernoulli()
+     
+     def _jax_discrete_helper(self):
+-        discrete = self.logic.discrete
++        jax_discrete, jax_param = self.logic.discrete()
+ 
+-        def _jax_discrete_calc_approx(key, prob):
+-            sample = discrete(key, prob)
++        def _jax_wrapped_discrete_calc_approx(key, prob, params):
++            sample = jax_discrete(key, prob, params)
+             out_of_bounds = jnp.logical_not(jnp.logical_and(
+                 jnp.all(prob >= 0),
+                 jnp.allclose(jnp.sum(prob, axis=-1), 1.0)))
+             return sample, out_of_bounds
+         
+-        return _jax_discrete_calc_approx
++        return _jax_wrapped_discrete_calc_approx, jax_param
+ 
+ 
+ class JaxPlan:
+     
+     def __init__(self) -> None:
+         self._initializer = None
+         self._train_policy = None
+@@ -181,181 +175,302 @@
+     def projection(self, value):
+         self._projection = value
+         
+     
+ class JaxStraightLinePlan(JaxPlan):
+     '''A straight line plan implementation in JAX'''
+     
+-    def __init__(self, initializer: initializers.Initializer=initializers.zeros) -> None:
++    def __init__(self, initializer: initializers.Initializer=initializers.normal(),
++                 wrap_sigmoid: bool=True,
++                 min_action_prob: float=0.001,
++                 use_new_projection: bool=True,
++                 max_constraint_iter: int=999) -> None:
+         '''Creates a new straight line plan in JAX.
+         
+         :param initializer: a Jax Initializer for setting the initial actions
++        :param wrap_sigmoid: wrap bool actions with sigmoid 
++        (uses gradient clipping instead of sigmoid if None)
++        :param min_action_prob: minimum value a soft boolean action can take
++        (maximum is 1 - min_action_prob); required positive if wrap_sigmoid = True
++        :param use_new_projection: whether to use non-iterative (e.g. sort-based)
++        projection method, or modified SOGBOFA projection method to satisfy
++        action concurrency constraint
++        :param max_constraint_iter: max iterations of projected 
++        gradient for ensuring actions satisfy constraints, only required if 
++        use_new_projection = True
+         '''
+         super(JaxStraightLinePlan, self).__init__()
+         self._initializer = initializer
++        self._wrap_sigmoid = wrap_sigmoid
++        self._min_action_prob = min_action_prob
++        self._max_constraint_iter = max_constraint_iter
++        self._use_new_projection = use_new_projection
+         
+     def compile(self, compiled: JaxRDDLCompilerWithGrad,
+                 _bounds: Dict,
+                 horizon: int) -> None:
+         rddl = compiled.rddl
+         init = self._initializer
++        min_action = self._min_action_prob
++        max_action = 1.0 - min_action
++        wrap_sigmoid = self._wrap_sigmoid
++        bool_threshold = 0.0 if wrap_sigmoid else 0.5
++        max_constraint_iter = self._max_constraint_iter
+         
+         # calculate the correct action box bounds
+         shapes, bounds = {}, {}
+         for (name, prange) in rddl.variable_ranges.items():
+             
+             # make sure variable is an action fluent (what we are optimizing)
+             if rddl.variable_types[name] != 'action-fluent':
+                 continue
+             
+             # prepend the rollout dimension to the action tensor shape
+             shapes[name] = (horizon,) + np.shape(compiled.init_values[name])
+                 
+             # the output type is valid for the action
+-            valid_types = JaxRDDLCompiler.JAX_TYPES
++            valid_types = compiled.JAX_TYPES
+             if prange not in valid_types:
+                 raise RDDLTypeError(
+                     f'Invalid range <{prange}. of action-fluent <{name}>, '
+                     f'must be one of {set(valid_types.keys())}.')
+                 
+             # clip boolean to (0, 1) otherwise use the user action bounds
++            # for boolean, the bounds depend on min_action_prob and action weight
++            # if wrap_sigmoid = True
+             if prange == 'bool':
+-                bounds[name] = (0.0, 1.0)
++                bounds[name] = None
+             else:
+                 bounds[name] = _bounds.get(name, (-jnp.inf, jnp.inf))
+-                
++            warnings.warn(f'Bounds of action fluent <{name}> parameters '
++                          f'set to {bounds[name]}', stacklevel=2)
++        self.bounds = bounds
++        
++        # these define the mapping from action parameter to action and vice versa
++        def _jax_param_to_action(var, param, hyperparams):
++            if wrap_sigmoid:
++                weight = hyperparams[var]
++                return jax.nn.sigmoid(weight * param)
++            else:
++                return param 
++        
++        def _jax_action_to_param(var, action, hyperparams):
++            if wrap_sigmoid:
++                weight = hyperparams[var]
++                return (-1.0 / weight) * jnp.log(1.0 / action - 1.0)
++            else:
++                return action
++                    
++        # clip actions to valid box constraints
++        def _jax_wrapped_projection_bounds(var, hyperparams):
++            if rddl.variable_ranges[var] == 'bool':
++                lower = _jax_action_to_param(var, min_action, hyperparams)
++                upper = _jax_action_to_param(var, max_action, hyperparams)
++                return lower, upper
++            else:
++                return bounds[var]
++            
++        def _jax_wrapped_slp_project_to_box(params, hyperparams):
++            new_params = {}
++            for (var, param) in params.items():
++                lower, upper = _jax_wrapped_projection_bounds(var, hyperparams)
++                new_params[var] = jnp.clip(param, lower, upper)
++            return new_params, True
++            
+         # initialize the parameters inside their valid ranges
+-        def _jax_wrapped_slp_init(key, subs):
++        def _jax_wrapped_slp_init(key, hyperparams, subs):
+             params = {}
+             for (var, shape) in shapes.items():
+                 key, subkey = random.split(key)
+-                param = init(subkey, shape, dtype=JaxRDDLCompiler.REAL)
+-                param = jnp.clip(param, *bounds[var])
++                param = init(subkey, shape, dtype=compiled.REAL)
++                if rddl.variable_ranges[var] == 'bool':
++                    param = param + bool_threshold
+                 params[var] = param
++            params, _ = _jax_wrapped_slp_project_to_box(params, hyperparams)
+             return params
+         
+         self.initializer = _jax_wrapped_slp_init
+     
+         # convert actions that are not smooth to real-valued
+         # TODO: use a one-hot for integer actions
+-        def _jax_wrapped_slp_predict_train(key, params, step, subs):
++        def _jax_wrapped_slp_predict_train(key, params, hyperparams, step, subs):
+             actions = {}
+             for (var, param) in params.items():
+-                action = jnp.asarray(param[step, ...], dtype=JaxRDDLCompiler.REAL)
++                action = jnp.asarray(param[step, ...], dtype=compiled.REAL)
++                if rddl.variable_ranges[var] == 'bool':
++                    action = _jax_param_to_action(var, action, hyperparams)
+                 actions[var] = action
+             return actions
+         
+         # convert smooth actions back to discrete/boolean
+-        def _jax_wrapped_slp_predict_test(key, params, step, subs):
++        def _jax_wrapped_slp_predict_test(key, params, hyperparams, step, subs):
+             actions = {}
+             for (var, param) in params.items():
+                 action = jnp.asarray(param[step, ...])
+                 prange = rddl.variable_ranges[var]
+                 if prange == 'int':
+-                    action = jnp.round(action).astype(JaxRDDLCompiler.INT)
++                    action = jnp.round(action).astype(compiled.INT)
+                 elif prange == 'bool':
+-                    action = action > 0.5
++                    action = action > bool_threshold
+                 actions[var] = action
+             return actions
+         
+         self.train_policy = _jax_wrapped_slp_predict_train
+         self.test_policy = _jax_wrapped_slp_predict_test
+              
+-        # clip actions to valid box constraints
+-        def _jax_wrapped_slp_project_to_box(params):
+-            params = {var: jnp.clip(param, *bounds[var])
+-                      for (var, param) in params.items()}
+-            return params
+-            
+         # find if action clipping is required for max-definite-actions < pos-inf
++        allowed_actions = rddl.max_allowed_actions
+         bool_action_count = sum(np.size(values)
+                                 for (var, values) in rddl.actions.items()
+                                 if rddl.variable_ranges[var] == 'bool')
+-        use_sogbofa_clip_trick = rddl.max_allowed_actions < bool_action_count
++        use_sogbofa_clip_trick = allowed_actions < bool_action_count
+         
+         if use_sogbofa_clip_trick: 
+             warnings.warn(f'Using projected gradient trick to satisfy '
+                           f'max_nondef_actions: total boolean actions '
+                           f'{bool_action_count} > max_nondef_actions '
+-                          f'{rddl.max_allowed_actions}.', stacklevel=2)
++                          f'{allowed_actions}.', stacklevel=2)
++            noop = {var: (values if isinstance(values, bool) else values[0])
++                    for (var, values) in rddl.actions.items()}
++        
++        # use SOGBOFA projection method...
++        if use_sogbofa_clip_trick and self._use_new_projection:
++            
++            # shift the boolean actions uniformly, clipping at the min/max values
++            # the amount to move is such that only top allowed_actions actions
++            # are still active (e.g. not equal to noop) after the shift
++            def _jax_wrapped_sorting_project(params, hyperparams):
++                
++                # find the amount to shift action parameters
++                params_flat = []
++                for (var, param) in params.items():
++                    if rddl.variable_ranges[var] == 'bool':
++                        param = jnp.ravel(param)
++                        if noop[var]:
++                            param = (-param) if wrap_sigmoid else 1.0 - param
++                        params_flat.append(param)
++                params_flat = jnp.concatenate(params_flat)
++                descending = jnp.sort(params_flat)[::-1]
++                kplus1st_greatest = descending[allowed_actions]
++                surplus = jnp.maximum(kplus1st_greatest - bool_threshold, 0.0)
++                    
++                # perform the shift
++                new_params = {}
++                for (var, param) in params.items():
++                    if rddl.variable_ranges[var] == 'bool':
++                        new_param = param + (surplus if noop[var] else -surplus)
++                        lower, upper = _jax_wrapped_projection_bounds(var, hyperparams)
++                        new_param = jnp.clip(new_param, lower, upper)
++                    else:
++                        new_param = param
++                    new_params[var] = new_param
++                return new_params, True
++                
++            # clip actions to valid bounds and satisfy constraint on max actions
++            def _jax_wrapped_sorting_project_to_max_constraint(params, hyperparams):
++                params, _ = _jax_wrapped_slp_project_to_box(params, hyperparams)
++                project_over_horizon = jax.vmap(
++                    _jax_wrapped_sorting_project, in_axes=(0, None)
++                )(params, hyperparams)
++                return project_over_horizon
++            
++            self.projection = _jax_wrapped_sorting_project_to_max_constraint
++        
++        # use new (simplified) projection method...
++        elif use_sogbofa_clip_trick and not self._use_new_projection:
+             
+             # calculate the surplus of actions above max-nondef-actions
+-            def _jax_wrapped_sogbofa_surplus(params):
+-                surplus, count = 0.0, 0
++            def _jax_wrapped_sogbofa_surplus(params, hyperparams):
++                sum_action, count = 0.0, 0
+                 for (var, param) in params.items():
+                     if rddl.variable_ranges[var] == 'bool':
+-                        surplus += jnp.sum(param)
+-                        count += jnp.sum(param > 0)
++                        action = _jax_param_to_action(var, param, hyperparams)                        
++                        if noop[var]:
++                            sum_action += jnp.size(action) - jnp.sum(action)
++                            count += jnp.sum(action < 1)
++                        else:
++                            sum_action += jnp.sum(action)
++                            count += jnp.sum(action > 0)
++                surplus = jnp.maximum(sum_action - allowed_actions, 0.0)
+                 count = jnp.maximum(count, 1)
+-                return (surplus - rddl.max_allowed_actions) / count
++                return surplus / count
+                 
+-            # return whether the surplus is positive
+-            def _jax_wrapped_sogbofa_positive_surplus(values):
+-                _, surplus = values
+-                return surplus > 0
+-            
+-            # reduce all bool action values by the surplus clipping at zero
++            # return whether the surplus is positive or reached compute limit
++            def _jax_wrapped_sogbofa_continue(values):
++                it, _, _, surplus = values
++                return jnp.logical_and(it < max_constraint_iter, surplus > 0)
++                
++            # reduce all bool action values by the surplus clipping at minimum
++            # for no-op = True, do the opposite, i.e. increase all
++            # bool action values by surplus clipping at maximum
+             def _jax_wrapped_sogbofa_subtract_surplus(values):
+-                params, surplus = values
++                it, params, hyperparams, surplus = values
+                 new_params = {}
+                 for (var, param) in params.items():
+                     if rddl.variable_ranges[var] == 'bool':
+-                        new_params[var] = jnp.maximum(param - surplus, 0.0)
++                        action = _jax_param_to_action(var, param, hyperparams)
++                        new_action = action + (surplus if noop[var] else -surplus)
++                        new_action = jnp.clip(new_action, min_action, max_action)
++                        new_param = _jax_action_to_param(var, new_action, hyperparams)                     
+                     else:
+-                        new_params[var] = param
+-                new_surplus = _jax_wrapped_sogbofa_surplus(new_params)
+-                return new_params, new_surplus
+-            
+-            # reduce bool action values by surplus until it becomes zero
+-            def _jax_wrapped_sogbofa_project(params):
+-                surplus = _jax_wrapped_sogbofa_surplus(params)
+-                params, _ = jax.lax.while_loop(
+-                    cond_fun=_jax_wrapped_sogbofa_positive_surplus,
++                        new_param = param
++                    new_params[var] = new_param
++                new_surplus = _jax_wrapped_sogbofa_surplus(new_params, hyperparams)
++                new_it = it + 1
++                return new_it, new_params, hyperparams, new_surplus
++                
++            # apply the surplus to the actions until it becomes zero
++            def _jax_wrapped_sogbofa_project(params, hyperparams):
++                surplus = _jax_wrapped_sogbofa_surplus(params, hyperparams)
++                _, params, _, surplus = jax.lax.while_loop(
++                    cond_fun=_jax_wrapped_sogbofa_continue,
+                     body_fun=_jax_wrapped_sogbofa_subtract_surplus,
+-                    init_val=(params, surplus)
++                    init_val=(0, params, hyperparams, surplus)
+                 )
+-                return params
+-            
++                converged = jnp.logical_not(surplus > 0)
++                return params, converged
++                
+             # clip actions to valid bounds and satisfy constraint on max actions
+-            def _jax_wrapped_slp_project_to_max_constraint(params):
+-                params = _jax_wrapped_slp_project_to_box(params)
++            def _jax_wrapped_sogbofa_project_to_max_constraint(params, hyperparams):
++                params, _ = _jax_wrapped_slp_project_to_box(params, hyperparams)
+                 project_over_horizon = jax.vmap(
+-                    _jax_wrapped_sogbofa_project, in_axes=0
+-                )
+-                params = project_over_horizon(params)
+-                return params
+-            
+-            self.projection = _jax_wrapped_slp_project_to_max_constraint
+-            
+-        else:
++                    _jax_wrapped_sogbofa_project, in_axes=(0, None)
++                )(params, hyperparams)
++                return project_over_horizon
+             
++            self.projection = _jax_wrapped_sogbofa_project_to_max_constraint
++        
++        # just project to box constraints
++        else: 
+             self.projection = _jax_wrapped_slp_project_to_box
+     
+     @staticmethod
+     @jax.jit
+     def _guess_next_epoch(param):
+         # "progress" the plan one step forward and set last action to second-last
+         return jnp.append(param[1:, ...], param[-1:, ...], axis=0)
+ 
+     def guess_next_epoch(self, params: Dict) -> Dict:
+-        return jax.tree_map(JaxStraightLinePlan._guess_next_epoch, params)
++        next_fn = JaxStraightLinePlan._guess_next_epoch
++        return jax.tree_map(next_fn, params)
+ 
+             
+ class JaxRDDLBackpropPlanner:
+     '''A class for optimizing an action sequence in the given RDDL MDP using 
+     gradient descent.'''
+     
+     def __init__(self, rddl: RDDLLiftedModel,
+                  plan: JaxPlan,
+                  batch_size_train: int,
+                  batch_size_test: int=None,
+                  rollout_horizon: int=None,
++                 use64bit: bool=False,
+                  action_bounds: Dict[str, Tuple[float, float]]={},
+                  optimizer: optax.GradientTransformation=optax.rmsprop(0.1),
+-                 clip_grad: float=1000.,
++                 clip_grad: float=None,
+                  logic: FuzzyLogic=FuzzyLogic(),
+                  use_symlog_reward: bool=False,
+                  utility=jnp.mean,
+                  cpfs_without_grad: Set=set()) -> None:
+         '''Creates a new gradient-based algorithm for optimizing action sequences
+         (plan) in the given RDDL. Some operations will be converted to their
+         differentiable counterparts; the specific operations can be customized
+@@ -364,14 +479,15 @@
+         :param rddl: the RDDL domain to optimize
+         :param plan: the policy/plan representation to optimize
+         :param batch_size_train: how many rollouts to perform per optimization 
+         step
+         :param batch_size_test: how many rollouts to use to test the plan at each
+         optimization step
+         :param rollout_horizon: lookahead planning horizon: None uses the
++        :param use64bit: whether to perform arithmetic in 64 bit
+         horizon parameter in the RDDL instance
+         :param action_bounds: box constraints on actions
+         :param optimizer: an Optax algorithm that specifies how gradient updates
+         are performed
+         :param clip_grad: maximum magnitude of gradient updates
+         :param logic: a subclass of FuzzyLogic for mapping exact mathematical
+         operations to their differentiable counterparts 
+@@ -388,20 +504,25 @@
+         if batch_size_test is None:
+             batch_size_test = batch_size_train
+         self.batch_size_test = batch_size_test
+         if rollout_horizon is None:
+             rollout_horizon = rddl.horizon
+         self.horizon = rollout_horizon
+         self._action_bounds = action_bounds
++        self.use64bit = use64bit
++        self.clip_grad = clip_grad
+         
+-        self.optimizer = optax.chain(
+-            optax.clip(clip_grad),
+-            optimizer
+-        )
+-        
++        if clip_grad is None:
++            self.optimizer = optimizer
++        else:
++            self.optimizer = optax.chain(
++                optax.clip(clip_grad),
++                optimizer
++            )
++            
+         self.logic = logic
+         self.use_symlog_reward = use_symlog_reward
+         self.utility = utility
+         self.cpfs_without_grad = cpfs_without_grad
+         
+         self._jax_compile_rddl()        
+         self._jax_compile_optimizer()
+@@ -409,19 +530,22 @@
+     def _jax_compile_rddl(self):
+         rddl = self.rddl
+         
+         # Jax compilation of the differentiable RDDL for training
+         self.compiled = JaxRDDLCompilerWithGrad(
+             rddl=rddl,
+             logic=self.logic,
++            use64bit=self.use64bit,
+             cpfs_without_grad=self.cpfs_without_grad)
+         self.compiled.compile()
+         
+         # Jax compilation of the exact RDDL for testing
+-        self.test_compiled = JaxRDDLCompiler(rddl=rddl)
++        self.test_compiled = JaxRDDLCompiler(
++            rddl=rddl,
++            use64bit=self.use64bit)
+         self.test_compiled.compile()
+     
+         # calculate grounded no-op actions
+         self.noop_actions = {}
+         for (var, values) in self.test_compiled.init_values.items():
+             if rddl.variable_types[var] == 'action-fluent':
+                 self.noop_actions.update(rddl.ground_values(var, values))
+@@ -442,16 +566,16 @@
+         
+         test_rollouts = self.test_compiled.compile_rollouts(
+             policy=self.plan.test_policy,
+             n_steps=self.horizon,
+             n_batch=self.batch_size_test)
+         
+         # initialization
+-        def _jax_wrapped_init_policy(key, subs):
+-            params = self.plan.initializer(key, subs)
++        def _jax_wrapped_init_policy(key, hyperparams, subs):
++            params = self.plan.initializer(key, hyperparams, subs)
+             opt_state = self.optimizer.init(params)
+             return params, opt_state
+         
+         self.initialize = jax.jit(_jax_wrapped_init_policy)
+         
+         # losses
+         train_loss = self._jax_loss(train_rollouts, use_symlog=self.use_symlog_reward)
+@@ -474,314 +598,157 @@
+                 horizon = rewards.shape[1]
+                 discount = jnp.power(gamma, jnp.arange(horizon))
+                 discount = discount[jnp.newaxis, ...]
+                 rewards = rewards * discount
+             return rewards
+         
+         # the loss is the average cumulative reward across all roll-outs
+-        def _jax_wrapped_plan_loss(key, params, subs):
+-            log = rollouts(key, params, subs)
++        def _jax_wrapped_plan_loss(key, policy_params, hyperparams,
++                                   subs, model_params):
++            log = rollouts(key, policy_params, hyperparams, subs, model_params)
+             rewards = log['reward']
+             rewards = _jax_wrapped_scale_reward(rewards)
+             returns = jnp.sum(rewards, axis=1)
+             utility = utility_fn(returns)
+             loss = -utility
+             return loss, log
+         
+         return _jax_wrapped_plan_loss
+     
+     def _jax_update(self, loss, optimizer, projection):
+         
+         # calculate the plan gradient w.r.t. return loss and update optimizer
+-        # optionally does gradient normalization
+         # also perform a projection step to satisfy constraints on actions
+-        def _jax_wrapped_plan_update(key, params, subs, opt_state):
+-            grad, log = jax.grad(loss, argnums=1, has_aux=True)(key, params, subs)
+-            
++        def _jax_wrapped_plan_update(key, policy_params, hyperparams,
++                                     subs, model_params, opt_state):
++            grad_fn = jax.grad(loss, argnums=1, has_aux=True)
++            grad, log = grad_fn(key, policy_params, hyperparams, subs, model_params)  
++            updates, opt_state = optimizer.update(grad, opt_state) 
++            policy_params = optax.apply_updates(policy_params, updates)
++            policy_params, converged = projection(policy_params, hyperparams)         
+             log['grad'] = grad
+-            updates, opt_state = optimizer.update(grad, opt_state)
+-            params = optax.apply_updates(params, updates)
+-            params = projection(params)
+-            return params, opt_state, log
++            log['updates'] = updates
++            return policy_params, converged, opt_state, log
+         
+         return _jax_wrapped_plan_update
+             
+     def _batched_init_subs(self, subs): 
+         rddl = self.rddl
+         n_train, n_test = self.batch_size_train, self.batch_size_test
+         
+         # batched subs
+         init_train, init_test = {}, {}
+         for (name, value) in subs.items():
+             value = np.asarray(value)[np.newaxis, ...]
+             train_value = np.repeat(value, repeats=n_train, axis=0)
+-            train_value = train_value.astype(JaxRDDLCompiler.REAL)
++            train_value = train_value.astype(self.compiled.REAL)
+             init_train[name] = train_value
+             init_test[name] = np.repeat(value, repeats=n_test, axis=0)
+         
+         # make sure next-state fluents are also set
+         for (state, next_state) in rddl.next_state.items():
+             init_train[next_state] = init_train[state]
+             init_test[next_state] = init_test[state]
+                         
+         return init_train, init_test
+     
+     def optimize(self, key: random.PRNGKey,
+                  epochs: int,
+                  step: int=1,
++                 policy_hyperparams: Dict[str, object]=None,
+                  subs: Dict[str, object]=None,
+                  guess: Dict[str, object]=None) -> Iterable[Dict[str, object]]:
+         ''' Compute an optimal straight-line plan.
+         
+         :param key: JAX PRNG key
+         :param epochs: the maximum number of steps of gradient descent
+         :param step: frequency the callback is provided back to the user
++        :param policy_hyperparams: hyper-parameters for the policy/plan, such as
++        weights for sigmoid wrapping boolean actions
+         :param subs: dictionary mapping initial state and non-fluents to 
+         their values: if None initializes all variables from the RDDL instance
+         :param guess: initial policy parameters: if None will use the initializer
+         specified in this instance
+         '''
+         
+         # compute a batched version of the initial values
+         if subs is None:
+             subs = self.test_compiled.init_values
+         train_subs, test_subs = self._batched_init_subs(subs)
+         
++        # initialize, model parameters
++        model_params = self.compiled.model_params
++        model_params_test = self.test_compiled.model_params
++        
+         # initialize policy parameters
+         if guess is None:
+             key, subkey = random.split(key)
+-            params, opt_state = self.initialize(subkey, train_subs)
++            policy_params, opt_state = self.initialize(
++                subkey, policy_hyperparams, train_subs)
+         else:
+-            params = guess
+-            opt_state = self.optimizer.init(params)
+-        best_params, best_loss = params, jnp.inf
++            policy_params = guess
++            opt_state = self.optimizer.init(policy_params)
++        best_params, best_loss = policy_params, jnp.inf
+         
+         for it in range(epochs):
+             
+             # update the parameters of the plan
+             key, subkey1, subkey2, subkey3 = random.split(key, num=4)
+-            params, opt_state, train_log = self.update(subkey1, params, train_subs, opt_state)            
+-            train_loss, _ = self.train_loss(subkey2, params, train_subs)            
+-            test_loss, log = self.test_loss(subkey3, params, test_subs)
++            policy_params, converged, opt_state, train_log = self.update(
++                subkey1, policy_params, policy_hyperparams,
++                train_subs, model_params, opt_state)
++            if not np.all(converged):
++                warnings.warn(
++                    f'Projected gradient method for satisfying action concurrency '
++                    f'constraints reached the iteration limit: plan is possibly '
++                    f'invalid for the current instance.', stacklevel=2)
++            
++            # evaluate losses
++            train_loss, _ = self.train_loss(
++                subkey2, policy_params, policy_hyperparams,
++                train_subs, model_params)
++            test_loss, log = self.test_loss(
++                subkey3, policy_params, policy_hyperparams,
++                test_subs, model_params_test)
+             
+             # record the best plan so far
+             if test_loss < best_loss:
+-                best_params, best_loss = params, test_loss
++                best_params, best_loss = policy_params, test_loss
+             
+             # periodically return a callback
+             if it % step == 0 or it == epochs - 1:
+                 callback = {
+                     'iteration': it,
+                     'train_return':-train_loss,
+                     'test_return':-test_loss,
+                     'best_return':-best_loss,
+-                    'params': params,
++                    'params': policy_params,
+                     'best_params': best_params,
+                     'grad': train_log['grad'],
++                    'updates': train_log['updates'],
+                     **log
+                 }
+                 yield callback
+     
+     def get_action(self, key: random.PRNGKey,
+                    params: Dict,
+                    step: int,
+-                   subs: Dict):
++                   subs: Dict,
++                   policy_hyperparams: Dict[str, object]=None) -> Dict[str, object]:
+         '''Returns an action dictionary from the policy or plan with the given
+         parameters.
+         
+         :param key: the JAX PRNG key
+         :param params: the trainable parameter PyTree of the policy
+         :param step: the time step at which decision is made
++        :param policy_hyperparams: hyper-parameters for the policy/plan, such as
++        weights for sigmoid wrapping boolean actions
+         :param subs: the dict of pvariables
+         '''
+-        actions = self.test_policy(key, params, step, subs)
++        actions = self.test_policy(key, params, policy_hyperparams, step, subs)
+         grounded_actions = {}
+         for (var, action) in actions.items():
+             for (ground_var, ground_act) in self.rddl.ground_values(var, action):
+                 if ground_act != self.noop_actions[ground_var]:
+                     grounded_actions[ground_var] = ground_act
+         return grounded_actions
+ 
+-
+-class JaxRDDLModelError:
+-    '''Assists in the analysis of model error that arises from replacing exact
+-    operations with fuzzy logic.
+-    '''
+-
+-    def __init__(self, rddl: RDDLLiftedModel,
+-                 test_policy: Callable,
+-                 batch_size: int,
+-                 rollout_horizon: int=None,
+-                 logic: FuzzyLogic=FuzzyLogic()) -> None:
+-        '''Creates a new instance to empirically estimate the model error.
+-        
+-        :param rddl: the RDDL domain to optimize
+-        :param test_policy: policy to generate rollouts
+-        :param batch_size: batch size
+-        :param rollout_horizon: lookahead planning horizon: None uses the
+-        horizon parameter in the RDDL instance
+-        :param logic: a subclass of FuzzyLogic for mapping exact mathematical
+-        operations to their differentiable counterparts
+-        '''
+-        self.rddl = rddl
+-        self.test_policy = test_policy
+-        self.batch_size = batch_size
+-        if rollout_horizon is None:
+-            rollout_horizon = rddl.horizon
+-        self.horizon = rollout_horizon
+-        self.logic = logic
+-        
+-        self._jax_compile()
+-    
+-    def _jax_compile(self):
+-        rddl = self.rddl
+-        n_batch = self.batch_size
+-        test_policy = self.test_policy
+-        
+-        # Jax compilation of the differentiable RDDL for training
+-        self.train_compiled = JaxRDDLCompilerWithGrad(
+-            rddl=rddl,
+-            logic=self.logic)
+-        self.train_compiled.compile()
+-        
+-        # Jax compilation of the exact RDDL for testing
+-        self.test_compiled = JaxRDDLCompiler(rddl=rddl)
+-        self.test_compiled.compile()
+-        
+-        # roll-outs
+-        def _jax_wrapped_train_policy(key, params, step, subs):
+-            test_actions = test_policy(key, params, step, subs)
+-            train_actions = jax.tree_map(
+-                lambda x: x.astype(JaxRDDLCompiler.REAL),
+-                test_actions
+-            )
+-            return train_actions
+-        
+-        train_rollouts = self.train_compiled.compile_rollouts(
+-            policy=_jax_wrapped_train_policy,
+-            n_steps=self.horizon,
+-            n_batch=n_batch)
+-        
+-        test_rollouts = self.test_compiled.compile_rollouts(
+-            policy=test_policy,
+-            n_steps=self.horizon,
+-            n_batch=n_batch)
+-        
+-        # batched initial subs
+-        def _jax_wrapped_batched_subs(subs): 
+-            train_subs, test_subs = {}, {}
+-            for (name, value) in subs.items():
+-                value = jnp.asarray(value)[jnp.newaxis, ...]
+-                train_value = jnp.repeat(value, repeats=n_batch, axis=0)
+-                train_value = train_value.astype(JaxRDDLCompiler.REAL)
+-                train_subs[name] = train_value
+-                test_subs[name] = jnp.repeat(value, repeats=n_batch, axis=0)
+-            for (state, next_state) in rddl.next_state.items():
+-                train_subs[next_state] = train_subs[state]
+-                test_subs[next_state] = test_subs[state]
+-            return train_subs, test_subs
+-        
+-        def _jax_wrapped_simulate_particles(key, params, subs):
+-            
+-            # train and test subs differ only in data type
+-            train_subs, test_subs = _jax_wrapped_batched_subs(subs)
+-            
+-            # generate rollouts from train and test model for the same inputs
+-            train_log = train_rollouts(key, params, train_subs)
+-            test_log = test_rollouts(key, params, test_subs)
+-            
+-            # extract variables and reward
+-            train_pvars = train_log['pvar']
+-            test_pvars = test_log['pvar']
+-            train_pvars['reward'] = train_log['reward']
+-            test_pvars['reward'] = test_log['reward']
+-            
+-            # compute the Euclidean distance between fluent values per particle 
+-            train_fluents, test_fluents = {}, {}
+-            for (name, train_values) in train_pvars.items():
+-                if name == 'reward' or (
+-                    rddl.variable_types[name] != 'non-fluent'
+-                    and rddl.variable_types[name] != 'action-fluent'
+-                    and name not in rddl.prev_state
+-                ):
+-                    train_fluents[name] = train_values
+-                    test_fluents[name] = test_pvars[name]
+-            return train_fluents, test_fluents
+-        
+-        self.simulation = jax.jit(_jax_wrapped_simulate_particles)
+-    
+-    def summarize(self, key: random.PRNGKey, params: Dict, subs: Dict=None,
+-                  filename: str='summary.pdf', figsize=(6, 3)):
+-        
+-        # get train and test particles
+-        if subs is None:
+-            subs = self.test_compiled.init_values
+-        train_fluents, test_fluents = self.simulation(key, params, subs)
+-        
+-        # figure out # of plots required to plot each fluent component separately
+-        sizes = {name: np.prod(value.shape[2:], dtype=int)
+-                 for (name, value) in train_fluents.items()}
+-        num_plots = sum(sizes.values())
+-        
+-        # subplots arranged in a square grid
+-        dim = np.floor(np.sqrt(num_plots)).astype(int) + 1
+-        w, h = figsize
+-        fig, axs = plt.subplots(nrows=dim, ncols=dim, figsize=(w * dim, h * dim))
+-        
+-        # plot each fluent component
+-        ix, iy = 0, 0
+-        for (name, train_value) in train_fluents.items():
+-            test_value = test_fluents[name]
+-            
+-            # calculate statistics for fluent
+-            train_value = train_value.reshape(*train_value.shape[:2], -1, order='C')
+-            test_value = test_value.reshape(*test_value.shape[:2], -1, order='C')
+-            train_mean = np.mean(train_value, axis=0)
+-            test_mean = np.mean(test_value, axis=0)
+-            train_std = np.std(train_value, axis=0)
+-            test_std = np.std(test_value, axis=0)     
+-            
+-            grounded_names = list(self.rddl.ground_names(
+-                name, self.rddl.param_types.get(name, [])))
+-            assert len(grounded_names) == sizes[name]
+-            
+-            # plot each component j of fluent on a separate plot
+-            for j in range(sizes[name]):
+-                
+-                # show mean
+-                xs = np.arange(train_mean.shape[0])
+-                axs[iy, ix].plot(xs, train_mean[:, j], label='approx mean', 
+-                                 color='blue')
+-                axs[iy, ix].plot(xs, test_mean[:, j], label='true mean', 
+-                                 linestyle='dashed', color='black')
+-                
+-                # show two standard deviations spread
+-                axs[iy, ix].fill_between(xs, train_mean[:, j] - 2 * train_std[:, j],
+-                                         train_mean[:, j] + 2 * train_std[:, j],
+-                                         color='blue', alpha=0.15)
+-                axs[iy, ix].fill_between(xs, test_mean[:, j] - 2 * test_std[:, j],
+-                                         test_mean[:, j] + 2 * test_std[:, j],
+-                                         color='black', alpha=0.15)
+-                
+-                axs[iy, ix].legend()
+-                axs[iy, ix].set_xlabel('epoch')
+-                axs[iy, ix].set_ylabel(grounded_names[j])
+-                
+-                # move to the next plot
+-                ix += 1
+-                if ix >= dim:
+-                    ix = 0
+-                    iy += 1
+-        
+-        # blank out unused axes
+-        while iy < dim:
+-            axs[iy, ix].set_axis_off()
+-            ix += 1
+-            if ix >= dim:
+-                ix = 0
+-                iy += 1
+-            
+-        plt.tight_layout()
+-        fig.savefig(filename)
+-        plt.clf()
+-        plt.close(fig)
+-
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/JaxRDDLCompiler.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLCompiler.py`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ from functools import partial
+ import jax
+ import jax.numpy as jnp
+ import jax.random as random
+ import jax.scipy as scipy 
+ from tensorflow_probability.substrates import jax as tfp
+-from typing import Callable, Dict
++from typing import Callable, Dict, List
+ 
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import print_stack_trace
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLInvalidNumberOfArgumentsError
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLNotImplementedError
+ 
+ from pyRDDLGym.Core.Compiler.RDDLLevelAnalysis import RDDLLevelAnalysis
+ from pyRDDLGym.Core.Compiler.RDDLLiftedModel import RDDLLiftedModel
+@@ -18,171 +18,189 @@
+ 
+ 
+ class JaxRDDLCompiler:
+     '''Compiles a RDDL AST representation into an equivalent JAX representation.
+     All operations are identical to their numpy equivalents.
+     '''
+     
+-    INT = jnp.int32
+-    REAL = jnp.float32
+-    
+-    JAX_TYPES = {
+-        'int': INT,
+-        'real': REAL,
+-        'bool': bool
+-    }
++    MODEL_PARAM_TAG_SEPARATOR = '___'
+     
+     def __init__(self, rddl: RDDLLiftedModel,
+                  allow_synchronous_state: bool=True,
+-                 logger: Logger=None) -> None:
++                 logger: Logger=None,
++                 use64bit: bool=False) -> None:
+         '''Creates a new RDDL to Jax compiler.
+         
+         :param rddl: the RDDL model to compile into Jax
+         :param allow_synchronous_state: whether next-state components can depend
+         on each other
+         :param logger: to log information about compilation to file
++        :param use64bit: whether to use 64 bit arithmetic
+         '''
+         self.rddl = rddl
+         self.logger = logger
+         # jax.config.update('jax_log_compiles', True) # for testing ONLY
+         
++        if use64bit:
++            self.INT = jnp.int64
++            self.REAL = jnp.float64
++            jax.config.update('jax_enable_x64', True)
++        else:
++            self.INT = jnp.int32
++            self.REAL = jnp.float32
++        self.ONE = jnp.asarray(1, dtype=self.INT)
++        self.JAX_TYPES = {
++            'int': self.INT,
++            'real': self.REAL,
++            'bool': bool
++        }
++        
+         # compile initial values
+         if self.logger is not None:
+             self.logger.clear()
+         initializer = RDDLValueInitializer(rddl, logger=self.logger)
+         self.init_values = initializer.initialize()
+         
+         # compute dependency graph for CPFs and sort them by evaluation order
+         sorter = RDDLLevelAnalysis(rddl, allow_synchronous_state, logger=self.logger)
+         self.levels = sorter.compute_levels()        
+         
+         # trace expressions to cache information to be used later
+         tracer = RDDLObjectsTracer(rddl, logger=self.logger)
+         self.traced = tracer.trace()
+         
+-        # basic operations        
++        # basic operations
++        self.NEGATIVE = lambda x, param: jnp.negative(x)  
+         self.ARITHMETIC_OPS = {
+-            '+': jnp.add,
+-            '-': jnp.subtract,
+-            '*': jnp.multiply,
+-            '/': jnp.divide
++            '+': lambda x, y, param: jnp.add(x, y),
++            '-': lambda x, y, param: jnp.subtract(x, y),
++            '*': lambda x, y, param: jnp.multiply(x, y),
++            '/': lambda x, y, param: jnp.divide(x, y)
+         }    
+         self.RELATIONAL_OPS = {
+-            '>=': jnp.greater_equal,
+-            '<=': jnp.less_equal,
+-            '<': jnp.less,
+-            '>': jnp.greater,
+-            '==': jnp.equal,
+-            '~=': jnp.not_equal
++            '>=': lambda x, y, param: jnp.greater_equal(x, y),
++            '<=': lambda x, y, param: jnp.less_equal(x, y),
++            '<': lambda x, y, param: jnp.less(x, y),
++            '>': lambda x, y, param: jnp.greater(x, y),
++            '==': lambda x, y, param: jnp.equal(x, y),
++            '~=': lambda x, y, param: jnp.not_equal(x, y)
+         }
+-        self.LOGICAL_NOT = jnp.logical_not
++        self.LOGICAL_NOT = lambda x, param: jnp.logical_not(x)
+         self.LOGICAL_OPS = {
+-            '^': jnp.logical_and,
+-            '&': jnp.logical_and,
+-            '|': jnp.logical_or,
+-            '~': jnp.logical_xor,
+-            '=>': lambda e1, e2: jnp.logical_or(jnp.logical_not(e1), e2),
+-            '<=>': jnp.equal
++            '^': lambda x, y, param: jnp.logical_and(x, y),
++            '&': lambda x, y, param: jnp.logical_and(x, y),
++            '|': lambda x, y, param: jnp.logical_or(x, y),
++            '~': lambda x, y, param: jnp.logical_xor(x, y),
++            '=>': lambda x, y, param: jnp.logical_or(jnp.logical_not(x), y),
++            '<=>': lambda x, y, param: jnp.equal(x, y)
+         }
+         self.AGGREGATION_OPS = {
+-            'sum': jnp.sum,
+-            'avg': jnp.mean,
+-            'prod': jnp.prod,
+-            'minimum': jnp.min,
+-            'maximum': jnp.max,
+-            'forall': jnp.all,
+-            'exists': jnp.any,
+-            'argmin': jnp.argmin,
+-            'argmax': jnp.argmax
++            'sum': lambda x, axis, param: jnp.sum(x, axis=axis),
++            'avg': lambda x, axis, param: jnp.mean(x, axis=axis),
++            'prod': lambda x, axis, param: jnp.prod(x, axis=axis),
++            'minimum': lambda x, axis, param: jnp.min(x, axis=axis),
++            'maximum': lambda x, axis, param: jnp.max(x, axis=axis),
++            'forall': lambda x, axis, param: jnp.all(x, axis=axis),
++            'exists': lambda x, axis, param: jnp.any(x, axis=axis),
++            'argmin': lambda x, axis, param: jnp.argmin(x, axis=axis),
++            'argmax': lambda x, axis, param: jnp.argmax(x, axis=axis)
+         }
+         self.KNOWN_UNARY = {        
+-            'abs': jnp.abs,
+-            'sgn': jnp.sign,
+-            'round': jnp.round,
+-            'floor': jnp.floor,
+-            'ceil': jnp.ceil,
+-            'cos': jnp.cos,
+-            'sin': jnp.sin,
+-            'tan': jnp.tan,
+-            'acos': jnp.arccos,
+-            'asin': jnp.arcsin,
+-            'atan': jnp.arctan,
+-            'cosh': jnp.cosh,
+-            'sinh': jnp.sinh,
+-            'tanh': jnp.tanh,
+-            'exp': jnp.exp,
+-            'ln': jnp.log,
+-            'sqrt': jnp.sqrt,
+-            'lngamma': scipy.special.gammaln,
+-            'gamma': lambda x: jnp.exp(scipy.special.gammaln(x))
++            'abs': lambda x, param: jnp.abs(x),
++            'sgn': lambda x, param: jnp.sign(x),
++            'round': lambda x, param: jnp.round(x),
++            'floor': lambda x, param: jnp.floor(x),
++            'ceil': lambda x, param: jnp.ceil(x),
++            'cos': lambda x, param: jnp.cos(x),
++            'sin': lambda x, param: jnp.sin(x),
++            'tan': lambda x, param: jnp.tan(x),
++            'acos': lambda x, param: jnp.arccos(x),
++            'asin': lambda x, param: jnp.arcsin(x),
++            'atan': lambda x, param: jnp.arctan(x),
++            'cosh': lambda x, param: jnp.cosh(x),
++            'sinh': lambda x, param: jnp.sinh(x),
++            'tanh': lambda x, param: jnp.tanh(x),
++            'exp': lambda x, param: jnp.exp(x),
++            'ln': lambda x, param: jnp.log(x),
++            'sqrt': lambda x, param: jnp.sqrt(x),
++            'lngamma': lambda x, param: scipy.special.gammaln(x),
++            'gamma': lambda x, param: jnp.exp(scipy.special.gammaln(x))
+         }        
+         self.KNOWN_BINARY = {
+-            'div': jnp.floor_divide,
+-            'mod': jnp.mod,
+-            'min': jnp.minimum,
+-            'max': jnp.maximum,
+-            'pow': jnp.power,
+-            'log': lambda x, y: jnp.log(x) / jnp.log(y),
+-            'hypot': jnp.hypot
++            'div': lambda x, y, param: jnp.floor_divide(x, y),
++            'mod': lambda x, y, param: jnp.mod(x, y),
++            'min': lambda x, y, param: jnp.minimum(x, y),
++            'max': lambda x, y, param: jnp.maximum(x, y),
++            'pow': lambda x, y, param: jnp.power(x, y),
++            'log': lambda x, y, param: jnp.log(x) / jnp.log(y),
++            'hypot': lambda x, y, param: jnp.hypot(x, y)
+         }
+         
+     # ===========================================================================
+     # main compilation subroutines
+     # ===========================================================================
+      
+     def compile(self, log_jax_expr: bool=False) -> None: 
+         '''Compiles the current RDDL into Jax expressions.
+         
+         :param log_jax_expr: whether to pretty-print the compiled Jax functions
+         to the log file
+         '''
+-        self.invariants = self._compile_constraints(self.rddl.invariants)
+-        self.preconditions = self._compile_constraints(self.rddl.preconditions)
+-        self.termination = self._compile_constraints(self.rddl.terminals)
+-        self.cpfs = self._compile_cpfs()
+-        self.reward = self._compile_reward()
++        info = {}
++        self.invariants = self._compile_constraints(self.rddl.invariants, info)
++        self.preconditions = self._compile_constraints(self.rddl.preconditions, info)
++        self.termination = self._compile_constraints(self.rddl.terminals, info)
++        self.cpfs = self._compile_cpfs(info)
++        self.reward = self._compile_reward(info)
++        self.model_params = info
+         
+         if log_jax_expr and self.logger is not None:
+             printed = self.print_jax()
+             printed_cpfs = '\n\n'.join(f'{k}: {v}' 
+                                        for (k, v) in printed['cpfs'].items())
+             printed_reward = printed['reward']
+             printed_invariants = '\n\n'.join(v for v in printed['invariants'])
+             printed_preconds = '\n\n'.join(v for v in printed['preconditions'])
+             printed_terminals = '\n\n'.join(v for v in printed['terminations'])
+-            message = (f'compiled JAX CPFs:\n\n'
+-                       f'{printed_cpfs}\n\n'
+-                       f'compiled JAX reward:\n\n'
+-                       f'{printed_reward}\n\n'
+-                       f'compiled JAX invariants:\n\n'
+-                       f'{printed_invariants}\n\n'
+-                       f'compiled JAX preconditions:\n\n'
+-                       f'{printed_preconds}\n\n'
+-                       f'compiled JAX terminations:\n\n'
+-                       f'{printed_terminals}\n')
++            printed_params = '\n'.join(f'{k}: {v}' for (k, v) in info.items())
++            message = (
++                f'compiled JAX CPFs:\n\n'
++                f'{printed_cpfs}\n\n'
++                f'compiled JAX reward:\n\n'
++                f'{printed_reward}\n\n'
++                f'compiled JAX invariants:\n\n'
++                f'{printed_invariants}\n\n'
++                f'compiled JAX preconditions:\n\n'
++                f'{printed_preconds}\n\n'
++                f'compiled JAX terminations:\n\n'
++                f'{printed_terminals}\n'
++                f'model parameters:\n'
++                f'{printed_params}\n'
++            )
+             self.logger.log(message)
+     
+-    def _compile_constraints(self, constraints):
+-        return [self._jax(expr, dtype=bool) for expr in constraints]
++    def _compile_constraints(self, constraints, info):
++        return [self._jax(expr, info, dtype=bool) for expr in constraints]
+         
+-    def _compile_cpfs(self):
++    def _compile_cpfs(self, info):
+         jax_cpfs = {}
+         for cpfs in self.levels.values():
+             for cpf in cpfs:
+                 _, expr = self.rddl.cpfs[cpf]
+                 prange = self.rddl.variable_ranges[cpf]
+-                dtype = JaxRDDLCompiler.JAX_TYPES.get(prange, JaxRDDLCompiler.INT)
+-                jax_cpfs[cpf] = self._jax(expr, dtype=dtype)
++                dtype = self.JAX_TYPES.get(prange, self.INT)
++                jax_cpfs[cpf] = self._jax(expr, info, dtype=dtype)
+         return jax_cpfs
+     
+-    def _compile_reward(self):
+-        return self._jax(self.rddl.reward, dtype=JaxRDDLCompiler.REAL)
++    def _compile_reward(self, info):
++        return self._jax(self.rddl.reward, info, dtype=self.REAL)
+     
+-    def compile_rollouts(self, policy: Callable, 
+-                         n_steps: int, n_batch: int,
++    def compile_rollouts(self, policy: Callable,
++                         n_steps: int, 
++                         n_batch: int,
+                          check_constraints: bool=False):
+         '''Compiles the current RDDL into a wrapped function that samples multiple
+         rollouts (state trajectories) in batched form for the given policy. The
+         wrapped function takes the policy parameters and RNG key as input, and
+         returns a dictionary of all logged information from the rollouts.
+         
+         :param policy: a Jax compiled function that takes the policy parameters, 
+@@ -197,59 +215,60 @@
+         
+         rddl = self.rddl
+         reward_fn, cpfs = self.reward, self.cpfs
+         preconds, invariants, terminals = \
+             self.preconditions, self.invariants, self.termination
+         
+         # do a single step update from the RDDL model
+-        def _jax_wrapped_single_step(key, params, step, subs):
++        def _jax_wrapped_single_step(key, policy_params, hyperparams, 
++                                     step, subs, model_params):
+             errors = NORMAL
+             
+             # compute action
+             key, subkey = random.split(key)
+             states = {var: values 
+                       for (var, values) in subs.items()
+                       if rddl.variable_types[var] == 'state-fluent'}
+-            actions = policy(subkey, params, step, states)
++            actions = policy(subkey, policy_params, hyperparams, step, states)
+             subs.update(actions)
+             
+             # check action preconditions
+             precond_check = True
+             if check_constraints:
+                 for precond in preconds:
+-                    sample, key, err = precond(subs, key)
++                    sample, key, err = precond(subs, model_params, key)
+                     precond_check = jnp.logical_and(precond_check, sample)
+                     errors |= err
+             
+             # calculate CPFs in topological order
+             for (name, cpf) in cpfs.items():
+-                subs[name], key, err = cpf(subs, key)
++                subs[name], key, err = cpf(subs, model_params, key)
+                 errors |= err                
+                 
+             # calculate the immediate reward
+-            reward, key, err = reward_fn(subs, key)
++            reward, key, err = reward_fn(subs, model_params, key)
+             errors |= err
+             
+             # set the next state to the current state
+             for (state, next_state) in rddl.next_state.items():
+                 subs[state] = subs[next_state]
+             
+             # check the state invariants
+             invariant_check = True
+             if check_constraints:
+                 for invariant in invariants:
+-                    sample, key, err = invariant(subs, key)
++                    sample, key, err = invariant(subs, model_params, key)
+                     invariant_check = jnp.logical_and(invariant_check, sample)
+                     errors |= err
+             
+             # check the termination (TODO: zero out reward in s if terminated)
+             terminated_check = False
+             if check_constraints:
+                 for terminal in terminals:
+-                    sample, key, err = terminal(subs, key)
++                    sample, key, err = terminal(subs, model_params, key)
+                     terminated_check = jnp.logical_or(terminated_check, sample)
+                     errors |= err
+             
+             log = {
+                 'pvar': subs,
+                 'action': actions,
+                 'reward': reward,
+@@ -258,72 +277,83 @@
+                 'invariant': invariant_check,
+                 'termination': terminated_check
+             }
+             return log, subs
+         
+         # do a batched step update from the RDDL model
+         def _jax_wrapped_batched_step(carry, step):
+-            key, params, subs = carry  
++            key, policy_params, hyperparams, subs, model_params = carry  
+             key, *subkeys = random.split(key, num=1 + n_batch)
++            keys = jnp.asarray(subkeys)
+             batched_step = jax.vmap(
+-                _jax_wrapped_single_step, in_axes=(0, None, None, 0)
++                _jax_wrapped_single_step,
++                in_axes=(0, None, None, None, 0, None)
+             ) 
+-            log, subs = batched_step(jnp.asarray(subkeys), params, step, subs)            
+-            carry = (key, params, subs)
++            log, subs = batched_step(
++                keys, 
++                policy_params, hyperparams, 
++                step, subs, 
++                model_params
++            )            
++            carry = (key, policy_params, hyperparams, subs, model_params)
+             return carry, log            
+             
+         # do a batched roll-out from the RDDL model
+-        def _jax_wrapped_batched_rollout(key, params, subs):
+-            start = (key, params, subs)
++        def _jax_wrapped_batched_rollout(key, policy_params, hyperparams, 
++                                         subs, model_params):
++            start = (key, policy_params, hyperparams, subs, model_params)
+             steps = jnp.arange(n_steps)
+             _, log = jax.lax.scan(_jax_wrapped_batched_step, start, steps)
+             log = jax.tree_map(partial(jnp.swapaxes, axis1=0, axis2=1), log)
+             return log
+         
+         return _jax_wrapped_batched_rollout
+     
+     # ===========================================================================
+     # error checks
+     # ===========================================================================
+     
+-    def print_jax(self) -> Dict:
++    def print_jax(self) -> Dict[str, object]:
+         '''Returns a dictionary containing the string representations of all 
+         Jax compiled expressions from the RDDL file.
+         '''
+         subs = self.init_values
++        params = self.model_params
+         key = jax.random.PRNGKey(42)
+         printed = {}
+-        printed['cpfs'] = {name: str(jax.make_jaxpr(expr)(subs, key))
++        printed['cpfs'] = {name: str(jax.make_jaxpr(expr)(subs, params, key))
+                            for (name, expr) in self.cpfs.items()}
+-        printed['reward'] = str(jax.make_jaxpr(self.reward)(subs, key))
+-        printed['invariants'] = [str(jax.make_jaxpr(expr)(subs, key))
++        printed['reward'] = str(jax.make_jaxpr(self.reward)(subs, params, key))
++        printed['invariants'] = [str(jax.make_jaxpr(expr)(subs, params, key))
+                                  for expr in self.invariants]
+-        printed['preconditions'] = [str(jax.make_jaxpr(expr)(subs, key))
++        printed['preconditions'] = [str(jax.make_jaxpr(expr)(subs, params, key))
+                                     for expr in self.preconditions]
+-        printed['terminations'] = [str(jax.make_jaxpr(expr)(subs, key))
++        printed['terminations'] = [str(jax.make_jaxpr(expr)(subs, params, key))
+                                    for expr in self.termination]
+         return printed
+         
+     @staticmethod
+     def _check_valid_op(expr, valid_ops):
+         etype, op = expr.etype
+         if op not in valid_ops:
+             valid_op_str = ','.join(valid_ops.keys())
+             raise RDDLNotImplementedError(
+                 f'{etype} operator {op} is not supported: '
+-                f'must be in {valid_op_str}.\n' + print_stack_trace(expr))
++                f'must be in {valid_op_str}.\n' + 
++                print_stack_trace(expr))
+     
+     @staticmethod
+     def _check_num_args(expr, required_args):
+         actual_args = len(expr.args)
+         if actual_args != required_args:
+             etype, op = expr.etype
+             raise RDDLInvalidNumberOfArgumentsError(
+                 f'{etype} operator {op} requires {required_args} arguments, '
+-                f'got {actual_args}.\n' + print_stack_trace(expr))
++                f'got {actual_args}.\n' + 
++                print_stack_trace(expr))
+         
+     ERROR_CODES = {
+         'NORMAL': 0,
+         'INVALID_CAST': 1,
+         'INVALID_PARAM_UNIFORM': 2,
+         'INVALID_PARAM_NORMAL': 4,
+         'INVALID_PARAM_EXPONENTIAL': 8,
+@@ -393,141 +423,168 @@
+         decomposes it into error strings.
+         '''
+         codes = JaxRDDLCompiler.get_error_codes(error)
+         messages = [JaxRDDLCompiler.INVERSE_ERROR_CODES[i] for i in codes]
+         return messages
+     
+     # ===========================================================================
++    # handling of auxiliary data (e.g. model tuning parameters)
++    # ===========================================================================
++    
++    def _unwrap(self, op, expr_id, info):
++        sep = JaxRDDLCompiler.MODEL_PARAM_TAG_SEPARATOR
++        jax_op, name = op, None
++        if isinstance(op, tuple):
++            jax_op, param = op
++            if param is not None:
++                tags, values = param
++                if isinstance(tags, tuple):
++                    name = sep.join(tags)
++                else:
++                    name = str(tags)
++                name = f'{name}{sep}{expr_id}'
++                if name in info:
++                    raise Exception(f'Model parameter {name} is already defined.')
++                info[name] = values
++        return jax_op, name
++    
++    def get_ids_of_parameterized_expressions(self) -> List[int]:
++        '''Returns a list of expression IDs that have tuning parameters.'''
++        sep = JaxRDDLCompiler.MODEL_PARAM_TAG_SEPARATOR
++        ids = [int(key.split(sep)[-1]) for key in self.model_params] 
++        return ids
++    
++    # ===========================================================================
+     # expression compilation
+     # ===========================================================================
+     
+-    def _jax(self, expr, dtype=None):
++    def _jax(self, expr, info, dtype=None):
+         etype, _ = expr.etype
+         if etype == 'constant':
+-            jax_expr = self._jax_constant(expr)
++            jax_expr = self._jax_constant(expr, info)
+         elif etype == 'pvar':
+-            jax_expr = self._jax_pvar(expr)
++            jax_expr = self._jax_pvar(expr, info)
+         elif etype == 'arithmetic':
+-            jax_expr = self._jax_arithmetic(expr)
++            jax_expr = self._jax_arithmetic(expr, info)
+         elif etype == 'relational':
+-            jax_expr = self._jax_relational(expr)
++            jax_expr = self._jax_relational(expr, info)
+         elif etype == 'boolean':
+-            jax_expr = self._jax_logical(expr)
++            jax_expr = self._jax_logical(expr, info)
+         elif etype == 'aggregation':
+-            jax_expr = self._jax_aggregation(expr)
++            jax_expr = self._jax_aggregation(expr, info)
+         elif etype == 'func':
+-            jax_expr = self._jax_functional(expr)
++            jax_expr = self._jax_functional(expr, info)
+         elif etype == 'control':
+-            jax_expr = self._jax_control(expr)
++            jax_expr = self._jax_control(expr, info)
+         elif etype == 'randomvar':
+-            jax_expr = self._jax_random(expr)
++            jax_expr = self._jax_random(expr, info)
+         elif etype == 'randomvector':
+-            jax_expr = self._jax_random_vector(expr)
++            jax_expr = self._jax_random_vector(expr, info)
+         elif etype == 'matrix':
+-            jax_expr = self._jax_matrix(expr)
++            jax_expr = self._jax_matrix(expr, info)
+         else:
+             raise RDDLNotImplementedError(
+                 f'Internal error: expression type {expr} is not supported.\n' + 
+                 print_stack_trace(expr))
+                 
+         if dtype is not None:
+             jax_expr = self._jax_cast(jax_expr, dtype)
+         
+         return jax_expr
+             
+     def _jax_cast(self, jax_expr, dtype):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_CAST']
+         
+-        def _jax_wrapped_cast(x, key):
+-            val, key, err = jax_expr(x, key)
++        def _jax_wrapped_cast(x, params, key):
++            val, key, err = jax_expr(x, params, key)
+             sample = jnp.asarray(val, dtype=dtype)
+             invalid_cast = jnp.logical_and(
+                 jnp.logical_not(jnp.can_cast(val, dtype)),
+                 jnp.any(sample != val))
+             err |= (invalid_cast * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_cast
+    
+     # ===========================================================================
+     # leaves
+     # ===========================================================================
+     
+-    def _jax_constant(self, expr):
++    def _jax_constant(self, expr, info):
+         NORMAL = JaxRDDLCompiler.ERROR_CODES['NORMAL']
+         cached_value = self.traced.cached_sim_info(expr)
+         
+-        def _jax_wrapped_constant(_, key):
++        def _jax_wrapped_constant(x, params, key):
+             sample = jnp.asarray(cached_value)
+             return sample, key, NORMAL
+ 
+         return _jax_wrapped_constant
+     
+     def _jax_pvar_slice(self, _slice):
+         NORMAL = JaxRDDLCompiler.ERROR_CODES['NORMAL']
+         
+-        def _jax_wrapped_pvar_slice(x, key):
++        def _jax_wrapped_pvar_slice(x, params, key):
+             return _slice, key, NORMAL
+         
+         return _jax_wrapped_pvar_slice
+             
+-    def _jax_pvar(self, expr):
++    def _jax_pvar(self, expr, info):
+         NORMAL = JaxRDDLCompiler.ERROR_CODES['NORMAL']
+         var, pvars = expr.args  
+         is_value, cached_info = self.traced.cached_sim_info(expr)
+         
+         # boundary case: free variable is converted to array (0, 1, 2...)
+         # boundary case: domain object is converted to canonical integer index
+         if is_value:
+             cached_value = cached_info
+ 
+-            def _jax_wrapped_object(_, key):
++            def _jax_wrapped_object(x, params, key):
+                 sample = jnp.asarray(cached_value)
+                 return sample, key, NORMAL
+             
+             return _jax_wrapped_object
+         
+         # boundary case: no shape information (e.g. scalar pvar)
+         elif cached_info is None:
+             
+-            def _jax_wrapped_pvar_scalar(x, key):
++            def _jax_wrapped_pvar_scalar(x, params, key):
+                 sample = jnp.asarray(x[var])
+                 return sample, key, NORMAL
+             
+             return _jax_wrapped_pvar_scalar
+         
+         # must slice and/or reshape value tensor to match free variables
+         else:
+             slices, axis, shape, op_code, op_args = cached_info 
+         
+             # compile nested expressions
+             if slices and op_code == RDDLObjectsTracer.NUMPY_OP_CODE.NESTED_SLICE:
+                 
+-                jax_nested_expr = [(self._jax(arg) 
++                jax_nested_expr = [(self._jax(arg, info) 
+                                     if _slice is None 
+                                     else self._jax_pvar_slice(_slice))
+                                    for (arg, _slice) in zip(pvars, slices)]    
+                 
+-                def _jax_wrapped_pvar_tensor_nested(x, key):
++                def _jax_wrapped_pvar_tensor_nested(x, params, key):
+                     error = NORMAL
+                     sample = jnp.asarray(x[var])
+                     new_slices = [None] * len(jax_nested_expr)
+                     for (i, jax_expr) in enumerate(jax_nested_expr):
+-                        new_slices[i], key, err = jax_expr(x, key)
++                        new_slices[i], key, err = jax_expr(x, params, key)
+                         error |= err
+                     new_slices = tuple(new_slices)
+                     sample = sample[new_slices]
+                     return sample, key, error
+                 
+                 return _jax_wrapped_pvar_tensor_nested
+                 
+             # tensor variable but no nesting  
+             else:
+     
+-                def _jax_wrapped_pvar_tensor_non_nested(x, key):
++                def _jax_wrapped_pvar_tensor_non_nested(x, params, key):
+                     sample = jnp.asarray(x[var])
+                     if slices:
+                         sample = sample[slices]
+                     if axis:
+                         sample = jnp.expand_dims(sample, axis=axis)
+                         sample = jnp.broadcast_to(sample, shape=shape)
+                     if op_code == RDDLObjectsTracer.NUMPY_OP_CODE.EINSUM:
+@@ -538,238 +595,248 @@
+                 
+                 return _jax_wrapped_pvar_tensor_non_nested
+     
+     # ===========================================================================
+     # mathematical
+     # ===========================================================================
+     
+-    @staticmethod
+-    def _jax_unary(jax_expr, jax_op, at_least_int=False, check_dtype=None):
++    def _jax_unary(self, jax_expr, jax_op, jax_param,
++                   at_least_int=False, check_dtype=None):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_CAST']
+-        
+-        def _jax_wrapped_unary_op(x, key):
+-            sample, key, err = jax_expr(x, key)
++
++        def _jax_wrapped_unary_op(x, params, key):
++            sample, key, err = jax_expr(x, params, key)
+             if at_least_int:
+-                sample = 1 * sample
+-            sample = jax_op(sample)
++                sample = self.ONE * sample
++            param = params.get(jax_param, None)
++            sample = jax_op(sample, param)
+             if check_dtype is not None:
+                 invalid_cast = jnp.logical_not(jnp.can_cast(sample, check_dtype))
+                 err |= (invalid_cast * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_unary_op
+     
+-    @staticmethod
+-    def _jax_binary(jax_lhs, jax_rhs, jax_op, at_least_int=False, check_dtype=None):
++    def _jax_binary(self, jax_lhs, jax_rhs, jax_op, jax_param,
++                    at_least_int=False, check_dtype=None):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_CAST']
+         
+-        def _jax_wrapped_binary_op(x, key):
+-            sample1, key, err1 = jax_lhs(x, key)
+-            sample2, key, err2 = jax_rhs(x, key)
++        def _jax_wrapped_binary_op(x, params, key):
++            sample1, key, err1 = jax_lhs(x, params, key)
++            sample2, key, err2 = jax_rhs(x, params, key)
+             if at_least_int:
+-                sample1 = 1 * sample1
+-                sample2 = 1 * sample2
+-            sample = jax_op(sample1, sample2)
++                sample1 = self.ONE * sample1
++                sample2 = self.ONE * sample2
++            param = params.get(jax_param, None)
++            sample = jax_op(sample1, sample2, param)
+             err = err1 | err2
+             if check_dtype is not None:
+                 invalid_cast = jnp.logical_not(jnp.logical_and(
+                     jnp.can_cast(sample1, check_dtype),
+                     jnp.can_cast(sample2, check_dtype)))
+                 err |= (invalid_cast * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_binary_op
+-        
+-    def _jax_arithmetic(self, expr):
++    
++    def _jax_arithmetic(self, expr, info):
+         _, op = expr.etype
+         valid_ops = self.ARITHMETIC_OPS
+         JaxRDDLCompiler._check_valid_op(expr, valid_ops)
+                     
+         args = expr.args
+         n = len(args)
+         
+         if n == 1 and op == '-':
+             arg, = args
+-            jax_expr = self._jax(arg)
+-            return JaxRDDLCompiler._jax_unary(
+-                jax_expr, jnp.negative, at_least_int=True)
++            jax_expr = self._jax(arg, info)
++            jax_op, jax_param = self._unwrap(self.NEGATIVE, expr.id, info)
++            return self._jax_unary(jax_expr, jax_op, jax_param, at_least_int=True)
+                     
+         elif n == 2:
+             lhs, rhs = args
+-            jax_lhs = self._jax(lhs)
+-            jax_rhs = self._jax(rhs)
+-            jax_op = valid_ops[op]
+-            return JaxRDDLCompiler._jax_binary(
+-                jax_lhs, jax_rhs, jax_op, at_least_int=True)
++            jax_lhs = self._jax(lhs, info)
++            jax_rhs = self._jax(rhs, info)
++            jax_op, jax_param = self._unwrap(valid_ops[op], expr.id, info)
++            return self._jax_binary(
++                jax_lhs, jax_rhs, jax_op, jax_param, at_least_int=True)
+         
+         JaxRDDLCompiler._check_num_args(expr, 2)
+     
+-    def _jax_relational(self, expr):
++    def _jax_relational(self, expr, info):
+         _, op = expr.etype
+         valid_ops = self.RELATIONAL_OPS
+         JaxRDDLCompiler._check_valid_op(expr, valid_ops)
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         lhs, rhs = expr.args
+-        jax_lhs = self._jax(lhs)
+-        jax_rhs = self._jax(rhs)
+-        jax_op = valid_ops[op]
+-        return JaxRDDLCompiler._jax_binary(
+-            jax_lhs, jax_rhs, jax_op, at_least_int=True)
++        jax_lhs = self._jax(lhs, info)
++        jax_rhs = self._jax(rhs, info)
++        jax_op, jax_param = self._unwrap(valid_ops[op], expr.id, info)
++        return self._jax_binary(
++            jax_lhs, jax_rhs, jax_op, jax_param, at_least_int=True)
+            
+-    def _jax_logical(self, expr):
++    def _jax_logical(self, expr, info):
+         _, op = expr.etype
+         valid_ops = self.LOGICAL_OPS    
+         JaxRDDLCompiler._check_valid_op(expr, valid_ops)
+                 
+         args = expr.args
+         n = len(args)
+         
+         if n == 1 and op == '~':
+             arg, = args
+-            jax_expr = self._jax(arg)
+-            return JaxRDDLCompiler._jax_unary(
+-                jax_expr, self.LOGICAL_NOT, check_dtype=bool)
++            jax_expr = self._jax(arg, info)
++            jax_op, jax_param = self._unwrap(self.LOGICAL_NOT, expr.id, info)
++            return self._jax_unary(jax_expr, jax_op, jax_param, check_dtype=bool)
+         
+         elif n == 2:
+             lhs, rhs = args
+-            jax_lhs = self._jax(lhs)
+-            jax_rhs = self._jax(rhs)
+-            jax_op = valid_ops[op]
+-            return JaxRDDLCompiler._jax_binary(
+-                jax_lhs, jax_rhs, jax_op, check_dtype=bool)
++            jax_lhs = self._jax(lhs, info)
++            jax_rhs = self._jax(rhs, info)
++            jax_op, jax_param = self._unwrap(valid_ops[op], expr.id, info)
++            return self._jax_binary(
++                jax_lhs, jax_rhs, jax_op, jax_param, check_dtype=bool)
+         
+         JaxRDDLCompiler._check_num_args(expr, 2)
+     
+-    def _jax_aggregation(self, expr):
++    def _jax_aggregation(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_CAST']
+         
+         _, op = expr.etype
+         valid_ops = self.AGGREGATION_OPS      
+         JaxRDDLCompiler._check_valid_op(expr, valid_ops) 
+         is_floating = op not in {'forall', 'exists'}
+         
+         * _, arg = expr.args  
+         _, axes = self.traced.cached_sim_info(expr)
+         
+-        jax_expr = self._jax(arg)
+-        jax_op = valid_ops[op]        
++        jax_expr = self._jax(arg, info)
++        jax_op, jax_param = self._unwrap(valid_ops[op], expr.id, info)
+         
+-        def _jax_wrapped_aggregation(x, key):
+-            sample, key, err = jax_expr(x, key)
++        def _jax_wrapped_aggregation(x, params, key):
++            sample, key, err = jax_expr(x, params, key)
+             if is_floating:
+-                sample = 1 * sample
++                sample = self.ONE * sample
+             else:
+                 invalid_cast = jnp.logical_not(jnp.can_cast(sample, bool))
+                 err |= (invalid_cast * ERR)
+-            sample = jax_op(sample, axis=axes)
++            param = params.get(jax_param, None)
++            sample = jax_op(sample, axis=axes, param=param)
+             return sample, key, err
+         
+         return _jax_wrapped_aggregation
+                
+-    def _jax_functional(self, expr):
++    def _jax_functional(self, expr, info):
+         _, op = expr.etype
+         
+         # unary function
+         if op in self.KNOWN_UNARY:
+             JaxRDDLCompiler._check_num_args(expr, 1)                            
+             arg, = expr.args
+-            jax_expr = self._jax(arg)
+-            jax_op = self.KNOWN_UNARY[op]
+-            return JaxRDDLCompiler._jax_unary(
+-                jax_expr, jax_op, at_least_int=True)
++            jax_expr = self._jax(arg, info)
++            jax_op, jax_param = self._unwrap(self.KNOWN_UNARY[op], expr.id, info)
++            return self._jax_unary(jax_expr, jax_op, jax_param, at_least_int=True)
+             
+         # binary function
+         elif op in self.KNOWN_BINARY:
+             JaxRDDLCompiler._check_num_args(expr, 2)                
+             lhs, rhs = expr.args
+-            jax_lhs = self._jax(lhs)
+-            jax_rhs = self._jax(rhs)
+-            jax_op = self.KNOWN_BINARY[op]
+-            return JaxRDDLCompiler._jax_binary(
+-                jax_lhs, jax_rhs, jax_op, at_least_int=True)
++            jax_lhs = self._jax(lhs, info)
++            jax_rhs = self._jax(rhs, info)
++            jax_op, jax_param = self._unwrap(self.KNOWN_BINARY[op], expr.id, info)
++            return self._jax_binary(
++                jax_lhs, jax_rhs, jax_op, jax_param, at_least_int=True)
+         
+         raise RDDLNotImplementedError(
+-                f'Function {op} is not supported.\n' + print_stack_trace(expr))   
++            f'Function {op} is not supported.\n' + 
++            print_stack_trace(expr))   
+     
+     # ===========================================================================
+     # control flow
+     # ===========================================================================
+     
+-    def _jax_control(self, expr):
++    def _jax_control(self, expr, info):
+         _, op = expr.etype        
+         if op == 'if':
+-            return self._jax_if(expr)
++            return self._jax_if(expr, info)
+         elif op == 'switch':
+-            return self._jax_switch(expr)
++            return self._jax_switch(expr, info)
+         
+         raise RDDLNotImplementedError(
+-                f'Control operator {op} is not supported.\n' + 
+-                print_stack_trace(expr))   
++            f'Control operator {op} is not supported.\n' + 
++            print_stack_trace(expr))   
+     
+     def _jax_if_helper(self):
+-        return jnp.where
++        
++        def _jax_wrapped_if_calc_exact(c, a, b, param):
++            return jnp.where(c, a, b)
++        
++        return _jax_wrapped_if_calc_exact
+     
+-    def _jax_if(self, expr):
++    def _jax_if(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_CAST']
+         JaxRDDLCompiler._check_num_args(expr, 3)
+-        jax_if = self._jax_if_helper()
++        jax_if, jax_param = self._unwrap(self._jax_if_helper(), expr.id, info)
+         
+         pred, if_true, if_false = expr.args        
+-        jax_pred = self._jax(pred)
+-        jax_true = self._jax(if_true)
+-        jax_false = self._jax(if_false)
+-        
+-        def _jax_wrapped_if_then_else(x, key):
+-            sample1, key, err1 = jax_pred(x, key)
+-            sample2, key, err2 = jax_true(x, key)
+-            sample3, key, err3 = jax_false(x, key)
+-            sample = jax_if(sample1, sample2, sample3)
++        jax_pred = self._jax(pred, info)
++        jax_true = self._jax(if_true, info)
++        jax_false = self._jax(if_false, info)
++        
++        def _jax_wrapped_if_then_else(x, params, key):
++            sample1, key, err1 = jax_pred(x, params, key)
++            sample2, key, err2 = jax_true(x, params, key)
++            sample3, key, err3 = jax_false(x, params, key)
++            param = params.get(jax_param, None)
++            sample = jax_if(sample1, sample2, sample3, param)
+             err = err1 | err2 | err3
+             invalid_cast = jnp.logical_not(jnp.can_cast(sample1, bool))
+             err |= (invalid_cast * ERR)
+             return sample, key, err
+             
+         return _jax_wrapped_if_then_else
+     
+     def _jax_switch_helper(self):
+         
+-        def _jax_switch_calc_exact(pred, cases):
++        def _jax_wrapped_switch_calc_exact(pred, cases, param):
+             pred = pred[jnp.newaxis, ...]
+             sample = jnp.take_along_axis(cases, pred, axis=0)
+             assert sample.shape[0] == 1
+             return sample[0, ...]
+ 
+-        return _jax_switch_calc_exact
++        return _jax_wrapped_switch_calc_exact
+         
+-    def _jax_switch(self, expr):
++    def _jax_switch(self, expr, info):
+         pred, *_ = expr.args             
+-        jax_pred = self._jax(pred)
+-        jax_switch = self._jax_switch_helper()
++        jax_pred = self._jax(pred, info)
++        jax_switch, jax_param = self._unwrap(
++            self._jax_switch_helper(), expr.id, info)
+         
+         # wrap cases as JAX expressions
+         cases, default = self.traced.cached_sim_info(expr) 
+-        jax_default = None if default is None else self._jax(default)
+-        jax_cases = [(jax_default if _case is None else self._jax(_case))
++        jax_default = None if default is None else self._jax(default, info)
++        jax_cases = [(jax_default if _case is None else self._jax(_case, info))
+                      for _case in cases]
+                     
+-        def _jax_wrapped_switch(x, key):
++        def _jax_wrapped_switch(x, params, key):
+             
+             # sample predicate
+-            sample_pred, key, err = jax_pred(x, key) 
++            sample_pred, key, err = jax_pred(x, params, key) 
+             
+             # sample cases
+             sample_cases = [None] * len(jax_cases)
+             for (i, jax_case) in enumerate(jax_cases):
+-                sample_cases[i], key, err_case = jax_case(x, key)
++                sample_cases[i], key, err_case = jax_case(x, params, key)
+                 err |= err_case                
+             sample_cases = jnp.asarray(sample_cases)
+             
+             # predicate (enum) is an integer - use it to extract from case array
+-            sample = jax_switch(sample_pred, sample_cases)
++            param = params.get(jax_param, None)
++            sample = jax_switch(sample_pred, sample_cases, param)
+             return sample, key, err    
+         
+         return _jax_wrapped_switch
+     
+     # ===========================================================================
+     # random variables
+     # ===========================================================================
+@@ -798,738 +865,743 @@
+     # NegativeBinomial: (no reparameterization)
+     # Poisson: (use truncation and Gumbel-softmax)
+     # Gamma, ChiSquare: (no shape reparameterization)
+     # Beta: (no reparameterization)
+     # Geometric: (implement safe floor)
+     # Student: (no reparameterization)
+     
+-    def _jax_random(self, expr):
++    def _jax_random(self, expr, info):
+         _, name = expr.etype
+         if name == 'KronDelta':
+-            return self._jax_kron(expr)        
++            return self._jax_kron(expr, info)        
+         elif name == 'DiracDelta':
+-            return self._jax_dirac(expr)
++            return self._jax_dirac(expr, info)
+         elif name == 'Uniform':
+-            return self._jax_uniform(expr)
++            return self._jax_uniform(expr, info)
+         elif name == 'Bernoulli':
+-            return self._jax_bernoulli(expr)
++            return self._jax_bernoulli(expr, info)
+         elif name == 'Normal':
+-            return self._jax_normal(expr)  
++            return self._jax_normal(expr, info)  
+         elif name == 'Poisson':
+-            return self._jax_poisson(expr)
++            return self._jax_poisson(expr, info)
+         elif name == 'Exponential':
+-            return self._jax_exponential(expr)
++            return self._jax_exponential(expr, info)
+         elif name == 'Weibull':
+-            return self._jax_weibull(expr) 
++            return self._jax_weibull(expr, info) 
+         elif name == 'Gamma':
+-            return self._jax_gamma(expr)
++            return self._jax_gamma(expr, info)
+         elif name == 'Binomial':
+-            return self._jax_binomial(expr)
++            return self._jax_binomial(expr, info)
+         elif name == 'NegativeBinomial':
+-            return self._jax_negative_binomial(expr)
++            return self._jax_negative_binomial(expr, info)
+         elif name == 'Beta':
+-            return self._jax_beta(expr)
++            return self._jax_beta(expr, info)
+         elif name == 'Geometric':
+-            return self._jax_geometric(expr)
++            return self._jax_geometric(expr, info)
+         elif name == 'Pareto':
+-            return self._jax_pareto(expr)
++            return self._jax_pareto(expr, info)
+         elif name == 'Student':
+-            return self._jax_student(expr)
++            return self._jax_student(expr, info)
+         elif name == 'Gumbel':
+-            return self._jax_gumbel(expr)
++            return self._jax_gumbel(expr, info)
+         elif name == 'Laplace':
+-            return self._jax_laplace(expr)
++            return self._jax_laplace(expr, info)
+         elif name == 'Cauchy':
+-            return self._jax_cauchy(expr)
++            return self._jax_cauchy(expr, info)
+         elif name == 'Gompertz':
+-            return self._jax_gompertz(expr)
++            return self._jax_gompertz(expr, info)
+         elif name == 'ChiSquare':
+-            return self._jax_chisquare(expr)
++            return self._jax_chisquare(expr, info)
+         elif name == 'Kumaraswamy':
+-            return self._jax_kumaraswamy(expr)
++            return self._jax_kumaraswamy(expr, info)
+         elif name == 'Discrete':
+-            return self._jax_discrete(expr, unnorm=False)
++            return self._jax_discrete(expr, info, unnorm=False)
+         elif name == 'UnnormDiscrete':
+-            return self._jax_discrete(expr, unnorm=True)
++            return self._jax_discrete(expr, info, unnorm=True)
+         elif name == 'Discrete(p)':
+-            return self._jax_discrete_pvar(expr, unnorm=False)
++            return self._jax_discrete_pvar(expr, info, unnorm=False)
+         elif name == 'UnnormDiscrete(p)':
+-            return self._jax_discrete_pvar(expr, unnorm=True)
++            return self._jax_discrete_pvar(expr, info, unnorm=True)
+         else:
+             raise RDDLNotImplementedError(
+                 f'Distribution {name} is not supported.\n' + 
+                 print_stack_trace(expr))
+         
+-    def _jax_kron(self, expr):
++    def _jax_kron(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_KRON_DELTA']
+         JaxRDDLCompiler._check_num_args(expr, 1)
+         arg, = expr.args
+-        arg = self._jax(arg)
++        arg = self._jax(arg, info)
+         
+         # just check that the sample can be cast to int
+-        def _jax_wrapped_distribution_kron(x, key):
+-            sample, key, err = arg(x, key)
+-            invalid_cast = jnp.logical_not(
+-                jnp.can_cast(sample, JaxRDDLCompiler.INT))
++        def _jax_wrapped_distribution_kron(x, params, key):
++            sample, key, err = arg(x, params, key)
++            invalid_cast = jnp.logical_not(jnp.can_cast(sample, self.INT))
+             err |= (invalid_cast * ERR)
+             return sample, key, err
+                         
+         return _jax_wrapped_distribution_kron
+     
+-    def _jax_dirac(self, expr):
++    def _jax_dirac(self, expr, info):
+         JaxRDDLCompiler._check_num_args(expr, 1)
+         arg, = expr.args
+-        arg = self._jax(arg, dtype=JaxRDDLCompiler.REAL)
++        arg = self._jax(arg, info, dtype=self.REAL)
+         return arg
+     
+-    def _jax_uniform(self, expr):
++    def _jax_uniform(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_UNIFORM']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_lb, arg_ub = expr.args
+-        jax_lb = self._jax(arg_lb)
+-        jax_ub = self._jax(arg_ub)
++        jax_lb = self._jax(arg_lb, info)
++        jax_ub = self._jax(arg_ub, info)
+         
+         # reparameterization trick U(a, b) = a + (b - a) * U(0, 1)
+-        def _jax_wrapped_distribution_uniform(x, key):
+-            lb, key, err1 = jax_lb(x, key)
+-            ub, key, err2 = jax_ub(x, key)
++        def _jax_wrapped_distribution_uniform(x, params, key):
++            lb, key, err1 = jax_lb(x, params, key)
++            ub, key, err2 = jax_ub(x, params, key)
+             key, subkey = random.split(key)
+-            U = random.uniform(
+-                key=subkey, shape=jnp.shape(lb), dtype=JaxRDDLCompiler.REAL)
++            U = random.uniform(key=subkey, shape=jnp.shape(lb), dtype=self.REAL)
+             sample = lb + (ub - lb) * U
+             out_of_bounds = jnp.logical_not(jnp.all(lb <= ub))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_uniform
+     
+-    def _jax_normal(self, expr):
++    def _jax_normal(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_NORMAL']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_mean, arg_var = expr.args
+-        jax_mean = self._jax(arg_mean)
+-        jax_var = self._jax(arg_var)
++        jax_mean = self._jax(arg_mean, info)
++        jax_var = self._jax(arg_var, info)
+         
+         # reparameterization trick N(m, s^2) = m + s * N(0, 1)
+-        def _jax_wrapped_distribution_normal(x, key):
+-            mean, key, err1 = jax_mean(x, key)
+-            var, key, err2 = jax_var(x, key)
++        def _jax_wrapped_distribution_normal(x, params, key):
++            mean, key, err1 = jax_mean(x, params, key)
++            var, key, err2 = jax_var(x, params, key)
+             std = jnp.sqrt(var)
+             key, subkey = random.split(key)
+-            Z = random.normal(
+-                key=subkey, shape=jnp.shape(mean), dtype=JaxRDDLCompiler.REAL)
++            Z = random.normal(key=subkey, shape=jnp.shape(mean), dtype=self.REAL)
+             sample = mean + std * Z
+             out_of_bounds = jnp.logical_not(jnp.all(var >= 0))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_normal
+     
+-    def _jax_exponential(self, expr):
++    def _jax_exponential(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_EXPONENTIAL']
+         JaxRDDLCompiler._check_num_args(expr, 1)
+         
+         arg_scale, = expr.args
+-        jax_scale = self._jax(arg_scale)
++        jax_scale = self._jax(arg_scale, info)
+         
+         # reparameterization trick Exp(s) = s * Exp(1)
+-        def _jax_wrapped_distribution_exp(x, key):
+-            scale, key, err = jax_scale(x, key)
++        def _jax_wrapped_distribution_exp(x, params, key):
++            scale, key, err = jax_scale(x, params, key)
+             key, subkey = random.split(key)
+             Exp1 = random.exponential(
+-                key=subkey, shape=jnp.shape(scale), dtype=JaxRDDLCompiler.REAL)
++                key=subkey, shape=jnp.shape(scale), dtype=self.REAL)
+             sample = scale * Exp1
+             out_of_bounds = jnp.logical_not(jnp.all(scale > 0))
+             err |= (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_exp
+     
+-    def _jax_weibull(self, expr):
++    def _jax_weibull(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_WEIBULL']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_shape, arg_scale = expr.args
+-        jax_shape = self._jax(arg_shape)
+-        jax_scale = self._jax(arg_scale)
++        jax_shape = self._jax(arg_shape, info)
++        jax_scale = self._jax(arg_scale, info)
+         
+         # reparameterization trick W(s, r) = r * (-ln(1 - U(0, 1))) ** (1 / s)
+-        def _jax_wrapped_distribution_weibull(x, key):
+-            shape, key, err1 = jax_shape(x, key)
+-            scale, key, err2 = jax_scale(x, key)
++        def _jax_wrapped_distribution_weibull(x, params, key):
++            shape, key, err1 = jax_shape(x, params, key)
++            scale, key, err2 = jax_scale(x, params, key)
+             key, subkey = random.split(key)
+-            U = random.uniform(
+-                key=subkey, shape=jnp.shape(scale), dtype=JaxRDDLCompiler.REAL)
++            U = random.uniform(key=subkey, shape=jnp.shape(scale), dtype=self.REAL)
+             sample = scale * jnp.power(-jnp.log1p(-U), 1.0 / shape)
+             out_of_bounds = jnp.logical_not(jnp.all((shape > 0) & (scale > 0)))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_weibull
+     
+     def _jax_bernoulli_helper(self):
+-        return random.bernoulli
+         
+-    def _jax_bernoulli(self, expr):
++        def _jax_wrapped_calc_bernoulli_exact(key, prob, param):
++            return random.bernoulli(key, prob)
++        
++        return _jax_wrapped_calc_bernoulli_exact
++        
++    def _jax_bernoulli(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_BERNOULLI']
+         JaxRDDLCompiler._check_num_args(expr, 1)
+-        bernoulli = self._jax_bernoulli_helper()
++        jax_bern, jax_param = self._unwrap(
++            self._jax_bernoulli_helper(), expr.id, info)
+         
+         arg_prob, = expr.args
+-        jax_prob = self._jax(arg_prob)
++        jax_prob = self._jax(arg_prob, info)
+         
+         # uses the implicit JAX subroutine
+-        def _jax_wrapped_distribution_bernoulli(x, key):
+-            prob, key, err = jax_prob(x, key)
++        def _jax_wrapped_distribution_bernoulli(x, params, key):
++            prob, key, err = jax_prob(x, params, key)
+             key, subkey = random.split(key)
+-            sample = bernoulli(subkey, prob)
++            param = params.get(jax_param, None)
++            sample = jax_bern(subkey, prob, param)
+             out_of_bounds = jnp.logical_not(jnp.all((prob >= 0) & (prob <= 1)))
+             err |= (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_bernoulli
+     
+-    def _jax_poisson(self, expr):
++    def _jax_poisson(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_POISSON']
+         JaxRDDLCompiler._check_num_args(expr, 1)
+         
+         arg_rate, = expr.args
+-        jax_rate = self._jax(arg_rate)
++        jax_rate = self._jax(arg_rate, info)
+         
+         # uses the implicit JAX subroutine
+-        def _jax_wrapped_distribution_poisson(x, key):
+-            rate, key, err = jax_rate(x, key)
++        def _jax_wrapped_distribution_poisson(x, params, key):
++            rate, key, err = jax_rate(x, params, key)
+             key, subkey = random.split(key)
+-            sample = random.poisson(
+-                key=subkey, lam=rate, dtype=JaxRDDLCompiler.INT)
++            sample = random.poisson(key=subkey, lam=rate, dtype=self.INT)
+             out_of_bounds = jnp.logical_not(jnp.all(rate >= 0))
+             err |= (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_poisson
+     
+-    def _jax_gamma(self, expr):
++    def _jax_gamma(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_GAMMA']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_shape, arg_scale = expr.args
+-        jax_shape = self._jax(arg_shape)
+-        jax_scale = self._jax(arg_scale)
++        jax_shape = self._jax(arg_shape, info)
++        jax_scale = self._jax(arg_scale, info)
+         
+         # partial reparameterization trick Gamma(s, r) = r * Gamma(s, 1)
+         # uses the implicit JAX subroutine for Gamma(s, 1) 
+-        def _jax_wrapped_distribution_gamma(x, key):
+-            shape, key, err1 = jax_shape(x, key)
+-            scale, key, err2 = jax_scale(x, key)
++        def _jax_wrapped_distribution_gamma(x, params, key):
++            shape, key, err1 = jax_shape(x, params, key)
++            scale, key, err2 = jax_scale(x, params, key)
+             key, subkey = random.split(key)
+-            Gamma = random.gamma(key=subkey, a=shape, dtype=JaxRDDLCompiler.REAL)
++            Gamma = random.gamma(key=subkey, a=shape, dtype=self.REAL)
+             sample = scale * Gamma
+             out_of_bounds = jnp.logical_not(jnp.all((shape > 0) & (scale > 0)))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_gamma
+     
+-    def _jax_binomial(self, expr):
++    def _jax_binomial(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_BINOMIAL']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_trials, arg_prob = expr.args
+-        jax_trials = self._jax(arg_trials)
+-        jax_prob = self._jax(arg_prob)
++        jax_trials = self._jax(arg_trials, info)
++        jax_prob = self._jax(arg_prob, info)
+         
+         # uses the JAX substrate of tensorflow-probability
+-        def _jax_wrapped_distribution_binomial(x, key):
+-            trials, key, err2 = jax_trials(x, key)       
+-            prob, key, err1 = jax_prob(x, key)
+-            trials = jnp.asarray(trials, JaxRDDLCompiler.REAL)
+-            prob = jnp.asarray(prob, JaxRDDLCompiler.REAL)
++        def _jax_wrapped_distribution_binomial(x, params, key):
++            trials, key, err2 = jax_trials(x, params, key)       
++            prob, key, err1 = jax_prob(x, params, key)
++            trials = jnp.asarray(trials, self.REAL)
++            prob = jnp.asarray(prob, self.REAL)
+             key, subkey = random.split(key)
+             dist = tfp.distributions.Binomial(total_count=trials, probs=prob)
+-            sample = dist.sample(seed=subkey).astype(JaxRDDLCompiler.INT)
++            sample = dist.sample(seed=subkey).astype(self.INT)
+             out_of_bounds = jnp.logical_not(jnp.all(
+                 (prob >= 0) & (prob <= 1) & (trials >= 0)))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_binomial
+     
+-    def _jax_negative_binomial(self, expr):
++    def _jax_negative_binomial(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_NEGATIVE_BINOMIAL']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_trials, arg_prob = expr.args
+-        jax_trials = self._jax(arg_trials)
+-        jax_prob = self._jax(arg_prob)
++        jax_trials = self._jax(arg_trials, info)
++        jax_prob = self._jax(arg_prob, info)
+         
+         # uses the JAX substrate of tensorflow-probability
+-        def _jax_wrapped_distribution_negative_binomial(x, key):
+-            trials, key, err2 = jax_trials(x, key)       
+-            prob, key, err1 = jax_prob(x, key)
+-            trials = jnp.asarray(trials, JaxRDDLCompiler.REAL)
+-            prob = jnp.asarray(prob, JaxRDDLCompiler.REAL)
++        def _jax_wrapped_distribution_negative_binomial(x, params, key):
++            trials, key, err2 = jax_trials(x, params, key)       
++            prob, key, err1 = jax_prob(x, params, key)
++            trials = jnp.asarray(trials, self.REAL)
++            prob = jnp.asarray(prob, self.REAL)
+             key, subkey = random.split(key)
+             dist = tfp.distributions.NegativeBinomial(
+                 total_count=trials, probs=prob)
+-            sample = dist.sample(seed=subkey).astype(JaxRDDLCompiler.INT)
++            sample = dist.sample(seed=subkey).astype(self.INT)
+             out_of_bounds = jnp.logical_not(jnp.all(
+                 (prob >= 0) & (prob <= 1) & (trials > 0)))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_negative_binomial    
+         
+-    def _jax_beta(self, expr):
++    def _jax_beta(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_BETA']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_shape, arg_rate = expr.args
+-        jax_shape = self._jax(arg_shape)
+-        jax_rate = self._jax(arg_rate)
++        jax_shape = self._jax(arg_shape, info)
++        jax_rate = self._jax(arg_rate, info)
+         
+         # uses the implicit JAX subroutine
+-        def _jax_wrapped_distribution_beta(x, key):
+-            shape, key, err1 = jax_shape(x, key)
+-            rate, key, err2 = jax_rate(x, key)
++        def _jax_wrapped_distribution_beta(x, params, key):
++            shape, key, err1 = jax_shape(x, params, key)
++            rate, key, err2 = jax_rate(x, params, key)
+             key, subkey = random.split(key)
+             sample = random.beta(key=subkey, a=shape, b=rate)
+             out_of_bounds = jnp.logical_not(jnp.all((shape > 0) & (rate > 0)))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_beta
+     
+-    def _jax_geometric(self, expr):
++    def _jax_geometric(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_GEOMETRIC']
+         JaxRDDLCompiler._check_num_args(expr, 1)
+         
+         arg_prob, = expr.args
+-        jax_prob = self._jax(arg_prob)
++        jax_prob = self._jax(arg_prob, info)
++        floor_op, jax_param = self._unwrap(
++            self.KNOWN_UNARY['floor'], expr.id, info)
+         
+         # reparameterization trick Geom(p) = floor(ln(U(0, 1)) / ln(p)) + 1
+-        def _jax_wrapped_distribution_geometric(x, key):
+-            prob, key, err = jax_prob(x, key)
++        def _jax_wrapped_distribution_geometric(x, params, key):
++            prob, key, err = jax_prob(x, params, key)
+             key, subkey = random.split(key)
+-            U = random.uniform(
+-                key=subkey, shape=jnp.shape(prob), dtype=JaxRDDLCompiler.REAL)
+-            sample = jnp.floor(jnp.log1p(-U) / jnp.log1p(-prob)) + 1
++            U = random.uniform(key=subkey, shape=jnp.shape(prob), dtype=self.REAL)
++            param = params.get(jax_param, None)
++            sample = floor_op(jnp.log1p(-U) / jnp.log1p(-prob), param) + 1
+             out_of_bounds = jnp.logical_not(jnp.all((prob >= 0) & (prob <= 1)))
+             err |= (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_geometric
+     
+-    def _jax_pareto(self, expr):
++    def _jax_pareto(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_PARETO']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_shape, arg_scale = expr.args
+-        jax_shape = self._jax(arg_shape)
+-        jax_scale = self._jax(arg_scale)
++        jax_shape = self._jax(arg_shape, info)
++        jax_scale = self._jax(arg_scale, info)
+         
+         # partial reparameterization trick Pareto(s, r) = r * Pareto(s, 1)
+         # uses the implicit JAX subroutine for Pareto(s, 1) 
+-        def _jax_wrapped_distribution_pareto(x, key):
+-            shape, key, err1 = jax_shape(x, key)
+-            scale, key, err2 = jax_scale(x, key)
++        def _jax_wrapped_distribution_pareto(x, params, key):
++            shape, key, err1 = jax_shape(x, params, key)
++            scale, key, err2 = jax_scale(x, params, key)
+             key, subkey = random.split(key)
+             sample = scale * random.pareto(key=subkey, b=shape)
+             out_of_bounds = jnp.logical_not(jnp.all((shape > 0) & (scale > 0)))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_pareto
+     
+-    def _jax_student(self, expr):
++    def _jax_student(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_STUDENT']
+         JaxRDDLCompiler._check_num_args(expr, 1)
+         
+         arg_df, = expr.args
+-        jax_df = self._jax(arg_df)
++        jax_df = self._jax(arg_df, info)
+         
+         # uses the implicit JAX subroutine for student(df)
+-        def _jax_wrapped_distribution_t(x, key):
+-            df, key, err = jax_df(x, key)
++        def _jax_wrapped_distribution_t(x, params, key):
++            df, key, err = jax_df(x, params, key)
+             key, subkey = random.split(key)
+-            sample = random.t(key=subkey, df=df)
++            sample = random.t(key=subkey, df=df, shape=jnp.shape(df))
+             out_of_bounds = jnp.logical_not(jnp.all(df > 0))
+             err |= (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_t
+     
+-    def _jax_gumbel(self, expr):
++    def _jax_gumbel(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_GUMBEL']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_mean, arg_scale = expr.args
+-        jax_mean = self._jax(arg_mean)
+-        jax_scale = self._jax(arg_scale)
++        jax_mean = self._jax(arg_mean, info)
++        jax_scale = self._jax(arg_scale, info)
+         
+         # reparameterization trick Gumbel(m, s) = m + s * Gumbel(0, 1)
+-        def _jax_wrapped_distribution_gumbel(x, key):
+-            mean, key, err1 = jax_mean(x, key)
+-            scale, key, err2 = jax_scale(x, key)
++        def _jax_wrapped_distribution_gumbel(x, params, key):
++            mean, key, err1 = jax_mean(x, params, key)
++            scale, key, err2 = jax_scale(x, params, key)
+             key, subkey = random.split(key)
+             Gumbel01 = random.gumbel(
+-                key=subkey, shape=jnp.shape(mean), dtype=JaxRDDLCompiler.REAL)
++                key=subkey, shape=jnp.shape(mean), dtype=self.REAL)
+             sample = mean + scale * Gumbel01
+             out_of_bounds = jnp.logical_not(jnp.all(scale > 0))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_gumbel
+     
+-    def _jax_laplace(self, expr):
++    def _jax_laplace(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_LAPLACE']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_mean, arg_scale = expr.args
+-        jax_mean = self._jax(arg_mean)
+-        jax_scale = self._jax(arg_scale)
++        jax_mean = self._jax(arg_mean, info)
++        jax_scale = self._jax(arg_scale, info)
+         
+         # reparameterization trick Laplace(m, s) = m + s * Laplace(0, 1)
+-        def _jax_wrapped_distribution_laplace(x, key):
+-            mean, key, err1 = jax_mean(x, key)
+-            scale, key, err2 = jax_scale(x, key)
++        def _jax_wrapped_distribution_laplace(x, params, key):
++            mean, key, err1 = jax_mean(x, params, key)
++            scale, key, err2 = jax_scale(x, params, key)
+             key, subkey = random.split(key)
+             Laplace01 = random.laplace(
+-                key=subkey, shape=jnp.shape(mean), dtype=JaxRDDLCompiler.REAL)
++                key=subkey, shape=jnp.shape(mean), dtype=self.REAL)
+             sample = mean + scale * Laplace01
+             out_of_bounds = jnp.logical_not(jnp.all(scale > 0))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_laplace
+     
+-    def _jax_cauchy(self, expr):
++    def _jax_cauchy(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_CAUCHY']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_mean, arg_scale = expr.args
+-        jax_mean = self._jax(arg_mean)
+-        jax_scale = self._jax(arg_scale)
++        jax_mean = self._jax(arg_mean, info)
++        jax_scale = self._jax(arg_scale, info)
+         
+         # reparameterization trick Cauchy(m, s) = m + s * Cauchy(0, 1)
+-        def _jax_wrapped_distribution_cauchy(x, key):
+-            mean, key, err1 = jax_mean(x, key)
+-            scale, key, err2 = jax_scale(x, key)
++        def _jax_wrapped_distribution_cauchy(x, params, key):
++            mean, key, err1 = jax_mean(x, params, key)
++            scale, key, err2 = jax_scale(x, params, key)
+             key, subkey = random.split(key)
+             Cauchy01 = random.cauchy(
+-                key=subkey, shape=jnp.shape(mean), dtype=JaxRDDLCompiler.REAL)
++                key=subkey, shape=jnp.shape(mean), dtype=self.REAL)
+             sample = mean + scale * Cauchy01
+             out_of_bounds = jnp.logical_not(jnp.all(scale > 0))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_cauchy
+     
+-    def _jax_gompertz(self, expr):
++    def _jax_gompertz(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_GOMPERTZ']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_shape, arg_scale = expr.args
+-        jax_shape = self._jax(arg_shape)
+-        jax_scale = self._jax(arg_scale)
++        jax_shape = self._jax(arg_shape, info)
++        jax_scale = self._jax(arg_scale, info)
+         
+         # reparameterization trick Gompertz(s, r) = ln(1 - log(U(0, 1)) / s) / r
+-        def _jax_wrapped_distribution_gompertz(x, key):
+-            shape, key, err1 = jax_shape(x, key)
+-            scale, key, err2 = jax_scale(x, key)
++        def _jax_wrapped_distribution_gompertz(x, params, key):
++            shape, key, err1 = jax_shape(x, params, key)
++            scale, key, err2 = jax_scale(x, params, key)
+             key, subkey = random.split(key)
+-            U = random.uniform(
+-                key=subkey, shape=jnp.shape(scale), dtype=JaxRDDLCompiler.REAL)
++            U = random.uniform(key=subkey, shape=jnp.shape(scale), dtype=self.REAL)
+             sample = jnp.log(1.0 - jnp.log1p(-U) / shape) / scale
+             out_of_bounds = jnp.logical_not(jnp.all((shape > 0) & (scale > 0)))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_gompertz
+     
+-    def _jax_chisquare(self, expr):
++    def _jax_chisquare(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_CHISQUARE']
+         JaxRDDLCompiler._check_num_args(expr, 1)
+         
+         arg_df, = expr.args
+-        jax_df = self._jax(arg_df)
++        jax_df = self._jax(arg_df, info)
+         
+         # use the fact that ChiSquare(df) = Gamma(df/2, 2)
+-        def _jax_wrapped_distribution_chisquare(x, key):
+-            df, key, err1 = jax_df(x, key)
++        def _jax_wrapped_distribution_chisquare(x, params, key):
++            df, key, err1 = jax_df(x, params, key)
+             key, subkey = random.split(key)
+             shape = df / 2.0
+-            Gamma = random.gamma(key=subkey, a=shape, dtype=JaxRDDLCompiler.REAL)
++            Gamma = random.gamma(key=subkey, a=shape, dtype=self.REAL)
+             sample = 2.0 * Gamma
+             out_of_bounds = jnp.logical_not(jnp.all(df > 0))
+             err = err1 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_chisquare
+     
+-    def _jax_kumaraswamy(self, expr):
++    def _jax_kumaraswamy(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_KUMARASWAMY']
+         JaxRDDLCompiler._check_num_args(expr, 2)
+         
+         arg_a, arg_b = expr.args
+-        jax_a = self._jax(arg_a)
+-        jax_b = self._jax(arg_b)
++        jax_a = self._jax(arg_a, info)
++        jax_b = self._jax(arg_b, info)
+         
+         # uses the reparameterization K(a, b) = (1 - (1 - U(0, 1))^{1/b})^{1/a}
+-        def _jax_wrapped_distribution_kumaraswamy(x, key):
+-            a, key, err1 = jax_a(x, key)
+-            b, key, err2 = jax_b(x, key)
++        def _jax_wrapped_distribution_kumaraswamy(x, params, key):
++            a, key, err1 = jax_a(x, params, key)
++            b, key, err2 = jax_b(x, params, key)
+             key, subkey = random.split(key)
+-            U = random.uniform(
+-                key=subkey, shape=jnp.shape(a), dtype=JaxRDDLCompiler.REAL)            
++            U = random.uniform(key=subkey, shape=jnp.shape(a), dtype=self.REAL)            
+             sample = jnp.power(1.0 - jnp.power(U, 1.0 / b), 1.0 / a)
+             out_of_bounds = jnp.logical_not(jnp.all((a > 0) & (b > 0)))
+             err = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_kumaraswamy
+     
+     # ===========================================================================
+     # random variables with enum support
+     # ===========================================================================
+     
+     def _jax_discrete_helper(self):
+         
+-        def _jax_discrete_calc_exact(key, prob):
++        def _jax_wrapped_discrete_calc_exact(key, prob, param):
+             logits = jnp.log(prob)
+             sample = random.categorical(key=key, logits=logits, axis=-1)
+             out_of_bounds = jnp.logical_not(jnp.logical_and(
+                 jnp.all(prob >= 0),
+                 jnp.allclose(jnp.sum(prob, axis=-1), 1.0)))
+             return sample, out_of_bounds
+         
+-        return _jax_discrete_calc_exact
++        return _jax_wrapped_discrete_calc_exact
+             
+-    def _jax_discrete(self, expr, unnorm):
++    def _jax_discrete(self, expr, info, unnorm):
+         NORMAL = JaxRDDLCompiler.ERROR_CODES['NORMAL']
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_DISCRETE']
+-        jax_discrete = self._jax_discrete_helper()
++        jax_discrete, jax_param = self._unwrap(
++            self._jax_discrete_helper(), expr.id, info)
+         
+         ordered_args = self.traced.cached_sim_info(expr)
+-        jax_probs = [self._jax(arg) for arg in ordered_args]
++        jax_probs = [self._jax(arg, info) for arg in ordered_args]
+         
+-        def _jax_wrapped_distribution_discrete(x, key):
++        def _jax_wrapped_distribution_discrete(x, params, key):
+             
+             # sample case probabilities and normalize as needed
+             error = NORMAL
+             prob = [None] * len(jax_probs)
+             for (i, jax_prob) in enumerate(jax_probs):
+-                prob[i], key, error_pdf = jax_prob(x, key)
++                prob[i], key, error_pdf = jax_prob(x, params, key)
+                 error |= error_pdf
+             prob = jnp.stack(prob, axis=-1)
+             if unnorm:
+                 normalizer = jnp.sum(prob, axis=-1, keepdims=True)
+                 prob = prob / normalizer
+             
+             # dispatch to sampling subroutine
+             key, subkey = random.split(key)
+-            sample, out_of_bounds = jax_discrete(subkey, prob)
++            param = params.get(jax_param, None)
++            sample, out_of_bounds = jax_discrete(subkey, prob, param)
+             error |= (out_of_bounds * ERR)
+             return sample, key, error
+         
+         return _jax_wrapped_distribution_discrete
+     
+-    def _jax_discrete_pvar(self, expr, unnorm):
++    def _jax_discrete_pvar(self, expr, info, unnorm):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_DISCRETE']
+         JaxRDDLCompiler._check_num_args(expr, 1)
+-        jax_discrete = self._jax_discrete_helper()
++        jax_discrete, jax_param = self._unwrap(
++            self._jax_discrete_helper(), expr.id, info)
+         
+         _, args = expr.args
+         arg, = args
+-        jax_probs = self._jax(arg)
++        jax_probs = self._jax(arg, info)
+ 
+-        def _jax_wrapped_distribution_discrete_pvar(x, key):
++        def _jax_wrapped_distribution_discrete_pvar(x, params, key):
+             
+             # sample probabilities
+-            prob, key, error = jax_probs(x, key)
++            prob, key, error = jax_probs(x, params, key)
+             if unnorm:
+                 normalizer = jnp.sum(prob, axis=-1, keepdims=True)
+                 prob = prob / normalizer
+             
+             # dispatch to sampling subroutine
+             key, subkey = random.split(key)
+-            sample, out_of_bounds = jax_discrete(subkey, prob)
++            param = params.get(jax_param, None)
++            sample, out_of_bounds = jax_discrete(subkey, prob, param)
+             error |= (out_of_bounds * ERR)
+             return sample, key, error
+         
+         return _jax_wrapped_distribution_discrete_pvar
+ 
+     # ===========================================================================
+     # random vectors
+     # ===========================================================================
+     
+-    def _jax_random_vector(self, expr):
++    def _jax_random_vector(self, expr, info):
+         _, name = expr.etype
+         if name == 'MultivariateNormal':
+-            return self._jax_multivariate_normal(expr)   
++            return self._jax_multivariate_normal(expr, info)   
+         elif name == 'MultivariateStudent':
+-            return self._jax_multivariate_student(expr)  
++            return self._jax_multivariate_student(expr, info)  
+         elif name == 'Dirichlet':
+-            return self._jax_dirichlet(expr)
++            return self._jax_dirichlet(expr, info)
+         elif name == 'Multinomial':
+-            return self._jax_multinomial(expr)
++            return self._jax_multinomial(expr, info)
+         else:
+             raise RDDLNotImplementedError(
+                 f'Distribution {name} is not supported.\n' + 
+                 print_stack_trace(expr))
+     
+-    def _jax_multivariate_normal(self, expr): 
++    def _jax_multivariate_normal(self, expr, info): 
+         _, args = expr.args
+         mean, cov = args
+-        jax_mean = self._jax(mean)
+-        jax_cov = self._jax(cov)
++        jax_mean = self._jax(mean, info)
++        jax_cov = self._jax(cov, info)
+         index, = self.traced.cached_sim_info(expr)
+         
+         # reparameterization trick MN(m, LL') = LZ + m, where Z ~ Normal(0, 1)
+-        def _jax_wrapped_distribution_multivariate_normal(x, key):
++        def _jax_wrapped_distribution_multivariate_normal(x, params, key):
+             
+             # sample the mean and covariance
+-            sample_mean, key, err1 = jax_mean(x, key)
+-            sample_cov, key, err2 = jax_cov(x, key)
++            sample_mean, key, err1 = jax_mean(x, params, key)
++            sample_cov, key, err2 = jax_cov(x, params, key)
+             
+             # sample Normal(0, 1)
+             key, subkey = random.split(key)
+             Z = random.normal(
+                 key=subkey,
+                 shape=jnp.shape(sample_mean) + (1,),
+-                dtype=JaxRDDLCompiler.REAL)       
++                dtype=self.REAL)       
+             
+             # compute L s.t. cov = L * L' and reparameterize
+             L = jnp.linalg.cholesky(sample_cov)
+             sample = jnp.matmul(L, Z)[..., 0] + sample_mean
+             sample = jnp.moveaxis(sample, source=-1, destination=index)
+             err = err1 | err2
+             return sample, key, err
+         
+         return _jax_wrapped_distribution_multivariate_normal
+     
+-    def _jax_multivariate_student(self, expr):
++    def _jax_multivariate_student(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_MULTIVARIATE_STUDENT']
+         
+         _, args = expr.args
+         mean, cov, df = args
+-        jax_mean = self._jax(mean)
+-        jax_cov = self._jax(cov)
+-        jax_df = self._jax(df)
++        jax_mean = self._jax(mean, info)
++        jax_cov = self._jax(cov, info)
++        jax_df = self._jax(df, info)
+         index, = self.traced.cached_sim_info(expr)
+         
+         # reparameterization trick MN(m, LL') = LZ + m, where Z ~ StudentT(0, 1)
+-        def _jax_wrapped_distribution_multivariate_student(x, key):
++        def _jax_wrapped_distribution_multivariate_student(x, params, key):
+             
+             # sample the mean and covariance and degrees of freedom
+-            sample_mean, key, err1 = jax_mean(x, key)
+-            sample_cov, key, err2 = jax_cov(x, key)
+-            sample_df, key, err3 = jax_df(x, key)
++            sample_mean, key, err1 = jax_mean(x, params, key)
++            sample_cov, key, err2 = jax_cov(x, params, key)
++            sample_df, key, err3 = jax_df(x, params, key)
+             out_of_bounds = jnp.logical_not(jnp.all(sample_df > 0))
+             
+             # sample StudentT(0, 1, df) -- broadcast df to same shape as cov
+             sample_df = sample_df[..., jnp.newaxis, jnp.newaxis]
+             sample_df = jnp.broadcast_to(sample_df, shape=sample_mean.shape + (1,))
+             key, subkey = random.split(key)
+-            Z = random.t(key=subkey, df=sample_df, shape=sample_df.shape,
+-                         dtype=JaxRDDLCompiler.REAL)   
++            Z = random.t(key=subkey, df=sample_df, shape=jnp.shape(sample_df),
++                         dtype=self.REAL)   
+             
+             # compute L s.t. cov = L * L' and reparameterize
+             L = jnp.linalg.cholesky(sample_cov)
+             sample = jnp.matmul(L, Z)[..., 0] + sample_mean
+             sample = jnp.moveaxis(sample, source=-1, destination=index)
+             error = err1 | err2 | err3 | (out_of_bounds * ERR)
+             return sample, key, error
+         
+         return _jax_wrapped_distribution_multivariate_student
+     
+-    def _jax_dirichlet(self, expr):
++    def _jax_dirichlet(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_DIRICHLET']
+         
+         _, args = expr.args
+         alpha, = args
+-        jax_alpha = self._jax(alpha)
++        jax_alpha = self._jax(alpha, info)
+         index, = self.traced.cached_sim_info(expr)
+         
+         # sample Gamma(alpha_i, 1) and normalize across i
+-        def _jax_wrapped_distribution_dirichlet(x, key):
+-            alpha, key, error = jax_alpha(x, key)
++        def _jax_wrapped_distribution_dirichlet(x, params, key):
++            alpha, key, error = jax_alpha(x, params, key)
+             out_of_bounds = jnp.logical_not(jnp.all(alpha > 0))
+             error |= (out_of_bounds * ERR)
+             key, subkey = random.split(key)
+             Gamma = random.gamma(key=subkey, a=alpha)
+             sample = Gamma / jnp.sum(Gamma, axis=-1, keepdims=True)
+             sample = jnp.moveaxis(sample, source=-1, destination=index)
+             return sample, key, error
+         
+         return _jax_wrapped_distribution_dirichlet
+     
+-    def _jax_multinomial(self, expr):
++    def _jax_multinomial(self, expr, info):
+         ERR = JaxRDDLCompiler.ERROR_CODES['INVALID_PARAM_MULTINOMIAL']
+         
+         _, args = expr.args
+         trials, prob = args
+-        jax_trials = self._jax(trials)
+-        jax_prob = self._jax(prob)
++        jax_trials = self._jax(trials, info)
++        jax_prob = self._jax(prob, info)
+         index, = self.traced.cached_sim_info(expr)
+         
+-        def _jax_wrapped_distribution_multinomial(x, key):
+-            trials, key, err1 = jax_trials(x, key)
+-            prob, key, err2 = jax_prob(x, key)
+-            trials = jnp.asarray(trials, JaxRDDLCompiler.REAL)
+-            prob = jnp.asarray(prob, JaxRDDLCompiler.REAL)
++        def _jax_wrapped_distribution_multinomial(x, params, key):
++            trials, key, err1 = jax_trials(x, params, key)
++            prob, key, err2 = jax_prob(x, params, key)
++            trials = jnp.asarray(trials, self.REAL)
++            prob = jnp.asarray(prob, self.REAL)
+             key, subkey = random.split(key)
+             dist = tfp.distributions.Multinomial(total_count=trials, probs=prob)
+-            sample = dist.sample(seed=subkey).astype(JaxRDDLCompiler.INT)
++            sample = dist.sample(seed=subkey).astype(self.INT)
+             sample = jnp.moveaxis(sample, source=-1, destination=index)
+             out_of_bounds = jnp.logical_not(jnp.all(
+-                (prob >= 0) & 
+-                jnp.allclose(jnp.sum(prob, axis=-1), 1.0) & 
+-                (trials >= 0)))
++                (prob >= 0)
++                & jnp.allclose(jnp.sum(prob, axis=-1), 1.0)
++                & (trials >= 0)))
+             error = err1 | err2 | (out_of_bounds * ERR)
+             return sample, key, error            
+         
+         return _jax_wrapped_distribution_multinomial
+     
+     # ===========================================================================
+     # matrix algebra
+     # ===========================================================================
+     
+-    def _jax_matrix(self, expr):
++    def _jax_matrix(self, expr, info):
+         _, op = expr.etype
+         if op == 'det':
+-            return self._jax_matrix_det(expr)
++            return self._jax_matrix_det(expr, info)
+         elif op == 'inverse':
+-            return self._jax_matrix_inv(expr, pseudo=False)
++            return self._jax_matrix_inv(expr, info, pseudo=False)
+         elif op == 'pinverse':
+-            return self._jax_matrix_inv(expr, pseudo=True)
++            return self._jax_matrix_inv(expr, info, pseudo=True)
+         else:
+             raise RDDLNotImplementedError(
+                 f'Matrix operation {op} is not supported.\n' + 
+                 print_stack_trace(expr))
+     
+-    def _jax_matrix_det(self, expr):
++    def _jax_matrix_det(self, expr, info):
+         * _, arg = expr.args
+-        jax_arg = self._jax(arg)
++        jax_arg = self._jax(arg, info)
+         
+-        def _jax_wrapped_matrix_operation_det(x, key):
+-            sample_arg, key, error = jax_arg(x, key)
++        def _jax_wrapped_matrix_operation_det(x, params, key):
++            sample_arg, key, error = jax_arg(x, params, key)
+             sample = jnp.linalg.det(sample_arg)
+             return sample, key, error
+         
+         return _jax_wrapped_matrix_operation_det
+     
+-    def _jax_matrix_inv(self, expr, pseudo):
++    def _jax_matrix_inv(self, expr, info, pseudo):
+         _, arg = expr.args
+-        jax_arg = self._jax(arg)
++        jax_arg = self._jax(arg, info)
+         indices = self.traced.cached_sim_info(expr)
+         op = jnp.linalg.pinv if pseudo else jnp.linalg.inv
+         
+-        def _jax_wrapped_matrix_operation_inv(x, key):
+-            sample_arg, key, error = jax_arg(x, key)
++        def _jax_wrapped_matrix_operation_inv(x, params, key):
++            sample_arg, key, error = jax_arg(x, params, key)
+             sample = op(sample_arg)
+             sample = jnp.moveaxis(sample, source=(-2, -1), destination=indices)
+             return sample, key, error
+         
+         return _jax_wrapped_matrix_operation_inv
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Jax/JaxRDDLSimulator.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Jax/JaxRDDLSimulator.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -1,9 +1,10 @@
+ import jax
+ import numpy as np
++np.seterr(all='raise')
+ from typing import Dict
+ 
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLActionPreconditionNotSatisfiedError
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLInvalidExpressionError
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLStateInvariantNotSatisfiedError
+ 
+ from pyRDDLGym.Core.Compiler.RDDLLiftedModel import RDDLLiftedModel
+@@ -57,22 +58,23 @@
+         self.traced = compiled.traced
+         
+         self.invariants = jax.tree_map(jax.jit, compiled.invariants)
+         self.preconds = jax.tree_map(jax.jit, compiled.preconditions)
+         self.terminals = jax.tree_map(jax.jit, compiled.termination)
+         self.reward = jax.jit(compiled.reward)
+         jax_cpfs = jax.tree_map(jax.jit, compiled.cpfs)
++        self.model_params = compiled.model_params
+         
+         # level analysis
+         self.cpfs = []  
+         for cpfs in self.levels.values():
+             for cpf in cpfs:
+                 expr = jax_cpfs[cpf]
+                 prange = rddl.variable_ranges[cpf]
+-                dtype = JaxRDDLCompiler.JAX_TYPES.get(prange, JaxRDDLCompiler.INT)
++                dtype = compiled.JAX_TYPES.get(prange, compiled.INT)
+                 self.cpfs.append((cpf, expr, dtype))
+         
+         # initialize all fluent and non-fluent values    
+         self.subs = self.init_values.copy() 
+         self.state = None 
+         self.noop_actions = {var: values 
+                              for (var, values) in self.init_values.items() 
+@@ -80,51 +82,54 @@
+         self._pomdp = bool(rddl.observ)
+         
+     def handle_error_code(self, error, msg) -> None:
+         if self.raise_error:
+             errors = JaxRDDLCompiler.get_error_messages(error)
+             if errors:
+                 message = f'Internal error in evaluation of {msg}:\n'
+-                errors = '\n'.join(f'{i + 1}. {s}' for i, s in enumerate(errors))
++                errors = '\n'.join(f'{i + 1}. {s}' for (i, s) in enumerate(errors))
+                 raise RDDLInvalidExpressionError(message + errors)
+     
+     def check_state_invariants(self) -> None:
+         '''Throws an exception if the state invariants are not satisfied.'''
+         for (i, invariant) in enumerate(self.invariants):
+-            sample, self.key, error = invariant(self.subs, self.key)
++            sample, self.key, error = invariant(
++                self.subs, self.model_params, self.key)
+             self.handle_error_code(error, f'invariant {i + 1}')            
+             if not bool(sample):
+                 raise RDDLStateInvariantNotSatisfiedError(
+                     f'Invariant {i + 1} is not satisfied.')
+     
+     def check_action_preconditions(self, actions: Args) -> None:
+         '''Throws an exception if the action preconditions are not satisfied.'''
+         actions = self._process_actions(actions)
+         subs = self.subs
+         subs.update(actions)
+         
+         for (i, precond) in enumerate(self.preconds):
+-            sample, self.key, error = precond(subs, self.key)
++            sample, self.key, error = precond(subs, self.model_params, self.key)
+             self.handle_error_code(error, f'precondition {i + 1}')            
+             if not bool(sample):
+                 raise RDDLActionPreconditionNotSatisfiedError(
+                     f'Precondition {i + 1} is not satisfied.')
+     
+     def check_terminal_states(self) -> bool:
+         '''return True if a terminal state has been reached.'''
+         for (i, terminal) in enumerate(self.terminals):
+-            sample, self.key, error = terminal(self.subs, self.key)
++            sample, self.key, error = terminal(
++                self.subs, self.model_params, self.key)
+             self.handle_error_code(error, f'termination {i + 1}')
+             if bool(sample):
+                 return True
+         return False
+     
+     def sample_reward(self) -> float:
+         '''Samples the current reward given the current state and action.'''
+-        reward, self.key, error = self.reward(self.subs, self.key)
++        reward, self.key, error = self.reward(
++            self.subs, self.model_params, self.key)
+         self.handle_error_code(error, 'reward function')
+         return float(reward)
+     
+     def step(self, actions: Args) -> Args:
+         '''Samples and returns the next state from the cpfs.
+         
+         :param actions: a dict mapping current action fluents to their values
+@@ -132,15 +137,15 @@
+         rddl = self.rddl
+         actions = self._process_actions(actions)
+         subs = self.subs
+         subs.update(actions)
+         
+         # compute CPFs in topological order
+         for (cpf, expr, _) in self.cpfs:
+-            subs[cpf], self.key, error = expr(subs, self.key)
++            subs[cpf], self.key, error = expr(subs, self.model_params, self.key)
+             self.handle_error_code(error, f'CPF <{cpf}>')            
+                 
+         # sample reward
+         reward = self.sample_reward()
+         
+         # update state
+         self.state = {}
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/RDDLReader.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/RDDLReader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/cpf.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/cpf.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/domain.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/domain.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/expr.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/expr.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/instance.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/instance.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/nonfluents.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/nonfluents.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/parser.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/parser.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/parsetab.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/parsetab.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/pvariable.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/pvariable.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/rddl.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/rddl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Parser/utils.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Parser/utils.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Core/Simulator/RDDLSimulator.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Core/Simulator/RDDLSimulator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Continuous/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Continuous/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Continuous/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Continuous/instance0.rddl`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -9,15 +9,15 @@
+ ////////////////////////////////////////////////////////////////////
+ 
+ non-fluents cart_pole_con_0 {
+     domain = cart_pole_continuous;
+ }
+ 
+ // Specify cart pole with default settings
+-instance inst_cart_pole_con {
++instance inst_cart_pole_con_0 {
+ 
+ 	domain = cart_pole_continuous;
+ 
+ 	non-fluents = cart_pole_con_0;
+ 
+ 	init-state {
+ 	    pos = 0.0;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Discrete/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Discrete/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/CartPole/Discrete/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/CartPole/Discrete/instance0.rddl`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -9,15 +9,15 @@
+ ////////////////////////////////////////////////////////////////////
+ 
+ non-fluents cart_pole_disc_0 {
+     domain = cart_pole_discrete;
+ }
+ 
+ // Specify cart pole with default settings
+-instance inst_cart_pole_disc {
++instance inst_cart_pole_disc_0 {
+ 
+ 	domain = cart_pole_discrete;
+ 
+ 	non-fluents = cart_pole_disc_0;
+ 
+ 	init-state {
+ 	    pos = 0.0;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Elevators/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Elevators/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Elevators/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Elevators/instance0.rddl`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -33,15 +33,15 @@
+ 		ADJACENT-UP(f3,f4) 		= true;
+ 		TOP-FLOOR(f4) 			= true;
+ 		BOTTOM-FLOOR(f0) 		= true;
+ 		PRECEDENCE(e0, e1)		= true;
+  	}; 
+  }
+  
+-instance elevators_int_inst_mdp { 
++instance elevators_int_inst_mdp_0 {
+ 
+ 	domain = elevators_int_mdp; 
+ 
+  	non-fluents = elevators;
+ 
+ 	init-state { 
+ 		elevator-at-floor(e0, f0);
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Elevators/instance1.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Elevators/instance1.rddl`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -39,15 +39,15 @@
+ 		BOTTOM-FLOOR(f0) 		= true;
+ 		PRECEDENCE(e0, e1)		= true;
+ 		PRECEDENCE(e0, e2)		= true;
+ 		PRECEDENCE(e1, e2)		= true;
+  	}; 
+  }
+  
+-instance elevators_int_inst_mdp { 
++instance elevators_int_inst_mdp_1 {
+ 
+ 	domain = elevators_int_mdp; 
+ 
+  	non-fluents = elevators3;
+ 
+ 	init-state { 
+ 		elevator-at-floor(e0, f0);
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/ExampleManager.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/ExampleManager.py`
+
+ * *Files 15% similar despite different names*
+
+```diff
+@@ -1,15 +1,16 @@
+ import configparser
+ import csv
+ import os
+ import re
+ 
+ from pyRDDLGym.Core.ErrorHandling.RDDLException import RDDLEnvironmentNotExist, RDDLInstanceNotExist
++# from pyRDDLGym.Examples.InstanceGenerators.UAVInstanceGenerator import UAVInstanceGenerator
+ 
+-HEADER = ['name', 'description', 'location', 'instances', 'viz']
++HEADER = ['name', 'description', 'location', 'instances', 'viz', 'generator']
+ 
+ 
+ def rebuild():
+     path = os.path.dirname(os.path.abspath(__file__))    
+     # path_to_manifest = os.path.join(path, '../Domains/manifest.csv')
+     path_to_manifest = os.path.join(path, 'manifest.csv')
+     print (path, path_to_manifest)
+@@ -27,20 +28,21 @@
+                 config = configparser.RawConfigParser()
+                 config.optionxform = str 
+                 config.read(infopath)
+                 general = dict(config.items('General'))
+                 name = general.get('name', None)
+                 desc = general.get('description', None)
+                 viz = general.get('viz', None)
++                generator=general.get('generator', None)
+                 loc = dirpath[len(path):]
+                 loc = loc.replace('\\', '/') + '/'
+                 instances = [fname[8:-5] for fname in filenames 
+                              if fname.startswith('instance') and fname.endswith('.rddl')]
+                 instances = ','.join(instances)
+-                writer.writerow([name, desc, loc, instances, viz])
++                writer.writerow([name, desc, loc, instances, viz, generator])
+ 
+ 
+ def load():
+     path = os.path.dirname(os.path.abspath(__file__))
+     # path_to_manifest = os.path.join(path, '../Domains/manifest.csv')
+     path_to_manifest = os.path.join(path, 'manifest.csv')
+     if not os.path.isfile(path_to_manifest):
+@@ -104,14 +106,35 @@
+         if viz_info:
+             module, viz_class_name = viz_info.strip().split('.')
+             viz_package_name = 'pyRDDLGym.Visualizer.' + module
+             viz_package = __import__(viz_package_name, {}, {}, viz_class_name)
+             viz = getattr(viz_package, viz_class_name)
+         return viz
+ 
++    def generate_instance(self, name, params, path=None):
++        if path is None:
++            path = self.path_to_env
++
++        generator_info = ExampleManager.EXP_DICT[self.env]['generator']
++        if generator_info == '':
++            return None
++
++        module, generator_class_name = generator_info.strip().split('.')
++        generator_package_name = 'pyRDDLGym.Examples.InstanceGenerators.' + module
++        generator_package = __import__(generator_package_name, {}, {}, generator_class_name)
++        generator = getattr(generator_package, generator_class_name)
++
++        generator = generator()
++        generator.save_instance(name, params, path)
++        return os.path.join(path, f'instance{name}.rddl')
++
++
++
++
++
+     @staticmethod
+     def ListExamples():
+         print('Available example environment(s):')
+         for key, values in ExampleManager.EXP_DICT.items():
+             print(key + ' -> ' + values['description'])
+     
+     @staticmethod
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/HVAC/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/HVAC/domain.rddl`
+
+ * *Files 17% similar despite different names*
+
+```diff
+@@ -1,67 +1,76 @@
+ // based on the paper "NONLINEAR OPTIMAL CONTROL OF HVAC SYSTEMS"
+ // by Ti{\u{g}}rek, T{\^u}ba and Dasgupta, Soura and Smith, Theodore F.
+-
++// added an occupancy to enforce learning an efficient policy
+ 
+ domain hvac{
+ 
+ 	types {
+ 		zone	: object;
+ 		heater	: object;
+ 	};
+ 
+ 	pvariables {
+ 
+ 		// constants
+ 		ADJ-ZONES(zone, zone)	: { non-fluent, bool, default = false };		// bi-directional adjecency between zones
+-		TEMP-OUT				: { non-fluent, real, default = 25 };			// outside temperature
++		TEMP-OUT				: { non-fluent, real, default = 3 };			// outside temperature
+ 		ADJ-HEATER(heater, zone): { non-fluent, bool, default = false }; 		// is a heater connected to a zone
+-		AIR-COST				: { non-fluent, real, default = 0.01 };			// air cost
+-		HEAT-COST				: { non-fluent, real, default = 0.001 };		// heat cost
+-		ZONE-DISCOMFORT-PENALTY	: { non-fluent, real, default = 0.1 };			// zone temperature out of range discomfort penalty
++		AIR-COST				: { non-fluent, real, default = 0.05 };			// air cost
++		HEAT-COST(heater)    	: { non-fluent, real, default = 5.0 };		    // heat cost
++		ZONE-DISCOMFORT-PENALTY	: { non-fluent, real, default = 20.0 };		    // zone temperature out of range discomfort penalty
+ 		TEMP-ZONE-MIN			: { non-fluent, real, default = 10 };			// minimum zone comfort temperature
+ 		TEMP-ZONE-MAX			: { non-fluent, real, default = 15 };			// maximum zone comfort temperature
+ 		OUT-AIR-FLOW			: { non-fluent, real, default = 0.05 };			// incoming vav from out flow (>0)
+ 		ZONE-VOL(zone)			: { non-fluent, real, default = 255 };			// zone air capacity
+ 		HEATER-VOL(heater)		: { non-fluent, real, default = 25.5 };			// heater air capacity
+-		K						: { non-fluent, real, default = 1195.95 };		// rho * C_p - air density and constant pressure specific heat of air respectivlly
++		K						: { non-fluent, real, default = 1195.95 };		// rho * C_p - air density and constant pressure specific heat of air respectively
++		K-dz                    : { non-fluent, real, default = 0.001 };         // temperature drop rate inside zone to the adj infinite reservoir temp (outside)
++		K-dh                    : { non-fluent, real, default = 0.003 };         // heater cooling down rate
+ 		DELTA-T					: { non-fluent, real, default = 0.1 };			// control time period
+ 		SIGMA(zone)				: { non-fluent, real, default = 0.1 };			// heat conductivity of room's walls
++		P-SWITCH(zone)          : { non-fluent, real, default = 0.0 };          // occupancy switch probability per period per zone
+ 
+ 		// interm fluents
+ 		temp-1(heater) : { interm-fluent, real };					// the temperature before the heater, from outside and circulated air
+ 
+ 		// states
+ 		temp-zone(zone) : { state-fluent, real, default = 1 };
+ 		temp-heater(heater) : { state-fluent, real, default = 1 };
++		occupied(zone)      : { state-fluent, bool, default = true };
+ 
+ 		// actions
+ 		fan-in(zone) : {action-fluent, real, default = 1 };
+ 		heat-input(heater)	: {action-fluent, real, default = 0 };
+ 
+ 	};
+ 
+ 	cpfs {
++	
++		// occupation switch: simplified to allow people to leave premises gradually (e.g. end of workday)
++		occupied'(?z) = occupied(?z) ^ Bernoulli(1.0 - P-SWITCH(?z));
+ 
+ 		// derived air temperature before each heater
+ 		temp-1(?h) = if ((sum_{?z : zone}[ADJ-HEATER(?h, ?z)]) > 0)
+ 		             then 1/(sum_{?z : zone}[ADJ-HEATER(?h, ?z)]) * (sum_{?z : zone}[ (temp-zone(?z) + (TEMP-OUT - temp-zone(?z)*OUT-AIR-FLOW/fan-in(?z)))*ADJ-HEATER(?h, ?z) ])
+ 		             else 0;
+ 
+ 		// heater's new output air temperature
+ 		temp-heater'(?h) =
++		                - K-dh * pow[temp-heater(?h) , 2] +
+                         if ((sum_{?z : zone}[ADJ-HEATER(?h, ?z)]) > 0)
+                         then temp-heater(?h)
+ 					         + DELTA-T / HEATER-VOL(?h) * (sum_{?z : zone} [ADJ-HEATER(?h, ?z)*fan-in(?z)]) / (sum_{?z : zone} [ADJ-HEATER(?h, ?z)]) * (temp-1(?h) - TEMP-OUT)
+ 					         + DELTA-T / (K * HEATER-VOL(?h)) * heat-input(?h)
+ 					    else temp-heater(?h)
+ 					         + DELTA-T / (K * HEATER-VOL(?h)) * heat-input(?h);
+ 
+ 		// zone's new inner temperature
+ 		temp-zone'(?z) =
++		                - K-dz * pow[temp-zone(?z) - TEMP-OUT, 2] +
+     		            if ((sum_{?h : heater}[ADJ-HEATER(?h, ?z)]) > 0)
+     		            then temp-zone(?z)
+     		                 + DELTA-T / (ZONE-VOL(?z) * (sum_{?h : heater}[ADJ-HEATER(?h, ?z)])) * fan-in(?z) * (sum_{?h : heater}[(temp-heater(?h) - temp-zone(?z)) * ADJ-HEATER(?h, ?z)])
+     		                 + DELTA-T * (sum_{?z2 : zone} [ ZONE-VOL(?z2)/ZONE-VOL(?z)*SIGMA(?z) * (temp-zone(?z2) - temp-zone(?z)) *
+ 							 (ADJ-ZONES(?z, ?z2) | ADJ-ZONES(?z2, ?z))])
+ 						else temp-zone(?z)
+ 						     + DELTA-T * (sum_{?z2 : zone} [ ZONE-VOL(?z2)/ZONE-VOL(?z)*SIGMA(?z) * (temp-zone(?z2) - temp-zone(?z)) *
+@@ -76,17 +85,23 @@
+ //							(ADJ-ZONES(?z, ?z2) | ADJ-ZONES(?z2, ?z))])
+ //					+ (if ((sum_{?h : heater}[ADJ-HEATER(?h, ?z)]) > 0))
+ //		            then DELTA-T / (ZONE-VOL(?z) * (sum_{?h : heater}[ADJ-HEATER(?h, ?z)])) * fan-in(?z) * (sum_{?h : heater}[(temp-heater(?h) - temp-zone(?z)) * ADJ-HEATER(?h, ?z)])
+ //		            else 0);
+ 
+ 	};
+ 
+-	reward = - HEAT-COST * (sum_{?h : heater}[pow[heat-input(?h), 2]])
++	reward = -(sum_{?h : heater}[HEAT-COST(?h) * pow[heat-input(?h), 2]])
+ 	         - AIR-COST * (sum_{?z : zone}[pow[fan-in(?z), 2]])
+-			 - ZONE-DISCOMFORT-PENALTY * (sum_{?z1 : zone}[ (temp-zone(?z1) < TEMP-ZONE-MIN) | (temp-zone(?z1) > TEMP-ZONE-MAX)]);
++			 - ZONE-DISCOMFORT-PENALTY * (sum_{?z1 : zone}[ 
++				if (occupied(?z1) ^ (temp-zone(?z1) < TEMP-ZONE-MIN))
++				   then pow[temp-zone(?z1) - TEMP-ZONE-MIN, 2]
++				else if (occupied(?z1) ^ (temp-zone(?z1) > TEMP-ZONE-MAX))
++				   then pow[temp-zone(?z1) - TEMP-ZONE-MAX, 2]
++				else 0.0]);
++			 //- ZONE-DISCOMFORT-PENALTY * (sum_{?z1 : zone}[ (temp-zone(?z1) < TEMP-ZONE-MIN) | (temp-zone(?z1) > TEMP-ZONE-MAX)]);
+ 
+ 
+ 	action-preconditions {
+ 		forall_{?z : zone} [ fan-in(?z) >= OUT-AIR-FLOW ];
+ 	};
+ 
+ 	// constraints:
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/MarsRover/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/MarsRover/domain.rddl`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -20,15 +20,15 @@
+ 		rover : object;
+ 		mineral : object;
+ 	}; 
+ 
+     pvariables {
+ 
+         // rover constants
+-        MAX-POWER(rover): { non-fluent, real, default = 0.05 };         // control norm constraint
++        MAX-POWER(rover): { non-fluent, real, default = 0.1 };         // control norm constraint
+         SCALE-FACTOR    : { non-fluent, real, default = 0.1 };          // time scale factor for dynamic equations
+ 
+         // minerals constants
+         MINERAL-AREA(mineral) : { non-fluent, real, default = 1 };            // mineral harvesting area
+         MINERAL-VALUE(mineral): { non-fluent, real, default = 1 };            // mineral harvesting value
+         MINERAL-POS-X(mineral): { non-fluent, real, default = 0 };            // mineral x location
+         MINERAL-POS-Y(mineral): { non-fluent, real, default = 0 };            // mineral y location
+@@ -72,15 +72,16 @@
+                     [sqrt [ pow[pos-x(?d) - MINERAL-POS-X(?m),2] + pow[pos-y(?d) - MINERAL-POS-Y(?m),2]] < MINERAL-AREA(?m) ^ harvest(?d)]];
+ 
+     };
+ 
+     // R = -sum u-x^2 + u-y^2 + sum minerals harvested - sum harvest actions
+     reward = [-sum_{?d : rover} [ pow[u-x(?d), 2] + pow[u-y(?d), 2]]] +
+              [sum_{?m : mineral }[if (exists_{?d : rover}
+-                        [(sqrt[pow[pos-x(?d) - MINERAL-POS-X(?m),2] + pow[pos-y(?d) - MINERAL-POS-Y(?m),2]] < MINERAL-AREA(?m)) ^ harvest(?d)])
++                        [(sqrt[pow[pos-x(?d) - MINERAL-POS-X(?m),2] + pow[pos-y(?d) - MINERAL-POS-Y(?m),2]] < MINERAL-AREA(?m)) 
++						 ^ harvest(?d) ^ ~mineral-harvested(?m)])
+                             then MINERAL-VALUE(?m)
+                             else 0.0]]
+              - [sum_{?d : rover} [harvest(?d)]];
+ 
+     state-invariants {
+         forall_{?m : mineral} [MINERAL-AREA(?m) > 0 ];
+     };
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/MarsRover/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/MarsRover/instance0.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -29,15 +29,15 @@
+ 		MINERAL-VALUE(m2) = 5;
+ 		MINERAL-AREA(m2) = 8;
+ 	};
+ 
+ }
+ 
+ // Specify three power plants with default settings
+-instance inst_mars_rover {
++instance inst_mars_rover_0 {
+ 
+ 	domain = mars_rover_science_mission;
+ 
+ 	non-fluents = rover2;
+ 
+ 	init-state {
+ 		vel-x(d1) = 1;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/domain.rddl`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -25,59 +25,62 @@
+ 		segment : object;
+ 	};
+ 	
+     pvariables {
+ 
+     	// physics constants
+ 		GRAVITY-MAG : { non-fluent, real, default = 0.0025 };       // force of gravity acting down
+-		FORCE-MAG 	: { non-fluent, real, default = 0.001 };	    // force applied to the side of the cart
++		FORCE-MAG 	: { non-fluent, real, default = 0.0015 };	    // force applied to the side of the cart
+ 
+ 		// valley shape defined by piecewise linear with x in [-1.2, 0.6] and y in [0, 1]
+ 		X-START(segment) : { non-fluent, real, default = -1.2 };    // starting x-position of segment
+ 		Y-START(segment) : { non-fluent, real, default = 0 };       // starting y-position of segment
+ 		X-END(segment)   : { non-fluent, real, default = 0.6 };     // ending x-position of segment
+ 		Y-END(segment)   : { non-fluent, real, default = 0 };	    // ending y-position of segment
+ 		
+ 		// bounds
+ 		MIN-POS  : { non-fluent, real, default = -1.2 };            // min position of cart
+ 		MAX-POS  : { non-fluent, real, default = 0.6 };			    // max position of cart
+ 		MAX-VEL  : { non-fluent, real, default = 0.07 };            // max velocity of cart
+ 		GOAL-MIN : { non-fluent, real, default = 0.5 };	            // desired x position of cart
+ 		VEL-MIN  : { non-fluent, real, default = 0.0 };             // desired velocity of the cart
+ 		
++		// reward const
++		GOAL-REWARD : { non-fluent, real, default = 100.0 };        // goal reward
++		ACTION-PENALTY : { non-fluent, real, default = 0.1 };       // action penalty multiplier for reward function
++		
+ 		// interm fluents
+ 		in-segment(segment) : { interm-fluent, bool };              // is the cart currently in this segment
+ 		pos-slope           : { interm-fluent, real };              // slope of current line segment
+ 		
+ 		// states
+        	pos    	: { state-fluent, real, default = -0.5 };          	// cart position
+        	vel   	: { state-fluent, real, default = 0 };              // cart velocity
+ 
+        	// actions
+-       	action : { action-fluent, real, default = 1 };              // whether to accelerate left (0), none (1) or right (2)
++       	action : { action-fluent, real, default = 0 };              // whether to accelerate left (-1) or right (1)
+     };
+ 
+     cpfs {
+ 		
+ 	    // get the slope of the segment the cart is currently in
+ 	    in-segment(?p) = (pos >= X-START(?p)) ^ (pos < X-END(?p));
+ 	    pos-slope = ( sum_{?p : segment} [ ((Y-END(?p) - Y-START(?p)) / (X-END(?p) - X-START(?p))) * in-segment(?p) ] );
+ 		
+ 	    // update the position of the cart
+ 	    pos' = max[min[pos + vel, MAX-POS], MIN-POS];
+ 		
+ 	    // update the velocity of the cart				
+-	    vel' = [ max[min[vel + (action - 1) * FORCE-MAG + (-GRAVITY-MAG) * pos-slope, MAX-VEL], -MAX-VEL] ];
++	    vel' = [ max[min[vel + action * FORCE-MAG + (-GRAVITY-MAG) * pos-slope, MAX-VEL], -MAX-VEL] ];
+     };
+ 
+-    // R = 1 as long as the pole is upright and the cart is not out of bounds
+-    reward = if((pos' >= GOAL-MIN) ^ (vel' >= VEL-MIN))
+-			    then 1.0
+-			    else 0.0;
+-	
++    // R = 100 only when the cart reaches the goal and the velocity is higher than the desired velocity
++	reward = (if((pos' >= GOAL-MIN) ^ (vel' >= VEL-MIN)) then GOAL-REWARD else 0.0)
++	          - (ACTION-PENALTY * pow[action, 2]);
++		
+ 	termination {
+ 		(pos >= GOAL-MIN) ^ (vel >= VEL-MIN);
+ 	};
+ 	
+     state-invariants {
+ 	
+ 		// check that state is within bounds
+@@ -96,12 +99,12 @@
+ 		forall_{?p : segment} [X-END(?p) > X-START(?p)];
+ 		
+ 		forall_{?p : segment} [Y-START(?p) >= 0 ^ Y-START(?p) <= 1];
+ 		forall_{?p : segment} [Y-END(?p) >= 0 ^ Y-END(?p) <= 1];
+     };
+ 
+     action-preconditions {
+-        action >= 0;
+-        action <= 2;
++        action >= -1;
++        action <= 1;
+     };
+ 
+ }
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/domain_old.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/domain_old.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/instance0.rddl`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -420,15 +420,15 @@
+ 		Y-END(s98) = 0.9966987200383512;
+ 		Y-END(s99) = 0.9931109757931749;
+ 		Y-END(s100) = 0.9882314338951879;
+ 	};
+ }
+ 
+ // Specify cart pole with default settings
+-instance inst_mountain_car {
++instance inst_mountain_car_0 {
+ 
+ 	domain = mountain_car;
+ 	
+ 	non-fluents = mountain_car_vars;
+ 
+ 	init-state {
+ 	    pos = -0.5;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/MountainCar/instance0_old.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/MountainCar/instance0_old.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/instance0.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -10,15 +10,15 @@
+ 		NEXT(@l3) = @l1;
+ 		TRIALS(@l1) = 10;
+ 		TRIALS(@l2) = 100;
+ 		TRIALS(@l3) = 1000;
+ 	};
+ }
+ 
+-instance inst_newsyntax {
++instance inst_newsyntax_0 {
+     domain = newsyntax;
+     non-fluents = newsyntax_nf;
+ 	
+     init-state { 
+ 		matrix(@l1, @l1) = @l1;
+ 		matrix(@l2, @l2) = @l2;
+ 		matrix(@l3, @l3) = @l3;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/PowerGen/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Discrete/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/PowerGen/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/PowerGen/Discrete/instance0.rddl`
+
+ * *Files 8% similar despite different names*
+
+```diff
+@@ -31,15 +31,15 @@
+ 
+     objects {
+ 		plant : {p1, p2, p3};
+ 	};
+ }
+ 
+ // Specify three power plants with default settings
+-instance inst_power_gen {
++instance inst_power_gen_dis_0 {
+ 
+ 	domain = power_gen;
+ 	
+ 	non-fluents = power_gen3;
+   
+ 	init-state { 
+ 		temperature = 10;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/PropDBN/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/PropDBN/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/RaceCar/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/RaceCar/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/RaceCar/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/RaceCar/instance0.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -315,15 +315,15 @@
+ 		GX			= 0.7;
+ 		GY			= 0.0;
+ 		RADIUS		= 0.05;
+ 	};
+ }
+ 
+ // Specify race car domain 
+-instance inst_racecar_circle {
++instance inst_racecar_circle_0 {
+ 
+ 	domain = racecar;
+ 
+ 	non-fluents = racecar_circle;
+ 
+ 	init-state {
+ 	    x 	= -0.7;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/RaceCar/instance1.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/RaceCar/instance1.rddl`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -36,15 +36,15 @@
+ 		GY			= 0.0;
+ 		RADIUS		= 0.05;
+ 	};
+ }
+ 
+ 
+ // Specify race car domain
+-instance inst_racecar_circle {
++instance inst_racecar_circle_1 {
+ 
+ 	domain = racecar;
+ 
+ 	non-fluents = racecar_circle;
+ 
+ 	init-state {
+ 	    x 	= 0.1;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/instance0.rddl`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -33,15 +33,15 @@
+ 		CONSUMER-AFFINITY(c4, f2) = 1.1;
+ 		CONSUMER-AFFINITY(c5, f1) = -0.9;
+ 		CONSUMER-AFFINITY(c5, f2) = 0.9;
+ 		MAX-AFFINITY = 5.0;
+ 	};
+ }
+ 
+-instance recsim_ecosystem_welfare__1 {
++instance recsim_ecosystem_welfare__0 {
+ 	domain = recsim_ecosystem_welfare;
+ 	non-fluents = nf_recsim_ecosystem_welfare__1;
+ 	init-state {
+ 		provider-satisfaction(pn) = 0.0;
+ 	};
+ 	max-nondef-actions = 1;
+ 	horizon  = 40;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/instance1.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/instance1.rddl`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -371,15 +371,15 @@
+ 		LESS(p12, p15);
+ 		LESS(p13, p14);
+ 		LESS(p13, p15);
+ 		LESS(p14, p15);
+ 		MAX-AFFINITY = 50.0;
+ 	};
+ }
+-instance recsim_ecosystem_welfare__2 {
++instance recsim_ecosystem_welfare__1 {
+ 	domain = recsim_ecosystem_welfare;
+ 	non-fluents = nf_recsim_ecosystem_welfare__2;
+ 	init-state {
+ 		provider-satisfaction(pn) = 0.0;
+ 	};
+ 	max-nondef-actions = 1;
+ 	horizon  = 200;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/RecSim/instance2.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/RecSim/instance2.rddl`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -2431,15 +2431,15 @@
+ 		LESS(p47, p50);
+ 		LESS(p48, p49);
+ 		LESS(p48, p50);
+ 		LESS(p49, p50);
+ 		MAX-AFFINITY = 50.0;
+ 	};
+ }
+-instance recsim_ecosystem_welfare__3 {
++instance recsim_ecosystem_welfare__2 {
+ 	domain = recsim_ecosystem_welfare;
+ 	non-fluents = nf_recsim_ecosystem_welfare__2;
+ 	init-state {
+ 		provider-satisfaction(pn) = 0.0;
+ 	};
+ 	max-nondef-actions = 1;
+ 	horizon  = 200;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Continuous/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Continuous/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Continuous/instance1.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Discrete/instance1.rddl`
+
+ * *Files 11% similar despite different names*
+
+```diff
+@@ -18,15 +18,15 @@
+ 		RES_CONNECT(t7,t9);
+ 		RES_CONNECT(t8,t10);
+ 		RES_CONNECT(t9,t10);
+ 		CONNECTED_TO_SEA(t10);
+ 	};
+ }
+ 
+-instance Reservoir_3 {
++instance Reservoir_dis_1 {
+ 	domain = reservoir_control_dis;
+ 	non-fluents = Reservoir_10nf;
+ 
+ 	init-state{
+ 		rlevel(t1) = 45.0;
+ 		rlevel(t4) = 60.0;
+ 		rlevel(t8) = 40.0;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Discrete/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Discrete/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Reservoir/Discrete/instance1.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Reservoir/Continuous/instance1.rddl`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -18,15 +18,15 @@
+ 		RES_CONNECT(t7,t9);
+ 		RES_CONNECT(t8,t10);
+ 		RES_CONNECT(t9,t10);
+ 		CONNECTED_TO_SEA(t10);
+ 	};
+ }
+ 
+-instance Reservoir_3 {
++instance Reservoir_cont_1 {
+ 	domain = reservoir_control_dis;
+ 	non-fluents = Reservoir_10nf;
+ 
+ 	init-state{
+ 		rlevel(t1) = 45.0;
+ 		rlevel(t4) = 60.0;
+ 		rlevel(t8) = 40.0;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChain/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChain/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChain/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChain/instance0.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -14,15 +14,15 @@
+ 		INDEX(w1) = 1;
+ 		INDEX(w2) = 2;
+ 		INDEX(w3) = 3;
+ 	};
+ }
+ 
+ // Specify three warehouses with default setting
+-instance inst_supply_chain {
++instance inst_supply_chain_0 {
+ 
+ 	domain = supply_chain;
+ 	
+ 	non-fluents = supply_chain_3;
+   
+   	// State-action constraints above are sufficient
+ 	max-nondef-actions = pos-inf;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChainNet/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChainNet/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/SupplyChainNet/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/SupplyChainNet/instance0.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -37,15 +37,15 @@
+ 		DEMAND-RATE(c) = 18;
+ 		DEMAND-RATE(d) = 5;
+ 		DEMAND-RATE(e) = 20;
+ 		DEMAND-RATE(f) = 2;
+ 	};
+ }
+ 
+-instance inst_supply_chain_network {
++instance inst_supply_chain_network_0 {
+ 
+ 	domain = supply_chain_network;
+ 	
+ 	non-fluents = supply_chain_network_6;
+   
+   	// State-action constraints above are sufficient
+ 	max-nondef-actions = pos-inf;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/TrafficViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/TrafficViz.py`
+
+ * *Files 22% similar despite different names*
+
+```diff
+@@ -6,40 +6,38 @@
+ import matplotlib.patches as mpatches
+ import numpy as np
+ from PIL import Image
+ import pprint
+ from itertools import product
+ from collections import defaultdict
+ from copy import copy
+-from math import ceil
+-from math import inf
++import math
+ 
+ from pyRDDLGym.Core.Compiler.RDDLModel import PlanningModel
+ from pyRDDLGym import Visualizer
+ from pyRDDLGym.Visualizer.StateViz import StateViz
+ 
+-ROAD_PAVED_WIDTH = 12
+-ROAD_HALF_MEDIAN_WIDTH = 1
+-ROAD_WIDTH = ROAD_PAVED_WIDTH + ROAD_HALF_MEDIAN_WIDTH
+-ROAD_DELTA = ROAD_PAVED_WIDTH/12
+-TURN_RADIUS_DELTA = 5
+-ARRIVING_RATE_SAT = 0.2 #per lane
++ROAD_PAVED_WIDTH = 12                                   # The width of the paved part of the road in m
++ROAD_HALF_MEDIAN_WIDTH = 1                              # The width of the median in-between links in m
++ROAD_WIDTH = ROAD_PAVED_WIDTH + ROAD_HALF_MEDIAN_WIDTH  # Combined width of a single link (paved + 0.5*median)
++ROAD_DELTA = ROAD_PAVED_WIDTH/12                        # Division of a link into parts for drawing turns
++TURN_RADIUS_DELTA = 5                                   # Curvature of a turn
++LINK_GRID_SAT_DENSITY = 0.2 #per lane                   # Density at which a cell in the flow grid gets a saturated color
+ 
+ RGBA_PAVEMENT_COLOR = (0.6, 0.6, 0.6, 1)
+ RGBA_INTERSECTION_COLOR = (0.3, 0.3, 0.3, 1)
+-RGBA_GREEN_TURNING_COLOR = (0.2, 1, 0.2, 1)
+-RGBA_Q_LINE_COLOR = (1, 0.2, 0.2, 1)
+-RGBA_Q_BARS_COLOR = (1, 0.2, 0.2, 1)
++RGBA_GREEN_TURN_COLOR = (0.2, 1, 0.2, 1)
+ RGBA_Q_PATCH_COLOR = (1, 0.2, 0.2, 0.4)
+-RGBA_ARRIVING_CELL_BORDER_COLOR = RGBA_PAVEMENT_COLOR
+-RGBA_ARRIVING_CELL_SAT_COLOR = (1, 0.2, 1, 0.4)
++RGBA_Q_LINE_COLOR = (1, 0.2, 0.2, 1)
++RGBA_LINK_GRID_COLOR = RGBA_PAVEMENT_COLOR
++RGBA_LINK_GRID_SAT_COLOR = (0.9, 0.3, 0.9, 1)
+ 
+ def get_fillcolor_by_density(N, capacity):
+-    p = min(1, N/capacity)
+-    return tuple(p*c for c in RGBA_ARRIVING_CELL_SAT_COLOR)
++    p = max(min(1, N/capacity),0)
++    return tuple(p*c for c in RGBA_LINK_GRID_SAT_COLOR)
+ 
+ def id(var_id, *objs):
+     # Returns <var_id>___<ob1>__<ob2>__<ob3>...
+     return var_id + PlanningModel.FLUENT_SEP + PlanningModel.OBJECT_SEP.join(objs)
+ 
+ 
+ class TrafficVisualizer(StateViz):
+@@ -82,113 +80,147 @@
+         #     self.pygame_thread = threading.Thread(target=self.init_display)
+         #     self.pygame_thread.start()
+ 
+     def parse_nonfluents(self):
+         self.veh_len = self._nonfluents['Lv']
+         self.sim_step = self._nonfluents['Ts']
+ 
+-        # Register the intersection coordinates, sinks, and sources
++        # Register the intersection coordinates and the links incident to them
+         self.intersections = {}
+-        self.sources, self.sinks, self.TLs = set(), set(), set()
++        self.linkdata = defaultdict(dict)
+         for d in self._objects['intersection']:
++            coords = np.array([self._nonfluents[id('X', d)],
++                               self._nonfluents[id('Y', d)]])
++            inc_links, out_links = [], []
++
++            for L in self._objects['link']:
++
++                if self._nonfluents[id('LINK-TO', L,d)]:
++                    self.linkdata[L]['to'] = coords
++                    self.linkdata[L]['to_id'] = d
++                    inc_links.append(L)
++
++                elif self._nonfluents[id('LINK-FROM', d,L)]:
++                    self.linkdata[L]['from'] = coords
++                    self.linkdata[L]['from_id'] = d
++                    out_links.append(L)
++
+             self.intersections[d] = {
+-                'coords': np.array([self._nonfluents[id('X', d)], self._nonfluents[id('Y', d)]]),
+-                'inc_links': [],
+-                'out_links': []}
+-            if self._nonfluents[id('SINK', d)]: self.sinks.add(d)
+-            if self._nonfluents[id('SOURCE', d)]: self.sources.add(d)
+-            if self._nonfluents[id('TL', d)]: self.TLs.add(d)
+-
+-        # Register the links.
+-        # Links are indexed by the upstream and downstream intersection pairs
+-        self.link_ids = []
+-        for u, d in product(self.intersections.keys(), self.intersections.keys()):
+-            if self._nonfluents[id('LINK', u,d)]:
+-                self.link_ids.append((u,d))
+-                self.intersections[u]['out_links'].append((u,d))
+-                self.intersections[d]['inc_links'].append((u,d))
++                'coords': coords,
++                'inc_links': inc_links,
++                'out_links': out_links}
+ 
+-        # Register the turning movements.
+-        # Turns are indexed by upstream, downstream, and outgoing intersection triples
+-        self.turn_ids = []
+-        for u, d, o in product(self.intersections.keys(), self.intersections.keys(), self.intersections.keys()):
+-            if u == d or d == o or u == o:
+-                continue
+-            if self._nonfluents[id('LINK', u,d)] and self._nonfluents[id('LINK', d,o)]:
+-                self.turn_ids.append((u,d,o))
+ 
+-        # Record the required link data
+-        self.linkdata = {}
++        # Register the links and record the required link data
+         ccw_turn_matrix = np.array([[0,-1],[1,0]])
+-        for (u, d) in self.link_ids:
+-            vu, vd = self.intersections[u]['coords'], self.intersections[d]['coords']
++        self.sources, self.sinks = {}, {}
++
++        for L in self.linkdata:
++
++            # Register the sources and sinks, and in addition
++            # find the start and ends points of the link
++            if self._nonfluents[id('SOURCE', L)]:
++                try:
++                    vu = np.array([self._nonfluents[id('SOURCE-X', L)],
++                                   self._nonfluents[id('SOURCE-Y', L)]])
++                except KeyError as e:
++                    print('[TrafficViz] Please include the X and Y coordinates of the source '
++                          f'{L} in the instance defn')
++                    raise e
++                self.sources[L] = {'coords': vu}
++                self.linkdata[L]['from'] = vu
++                self.linkdata[L]['from_id'] = f'source{len(self.sources)}'
++
++            elif self._nonfluents[id('SINK', L)]:
++                 try:
++                     vd = np.array([self._nonfluents[id('SINK-X', L)],
++                                    self._nonfluents[id('SINK-Y', L)]])
++                 except KeyError as e:
++                     print('[TrafficViz] Please include the X and Y coordinates of the sink '
++                           f'{L} in the instance defn')
++                     raise e
++                 self.sinks[L] = {'coords': vd}
++                 self.linkdata[L]['to'] = vd
++                 self.linkdata[L]['to_id'] = f'sink{len(self.sinks)}'
++
++            vu, vd = self.linkdata[L]['from'], self.linkdata[L]['to']
+             dir = vd-vu
+             link_len = np.linalg.norm(dir)
+ 
+-            num_lanes = self._nonfluents[id('Nl', u,d)]
+-            v = self._nonfluents[id('V', u,d)]
+-            num_cells = ceil(link_len / (v * self.sim_step))
++            num_lanes = self._nonfluents[id('Nl', L)]
++            v = self._nonfluents[id('Vl', L)]
++            num_cells = math.ceil(link_len / (v * self.sim_step))
+             cell_capacity = (link_len * num_lanes) / (num_cells * self.veh_len)
+ 
+             dir = dir/link_len
+ 
+-            self.linkdata[(u,d)] = {
++            self.linkdata[L].update({
+                 # Unit vector along the link direction
+                 'dir': dir,
+                 # Unit normal vector (ccw of unit dir vector)
+                 'nrm': np.matmul(ccw_turn_matrix, dir),
+                 # Length of the link
+                 'len': link_len,
+                 # Freeflow speed on the link
+                 'v': v,
+                 # Number of lanes
+                 'num_lanes': num_lanes,
+                 # Number of incoming cells
+                 'num_cells': num_cells,
+                 # Cell capacity (for shading)
+-                'cell_capacity': cell_capacity
+-            }
++                'cell_capacity': cell_capacity })
++
+ 
+-        # Order turns from each link left-to-right
+-        def signed_angle(v0, v1): return np.sign(np.cross(v0,v1)) * np.arccos(np.dot(v0,v1))
++        # Register the turning movements.
++        # Turns are indexed by upstream, downstream link pairs
++        # Additionally, order turns from each link left-to-right
++        def signed_angle(v0, v1):
++            if np.cross(v0,v1) == 0:
++                return -math.pi if np.dot(v0,v1) < 0 else 0
++            return np.sign(np.cross(v0,v1)) * np.arccos(np.dot(v0,v1))
+ 
+-        for (u, d) in self.link_ids:
+-            turns_from_u_d = []
+-            for o in self.intersections.keys():
+-                if u == o:
+-                    continue
+-                if self._nonfluents[id('LINK', d,o)]:
+-                    turns_from_u_d.append(o)
+-            turns_from_u_d.sort(key=lambda o:
+-                                    -signed_angle(self.linkdata[(u,d)]['dir'], self.linkdata[(d,o)]['dir'])
+-                               )
+-            self.linkdata[(u,d)]['turns_from'] = turns_from_u_d
+-
+-        # Register the green turns for each phase
+-        self.phase_ids = self._objects['phase']
+-        self.green_turns_by_phase = defaultdict(list)
+-        for (u,d,o) in self.turn_ids:
+-            for p in self.phase_ids:
+-                if self._nonfluents[id('GREEN', u,d,o,p)]:
+-                    self.green_turns_by_phase[p].append((u,d,o))
+-
+-        # Register inverse map from phase index to phase object
+-        self.phase_by_index_in_intersection = {}
+-        for d in self.intersections.keys():
+-             self.phase_by_index_in_intersection[d] = {}
+-             for p in self.phase_ids:
+-                 if self._nonfluents[id('PHASE-OF', p,d)]:
+-                     self.phase_by_index_in_intersection[d][self._nonfluents[id('PHASE-INDEX', p)]] = p
++        self.turn_ids = []
++        for L in self.linkdata:
++            self.linkdata[L]['turns_from'] = []
++            for M in self.linkdata:
++                if self._nonfluents[id('TURN', L,M)]:
++                     self.turn_ids.append((L,M))
++                     self.linkdata[L]['turns_from'].append(M)
++            self.linkdata[L]['turns_from'].sort(
++                key=lambda M: -signed_angle(self.linkdata[L]['dir'], self.linkdata[M]['dir']))
++
++        # Try to find the opposite link by the most negative dot product
++        for d, v in self.intersections.items():
++            for L in v['inc_links']:
++                dL = self.linkdata[L]['dir']
++                M = sorted(v['out_links'], key=lambda M: np.dot(dL, self.linkdata[M]['dir']))[0]
++                self.linkdata[L]['opposite_link'] = M
++                self.linkdata[M]['opposite_link'] = L
++
++        # Register the signal phases
++        self.signal_phases = self._objects['signal-phase']
++
++        # Register the green turns for each phase in each intersection
++        self.green_turns_by_intersection_phase = {}
++        for d, dv in self.intersections.items():
++            self.green_turns_by_intersection_phase[d] = {k: [] for k in self.signal_phases}
++            for L in dv['inc_links']:
++                for M in self.linkdata[L]['turns_from']:
++                    for p in self.signal_phases:
++                        if self._nonfluents[id('GREEN', L,M,p)]:
++                            self.green_turns_by_intersection_phase[d][p].append((L,M))
+ 
+ 
+     def build_nonfluent_patches(self):
+         # Find the bbox
+-        x0, y0, x1, y1 = inf, inf, -inf, -inf
+-        for intersection in self.intersections.values():
+-            v = intersection['coords']
++        x0, y0, x1, y1 = math.inf, math.inf, -math.inf, -math.inf
++        for geopoint in (tuple(self.intersections.values()) +
++                         tuple(self.sources.values()) +
++                         tuple(self.sinks.values())):
++            v = geopoint['coords']
+             x0, y0, x1, y1 = min(x0, v[0]), min(y0, v[1]), max(x1, v[0]), max(y1, v[1])
+ 
+         # Slightly expand bbox
+         w, h = x1-x0, y1-y0
+         dw, dh = 0.05*w, 0.05*h
+         self.bbox = {'x0': x0 - dw, 'x1': x1 + dw,
+                      'y0': y0 - dh, 'y1': y1 + dh,
+@@ -203,72 +235,75 @@
+                 # Exceptional case when the tangent vectors are colinear
+                 ctrl1 = (ctrl0 + ctrl2)/2
+             else:
+                 ctrl1 = ctrl2 + (np.cross(dir0,ctrl0-ctrl2)/c)*dir2
+             return ctrl1
+ 
+         # Construct intersection objects and correct link lengths
+-        for d in self.TLs:
++        for d in self.intersections:
+ 
+             # Preliminary computations
+-            alpha_ud, alpha_do = {}, {}
+-            for (u,d) in self.intersections[d]['inc_links']:
+-                # Right-turn-target from (u,d)
+-                o = self.linkdata[(u,d)]['turns_from'][-1]
+-
+-                # Find the point of intersection of the right boundary of (u,d)
+-                # and the right boundary of (d,o) (if both links are extended)
+-                # The links will be shortened so that they do not intersect
+-                vu, vd = self.intersections[u]['coords'], self.intersections[d]['coords']
+-                dir0, n0 = self.linkdata[(u,d)]['dir'], self.linkdata[(u,d)]['nrm']
+-                dir1, n1 = self.linkdata[(d,o)]['dir'], self.linkdata[(d,o)]['nrm']
++            alpha_in, alpha_out = {}, {}
++            for L in self.intersections[d]['inc_links']:
++                # Right-turn-target from L
++                M = self.linkdata[L]['turns_from'][-1]
++
++                # Find the point of intersection of the right boundary of L
++                # and the right boundary of M (if both links are extended).
++                # The links will be shortened so that they do not intersect,
++                # as well as shortened by TURN_RADIUS_DELTA to draw a smoother
++                # connecting curve
++                vu, vd = self.linkdata[L]['from'], self.linkdata[L]['to']
++                dir0, n0 = self.linkdata[L]['dir'], self.linkdata[L]['nrm']
++                dir1, n1 = self.linkdata[M]['dir'], self.linkdata[M]['nrm']
+                 c = np.cross(dir0,dir1)
+                 if c == 0:
+                     # Exceptional case when the right-turn direction happens to be straight ahead
+-                    alpha_ud[(u,d)] = 0
+-                    alpha_do[(d,o)] = 0
++                    alpha_in[L] = 0
++                    alpha_out[M] = 0
+                 else:
+-                    alpha_ud[(u,d)] = ROAD_WIDTH*np.cross(dir1, n1-n0)/np.cross(dir0,dir1)
+-                    alpha_do[(d,o)] = ROAD_WIDTH*np.cross(dir0, n1-n0)/np.cross(dir0,dir1)
++                    alpha_in[L]  = ROAD_WIDTH*np.cross(dir1, n1-n0)/np.cross(dir0,dir1)
++                    alpha_out[M] = ROAD_WIDTH*np.cross(dir0, n1-n0)/np.cross(dir0,dir1)
+ 
+             # Construct the intersection contour
+-            (u0,d0) = self.intersections[d]['inc_links'][0]
+-            (u,d) = (u0,d0)
++            L0 = self.intersections[d]['inc_links'][0]
++            L = L0
+             contour, codes = [], []
+             while True:
+-                if u in self.sources:
+-                    self.linkdata[(u,d)]['from'] = self.intersections[u]['coords']
+ 
+-                # Right-turn-target from (u,d)
+-                o = self.linkdata[(u,d)]['turns_from'][-1]
+-                vu, vd = self.intersections[u]['coords'], self.intersections[d]['coords']
+-                dir0, n0 = self.linkdata[(u,d)]['dir'], self.linkdata[(u,d)]['nrm']
+-                dir1, n1 = self.linkdata[(d,o)]['dir'], self.linkdata[(d,o)]['nrm']
++                # Right-turn-target from L
++                M = self.linkdata[L]['turns_from'][-1]
++                Lopp = self.linkdata[L]['opposite_link']
++                Mopp = self.linkdata[M]['opposite_link']
++
++                vu, vd = self.linkdata[L]['from'], self.linkdata[L]['to']
++                dir0, n0 = self.linkdata[L]['dir'], self.linkdata[L]['nrm']
++                dir1, n1 = self.linkdata[M]['dir'], self.linkdata[M]['nrm']
+ 
+                 # Find the control points for the right-turn Bezier curves
+                 # Shorten the links by the same amount in both travel directions
+-                beta =  max(-alpha_ud[(u,d)], alpha_do[(d,u)]) + TURN_RADIUS_DELTA #(u,d) shortening
+-                alpha = max(-alpha_ud[(o,d)], alpha_do[(d,o)]) + TURN_RADIUS_DELTA #(d,o) shortening
++                beta =  max(-alpha_in[L],    alpha_out[Lopp]) + TURN_RADIUS_DELTA #L shortening
++                alpha = max(-alpha_in[Mopp], alpha_out[M]) + TURN_RADIUS_DELTA #M shortening
+ 
+                 # Right-turn Bezier control points
+                 ctrl0 = vd - ROAD_WIDTH*n0 - beta*dir0
+                 ctrl2 = vd - ROAD_WIDTH*n1 + alpha*dir1
+                 ctrl1 = quad_bezier_middle_ctrl_pt(ctrl0, ctrl2, dir0, dir1)
+ 
+                 # Correct the link lengths
+                 # * Subtract TURN_RADIUS_DELTA
+                 # * Avoid intersections
+-                self.linkdata[(u,d)]['len'] -= beta
+-                self.linkdata[(d,o)]['from'] = vd + alpha*dir1
+-                self.linkdata[(d,o)]['len'] -= alpha
++                self.linkdata[L]['len'] -= beta
++                self.linkdata[M]['from'] = vd + alpha*dir1
++                self.linkdata[M]['len'] -= alpha
+ 
+                 # Trace the path
+-                F = self.linkdata[(u,d)].get('from', vu)
+-                L = self.linkdata[(u,d)]['len']
+-                p = F + L*dir0 - ROAD_HALF_MEDIAN_WIDTH*n0
++                F = self.linkdata[L].get('from', vu)
++                Llen = self.linkdata[L]['len']
++                p = F + Llen*dir0 - ROAD_HALF_MEDIAN_WIDTH*n0
+                 if len(contour) == 0:
+                     # Initializer
+                     contour.append(p)
+                     codes.append(Path.MOVETO)
+                 contour.append(p)
+                 codes.append(Path.LINETO)
+                 contour.extend([ctrl0, ctrl1, ctrl2])
+@@ -278,16 +313,16 @@
+                 codes.append(Path.LINETO)
+                 ctrl0 = p
+                 ctrl2 = p + 2*ROAD_HALF_MEDIAN_WIDTH*n1
+                 ctrl1 = p + ROAD_HALF_MEDIAN_WIDTH*n1 - TURN_RADIUS_DELTA*dir1
+                 contour.extend([ctrl0, ctrl1, ctrl2])
+                 codes.extend([Path.LINETO, Path.CURVE3, Path.CURVE3])
+ 
+-                (u,d) = (o,d)
+-                if (u,d) == (u0,d0):
++                L = Mopp
++                if L == L0:
+                     contour.append(np.array([0,0])) #ignored
+                     codes.append(Path.CLOSEPOLY)
+                     break
+ 
+             # Done with the intersection contour!
+             path = Path(contour, codes)
+             patch = mpatches.PathPatch(
+@@ -295,51 +330,50 @@
+                 color=RGBA_INTERSECTION_COLOR)
+             self.intersections[d]['patch'] = patch
+ 
+         # Construct the link patches,
+         # register data for plotting the queues,
+         # construct turning curve patches
+         self.link_patches = {}
+-        self.incoming_grid_patches = {}
+         self.turn_patches = {}
+-        for (u,d) in self.link_ids:
+-            vu, vd = self.intersections[u]['coords'], self.intersections[d]['coords']
+-            d0, n0 = self.linkdata[(u,d)]['dir'], self.linkdata[(u,d)]['nrm']
++        for L, Lv in self.linkdata.items():
++            vu, vd = Lv['from'], Lv['to']
++            d0, n0 = Lv['dir'], Lv['nrm']
+             road = np.zeros(shape=(4,2))
+-            L = self.linkdata[(u,d)]['len']
++            Llen = Lv['len']
+ 
+             # Record the visual shrinking factor for visualizing queues
+-            self.linkdata[(u,d)]['shrink'] = L/np.linalg.norm(vd-vu)
++            self.linkdata[L]['shrink'] = Llen/np.linalg.norm(vd-vu)
+ 
+             # Create the link patch
+-            road[0] = self.linkdata[(u,d)]['from'] - ROAD_HALF_MEDIAN_WIDTH*n0
+-            road[1] = road[0] + L*d0
++            road[0] = vu - ROAD_HALF_MEDIAN_WIDTH*n0
++            road[1] = road[0] + Llen*d0
+             road[2] = road[1] - ROAD_PAVED_WIDTH*n0
+-            road[3] = road[2] - L*d0
+-            self.link_patches[(u,d)] = plt.Polygon(road, color=RGBA_PAVEMENT_COLOR)
++            road[3] = road[2] - Llen*d0
++            self.link_patches[L] = plt.Polygon(road, color=RGBA_PAVEMENT_COLOR)
+ 
+-            self.linkdata[(u,d)]['cell_len'] = L/self.linkdata[(u,d)]['num_cells']
+-            self.linkdata[(u,d)]['queues_top_left'] = road[1]
++            self.linkdata[L]['cell_len'] = Llen/self.linkdata[L]['num_cells']
++            self.linkdata[L]['stopline_left'] = road[1]
+ 
+-            for idx, o in enumerate(self.linkdata[(u,d)]['turns_from']):
++            for idx, M in enumerate(Lv['turns_from']):
+                 # Turns are indexed left-to-right
+-                d1, n1 = self.linkdata[(d,o)]['dir'], self.linkdata[(d,o)]['nrm']
++                d1, n1 = self.linkdata[M]['dir'], self.linkdata[M]['nrm']
+ 
+                 # Turning curve patch
+                 delta = (2+4*idx)*ROAD_DELTA
+                 from_ = road[1] - delta*n0
+-                to_ = self.linkdata[(d,o)]['from'] - (ROAD_HALF_MEDIAN_WIDTH+delta)*n1
++                to_ = self.linkdata[M]['from'] - (ROAD_HALF_MEDIAN_WIDTH+delta)*n1
+                 ctrl1 = quad_bezier_middle_ctrl_pt(from_, to_, d0, d1)
+                 path = Path([from_, ctrl1, to_], [Path.MOVETO, Path.CURVE3, Path.CURVE3])
+                 patch = mpatches.PathPatch(
+                     path,
+-                    edgecolor=RGBA_GREEN_TURNING_COLOR,
++                    edgecolor=RGBA_GREEN_TURN_COLOR,
+                     fill=False,
+                     linewidth=2)
+-                self.turn_patches[(u,d,o)] = patch
++                self.turn_patches[(L,M)] = patch
+ 
+     def init_canvas(self, figure_size, dpi):
+         fig = plt.figure(figsize=figure_size, dpi=dpi)
+         ax = plt.gca()
+         plt.xlim(self.bbox['x0'], self.bbox['x1'])
+         plt.ylim(self.bbox['y0'], self.bbox['y1'])
+         plt.axis('scaled')
+@@ -362,99 +396,86 @@
+ 
+     def build_nonfluents_layout(self, fig, ax):
+         # Seems copy is the only way to re-use patches
+         # when using more than one axes object :(
+         for link_patch in self.link_patches.values():
+             ax.add_patch(copy(link_patch))
+ 
+-        for d in self.TLs:
+-            intersection_patch = self.intersections[d]['patch']
+-            ax.add_patch(copy(intersection_patch))
++        for v in self.intersections.values():
++            ax.add_patch(copy(v['patch']))
+ 
+     def build_states_layout(self, states, fig, ax):
+ 
+-        for d in self.TLs:
+-            if states[id('all-red', d)] > 0:
+-                continue
+-            cur_ph_idx = states[id('cur-ph-idx', d)]
+-            cur_ph = self.phase_by_index_in_intersection[d][cur_ph_idx]
+-            for t in self.green_turns_by_phase[cur_ph]:
++        for d in self.intersections:
++            signal = self.signal_phases[states[id('signal', d)]]
++            for t in self.green_turns_by_intersection_phase[d][signal]:
+                 ax.add_patch(copy(self.turn_patches[t]))
+ 
++        for L, Lv in self.linkdata.items():
++            # If the link is not a sink, draw the total queue
++            # as well as the queue proportions by turning movement.
++            # (for a sink, there is no queue)
++            Q = sum(states[id('q', L,M)] for M in Lv['turns_from'])
++
++            if L not in self.sinks and Q > 0:
++                Q_dist = (Q*self.veh_len/Lv['num_lanes']) * Lv['shrink']
++                Q_frontier_L = Lv['stopline_left'] - Q_dist*Lv['dir']
++                Q_frontier_R = Q_frontier_L - ROAD_PAVED_WIDTH*Lv['nrm']
++
++                # Draw the total queue patch
++                Q_total_patch = np.zeros(shape=(4,2))
++                Q_total_patch[0] = Lv['stopline_left']
++                Q_total_patch[1] = Q_total_patch[0] - ROAD_PAVED_WIDTH*Lv['nrm']
++                Q_total_patch[2] = Q_frontier_R
++                Q_total_patch[3] = Q_frontier_L
++                patch = plt.Polygon(Q_total_patch, facecolor=RGBA_Q_PATCH_COLOR, linewidth=1)
++                ax.add_patch(patch)
+ 
+-        for d in self.TLs.union(self.sinks):
+-            for (u,d) in self.intersections[d]['inc_links']:
+-                ld = self.linkdata[(u,d)]
+-
+-                # If downstream intersection is not a sink, draw the queue data
+-                # (for a downstream sink, the queues are zero, so no need)
+-                if not self._nonfluents[id('SINK', d)]:
+-                    Q = states[id('qd', u,d)]
+-                    Q_line = (Q*self.veh_len/ld['num_lanes']) * ld['shrink']
+-                    Q_line_L = ld['queues_top_left'] - Q_line*ld['dir']
+-                    Q_line_R = Q_line_L - ROAD_PAVED_WIDTH*ld['nrm']
+-
+-                    # Draw queue background patch
+-                    Q_bg_patch = np.zeros(shape=(4,2))
+-                    Q_bg_patch[0] = ld['queues_top_left']
+-                    Q_bg_patch[1] = Q_bg_patch[0] - ROAD_PAVED_WIDTH*ld['nrm']
+-                    Q_bg_patch[2] = Q_line_R
+-                    Q_bg_patch[3] = Q_line_L
+-                    patch = plt.Polygon(Q_bg_patch, facecolor=RGBA_Q_PATCH_COLOR, linewidth=0)
++                # Draw the queue-proportions per individual turn
++                for idx, M in enumerate(Lv['turns_from']):
++                    Q_turn = states[id('q', L,M)]
++                    barlen = (Q_turn/Q) * Q_dist
++                    Q_turn_bar = np.zeros(shape=(4,2))
++                    Q_turn_bar[0] = Lv['stopline_left'] - (1+4*idx)*ROAD_DELTA*Lv['nrm']
++                    Q_turn_bar[1] = Q_turn_bar[0] - 2*ROAD_DELTA*Lv['nrm']
++                    Q_turn_bar[2] = Q_turn_bar[1] - barlen*Lv['dir']
++                    Q_turn_bar[3] = Q_turn_bar[2] + 2*ROAD_DELTA*Lv['nrm']
++                    patch = plt.Polygon(Q_turn_bar, color=RGBA_Q_LINE_COLOR, linewidth=0)
+                     ax.add_patch(patch)
++            else:
++                Q_dist, Q_frontier_L, Q_frontier_R = 0, Lv['stopline_left'], Lv['stopline_left'] - ROAD_PAVED_WIDTH*Lv['nrm']
+ 
+-                    # Draw queue bars
+-                    for idx, o in enumerate(ld['turns_from']):
+-                        Q_turn = states[id('q', u,d,o)]
+-                        Q_turn_height = (Q_turn/(Q+1e-6)) * Q_line
+-                        Q_turn_bar = np.zeros(shape=(4,2))
+-                        Q_turn_bar[0] = ld['queues_top_left'] - (1+4*idx)*ROAD_DELTA*ld['nrm']
+-                        Q_turn_bar[1] = Q_turn_bar[0] - 2*ROAD_DELTA*ld['nrm']
+-                        Q_turn_bar[2] = Q_turn_bar[1] - Q_turn_height*ld['dir']
+-                        Q_turn_bar[3] = Q_turn_bar[2] + 2*ROAD_DELTA*ld['nrm']
+-                        patch = plt.Polygon(Q_turn_bar, color=RGBA_Q_LINE_COLOR, linewidth=0)
+-                        ax.add_patch(patch)
+-                else:
+-                    Q_line, Q_line_L, Q_line_R = 0, ld['queues_top_left'], ld['queues_top_left']-ROAD_PAVED_WIDTH*ld['nrm']
+-
+-                # Aggregate the incoming flows, depending on the type of u
+-                num_cells_to_Q_line = max(ceil((ld['len'] - Q_line)/ld['cell_len']), 1)
+-                if self._nonfluents[id('SOURCE', u)]:
+-                    flows = tuple( states[id('Mlsrc', u,d,f't{t}')] for t in range(1, num_cells_to_Q_line+1))
+-                else:
+-                    flows = np.zeros(num_cells_to_Q_line+1)
+-                    for t in range(1,num_cells_to_Q_line+1):
+-                        for (i,u) in self.intersections[u]['inc_links']:
+-                            if i != d:
+-                                flows[t] += states[id('Ml', i,u,d,f't{t}')]
+-
+-                line_L, line_R = Q_line_L, Q_line_R
+-                for t in range(1,num_cells_to_Q_line):
+-                    flow = flows[t]
+-                    next_line_L, next_line_R = line_L-ld['cell_len']*ld['dir'], line_R-ld['cell_len']*ld['dir']
+-                    cell = np.array([line_L, line_R, next_line_R, next_line_L])
+-                    color = get_fillcolor_by_density(flow, ARRIVING_RATE_SAT*ld['num_lanes'])
+-                    patch = plt.Polygon(cell, linewidth=1, facecolor=color, edgecolor=RGBA_ARRIVING_CELL_BORDER_COLOR)
+-                    ax.add_patch(patch)
+-                    line_L, line_R = next_line_L, next_line_R
+-                # Draw the last cell
+-                flow = flows[-1]
+-                remainder = ld['len'] - (ld['cell_len']*(num_cells_to_Q_line-1) + Q_line)
+-                next_line_L, next_line_R = line_L-remainder*ld['dir'], line_R-remainder*ld['dir']
+-                cell = np.array([line_L, line_R, next_line_R, next_line_L])
+-                color = get_fillcolor_by_density(flow, ARRIVING_RATE_SAT*ld['num_lanes'])
+-                patch = plt.Polygon(cell, linewidth=1, facecolor=color, edgecolor=RGBA_ARRIVING_CELL_BORDER_COLOR)
++            # Plot the flows through the link
++            num_cells_in_use = math.ceil((Lv['len'] - Q_dist) / Lv['cell_len'])
++            frontier = np.array([Q_frontier_L, Q_frontier_R])
++            saturation_d = LINK_GRID_SAT_DENSITY * Lv['num_lanes']
++            for t in range(1, num_cells_in_use):
++                flow = states[id('flow-on-link', L,f't{t}')]
++                color = get_fillcolor_by_density(flow, saturation_d)
++                next_frontier = frontier - Lv['cell_len']*Lv['dir']
++                cell = np.array((frontier[0], frontier[1], next_frontier[1], next_frontier[0]))
++                patch = plt.Polygon(cell, linewidth=1, facecolor=color,
++                                    edgecolor=RGBA_LINK_GRID_COLOR)
+                 ax.add_patch(patch)
++                frontier = next_frontier
++            # The last cell may be shorter
++            flow = states[id('flow-on-link', L,f't{num_cells_in_use}')]
++            color = get_fillcolor_by_density(flow, saturation_d)
++            delta = Lv['len'] - (Lv['cell_len']*(num_cells_in_use-1) + Q_dist)
++            next_frontier = frontier - delta*Lv['dir']
++            cell = np.array((frontier[0], frontier[1], next_frontier[1], next_frontier[0]))
++            patch = plt.Polygon(cell, linewidth=1, facecolor=color,
++                                edgecolor=RGBA_LINK_GRID_COLOR)
++            ax.add_patch(patch)
+ 
+ 
+     def render(self, state):
+         self.states = state
+ 
+         self._fig, self._ax = self.init_canvas(self._figure_size, self._dpi)
+         self.build_nonfluents_layout(self._fig, self._ax)
+         self.build_states_layout(state, self._fig, self._ax)
+ 
+         img = self.convert2img(self._fig, self._ax)
+         self._ax.cla()
+         plt.close()
+-
+         return img
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance0.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance1.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance1.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance2.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance2.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/domain.rddl`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -11,16 +11,16 @@
+ //      * Undersaturated: The queue + arriving flow is small enough to be released
+ //                        in a single time-step
+ //      * Saturated:      The queue is released at the saturation flow rate.
+ //      * Oversaturated:  The downstream link does not have enough capacity to fit
+ //                        the entirety of the queue, causing a spillback.
+ //
+ //  This implementation uses a fixed signal-phase order, and the action consists of a concurrently
+-//  chosen boolean for each intersection: whether or not to extend the current signal phase or switch
+-//  to the next one in the fixed order.
++//  chosen boolean for each intersection: whether or not to extend the current signal phase or
++//  switch to the next one in the fixed order.
+ //
+ //  Authors: Ayal Taitler (ataitler@gmail.com)
+ //           Ilia Smirnov (iliathesmirnov@gmail.com)
+ //
+ //  References:
+ //      S. Lin, B. De Schutter, Y. Xi, and J. Hellendoorn, "A simplified macroscopic urban
+ //      traffic network model for model-based predictive control," Proceedings of the 12th
+@@ -58,37 +58,37 @@
+         ///////////////////////////////////////////
+         // non-fluents == topology and geometry
+         ///////////////////////////////////////////
+ 
+         // simulation time step in seconds
+         Ts                                                     :  { non-fluent, int, default = 1 };
+         // average vehicle length in meters
+-        Lv                                                     :  { non-fluent, real, default = 5 };
++        Lv                                                     :  { non-fluent, real, default = 6.0 };
+ 
+ 
+         // number of lanes in link
+         Nl(link)                                               :  { non-fluent, int, default = 4 };
+ 
+         // free-flow velocity of traffic in link in m/s
+         Vl(link)                                               :  { non-fluent, real, default = 13.8 };
+ 
+         // link length
+-        Dl(link)                                               :  { non-fluent, real, default = 150 };
++        Dl(link)                                               :  { non-fluent, real, default = 150.0 };
+ 
+         // does the link end at the intersection?
+         LINK-TO(link, intersection)                            :  { non-fluent, bool, default = false };
+ 
+         // does the link begin at the intersection?
+         LINK-FROM(intersection, link)                          :  { non-fluent, bool, default = false };
+ 
+         // is there a turn from link0 to link1?
+         TURN(link, link)                                       :  { non-fluent, bool, default = false };
+ 
+-        // saturated flow rate leaving turn (link0,link1) in veh/s
+-        MU(link, link)                                         :  { non-fluent, real, default = 1.2 };
++        // saturation flow rate leaving turn (link0,link1) in veh/s
++        MU(link, link)                                         :  { non-fluent, real, default = 0.53 };
+ 
+         // fraction of the traffic turning from link0 to link1
+         BETA(link, link)                                       :  { non-fluent, real, default = 0.33 };
+ 
+ 
+         // phase constraints and properties
+         PHASE-MIN(intersection)                                :  { non-fluent, int, default = 20 };
+@@ -102,39 +102,39 @@
+         // is there a source at the link entrance?
+         SOURCE(link)                                           :  { non-fluent, bool, default = false };
+ 
+         // is there a sink at the link exit?
+         SINK(link)                                             :  { non-fluent, bool, default = false };
+ 
+         // arrival rate at sources in veh/s - the mean for a uniform distribution
+-        SOURCE-ARRIVAL-RATE(link)                              :  { non-fluent, real, default = 0.67 };
++        SOURCE-ARRIVAL-RATE(link)                              :  { non-fluent, real, default = 0.3 };
+ 
+-        // saturated flow rate from a source in veh/s
+-        SOURCE-MU(link)                                        :  { non-fluent, real, default = 2.0 };
++        // saturation flow rate from a source in veh/s
++        SOURCE-MU(link)                                        :  { non-fluent, real, default = 0.4 };
+ 
+ 
+         // time ordering for time-delayed queues
+         NEXT(time, time)                                       :  { non-fluent, bool, default = false };
+ 
+         // is the time index first in the queue, i,e., no delay
+         TIME-HEAD(time)                                        :  {non-fluent, bool, default = false };
+ 
+         // is the time index last in the queue, i,e., maximum delay memory depth
+         TIME-TAIL(time)                                        :  {non-fluent, bool, default = false };
+ 
+         // time object to actual time delay index
+         TIME-VAL(time)                                         :  { non-fluent, int, default = 1 };
+ 
+-        // cartesian coordinates
+-        X(intersection)                                        :  { non-fluent, real, default = 0 };
+-        Y(intersection)                                        :  { non-fluent, real, default = 0 };
+-        SOURCE-X(link)                                         :  { non-fluent, real, default = 0 };
+-        SOURCE-Y(link)                                         :  { non-fluent, real, default = 0 };
+-        SINK-X(link)                                           :  { non-fluent, real, default = 0 };
+-        SINK-Y(link)                                           :  { non-fluent, real, default = 0 };
++        // cartesian coordinates (used for rendering)
++        X(intersection)                                        :  { non-fluent, real, default = 0.0 };
++        Y(intersection)                                        :  { non-fluent, real, default = 0.0 };
++        SOURCE-X(link)                                         :  { non-fluent, real, default = 0.0 };
++        SOURCE-Y(link)                                         :  { non-fluent, real, default = 0.0 };
++        SINK-X(link)                                           :  { non-fluent, real, default = 0.0 };
++        SINK-Y(link)                                           :  { non-fluent, real, default = 0.0 };
+ 
+ 
+ 
+         //////////////////////////////
+         // interm fluents
+         //////////////////////////////
+ 
+@@ -178,30 +178,30 @@
+ 
+ 
+         //////////////////////////////
+         // states fluents
+         //////////////////////////////
+ 
+         // flow of vehicles along a link, indexed by the number of time-steps before arrival to the end of queue
+-        flow-on-link(link, time)                           :  { state-fluent, real, default = 0 };
++        flow-on-link(link, time)                           :  { state-fluent, real, default = 0.0 };
+ 
+         // queue length in link0 waiting to turn to link1
+-        q(link, link)                                      :  { state-fluent, real, default = 0 };
++        q(link, link)                                      :  { state-fluent, real, default = 0.0 };
+ 
+         // number of vehicles in link
+-        Nc(link)                                           :  { state-fluent, real, default = 0 };
++        Nc(link)                                           :  { state-fluent, real, default = 0.0 };
+ 
+         //virtual queue at source (i.e. vehicles held outside of the network)
+-        virtual-q(link)                                    :  { state-fluent, real, default = 0 };
++        virtual-q(link)                                    :  { state-fluent, real, default = 0.0 };
+ 
+         // current phase
+         signal(intersection)                               :  { state-fluent, signal-phase, default = @ALL-RED};
+ 
+         // current phase time
+-        signal-t(intersection)                             :  { state-fluent, real, default = 0 };
++        signal-t(intersection)                             :  { state-fluent, real, default = 0.0 };
+ 
+ 
+         //////////////////////////////
+         // action fluents
+         //////////////////////////////
+ 
+         // is the current signal phase being advanced?
+@@ -220,14 +220,24 @@
+         ////////////////////////////////////
+         // interm fluents
+         ////////////////////////////////////
+ 
+         // derived fluent for the link capacity (total storage of the link)
+         Cl(?u) = Dl(?u) * Nl(?u) / Lv;
+ 
++        // number of vehicles entering from a source
++        //src-arrivals(?u) =  SOURCE(?u) * Uniform(0, 2*SOURCE-ARRIVAL-RATE(?u)*Ts);
++        src-arrivals(?u) = SOURCE(?u) * SOURCE-ARRIVAL-RATE(?u)*Ts;
++
++        // flow from source u into the network
++        // may not equal src-arrivals due to vehicles previously held in virtual queue
++        flow-from-source(?u) = SOURCE(?u) * min[ src-arrivals(?u) + virtual-q(?u),        // Undersaturated
++                                                 min[ SOURCE-MU(?u) * Ts,                 // Saturated
++                                                      Cl(?u) - Nc(?u) ]];                 // Oversaturated
++
+         // time-delay variables update
+         offset(?u) = (Cl(?u) - [sum_{?d : link} (q(?u,?d))])*Lv / (Nl(?u)*Vl(?u)*Ts);
+         tau(?u) = floor[ offset(?u) ];
+         gamma(?u) = offset(?u) - tau(?u);
+ 
+         // number of vehicles arriving to the end of the queue at current time-step
+         queue-arrivals(?u) = [sum_{?t : time} (TIME-HEAD(?t) * flow-on-link(?u,?t))];
+@@ -241,32 +251,23 @@
+                        // a switch statement to assist the JAX planner
+                  ^ (switch (signal(?i)) {
+                         case @ALL-RED             : GREEN(?u,?d,@ALL-RED),
+                         case @WEST-EAST-LEFT      : GREEN(?u,?d,@WEST-EAST-LEFT),
+                         case @ALL-RED2            : GREEN(?u,?d,@ALL-RED2),
+                         case @WEST-EAST-THROUGH   : GREEN(?u,?d,@WEST-EAST-THROUGH),
+                         case @ALL-RED3            : GREEN(?u,?d,@ALL-RED3),
+-                        case @NORTH-SOUTH-LEFT    : GREEN(?u,?d.@NORTH-SOUTH-LEFT),
++                        case @NORTH-SOUTH-LEFT    : GREEN(?u,?d,@NORTH-SOUTH-LEFT),
+                         case @ALL-RED4            : GREEN(?u,?d,@ALL-RED4),
+                         case @NORTH-SOUTH-THROUGH : GREEN(?u,?d,@NORTH-SOUTH-THROUGH)
+                    })
+                ])
+-             * max[ 0, min[ q(?u,?d) + queue-arrivals(?u)*BETA(?u,?d),        // Undersaturated
+-                            min [ BETA(?u,?d) * MU(?u,?d) * Ts,               // Saturated
++             * max[ 0, min[ q(?u,?d) + BETA(?u,?d)*queue-arrivals(?u),        // Undersaturated
++                            min [ MU(?u,?d) * Ts,                             // Saturated
+                                   Cl(?d) - Nc(?d) ]]];                        // Oversaturated
+   
+-        // number of vehicles entering from a source
+-        src-arrivals(?u) =  SOURCE(?u) * Uniform(0, 2*SOURCE-ARRIVAL-RATE(?u)*Ts);
+-
+-        // flow from source u into the network
+-        // may not equal src-arrivals due to vehicles previously held in virtual queue
+-        flow-from-source(?u) = SOURCE(?u) * min[ src-arrivals(?u) + virtual-q(?u),        // Undersaturated
+-                                                 min[ SOURCE-MU(?u) * Ts,                 // Saturated
+-                                                      Cl(?u) - Nc(?u) ]];                 // Oversaturated
+-
+ 
+         // number of vehicles entering link d, summed over all possible inflows
+         flow-into-link(?d) =   SOURCE(?d)       * flow-from-source(?d)
+                              + (1 - SOURCE(?d)) * [sum_{?u : link} ( flow-through-turn(?u,?d) )];
+ 
+ 
+         // signal-phase action: handle the cases when the action is forced by the constraints
+@@ -290,15 +291,15 @@
+         flow-on-link'(?u,?t) =
+             (TIME-VAL(?t) == tau(?u))     * (1 - gamma(?u)) * flow-into-link(?u)
+           + (TIME-VAL(?t) == (tau(?u)+1)) * gamma(?u)       * flow-into-link(?u)
+           + (sum_{?t2 : time} [ NEXT(?t,?t2) * flow-on-link(?u,?t2) ]);
+ 
+         virtual-q'(?u) = virtual-q(?u) + src-arrivals(?u) - flow-from-source(?u);
+             
+-        q'(?u,?d) = [q(?u,?d) + queue-arrivals(?u)*BETA(?u,?d) - flow-through-turn(?u,?d)] * TURN(?u,?d);
++        q'(?u,?d) = [q(?u,?d) + BETA(?u,?d)*queue-arrivals(?u) - flow-through-turn(?u,?d)] * TURN(?u,?d);
+ 
+         Nc'(?u) =
+             Nc(?u)
+             + flow-into-link(?u)
+             - (1 - SINK(?u)) * (sum_{?d : link}[flow-through-turn(?u,?d)])
+             - SINK(?u)       *  queue-arrivals(?u);
+ 
+@@ -319,14 +320,17 @@
+     };
+ 
+     // total travel time: 
+     // minus number of cars in the network
+     // minus all virtual queues at source links
+     reward = - ( sum_{?u : link} [ (Nc(?u) + SOURCE(?u)*virtual-q(?u)) * Ts ] );
+ 
++    // -sum of local intersection delays:
++    //reward = -( sum_{?u : link, ?d : link} [ q(?u,?d)  ] );
++
+     state-invariants {
+         1 <= Ts;
+         0 < Lv;
+         forall_{?u : link, ?d : link, ?i : intersection} [ (LINK-TO(?u,?i) ^ TURN(?u,?d)) => LINK-FROM(?i,?d) ];
+ 
+         forall_{?u : link} [ SOURCE(?u) => (virtual-q(?u) >= 0) ];
+         forall_{?u : link, ?d : link} [ q(?u,?d) >= 0 ];
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/instance0.rddl`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -143,14 +143,14 @@
+         NEXT(t16,t17);
+         NEXT(t17,t18);
+         NEXT(t18,t19);
+         NEXT(t19,t20);
+     };
+ }
+ 
+-instance isolated_intersection_inst {
++instance isolated_intersection_inst_0 {
+     domain = BLX_model;
+     non-fluents = isolated_intersection;
+     max-nondef-actions = pos-inf;
+     horizon = 200;
+     discount = 1.0;
+ }
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Traffic/instance1.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Traffic/instance1.rddl`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -641,14 +641,14 @@
+         SOURCE-X(l-s4-i4) = 1197.0; SOURCE-Y(l-s4-i4) = 685.0;
+         SOURCE-X(l-s6-i4) = 1197.0; SOURCE-Y(l-s6-i4) = 0.0;
+         SINK-X(l-i4-s4) = 1197.0; SINK-Y(l-i4-s4) = 685.0;
+         SINK-X(l-i4-s6) = 1197.0; SINK-Y(l-i4-s6) = 0.0;
+     };
+ }
+ 
+-instance grid_1x5 {
++instance grid_1x5_1 {
+     domain = BLX_model;
+     non-fluents = grid_1x5_dominant_Eb;
+     max-nondef-actions = 5;
+     horizon = 300;
+     discount = 1.0;
+ }
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Continuous/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Continuous/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Continuous/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Continuous/instance0.rddl`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -30,15 +30,15 @@
+         GOAL-Y(a1) = 50.0;
+         GOAL-Z(a1) = 50.0;
+ 
+         CONTROLLABLE(a1);
+ 	};
+ }
+ 
+-instance simple_UAV_p0 {
++instance simple_UAV_cont_0 {
+ 	domain = kinematic_UAVs_con;
+ 	non-fluents = nf_simple_UAV_p0;
+ 	
+ 	init-state {
+ 	    pos-x(a1) = 0.0;
+         pos-y(a1) = 0.0;
+         pos-z(a1) = 0.0;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Continuous/instance1.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Continuous/instance1.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -30,15 +30,15 @@
+         GOAL-Y(a1) = 50.0;
+         GOAL-Z(a1) = 50.0;
+ 
+         CONTROLLABLE(a1);
+ 	};
+ }
+ 
+-instance simple_UAV_p0 {
++instance simple_UAV_cont_1 {
+ 	domain = kinematic_UAVs_con;
+ 	non-fluents = nf_simple_UAV_p0;
+ 	
+ 	init-state {
+ 	    pos-x(a1) = 0.0;
+         pos-y(a1) = 0.0;
+         pos-z(a1) = 0.0;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Discrete/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Discrete/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Discrete/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Discrete/instance0.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -22,15 +22,15 @@
+         GOAL-Y(a1) = 50.0;
+         GOAL-Z(a1) = 50.0;
+ 
+         CONTROLLABLE(a1);
+ 	};
+ }
+ 
+-instance simple_UAV_p0 {
++instance simple_UAV_dis_0 {
+ 	domain = kinematic_UAVs_dis;
+ 	non-fluents = nf_simple_UAV_p0;
+ 	
+ 	init-state {
+ 	    pos-x(a1) = 0.0;
+         pos-y(a1) = 0.0;
+         pos-z(a1) = 0.0;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Mixed/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Mixed/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/UAV/Mixed/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/UAV/Mixed/instance0.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -22,15 +22,15 @@
+         GOAL-Y(a1) = 50.0;
+         GOAL-Z(a1) = 50.0;
+ 
+         CONTROLLABLE(a1);
+ 	};
+ }
+ 
+-instance simple_UAV_p0 {
++instance simple_UAV_hyb_0 {
+ 	domain = kinematic_UAVs_mix;
+ 	non-fluents = nf_simple_UAV_p0;
+ 	
+ 	init-state {
+ 	    pos-x(a1) = 0.0;
+         pos-y(a1) = 0.0;
+         pos-z(a1) = 0.0;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Wildfire/domain.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Wildfire/domain.rddl`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Examples/Wildfire/instance0.rddl` & `pyRDDLGym-1.0.4/pyRDDLGym/Examples/Wildfire/instance0.rddl`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -47,15 +47,15 @@
+ 		NEIGHBOR(x3,y3,x3,y2);
+ 		TARGET(x2,y2);
+ 		TARGET(x2,y3);
+ 		TARGET(x3,y1);
+ 	};
+ }
+ 
+-instance wildfire_inst_mdp__1 {
++instance wildfire_inst_mdp_0 {
+ 	domain = wildfire_mdp;
+ 	non-fluents = nf_wildfire_inst_mdp__1;
+ 	init-state {
+ 		burning(x1,y3);
+ 	};
+ 
+ 	max-nondef-actions = 1;
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/GymExample.py` & `pyRDDLGym-1.0.4/pyRDDLGym/GymExample.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,37 +1,40 @@
+ import sys
+ 
+ from pyRDDLGym import RDDLEnv
+ from pyRDDLGym import ExampleManager
+ from pyRDDLGym.Policies.Agents import RandomAgent
+ # from pyRDDLGym.Visualizer.MovieGenerator import MovieGenerator
+ 
+-def main(env, inst):
++def main(env, inst, method_name=None, episodes=1):
+     print(f'preparing to launch instance {inst} of domain {env}...')
+     
+     # get the environment info
+     # ExampleManager.RebuildExamples()
+     EnvInfo = ExampleManager.GetEnvInfo(env)
+     
+     # set up the environment class, choose instance 0 because every example has at least one example instance
++    log = False if method_name is None else True
+     myEnv = RDDLEnv.RDDLEnv(domain=EnvInfo.get_domain(), 
+                             instance=EnvInfo.get_instance(inst),
+                             enforce_action_constraints=False,
+-                            debug=False)
++                            debug=False,
++                            log=log,
++                            simlogname=method_name)
+     
+     # set up the environment visualizer
+     # frames_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Visualizer', 'Frames')
+     myEnv.set_visualizer(EnvInfo.get_visualizer())
+                         # movie_gen=MovieGenerator(frames_path, ENV, 200), movie_per_episode=True)
+     
+     # set up an example aget
+     agent = RandomAgent(action_space=myEnv.action_space, 
+                         num_actions=myEnv.numConcurrentActions)
+ 
+-    for episode in range(1):
++    for episode in range(episodes):
+         total_reward = 0
+         state = myEnv.reset()
+         for step in range(myEnv.horizon):
+             myEnv.render()
+             action = agent.sample_action()
+             next_state, reward, done, info = myEnv.step(action)
+             total_reward += reward
+@@ -47,12 +50,22 @@
+         print(f'episode {episode} ended with reward {total_reward}')
+     
+     myEnv.close()
+ 
+ 
+ if __name__ == "__main__":
+     args = sys.argv
++    method_name = None
++    episodes = 1
+     if len(args) < 3:
+         env, inst = 'HVAC', '0'
+-    else:
++    elif len(args) < 4:
+         env, inst = args[1:3]
+-    main(env, inst)
++    elif len(args) < 5:
++        env, inst, method_name = args[1:4]
++    else:
++        env, inst, method_name, episodes = args[1:5]
++        try:
++            episodes = int(episodes)
++        except:
++            raise ValueError('episodes argument must be an integer, received:' + episodes)
++    main(env, inst, method_name, episodes)
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Policies/Agents.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Policies/Agents.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Policies/RDDLSimAgent.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Policies/RDDLSimAgent.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/CartPoleViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/CartPoleViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/ChartViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/ChartViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/ColorViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/ColorViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/ElevatorViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/ElevatorViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/HVACViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/HVACViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/MarsRoverViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/MarsRoverViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/MovieGenerator.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/MovieGenerator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/PowerGenViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/PowerGenViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/RacecarViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/RacecarViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/RecSimViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/RecSimViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/ReservoirViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/ReservoirViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/StateViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/StateViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/TextViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/TextViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/UAVsViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/UAVsViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/WildfireViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/WildfireViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/Visualizer/visualize_dbn.py` & `pyRDDLGym-1.0.4/pyRDDLGym/Visualizer/visualize_dbn.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -441,15 +441,16 @@
+ 
+     def add_derived_fluents_to_graph(self, graph: Graph):
+         for derived in self.model.derived:
+             self.add_single_derived_fluent_to_graph(graph, derived)
+     
+     @staticmethod
+     def get_objects(gvar: str, pvar: str) -> List[str]:
+-        return list(map(lambda x: '?' + x, gvar.split(pvar)[1].split('_')[1:]))
++        return list(map(lambda x: '?' + x, 
++                        [v_str for v_str in gvar.split(pvar)[1].split('_')[1:] if v_str]))
+     
+     def add_node(self, node_name: str):
+         gvar = self._node_name_to_gvar[node_name]
+         if gvar in self.model.prev_state.values():
+             self._state.add(node_name)
+         elif gvar in self.model.next_state.values():
+             self._next_state.add(node_name)
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/XADD/RDDLLevelAnalysisXADD.py` & `pyRDDLGym-1.0.4/pyRDDLGym/XADD/RDDLLevelAnalysisXADD.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/XADD/RDDLModelXADD.py` & `pyRDDLGym-1.0.4/pyRDDLGym/XADD/RDDLModelXADD.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -18,18 +18,18 @@
+ UNIFORM_VAR_NAME = '#_UNIFORM_{num}'
+ GAUSSIAN_VAR_NAME = '#_GAUSSIAN_{num}'
+ EXPONENTIAL_VAR_NAME = '#_EXPONENTIAL_{num}'
+ 
+ 
+ class RDDLModelWXADD(PlanningModel):
+ 
+-    def __init__(self, model: RDDLGroundedModel):
++    def __init__(self, model: RDDLGroundedModel, context: XADD = None):
+         super().__init__()
+         self.model = model
+-        self._context: XADD = XADD()
++        self._context: XADD = XADD() if context is None else context
+         self._var_name_to_node_id = {}
+         self._sympy_var_to_node_id = {}
+         self._sympy_var_name_to_var_name = {}
+         self._var_name_to_sympy_var_name = {}
+         self._op_to_node_id = {}
+         self._node_id_to_op = {}
+         self._curr_pvar = None
+@@ -160,28 +160,33 @@
+         var, args = expr.args
+         var_type = self.gvar_to_type[var]
+         if var in self.nonfluents:
+             var_ = self.nonfluents[var]
+             node_id = self._context.convert_to_xadd(sp.S(var_))
+             self._var_name_to_node_id[var] = node_id            
+         else:
+-            var_ = self.ns.setdefault(
+-                var,
+-                sp.Symbol(
+-                    var.replace('-', '_'),
+-                    bool=var_type == 'bool'
+-                )
+-            )
+-            node_id = self._context.convert_to_xadd(var_)
+-            self._sympy_var_to_node_id[var_] = node_id
+-            self._var_name_to_node_id[var] = node_id
+-            self._sympy_var_name_to_var_name[str(var_)] = var
+-            self._var_name_to_sympy_var_name[var] = str(var_)
++            var_ = self.add_sympy_var(var, var_type)
++            node_id = self._sympy_var_to_node_id[var_]
+         return node_id
+ 
++    def add_sympy_var(self, var_name: str, var_type: str) -> sp.Symbol:
++        var_ = self.ns.setdefault(
++            var_name,
++            sp.Symbol(
++                var_name.replace('-', '_'),
++                bool=var_type == 'bool'
++            )
++        )
++        node_id = self._context.convert_to_xadd(var_)
++        self._sympy_var_to_node_id[var_] = node_id
++        self._var_name_to_node_id[var_name] = node_id
++        self._sympy_var_name_to_var_name[str(var_)] = var_name
++        self._var_name_to_sympy_var_name[var_name] = str(var_)
++        return var_
++
+     def aggr_to_xadd(self, expr: Expression) -> int:
+         """
+         For lifted variables, we cannot evaluate aggregations such as 
+             'exists', 'forall', 'sum', 'prod', 'avg', 'minimum', 'maximum'.
+         Thus, these will be evaluated explicitly when grounding. 
+         For now, it is sufficient to return a node with the right type.
+         Additionally, we need to know what variables are given as arguments to
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/XADD/RDDLSimulatorXADD.py` & `pyRDDLGym-1.0.4/pyRDDLGym/XADD/RDDLSimulatorXADD.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/testDiscrete.py` & `pyRDDLGym-1.0.4/pyRDDLGym/testDiscrete.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/RDDLGenerator.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/RDDLGenerator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/_deprecated.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/_deprecated.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/testGymDrone.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/testGymDrone.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/testViz.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/testViz.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/test_basic.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/test_basic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/test_dbn_vis.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/test_dbn_vis.py`
+
+ * *Files 24% similar despite different names*
+
+```diff
+@@ -1,15 +1,17 @@
+ from pyRDDLGym.Visualizer.visualize_dbn import RDDL2Graph
+ 
+ 
+ def test_dbn_visualization():
+     domains = [
+-        'CartPole discrete', 'CartPole continuous', 'MarsRover', 
+-        'MountainCar', 'PowerGeneration', 'RaceCar', 'UAV continuous', 
+-        'UAV discrete', 'UAV mixed', 'Wildfire', 'SupplyChain'
++        'cartpole discrete', 'cartpole continuous', 'marsrover', 
++        # 'mountaincar',    # Takes too long to create DBN graph for this
++        'powergen', 'racecar', 'uavcontinuous', 
++        'uavdiscrete', 'uavmixed', 'wildfire', 'supplychain', 
++        'propdbn'
+     ]
+     
+     for domain in domains:
+         r2g = RDDL2Graph(
+             domain=domain,
+             instance=0,
+             directed=True,
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/test_termination.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/test_termination.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/test_xadd.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/test_xadd.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -4,15 +4,15 @@
+ from pyRDDLGym.XADD.RDDLModelXADD import RDDLModelWXADD
+ from pyRDDLGym.Core.Parser.RDDLReader import RDDLReader
+ from pyRDDLGym.Core.Parser.parser import RDDLParser
+ from pyRDDLGym.Examples.ExampleManager import ExampleManager
+ 
+ 
+ def test_xadd(
+-        env_name: str = 'Wildfire',
++        env_name: str = 'wildfire',
+         cpf: Optional[str] = None,
+         save_graph: bool = False,
+ ):
+     env_info = ExampleManager.GetEnvInfo(env_name)
+     domain = env_info.get_domain()
+     instance = env_info.get_instance(0)
+     
+@@ -30,16 +30,22 @@
+     model = grounder.Ground()
+ 
+     # XADD compilation
+     xadd_model = RDDLModelWXADD(model)
+     xadd_model.compile()
+     context = xadd_model._context
+     
+-    if cpf is not None:
+-        expr = xadd_model.cpfs.get(f"{cpf}'")
++    if save_graph:
++        Path(f'tmp/{env_name}').mkdir(parents=True, exist_ok=True)
++        
++    if cpf is not None or cpf == 'reward':
++        if cpf == 'reward':
++            expr = xadd_model.reward
++        else:
++            expr = xadd_model.cpfs.get(f"{cpf}'")
+         if expr is None:
+             raise AttributeError(f"Cannot retrieve {cpf}' from 'model.cpfs'")
+         print(f"cpf {cpf}':", end='\n')
+         xadd_model.print(expr)
+         if save_graph:
+             f_path = f"{env_name}/{env_name}_inst0_{cpf}"
+             context.save_graph(expr, f_path)
+@@ -55,15 +61,15 @@
+ 
+ 
+ if __name__ == "__main__":
+     import argparse
+ 
+     parser = argparse.ArgumentParser()
+ 
+-    parser.add_argument('--env', type=str, default='Wildfire',
++    parser.add_argument('--env', type=str, default='wildfire',
+                         help='The name of the RDDL environment')
+     parser.add_argument('--cpf', type=str, default=None,
+                         help='If specified, only print out this CPF')
+     parser.add_argument('--save_graph', action='store_true',
+                         help='Save the graph as pdf file')
+     args = parser.parse_args()
+     test_xadd(env_name=args.env, cpf=args.cpf, save_graph=args.save_graph)
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/unit_test_mars_rover.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/unit_test_mars_rover.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym/tests/unit_test_power_gen.py` & `pyRDDLGym-1.0.4/pyRDDLGym/tests/unit_test_power_gen.py`
+
+ * *Files identical despite different names*
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym.egg-info/PKG-INFO` & `pyRDDLGym-1.0.4/pyRDDLGym.egg-info/PKG-INFO`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: pyRDDLGym
+-Version: 1.0.2
++Version: 1.0.4
+ Summary: pyRDDLGym: RDDL automatic generation tool for OpenAI Gym
+ Home-page: https://github.com/ataitler/pyRDDLGym
+ Author: Ayal Taitler, Michael Gimelfarb, Scott Sanner, Jihwan Jeong, Sriram Gopalakrishnan, Martin Mladenov, jack liu
+ Author-email: ataitler@gmail.com, mike.gimelfarb@mail.utoronto.ca, ssanner@mie.utoronto.ca, jhjeong@mie.utoronto.ca, ariram.gopalakrishnan@jpmchase.com, mmladenov@google.com, xiaotian.liu@mail.utoronto.ca
+ License: MIT License
+ Classifier: Development Status :: 3 - Alpha
+ Classifier: Intended Audience :: Science/Research
+```
+
+### Comparing `pyRDDLGym-1.0.2/pyRDDLGym.egg-info/SOURCES.txt` & `pyRDDLGym-1.0.4/pyRDDLGym.egg-info/SOURCES.txt`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ LICENSE.MD
+ MANIFEST.in
+ README.md
+ setup.py
+ pyRDDLGym/GymExample.py
+ pyRDDLGym/JaxExample.py
++pyRDDLGym/JaxTuningExample.py
+ pyRDDLGym/RDDLSimClientExample.py
+ pyRDDLGym/__init__.py
+ pyRDDLGym/testDiscrete.py
+ pyRDDLGym.egg-info/PKG-INFO
+ pyRDDLGym.egg-info/SOURCES.txt
+ pyRDDLGym.egg-info/dependency_links.txt
+ pyRDDLGym.egg-info/requires.txt
+@@ -25,17 +26,20 @@
+ pyRDDLGym/Core/Env/RDDLConstraints.py
+ pyRDDLGym/Core/Env/RDDLEnv.py
+ pyRDDLGym/Core/Env/__init__.py
+ pyRDDLGym/Core/ErrorHandling/RDDLException.py
+ pyRDDLGym/Core/ErrorHandling/__init__.py
+ pyRDDLGym/Core/Grounder/RDDLGrounder.py
+ pyRDDLGym/Core/Grounder/__init__.py
++pyRDDLGym/Core/Jax/JaxParameterTuning.py
+ pyRDDLGym/Core/Jax/JaxRDDLBackpropPlanner.py
++pyRDDLGym/Core/Jax/JaxRDDLBackpropPlannerUCT.py
+ pyRDDLGym/Core/Jax/JaxRDDLCompiler.py
+ pyRDDLGym/Core/Jax/JaxRDDLLogic.py
++pyRDDLGym/Core/Jax/JaxRDDLModelError.py
+ pyRDDLGym/Core/Jax/JaxRDDLSimulator.py
+ pyRDDLGym/Core/Jax/__init__.py
+ pyRDDLGym/Core/Parser/RDDLReader.py
+ pyRDDLGym/Core/Parser/__init__.py
+ pyRDDLGym/Core/Parser/cpf.py
+ pyRDDLGym/Core/Parser/domain.py
+ pyRDDLGym/Core/Parser/expr.py
+@@ -45,14 +49,15 @@
+ pyRDDLGym/Core/Parser/parsetab.py
+ pyRDDLGym/Core/Parser/pvariable.py
+ pyRDDLGym/Core/Parser/rddl.py
+ pyRDDLGym/Core/Parser/utils.py
+ pyRDDLGym/Core/Simulator/RDDLSimulator.py
+ pyRDDLGym/Core/Simulator/__init__.py
+ pyRDDLGym/Examples/ExampleManager.py
++pyRDDLGym/Examples/InstanceGenerator.py
+ pyRDDLGym/Examples/__init__.py
+ pyRDDLGym/Examples/CartPole/Continuous/domain.info
+ pyRDDLGym/Examples/CartPole/Continuous/domain.rddl
+ pyRDDLGym/Examples/CartPole/Continuous/instance0.rddl
+ pyRDDLGym/Examples/CartPole/Discrete/domain.info
+ pyRDDLGym/Examples/CartPole/Discrete/domain.rddl
+ pyRDDLGym/Examples/CartPole/Discrete/instance0.rddl
+@@ -61,31 +66,43 @@
+ pyRDDLGym/Examples/Elevators/instance0.rddl
+ pyRDDLGym/Examples/Elevators/instance1.rddl
+ pyRDDLGym/Examples/HVAC/domain.info
+ pyRDDLGym/Examples/HVAC/domain.rddl
+ pyRDDLGym/Examples/HVAC/instance0.rddl
+ pyRDDLGym/Examples/HVAC/instance1.rddl
+ pyRDDLGym/Examples/HVAC/instance2.rddl
++pyRDDLGym/Examples/InstanceGenerators/HVACInstanceGenerator.py
++pyRDDLGym/Examples/InstanceGenerators/MarsRoverInstanceGenerator.py
++pyRDDLGym/Examples/InstanceGenerators/MountainCarInstanceGenerator.py
++pyRDDLGym/Examples/InstanceGenerators/PowerGenInstanceGenerator.py
++pyRDDLGym/Examples/InstanceGenerators/RaceCarInstanceGenerator.py
++pyRDDLGym/Examples/InstanceGenerators/RecSimInstanceGen.py
++pyRDDLGym/Examples/InstanceGenerators/ReservoirInstanceGenerator.py
++pyRDDLGym/Examples/InstanceGenerators/UAVInstanceGenerator.py
++pyRDDLGym/Examples/InstanceGenerators/__init__.py
+ pyRDDLGym/Examples/MarsRover/domain.info
+ pyRDDLGym/Examples/MarsRover/domain.rddl
+ pyRDDLGym/Examples/MarsRover/instance0.rddl
+ pyRDDLGym/Examples/MountainCar/domain.info
+ pyRDDLGym/Examples/MountainCar/domain.rddl
+ pyRDDLGym/Examples/MountainCar/domain_old.rddl
+ pyRDDLGym/Examples/MountainCar/instance0.rddl
+ pyRDDLGym/Examples/MountainCar/instance0_old.rddl
+ pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/domain.info
+ pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/domain.rddl
+ pyRDDLGym/Examples/NewLanguageExamples/NewLanguage/instance0.rddl
+ pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/domain.info
+ pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/domain.rddl
+ pyRDDLGym/Examples/NewLanguageExamples/NewtonZero/instance0.rddl
+-pyRDDLGym/Examples/PowerGen/domain.info
+-pyRDDLGym/Examples/PowerGen/domain.rddl
+-pyRDDLGym/Examples/PowerGen/instance0.rddl
++pyRDDLGym/Examples/PowerGen/Continuous/domain.info
++pyRDDLGym/Examples/PowerGen/Continuous/domain.rddl
++pyRDDLGym/Examples/PowerGen/Continuous/instance0.rddl
++pyRDDLGym/Examples/PowerGen/Discrete/domain.info
++pyRDDLGym/Examples/PowerGen/Discrete/domain.rddl
++pyRDDLGym/Examples/PowerGen/Discrete/instance0.rddl
+ pyRDDLGym/Examples/PropDBN/domain.info
+ pyRDDLGym/Examples/PropDBN/domain.rddl
+ pyRDDLGym/Examples/PropDBN/instance0.rddl
+ pyRDDLGym/Examples/RaceCar/domain.info
+ pyRDDLGym/Examples/RaceCar/domain.rddl
+ pyRDDLGym/Examples/RaceCar/instance0.rddl
+ pyRDDLGym/Examples/RaceCar/instance1.rddl
+@@ -110,21 +127,19 @@
+ pyRDDLGym/Examples/SupplyChainNet/instance0.rddl
+ pyRDDLGym/Examples/Traffic/__init__.py
+ pyRDDLGym/Examples/Traffic/domain.info
+ pyRDDLGym/Examples/Traffic/domain.rddl
+ pyRDDLGym/Examples/Traffic/instance0.rddl
+ pyRDDLGym/Examples/Traffic/instance1.rddl
+ pyRDDLGym/Examples/Traffic/netgen.py
+-pyRDDLGym/Examples/Traffic/GenericPhasingScheme/TrafficViz.py
+-pyRDDLGym/Examples/Traffic/GenericPhasingScheme/__init__.py
+-pyRDDLGym/Examples/Traffic/GenericPhasingScheme/domain.rddl
+-pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance0.rddl
+-pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance1.rddl
+-pyRDDLGym/Examples/Traffic/GenericPhasingScheme/instance2.rddl
+-pyRDDLGym/Examples/Traffic/GenericPhasingScheme/netgen.py
++pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/domain.rddl
++pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance0.rddl
++pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance1.rddl
++pyRDDLGym/Examples/Traffic/Deprecated/GenericPhasingScheme/instance2.rddl
++pyRDDLGym/Examples/Traffic/Experiments/webster_exp_equal_split.rddl
+ pyRDDLGym/Examples/UAV/Continuous/domain.info
+ pyRDDLGym/Examples/UAV/Continuous/domain.rddl
+ pyRDDLGym/Examples/UAV/Continuous/instance0.rddl
+ pyRDDLGym/Examples/UAV/Continuous/instance1.rddl
+ pyRDDLGym/Examples/UAV/Discrete/domain.info
+ pyRDDLGym/Examples/UAV/Discrete/domain.rddl
+ pyRDDLGym/Examples/UAV/Discrete/instance0.rddl
+```
+
+### Comparing `pyRDDLGym-1.0.2/setup.py` & `pyRDDLGym-1.0.4/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -15,15 +15,15 @@
+ from setuptools import setup, find_packages
+ 
+ # with open("README.md", "r", encoding="utf-8") as fh:
+ #     long_description = fh.read()
+ 
+ setup(
+       name='pyRDDLGym',
+-      version='1.0.2',
++      version='1.0.4',
+       author="Ayal Taitler, Michael Gimelfarb, Scott Sanner, Jihwan Jeong, Sriram Gopalakrishnan, Martin Mladenov, jack liu",
+       author_email="ataitler@gmail.com, mike.gimelfarb@mail.utoronto.ca, ssanner@mie.utoronto.ca, jhjeong@mie.utoronto.ca, ariram.gopalakrishnan@jpmchase.com, mmladenov@google.com, xiaotian.liu@mail.utoronto.ca",
+       description="pyRDDLGym: RDDL automatic generation tool for OpenAI Gym",
+       # long_description=long_description,
+       license="MIT License",
+       url="https://github.com/ataitler/pyRDDLGym",
+       packages=find_packages(),
+```
+

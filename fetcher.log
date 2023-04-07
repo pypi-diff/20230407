@@ -667,3 +667,27 @@
 [2023-04-07 17:44:41] WARNING root fetch - processPackages [deform-conv2d-onnx-exporter]: None
 [2023-04-07 17:44:41] INFO root fetch - main [MainThread]: error
 [2023-04-07 17:44:51] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:45:15] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17620431]
+[2023-04-07 17:45:20] INFO root fetch - main [MainThread]: No changed packages found
+[2023-04-07 17:45:50] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17620432]
+[2023-04-07 17:45:55] INFO root fetch - main [MainThread]: Found 4 changed packages
+[2023-04-07 17:45:55] ERROR root fetch - processPackages [zuoning-lama-cleaner]: Unable to get metadata: No such project 'zuoning-lama-cleaner'
+[2023-04-07 17:45:55] INFO root fetch - main [MainThread]: error
+[2023-04-07 17:45:55] INFO root fetch - processPackages [qdrant-haystack]: New version: [0.0.5] Old Version: [0.0.4]
+[2023-04-07 17:45:55] INFO root fetch - processPackages [pyRDDLGym]: New version: [1.0.4] Old Version: [1.0.2]
+[2023-04-07 17:45:55] INFO root fetch - processPackages [abraia]: New version: [0.9.4] Old Version: [0.9.3]
+[2023-04-07 17:45:55] INFO root fetch - processPackages [pyRDDLGym]: Downloading https://files.pythonhosted.org/packages/bb/58/2898f133fa2fd4fdfe03dc78961038d8d20f72df0b120e5e5f2636263ae9/pyRDDLGym-1.0.2.tar.gz
+[2023-04-07 17:45:55] INFO root fetch - processPackages [abraia]: Downloading https://files.pythonhosted.org/packages/c9/30/a14fcdf22c7e53ad449d061da70c33b2f9b8a49d092133b06b447a5222f9/abraia-0.9.3.tar.gz
+[2023-04-07 17:45:55] INFO root fetch - processPackages [qdrant-haystack]: Downloading https://files.pythonhosted.org/packages/0f/91/fc01cafbe11505cd60112ac58216b48bf044c21070977e6e4a52d716c382/qdrant_haystack-0.0.4.tar.gz
+[2023-04-07 17:45:56] INFO root fetch - processPackages [abraia]: Downloading https://files.pythonhosted.org/packages/b4/30/763d203b2f4a8c94b5cb5b3e5745703d83f709faff8ba69df47aab492f04/abraia-0.9.4.tar.gz
+[2023-04-07 17:45:56] INFO root fetch - processPackages [qdrant-haystack]: Downloading https://files.pythonhosted.org/packages/1c/12/58698403db5fdd5b7d9b43133687eb605a32c976ef6b38e1071abfbdfa52/qdrant_haystack-0.0.5.tar.gz
+[2023-04-07 17:45:56] INFO root fetch - processPackages [abraia]: executing diffoscope
+[2023-04-07 17:45:56] INFO root fetch - processPackages [abraia]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/abraia-0.9.3.tar.gz tmp/abraia-0.9.4.tar.gz --html 20230407/a/abraia/0.9.3-0.9.4/index.html --text 20230407/a/abraia/0.9.3-0.9.4/diff.txt --markdown 20230407/a/abraia/0.9.3-0.9.4/diff.md
+[2023-04-07 17:45:56] INFO root fetch - processPackages [qdrant-haystack]: executing diffoscope
+[2023-04-07 17:45:56] INFO root fetch - processPackages [qdrant-haystack]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/qdrant_haystack-0.0.4.tar.gz tmp/qdrant_haystack-0.0.5.tar.gz --html 20230407/q/qdrant-haystack/0.0.4-0.0.5/index.html --text 20230407/q/qdrant-haystack/0.0.4-0.0.5/diff.txt --markdown 20230407/q/qdrant-haystack/0.0.4-0.0.5/diff.md
+[2023-04-07 17:45:56] INFO root fetch - processPackages [pyRDDLGym]: Downloading https://files.pythonhosted.org/packages/56/75/8f966535e6f15d790c043909f932376d09027f5838659f45da96e8ac72cb/pyRDDLGym-1.0.4.tar.gz
+[2023-04-07 17:45:57] INFO root fetch - processPackages [pyRDDLGym]: executing diffoscope
+[2023-04-07 17:45:57] INFO root fetch - processPackages [pyRDDLGym]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pyRDDLGym-1.0.2.tar.gz tmp/pyRDDLGym-1.0.4.tar.gz --html 20230407/p/pyRDDLGym/1.0.2-1.0.4/index.html --text 20230407/p/pyRDDLGym/1.0.2-1.0.4/diff.txt --markdown 20230407/p/pyRDDLGym/1.0.2-1.0.4/diff.md
+[2023-04-07 17:45:57] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:45:57] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:46:01] INFO root fetch - main [MainThread]: success
