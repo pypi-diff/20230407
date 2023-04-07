@@ -1,0 +1,759 @@
+--- tmp/bullet_safety_gym-0.1.0.tar.gz
++++ tmp/bullet_safety_gym-0.2.0.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dist/bullet_safety_gym-0.1.0.tar", last modified: Fri Apr  7 18:04:37 2023, max compression
+│ +gzip compressed data, was "dist/bullet_safety_gym-0.2.0.tar", last modified: Fri Apr  7 18:05:35 2023, max compression
+│   --- bullet_safety_gym-0.1.0.tar
+├── +++ bullet_safety_gym-0.2.0.tar
+│ ├── file list
+│ │ @@ -1,24 +1,24 @@
+│ │ -drwxr-xr-x   0 zuxin     (1003) zuxin     (1003)        0 2023-04-07 18:04:37.801974 bullet_safety_gym-0.1.0/
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     1105 2023-04-02 15:15:52.000000 bullet_safety_gym-0.1.0/LICENSE
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     8696 2023-04-07 18:04:37.801974 bullet_safety_gym-0.1.0/PKG-INFO
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     7761 2023-04-07 17:54:29.000000 bullet_safety_gym-0.1.0/README.md
+│ │ -drwxr-xr-x   0 zuxin     (1003) zuxin     (1003)        0 2023-04-07 18:04:37.801974 bullet_safety_gym-0.1.0/bullet_safety_gym/
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     8727 2023-04-07 17:54:29.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/__init__.py
+│ │ -drwxr-xr-x   0 zuxin     (1003) zuxin     (1003)        0 2023-04-07 18:04:37.801974 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)        0 2023-04-02 15:15:52.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/__init__.py
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)    26847 2023-04-02 15:15:52.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/agents.py
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)    37204 2023-04-02 15:15:52.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/bases.py
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)    16594 2023-04-02 16:12:01.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/builder.py
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     1529 2023-04-02 15:15:52.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/env_utils.py
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     9452 2023-04-02 15:15:52.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/obstacles.py
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)    10373 2023-04-02 15:15:52.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/sensors.py
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)    28618 2023-04-02 16:12:01.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/tasks.py
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     4072 2023-04-02 15:15:52.000000 bullet_safety_gym-0.1.0/bullet_safety_gym/envs/worlds.py
+│ │ -drwxr-xr-x   0 zuxin     (1003) zuxin     (1003)        0 2023-04-07 18:04:37.801974 bullet_safety_gym-0.1.0/bullet_safety_gym.egg-info/
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     8696 2023-04-07 18:04:37.000000 bullet_safety_gym-0.1.0/bullet_safety_gym.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)      565 2023-04-07 18:04:37.000000 bullet_safety_gym-0.1.0/bullet_safety_gym.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)        1 2023-04-07 18:04:37.000000 bullet_safety_gym-0.1.0/bullet_safety_gym.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)       41 2023-04-07 18:04:37.000000 bullet_safety_gym-0.1.0/bullet_safety_gym.egg-info/requires.txt
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)       18 2023-04-07 18:04:37.000000 bullet_safety_gym-0.1.0/bullet_safety_gym.egg-info/top_level.txt
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)       38 2023-04-07 18:04:37.801974 bullet_safety_gym-0.1.0/setup.cfg
+│ │ --rw-r--r--   0 zuxin     (1003) zuxin     (1003)     1939 2023-04-07 18:04:22.000000 bullet_safety_gym-0.1.0/setup.py
+│ │ +drwxr-xr-x   0 zuxin     (1003) zuxin     (1003)        0 2023-04-07 18:05:35.420878 bullet_safety_gym-0.2.0/
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     1105 2023-04-02 15:15:52.000000 bullet_safety_gym-0.2.0/LICENSE
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     9290 2023-04-07 18:05:35.420878 bullet_safety_gym-0.2.0/PKG-INFO
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     8356 2023-04-07 18:05:23.000000 bullet_safety_gym-0.2.0/README.md
+│ │ +drwxr-xr-x   0 zuxin     (1003) zuxin     (1003)        0 2023-04-07 18:05:35.420878 bullet_safety_gym-0.2.0/bullet_safety_gym/
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     9249 2023-04-07 18:05:23.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/__init__.py
+│ │ +drwxr-xr-x   0 zuxin     (1003) zuxin     (1003)        0 2023-04-07 18:05:35.420878 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)        0 2023-04-02 15:15:52.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/__init__.py
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)    26847 2023-04-02 15:15:52.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/agents.py
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)    37204 2023-04-02 15:15:52.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/bases.py
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)    16594 2023-04-02 16:12:01.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/builder.py
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     1529 2023-04-02 15:15:52.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/env_utils.py
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     9452 2023-04-02 15:15:52.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/obstacles.py
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)    10373 2023-04-02 15:15:52.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/sensors.py
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)    28618 2023-04-02 16:12:01.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/tasks.py
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     4072 2023-04-02 15:15:52.000000 bullet_safety_gym-0.2.0/bullet_safety_gym/envs/worlds.py
+│ │ +drwxr-xr-x   0 zuxin     (1003) zuxin     (1003)        0 2023-04-07 18:05:35.420878 bullet_safety_gym-0.2.0/bullet_safety_gym.egg-info/
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     9290 2023-04-07 18:05:35.000000 bullet_safety_gym-0.2.0/bullet_safety_gym.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)      565 2023-04-07 18:05:35.000000 bullet_safety_gym-0.2.0/bullet_safety_gym.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)        1 2023-04-07 18:05:35.000000 bullet_safety_gym-0.2.0/bullet_safety_gym.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)       41 2023-04-07 18:05:35.000000 bullet_safety_gym-0.2.0/bullet_safety_gym.egg-info/requires.txt
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)       18 2023-04-07 18:05:35.000000 bullet_safety_gym-0.2.0/bullet_safety_gym.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)       38 2023-04-07 18:05:35.420878 bullet_safety_gym-0.2.0/setup.cfg
+│ │ +-rw-r--r--   0 zuxin     (1003) zuxin     (1003)     1939 2023-04-07 18:05:29.000000 bullet_safety_gym-0.2.0/setup.py
+│ │   --- bullet_safety_gym-0.1.0/LICENSE
+│ ├── +++ bullet_safety_gym-0.2.0/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/PKG-INFO
+│ ├── +++ bullet_safety_gym-0.2.0/README.md
+│ │┄ Files 10% similar despite different names
+│ │ @@ -1,32 +1,9 @@
+│ │ -Metadata-Version: 2.1
+│ │ -Name: bullet_safety_gym
+│ │ -Version: 0.1.0
+│ │ -Summary: A framework to benchmark safety in Reinforcement Learning.
+│ │ -Home-page: https://github.com/svengronauer/Bullet-Safety-Gym
+│ │ -Author: Sven Gronauer
+│ │ -Author-email: sven.gronauer@tum.de
+│ │ -License: MIT license
+│ │ -Platform: Linux Ubuntu
+│ │ -Platform: darwin
+│ │ -Classifier: Development Status :: 3 - Alpha
+│ │ -Classifier: Intended Audience :: Science/Research
+│ │ -Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+│ │ -Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │ -Classifier: License :: OSI Approved :: MIT License
+│ │ -Classifier: Programming Language :: Python :: 3.6
+│ │ -Classifier: Programming Language :: Python :: 3.7
+│ │ -Classifier: Programming Language :: Python :: 3.8
+│ │ -Classifier: Programming Language :: Python :: 3.9
+│ │ -Classifier: Programming Language :: Python :: 3.10
+│ │ -Requires-Python: >=3.6
+│ │ -Description-Content-Type: text/markdown
+│ │ -License-File: LICENSE
+│ │ -
+│ │ -**Status:** Development (Major updates may be expected)
+│ │ +**Notes:** This repo requires `gym>=0.26.0` API version due to the major changes in the `reset` and `step` functions. Check [this release note](https://github.com/openai/gym/releases/tag/0.26.0) for details.
+│ │ +For the old API version, please use the `old_api` [branch](https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old_api) which requires `gym==0.23.1`.
+│ │  
+│ │  # Bullet-Safety-Gym
+│ │  
+│ │  "Bullet-Safety-Gym" is a free and open-source framework to benchmark and assess 
+│ │  safety specifications in Reinforcement Learning (RL) problems.
+│ │  
+│ │  
+│ │ @@ -112,24 +89,24 @@
+│ │  
+│ │  Here are the (few) steps to follow to get our repository ready to run.
+│ │  
+│ │  Clone the repository and install the Bullet-Safety-Gym package via pip. Use the 
+│ │  following three lines:
+│ │  
+│ │  ```
+│ │ -git clone https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old_api
+│ │ +git clone https://github.com/liuzuxin/Bullet-Safety-Gym.git
+│ │  
+│ │  cd Bullet-Safety-Gym
+│ │  
+│ │  pip install -e .
+│ │  ```
+│ │  
+│ │  ## Supported Systems
+│ │  
+│ │ -We currently support Linux and OS X running Python 3.6 or greater.
+│ │ +We currently support Linux and OS X running Python 3.7 or greater.
+│ │  Windows should also work (but has not been tested yet).
+│ │  
+│ │  Note: This package has been tested on Mac OS Mojave and Ubuntu (18.04 LTS, 
+│ │  20.04 LTS), and is probably fine for most recent Mac and Linux operating 
+│ │  systems. 
+│ │  
+│ │  ## Dependencies 
+│ │ @@ -146,21 +123,21 @@
+│ │  
+│ │  ```
+│ │  >>> import gym
+│ │  >>> import bullet_safety_gym
+│ │  >>> env = gym.make('SafetyCarGather-v0')
+│ │  ```
+│ │  
+│ │ -The functional interface follows the API of the OpenAI Gym (Brockman et al., 
+│ │ -2016) that consists of the three following important functions:
+│ │ +The functional interface follows the API of the OpenAI Gym that is or greater than the `0.26.0` version. There are major changes of the `reset` and `step` functions. Check [this release note](https://github.com/openai/gym/releases/tag/0.26.0) for details. 
+│ │ +For the old API version, please use the `old` [branch](https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old) which requires `gym==0.20.0`.
+│ │  
+│ │  ```
+│ │ ->>> observation = env.reset()
+│ │ +>>> observation, info = env.reset()
+│ │  >>> random_action = env.action_space.sample()  # usually the action is determined by a policy
+│ │ ->>> next_observation, reward, done, info = env.step(random_action)
+│ │ +>>> next_observation, reward, terminated, truncated, info = env.step(random_action)
+│ │  ```
+│ │  
+│ │  Besides the reward signal, our environments provide an additional cost signal, 
+│ │  which is contained in the `info` dictionary:
+│ │  ```
+│ │  >>> info
+│ │  {'cost': 1.0}
+│ │ @@ -174,18 +151,18 @@
+│ │  import bullet_safety_gym
+│ │  
+│ │  env = gym.make('SafetyAntCircle-v0')
+│ │  
+│ │  while True:
+│ │      done = False
+│ │      env.render()  # make GUI of PyBullet appear
+│ │ -    x = env.reset()
+│ │ +    o, info = env.reset()
+│ │      while not done:
+│ │          random_action = env.action_space.sample()
+│ │ -        x, reward, done, info = env.step(random_action)
+│ │ +        o, reward, terminated, truncated, info = env.step(random_action)
+│ │  ```
+│ │  Note that only calling the render function before the reset function triggers 
+│ │  visuals.
+│ │  
+│ │  
+│ │  # List of environments
+│ │   --- bullet_safety_gym-0.1.0/README.md
+│ ├── +++ bullet_safety_gym-0.2.0/PKG-INFO
+│ │┄ Files 18% similar despite different names
+│ │ @@ -1,8 +1,33 @@
+│ │ -**Status:** Development (Major updates may be expected)
+│ │ +Metadata-Version: 2.1
+│ │ +Name: bullet_safety_gym
+│ │ +Version: 0.2.0
+│ │ +Summary: A framework to benchmark safety in Reinforcement Learning.
+│ │ +Home-page: https://github.com/svengronauer/Bullet-Safety-Gym
+│ │ +Author: Sven Gronauer
+│ │ +Author-email: sven.gronauer@tum.de
+│ │ +License: MIT license
+│ │ +Platform: Linux Ubuntu
+│ │ +Platform: darwin
+│ │ +Classifier: Development Status :: 3 - Alpha
+│ │ +Classifier: Intended Audience :: Science/Research
+│ │ +Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+│ │ +Classifier: Topic :: Software Development :: Libraries :: Python Modules
+│ │ +Classifier: License :: OSI Approved :: MIT License
+│ │ +Classifier: Programming Language :: Python :: 3.6
+│ │ +Classifier: Programming Language :: Python :: 3.7
+│ │ +Classifier: Programming Language :: Python :: 3.8
+│ │ +Classifier: Programming Language :: Python :: 3.9
+│ │ +Classifier: Programming Language :: Python :: 3.10
+│ │ +Requires-Python: >=3.6
+│ │ +Description-Content-Type: text/markdown
+│ │ +License-File: LICENSE
+│ │ +
+│ │ +**Notes:** This repo requires `gym>=0.26.0` API version due to the major changes in the `reset` and `step` functions. Check [this release note](https://github.com/openai/gym/releases/tag/0.26.0) for details.
+│ │ +For the old API version, please use the `old_api` [branch](https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old_api) which requires `gym==0.23.1`.
+│ │  
+│ │  # Bullet-Safety-Gym
+│ │  
+│ │  "Bullet-Safety-Gym" is a free and open-source framework to benchmark and assess 
+│ │  safety specifications in Reinforcement Learning (RL) problems.
+│ │  
+│ │  
+│ │ @@ -88,24 +113,24 @@
+│ │  
+│ │  Here are the (few) steps to follow to get our repository ready to run.
+│ │  
+│ │  Clone the repository and install the Bullet-Safety-Gym package via pip. Use the 
+│ │  following three lines:
+│ │  
+│ │  ```
+│ │ -git clone https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old_api
+│ │ +git clone https://github.com/liuzuxin/Bullet-Safety-Gym.git
+│ │  
+│ │  cd Bullet-Safety-Gym
+│ │  
+│ │  pip install -e .
+│ │  ```
+│ │  
+│ │  ## Supported Systems
+│ │  
+│ │ -We currently support Linux and OS X running Python 3.6 or greater.
+│ │ +We currently support Linux and OS X running Python 3.7 or greater.
+│ │  Windows should also work (but has not been tested yet).
+│ │  
+│ │  Note: This package has been tested on Mac OS Mojave and Ubuntu (18.04 LTS, 
+│ │  20.04 LTS), and is probably fine for most recent Mac and Linux operating 
+│ │  systems. 
+│ │  
+│ │  ## Dependencies 
+│ │ @@ -122,21 +147,21 @@
+│ │  
+│ │  ```
+│ │  >>> import gym
+│ │  >>> import bullet_safety_gym
+│ │  >>> env = gym.make('SafetyCarGather-v0')
+│ │  ```
+│ │  
+│ │ -The functional interface follows the API of the OpenAI Gym (Brockman et al., 
+│ │ -2016) that consists of the three following important functions:
+│ │ +The functional interface follows the API of the OpenAI Gym that is or greater than the `0.26.0` version. There are major changes of the `reset` and `step` functions. Check [this release note](https://github.com/openai/gym/releases/tag/0.26.0) for details. 
+│ │ +For the old API version, please use the `old` [branch](https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old) which requires `gym==0.20.0`.
+│ │  
+│ │  ```
+│ │ ->>> observation = env.reset()
+│ │ +>>> observation, info = env.reset()
+│ │  >>> random_action = env.action_space.sample()  # usually the action is determined by a policy
+│ │ ->>> next_observation, reward, done, info = env.step(random_action)
+│ │ +>>> next_observation, reward, terminated, truncated, info = env.step(random_action)
+│ │  ```
+│ │  
+│ │  Besides the reward signal, our environments provide an additional cost signal, 
+│ │  which is contained in the `info` dictionary:
+│ │  ```
+│ │  >>> info
+│ │  {'cost': 1.0}
+│ │ @@ -150,18 +175,18 @@
+│ │  import bullet_safety_gym
+│ │  
+│ │  env = gym.make('SafetyAntCircle-v0')
+│ │  
+│ │  while True:
+│ │      done = False
+│ │      env.render()  # make GUI of PyBullet appear
+│ │ -    x = env.reset()
+│ │ +    o, info = env.reset()
+│ │      while not done:
+│ │          random_action = env.action_space.sample()
+│ │ -        x, reward, done, info = env.step(random_action)
+│ │ +        o, reward, terminated, truncated, info = env.step(random_action)
+│ │  ```
+│ │  Note that only calling the render function before the reset function triggers 
+│ │  visuals.
+│ │  
+│ │  
+│ │  # List of environments
+│ │  
+│ │ @@ -210,8 +235,8 @@
+│ │  
+│ │  + G. Brockman, Vicki Cheung, Ludwig Pettersson, J. Schneider, John Schulman, Jie Tang, and W. Zaremba. Openai gym. ArXiv, abs/1606.01540, 2016.
+│ │  
+│ │  + Yinlam Chow, Ofir Nachum, Aleksandra Faust, Mohammad Ghavamzadeh, and Edgar A. Due ́n ̃ez-Guzma ́n. Lyapunov-based safe policy optimization for continuous control. CoRR, abs/1901.10031, 2019.
+│ │  
+│ │  + Yan Duan, Xi Chen, Rein Houthooft, John Schulman, and Pieter Abbeel. Benchmarking deep reinforcement learning for continuous control. In Maria Florina Balcan and Kilian Q. Weinberger, editors, Proceedings of The 33rd International Conference on Machine Learn- ing, volume 48 of Proceedings of Machine Learning Research, pages 1329–1338, New York, New York, USA, 20–22 Jun 2016. PMLR.
+│ │  
+│ │ -+ Alex Ray, Joshua Achiam, and Dario Amodei. Benchmarking Safe Exploration in Deep Reinforcement Learning. 2019.
+│ │ ++ Alex Ray, Joshua Achiam, and Dario Amodei. Benchmarking Safe Exploration in Deep Reinforcement Learning. 2019.
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/__init__.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/__init__.py
+│ │┄ Files 15% similar despite different names
+│ │ @@ -25,15 +25,15 @@
+│ │  # ==============================================================================
+│ │  
+│ │  # ===== Ball =====
+│ │  register(
+│ │      id='SafetyBallReach-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=250,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ball',
+│ │          task='ReachGoalTask',
+│ │          obstacles={'Box': {'number': 1, 'fixed_base': False,
+│ │                             'movement': 'circular'},
+│ │                     'Puddle': {'number': 8, 'fixed_base': True,
+│ │                                'movement': 'static'},
+│ │ @@ -45,15 +45,15 @@
+│ │  
+│ │  
+│ │  # ===== Car =====
+│ │  register(
+│ │      id='SafetyCarReach-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=500,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='RaceCar',
+│ │          task='ReachGoalTask',
+│ │          obstacles={'Box': {'number': 0, 'fixed_base': False,
+│ │                             'movement': 'circular'},
+│ │                     'Puddle': {'number': 17, 'fixed_base': True,
+│ │                                'movement': 'static'}
+│ │ @@ -64,15 +64,15 @@
+│ │  )
+│ │  
+│ │  # ===== Ant =====
+│ │  register(
+│ │      id='SafetyAntReach-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=1000,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ant',
+│ │          task='ReachGoalTask',
+│ │          obstacles={'Box': {'number': 1, 'fixed_base': False,
+│ │                             'movement': 'circular'},
+│ │                     'Puddle': {'number': 8, 'fixed_base': True,
+│ │                                'movement': 'static'}
+│ │ @@ -82,15 +82,15 @@
+│ │  )
+│ │  
+│ │  # ===== Drone =====
+│ │  register(
+│ │      id='SafetyDroneReach-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=500,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Drone',
+│ │          task='ReachGoalTask',
+│ │          obstacles={'Box': {'number': 1, 'fixed_base': False,
+│ │                             'movement': 'circular'},
+│ │                     'Pillar': {'number': 8, 'fixed_base': True,
+│ │                                'movement': 'static'}
+│ │ @@ -105,30 +105,30 @@
+│ │  # ==============================================================================
+│ │  
+│ │  # ===== Ball =====
+│ │  register(
+│ │      id='SafetyBallPush-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=250,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ball',
+│ │          task='PushTask',
+│ │          obstacles={},
+│ │          world={'name': 'SmallRoom', 'factor': 1},
+│ │          # debug=True
+│ │      ),
+│ │  )
+│ │  
+│ │  # ===== Ball =====
+│ │  register(
+│ │      id='SafetyCarPush-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=500,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='RaceCar',
+│ │          task='PushTask',
+│ │          obstacles={},
+│ │          world={'name': 'SmallRoom', 'factor': 1},
+│ │          # debug=True
+│ │      ),
+│ │ @@ -139,57 +139,57 @@
+│ │  # ==============================================================================
+│ │  
+│ │  
+│ │  register(
+│ │      id='SafetyBallCircle-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=200,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ball',
+│ │          task='CircleTask',
+│ │          obstacles={},
+│ │          world={'name': 'Octagon'},
+│ │          # debug=True
+│ │      )
+│ │  )
+│ │  
+│ │  register(
+│ │      id='SafetyCarCircle-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=300,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='RaceCar',
+│ │          task='CircleTask',
+│ │          obstacles={},
+│ │          world={'name': 'Octagon'},
+│ │          # debug=True
+│ │      )
+│ │  )
+│ │  
+│ │  register(
+│ │      id='SafetyAntCircle-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=300,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ant',
+│ │          task='CircleTask',
+│ │          obstacles={},
+│ │          world={'name': 'Octagon'},
+│ │      )
+│ │  )
+│ │  
+│ │  # ===== Drone =====
+│ │  register(
+│ │      id='SafetyDroneCircle-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=300,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Drone',
+│ │          task='CircleTask',
+│ │          obstacles={},
+│ │          world={'name': 'Octagon'},
+│ │      )
+│ │  )
+│ │ @@ -199,43 +199,43 @@
+│ │  #       Run Tasks
+│ │  # ==============================================================================
+│ │  
+│ │  register(
+│ │      id='SafetyBallRun-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=100,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ball',
+│ │          task='RunTask',
+│ │          obstacles={},
+│ │          world={'name': 'Plane200', 'factor': 1},
+│ │          # debug=True
+│ │      ),
+│ │  )
+│ │  
+│ │  register(
+│ │      id='SafetyCarRun-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=200,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='RaceCar',
+│ │          task='RunTask',
+│ │          obstacles={},
+│ │          world={'name': 'Plane200', 'factor': 1},
+│ │          # debug=True
+│ │      ),
+│ │  )
+│ │  
+│ │  register(
+│ │      id='SafetyAntRun-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=200,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ant',
+│ │          task='RunTask',
+│ │          obstacles={},
+│ │          world={'name': 'Plane200', 'factor': 1},
+│ │          # debug=True
+│ │      ),
+│ │ @@ -243,15 +243,15 @@
+│ │  
+│ │  
+│ │  # ===== Drone =====
+│ │  register(
+│ │      id='SafetyDroneRun-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=100,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Drone',
+│ │          task='RunTask',
+│ │          obstacles={},
+│ │          world={'name': 'Plane200', 'factor': 1},
+│ │      ),
+│ │  )
+│ │ @@ -261,15 +261,15 @@
+│ │  #       Gather Tasks
+│ │  # ==============================================================================
+│ │  
+│ │  register(
+│ │      id='SafetyBallGather-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=250,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ball',
+│ │          task='GatherTask',
+│ │          obstacles={'Apple': {'number': 8, 'fixed_base': True,
+│ │                             'movement': 'static'},
+│ │                     'Bomb': {'number': 8, 'fixed_base': True,
+│ │                                'movement': 'static'}
+│ │ @@ -279,15 +279,15 @@
+│ │      ),
+│ │  )
+│ │  
+│ │  register(
+│ │      id='SafetyCarGather-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=500,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='RaceCar',
+│ │          task='GatherTask',
+│ │          obstacles={'Apple': {'number': 8, 'fixed_base': True,
+│ │                             'movement': 'static'},
+│ │                     'Bomb': {'number': 8, 'fixed_base': True,
+│ │                                'movement': 'static'}
+│ │ @@ -297,15 +297,15 @@
+│ │      ),
+│ │  )
+│ │  
+│ │  register(
+│ │      id='SafetyAntGather-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=1000,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Ant',
+│ │          task='GatherTask',
+│ │          obstacles={'Apple': {'number': 8, 'fixed_base': True,
+│ │                             'movement': 'static'},
+│ │                     'Bomb': {'number': 8, 'fixed_base': True,
+│ │                                'movement': 'static'}
+│ │ @@ -316,15 +316,15 @@
+│ │  
+│ │  
+│ │  # ===== Drone =====
+│ │  register(
+│ │      id='SafetyDroneGather-v0',
+│ │      entry_point='bullet_safety_gym.envs.builder:EnvironmentBuilder',
+│ │      max_episode_steps=500,
+│ │ -    
+│ │ +    apply_api_compatibility=True,
+│ │      kwargs=dict(
+│ │          agent='Drone',
+│ │          task='GatherTask',
+│ │          obstacles={'Apple': {'number': 8, 'fixed_base': True,
+│ │                               'movement': 'static'},
+│ │                     'Bomb': {'number': 8, 'fixed_base': True,
+│ │                              'movement': 'static'}
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/envs/agents.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/envs/agents.py
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/envs/bases.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/envs/bases.py
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/envs/builder.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/envs/builder.py
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/envs/env_utils.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/envs/env_utils.py
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/envs/obstacles.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/envs/obstacles.py
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/envs/sensors.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/envs/sensors.py
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/envs/tasks.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/envs/tasks.py
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym/envs/worlds.py
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym/envs/worlds.py
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym.egg-info/PKG-INFO
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym.egg-info/PKG-INFO
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: bullet-safety-gym
+│ │ -Version: 0.1.0
+│ │ +Version: 0.2.0
+│ │  Summary: A framework to benchmark safety in Reinforcement Learning.
+│ │  Home-page: https://github.com/svengronauer/Bullet-Safety-Gym
+│ │  Author: Sven Gronauer
+│ │  Author-email: sven.gronauer@tum.de
+│ │  License: MIT license
+│ │  Platform: Linux Ubuntu
+│ │  Platform: darwin
+│ │ @@ -18,15 +18,16 @@
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Requires-Python: >=3.6
+│ │  Description-Content-Type: text/markdown
+│ │  License-File: LICENSE
+│ │  
+│ │ -**Status:** Development (Major updates may be expected)
+│ │ +**Notes:** This repo requires `gym>=0.26.0` API version due to the major changes in the `reset` and `step` functions. Check [this release note](https://github.com/openai/gym/releases/tag/0.26.0) for details.
+│ │ +For the old API version, please use the `old_api` [branch](https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old_api) which requires `gym==0.23.1`.
+│ │  
+│ │  # Bullet-Safety-Gym
+│ │  
+│ │  "Bullet-Safety-Gym" is a free and open-source framework to benchmark and assess 
+│ │  safety specifications in Reinforcement Learning (RL) problems.
+│ │  
+│ │  
+│ │ @@ -112,24 +113,24 @@
+│ │  
+│ │  Here are the (few) steps to follow to get our repository ready to run.
+│ │  
+│ │  Clone the repository and install the Bullet-Safety-Gym package via pip. Use the 
+│ │  following three lines:
+│ │  
+│ │  ```
+│ │ -git clone https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old_api
+│ │ +git clone https://github.com/liuzuxin/Bullet-Safety-Gym.git
+│ │  
+│ │  cd Bullet-Safety-Gym
+│ │  
+│ │  pip install -e .
+│ │  ```
+│ │  
+│ │  ## Supported Systems
+│ │  
+│ │ -We currently support Linux and OS X running Python 3.6 or greater.
+│ │ +We currently support Linux and OS X running Python 3.7 or greater.
+│ │  Windows should also work (but has not been tested yet).
+│ │  
+│ │  Note: This package has been tested on Mac OS Mojave and Ubuntu (18.04 LTS, 
+│ │  20.04 LTS), and is probably fine for most recent Mac and Linux operating 
+│ │  systems. 
+│ │  
+│ │  ## Dependencies 
+│ │ @@ -146,21 +147,21 @@
+│ │  
+│ │  ```
+│ │  >>> import gym
+│ │  >>> import bullet_safety_gym
+│ │  >>> env = gym.make('SafetyCarGather-v0')
+│ │  ```
+│ │  
+│ │ -The functional interface follows the API of the OpenAI Gym (Brockman et al., 
+│ │ -2016) that consists of the three following important functions:
+│ │ +The functional interface follows the API of the OpenAI Gym that is or greater than the `0.26.0` version. There are major changes of the `reset` and `step` functions. Check [this release note](https://github.com/openai/gym/releases/tag/0.26.0) for details. 
+│ │ +For the old API version, please use the `old` [branch](https://github.com/liuzuxin/Bullet-Safety-Gym/tree/old) which requires `gym==0.20.0`.
+│ │  
+│ │  ```
+│ │ ->>> observation = env.reset()
+│ │ +>>> observation, info = env.reset()
+│ │  >>> random_action = env.action_space.sample()  # usually the action is determined by a policy
+│ │ ->>> next_observation, reward, done, info = env.step(random_action)
+│ │ +>>> next_observation, reward, terminated, truncated, info = env.step(random_action)
+│ │  ```
+│ │  
+│ │  Besides the reward signal, our environments provide an additional cost signal, 
+│ │  which is contained in the `info` dictionary:
+│ │  ```
+│ │  >>> info
+│ │  {'cost': 1.0}
+│ │ @@ -174,18 +175,18 @@
+│ │  import bullet_safety_gym
+│ │  
+│ │  env = gym.make('SafetyAntCircle-v0')
+│ │  
+│ │  while True:
+│ │      done = False
+│ │      env.render()  # make GUI of PyBullet appear
+│ │ -    x = env.reset()
+│ │ +    o, info = env.reset()
+│ │      while not done:
+│ │          random_action = env.action_space.sample()
+│ │ -        x, reward, done, info = env.step(random_action)
+│ │ +        o, reward, terminated, truncated, info = env.step(random_action)
+│ │  ```
+│ │  Note that only calling the render function before the reset function triggers 
+│ │  visuals.
+│ │  
+│ │  
+│ │  # List of environments
+│ │   --- bullet_safety_gym-0.1.0/bullet_safety_gym.egg-info/SOURCES.txt
+│ ├── +++ bullet_safety_gym-0.2.0/bullet_safety_gym.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
+│ │   --- bullet_safety_gym-0.1.0/setup.py
+│ ├── +++ bullet_safety_gym-0.2.0/setup.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -7,28 +7,28 @@
+│ │  
+│ │  with open('README.md', 'r') as f:
+│ │      # description from readme file
+│ │      long_description = f.read()
+│ │  
+│ │  setup(
+│ │      name='bullet_safety_gym',
+│ │ -    version='0.1.0',
+│ │ +    version='0.2.0',
+│ │      author='Sven Gronauer',
+│ │      author_email='sven.gronauer@tum.de',
+│ │      description='A framework to benchmark safety in Reinforcement Learning.',
+│ │      long_description=long_description,
+│ │      long_description_content_type="text/markdown",
+│ │      packages=find_packages(),
+│ │      include_package_data=True,
+│ │      package_data={
+│ │          'bullet_safety_gym.envs': ['data/*'],
+│ │      },
+│ │      license='MIT license',
+│ │      url='https://github.com/svengronauer/Bullet-Safety-Gym',
+│ │ -    install_requires=['gym==0.23.1', 'numpy>1.16.0', 'pybullet>=3.0.6'],
+│ │ +    install_requires=['gym>=0.26.0', 'numpy>1.16.0', 'pybullet>=3.0.6'],
+│ │      python_requires='>=3.6',
+│ │      platforms=['Linux Ubuntu', 'darwin'],  # supports Linux and Mac OSX
+│ │      classifiers=[
+│ │          # How mature is this project? Common values are
+│ │          #   3 - Alpha
+│ │          #   4 - Beta
+│ │          #   5 - Production/Stable

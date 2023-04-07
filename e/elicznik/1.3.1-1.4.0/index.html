@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/elicznik-1.3.1.tar.gz tmp/elicznik-1.4.0.tar.gz --html 20230407/e/elicznik/1.3.1-1.4.0/index.html --text 20230407/e/elicznik/1.3.1-1.4.0/diff.txt --markdown 20230407/e/elicznik/1.3.1-1.4.0/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.78 KB</span></div>
+  <div><span class="source">tmp/elicznik-1.3.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/elicznik-1.4.0.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">266 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;elicznik-1.<del>3</del>.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Tue</del><span class="dp">·</span><del>Jan</del><span class="dp">·</span><del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;elicznik-1.<ins>4</ins>.<ins>0</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span><ins>Apr</ins><span class="dp">·</span><ins><span class="dp">·</span>7</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">8.48 KB</span></div>
+    <div><span class="source">elicznik-1.3.1.tar</span> vs.</div>
+    <div id="elicznik--.-.-.tar"><span class="source">elicznik-1.4.0.tar</span>
+      <a class="anchor" href="#elicznik--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">4.58 KB</span></div>
+      <div id="elicznik--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 19 lines modified</td><td colspan="2">Offset 1, 19 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.<del>824860</del><span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.<ins>506137</ins><span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1074<span class="dp">·</span>2021-11-24<span class="dp">·</span>19:41:45.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1074<span class="dp">·</span>2021-11-24<span class="dp">·</span>19:41:45.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4377<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.<del>824860</del><span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4377<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.<ins>506137</ins><span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3669<span class="dp">·</span>2023-01-10<span class="dp">·</span>20:18:36.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3669<span class="dp">·</span>2023-01-10<span class="dp">·</span>20:18:36.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>74<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.<del>824860</del><span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/setup.cfg</td><td class="diffline">5 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>74<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.<ins>506137</ins><span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1158<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>5</del>:<del>45</del>.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/setup.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1158<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>3</ins>:<ins>14</ins>.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.<del>8</del>2<del>48</del>6<del>0</del><span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/</td><td class="diffline">7 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.<ins>5</ins><ins>0</ins>2<ins>13</ins>6<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.<del>824860</del><span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik/</td><td class="diffline">8 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.<ins>506137</ins><span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik/</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31<span class="dp">·</span>2021-11-24<span class="dp">·</span>20:04:08.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik/__init__.py</td><td class="diffline">9 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>31<span class="dp">·</span>2021-11-24<span class="dp">·</span>20:04:08.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2028<span class="dp">·</span>2022-05-29<span class="dp">·</span>13:13:33.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik/__main__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2028<span class="dp">·</span>2022-05-29<span class="dp">·</span>13:13:33.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik/__main__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<del>435</del><span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>5</del>:<del>07</del>.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik/elicznik.py</td><td class="diffline">11 </td><td class="diffpresent">-rwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2<ins>227</ins><span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>2</ins>:<ins>11</ins>.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik/elicznik.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>774<span class="dp">·</span>2021-11-24<span class="dp">·</span>20:12:12.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik/session.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>774<span class="dp">·</span>2021-11-24<span class="dp">·</span>20:12:12.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik/session.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.<del>824860</del><span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik.egg-info/</td><td class="diffline">13 </td><td class="diffpresent">drwxrwxr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.<ins>506137</ins><span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4377<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik.egg-info/PKG-INFO</td><td class="diffline">14 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4377<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>353<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik.egg-info/SOURCES.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>353<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik.egg-info/dependency_links.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik.egg-info/entry_points.txt</td><td class="diffline">17 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>53<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik.egg-info/requires.txt</td><td class="diffline">18 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>18<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>2023-0<del>1</del>-<del>10</del><span class="dp">·</span><del>20</del>:5<del>8</del>:<del>45</del>.000000<span class="dp">·</span>elicznik-1.<del>3</del>.<del>1</del>/src/elicznik.egg-info/top_level.txt</td><td class="diffline">19 </td><td class="diffpresent">-rw-rw-r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>mlesniew<span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9<span class="dp">·</span>2023-0<ins>4</ins>-<ins>07</ins><span class="dp">·</span><ins>17</ins>:5<ins>4</ins>:<ins>58</ins>.000000<span class="dp">·</span>elicznik-1.<ins>4</ins>.<ins>0</ins>/src/elicznik.egg-info/top_level.txt</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">83.0 B</span></div>
+      <div><span class="source">elicznik-1.3.1/LICENSE</span> vs.</div>
+      <div id="elicznik--.-.-.tar---elicznik--.-.--LICENSE"><span class="source">elicznik-1.4.0/LICENSE</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---elicznik--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">393 B</span></div>
+      <div><span class="source">elicznik-1.3.1/PKG-INFO</span> vs.</div>
+      <div id="elicznik--.-.-.tar---elicznik--.-.--PKG-INFO"><span class="source">elicznik-1.4.0/PKG-INFO</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---elicznik--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>elicznik</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>elicznik</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.<del>3</del>.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.<ins>4</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Tauron<span class="dp">·</span>eLicznik<span class="dp">·</span>scrapper</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Tauron<span class="dp">·</span>eLicznik<span class="dp">·</span>scrapper</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mlesniew/elicznik</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mlesniew/elicznik</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Michał<span class="dp">·</span>Leśniewski</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Michał<span class="dp">·</span>Leśniewski</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mlesniew@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mlesniew@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>elicznik,tauron,scrapper</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>elicznik,tauron,scrapper</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">elicznik-1.3.1/README.md</span> vs.</div>
+      <div id="elicznik--.-.-.tar---elicznik--.-.--README.md"><span class="source">elicznik-1.4.0/README.md</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---elicznik--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">580 B</span></div>
+      <div><span class="source">elicznik-1.3.1/setup.py</span> vs.</div>
+      <div id="elicznik--.-.-.tar---elicznik--.-.--setup.py"><span class="source">elicznik-1.4.0/setup.py</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---elicznik--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 11% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 3, 15 lines modified</td><td colspan="2">Offset 3, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">3 </td><td class="diffpresent">here<span class="dp">·</span>=<span class="dp">·</span>pathlib.Path(__file__).parent.resolve()</td><td class="diffline">3 </td><td class="diffpresent">here<span class="dp">·</span>=<span class="dp">·</span>pathlib.Path(__file__).parent.resolve()</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>(here<span class="dp">·</span>/<span class="dp">·</span>&#x27;README.md&#x27;).read_text(encoding=&#x27;utf-8&#x27;)</td><td class="diffline">4 </td><td class="diffpresent">long_description<span class="dp">·</span>=<span class="dp">·</span>(here<span class="dp">·</span>/<span class="dp">·</span>&#x27;README.md&#x27;).read_text(encoding=&#x27;utf-8&#x27;)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">setup(</td><td class="diffline">5 </td><td class="diffpresent">setup(</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;elicznik&#x27;,</td><td class="diffline">6 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;elicznik&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;1.<del>3</del>.<del>1</del>&#x27;,</td><td class="diffline">7 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;1.<ins>4</ins>.<ins>0</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;Tauron<span class="dp">·</span>eLicznik<span class="dp">·</span>scrapper&#x27;,</td><td class="diffline">8 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>description=&#x27;Tauron<span class="dp">·</span>eLicznik<span class="dp">·</span>scrapper&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description=long_description,</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&#x27;text/markdown&#x27;,</td><td class="diffline">10 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>long_description_content_type=&#x27;text/markdown&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/mlesniew/elicznik&#x27;,</td><td class="diffline">11 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/mlesniew/elicznik&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;Michał<span class="dp">·</span>Leśniewski&#x27;,</td><td class="diffline">12 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author=&#x27;Michał<span class="dp">·</span>Leśniewski&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;mlesniew@gmail.com&#x27;,</td><td class="diffline">13 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>author_email=&#x27;mlesniew@gmail.com&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td><td class="diffline">14 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>classifiers=[</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">117 B</span></div>
+      <div><span class="source">elicznik-1.3.1/src/elicznik/__main__.py</span> vs.</div>
+      <div id="elicznik--.-.-.tar---elicznik--.-.--src-elicznik-__main__.py"><span class="source">elicznik-1.4.0/src/elicznik/__main__.py</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---elicznik--.-.--src-elicznik-__main__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">2.09 KB</span></div>
+      <div><span class="source">elicznik-1.3.1/src/elicznik/elicznik.py</span> vs.</div>
+      <div id="elicznik--.-.-.tar---elicznik--.-.--src-elicznik-elicznik.py"><span class="source">elicznik-1.4.0/src/elicznik/elicznik.py</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---elicznik--.-.--src-elicznik-elicznik.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 22% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 28, 36 lines modified</td><td colspan="2">Offset 28, 32 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__enter__(self):</td><td class="diffline">28 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__enter__(self):</td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.login()</td><td class="diffline">29 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.login()</td></tr>
+<tr class="diffunmodified"><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>self</td><td class="diffline">30 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>self</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__exit__(self,<span class="dp">·</span>exc_type,<span class="dp">·</span>exc_val,<span class="dp">·</span>exc_tb):</td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>__exit__(self,<span class="dp">·</span>exc_type,<span class="dp">·</span>exc_val,<span class="dp">·</span>exc_tb):</td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td><td class="diffline">32 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>pass</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_get_raw_readings(self,<span class="dp">·</span>type<del>_,<span class="dp">·</span>start</del>_<del>date</del>,<span class="dp">·</span><del>end_</del>dat<del>e=Non</del>e):</td><td class="diffline">33 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_get_raw_<ins>daily_</ins>readings(self,<span class="dp">·</span>type_,<span class="dp">·</span>date):</td></tr>
+<tr class="diffdeleted"><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>end_date<span class="dp">·</span>=<span class="dp">·</span>end_date<span class="dp">·</span>or<span class="dp">·</span>start_date</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>data<span class="dp">·</span>=<span class="dp">·</span>self.session.post(</td><td class="diffline">34 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>data<span class="dp">·</span>=<span class="dp">·</span>self.session.post(</td></tr>
+<tr class="diffunmodified"><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.CHART_URL,</td><td class="diffline">35 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>self.CHART_URL,</td></tr>
+<tr class="diffunmodified"><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>data={</td><td class="diffline">36 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>data={</td></tr>
+<tr class="diffunmodified"><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;type&quot;:<span class="dp">·</span>type_,</td><td class="diffline">37 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;type&quot;:<span class="dp">·</span>type_,</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;from&quot;:<span class="dp">·</span><del>start_</del>date.strftime(&quot;%d.%m.%Y&quot;),</td><td class="diffline">38 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;from&quot;:<span class="dp">·</span>date.strftime(&quot;%d.%m.%Y&quot;),</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;to&quot;:<span class="dp">·</span><del>end_</del>date.strftime(&quot;%d.%m.%Y&quot;),</td><td class="diffline">39 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;to&quot;:<span class="dp">·</span>date.strftime(&quot;%d.%m.%Y&quot;),</td></tr>
+<tr class="diffunmodified"><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;profile&quot;:<span class="dp">·</span>&quot;full<span class="dp">·</span>time&quot;,</td><td class="diffline">40 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;profile&quot;:<span class="dp">·</span>&quot;full<span class="dp">·</span>time&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>},</td><td class="diffline">41 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>},</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>).json()</td><td class="diffline">42 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>).json()<ins>.get(&quot;data&quot;,<span class="dp">·</span>{}).get(&quot;values&quot;,<span class="dp">·</span>[])</ins></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">43 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>((datetime.datetime.combine(date,<span class="dp">·</span>datetime.time(h)),<span class="dp">·</span>value)<span class="dp">·</span>for<span class="dp">·</span>h,<span class="dp">·</span>value<span class="dp">·</span>in<span class="dp">·</span>enumerate(data))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_get_raw_readings(self,<span class="dp">·</span>type_,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date=None):</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>end_date<span class="dp">·</span>=<span class="dp">·</span>end_date<span class="dp">·</span>or<span class="dp">·</span>start_date</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>while<span class="dp">·</span>start_date<span class="dp">·</span>&lt;=<span class="dp">·</span>end_date:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>yield<span class="dp">·</span>from<span class="dp">·</span>self._get_raw_daily_readings(type_,<span class="dp">·</span>start_date)</td></tr>
+<tr class="diffdeleted"><td class="diffline">44 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>data<span class="dp">·</span>=<span class="dp">·</span>data.get(&quot;data&quot;,<span class="dp">·</span>{}).get(&quot;allData&quot;,<span class="dp">·</span>{})</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">45 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>for<span class="dp">·</span>element<span class="dp">·</span>in<span class="dp">·</span>data:</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">46 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>date<span class="dp">·</span>=<span class="dp">·</span>element.get(&quot;Date&quot;)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>hour<span class="dp">·</span>=<span class="dp">·</span>int(element.get(&quot;Hour&quot;))</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>TODO:<span class="dp">·</span>There&#x27;s<span class="dp">·</span>also<span class="dp">·</span>an<span class="dp">·</span>&quot;Extra&quot;<span class="dp">·</span>field,<span class="dp">·</span>which<span class="dp">·</span>seems<span class="dp">·</span>to<span class="dp">·</span>be<span class="dp">·</span>set<span class="dp">·</span>to<span class="dp">·</span>be<span class="dp">·</span>set<span class="dp">·</span>to<span class="dp">·</span>&quot;T&quot;<span class="dp">·</span>only<span class="dp">·</span>for<span class="dp">·</span>the<span class="dp">·</span>one<span class="dp">·</span>extra<span class="dp">·</span>hour</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>#<span class="dp">·</span>when<span class="dp">·</span>switching<span class="dp">·</span>from<span class="dp">·</span>CEST<span class="dp">·</span>to<span class="dp">·</span>CET<span class="dp">·</span>(e.g.<span class="dp">·</span>3<span class="dp">·</span>AM<span class="dp">·</span>on<span class="dp">·</span>2021-10-31)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>timestamp<span class="dp">·</span>=<span class="dp">·</span>datetime.datetime.strptime(date,<span class="dp">·</span>&quot;%Y-%m-%d&quot;)</td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>t<del>imest</del>a<del>mp</del><span class="dp">·</span>+=<span class="dp">·</span>datetime.timedelta(<del>h</del><del>our</del>s=<del>hou</del><del>r</del>)</td><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>s</ins>t<ins>art_d</ins>a<ins>te</ins><span class="dp">·</span>+=<span class="dp">·</span>datetime.timedelta(<ins>day</ins>s=<ins>1</ins>)</td></tr>
+<tr class="diffdeleted"><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>value<span class="dp">·</span>=<span class="dp">·</span>element.get(&quot;EC&quot;)</td><td colspan="2"> </td></tr>
+<tr class="diffdeleted"><td class="diffline">53 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>yield<span class="dp">·</span>timestamp,<span class="dp">·</span>value</td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>get_readings_production(self,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date=None):</td><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>get_readings_production(self,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date=None):</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>dict(self._get_raw_readings(&quot;oze&quot;,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date))</td><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>dict(self._get_raw_readings(&quot;oze&quot;,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>get_readings_consumption(self,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date=None):</td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>get_readings_consumption(self,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date=None):</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>dict(self._get_raw_readings(&quot;consum&quot;,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date))</td><td class="diffline">52 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>dict(self._get_raw_readings(&quot;consum&quot;,<span class="dp">·</span>start_date,<span class="dp">·</span>end_date))</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">115 B</span></div>
+      <div><span class="source">elicznik-1.3.1/src/elicznik/session.py</span> vs.</div>
+      <div id="elicznik--.-.-.tar---elicznik--.-.--src-elicznik-session.py"><span class="source">elicznik-1.4.0/src/elicznik/session.py</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---elicznik--.-.--src-elicznik-session.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">437 B</span></div>
+      <div><span class="source">elicznik-1.3.1/src/elicznik.egg-info/PKG-INFO</span> vs.</div>
+      <div id="elicznik--.-.-.tar---elicznik--.-.--src-elicznik.egg-info-PKG-INFO"><span class="source">elicznik-1.4.0/src/elicznik.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#elicznik--.-.-.tar---elicznik--.-.--src-elicznik.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 1% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>elicznik</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>elicznik</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.<del>3</del>.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.<ins>4</ins>.<ins>0</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Tauron<span class="dp">·</span>eLicznik<span class="dp">·</span>scrapper</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Tauron<span class="dp">·</span>eLicznik<span class="dp">·</span>scrapper</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mlesniew/elicznik</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/mlesniew/elicznik</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Michał<span class="dp">·</span>Leśniewski</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Michał<span class="dp">·</span>Leśniewski</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mlesniew@gmail.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>mlesniew@gmail.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>UNKNOWN</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>elicznik,tauron,scrapper</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>elicznik,tauron,scrapper</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td><td class="diffline">10 </td><td class="diffpresent">Platform:<span class="dp">·</span>UNKNOWN</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
