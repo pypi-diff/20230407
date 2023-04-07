@@ -3945,3 +3945,31 @@
 [2023-04-07 22:25:34] INFO root fetch - processPackages [jsonschema-gentypes]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/jsonschema_gentypes-1.7.0.tar.gz tmp/jsonschema_gentypes-1.7.1.tar.gz --markdown 20230407/j/jsonschema-gentypes/1.7.0-1.7.1/diff.md
 [2023-04-07 22:25:34] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:25:35] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:27:17] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622776]
+[2023-04-07 22:27:22] INFO root fetch - main [MainThread]: Found 6 changed packages
+[2023-04-07 22:27:22] INFO root fetch - processPackages [web-utils-soft]: New version: [0.1.0] Old Version: [0.0.1]
+[2023-04-07 22:27:22] INFO root fetch - processPackages [binance-data-exporter]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 22:27:22] INFO root fetch - processPackages [bullet-safety-gym]: New version: [1.1.0] Old Version: [0.0.1]
+[2023-04-07 22:27:22] INFO root fetch - processPackages [web-utils-soft]: executing diffoscope
+[2023-04-07 22:27:22] INFO root fetch - processPackages [web-utils-soft]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/web-utils-soft-0.0.1.tar.gz tmp/web-utils-soft-0.1.0.tar.gz --markdown 20230407/w/web-utils-soft/0.0.1-0.1.0/diff.md
+[2023-04-07 22:27:22] WARNING root fetch - processPackages [django-moncash]: Skipping, unable to determine old version
+[2023-04-07 22:27:23] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:27:23] INFO root fetch - processPackages [concurrent-log-handler]: New version: [0.9.9] Old Version: [0.9.8]
+[2023-04-07 22:27:23] INFO root fetch - processPackages [binance-data-exporter]: executing diffoscope
+[2023-04-07 22:27:23] INFO root fetch - processPackages [binance-data-exporter]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/binance_data_exporter-0.1.0.tar.gz tmp/binance_data_exporter-0.1.1.tar.gz --markdown 20230407/b/binance-data-exporter/0.1.0-0.1.1/diff.md
+[2023-04-07 22:27:23] INFO root fetch - processPackages [ipywidgets-gallery]: New version: [0.12] Old Version: [0.11]
+[2023-04-07 22:27:23] INFO root fetch - processPackages [bullet-safety-gym]: Downloading https://files.pythonhosted.org/packages/57/24/4cad40d9af68ce9442570a918bd5ecd72a94ac3b31b77910256cebac7594/bullet_safety_gym-0.0.1.tar.gz
+[2023-04-07 22:27:23] WARNING root fetch - processPackages [bullet-safety-gym]: Skipping package: exceeds size limit 11830548>=10485760
+[2023-04-07 22:27:23] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:27:23] INFO root fetch - processPackages [concurrent-log-handler]: Downloading https://files.pythonhosted.org/packages/bf/3a/07ebc8acc1ffc846503a2fe97d18b98a38083af20a09bd66cf546dabacfe/concurrent-log-handler-0.9.8.tar.gz
+[2023-04-07 22:27:23] INFO root fetch - processPackages [ipywidgets-gallery]: Downloading https://files.pythonhosted.org/packages/63/4e/253a60ab3e3f5f0baa1cdc7144d8529b837db0490bf77402bfbeb4bd1296/ipywidgets_gallery-0.11.tar.gz
+[2023-04-07 22:27:23] INFO root fetch - processPackages [ipywidgets-gallery]: Downloading https://files.pythonhosted.org/packages/8f/5d/2fe82358d2cd628adbb86f550593ebbffd73dd2e3fac9175acff0ea2d08c/ipywidgets_gallery-0.12.tar.gz
+[2023-04-07 22:27:23] INFO root fetch - processPackages [ipywidgets-gallery]: executing diffoscope
+[2023-04-07 22:27:23] INFO root fetch - processPackages [ipywidgets-gallery]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ipywidgets_gallery-0.11.tar.gz tmp/ipywidgets_gallery-0.12.tar.gz --markdown 20230407/i/ipywidgets-gallery/0.11-0.12/diff.md
+[2023-04-07 22:27:23] INFO root fetch - processPackages [concurrent-log-handler]: Downloading https://files.pythonhosted.org/packages/38/d9/96a24fa043315293ae1adf73eafc7e58afe1e98c51641aeb3ee54d5beeff/concurrent-log-handler-0.9.9.tar.gz
+[2023-04-07 22:27:23] INFO root fetch - processPackages [concurrent-log-handler]: executing diffoscope
+[2023-04-07 22:27:23] INFO root fetch - processPackages [concurrent-log-handler]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/concurrent-log-handler-0.9.8.tar.gz tmp/concurrent-log-handler-0.9.9.tar.gz --markdown 20230407/c/concurrent-log-handler/0.9.8-0.9.9/diff.md
+[2023-04-07 22:27:23] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:27:23] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:27:24] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:27:24] INFO root fetch - main [MainThread]: success
