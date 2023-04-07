@@ -1,0 +1,932 @@
+--- tmp/dioptra-1.0.5rc3.tar.gz
++++ tmp/dioptra-1.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dioptra-1.0.5rc3.tar", last modified: Mon Apr  3 06:09:29 2023, max compression
+│ +gzip compressed data, was "dioptra-1.0.6.tar", last modified: Fri Apr  7 15:50:15 2023, max compression
+│   --- dioptra-1.0.5rc3.tar
+├── +++ dioptra-1.0.6.tar
+│ ├── file list
+│ │ @@ -1,45 +1,39 @@
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.422911 dioptra-1.0.5rc3/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1471 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/LICENSE.md
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     2162 2023-04-03 06:09:29.422911 dioptra-1.0.5rc3/PKG-INFO
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1106 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/README.md
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.418910 dioptra-1.0.5rc3/dioptra/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)       25 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      893 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/__main__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)    16227 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/api.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     2376 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/client.py
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.418910 dioptra-1.0.5rc3/dioptra/inference/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/inference/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1456 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/inference/inference_runner.py
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.418910 dioptra-1.0.5rc3/dioptra/inference/tf/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/inference/tf/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     4231 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/inference/tf/tf_runner.py
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.422911 dioptra-1.0.5rc3/dioptra/inference/torch/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/inference/torch/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     6406 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/inference/torch/torch_runner.py
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.422911 dioptra-1.0.5rc3/dioptra/lake/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/lake/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     7912 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/lake/datasets.py
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.422911 dioptra-1.0.5rc3/dioptra/lake/torch/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/lake/torch/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     4545 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/lake/torch/object_store_datasets.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)    23864 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/lake/utils.py
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.422911 dioptra-1.0.5rc3/dioptra/miners/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      416 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/miners/__init__.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     2824 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/miners/activation_miner.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     3661 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/miners/base_miner.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     3242 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/miners/coreset_miner.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1743 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/miners/entropy_miner.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     3215 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/miners/knn_miner.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1728 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/miners/random_miner.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1745 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/miners/variance_miner.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     4195 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/schemas.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1854 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/supported_types.py
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     3420 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra/utils.py
+│ │ -drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-03 06:09:29.418910 dioptra-1.0.5rc3/dioptra.egg-info/
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     2162 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      924 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        1 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)      229 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra.egg-info/requires.txt
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)        8 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/dioptra.egg-info/top_level.txt
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)       38 2023-04-03 06:09:29.422911 dioptra-1.0.5rc3/setup.cfg
+│ │ --rw-r--r--   0 circleci  (3434) circleci  (3434)     1656 2023-04-03 06:09:29.000000 dioptra-1.0.5rc3/setup.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.733442 dioptra-1.0.6/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1471 2023-04-07 15:50:15.000000 dioptra-1.0.6/LICENSE.md
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     2159 2023-04-07 15:50:15.729442 dioptra-1.0.6/PKG-INFO
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1106 2023-04-07 15:50:15.000000 dioptra-1.0.6/README.md
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.729442 dioptra-1.0.6/dioptra/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)       22 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/__init__.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.729442 dioptra-1.0.6/dioptra/inference/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/inference/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1637 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/inference/inference_runner.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.729442 dioptra-1.0.6/dioptra/inference/tf/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/inference/tf/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     4231 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/inference/tf/tf_runner.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.729442 dioptra-1.0.6/dioptra/inference/torch/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/inference/torch/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     6774 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/inference/torch/torch_runner.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.729442 dioptra-1.0.6/dioptra/lake/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/lake/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     7912 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/lake/datasets.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.729442 dioptra-1.0.6/dioptra/lake/torch/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/lake/torch/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     4545 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/lake/torch/object_store_datasets.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)    27205 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/lake/utils.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.729442 dioptra-1.0.6/dioptra/miners/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      416 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/miners/__init__.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     2842 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/miners/activation_miner.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     3661 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/miners/base_miner.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     3249 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/miners/coreset_miner.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1804 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/miners/entropy_miner.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     3227 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/miners/knn_miner.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1728 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/miners/random_miner.py
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1804 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra/miners/variance_miner.py
+│ │ +drwxr-xr-x   0 circleci  (3434) circleci  (3434)        0 2023-04-07 15:50:15.729442 dioptra-1.0.6/dioptra.egg-info/
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     2159 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      808 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        1 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)      229 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra.egg-info/requires.txt
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)        8 2023-04-07 15:50:15.000000 dioptra-1.0.6/dioptra.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)       38 2023-04-07 15:50:15.733442 dioptra-1.0.6/setup.cfg
+│ │ +-rw-r--r--   0 circleci  (3434) circleci  (3434)     1656 2023-04-07 15:50:15.000000 dioptra-1.0.6/setup.py
+│ │   --- dioptra-1.0.5rc3/LICENSE.md
+│ ├── +++ dioptra-1.0.6/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- dioptra-1.0.5rc3/PKG-INFO
+│ ├── +++ dioptra-1.0.6/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dioptra
+│ │ -Version: 1.0.5rc3
+│ │ +Version: 1.0.6
+│ │  Summary: Client library to log data to Dioptra API
+│ │  Home-page: https://github.com/dioptra-ai/collector-py
+│ │  Author: dioptra.ai
+│ │  Author-email: info@dioptra.ai
+│ │  License: BSD
+│ │  Project-URL: dioptra.ai, https://www.dioptra.ai
+│ │  Description: <div align="center">
+│ │   --- dioptra-1.0.5rc3/README.md
+│ ├── +++ dioptra-1.0.6/README.md
+│ │┄ Files identical despite different names
+│ │   --- dioptra-1.0.5rc3/dioptra/inference/inference_runner.py
+│ ├── +++ dioptra-1.0.6/dioptra/inference/inference_runner.py
+│ │┄ Files 20% similar despite different names
+│ │ @@ -6,25 +6,30 @@
+│ │  from concurrent.futures import ThreadPoolExecutor
+│ │  
+│ │  import smart_open
+│ │  
+│ │  from dioptra.lake.utils import (
+│ │      wait_for_upload,
+│ │      upload_to_lake_via_object_store,
+│ │ -    _resolve_mc_drop_out_predictions
+│ │ +    _resolve_mc_drop_out_predictions,
+│ │ +    store_to_local_cache
+│ │  )
+│ │  
+│ │  class InferenceRunner():
+│ │      def __init__(self):
+│ │          self.max_batch_size = 1000
+│ │          self.uploads = []
+│ │ +        self.use_local_storage = False
+│ │  
+│ │      def _ingest_data(self, records):
+│ │          print('ingesting data ...')
+│ │ -        self.uploads.append(upload_to_lake_via_object_store(records))
+│ │ +        if self.use_local_storage:
+│ │ +            self.uploads.append(store_to_local_cache(records))
+│ │ +        else:
+│ │ +            self.uploads.append(upload_to_lake_via_object_store(records))
+│ │  
+│ │      def wait_for_uploads(self):
+│ │          with ThreadPoolExecutor() as executor:
+│ │              upload_ids = list(map(lambda u: u['id'], self.uploads))
+│ │              return list(executor.map(wait_for_upload, upload_ids, timeout=900, chunksize=10))
+│ │  
+│ │      def _resolve_records(self, samples_records):
+│ │   --- dioptra-1.0.5rc3/dioptra/inference/tf/tf_runner.py
+│ ├── +++ dioptra-1.0.6/dioptra/inference/tf/tf_runner.py
+│ │┄ Files identical despite different names
+│ │   --- dioptra-1.0.5rc3/dioptra/inference/torch/torch_runner.py
+│ ├── +++ dioptra-1.0.6/dioptra/inference/torch/torch_runner.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -9,43 +9,46 @@
+│ │      def __init__(
+│ │              self, model, model_type,
+│ │              model_name = None,
+│ │              datapoint_ids = [],
+│ │              embeddings_layers=[],
+│ │              logits_layer=None,
+│ │              class_names=[],
+│ │ -            metadata=None,
+│ │ +            datapoints_metadata=None,
+│ │ +            dataset_metadata=None,
+│ │              data_transform=None,
+│ │              mc_dropout_samples=0,
+│ │              device='cpu'):
+│ │          """
+│ │          Utility to perform model inference on a dataset and extract layers needed for AL.
+│ │  
+│ │          Parameters:
+│ │              model: model to be used to inference
+│ │              model_name: the name of the model
+│ │              model_type: the type of the model use. Can be CLASSIFICATION or SEGMENTATION
+│ │              datapoint_ids: alist of datapoints to update with the predictions. Should be in the same order as the dataset.
+│ │              embeddings_layers: an array of layer names that should be used as embeddings
+│ │              logits_layer: the name of the logit layer (pre softmax) to be used for AL
+│ │              class_names: the class names corresponding to each logit. Indexes should match the logit layer
+│ │ -            metadata: a list of dioptra style metadata to be added to teh datapoints. The indexes in this list should match the indexes in the dataset
+│ │ +            datapoints_metadata: a list of dioptra style datapoints metadata to be added to teh datapoints. The indexes in this list should match the indexes in the dataset
+│ │ +            dataset_metadata: a dioptra style dataset metadata to be added to the dataset
+│ │              data_transform: a transform function that will be called before the model is called. Should only return the data, without the groundtruth
+│ │              device: the devide to be use to perform the inference
+│ │          """
+│ │  
+│ │          super().__init__()
+│ │  
+│ │          self.model = model
+│ │          self.model_name = model_name
+│ │          self.datapoint_ids = datapoint_ids
+│ │          self.embeddings_layers = embeddings_layers
+│ │          self.logits_layer = logits_layer
+│ │          self.class_names = class_names
+│ │ -        self.metadata = metadata
+│ │ +        self.datapoints_metadata = datapoints_metadata
+│ │ +        self.dataset_metadata = dataset_metadata
+│ │          self.data_transform = data_transform
+│ │          self.device = device
+│ │          self.model_type = model_type
+│ │          self.mc_dropout_samples = mc_dropout_samples
+│ │  
+│ │          if mc_dropout_samples > 0:
+│ │              for m in self.model.modules():
+│ │ @@ -81,15 +84,15 @@
+│ │      def run(self, dataloader):
+│ │          """
+│ │          Run the inference on a dataset and upload results to dioptra
+│ │  
+│ │          Parameters:
+│ │              dataset: a torch.utils.data.Dataset
+│ │                  Should be batched. data_transform can be used to pre process teh data to only return the data, not the groundtruth
+│ │ -                Should not be shuffled if used with a metadata list
+│ │ +                Should not be shuffled if used with a datapoints_metadata list
+│ │          """
+│ │  
+│ │          self.model.eval()
+│ │          self.model.to(self.device)
+│ │  
+│ │          records = []
+│ │  
+│ │ @@ -150,14 +153,15 @@
+│ │                  'prediction': _format_prediction(
+│ │                      logits=logits,
+│ │                      embeddings=embeddings,
+│ │                      task_type=self.model_type,
+│ │                      model_name=self.model_name,
+│ │                      class_names=self.class_names
+│ │                  )
+│ │ -               } if logits or embeddings else {}
+│ │ +               } if logits is not None or embeddings is not None else {}
+│ │              ),
+│ │              **({'id': datapoint_id} if datapoint_id is not None else {}),
+│ │ -            **(self.metadata[record_global_idx] \
+│ │ -               if self.metadata and len(self.metadata) > record_global_idx else {}
+│ │ +            **(self.datapoints_metadata[record_global_idx] \
+│ │ +               if self.datapoints_metadata and len(self.datapoints_metadata) > record_global_idx else {}
+│ │              ),
+│ │ +            **(self.dataset_metadata if self.dataset_metadata else {})
+│ │          }]
+│ │   --- dioptra-1.0.5rc3/dioptra/lake/datasets.py
+│ ├── +++ dioptra-1.0.6/dioptra/lake/datasets.py
+│ │┄ Files identical despite different names
+│ │   --- dioptra-1.0.5rc3/dioptra/lake/torch/object_store_datasets.py
+│ ├── +++ dioptra-1.0.6/dioptra/lake/torch/object_store_datasets.py
+│ │┄ Files identical despite different names
+│ │   --- dioptra-1.0.5rc3/dioptra/lake/utils.py
+│ ├── +++ dioptra-1.0.6/dioptra/lake/utils.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -229,17 +229,15 @@
+│ │      storage_type = os.environ.get('DIOPTRA_UPLOAD_STORAGE_TYPE', 's3')
+│ │      # s3 url is of form: s3://bucket_name/path/to/file
+│ │      # gcs url is of form: gs://bucket_name/path/to/file
+│ │      file_name = os.path.join(
+│ │          prefix, custom_path, f'{str(uuid.uuid4())}_{datetime.utcnow().isoformat()}.ndjson.gz').strip('/')
+│ │      store_url = f'{storage_type}://{os.path.join(object_store_bucket, file_name)}'
+│ │  
+│ │ -    payload = b'\n'.join(
+│ │ -        [orjson.dumps(record, option=orjson.OPT_SERIALIZE_NUMPY)for record in records])
+│ │ -    compressed_payload = mgzip.compress(payload, compresslevel=2)
+│ │ +    compressed_payload = _build_compressed_payload(records)
+│ │  
+│ │      _upload_to_bucket((compressed_payload, store_url), no_compression=True)
+│ │  
+│ │      return upload_to_lake_from_bucket(object_store_bucket, file_name, storage_type, disable_batching, offset, limit)
+│ │  
+│ │  def upload_to_lake_from_bucket(bucket_name, object_name, storage_type='s3', disable_batching=False, offset=None, limit=None):
+│ │      """
+│ │ @@ -278,14 +276,38 @@
+│ │          _raise_for_apigateway_errormessage(response)
+│ │      except requests.exceptions.RequestException as err:
+│ │          print('There was an error uploading to the lake ...')
+│ │          raise err
+│ │  
+│ │      return response
+│ │  
+│ │ +def store_to_local_cache(records):
+│ │ +    """
+│ │ +    Store records to a local cache directory
+│ │ +
+│ │ +    Parameters:
+│ │ +        records: array of dipotra style records. See the doc for accepted formats
+│ │ +    """
+│ │ +
+│ │ +    cache_dir = os.environ.get(
+│ │ +        'DIOPTRA_LOCAL_CACHE_DIR',
+│ │ +        os.path.join(os.path.expanduser('~'), '.dioptra'))
+│ │ +
+│ │ +    if not os.path.exists(cache_dir):
+│ │ +        os.makedirs(cache_dir)
+│ │ +
+│ │ +    file_name = os.path.join(cache_dir, f'{str(uuid.uuid4())}_{datetime.utcnow().isoformat()}.ndjson.gz')
+│ │ +
+│ │ +    compressed_payload = _build_compressed_payload(records)
+│ │ +
+│ │ +    with open(file_name, 'wb') as f:
+│ │ +        f.write(compressed_payload)
+│ │ +
+│ │ +    return file_name
+│ │ +
+│ │  def wait_for_upload(upload_id):
+│ │      """
+│ │      Wait for the upload status to be SUCCEEDED | FAILED | TIMED_OUT | ABORTED
+│ │      """
+│ │      if upload_id is None:
+│ │          raise RuntimeError('upload_id must not be None')
+│ │  
+│ │ @@ -309,15 +331,16 @@
+│ │                  'x-api-key': api_key
+│ │              })
+│ │              r.raise_for_status()
+│ │              upload = r.json()
+│ │              if upload['status'] in ['SUCCEEDED']:
+│ │                  return upload
+│ │              elif upload['status'] in ['FAILED', 'TIMED_OUT', 'ABORTED']:
+│ │ -                raise RuntimeError(f'Upload failed with status {upload["status"]}. See more information in the Dioptra UI: {app_endpoint}/settings/uploads/{upload_id}')
+│ │ +                raise RuntimeError(
+│ │ +                    f'Upload failed with status {upload["status"]}. See more information in the Dioptra UI: {app_endpoint}/settings/uploads/{upload_id}')
+│ │              else:
+│ │                  time.sleep(sleepTimeSecs)
+│ │                  totalSleepTimeSecs += sleepTimeSecs
+│ │                  sleepTimeSecs = min(sleepTimeSecs * 2, 60)
+│ │      except requests.exceptions.RequestException as err:
+│ │          print('There was an error waiting for the upload to finish ...')
+│ │          raise err
+│ │ @@ -370,14 +393,19 @@
+│ │      List all the miner metadata
+│ │  
+│ │      """
+│ │  
+│ │      return query_dioptra_app('GET', '/api/tasks/miners')
+│ │  
+│ │  
+│ │ +def _build_compressed_payload(records):
+│ │ +    payload = b'\n'.join(
+│ │ +        [orjson.dumps(record, option=orjson.OPT_SERIALIZE_NUMPY)for record in records])
+│ │ +    return mgzip.compress(payload, compresslevel=2)
+│ │ +
+│ │  def join_on_datapoints(datapoints, groundtruths=None, predictions=None):
+│ │      """
+│ │      Join datapoints with predictions or groundtruth.
+│ │      Returns an object store dataset ready dataframe
+│ │  
+│ │      Parameters:
+│ │          datapoints: a dataframe containing the datapoints
+│ │ @@ -399,33 +427,91 @@
+│ │              .to_frame('groundtruths')\
+│ │              .groupby('datapoint')\
+│ │              .agg(list)
+│ │          datapoints = datapoints.join(join_formatted, on='id')
+│ │  
+│ │      return datapoints
+│ │  
+│ │ +def group_by_uri(datapoints, uri_grouped_transform, num_workers=1):
+│ │ +    """
+│ │ +    Group datapoints by uri
+│ │ +
+│ │ +    Parameters:
+│ │ +        datapoints: a dataframe containing the datapoints typically out of the `join_on_datapoints` method
+│ │ +        uri_grouped_transform: the transform to be applied to the grouped row
+│ │ +            the transform should take a tuple for each row with
+│ │ +                the first index being the id,
+│ │ +                the second index being the metadata,
+│ │ +                the third index being the groundtruths if present in the datapoints,
+│ │ +                the fourth index being the predictions if present in the datapoints
+│ │ +            the transform should return a dictionary with the columns to be added/modified to the dataframe
+│ │ +        num_workers: number of parallel workers
+│ │ +
+│ │ +    """
+│ │ +
+│ │ +    datapoints['uri'] = [row['uri'] for row in datapoints['metadata']]
+│ │ +
+│ │ +    aggregation_dict = {}
+│ │ +
+│ │ +    for key in datapoints.keys():
+│ │ +        if key not in ['id', 'metadata', 'groundtruths', 'predictions']:
+│ │ +            aggregation_dict[key] = 'first'
+│ │ +        elif key == 'id':
+│ │ +            aggregation_dict[key] = list
+│ │ +        elif key == 'metadata':
+│ │ +            aggregation_dict[key] = list
+│ │ +        elif key == 'groundtruths':
+│ │ +            aggregation_dict[key] = sum
+│ │ +        elif key == 'predictions':
+│ │ +            aggregation_dict[key] = sum
+│ │ +
+│ │ +    grouped_df = datapoints.groupby('uri').agg(aggregation_dict)
+│ │ +
+│ │ +    zipped_columns = []
+│ │ +    for key in ['id', 'metadata', 'groundtruths', 'predictions']:
+│ │ +        if key in grouped_df.keys():
+│ │ +            zipped_columns.append(grouped_df[key])
+│ │ +
+│ │ +    zipped_column = list(zip(*zipped_columns))
+│ │ +
+│ │ +    with Pool(num_workers) as my_pool:
+│ │ +        results = list(tqdm.tqdm(
+│ │ +            my_pool.imap(uri_grouped_transform, zipped_column),
+│ │ +            total=len(zipped_column),
+│ │ +            desc='Processing your rows ...',
+│ │ +            ncols=100
+│ │ +        ))
+│ │  
+│ │ -def _encode_np_array(np_array):
+│ │ +    for key in results[0].keys():
+│ │ +        grouped_df[key] = [result[key] for result in results]
+│ │ +
+│ │ +    return grouped_df
+│ │ +
+│ │ +def _encode_np_array(np_array, light_compression=False):
+│ │      """
+│ │      Encode and compress a np array
+│ │  
+│ │      Parameters:
+│ │          np_array: the np array to be encoded
+│ │  
+│ │      """
+│ │      if not isinstance(np_array, np.ndarray):
+│ │          raise RuntimeError('Can only encode numpy arrays')
+│ │  
+│ │      bytes_buffer = io.BytesIO()
+│ │      np.save(bytes_buffer, np_array)
+│ │  
+│ │ +    compression_level=lz4.frame.COMPRESSIONLEVEL_MAX
+│ │ +    if light_compression:
+│ │ +        compression_level=lz4.frame.COMPRESSIONLEVEL_MIN
+│ │ +
+│ │      return base64.b64encode(
+│ │          lz4.frame.compress(
+│ │              bytes_buffer.getvalue(),
+│ │ -            compression_level=lz4.frame.COMPRESSIONLEVEL_MAX
+│ │ +            compression_level=compression_level
+│ │          )).decode('ascii')
+│ │  
+│ │  def _decode_to_np_array(value):
+│ │      """
+│ │      Decode a compress a np array
+│ │  
+│ │      Parameters:
+│ │ @@ -523,29 +609,32 @@
+│ │  
+│ │  def upload_image_dataset(
+│ │      dataset, dataset_type,
+│ │      image_field=None,
+│ │      groundtruth_field=None,
+│ │      datapoints_metadata=None,
+│ │      image_ids=None,
+│ │ -    class_names=None, dataset_tags=None,
+│ │ +    class_names=None, dataset_metadata=None,
+│ │      max_batch_size=200, num_workers=20):
+│ │      """
+│ │      Upload an image dataset to Dioptra.
+│ │      The images will be uploaded to a bucket specified with DIOPTRA_UPLOAD_BUCKET.
+│ │      The metadata will be uploaded to Dioptra and point to this bucket
+│ │  
+│ │      Parameters:
+│ │          dataset: the dataset to upload. Should be iteratable.
+│ │          image_field: the name of the field containing the image. Should be in PIL format
+│ │          dataset_type: the type of data, Supported CLASSIFICATION, SEMANTIC_SEGMENTATION
+│ │          groundtruth_field: the name of the field containing the groundtruth
+│ │          datapoints_metadata:
+│ │              a list of metadata to be added to each datapoint.
+│ │              should already be formatted.
+│ │ +        dataset_metadata:
+│ │ +            metadata to be added to each datapoint.
+│ │ +            should already be formatted.
+│ │          image_ids:
+│ │              a list of image ids. if present, this will be used to name teh images on S3
+│ │          class_names: a list of class names to convert indexes in the groundtruth to class names
+│ │          class_names: a dict of tags to be added to the entire dataset
+│ │          max_batch_size: the maximum batch uplodd size
+│ │          num_workers: number of parallel workers to upload the images to the bucket
+│ │  
+│ │ @@ -572,15 +661,15 @@
+│ │  
+│ │      if s3_bucket is None:
+│ │          raise RuntimeError('DIOPTRA_UPLOAD_BUCKET env var is not set')
+│ │  
+│ │      s3_prefix_bucket = os.environ.get('DIOPTRA_UPLOAD_PREFIX', '')
+│ │      storage_type = os.environ.get('DIOPTRA_UPLOAD_STORAGE_TYPE', 's3')
+│ │  
+│ │ -    dataset_metadata = []
+│ │ +    my_dataset_metadata = []
+│ │      img_payload = []
+│ │      upload_ids = []
+│ │  
+│ │      for index, row in tqdm.tqdm(enumerate(dataset), desc='uploading dataset...'):
+│ │  
+│ │          if image_field is not None and image_field not in row:
+│ │              raise RuntimeError(f'{image_field} is not in the dataset')
+│ │ @@ -621,39 +710,43 @@
+│ │          pil_img.save(in_mem_file, format=pil_img.format)
+│ │  
+│ │          datapoint_tags = {}
+│ │          image_metadata = {}
+│ │  
+│ │          if  my_metadata is not None and 'tags' in my_metadata:
+│ │              datapoint_tags.update(my_metadata['tags'])
+│ │ -        if dataset_tags is not None:
+│ │ -            datapoint_tags.update(dataset_tags)
+│ │          if  my_metadata is not None and 'image_metadata' in my_metadata:
+│ │              image_metadata.update(my_metadata['image_metadata'])
+│ │  
+│ │ +        if  dataset_metadata is not None and 'tags' in dataset_metadata:
+│ │ +            datapoint_tags.update(dataset_metadata['tags'])
+│ │ +        if  dataset_metadata is not None and 'image_metadata' in dataset_metadata:
+│ │ +            image_metadata.update(dataset_metadata['image_metadata'])
+│ │ +
+│ │          image_metadata.update({
+│ │              'uri': img_url,
+│ │              'width': img_width,
+│ │              'height': img_height
+│ │          })
+│ │  
+│ │          img_payload.append((in_mem_file.getvalue(), img_url))
+│ │ -        dataset_metadata.append({
+│ │ +        my_dataset_metadata.append({
+│ │ +            **(my_metadata if my_metadata is not None else {}),
+│ │ +            **(dataset_metadata if dataset_metadata is not None else {}),
+│ │              'image_metadata': image_metadata,
+│ │ +            **({'tags': datapoint_tags} if len(datapoint_tags) > 0 else {}),
+│ │              **({
+│ │                  'groundtruth': _format_groundtruth(row[groundtruth_field], dataset_type, class_names)
+│ │              } if groundtruth_field is not None else {}),
+│ │ -            **(my_metadata if my_metadata is not None else {}),
+│ │ -            **({'tags': datapoint_tags} if len(datapoint_tags) > 0 else {})
+│ │          })
+│ │  
+│ │          if len(img_payload) > max_batch_size:
+│ │              upload_ids.append(_upload_data(
+│ │ -                dataset_metadata, img_payload, num_workers))
+│ │ -            dataset_metadata = []
+│ │ +                my_dataset_metadata, img_payload, num_workers))
+│ │ +            my_dataset_metadata = []
+│ │              img_payload = []
+│ │  
+│ │      if len(img_payload) > 0:
+│ │          upload_ids.append(_upload_data(
+│ │ -            dataset_metadata, img_payload, num_workers))
+│ │ +            my_dataset_metadata, img_payload, num_workers))
+│ │  
+│ │      return upload_ids
+│ │   --- dioptra-1.0.5rc3/dioptra/miners/activation_miner.py
+│ ├── +++ dioptra-1.0.6/dioptra/miners/knn_miner.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,58 +1,63 @@
+│ │  import requests
+│ │  from .base_miner import BaseMiner
+│ │  
+│ │ -class ActivationMiner(BaseMiner):
+│ │ +class KNNMiner(BaseMiner):
+│ │      def __init__(
+│ │ -            self, display_name, size, embeddings_field, select_filters,
+│ │ -            select_limit=None, select_order_by=None, select_desc=None, 
+│ │ -            select_reference_filters=None, select_reference_limit=None,select_reference_order_by=None, select_reference_desc=None,
+│ │ -            skip_caching=False, model_name=None):
+│ │ +            self, display_name, size, select_filters, model_name,
+│ │ +            embeddings_field='EMBEDDINGS', metric='euclidean',
+│ │ +            select_limit=None, select_order_by=None, select_desc=None,
+│ │ +            select_reference_filters=None, select_reference_limit=None,
+│ │ +            select_reference_order_by=None, select_reference_desc=None,
+│ │ +            skip_caching=True):
+│ │          """
+│ │ -        Activation miner
+│ │ -        Will perform a AL query based on activation
+│ │ +        KNN miner
+│ │ +        Will perform a AL query based on CoreSet
+│ │  
+│ │          Parameters:
+│ │              display_name: name to be displayed in Dioptra
+│ │              size: number of datapoints to query
+│ │              embeddings_field: embedding fields to run the analysis on. Could be 'embeddings' 'prediction.embeddings'
+│ │ +            metric: the metrics to be used to do KNN. Could be 'euclidian' or 'cosine'
+│ │              select_filters: dioptra style filters to select the data to be queried from
+│ │              select_limit: limit to selected the data
+│ │              select_order_by: field to use to sort the data to control how limit is performed
+│ │              select_desc: whether to order by dec or not
+│ │ +            select_reference_filters: dioptra style filters to select the data that is already in your training dataset
+│ │ +            select_reference_limit: like previous but for teh reference data
+│ │ +            select_reference_order_by: like previous but for teh reference data
+│ │ +            select_reference_desc: like previous but for teh reference data
+│ │              skip_caching: whether to skip vector caching or not
+│ │ -
+│ │          """
+│ │  
+│ │          super().__init__()
+│ │          try:
+│ │              r = requests.post(f'{self.app_endpoint}/api/tasks/miners', headers={
+│ │                  'content-type': 'application/json',
+│ │                  'x-api-key': self.api_key
+│ │              },
+│ │              json={
+│ │                  'display_name': display_name,
+│ │ -                'strategy': 'ACTIVATION',
+│ │ +                'strategy': 'NEAREST_NEIGHBORS',
+│ │ +                'metric': metric,
+│ │                  'size': size,
+│ │                  'embeddings_field': embeddings_field,
+│ │                  'model_name': model_name,
+│ │                  'select': {
+│ │                      'filters': select_filters,
+│ │                      **({'limit': select_limit} if select_limit is not None else {}),
+│ │                      **({'order_by': select_order_by} if select_order_by is not None else {}),
+│ │                      **({'desc': select_desc} if select_desc is not None else {}),
+│ │                  },
+│ │ -                **({'select_reference':
+│ │ -                    {
+│ │ -                        'filters': select_reference_filters,
+│ │ -                        **({'limit': select_reference_limit} if select_reference_limit is not None else {}),
+│ │ -                        **({'order_by': select_reference_order_by} if select_reference_order_by is not None else {}),
+│ │ -                        **({'desc': select_reference_desc} if select_reference_desc is not None else {}),
+│ │ -                    }
+│ │ -                } if select_reference_filters is not None else {}),
+│ │ +                'select_reference': {
+│ │ +                    'filters': select_reference_filters,
+│ │ +                    **({'limit': select_reference_limit} if select_reference_limit is not None else {}),
+│ │ +                    **({'order_by': select_reference_order_by} if select_reference_order_by is not None else {}),
+│ │ +                    **({'desc': select_reference_desc} if select_reference_desc is not None else {}),
+│ │ +                },
+│ │                  'skip_caching': skip_caching
+│ │              })
+│ │              r.raise_for_status()
+│ │              self.miner_id = r.json()['miner_id']
+│ │              self.miner_name = display_name
+│ │          except requests.exceptions.RequestException as err:
+│ │              print('There was an error getting miner status...')
+│ │   --- dioptra-1.0.5rc3/dioptra/miners/base_miner.py
+│ ├── +++ dioptra-1.0.6/dioptra/miners/base_miner.py
+│ │┄ Files identical despite different names
+│ │   --- dioptra-1.0.5rc3/dioptra/miners/coreset_miner.py
+│ ├── +++ dioptra-1.0.6/dioptra/miners/coreset_miner.py
+│ │┄ Files 8% similar despite different names
+│ │ @@ -1,18 +1,18 @@
+│ │  import requests
+│ │  from .base_miner import BaseMiner
+│ │  
+│ │  class CoresetMiner(BaseMiner):
+│ │      def __init__(
+│ │ -            self, display_name, size, embeddings_field, select_filters,
+│ │ -            metric='euclidean',
+│ │ +            self, display_name, size, select_filters, model_name,
+│ │ +            embeddings_field='EMBEDDINGS', metric='euclidean',
+│ │              select_limit=None, select_order_by=None, select_desc=None,
+│ │              select_reference_filters=None, select_reference_limit=None,
+│ │              select_reference_order_by=None, select_reference_desc=None,
+│ │ -            skip_caching=False, model_name=None):
+│ │ +            skip_caching=True):
+│ │          """
+│ │          CoreSet miner
+│ │          Will perform a AL query based on CoreSet
+│ │  
+│ │          Parameters:
+│ │              display_name: name to be displayed in Dioptra
+│ │              size: number of datapoints to query
+│ │   --- dioptra-1.0.5rc3/dioptra/miners/entropy_miner.py
+│ ├── +++ dioptra-1.0.6/dioptra/miners/random_miner.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,36 +1,37 @@
+│ │  import requests
+│ │  from .base_miner import BaseMiner
+│ │  
+│ │ -class EntropyMiner(BaseMiner):
+│ │ +class RandomMiner(BaseMiner):
+│ │      def __init__(
+│ │              self, display_name, size, select_filters,
+│ │              select_limit=None, select_order_by=None, select_desc=None):
+│ │          """
+│ │ -        Entropy miner
+│ │ -        Will perform a AL query based on Entropy
+│ │ +        Random miner
+│ │ +        Will perform a random query
+│ │  
+│ │          Parameters:
+│ │              display_name: name to be displayed in Dioptra
+│ │              size: number of datapoints to query
+│ │              select_filters: dioptra style filters to select the data to be queried from
+│ │              select_limit: limit to selected the data
+│ │              select_order_by: field to use to sort the data to control how limit is performed
+│ │              select_desc: whether to order by dec or not
+│ │          """
+│ │  
+│ │          super().__init__()
+│ │          try:
+│ │ +
+│ │              r = requests.post(f'{self.app_endpoint}/api/tasks/miners', headers={
+│ │                  'content-type': 'application/json',
+│ │                  'x-api-key': self.api_key
+│ │              },
+│ │              json={
+│ │                  'display_name': display_name,
+│ │ -                'strategy': 'ENTROPY',
+│ │ +                'strategy': 'RANDOM',
+│ │                  'size': size,
+│ │                  'select': {
+│ │                      'filters': select_filters,
+│ │                      **({'limit': select_limit} if select_limit is not None else {}),
+│ │                      **({'order_by': select_order_by} if select_order_by is not None else {}),
+│ │                      **({'desc': select_desc} if select_desc is not None else {}),
+│ │                  }
+│ │   --- dioptra-1.0.5rc3/dioptra/miners/knn_miner.py
+│ ├── +++ dioptra-1.0.6/dioptra/miners/activation_miner.py
+│ │┄ Files 24% similar despite different names
+│ │ @@ -1,63 +1,60 @@
+│ │  import requests
+│ │  from .base_miner import BaseMiner
+│ │  
+│ │ -class KNNMiner(BaseMiner):
+│ │ +class ActivationMiner(BaseMiner):
+│ │      def __init__(
+│ │ -            self, display_name, size, embeddings_field, select_filters,
+│ │ -            select_reference_filters, metric='euclidean',
+│ │ +            self, display_name, size, select_filters, model_name,
+│ │ +            embeddings_field,
+│ │              select_limit=None, select_order_by=None, select_desc=None,
+│ │ -            select_reference_limit=None,
+│ │ +            select_reference_filters=None, select_reference_limit=None,
+│ │              select_reference_order_by=None, select_reference_desc=None,
+│ │ -            skip_caching=False, model_name=None):
+│ │ +            skip_caching=True):
+│ │          """
+│ │ -        KNN miner
+│ │ -        Will perform a AL query based on CoreSet
+│ │ +        Activation miner
+│ │ +        Will perform a AL query based on activation
+│ │  
+│ │          Parameters:
+│ │              display_name: name to be displayed in Dioptra
+│ │              size: number of datapoints to query
+│ │              embeddings_field: embedding fields to run the analysis on. Could be 'embeddings' 'prediction.embeddings'
+│ │ -            metric: the metrics to be used to do KNN. Could be 'euclidian' or 'cosine'
+│ │              select_filters: dioptra style filters to select the data to be queried from
+│ │              select_limit: limit to selected the data
+│ │              select_order_by: field to use to sort the data to control how limit is performed
+│ │              select_desc: whether to order by dec or not
+│ │ -            select_reference_filters: dioptra style filters to select the data that is already in your training dataset
+│ │ -            select_reference_limit: like previous but for teh reference data
+│ │ -            select_reference_order_by: like previous but for teh reference data
+│ │ -            select_reference_desc: like previous but for teh reference data
+│ │              skip_caching: whether to skip vector caching or not
+│ │ +
+│ │          """
+│ │  
+│ │          super().__init__()
+│ │          try:
+│ │              r = requests.post(f'{self.app_endpoint}/api/tasks/miners', headers={
+│ │                  'content-type': 'application/json',
+│ │                  'x-api-key': self.api_key
+│ │              },
+│ │              json={
+│ │                  'display_name': display_name,
+│ │ -                'strategy': 'NEAREST_NEIGHBORS',
+│ │ -                'metric': metric,
+│ │ +                'strategy': 'ACTIVATION',
+│ │                  'size': size,
+│ │                  'embeddings_field': embeddings_field,
+│ │                  'model_name': model_name,
+│ │                  'select': {
+│ │                      'filters': select_filters,
+│ │                      **({'limit': select_limit} if select_limit is not None else {}),
+│ │                      **({'order_by': select_order_by} if select_order_by is not None else {}),
+│ │                      **({'desc': select_desc} if select_desc is not None else {}),
+│ │                  },
+│ │ -                'select_reference': {
+│ │ -                    'filters': select_reference_filters,
+│ │ -                    **({'limit': select_reference_limit} if select_reference_limit is not None else {}),
+│ │ -                    **({'order_by': select_reference_order_by} if select_reference_order_by is not None else {}),
+│ │ -                    **({'desc': select_reference_desc} if select_reference_desc is not None else {}),
+│ │ -                },
+│ │ +                **({'select_reference':
+│ │ +                    {
+│ │ +                        'filters': select_reference_filters,
+│ │ +                        **({'limit': select_reference_limit} if select_reference_limit is not None else {}),
+│ │ +                        **({'order_by': select_reference_order_by} if select_reference_order_by is not None else {}),
+│ │ +                        **({'desc': select_reference_desc} if select_reference_desc is not None else {}),
+│ │ +                    }
+│ │ +                } if select_reference_filters is not None else {}),
+│ │                  'skip_caching': skip_caching
+│ │              })
+│ │              r.raise_for_status()
+│ │              self.miner_id = r.json()['miner_id']
+│ │              self.miner_name = display_name
+│ │          except requests.exceptions.RequestException as err:
+│ │              print('There was an error getting miner status...')
+│ │   --- dioptra-1.0.5rc3/dioptra/miners/random_miner.py
+│ ├── +++ dioptra-1.0.6/dioptra/miners/variance_miner.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,44 +1,43 @@
+│ │  import requests
+│ │  from .base_miner import BaseMiner
+│ │  
+│ │ -class RandomMiner(BaseMiner):
+│ │ +class VarianceMiner(BaseMiner):
+│ │      def __init__(
+│ │              self, display_name, size, select_filters,
+│ │ -            select_limit=None, select_order_by=None, select_desc=None):
+│ │ +            select_limit=None, select_order_by=None, select_desc=None, model_name=None):
+│ │          """
+│ │ -        Random miner
+│ │ -        Will perform a random query
+│ │ -
+│ │ +        Variance miner
+│ │ +        Will perform a AL query based on Variance
+│ │          Parameters:
+│ │              display_name: name to be displayed in Dioptra
+│ │              size: number of datapoints to query
+│ │              select_filters: dioptra style filters to select the data to be queried from
+│ │              select_limit: limit to selected the data
+│ │              select_order_by: field to use to sort the data to control how limit is performed
+│ │              select_desc: whether to order by dec or not
+│ │          """
+│ │  
+│ │          super().__init__()
+│ │          try:
+│ │ -
+│ │              r = requests.post(f'{self.app_endpoint}/api/tasks/miners', headers={
+│ │                  'content-type': 'application/json',
+│ │                  'x-api-key': self.api_key
+│ │              },
+│ │              json={
+│ │                  'display_name': display_name,
+│ │ -                'strategy': 'RANDOM',
+│ │ +                'strategy': 'VARIANCE',
+│ │                  'size': size,
+│ │ +                'model_name': model_name,
+│ │                  'select': {
+│ │                      'filters': select_filters,
+│ │                      **({'limit': select_limit} if select_limit is not None else {}),
+│ │                      **({'order_by': select_order_by} if select_order_by is not None else {}),
+│ │                      **({'desc': select_desc} if select_desc is not None else {}),
+│ │                  }
+│ │              })
+│ │              r.raise_for_status()
+│ │              self.miner_id = r.json()['miner_id']
+│ │              self.miner_name = display_name
+│ │          except requests.exceptions.RequestException as err:
+│ │              print('There was an error getting miner status...')
+│ │ -            raise err
+│ │ +            raise err
+│ │   --- dioptra-1.0.5rc3/dioptra/miners/variance_miner.py
+│ ├── +++ dioptra-1.0.6/dioptra/miners/entropy_miner.py
+│ │┄ Files 17% similar despite different names
+│ │ @@ -1,17 +1,18 @@
+│ │  import requests
+│ │  from .base_miner import BaseMiner
+│ │  
+│ │ -class VarianceMiner(BaseMiner):
+│ │ +class EntropyMiner(BaseMiner):
+│ │      def __init__(
+│ │ -            self, display_name, size, select_filters,
+│ │ +            self, display_name, size, select_filters, model_name=None,
+│ │              select_limit=None, select_order_by=None, select_desc=None):
+│ │          """
+│ │ -        Variance miner
+│ │ -        Will perform a AL query based on Variance
+│ │ +        Entropy miner
+│ │ +        Will perform a AL query based on Entropy
+│ │ +
+│ │          Parameters:
+│ │              display_name: name to be displayed in Dioptra
+│ │              size: number of datapoints to query
+│ │              select_filters: dioptra style filters to select the data to be queried from
+│ │              select_limit: limit to selected the data
+│ │              select_order_by: field to use to sort the data to control how limit is performed
+│ │              select_desc: whether to order by dec or not
+│ │ @@ -21,22 +22,23 @@
+│ │          try:
+│ │              r = requests.post(f'{self.app_endpoint}/api/tasks/miners', headers={
+│ │                  'content-type': 'application/json',
+│ │                  'x-api-key': self.api_key
+│ │              },
+│ │              json={
+│ │                  'display_name': display_name,
+│ │ -                'strategy': 'VARIANCE',
+│ │ +                'strategy': 'ENTROPY',
+│ │                  'size': size,
+│ │ +                'model_name': 'model_name',
+│ │                  'select': {
+│ │                      'filters': select_filters,
+│ │                      **({'limit': select_limit} if select_limit is not None else {}),
+│ │                      **({'order_by': select_order_by} if select_order_by is not None else {}),
+│ │                      **({'desc': select_desc} if select_desc is not None else {}),
+│ │                  }
+│ │              })
+│ │              r.raise_for_status()
+│ │              self.miner_id = r.json()['miner_id']
+│ │              self.miner_name = display_name
+│ │          except requests.exceptions.RequestException as err:
+│ │              print('There was an error getting miner status...')
+│ │ -            raise err
+│ │ +            raise err
+│ │   --- dioptra-1.0.5rc3/dioptra.egg-info/PKG-INFO
+│ ├── +++ dioptra-1.0.6/dioptra.egg-info/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dioptra
+│ │ -Version: 1.0.5rc3
+│ │ +Version: 1.0.6
+│ │  Summary: Client library to log data to Dioptra API
+│ │  Home-page: https://github.com/dioptra-ai/collector-py
+│ │  Author: dioptra.ai
+│ │  Author-email: info@dioptra.ai
+│ │  License: BSD
+│ │  Project-URL: dioptra.ai, https://www.dioptra.ai
+│ │  Description: <div align="center">
+│ │   --- dioptra-1.0.5rc3/dioptra.egg-info/SOURCES.txt
+│ ├── +++ dioptra-1.0.6/dioptra.egg-info/SOURCES.txt
+│ │┄ Files 20% similar despite different names
+│ │ @@ -1,17 +1,11 @@
+│ │  LICENSE.md
+│ │  README.md
+│ │  setup.py
+│ │  dioptra/__init__.py
+│ │ -dioptra/__main__.py
+│ │ -dioptra/api.py
+│ │ -dioptra/client.py
+│ │ -dioptra/schemas.py
+│ │ -dioptra/supported_types.py
+│ │ -dioptra/utils.py
+│ │  dioptra.egg-info/PKG-INFO
+│ │  dioptra.egg-info/SOURCES.txt
+│ │  dioptra.egg-info/dependency_links.txt
+│ │  dioptra.egg-info/requires.txt
+│ │  dioptra.egg-info/top_level.txt
+│ │  dioptra/inference/__init__.py
+│ │  dioptra/inference/inference_runner.py
+│ │   --- dioptra-1.0.5rc3/setup.py
+│ ├── +++ dioptra-1.0.6/setup.py
+│ │┄ Files identical despite different names

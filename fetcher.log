@@ -691,3 +691,87 @@
 [2023-04-07 17:45:57] INFO root fetch - main [MainThread]: success
 [2023-04-07 17:45:57] INFO root fetch - main [MainThread]: success
 [2023-04-07 17:46:01] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:06] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17620443]
+[2023-04-07 17:56:11] INFO root fetch - main [MainThread]: Found 16 changed packages
+[2023-04-07 17:56:11] INFO root fetch - processPackages [morphqs]: New version: [0.1.2] Old Version: [0.1.18]
+[2023-04-07 17:56:11] WARNING root fetch - processPackages [django-y-swagger-ui]: Skipping, unable to determine old version
+[2023-04-07 17:56:11] INFO root fetch - main [MainThread]: error
+[2023-04-07 17:56:11] INFO root fetch - processPackages [daqp]: New version: [0.4.1] Old Version: [0.4.0]
+[2023-04-07 17:56:11] INFO root fetch - processPackages [dioptra]: New version: [1.0.6] Old Version: [1.0.5rc3]
+[2023-04-07 17:56:11] INFO root fetch - processPackages [rexify]: New version: [0.1.3] Old Version: [0.1.2]
+[2023-04-07 17:56:11] WARNING root fetch - processPackages [zuoning-lama-cleaner]: Skipping, unable to determine old version
+[2023-04-07 17:56:11] INFO root fetch - main [MainThread]: error
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: New version: [0.1.2] Old Version: [0.1.18]
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: Downloading https://files.pythonhosted.org/packages/bf/2a/1210687ee09dd3661d77a6ed652db3b7a6cc89a53064fcf167d1f39991a0/morphqs-0.1.18.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: Downloading https://files.pythonhosted.org/packages/bf/2a/1210687ee09dd3661d77a6ed652db3b7a6cc89a53064fcf167d1f39991a0/morphqs-0.1.18.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [daqp]: Downloading https://files.pythonhosted.org/packages/d1/a6/4e9ca13c2cc15130a9c1081a9ab11a5217edf3c9f020d0baa9bb60b1da26/daqp-0.4.0.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [rexify]: Downloading https://files.pythonhosted.org/packages/4d/80/98ddc963df8a44cd2b085e9ec846e6c7dc6f25d21d32ae1de14c2f860403/rexify-0.1.2.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [dioptra]: Downloading https://files.pythonhosted.org/packages/6d/4d/2a9c2baf048d65dcbc23552cb80d3dd86f671dd05fbfebf639650daeabff/dioptra-1.0.5rc3.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [daqp]: Downloading https://files.pythonhosted.org/packages/b4/35/566b53fbcf24a474c249c0697aeb0593145350b14c849304b2b393634d38/daqp-0.4.1.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: Downloading https://files.pythonhosted.org/packages/79/fb/8e830d8fea549d3dd467aec70f34cc7622bedee33d443a26f9b843b18b72/morphqs-0.1.2.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: Downloading https://files.pythonhosted.org/packages/79/fb/8e830d8fea549d3dd467aec70f34cc7622bedee33d443a26f9b843b18b72/morphqs-0.1.2.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: executing diffoscope
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/morphqs-0.1.18.tar.gz tmp/morphqs-0.1.2.tar.gz --html 20230407/m/morphqs/0.1.18-0.1.2/index.html --text 20230407/m/morphqs/0.1.18-0.1.2/diff.txt --markdown 20230407/m/morphqs/0.1.18-0.1.2/diff.md
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: executing diffoscope
+[2023-04-07 17:56:12] INFO root fetch - processPackages [morphqs]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/morphqs-0.1.18.tar.gz tmp/morphqs-0.1.2.tar.gz --html 20230407/m/morphqs/0.1.18-0.1.2/index.html --text 20230407/m/morphqs/0.1.18-0.1.2/diff.txt --markdown 20230407/m/morphqs/0.1.18-0.1.2/diff.md
+[2023-04-07 17:56:12] INFO root fetch - processPackages [rexify]: Downloading https://files.pythonhosted.org/packages/af/b3/3b501a5f86f0e7e7c46efe23a9fd613ed66f21f07b8a59db605d7853a599/rexify-0.1.3.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [dioptra]: Downloading https://files.pythonhosted.org/packages/2e/a8/05e98e1f5700a4475eae61c6bb7a6bf93776346196e5cc90bf3c0bd01f44/dioptra-1.0.6.tar.gz
+[2023-04-07 17:56:12] INFO root fetch - processPackages [daqp]: executing diffoscope
+[2023-04-07 17:56:12] INFO root fetch - processPackages [daqp]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/daqp-0.4.0.tar.gz tmp/daqp-0.4.1.tar.gz --html 20230407/d/daqp/0.4.0-0.4.1/index.html --text 20230407/d/daqp/0.4.0-0.4.1/diff.txt --markdown 20230407/d/daqp/0.4.0-0.4.1/diff.md
+[2023-04-07 17:56:12] INFO root fetch - processPackages [dioptra]: executing diffoscope
+[2023-04-07 17:56:12] INFO root fetch - processPackages [rexify]: executing diffoscope
+[2023-04-07 17:56:12] INFO root fetch - processPackages [dioptra]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/dioptra-1.0.5rc3.tar.gz tmp/dioptra-1.0.6.tar.gz --html 20230407/d/dioptra/1.0.5rc3-1.0.6/index.html --text 20230407/d/dioptra/1.0.5rc3-1.0.6/diff.txt --markdown 20230407/d/dioptra/1.0.5rc3-1.0.6/diff.md
+[2023-04-07 17:56:12] INFO root fetch - processPackages [rexify]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/rexify-0.1.2.tar.gz tmp/rexify-0.1.3.tar.gz --html 20230407/r/rexify/0.1.2-0.1.3/index.html --text 20230407/r/rexify/0.1.2-0.1.3/diff.txt --markdown 20230407/r/rexify/0.1.2-0.1.3/diff.md
+[2023-04-07 17:56:13] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:13] INFO root fetch - processPackages [toolformer-pytorch]: New version: [0.0.9] Old Version: [0.0.7]
+[2023-04-07 17:56:13] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:13] INFO root fetch - processPackages [toolformer-pytorch]: Downloading https://files.pythonhosted.org/packages/e4/70/293add140ed41ce71e3125d7a6ae20044224e8b3c897c78b728aeb87bae1/toolformer-pytorch-0.0.7.tar.gz
+[2023-04-07 17:56:13] INFO root fetch - processPackages [phidata]: New version: [1.5.0] Old Version: [1.4.4]
+[2023-04-07 17:56:13] INFO root fetch - processPackages [phidata]: Downloading https://files.pythonhosted.org/packages/f2/7b/4dc258ae9e1ff7a2fbaf68384937b23c2f959a9535a289e1347e315a9f33/phidata-1.4.4.tar.gz
+[2023-04-07 17:56:13] INFO root fetch - processPackages [toolformer-pytorch]: Downloading https://files.pythonhosted.org/packages/eb/58/630c5e45ef00d3335a7623728cfdc84d402a2f6452498210652dad36ecb9/toolformer-pytorch-0.0.9.tar.gz
+[2023-04-07 17:56:14] INFO root fetch - processPackages [toolformer-pytorch]: executing diffoscope
+[2023-04-07 17:56:14] INFO root fetch - processPackages [toolformer-pytorch]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/toolformer-pytorch-0.0.7.tar.gz tmp/toolformer-pytorch-0.0.9.tar.gz --html 20230407/t/toolformer-pytorch/0.0.7-0.0.9/index.html --text 20230407/t/toolformer-pytorch/0.0.7-0.0.9/diff.txt --markdown 20230407/t/toolformer-pytorch/0.0.7-0.0.9/diff.md
+[2023-04-07 17:56:14] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:14] INFO root fetch - processPackages [pytest-abq]: New version: [1.0.1] Old Version: [1.0.0]
+[2023-04-07 17:56:14] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:14] INFO root fetch - processPackages [fish-audio-preprocess]: New version: [0.2.0] Old Version: [0.1.9]
+[2023-04-07 17:56:14] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:14] INFO root fetch - processPackages [mongo-to-som]: New version: [1.0.5] Old Version: [1.0.4]
+[2023-04-07 17:56:14] INFO root fetch - processPackages [phidata]: Downloading https://files.pythonhosted.org/packages/79/bd/ebd5fee7eb9338e1bddce06a40f97d6c9cbf867e496945bf2da6805aac8d/phidata-1.5.0.tar.gz
+[2023-04-07 17:56:14] INFO root fetch - processPackages [mongo-to-som]: Downloading https://files.pythonhosted.org/packages/1e/32/6e0796971afa001feffad2661ef1866b2be7221ce6a231a3206b5bc18e41/mongo_to_som-1.0.4.tar.gz
+[2023-04-07 17:56:14] INFO root fetch - processPackages [fish-audio-preprocess]: Downloading https://files.pythonhosted.org/packages/ab/be/e7844ae1bbc5237ea7e772379440aa57c944fa1f90e6c5f4ec7558026a13/fish_audio_preprocess-0.1.9.tar.gz
+[2023-04-07 17:56:14] INFO root fetch - processPackages [pytest-abq]: Downloading https://files.pythonhosted.org/packages/3d/de/4343cee5055894316698ee5893e5b31fc685ab7f711bb9e8447464894ea7/pytest-abq-1.0.0.tar.gz
+[2023-04-07 17:56:14] INFO root fetch - processPackages [mongo-to-som]: Downloading https://files.pythonhosted.org/packages/1e/55/41341d0d849311f2cbcd503c730ac077932986da9876c149be9152cda00e/mongo_to_som-1.0.5.tar.gz
+[2023-04-07 17:56:14] INFO root fetch - processPackages [mongo-to-som]: executing diffoscope
+[2023-04-07 17:56:14] INFO root fetch - processPackages [mongo-to-som]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/mongo_to_som-1.0.4.tar.gz tmp/mongo_to_som-1.0.5.tar.gz --html 20230407/m/mongo-to-som/1.0.4-1.0.5/index.html --text 20230407/m/mongo-to-som/1.0.4-1.0.5/diff.txt --markdown 20230407/m/mongo-to-som/1.0.4-1.0.5/diff.md
+[2023-04-07 17:56:14] INFO root fetch - processPackages [pytest-abq]: Downloading https://files.pythonhosted.org/packages/6a/66/20a8222b8ac86544be7f2f6097abe30c8867a6b0089f39bcd30d4a790c40/pytest-abq-1.0.1.tar.gz
+[2023-04-07 17:56:14] INFO root fetch - processPackages [phidata]: executing diffoscope
+[2023-04-07 17:56:14] INFO root fetch - processPackages [phidata]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/phidata-1.4.4.tar.gz tmp/phidata-1.5.0.tar.gz --html 20230407/p/phidata/1.4.4-1.5.0/index.html --text 20230407/p/phidata/1.4.4-1.5.0/diff.txt --markdown 20230407/p/phidata/1.4.4-1.5.0/diff.md
+[2023-04-07 17:56:14] INFO root fetch - processPackages [pytest-abq]: executing diffoscope
+[2023-04-07 17:56:14] INFO root fetch - processPackages [pytest-abq]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pytest-abq-1.0.0.tar.gz tmp/pytest-abq-1.0.1.tar.gz --html 20230407/p/pytest-abq/1.0.0-1.0.1/index.html --text 20230407/p/pytest-abq/1.0.0-1.0.1/diff.txt --markdown 20230407/p/pytest-abq/1.0.0-1.0.1/diff.md
+[2023-04-07 17:56:15] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:15] INFO root fetch - processPackages [morphqs]: New version: [0.1.2] Old Version: [0.1.18]
+[2023-04-07 17:56:15] INFO root fetch - processPackages [morphqs]: report already exists
+[2023-04-07 17:56:15] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:15] WARNING root fetch - processPackages [fake0407002]: Skipping, unable to determine old version
+[2023-04-07 17:56:15] INFO root fetch - main [MainThread]: error
+[2023-04-07 17:56:15] INFO root fetch - processPackages [idun-guardian-client]: New version: [1.1b2] Old Version: [1.1b1]
+[2023-04-07 17:56:15] INFO root fetch - processPackages [idun-guardian-client]: Downloading https://files.pythonhosted.org/packages/84/74/e26744de23b9c1f8084f121b129d69fc3dd6485a662ab993c8924cd98065/idun_guardian_client-1.1b1.tar.gz
+[2023-04-07 17:56:15] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:15] INFO root fetch - processPackages [TA-Lib]: New version: [0.4.9] Old Version: [0.4.8]
+[2023-04-07 17:56:15] WARNING root fetch - processPackages [TA-Lib]: fallback to get urls: [0.4.8]
+[2023-04-07 17:56:15] WARNING root fetch - processPackages [TA-Lib]: None
+[2023-04-07 17:56:15] INFO root fetch - processPackages [idun-guardian-client]: Downloading https://files.pythonhosted.org/packages/58/ea/89528ba5527a5c047a473be8c92c833c207581bcfa41f8fa61a6a5c49f9f/idun_guardian_client-1.1b2.tar.gz
+[2023-04-07 17:56:15] WARNING root fetch - processPackages [TA-Lib]: None
+[2023-04-07 17:56:15] WARNING root fetch - processPackages [TA-Lib]: unable to get url for both version [0.4.8]
+[2023-04-07 17:56:15] WARNING root fetch - processPackages [TA-Lib]: None
+[2023-04-07 17:56:15] INFO root fetch - main [MainThread]: error
+[2023-04-07 17:56:15] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:15] INFO root fetch - processPackages [idun-guardian-client]: executing diffoscope
+[2023-04-07 17:56:15] INFO root fetch - processPackages [idun-guardian-client]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/idun_guardian_client-1.1b1.tar.gz tmp/idun_guardian_client-1.1b2.tar.gz --html 20230407/i/idun-guardian-client/1.1b1-1.1b2/index.html --text 20230407/i/idun-guardian-client/1.1b1-1.1b2/diff.txt --markdown 20230407/i/idun-guardian-client/1.1b1-1.1b2/diff.md
+[2023-04-07 17:56:17] INFO root fetch - processPackages [fish-audio-preprocess]: Downloading https://files.pythonhosted.org/packages/68/65/886ddf92b893cbc20fc689c1b594e2c6744476e38c50924cbae61a090c91/fish_audio_preprocess-0.2.0.tar.gz
+[2023-04-07 17:56:17] INFO root fetch - processPackages [fish-audio-preprocess]: executing diffoscope
+[2023-04-07 17:56:17] INFO root fetch - processPackages [fish-audio-preprocess]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/fish_audio_preprocess-0.1.9.tar.gz tmp/fish_audio_preprocess-0.2.0.tar.gz --html 20230407/f/fish-audio-preprocess/0.1.9-0.2.0/index.html --text 20230407/f/fish-audio-preprocess/0.1.9-0.2.0/diff.txt --markdown 20230407/f/fish-audio-preprocess/0.1.9-0.2.0/diff.md
+[2023-04-07 17:56:17] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:19] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:56:21] INFO root fetch - main [MainThread]: success
