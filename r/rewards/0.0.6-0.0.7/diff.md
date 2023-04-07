@@ -1,0 +1,474 @@
+# Comparing `tmp/rewards-0.0.6.tar.gz` & `tmp/rewards-0.0.7.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "rewards-0.0.6.tar", max compression
++gzip compressed data, was "rewards-0.0.7.tar", max compression
+```
+
+## Comparing `rewards-0.0.6.tar` & `rewards-0.0.7.tar`
+
+### file list
+
+```diff
+@@ -1,17 +1,17 @@
+--rw-r--r--   0        0        0    15251 2023-04-06 14:35:37.598050 rewards-0.0.6/README.md
+--rw-r--r--   0        0        0      456 2023-04-07 10:32:27.099387 rewards-0.0.6/pyproject.toml
+--rw-r--r--   0        0        0        5 2023-04-06 15:42:38.058461 rewards-0.0.6/rewards/VERSION
+--rw-r--r--   0        0        0      247 2023-04-06 14:35:37.602050 rewards-0.0.6/rewards/__init__.py
+--rw-r--r--   0        0        0     3837 2023-04-07 09:50:29.384498 rewards-0.0.6/rewards/agent.py
+--rw-r--r--   0        0        0       18 2023-04-06 14:35:37.602050 rewards-0.0.6/rewards/assets/CarRace/__init__.py
+--rw-r--r--   0        0        0    79384 2023-03-31 17:19:59.957981 rewards-0.0.6/rewards/assets/CarRace/car.png
+--rw-r--r--   0        0        0    60297 2023-04-06 14:35:37.602050 rewards-0.0.6/rewards/assets/CarRace/track-1.png
+--rw-r--r--   0        0        0    42293 2023-04-06 14:35:37.602050 rewards-0.0.6/rewards/assets/CarRace/track-2.png
+--rw-r--r--   0        0        0    49467 2023-04-06 14:35:37.602050 rewards-0.0.6/rewards/assets/CarRace/track-3.png
+--rw-r--r--   0        0        0       18 2023-04-06 14:35:37.602050 rewards-0.0.6/rewards/assets/__init__.py
+--rw-r--r--   0        0        0        0 2023-04-02 06:50:32.365576 rewards-0.0.6/rewards/envs/__init__.py
+--rw-r--r--   0        0        0    15306 2023-04-06 14:35:37.602050 rewards-0.0.6/rewards/envs/car.py
+--rw-r--r--   0        0        0     5173 2023-04-07 10:30:46.515282 rewards-0.0.6/rewards/models.py
+--rw-r--r--   0        0        0     5845 2023-04-07 09:52:51.808349 rewards-0.0.6/rewards/trainer.py
+--rw-r--r--   0        0        0     6358 2023-04-07 09:57:30.807928 rewards-0.0.6/rewards/workflow.py
+--rw-r--r--   0        0        0    15940 1970-01-01 00:00:00.000000 rewards-0.0.6/PKG-INFO
++-rw-r--r--   0        0        0    15257 2023-04-07 17:19:00.798828 rewards-0.0.7/README.md
++-rw-r--r--   0        0        0      457 2023-04-07 17:19:00.798828 rewards-0.0.7/pyproject.toml
++-rw-r--r--   0        0        0        5 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/VERSION
++-rw-r--r--   0        0        0      247 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/__init__.py
++-rw-r--r--   0        0        0     3867 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/agent.py
++-rw-r--r--   0        0        0       18 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/assets/CarRace/__init__.py
++-rw-r--r--   0        0        0    79384 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/assets/CarRace/car.png
++-rw-r--r--   0        0        0    60297 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/assets/CarRace/track-1.png
++-rw-r--r--   0        0        0    42293 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/assets/CarRace/track-2.png
++-rw-r--r--   0        0        0    49467 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/assets/CarRace/track-3.png
++-rw-r--r--   0        0        0       18 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/assets/__init__.py
++-rw-r--r--   0        0        0        0 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/envs/__init__.py
++-rw-r--r--   0        0        0    15306 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/envs/car.py
++-rw-r--r--   0        0        0     2634 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/models.py
++-rw-r--r--   0        0        0     5936 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/trainer.py
++-rw-r--r--   0        0        0     6040 2023-04-07 17:19:00.802828 rewards-0.0.7/rewards/workflow.py
++-rw-r--r--   0        0        0    15946 1970-01-01 00:00:00.000000 rewards-0.0.7/PKG-INFO
+```
+
+### Comparing `rewards-0.0.6/README.md` & `rewards-0.0.7/README.md`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+ # **rewards** 
+-### A low code sdk for crearing custom environments and deep RL agents. 
++### A low code sdk for creating custom environments and deep RL agents. 
+ 
+ 
+ <br>
+ 
+ ### **Installation** 
+ 
+ **`[linux]`** 
+@@ -51,22 +51,22 @@
+ 
+ <br>
+ 
+ ### **Getting started**
+ 
+ **`rewards`** is mainly made for two important reasons. 
+ 
+-- First we want to make learning reinforcement learning easy, by introducing this low code framework. So that folks do not need to spend more time in making environments or other stuff. All they can focus is on creating different agents, models and expeiment with them.
++- First we want to make learning reinforcement learning easy, by introducing this low code framework. So that folks do not need to spend more time in making environments or other stuff. All they can focus is on creating different agents, models and experiment with them.
+ 
+-- We want to make it as interactive and begginer friendly as possible. So we are also introducing **`rewards-platform`**  which where we gamified the experience of learning RL.
++- We want to make it as interactive and beginner friendly as possible. So we are also introducing **`rewards-platform`**  where we gamified the experience of learning RL.
+ 
+-- If playing games can be fun and competitive then why not RL? Hence with **`rewards-platform`** and **`rewards`** you can host and join ongoing competition and learn RL with your friends. 
++- If playing games can be fun and competitive then why not RL? Hence with **`rewards-platform`** and **`rewards`** you can host and join ongoing competitions and learn RL with your friends. 
+ 
+ **NOTE**: Our coming enterprise version is mainly focussed to build the same but for RL/Robotics based 
+-companies where we want to ensure that their focus lies more on the research rather creating environments and other configurations. 
++companies where we want to ensure that their focus lies more on the research rather than creating environments and other configurations. 
+ 
+ **Take a look on how to get started with a sample experiment** 
+ 
+ Currently this version of **`rewards`** only supports a single game and environment. That is `car-race`. We will be adding support for more environments (including gym, unity, and custom environments) very soon. 
+ 
+ So let's go ahead and see how to get started with a sample experiment.
+ 
+@@ -100,32 +100,32 @@
+ )
+ ```
+ 
+ **Here is the table of configuration and what they means** 
+ 
+ | Configuration Name | TYPE            | What it does                                                                                                                                                                                                                                   | Default value                                                                                              | Options                                                                                                                                                                                                                                                                               |
+ | ------------------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+-| EXPERIMENT_NAME    | str             | It tells what is the name of the experiment. The name of the experiment will be logged inside user's weights and biases projects dashbord.                                                                                                     | sample RL experiment                                                                                       | any string                                                                                                                                                                                                                                                                            |
++| EXPERIMENT_NAME    | str             | It tells what is the name of the experiment. The name of the experiment will be logged inside the user's weights and biases projects dashboard.                                                                                                     | sample RL experiment                                                                                       | any string                                                                                                                                                                                                                                                                            |
+ | ENVIRONMENT_NAME   | str             | It states the name of the environment. `rewards:v1.0.0` only supports one environment for now and that is `car-race`.                                                                                                                          | car-race                                                                                                   | NULL                                                                                                                                                                                                                                                                                  |
+ | ENVIRONMENT_WORLD  | int             | According to our convention we keep some environments for training and some for testing (which are unseen). At one point of time, you can only train your agent on one single train environment.                                               | 1                                                                                                          | 0/1/2                                                                                                                                                                                                                                                                                 |
+-| MODE               | str             | This tells us which mode the agent is been running i.e. either in train or test mode.                                                                                                                                                          | training                                                                                                   | training/testing                                                                                                                                                                                                                                                                      |
+-| CONTROL SPEED      | float           | For our car environment user can set the control speed of the car environment.                                                                                                                                                                 | 0.05                                                                                                       | (0 - 1]                                                                                                                                                                                                                                                                               |
++| MODE               | str             | This tells us which mode the agent is running i.e. either in train or test mode.                                                                                                                                                          | training                                                                                                   | training/testing                                                                                                                                                                                                                                                                      |
++| CONTROL SPEED      | float           | For our car environment, user can set the control speed of the car environment.                                                                                                                                                                 | 0.05                                                                                                       | (0 - 1]                                                                                                                                                                                                                                                                               |
+ | TRAIN_SPEED        | int             | For our car environment user can set the control speed of the car environment.                                                                                                                                                                 | 100                                                                                                        | 1 - 100                                                                                                                                                                                                                                                                               |
+ | SCREEN_SIZE        | Tuple           | The size of the pygame window.                                                                                                                                                                                                                 | (800, 700)                                                                                                 | User' choice                                                                                                                                                                                                                                                                          |
+ | LR                 | float           | Learning rate                                                                                                                                                                                                                                  | 0.01                                                                                                       | User' choice                                                                                                                                                                                                                                                                          |
+ | LOSS               | str             | Loss function name                                                                                                                                                                                                                             | mse                                                                                                        | mse , rmse, mae                                                                                                                                                                                                                                                    |
+ | OPTIMIZER          | str             | Optimizer name                                                                                                                                                                                                                                 | adam                                                                                                       |adam, rmsprop, adagrad                                                                                                                                                                                                                                            |
+ | GAMMA              | float           | Hyper parameter `gamme` value                                                                                                                                                                                                                  | 0.99                                                                                                       | 0 - 1                                                                                                                                                                                                                                                                                 |
+ | EPSILON            | float           | Hyper parameter `epsilon` value                                                                                                                                                                                                                | 0.99                                                                                                       | 0 - 1                                                                                                                                                                                                                                                                                 |
+ | LAYER_CONFIG       | List[List[int]] | This expects a list of list. Where the inner list will have only two values [input neurons, output neurons]. This configuration will help us to build the neural network for our agent. The first value for the current environment must be 3. | [[5, 64], [64, 3]] | Here user can add more values but the values `5` in the first and `3` in the last must be fixed for this current environment that we are supporting. Example: <br> `[[5, ...], [..., ...], ...., [..., 3]]`, <br> Where `...` can be any value. We recommend to keep it between (1 - 256) |
+ | CHECKPOINT_PATH    | str             | The model checkpoint path from where it should be loaded.                                                                                                                                                                                      | `./models`                                                                                                 | User's choice                                                                                                                                                                                                                                                                         |
+ | REWARD_FUNCTION    | Callable        | Users are expected to write some reward function (Callable) and then have to use this reward function for agent's training.|  ```def default_reward_function(props): if props["isAlive"]: return 1 return 0 ```| User's choice <br> **some important parameters** <br><br> `isAlive` represents whether the car is alive or not. So on that basis we can penalize our agent. <br><br> `obs` The car's radar's oberservations values. (more on documentation) <br> <br>`rotationVel` Car's rotational velocity value (more on documentation)        |
+ 
+ 
+-So above is a quick overview of how to use different reward configurations. Now once configuration part is done, load those configuration to `RLWorkFlow()` and run for a single episodes. 
++So above is a quick overview of how to use different reward configurations. Now once the configuration part is done, load those configuration to `RLWorkFlow()` and run for a single episodes. 
+ **NOTE:** Make sure you have `weights and biases` installed. You can install that using:
+ 
+ ```bash
+ pip install wandb
+ ```
+ 
+ After this log in / create a new account. Then authorize it inside the command line by typing
+```
+
+### Comparing `rewards-0.0.6/rewards/agent.py` & `rewards-0.0.7/rewards/agent.py`
+
+ * *Files 10% similar despite different names*
+
+```diff
+@@ -1,9 +1,8 @@
+ import os
+-import glob 
+ import random
+ from collections import deque
+ from dataclasses import dataclass
+ from pathlib import Path
+ from typing import Any, List, Optional, Union
+ 
+ import numpy as np
+@@ -21,16 +20,15 @@
+     DEVICE: str = "cpu"
+ 
+ 
+ class Agent(AgentConf):
+     def __init__(
+         self,
+         model: torch.nn.Module,
+-        checkpoint_folder_path: Optional[str] = None,
+-        model_name : Optional[str] = None, 
++        checkpoint_path: Optional[str] = None,
+         lr: float = 0.01,
+         epsilon: float = 0.25,
+         gamma: float = 0.9,
+     ) -> None:
+         super(Agent, self).__init__()
+         """The Agent class which acts as a RL agent similar like Open AI's gym agent
+ 
+@@ -44,19 +42,23 @@
+         self.n_games = 0
+         self.epsilon = epsilon
+         self.lr = lr
+         self.gamma = gamma
+ 
+         self.memory = deque(maxlen=self.MAX_MEMORY)
+         self.model = model
+-        
+-        # Lates changes loading the model directly if exists 
+-        
+-        self.model.load(checkpoint_folder_path, model_name, self.DEVICE)
+-        
++        if checkpoint_path:
++            self.model.load_state_dict(
++                torch.load(
++                    os.path.join(checkpoint_path),
++                    map_location=self.DEVICE,
++                )
++            )
++            self.model.eval()
++
+     def get_state(self, game: Any) -> np.ndarray:
+         """Returns the current state of the game.
+         NOTE: Some Assumptions:
+         - We assume that the game environment is made using pygame
+         - We also assume that the agent inside the game uses `radars` that keeps track of its all position and other parameters.
+ 
+         Args:
+```
+
+### Comparing `rewards-0.0.6/rewards/assets/CarRace/car.png` & `rewards-0.0.7/rewards/assets/CarRace/car.png`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.6/rewards/assets/CarRace/track-1.png` & `rewards-0.0.7/rewards/assets/CarRace/track-1.png`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.6/rewards/assets/CarRace/track-2.png` & `rewards-0.0.7/rewards/assets/CarRace/track-2.png`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.6/rewards/assets/CarRace/track-3.png` & `rewards-0.0.7/rewards/assets/CarRace/track-3.png`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.6/rewards/envs/car.py` & `rewards-0.0.7/rewards/envs/car.py`
+
+ * *Files identical despite different names*
+
+### Comparing `rewards-0.0.6/rewards/trainer.py` & `rewards-0.0.7/rewards/trainer.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -42,21 +42,26 @@
+         self.model = training_params["model"]
+         loss_fn, optimizer_info = self._get_loss_optimizer_info(
+             training_params["loss"], training_params["optimizer"]
+         )
+         self.criterion = loss_fn()
+         self.optimizer = optimizer_info(self.model.parameters(), lr=self.lr)
+ 
++        if training_params["checkpoint_path"]:
++            self.model.load_state_dict(
++                torch.load(
++                    training_params["checkpoint_path"], map_location="cpu"
++                )
++            )
++
+         super(QTrainer, self).__init__(
+             model=self.model,
+             lr=self.lr,
+             epsilon=self.epsilon,
+             gamma=self.gamma,
+-            checkpoint_folder_path=training_params['checkpoint_folder_path'], 
+-            model_name=training_params['model_name']
+         )
+ 
+     def _get_loss_optimizer_info(
+         self, loss: str, optimizer: str
+     ) -> List[Union[int, str, float]]:
+         """_summary_
+```
+
+### Comparing `rewards-0.0.6/rewards/workflow.py` & `rewards-0.0.7/rewards/workflow.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -26,15 +26,14 @@
+         return 1
+     return 0
+ 
+ 
+ @dataclass(kw_only=True)
+ class WorkFlowConfigurations:
+     # wandb experiment
+-    DEVICE : str = "cpu"
+     EXPERIMENT_NAME: str = "sample RL experiment"
+ 
+     # Environment configuration
+ 
+     ENVIRONMENT_NAME: str = "car-race"
+     ENVIRONMENT_WORLD: Union[str, int] = 1
+ 
+@@ -52,16 +51,15 @@
+     # RL Configuration
+     GAMMA: float = 0.99
+     EPSILON: float = 0.99
+ 
+     # Model configuration
+     LAYER_CONFIG: Union[List[List[int]], torch.nn.Module] = None # required 
+ 
+-    CHECKPOINT_FOLDER_PATH: Optional[str] = None
+-    CHECKPOINT_MODEL_NAME: Optional[str] = None
++    CHECKPOINT_PATH: Optional[str] = None
+     REWARD_FUNCTION: Callable = None # required 
+ 
+     # Tracking configuration 
+     ENABLE_WANDB : bool = False 
+ 
+ class RLWorkFlow:
+     def __init__(
+@@ -87,46 +85,45 @@
+         self.agent = QTrainer(
+             lr=self.config.LR,
+             gamma=self.config.GAMMA,
+             epsilon=self.config.EPSILON,
+             model=self.model,
+             loss=self.config.LOSS,
+             optimizer=self.config.OPTIMIZER,
+-            checkpoint_folder_path=self.config.CHECKPOINT_FOLDER_PATH,
+-            model_name = self.config.CHECKPOINT_MODEL_NAME
++            checkpoint_path=self.config.CHECKPOINT_PATH,
+         )
+ 
+         # Once everything is done then upload all configurations to wandb
+         
+         if self.config.ENABLE_WANDB:
+             wandb_config = self.config.__dict__.copy()
+             wandb_config["REWARD_FUNCTION"] = inspect.getsource(
+                 self.config.REWARD_FUNCTION if self.config.REWARD_FUNCTION is not None else default_reward_function
+             )
+ 
+             if isinstance(self.model, torch.nn.Module):
+                 wandb_config.pop("LAYER_CONFIG")
+                 # Also upload the model to wandb artifact 
+                 
+-            wandb_config.pop("CHECKPOINT_FOLDER_PATH")
++            wandb_config.pop("CHECKPOINT_PATH")
+ 
+             self.run = wandb.init(
+                 project=self.config.EXPERIMENT_NAME, config=wandb_config
+             )
+             
++        config_dataframe = pd.DataFrame(
++            data={
++                "configuration name": list(wandb_config.keys()),
++                "configuration": [
++                    str(ele) for ele in list(wandb_config.values())
++                ],
++            }
++        )
++
+         if self.config.ENABLE_WANDB:
+-            config_dataframe = pd.DataFrame(
+-                data={
+-                    "configuration name": list(wandb_config.keys()),
+-                    "configuration": [
+-                        str(ele) for ele in list(wandb_config.values())
+-                    ],
+-                }
+-            )
+-        
+             config_table = wandb.Table(dataframe=config_dataframe)
+             config_table_artifact = wandb.Artifact(
+                 "configuration_artifact", type="dataset"
+             )
+             config_table_artifact.add(config_table, "configuration_table")
+ 
+             self.run.log({"Configuration": config_table})
+@@ -164,20 +161,20 @@
+ 
+                 if done:
+                     self.game.initialize()
+                     self.agent.n_games += 1
+                     self.agent.train_long_memory()
+ 
+                     if score > record:
+-                        self.agent.model.save(self.config.CHECKPOINT_FOLDER_PATH, self.config.CHECKPOINT_MODEL_NAME, self.config.DEVICE)
++                        self.agent.model.save()
+                         record = score
+ 
+                     total_score += score
+ 
+-                    if self.agent.n_games != 0 and self.config.ENABLE_WANDB:
++                    if self.agent.n_games != 0:
+                         self.run.log(
+                             {
+                                 "episode score": score,
+                                 "mean score": total_score / self.agent.n_games,
+                             }
+                         )
+```
+
+### Comparing `rewards-0.0.6/PKG-INFO` & `rewards-0.0.7/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: rewards
+-Version: 0.0.6
++Version: 0.0.7
+ Summary: Start learning about RL and make model and envs in minutes in just few lines of code
+ License: MIT
+ Author: rewards.ai
+ Requires-Python: >=3.10,<4.0
+ Classifier: License :: OSI Approved :: MIT License
+ Classifier: Programming Language :: Python :: 3
+ Classifier: Programming Language :: Python :: 3.10
+@@ -14,15 +14,15 @@
+ Requires-Dist: numpy (>=1.24.2,<2.0.0)
+ Requires-Dist: pandas (>=1.5.3,<2.0.0)
+ Requires-Dist: pygame (>=2.3.0,<3.0.0)
+ Requires-Dist: torch (>=2.0.0,<3.0.0)
+ Description-Content-Type: text/markdown
+ 
+ # **rewards** 
+-### A low code sdk for crearing custom environments and deep RL agents. 
++### A low code sdk for creating custom environments and deep RL agents. 
+ 
+ 
+ <br>
+ 
+ ### **Installation** 
+ 
+ **`[linux]`** 
+@@ -70,22 +70,22 @@
+ 
+ <br>
+ 
+ ### **Getting started**
+ 
+ **`rewards`** is mainly made for two important reasons. 
+ 
+-- First we want to make learning reinforcement learning easy, by introducing this low code framework. So that folks do not need to spend more time in making environments or other stuff. All they can focus is on creating different agents, models and expeiment with them.
++- First we want to make learning reinforcement learning easy, by introducing this low code framework. So that folks do not need to spend more time in making environments or other stuff. All they can focus is on creating different agents, models and experiment with them.
+ 
+-- We want to make it as interactive and begginer friendly as possible. So we are also introducing **`rewards-platform`**  which where we gamified the experience of learning RL.
++- We want to make it as interactive and beginner friendly as possible. So we are also introducing **`rewards-platform`**  where we gamified the experience of learning RL.
+ 
+-- If playing games can be fun and competitive then why not RL? Hence with **`rewards-platform`** and **`rewards`** you can host and join ongoing competition and learn RL with your friends. 
++- If playing games can be fun and competitive then why not RL? Hence with **`rewards-platform`** and **`rewards`** you can host and join ongoing competitions and learn RL with your friends. 
+ 
+ **NOTE**: Our coming enterprise version is mainly focussed to build the same but for RL/Robotics based 
+-companies where we want to ensure that their focus lies more on the research rather creating environments and other configurations. 
++companies where we want to ensure that their focus lies more on the research rather than creating environments and other configurations. 
+ 
+ **Take a look on how to get started with a sample experiment** 
+ 
+ Currently this version of **`rewards`** only supports a single game and environment. That is `car-race`. We will be adding support for more environments (including gym, unity, and custom environments) very soon. 
+ 
+ So let's go ahead and see how to get started with a sample experiment.
+ 
+@@ -119,32 +119,32 @@
+ )
+ ```
+ 
+ **Here is the table of configuration and what they means** 
+ 
+ | Configuration Name | TYPE            | What it does                                                                                                                                                                                                                                   | Default value                                                                                              | Options                                                                                                                                                                                                                                                                               |
+ | ------------------ | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+-| EXPERIMENT_NAME    | str             | It tells what is the name of the experiment. The name of the experiment will be logged inside user's weights and biases projects dashbord.                                                                                                     | sample RL experiment                                                                                       | any string                                                                                                                                                                                                                                                                            |
++| EXPERIMENT_NAME    | str             | It tells what is the name of the experiment. The name of the experiment will be logged inside the user's weights and biases projects dashboard.                                                                                                     | sample RL experiment                                                                                       | any string                                                                                                                                                                                                                                                                            |
+ | ENVIRONMENT_NAME   | str             | It states the name of the environment. `rewards:v1.0.0` only supports one environment for now and that is `car-race`.                                                                                                                          | car-race                                                                                                   | NULL                                                                                                                                                                                                                                                                                  |
+ | ENVIRONMENT_WORLD  | int             | According to our convention we keep some environments for training and some for testing (which are unseen). At one point of time, you can only train your agent on one single train environment.                                               | 1                                                                                                          | 0/1/2                                                                                                                                                                                                                                                                                 |
+-| MODE               | str             | This tells us which mode the agent is been running i.e. either in train or test mode.                                                                                                                                                          | training                                                                                                   | training/testing                                                                                                                                                                                                                                                                      |
+-| CONTROL SPEED      | float           | For our car environment user can set the control speed of the car environment.                                                                                                                                                                 | 0.05                                                                                                       | (0 - 1]                                                                                                                                                                                                                                                                               |
++| MODE               | str             | This tells us which mode the agent is running i.e. either in train or test mode.                                                                                                                                                          | training                                                                                                   | training/testing                                                                                                                                                                                                                                                                      |
++| CONTROL SPEED      | float           | For our car environment, user can set the control speed of the car environment.                                                                                                                                                                 | 0.05                                                                                                       | (0 - 1]                                                                                                                                                                                                                                                                               |
+ | TRAIN_SPEED        | int             | For our car environment user can set the control speed of the car environment.                                                                                                                                                                 | 100                                                                                                        | 1 - 100                                                                                                                                                                                                                                                                               |
+ | SCREEN_SIZE        | Tuple           | The size of the pygame window.                                                                                                                                                                                                                 | (800, 700)                                                                                                 | User' choice                                                                                                                                                                                                                                                                          |
+ | LR                 | float           | Learning rate                                                                                                                                                                                                                                  | 0.01                                                                                                       | User' choice                                                                                                                                                                                                                                                                          |
+ | LOSS               | str             | Loss function name                                                                                                                                                                                                                             | mse                                                                                                        | mse , rmse, mae                                                                                                                                                                                                                                                    |
+ | OPTIMIZER          | str             | Optimizer name                                                                                                                                                                                                                                 | adam                                                                                                       |adam, rmsprop, adagrad                                                                                                                                                                                                                                            |
+ | GAMMA              | float           | Hyper parameter `gamme` value                                                                                                                                                                                                                  | 0.99                                                                                                       | 0 - 1                                                                                                                                                                                                                                                                                 |
+ | EPSILON            | float           | Hyper parameter `epsilon` value                                                                                                                                                                                                                | 0.99                                                                                                       | 0 - 1                                                                                                                                                                                                                                                                                 |
+ | LAYER_CONFIG       | List[List[int]] | This expects a list of list. Where the inner list will have only two values [input neurons, output neurons]. This configuration will help us to build the neural network for our agent. The first value for the current environment must be 3. | [[5, 64], [64, 3]] | Here user can add more values but the values `5` in the first and `3` in the last must be fixed for this current environment that we are supporting. Example: <br> `[[5, ...], [..., ...], ...., [..., 3]]`, <br> Where `...` can be any value. We recommend to keep it between (1 - 256) |
+ | CHECKPOINT_PATH    | str             | The model checkpoint path from where it should be loaded.                                                                                                                                                                                      | `./models`                                                                                                 | User's choice                                                                                                                                                                                                                                                                         |
+ | REWARD_FUNCTION    | Callable        | Users are expected to write some reward function (Callable) and then have to use this reward function for agent's training.|  ```def default_reward_function(props): if props["isAlive"]: return 1 return 0 ```| User's choice <br> **some important parameters** <br><br> `isAlive` represents whether the car is alive or not. So on that basis we can penalize our agent. <br><br> `obs` The car's radar's oberservations values. (more on documentation) <br> <br>`rotationVel` Car's rotational velocity value (more on documentation)        |
+ 
+ 
+-So above is a quick overview of how to use different reward configurations. Now once configuration part is done, load those configuration to `RLWorkFlow()` and run for a single episodes. 
++So above is a quick overview of how to use different reward configurations. Now once the configuration part is done, load those configuration to `RLWorkFlow()` and run for a single episodes. 
+ **NOTE:** Make sure you have `weights and biases` installed. You can install that using:
+ 
+ ```bash
+ pip install wandb
+ ```
+ 
+ After this log in / create a new account. Then authorize it inside the command line by typing
+```
+
