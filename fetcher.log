@@ -1664,3 +1664,118 @@
 [2023-04-07 19:05:30] INFO root fetch - main [MainThread]: success
 [2023-04-07 19:05:38] INFO root fetch - main [MainThread]: success
 [2023-04-07 19:05:55] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:00] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17621226]
+[2023-04-07 19:16:04] INFO root fetch - main [MainThread]: Found 22 changed packages
+[2023-04-07 19:16:04] WARNING root fetch - processPackages [logdb]: Skipping, unable to determine old version
+[2023-04-07 19:16:04] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:16:04] INFO root fetch - processPackages [cleanchausie]: New version: [1.9.1] Old Version: [1.9.0]
+[2023-04-07 19:16:04] INFO root fetch - processPackages [django-autocomplete-light]: New version: [3.9.5rc6] Old Version: [3.9.5rc5]
+[2023-04-07 19:16:04] INFO root fetch - processPackages [sqlsy]: New version: [0.0.4] Old Version: [0.0.3]
+[2023-04-07 19:16:04] INFO root fetch - processPackages [r3l3453]: New version: [0.9.1] Old Version: [0.9.0]
+[2023-04-07 19:16:04] WARNING root fetch - processPackages [jjpbaje2]: Skipping, unable to determine old version
+[2023-04-07 19:16:04] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:16:04] INFO root fetch - processPackages [google-cloud-documentai-toolbox]: New version: [0.5.0a0] Old Version: [0.4.1a0]
+[2023-04-07 19:16:05] INFO root fetch - processPackages [r3l3453]: Downloading https://files.pythonhosted.org/packages/11/d5/d5011a2b448e855337b6d9e59ffe9db9619e934843f54fc97d18845b31ec/r3l3453-0.9.0.tar.gz
+[2023-04-07 19:16:05] INFO root fetch - processPackages [sqlsy]: Downloading https://files.pythonhosted.org/packages/0c/f1/7a3bd904b3038107612187b95928b14b37c896fb4135cc8f487dd5319620/sqlsy-0.0.3.tar.gz
+[2023-04-07 19:16:05] INFO root fetch - processPackages [cleanchausie]: Downloading https://files.pythonhosted.org/packages/a7/78/dbb98225f8ff4846374d6aa1685bf9ef970270d109deb0b928ca4b213424/cleanchausie-1.9.0.tar.gz
+[2023-04-07 19:16:05] INFO root fetch - processPackages [google-cloud-documentai-toolbox]: Downloading https://files.pythonhosted.org/packages/73/5f/f93ad6ac7caee27c283b8d2b489c9119828dcc17c40c7c3b892dbdf8e857/google-cloud-documentai-toolbox-0.4.1a0.tar.gz
+[2023-04-07 19:16:05] INFO root fetch - processPackages [django-autocomplete-light]: Downloading https://files.pythonhosted.org/packages/f0/a2/9326c7a7d69e0d51b7dc7cdba9caa2e8ca1a09fa082d00b75b7501833aee/django-autocomplete-light-3.9.5rc6.tar.gz
+[2023-04-07 19:16:05] INFO root fetch - processPackages [sqlsy]: Downloading https://files.pythonhosted.org/packages/7a/b0/b4217f691decdfeda363927e7991989f7280d6a8441e405a642483688be7/sqlsy-0.0.4.tar.gz
+[2023-04-07 19:16:05] WARNING root fetch - processPackages [google-cloud-documentai-toolbox]: Skipping package: exceeds size limit 14458157>=10485760
+[2023-04-07 19:16:05] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:16:05] INFO root fetch - processPackages [panther-analysis-tool]: New version: [0.9.0] Old Version: [0.8.3]
+[2023-04-07 19:16:05] INFO root fetch - processPackages [sqlsy]: executing diffoscope
+[2023-04-07 19:16:05] INFO root fetch - processPackages [sqlsy]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/sqlsy-0.0.3.tar.gz tmp/sqlsy-0.0.4.tar.gz --html 20230407/s/sqlsy/0.0.3-0.0.4/index.html --text 20230407/s/sqlsy/0.0.3-0.0.4/diff.txt --markdown 20230407/s/sqlsy/0.0.3-0.0.4/diff.md
+[2023-04-07 19:16:05] INFO root fetch - processPackages [r3l3453]: Downloading https://files.pythonhosted.org/packages/ee/cb/b71aa1d1d497c55282320a775cdb2b63558762b89b1764be37d92ecd741c/r3l3453-0.9.1.tar.gz
+[2023-04-07 19:16:05] INFO root fetch - processPackages [cleanchausie]: Downloading https://files.pythonhosted.org/packages/4f/6b/b3ff2752ea6aefe1723794295a2001fe12d9b4991690db10fe4a1c09f609/cleanchausie-1.9.1.tar.gz
+[2023-04-07 19:16:05] INFO root fetch - processPackages [cleanchausie]: executing diffoscope
+[2023-04-07 19:16:05] INFO root fetch - processPackages [cleanchausie]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/cleanchausie-1.9.0.tar.gz tmp/cleanchausie-1.9.1.tar.gz --html 20230407/c/cleanchausie/1.9.0-1.9.1/index.html --text 20230407/c/cleanchausie/1.9.0-1.9.1/diff.txt --markdown 20230407/c/cleanchausie/1.9.0-1.9.1/diff.md
+[2023-04-07 19:16:05] INFO root fetch - processPackages [panther-analysis-tool]: Downloading https://files.pythonhosted.org/packages/25/cf/5c87943f90bc11af4cdacde3d5c0400087ed9290bf037b10ab4feec7ed0a/panther_analysis_tool-0.8.3.tar.gz
+[2023-04-07 19:16:05] INFO root fetch - processPackages [r3l3453]: executing diffoscope
+[2023-04-07 19:16:05] INFO root fetch - processPackages [r3l3453]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/r3l3453-0.9.0.tar.gz tmp/r3l3453-0.9.1.tar.gz --html 20230407/r/r3l3453/0.9.0-0.9.1/index.html --text 20230407/r/r3l3453/0.9.0-0.9.1/diff.txt --markdown 20230407/r/r3l3453/0.9.0-0.9.1/diff.md
+[2023-04-07 19:16:06] INFO root fetch - processPackages [panther-analysis-tool]: Downloading https://files.pythonhosted.org/packages/8a/be/c59804c311208907cfa13b402d4bb7ab90cf93490a44736ea7bbc0523c98/panther_analysis_tool-0.9.0.tar.gz
+[2023-04-07 19:16:06] INFO root fetch - processPackages [panther-analysis-tool]: executing diffoscope
+[2023-04-07 19:16:06] INFO root fetch - processPackages [panther-analysis-tool]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/panther_analysis_tool-0.8.3.tar.gz tmp/panther_analysis_tool-0.9.0.tar.gz --html 20230407/p/panther-analysis-tool/0.8.3-0.9.0/index.html --text 20230407/p/panther-analysis-tool/0.8.3-0.9.0/diff.txt --markdown 20230407/p/panther-analysis-tool/0.8.3-0.9.0/diff.md
+[2023-04-07 19:16:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:06] INFO root fetch - processPackages [importlib-metadata]: New version: [6.2.0] Old Version: [6.1.0]
+[2023-04-07 19:16:06] INFO root fetch - processPackages [importlib-metadata]: Downloading https://files.pythonhosted.org/packages/e2/d8/3d431bade4598ad9e33be9da41d15e6607b878008e922d122659ab01b077/importlib_metadata-6.1.0.tar.gz
+[2023-04-07 19:16:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:06] INFO root fetch - processPackages [anrg.saga]: New version: [0.0.4] Old Version: [0.0.3]
+[2023-04-07 19:16:06] INFO root fetch - processPackages [importlib-metadata]: Downloading https://files.pythonhosted.org/packages/3f/24/69442c79335591a2dfe3c9b796ae79348c49bc50c8f2886063d1b0e1e5f3/importlib_metadata-6.2.0.tar.gz
+[2023-04-07 19:16:06] INFO root fetch - processPackages [anrg.saga]: Downloading https://files.pythonhosted.org/packages/59/72/b769b59f828d04a18f8de283c94c5d8ed90181d39541518469792b2bad9d/anrg.saga-0.0.3.tar.gz
+[2023-04-07 19:16:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:07] INFO root fetch - processPackages [pykulersky]: New version: [0.5.5] Old Version: [0.5.4]
+[2023-04-07 19:16:07] INFO root fetch - processPackages [importlib-metadata]: executing diffoscope
+[2023-04-07 19:16:07] INFO root fetch - processPackages [importlib-metadata]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/importlib_metadata-6.1.0.tar.gz tmp/importlib_metadata-6.2.0.tar.gz --html 20230407/i/importlib-metadata/6.1.0-6.2.0/index.html --text 20230407/i/importlib-metadata/6.1.0-6.2.0/diff.txt --markdown 20230407/i/importlib-metadata/6.1.0-6.2.0/diff.md
+[2023-04-07 19:16:07] INFO root fetch - processPackages [pykulersky]: Downloading https://files.pythonhosted.org/packages/90/2d/1621675feaafc70ee373de50b5877ef9fe688c88366c40ad5d7b11a49484/pykulersky-0.5.4.tar.gz
+[2023-04-07 19:16:07] INFO root fetch - processPackages [django-autocomplete-light]: executing diffoscope
+[2023-04-07 19:16:07] INFO root fetch - processPackages [django-autocomplete-light]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/django-autocomplete-light-3.9.5rc5.tar.gz tmp/django-autocomplete-light-3.9.5rc6.tar.gz --html 20230407/d/django-autocomplete-light/3.9.5rc5-3.9.5rc6/index.html --text 20230407/d/django-autocomplete-light/3.9.5rc5-3.9.5rc6/diff.txt --markdown 20230407/d/django-autocomplete-light/3.9.5rc5-3.9.5rc6/diff.md
+[2023-04-07 19:16:07] INFO root fetch - processPackages [anrg.saga]: Downloading https://files.pythonhosted.org/packages/c1/53/eec767c492b43f817f6597dd80fdf6fb82117ce2cbf659e7538a5cc3e31a/anrg.saga-0.0.4.tar.gz
+[2023-04-07 19:16:07] INFO root fetch - processPackages [pykulersky]: Downloading https://files.pythonhosted.org/packages/1b/58/a5d70d05c2a25a984ba81265098125dd0621e800b479d3831eb4a93a4e29/pykulersky-0.5.5.tar.gz
+[2023-04-07 19:16:07] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:07] INFO root fetch - processPackages [pyzerproc]: New version: [0.4.9] Old Version: [0.4.8]
+[2023-04-07 19:16:07] INFO root fetch - processPackages [pykulersky]: executing diffoscope
+[2023-04-07 19:16:07] INFO root fetch - processPackages [pykulersky]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pykulersky-0.5.4.tar.gz tmp/pykulersky-0.5.5.tar.gz --html 20230407/p/pykulersky/0.5.4-0.5.5/index.html --text 20230407/p/pykulersky/0.5.4-0.5.5/diff.txt --markdown 20230407/p/pykulersky/0.5.4-0.5.5/diff.md
+[2023-04-07 19:16:07] INFO root fetch - processPackages [pyzerproc]: Downloading https://files.pythonhosted.org/packages/5d/46/8bae873c87e83e122a38a76fb142b8bcbb67ed682974d25929f19f7bfcbe/pyzerproc-0.4.8.tar.gz
+[2023-04-07 19:16:07] INFO root fetch - processPackages [anrg.saga]: executing diffoscope
+[2023-04-07 19:16:07] INFO root fetch - processPackages [anrg.saga]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/anrg.saga-0.0.3.tar.gz tmp/anrg.saga-0.0.4.tar.gz --html 20230407/a/anrg.saga/0.0.3-0.0.4/index.html --text 20230407/a/anrg.saga/0.0.3-0.0.4/diff.txt --markdown 20230407/a/anrg.saga/0.0.3-0.0.4/diff.md
+[2023-04-07 19:16:08] INFO root fetch - processPackages [pyzerproc]: Downloading https://files.pythonhosted.org/packages/f5/f8/14de543958b766c2452dde282c53464601d581b780b781f1fb3614552476/pyzerproc-0.4.9.tar.gz
+[2023-04-07 19:16:08] INFO root fetch - processPackages [pyzerproc]: executing diffoscope
+[2023-04-07 19:16:08] INFO root fetch - processPackages [pyzerproc]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pyzerproc-0.4.8.tar.gz tmp/pyzerproc-0.4.9.tar.gz --html 20230407/p/pyzerproc/0.4.8-0.4.9/index.html --text 20230407/p/pyzerproc/0.4.8-0.4.9/diff.txt --markdown 20230407/p/pyzerproc/0.4.8-0.4.9/diff.md
+[2023-04-07 19:16:08] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:08] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:08] INFO root fetch - processPackages [poetry-dotenv]: New version: [0.4.0] Old Version: [0.3.0]
+[2023-04-07 19:16:08] INFO root fetch - processPackages [ocs-rise-set]: New version: [0.6.1] Old Version: [0.5.2]
+[2023-04-07 19:16:08] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:09] INFO root fetch - processPackages [test-rest-api]: New version: [0.0.0.0.23] Old Version: [0.0.0.0.22]
+[2023-04-07 19:16:09] INFO root fetch - processPackages [poetry-dotenv]: Downloading https://files.pythonhosted.org/packages/c8/ed/5e7fc6c5a046d858acd596d7f41160683e705635980bc0145e192bf50f4e/poetry_dotenv-0.3.0.tar.gz
+[2023-04-07 19:16:09] INFO root fetch - processPackages [ocs-rise-set]: Downloading https://files.pythonhosted.org/packages/4e/d0/4d5583a2e3c45c91c5bf8783ba53844f853fe5a0de320d63c9b762b19708/ocs-rise-set-0.5.2.tar.gz
+[2023-04-07 19:16:09] INFO root fetch - processPackages [test-rest-api]: Downloading https://files.pythonhosted.org/packages/ab/12/78beaeb7d46c139acc9218c92eb0972bc9bcf1197802433266a1cb2d5c1c/test_rest_api-0.0.0.0.23.tar.gz
+[2023-04-07 19:16:09] INFO root fetch - processPackages [test-rest-api]: executing diffoscope
+[2023-04-07 19:16:09] INFO root fetch - processPackages [test-rest-api]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/test_rest_api-0.0.0.0.22.tar.gz tmp/test_rest_api-0.0.0.0.23.tar.gz --html 20230407/t/test-rest-api/0.0.0.0.22-0.0.0.0.23/index.html --text 20230407/t/test-rest-api/0.0.0.0.22-0.0.0.0.23/diff.txt --markdown 20230407/t/test-rest-api/0.0.0.0.22-0.0.0.0.23/diff.md
+[2023-04-07 19:16:09] INFO root fetch - processPackages [poetry-dotenv]: Downloading https://files.pythonhosted.org/packages/31/fa/157c9512491d0945fd085eda83dd36f4d0053025ce14271d3ead16406ea6/poetry_dotenv-0.4.0.tar.gz
+[2023-04-07 19:16:09] INFO root fetch - processPackages [ocs-rise-set]: Downloading https://files.pythonhosted.org/packages/01/12/ee4865640612790bc0d680d88f2906be4782c6cebf24ba171f5c849bbb94/ocs_rise_set-0.6.1.tar.gz
+[2023-04-07 19:16:09] INFO root fetch - processPackages [poetry-dotenv]: executing diffoscope
+[2023-04-07 19:16:09] INFO root fetch - processPackages [poetry-dotenv]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/poetry_dotenv-0.3.0.tar.gz tmp/poetry_dotenv-0.4.0.tar.gz --html 20230407/p/poetry-dotenv/0.3.0-0.4.0/index.html --text 20230407/p/poetry-dotenv/0.3.0-0.4.0/diff.txt --markdown 20230407/p/poetry-dotenv/0.3.0-0.4.0/diff.md
+[2023-04-07 19:16:09] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:09] INFO root fetch - processPackages [ocs-rise-set]: executing diffoscope
+[2023-04-07 19:16:09] INFO root fetch - processPackages [ocs-rise-set]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ocs-rise-set-0.5.2.tar.gz tmp/ocs_rise_set-0.6.1.tar.gz --html 20230407/o/ocs-rise-set/0.5.2-0.6.1/index.html --text 20230407/o/ocs-rise-set/0.5.2-0.6.1/diff.txt --markdown 20230407/o/ocs-rise-set/0.5.2-0.6.1/diff.md
+[2023-04-07 19:16:09] INFO root fetch - processPackages [pydra-fsl]: New version: [0.0.9] Old Version: [0.0.8]
+[2023-04-07 19:16:10] INFO root fetch - processPackages [pydra-fsl]: Downloading https://files.pythonhosted.org/packages/a3/0e/6763eeba5bb3375298fc7519ac1d8d63117462e51e9969ddf2a285b4d126/pydra_fsl-0.0.8.tar.gz
+[2023-04-07 19:16:10] INFO root fetch - processPackages [pydra-fsl]: Downloading https://files.pythonhosted.org/packages/01/95/5681f06f697e05dd675fd56473ea56f5b4a9a90862261bc27fe200af5c30/pydra_fsl-0.0.9.tar.gz
+[2023-04-07 19:16:10] INFO root fetch - processPackages [pydra-fsl]: executing diffoscope
+[2023-04-07 19:16:10] INFO root fetch - processPackages [pydra-fsl]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pydra_fsl-0.0.8.tar.gz tmp/pydra_fsl-0.0.9.tar.gz --html 20230407/p/pydra-fsl/0.0.8-0.0.9/index.html --text 20230407/p/pydra-fsl/0.0.8-0.0.9/diff.txt --markdown 20230407/p/pydra-fsl/0.0.8-0.0.9/diff.md
+[2023-04-07 19:16:10] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:10] INFO root fetch - processPackages [torch4nlp]: New version: [0.0.5] Old Version: [0.0.4]
+[2023-04-07 19:16:11] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:11] INFO root fetch - processPackages [syncqb]: New version: [1.0.2] Old Version: [1.0.1]
+[2023-04-07 19:16:11] INFO root fetch - processPackages [torch4nlp]: Downloading https://files.pythonhosted.org/packages/de/ab/5a711c72a954f0cf6ffb5191a16a46503c37c2b9a8b65df2171a3b67dbf5/torch4nlp-0.0.4.tar.gz
+[2023-04-07 19:16:11] INFO root fetch - processPackages [syncqb]: Downloading https://files.pythonhosted.org/packages/98/e4/6d84f39b0e47ce73d846ffaa9eb0b2d1353ce8f23ddcc1ef82521014e49c/syncqb-1.0.1.tar.gz
+[2023-04-07 19:16:11] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:11] INFO root fetch - processPackages [anrg.saga]: New version: [0.0.4] Old Version: [0.0.3]
+[2023-04-07 19:16:11] INFO root fetch - processPackages [anrg.saga]: report already exists
+[2023-04-07 19:16:11] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:11] INFO root fetch - processPackages [fairscape-models]: New version: [0.1.2] Old Version: [0.1.0]
+[2023-04-07 19:16:11] INFO root fetch - processPackages [syncqb]: Downloading https://files.pythonhosted.org/packages/e0/32/d16be2d3bbc456be3d7ec82a25d9a835861979eebe78ce6e5065b95914b8/syncqb-1.0.2.tar.gz
+[2023-04-07 19:16:11] INFO root fetch - processPackages [fairscape-models]: Downloading https://files.pythonhosted.org/packages/c7/25/b0a684923f1dc966a8f38d7b87d995b611370b7a4517be988f3b99c76737/fairscape-models-0.1.0.tar.gz
+[2023-04-07 19:16:11] INFO root fetch - processPackages [torch4nlp]: Downloading https://files.pythonhosted.org/packages/3e/1a/e976060a7179477c7793559906699295e5287048f872525b60f17a4900ce/torch4nlp-0.0.5.tar.gz
+[2023-04-07 19:16:11] INFO root fetch - processPackages [syncqb]: executing diffoscope
+[2023-04-07 19:16:11] INFO root fetch - processPackages [syncqb]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/syncqb-1.0.1.tar.gz tmp/syncqb-1.0.2.tar.gz --html 20230407/s/syncqb/1.0.1-1.0.2/index.html --text 20230407/s/syncqb/1.0.1-1.0.2/diff.txt --markdown 20230407/s/syncqb/1.0.1-1.0.2/diff.md
+[2023-04-07 19:16:11] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:11] WARNING root fetch - processPackages [alethiometer]: Skipping, unable to determine old version
+[2023-04-07 19:16:11] INFO root fetch - main [MainThread]: error
+[2023-04-07 19:16:11] INFO root fetch - processPackages [sqlmesh]: New version: [0.3.0] Old Version: [0.2.6]
+[2023-04-07 19:16:11] INFO root fetch - processPackages [torch4nlp]: executing diffoscope
+[2023-04-07 19:16:11] INFO root fetch - processPackages [torch4nlp]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/torch4nlp-0.0.4.tar.gz tmp/torch4nlp-0.0.5.tar.gz --html 20230407/t/torch4nlp/0.0.4-0.0.5/index.html --text 20230407/t/torch4nlp/0.0.4-0.0.5/diff.txt --markdown 20230407/t/torch4nlp/0.0.4-0.0.5/diff.md
+[2023-04-07 19:16:11] INFO root fetch - processPackages [fairscape-models]: Downloading https://files.pythonhosted.org/packages/cf/d9/d2e165d67e4f04868755cd7383d11909ea211514f3aa87264046d119b937/fairscape-models-0.1.2.tar.gz
+[2023-04-07 19:16:11] INFO root fetch - processPackages [sqlmesh]: Downloading https://files.pythonhosted.org/packages/1d/77/34535c2577c2f5ea92a7aa4c3b1ac778585dead8580b4063f43ea94fe9af/sqlmesh-0.2.6.tar.gz
+[2023-04-07 19:16:11] INFO root fetch - processPackages [fairscape-models]: executing diffoscope
+[2023-04-07 19:16:11] INFO root fetch - processPackages [fairscape-models]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/fairscape-models-0.1.0.tar.gz tmp/fairscape-models-0.1.2.tar.gz --html 20230407/f/fairscape-models/0.1.0-0.1.2/index.html --text 20230407/f/fairscape-models/0.1.0-0.1.2/diff.txt --markdown 20230407/f/fairscape-models/0.1.0-0.1.2/diff.md
+[2023-04-07 19:16:12] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:12] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:13] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:14] INFO root fetch - processPackages [sqlmesh]: Downloading https://files.pythonhosted.org/packages/7b/dc/0513fa99b2aaacd8d6db3989d56658d878e1e42e6fb2bd64b25a294b142f/sqlmesh-0.3.0.tar.gz
+[2023-04-07 19:16:17] INFO root fetch - main [MainThread]: success
+[2023-04-07 19:16:19] INFO root fetch - processPackages [sqlmesh]: executing diffoscope
+[2023-04-07 19:16:19] INFO root fetch - processPackages [sqlmesh]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/sqlmesh-0.2.6.tar.gz tmp/sqlmesh-0.3.0.tar.gz --html 20230407/s/sqlmesh/0.2.6-0.3.0/index.html --text 20230407/s/sqlmesh/0.2.6-0.3.0/diff.txt --markdown 20230407/s/sqlmesh/0.2.6-0.3.0/diff.md
+[2023-04-07 19:16:27] INFO root fetch - main [MainThread]: success

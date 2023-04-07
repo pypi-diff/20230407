@@ -1,0 +1,363 @@
+# Comparing `tmp/syncqb-1.0.1.tar.gz` & `tmp/syncqb-1.0.2.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "syncqb-1.0.1.tar", last modified: Thu Apr  6 20:54:20 2023, max compression
++gzip compressed data, was "syncqb-1.0.2.tar", last modified: Fri Apr  7 17:11:54 2023, max compression
+```
+
+## Comparing `syncqb-1.0.1.tar` & `syncqb-1.0.2.tar`
+
+### file list
+
+```diff
+@@ -1,29 +1,29 @@
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 20:54:20.535325 syncqb-1.0.1/
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     1073 2022-09-12 17:13:14.000000 syncqb-1.0.1/LICENSE
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    10313 2023-04-06 20:54:20.525324 syncqb-1.0.1/PKG-INFO
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     8642 2023-04-05 20:53:17.000000 syncqb-1.0.1/README.md
+--rw-r--r--   0 jacob     (1000) jacob     (1000)      643 2023-04-06 20:47:25.000000 syncqb-1.0.1/pyproject.toml
+--rw-r--r--   0 jacob     (1000) jacob     (1000)       38 2023-04-06 20:54:20.535325 syncqb-1.0.1/setup.cfg
+--rw-r--r--   0 jacob     (1000) jacob     (1000)       82 2023-04-06 20:44:31.000000 syncqb-1.0.1/setup.py
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 20:54:20.525324 syncqb-1.0.1/src/
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 20:54:20.525324 syncqb-1.0.1/src/syncqb/
+--rw-r--r--   0 jacob     (1000) jacob     (1000)        0 2022-09-12 14:58:01.000000 syncqb-1.0.1/src/syncqb/__init__.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)        0 2023-03-29 20:36:22.000000 syncqb-1.0.1/src/syncqb/__init__.pyi
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    17643 2023-04-06 20:19:05.000000 syncqb-1.0.1/src/syncqb/json_quickbase.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    10545 2023-04-05 20:37:35.000000 syncqb-1.0.1/src/syncqb/json_quickbase.pyi
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     1928 2023-04-06 18:38:17.000000 syncqb-1.0.1/src/syncqb/qb_client.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     1387 2023-04-03 17:21:25.000000 syncqb-1.0.1/src/syncqb/qb_client.pyi
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     1310 2023-04-03 20:33:16.000000 syncqb-1.0.1/src/syncqb/qb_errors.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     1076 2023-04-03 17:24:36.000000 syncqb-1.0.1/src/syncqb/qb_errors.pyi
+--rw-r--r--   0 jacob     (1000) jacob     (1000)      618 2023-04-06 18:45:19.000000 syncqb-1.0.1/src/syncqb/quickbase.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)      588 2023-04-03 17:21:59.000000 syncqb-1.0.1/src/syncqb/quickbase.pyi
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    26718 2023-04-06 20:21:34.000000 syncqb-1.0.1/src/syncqb/xml_quickbase.py
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     8781 2023-04-05 20:37:23.000000 syncqb-1.0.1/src/syncqb/xml_quickbase.pyi
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 20:54:20.525324 syncqb-1.0.1/src/syncqb.egg-info/
+--rw-r--r--   0 jacob     (1000) jacob     (1000)    10313 2023-04-06 20:54:20.000000 syncqb-1.0.1/src/syncqb.egg-info/PKG-INFO
+--rw-r--r--   0 jacob     (1000) jacob     (1000)      538 2023-04-06 20:54:20.000000 syncqb-1.0.1/src/syncqb.egg-info/SOURCES.txt
+--rw-r--r--   0 jacob     (1000) jacob     (1000)        1 2023-04-06 20:54:20.000000 syncqb-1.0.1/src/syncqb.egg-info/dependency_links.txt
+--rw-r--r--   0 jacob     (1000) jacob     (1000)       59 2023-04-06 20:54:20.000000 syncqb-1.0.1/src/syncqb.egg-info/entry_points.txt
+--rw-r--r--   0 jacob     (1000) jacob     (1000)        7 2023-04-06 20:54:20.000000 syncqb-1.0.1/src/syncqb.egg-info/top_level.txt
+-drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-06 20:54:20.525324 syncqb-1.0.1/tests/
+--rw-r--r--   0 jacob     (1000) jacob     (1000)     1443 2023-04-06 15:05:02.000000 syncqb-1.0.1/tests/test.py
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-07 17:11:54.517650 syncqb-1.0.2/
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1073 2022-09-12 17:13:14.000000 syncqb-1.0.2/LICENSE
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    10313 2023-04-07 17:11:54.517650 syncqb-1.0.2/PKG-INFO
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     8642 2023-04-05 20:53:17.000000 syncqb-1.0.2/README.md
++-rw-r--r--   0 jacob     (1000) jacob     (1000)      643 2023-04-07 15:48:21.000000 syncqb-1.0.2/pyproject.toml
++-rw-r--r--   0 jacob     (1000) jacob     (1000)       38 2023-04-07 17:11:54.517650 syncqb-1.0.2/setup.cfg
++-rw-r--r--   0 jacob     (1000) jacob     (1000)       82 2023-04-06 20:44:31.000000 syncqb-1.0.2/setup.py
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-07 17:11:54.487650 syncqb-1.0.2/src/
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-07 17:11:54.507650 syncqb-1.0.2/src/syncqb/
++-rw-r--r--   0 jacob     (1000) jacob     (1000)        0 2022-09-12 14:58:01.000000 syncqb-1.0.2/src/syncqb/__init__.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)        0 2023-03-29 20:36:22.000000 syncqb-1.0.2/src/syncqb/__init__.pyi
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    17643 2023-04-06 20:19:05.000000 syncqb-1.0.2/src/syncqb/json_quickbase.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    10547 2023-04-07 14:19:04.000000 syncqb-1.0.2/src/syncqb/json_quickbase.pyi
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     2123 2023-04-07 17:06:19.000000 syncqb-1.0.2/src/syncqb/qb_client.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1392 2023-04-07 14:15:23.000000 syncqb-1.0.2/src/syncqb/qb_client.pyi
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1310 2023-04-07 16:31:57.000000 syncqb-1.0.2/src/syncqb/qb_errors.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1046 2023-04-07 14:18:00.000000 syncqb-1.0.2/src/syncqb/qb_errors.pyi
++-rw-r--r--   0 jacob     (1000) jacob     (1000)      618 2023-04-06 18:45:19.000000 syncqb-1.0.2/src/syncqb/quickbase.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)      588 2023-04-07 14:18:23.000000 syncqb-1.0.2/src/syncqb/quickbase.pyi
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    26718 2023-04-06 20:21:34.000000 syncqb-1.0.2/src/syncqb/xml_quickbase.py
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     8783 2023-04-07 14:18:50.000000 syncqb-1.0.2/src/syncqb/xml_quickbase.pyi
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-07 17:11:54.517650 syncqb-1.0.2/src/syncqb.egg-info/
++-rw-r--r--   0 jacob     (1000) jacob     (1000)    10313 2023-04-07 17:11:54.000000 syncqb-1.0.2/src/syncqb.egg-info/PKG-INFO
++-rw-r--r--   0 jacob     (1000) jacob     (1000)      538 2023-04-07 17:11:54.000000 syncqb-1.0.2/src/syncqb.egg-info/SOURCES.txt
++-rw-r--r--   0 jacob     (1000) jacob     (1000)        1 2023-04-07 17:11:54.000000 syncqb-1.0.2/src/syncqb.egg-info/dependency_links.txt
++-rw-r--r--   0 jacob     (1000) jacob     (1000)       59 2023-04-07 17:11:54.000000 syncqb-1.0.2/src/syncqb.egg-info/entry_points.txt
++-rw-r--r--   0 jacob     (1000) jacob     (1000)        7 2023-04-07 17:11:54.000000 syncqb-1.0.2/src/syncqb.egg-info/top_level.txt
++drwxr-xr-x   0 jacob     (1000) jacob     (1000)        0 2023-04-07 17:11:54.517650 syncqb-1.0.2/tests/
++-rw-r--r--   0 jacob     (1000) jacob     (1000)     1424 2023-04-07 16:32:23.000000 syncqb-1.0.2/tests/test.py
+```
+
+### Comparing `syncqb-1.0.1/LICENSE` & `syncqb-1.0.2/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `syncqb-1.0.1/PKG-INFO` & `syncqb-1.0.2/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: syncqb
+-Version: 1.0.1
++Version: 1.0.2
+ Summary: A Python SDK for quickbase
+ Author-email: Jacob Gearhardt <jacob@synctivate.com>
+ License: Copyright (c) 2018 The Python Packaging Authority
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+```
+
+### Comparing `syncqb-1.0.1/README.md` & `syncqb-1.0.2/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `syncqb-1.0.1/pyproject.toml` & `syncqb-1.0.2/pyproject.toml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,14 +1,14 @@
+ [build-system]
+ requires = ["setuptools>=61.0",'requests','lxml','chardet']
+ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "syncqb"
+-version = "1.0.1"
++version = "1.0.2"
+ authors = [
+   { name="Jacob Gearhardt", email="jacob@synctivate.com" },
+ ]
+ description = "A Python SDK for quickbase"
+ readme = "README.md"
+ license = { file="LICENSE" }
+ requires-python = ">=3.6"
+```
+
+### Comparing `syncqb-1.0.1/src/syncqb/json_quickbase.py` & `syncqb-1.0.2/src/syncqb/json_quickbase.py`
+
+ * *Files identical despite different names*
+
+### Comparing `syncqb-1.0.1/src/syncqb/json_quickbase.pyi` & `syncqb-1.0.2/src/syncqb/json_quickbase.pyi`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+-from qb_errors import *
+-from quickbase import QuickbaseClient
++from .qb_errors import *
++from .quickbase import QuickbaseClient
+ from typing import Any
+ 
+ class JsonQuickbaseClient(QuickbaseClient):
+     headers: dict[str, str] | None = ...
+ 
+     def __init__(self, credentials: dict[str, str] | None = None, timeout: int | None = None, **kwargs: Any) -> None: 
+         """
+```
+
+### Comparing `syncqb-1.0.1/src/syncqb/qb_client.py` & `syncqb-1.0.2/src/syncqb/qb_client.py`
+
+ * *Files 14% similar despite different names*
+
+```diff
+@@ -1,26 +1,29 @@
+ import os
+ import getpass
+ from dotenv import find_dotenv, load_dotenv
+ from . import json_quickbase, xml_quickbase
++from .qb_errors import QBError
+ 
+ def get_client(json_sdk=False, creds=None):
+     if creds:
+         url = creds.get('QB_URL')
+         user_token = creds.get('QB_USERTOKEN')
+         username = creds.get('QB_USERNAME')
+         password = creds.get('QB_PASSWORD')
+     else:
+-        load_dotenv(find_dotenv())
++        load_dotenv(find_dotenv(usecwd=True))
+         url = os.environ.get('QB_URL')
+         user_token = os.environ.get('QB_USER_TOKEN')
+         username = os.environ.get('QB_USERNAME')
+         password = os.environ.get('QB_PASSWORD')
+ 
+-    realmhost = url.split('https://')[1]
++        if not url and not user_token and not username and not password:
++            raise QBError('No credentials found, your .env file may be missing or in the wrong directory.')
++            
+ 
+     if json_sdk:
+         new_qb_client = json_quickbase.JsonQuickbaseClient(
+             # realmhost=realmhost, base_url=url, user_token=user_token)
+             credentials={'base_url': url, 'user_token': user_token})
+         return new_qb_client
+     else:
+```
+
+### Comparing `syncqb-1.0.1/src/syncqb/qb_client.pyi` & `syncqb-1.0.2/src/syncqb/qb_client.pyi`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -1,27 +1,27 @@
+-from json_quickbase import JsonQuickbaseClient
+-from xml_quickbase import XmlQuickbaseClient
++from .json_quickbase import JsonQuickbaseClient
++from .xml_quickbase import XmlQuickbaseClient
+ 
+-def get_client(json_sdk: bool = False, creds: dict[str, str] | None = ...) ->JsonQuickbaseClient | XmlQuickbaseClient:
++def get_client(json_sdk: bool = False, creds: dict[str, str] | None = None) ->JsonQuickbaseClient | XmlQuickbaseClient:
+     """
+     Get a QuickbaseClient instance
+     (Use get_json_client or get_xml_client for type hints and docstrings)
+     :param json_sdk: (bool) Use the JSON SDK instead of the XML SDK (default: False)
+     :param creds: (dict or None) A dictionary of credentials. If omitted, will look for credentials in a .env file
+     :return: (JsonQuickbaseClient or XmlQuickbaseClient) A QuickbaseClient instance
+     """
+     ...
+-def get_json_client(creds: dict[str, str] | None = ...) -> JsonQuickbaseClient:
++def get_json_client(creds: dict[str, str] | None = None) -> JsonQuickbaseClient:
+     """
+     Get a JsonQuickbaseClient instance
+     :param creds: (dict or None) A dictionary of credentials. If omitted, will look for credentials in a .env file
+     :return: (JsonQuickbaseClient) A JsonQuickbaseClient instance
+     """
+     ...
+-def get_xml_client(creds: dict[str, str] | None = ...) -> XmlQuickbaseClient:
++def get_xml_client(creds: dict[str, str] | None = None) -> XmlQuickbaseClient:
+     """
+     Get a XmlQuickbaseClient instance
+     :param creds: (dict or None) A dictionary of credentials. If omitted, will look for credentials in a .env file
+     :return: (XmlQuickbaseClient) An XmlQuickbaseClient instance
+     """
+     ...
+ def set_qb_info() -> None:
+```
+
+### Comparing `syncqb-1.0.1/src/syncqb/qb_errors.py` & `syncqb-1.0.2/src/syncqb/qb_errors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `syncqb-1.0.1/src/syncqb/qb_errors.pyi` & `syncqb-1.0.2/src/syncqb/qb_errors.pyi`
+
+ * *Files 20% similar despite different names*
+
+```diff
+@@ -1,16 +1,15 @@
+ from lxml import etree as etree
+-from typing import Any, Optional
+ from requests.models import Response
+ 
+ class QBError(Exception):
+     """ Base class for all Quickbase errors"""
+     message: str = ...
+     response: Response | None = ...
+-    def __init__(self, message: str, response: Response | None = ...) -> None:
++    def __init__(self, message: str, response: Response | None = None) -> None:
+         """
+         :param message: (str) The error message
+         :param response: (Response or None) The response object if available
+         """
+         ...
+ 
+ class QBAuthError(QBError):
+@@ -19,12 +18,12 @@
+ 
+ class QBConnectionError(QBError):
+     """ Raised when a connection error occurs """
+     def __init__(self, message: str) -> None: ...
+ 
+ class QBResponseError(QBError):
+     """ Raised when a response error occurs """
+-    def __init__(self, message: str, response: Response | None = ...) -> None: ...
++    def __init__(self, message: str, response: Response | None = None) -> None: ...
+ 
+ class QuickbaseError(QBError):
+     """ Raised when an error occurs but the response is ok """
+-    def __init__(self, message: str, response: Response | None = ...) -> None: ...
++    def __init__(self, message: str, response: Response | None = None) -> None: ...
+```
+
+### Comparing `syncqb-1.0.1/src/syncqb/quickbase.py` & `syncqb-1.0.2/src/syncqb/quickbase.py`
+
+ * *Files identical despite different names*
+
+### Comparing `syncqb-1.0.1/src/syncqb/quickbase.pyi` & `syncqb-1.0.2/src/syncqb/quickbase.pyi`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -3,15 +3,15 @@
+     username: str = ...
+     password: str = ...
+     realmhost: str = ...
+     base_url: str = ...
+     user_token: str = ...
+     timeout: int = ...
+     database: str = ...
+-    def __init__(self, credentials: dict[str, str], timeout: int = ..., database: str | None = ...) -> None:
++    def __init__(self, credentials: dict[str, str], timeout: int = 90, database: str | None = None) -> None:
+         """
+         Client for Quickbase API
+         :param credentials: (dict) A dictionary of credentials
+         :param timeout: (int) The number of seconds to wait before timing out a request
+         :param database: (str or None) The Quickbase database ID
+         """
+         ...
+```
+
+### Comparing `syncqb-1.0.1/src/syncqb/xml_quickbase.py` & `syncqb-1.0.2/src/syncqb/xml_quickbase.py`
+
+ * *Files identical despite different names*
+
+### Comparing `syncqb-1.0.1/src/syncqb/xml_quickbase.pyi` & `syncqb-1.0.2/src/syncqb/xml_quickbase.pyi`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,9 +1,9 @@
+-from qb_errors import *
+-from quickbase import QuickbaseClient
++from .qb_errors import *
++from .quickbase import QuickbaseClient
+ from typing import Any
+ 
+ class XmlQuickbaseClient(QuickbaseClient):
+     apptoken: str | None = ...
+     hours: int = ...
+     ticket: str | None = ...
+     def __init__(self, credentials: dict[str, str] | None = None, timeout: int = 90, database: str | None = None, authenticate: bool = True,
+```
+
+### Comparing `syncqb-1.0.1/src/syncqb.egg-info/PKG-INFO` & `syncqb-1.0.2/src/syncqb.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: syncqb
+-Version: 1.0.1
++Version: 1.0.2
+ Summary: A Python SDK for quickbase
+ Author-email: Jacob Gearhardt <jacob@synctivate.com>
+ License: Copyright (c) 2018 The Python Packaging Authority
+         
+         Permission is hereby granted, free of charge, to any person obtaining a copy
+         of this software and associated documentation files (the "Software"), to deal
+         in the Software without restriction, including without limitation the rights
+```
+
+### Comparing `syncqb-1.0.1/src/syncqb.egg-info/SOURCES.txt` & `syncqb-1.0.2/src/syncqb.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `syncqb-1.0.1/tests/test.py` & `syncqb-1.0.2/tests/test.py`
+
+ * *Files 13% similar despite different names*
+
+```diff
+@@ -1,9 +1,8 @@
+ from syncqb import qb_client
+-# import qb_client
+ # from pprint import pprint
+ # from lxml.etree import _Element
+ 
+ def main():
+     # table info:
+     # database: bnsucj684
+     # values valid for fid 6: 'Misc', '_other'
+```
+

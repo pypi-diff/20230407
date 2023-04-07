@@ -1,0 +1,4877 @@
+# Comparing `tmp/sqlmesh-0.2.6.tar.gz` & `tmp/sqlmesh-0.3.0.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "sqlmesh-0.2.6.tar", last modified: Thu Apr  6 04:11:42 2023, max compression
++gzip compressed data, was "sqlmesh-0.3.0.tar", last modified: Fri Apr  7 17:18:31 2023, max compression
+```
+
+## Comparing `sqlmesh-0.2.6.tar` & `sqlmesh-0.3.0.tar`
+
+### file list
+
+```diff
+@@ -1,669 +1,688 @@
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.992612 sqlmesh-0.2.6/.circleci/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2397 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/.circleci/config.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3730 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/.circleci/continue_config.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       66 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/.dockerignore
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2195 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/.gitignore
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1900 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/.pre-commit-config.yaml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      234 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/.readthedocs.yaml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      135 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/Dockerfile.api
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      383 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/Dockerfile.app
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    11346 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/LICENSE
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1850 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/Makefile
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1969 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/PKG-INFO
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1250 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/README.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1008 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docker-compose.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.996612 sqlmesh-0.2.6/docs/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.984612 sqlmesh-0.2.6/docs/_readthedocs/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.996612 sqlmesh-0.2.6/docs/_readthedocs/html/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/_readthedocs/html/.keep
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9981 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/comparisons.md
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.996612 sqlmesh-0.2.6/docs/concepts/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.996612 sqlmesh-0.2.6/docs/concepts/architecture/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1334 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/architecture/serialization.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1113 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/architecture/snapshots.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5915 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/audits.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3866 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/environments.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5914 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/glossary.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       13 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/hooks.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3027 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/macros.md
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.996612 sqlmesh-0.2.6/docs/concepts/models/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9934 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/models/model_kinds.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7454 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/models/overview.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7171 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/models/python_models.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4938 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/models/seed_models.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5356 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/models/sql_models.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     6631 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/overview.md
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.996612 sqlmesh-0.2.6/docs/concepts/plans/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    43124 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/plans/model_versioning.png
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8981 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/plans.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       37 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/team_development.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5699 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/concepts/tests.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      611 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/development.md
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.996612 sqlmesh-0.2.6/docs/guides/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1953 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/guides/connections.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10526 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/guides/models.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2134 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/guides/projects.md
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/docs/guides/scheduling/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)   740917 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/guides/scheduling/airflow_successful_plan_apply.png
+--rw-r--r--   0 circleci  (1001) circleci  (1002)   379880 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/guides/scheduling/airflow_successful_setup.png
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5648 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/guides/scheduling.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1854 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/guides/testing.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5510 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/index.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      290 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/installation.md
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/docs/integrations/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2905 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/integrations/airflow.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7309 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/integrations/dbt.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    20383 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/integrations/engines.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      926 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/integrations/github.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      217 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/integrations/overview.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      665 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/prerequisites.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10768 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/quick_start.md
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/docs/reference/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5816 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/reference/cli.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    13240 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/reference/configuration.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4091 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/reference/notebook.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1127 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/reference/overview.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       14 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/reference/python.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       16 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/release_notes.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      122 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/requirements.txt
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3249 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/docs/sqlmesh.png
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/airflow/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1713 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/Dockerfile.template
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2106 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/Makefile
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      942 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/README.md
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/airflow/dags/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      263 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/dags/sqlmesh_integration.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3515 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/docker_compose_decorator.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       12 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/requirements.txt
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/airflow/spark_conf/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      872 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/spark_conf/hive-site.xml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      151 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/airflow/spark_conf/spark-defaults.conf
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/sushi/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/sushi/audits/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      105 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/audits/items.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      119 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/audits/order_items.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      829 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/config.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/sushi/data/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/data/.keep
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      551 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/helper.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/sushi/hooks/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/hooks/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      247 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/hooks/hooks.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.000612 sqlmesh-0.2.6/examples/sushi/macros/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/macros/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      702 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/macros/macros.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi/models/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      913 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/customer_revenue_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      204 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/customers.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1913 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/items.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1892 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/order_items.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1644 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/orders.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      346 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/top_waiters.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      413 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/waiter_as_customer_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      123 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/waiter_names.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      688 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/waiter_revenue_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      197 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/models/waiters.sql
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi/seeds/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       88 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/seeds/waiter_names.csv
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1459 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi/tests/test_customer_revenue_by_day.yaml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       15 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/.gitignore
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       41 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/.user.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/analyses/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/analyses/.gitkeep
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      291 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/config.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      507 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/dbt_project.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/macros/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      941 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/macros/incremental.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       80 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/macros/log_value.sql
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/models/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1125 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/models/customer_revenue_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       80 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/models/customers.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      182 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/models/schema.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      309 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/models/top_waiters.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      389 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/models/waiter_as_customer_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      752 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/models/waiter_revenue_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      186 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/models/waiters.sql
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.984612 sqlmesh-0.2.6/examples/sushi_dbt/packages/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/analyses/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/analyses/.gitkeep
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      663 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/dbt_project.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/macros/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      117 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/macros/current_engine.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       65 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/macros/distinct.sql
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/models/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/models/schema.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/seeds/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/seeds/.gitkeep
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/snapshots/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/snapshots/.gitkeep
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.004612 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/tests/.gitkeep
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      783 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/profiles.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/sushi_dbt/seeds/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2327 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/seeds/items.csv
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10472 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/seeds/order_items.csv
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9746 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/seeds/orders.csv
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       97 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/seeds/properties.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       88 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/seeds/waiter_names.csv
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/sushi_dbt/snapshots/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/snapshots/.gitkeep
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/sushi_dbt/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/sushi_dbt/tests/.gitkeep
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/wursthall/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/examples/wursthall/audits/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/wursthall/audits/db/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      141 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/audits/db/order_f.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       66 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/config.yaml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/wursthall/macros/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/macros/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      618 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/macros/macros.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/wursthall/models/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/wursthall/models/db/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      428 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/db/customer_d.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      272 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/db/item_d.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3145 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/db/order_f.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      537 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/db/order_item_f.sql
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/wursthall/models/src/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/src/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1667 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/src/customer_details.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      120 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/src/menu_item_details.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3419 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/src/order_item_details.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      892 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/models/src/shared.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/examples/wursthall/seeds/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/wursthall/seeds/src/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7416 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/seeds/src/menu_item_details.csv
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/examples/wursthall/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      888 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/tests/test_customer_d.yaml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      955 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/examples/wursthall/tests/test_order_item_f.yaml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2094 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/mkdocs.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/pdoc/
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)     1153 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/pdoc/cli.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/pdoc/templates/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      131 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/pdoc/templates/module.html.jinja2
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      734 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/pytest.ini
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1299 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/setup.cfg
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2957 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/setup.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/sqlmesh/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        3 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/.airflowignore
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3676 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      160 2023-04-06 04:11:41.000000 sqlmesh-0.2.6/sqlmesh/_version.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.012612 sqlmesh-0.2.6/sqlmesh/cli/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      821 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/cli/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4314 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/cli/example_project.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8938 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/cli/main.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1391 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/cli/options.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.012612 sqlmesh-0.2.6/sqlmesh/core/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      586 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/_typing.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.012612 sqlmesh-0.2.6/sqlmesh/core/audit/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      449 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/audit/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      896 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/audit/builtin.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7947 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/audit/definition.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.012612 sqlmesh-0.2.6/sqlmesh/core/config/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      638 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4250 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/base.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1001 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/categorizer.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      940 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/common.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    18770 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/connection.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3355 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/loader.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1655 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/model.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5389 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/root.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8432 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/config/scheduler.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    28903 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/console.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      731 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/constants.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    33440 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/context.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8612 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/context_diff.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    17626 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/dialect.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.016612 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2327 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      762 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/_typing.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    28418 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/base.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5339 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/base_spark.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9365 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/bigquery.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      193 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/databricks.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1730 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/databricks_api.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1971 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/duckdb.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8645 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/redshift.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1181 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/shared.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2658 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/snowflake.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3678 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/engine_adapter/spark.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1815 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/environment.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      742 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/hooks.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9362 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/loader.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    18920 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/macros.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.016612 sqlmesh-0.2.6/sqlmesh/core/model/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      505 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/model/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1300 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/model/common.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2417 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/model/decorator.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    47553 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/model/definition.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7104 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/model/kind.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    12442 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/model/meta.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2017 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/model/seed.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2314 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/notification_target.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.016612 sqlmesh-0.2.6/sqlmesh/core/plan/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      191 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/plan/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    23746 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/plan/definition.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8072 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/plan/evaluator.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    12174 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/renderer.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    15341 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/scheduler.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3730 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/schema_diff.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.016612 sqlmesh-0.2.6/sqlmesh/core/snapshot/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      527 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/snapshot/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1990 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/snapshot/categorizer.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    31742 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/snapshot/definition.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    19457 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/snapshot/evaluator.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.016612 sqlmesh-0.2.6/sqlmesh/core/state_sync/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      682 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/state_sync/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9681 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/state_sync/base.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    12081 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/state_sync/common.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    14539 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/state_sync/engine_adapter.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    12062 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/test.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1412 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/core/user.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/dbt/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       79 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9319 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/adapter.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    13970 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/basemodel.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10411 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/builtin.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1969 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/column.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9647 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/common.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3229 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/loader.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8495 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/model.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    12372 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/package.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3530 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/profile.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4412 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/project.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1049 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/seed.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3027 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/source.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    11101 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/target.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      291 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/dbt/util.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/engines/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/engines/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4437 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/engines/commands.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/engines/spark/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/engines/spark/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3414 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/engines/spark/app.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/engines/spark/db_api/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/engines/spark/db_api/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      148 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/engines/spark/db_api/errors.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2571 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/engines/spark/db_api/spark_session.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/integrations/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/integrations/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/integrations/github/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/integrations/github/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2210 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/integrations/github/notification_operator_provider.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1726 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/integrations/github/notification_target.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1829 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/integrations/github/shared.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    13153 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/magics.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/py.typed
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/schedulers/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3770 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/api.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7848 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/client.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3830 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/common.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    18799 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/dag_generator.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.020612 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/hooks/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/hooks/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2132 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/hooks/bigquery.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      868 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/hooks/redshift.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8508 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/integration.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.024612 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1341 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/bigquery.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     6307 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/databricks.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2549 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/hwm_sensor.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      877 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/notification.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1211 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/redshift.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1340 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/snowflake.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5222 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/spark_submit.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10922 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/targets.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4400 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/plan.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1300 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/plugin.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3790 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/state_sync.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5006 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/schedulers/airflow/util.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.024612 sqlmesh-0.2.6/sqlmesh/utils/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4089 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8053 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/concurrency.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7530 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/connection_pool.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      410 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/conversions.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4329 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/dag.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7549 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/date.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1244 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/errors.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    15794 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/jinja.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    15093 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/metaprogramming.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      888 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/pandas.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1609 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/pydantic.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1534 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/rich.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1301 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh/utils/yaml.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.008612 sqlmesh-0.2.6/sqlmesh.egg-info/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1969 2023-04-06 04:11:41.000000 sqlmesh-0.2.6/sqlmesh.egg-info/PKG-INFO
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    19443 2023-04-06 04:11:41.000000 sqlmesh-0.2.6/sqlmesh.egg-info/SOURCES.txt
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        1 2023-04-06 04:11:41.000000 sqlmesh-0.2.6/sqlmesh.egg-info/dependency_links.txt
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      141 2023-04-06 04:11:41.000000 sqlmesh-0.2.6/sqlmesh.egg-info/entry_points.txt
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      766 2023-04-06 04:11:41.000000 sqlmesh-0.2.6/sqlmesh.egg-info/requires.txt
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       12 2023-04-06 04:11:41.000000 sqlmesh-0.2.6/sqlmesh.egg-info/top_level.txt
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    21020 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/sqlmesh.svg
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.024612 sqlmesh-0.2.6/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      285 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/common_fixtures.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3375 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/conftest.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/core/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/core/engine_adapter/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/engine_adapter/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    12116 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/engine_adapter/test_base.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1298 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/engine_adapter/test_base_spark.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7171 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/engine_adapter/test_bigquery.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1281 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/engine_adapter/test_databricks.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2613 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/engine_adapter/test_duckdb.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7133 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/engine_adapter/test_redshift.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2340 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/engine_adapter/test_spark.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     6270 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_audit.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     6611 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_config.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      850 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_connection_config.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10633 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_context.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2749 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_dialect.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      464 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_environment.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    25958 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_integration.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5760 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_macros.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    24082 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_model.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    14690 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_plan.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3886 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_plan_evaluator.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4579 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_scheduler.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3531 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_schema_diff.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      857 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_seed.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    26877 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_snapshot.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9368 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_snapshot_evaluator.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    15845 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/core/test_state_sync.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/dbt/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/dbt/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      630 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/dbt/conftest.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2572 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/dbt/test_adapter.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    12272 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/dbt/test_config.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    14578 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/dbt/test_transformation.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/engines/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/engines/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/engines/spark/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/engines/spark/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      357 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/engines/spark/conftest.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1503 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/engines/spark/test_db_api.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/tests/fixtures/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/tests/fixtures/dbt/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/analyses/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/analyses/.gitkeep
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      291 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/config.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/dbt_packages/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1055 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/dbt_project.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/logs/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10264 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/logs/dbt.log.legacy
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/macros/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      941 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/macros/incremental.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       80 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/macros/log_value.sql
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/models/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      247 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/models/schema.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      334 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/models/top_waiters.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      389 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/models/waiter_as_customer_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      863 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/models/waiter_revenue_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      196 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/models/waiters.sql
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.028612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/analyses/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/analyses/.gitkeep
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      663 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/dbt_project.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/macros/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      117 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/macros/current_engine.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       65 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/macros/distinct.sql
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/models/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1155 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/models/customer_revenue_by_day.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      108 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/models/customers.sql
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      193 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/models/schema.yml
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/seeds/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/seeds/.gitkeep
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/snapshots/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/snapshots/.gitkeep
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/tests/.gitkeep
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       41 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      540 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/profiles.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1249 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/seed_sources.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/seeds/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       42 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/seeds/properties.yml
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       88 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/seeds/waiter_names.csv
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/snapshots/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/snapshots/.gitkeep
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/source_data/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2327 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/source_data/items.csv
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10472 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/source_data/order_items.csv
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9746 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/source_data/orders.csv
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/tests/.gitkeep
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/integrations/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/integrations/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/integrations/github/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/integrations/github/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/integrations/github/fixtures/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      816 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/integrations/github/fixtures/pull_request_review.json
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      477 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/integrations/github/test_notification_target.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/schedulers/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/schedulers/airflow/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1414 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/conftest.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.032612 sqlmesh-0.2.6/tests/schedulers/airflow/operators/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/operators/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3866 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/operators/test_hwm_sensor.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4280 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/operators/test_targets.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9673 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/test_client.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1226 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/test_end_to_end.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     6043 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/test_integration.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5785 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/schedulers/airflow/test_plan.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.036612 sqlmesh-0.2.6/tests/utils/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3580 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_concurrency.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     6430 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_connection_pool.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1381 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_dag.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1818 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_date.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      551 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_filesystem.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5516 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_jinja.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5790 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_metaprogramming.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2501 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_pandas.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      518 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_pydantic.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1194 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/utils/test_yaml.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.036612 sqlmesh-0.2.6/tests/web/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/web/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    14574 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/tests/web/test_main.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.036612 sqlmesh-0.2.6/web/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.036612 sqlmesh-0.2.6/web/client/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1104 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/.eslintrc.js
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       94 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/.gitignore
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      129 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/.prettierignore
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      403 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/.prettierrc.js
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1076 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/index.html
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      330 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/orval.config.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)   403384 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/package-lock.json
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2144 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/package.json
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1608 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/playwright.config.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       82 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/postcss.config.js
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/web/client/public/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.036612 sqlmesh-0.2.6/web/client/public/favicons/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2473 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/public/favicons/favicon.ico
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.036612 sqlmesh-0.2.6/web/client/src/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.036612 sqlmesh-0.2.6/web/client/src/api/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1220 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/api/channels.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4473 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/api/index.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3247 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/api/instance.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/web/client/src/assets/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/web/client/src/assets/fonts/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.040612 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    74500 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-Black.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    74524 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-BlackItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    74368 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-Bold.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    73964 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-BoldItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    68940 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-Book.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    67284 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-BookItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    74116 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-Medium.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    73916 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-MediumItalic.otf
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.040612 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    55004 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Black.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    56384 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-BlackItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    57104 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Bold.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    62320 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-BoldItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    56652 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Extrabold.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    61688 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-ExtraboldItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    57680 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Italic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    53148 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Light.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    57060 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-LightItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    56836 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Medium.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    61460 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-MediumItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    52820 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Roman.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    59176 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-Bold.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    63876 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-BoldItalic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    60768 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-Italic.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    81732 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-Roman.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    60992 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-Semibold.otf
+--rwxr-xr-x   0 circleci  (1001) circleci  (1002)    64792 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-SemiboldItalic.otf
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/context/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4198 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/context/context.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3200 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/context/editor.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      922 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/context/fileTree.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2641 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/context/plan.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1562 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/context/theme.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/hooks/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      308 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/hooks/useActiveFocus.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      817 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/hooks/useLocalStorage.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9237 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/index.css
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.988612 sqlmesh-0.2.6/web/client/src/library/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:41.992612 sqlmesh-0.2.6/web/client/src/library/components/
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/button/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4517 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/button/Button.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/button/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3516 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/button/tests/Button.spec.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/divider/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      856 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/divider/Divider.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/divider/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      632 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/divider/tests/Divider.spec.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/editor/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1388 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/Editor.css
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4203 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/Editor.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8071 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/EditorCode.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2694 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/EditorFooter.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1990 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/EditorIndicator.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9785 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/EditorInspector.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8257 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/EditorPreview.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3711 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/EditorTabs.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/editor/extensions/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5880 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/extensions/SqlMeshDialect.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3854 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/extensions/index.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1538 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/editor/help.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/fileTree/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10796 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/fileTree/Directory.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5391 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/fileTree/File.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2967 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/fileTree/FileTree.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      562 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/fileTree/help.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/graph/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2961 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/graph/Graph.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3205 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/graph/help.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/ide/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3568 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/ide/ActivePlan.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     6011 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/ide/IDE.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    22356 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/ide/RunPlan.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.044612 sqlmesh-0.2.6/web/client/src/library/components/input/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2087 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/input/Input.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      688 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/input/InputToggle.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/library/components/logo/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2292 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/logo/Spinner.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4637 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/logo/SqlMesh.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     8042 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/logo/Tobiko.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/library/components/modal/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1560 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/modal/Modal.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1953 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/modal/ModalConfirmation.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1447 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/modal/ModalDrawer.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/library/components/plan/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7519 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/Plan.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     6775 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/PlanActions.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1312 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/PlanBackfillDates.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10223 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/PlanChangePreview.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2368 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/PlanHeader.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    12699 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/PlanWizard.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     9926 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/PlanWizardStepOptions.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)    10478 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/context.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3444 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/help.spec.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2155 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/help.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2633 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/plan/hooks.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/library/components/progress/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      713 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/progress/Progress.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/library/components/root/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      526 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/root/Footer.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1921 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/root/Header.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      247 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/root/Main.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      443 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/root/Root.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/library/components/splitPane/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      788 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/splitPane/SplitPane.css
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      541 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/splitPane/SplitPane.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/library/components/tasksProgress/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     7314 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/tasksProgress/TasksProgress.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/library/components/toggle/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1453 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/library/components/toggle/Toggle.tsx
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1197 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/main.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/models/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1647 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/models/artifact.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3397 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/models/directory.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4190 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/models/environment.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1506 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/models/file.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      173 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/models/index.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      766 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/models/initial.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      200 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/routes.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.048612 sqlmesh-0.2.6/web/client/src/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)       35 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/tests/setup.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      541 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/tests/utils.tsx
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/web/client/src/types/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      467 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/types/enum.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      137 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/types/index.d.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/web/client/src/utils/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4102 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/utils/index.spec.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5246 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/utils/index.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/web/client/src/workers/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      113 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/workers/index.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/web/client/src/workers/sqlglot/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1105 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/workers/sqlglot/sqlglot.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1578 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/src/workers/sqlglot/worker.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5926 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/tailwind.config.js
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/web/client/tests/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      170 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/tests/initial.spec.ts
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1141 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/tsconfig.json
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1167 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/client/vite.config.ts
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/web/server/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/web/server/api/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/__init__.py
+-drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-06 04:11:42.052612 sqlmesh-0.2.6/web/server/api/endpoints/
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      710 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/__init__.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     4864 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/commands.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      819 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/context.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1858 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/directories.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      708 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/environments.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      637 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/events.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5528 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/files.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      969 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/models.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3487 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/api/endpoints/plan.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     3190 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/console.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     1374 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/main.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     5705 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/models.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)      260 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/openapi.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2401 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/settings.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2114 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/sse.py
+--rw-r--r--   0 circleci  (1001) circleci  (1002)     2419 2023-04-06 04:11:37.000000 sqlmesh-0.2.6/web/server/utils.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.632059 sqlmesh-0.3.0/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.560059 sqlmesh-0.3.0/.circleci/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2448 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/.circleci/config.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3730 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/.circleci/continue_config.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       66 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/.dockerignore
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2195 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/.gitignore
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1900 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/.pre-commit-config.yaml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      234 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/.readthedocs.yaml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      135 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/Dockerfile.api
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      383 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/Dockerfile.app
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    11346 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/LICENSE
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1850 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/Makefile
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1969 2023-04-07 17:18:31.632059 sqlmesh-0.3.0/PKG-INFO
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1250 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/README.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1008 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docker-compose.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.564059 sqlmesh-0.3.0/docs/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.552059 sqlmesh-0.3.0/docs/_readthedocs/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.564059 sqlmesh-0.3.0/docs/_readthedocs/html/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/_readthedocs/html/.keep
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9981 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/comparisons.md
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.564059 sqlmesh-0.3.0/docs/concepts/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.564059 sqlmesh-0.3.0/docs/concepts/architecture/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1334 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/architecture/serialization.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1113 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/architecture/snapshots.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5915 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/audits.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3866 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/environments.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5914 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/glossary.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       13 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/hooks.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3027 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/macros.md
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.564059 sqlmesh-0.3.0/docs/concepts/models/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9934 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/models/model_kinds.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7454 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/models/overview.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7171 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/models/python_models.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4938 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/models/seed_models.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5356 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/models/sql_models.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6631 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/overview.md
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.564059 sqlmesh-0.3.0/docs/concepts/plans/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    43124 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/plans/model_versioning.png
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8981 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/plans.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       37 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/team_development.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5699 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/concepts/tests.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      611 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/development.md
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.564059 sqlmesh-0.3.0/docs/guides/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1953 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/guides/connections.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10756 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/guides/models.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2136 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/guides/projects.md
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.564059 sqlmesh-0.3.0/docs/guides/scheduling/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)   740917 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/guides/scheduling/airflow_successful_plan_apply.png
++-rw-r--r--   0 circleci  (1001) circleci  (1002)   379880 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/guides/scheduling/airflow_successful_setup.png
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5648 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/guides/scheduling.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1854 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/guides/testing.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5510 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/index.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      290 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/installation.md
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/docs/integrations/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2905 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/integrations/airflow.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7309 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/integrations/dbt.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    20383 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/integrations/engines.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      926 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/integrations/github.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      217 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/integrations/overview.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      665 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/prerequisites.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10774 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/quick_start.md
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/docs/reference/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5816 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/reference/cli.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    13240 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/reference/configuration.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4091 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/reference/notebook.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1127 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/reference/overview.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       14 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/reference/python.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       16 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/release_notes.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      122 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/requirements.txt
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3249 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/docs/sqlmesh.png
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/airflow/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1713 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/Dockerfile.template
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2106 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/Makefile
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      942 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/README.md
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/airflow/dags/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      263 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/dags/sqlmesh_integration.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3515 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/docker_compose_decorator.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       12 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/requirements.txt
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/airflow/spark_conf/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      872 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/spark_conf/hive-site.xml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      151 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/airflow/spark_conf/spark-defaults.conf
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/sushi/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/sushi/audits/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      105 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/audits/items.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      119 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/audits/order_items.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      829 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/config.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/sushi/data/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/data/.keep
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      551 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/helper.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/sushi/hooks/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/hooks/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      247 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/hooks/hooks.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.568059 sqlmesh-0.3.0/examples/sushi/macros/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/macros/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      702 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/macros/macros.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi/models/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      913 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/customer_revenue_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      204 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/customers.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1913 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/items.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1892 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/order_items.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1644 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/orders.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      346 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/top_waiters.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      413 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/waiter_as_customer_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      123 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/waiter_names.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      688 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/waiter_revenue_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      197 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/models/waiters.sql
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi/seeds/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       88 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/seeds/waiter_names.csv
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1459 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi/tests/test_customer_revenue_by_day.yaml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       15 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/.gitignore
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       41 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/.user.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/analyses/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/analyses/.gitkeep
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      291 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/config.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      507 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/dbt_project.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/macros/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      941 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/macros/incremental.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       80 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/macros/log_value.sql
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/models/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1125 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/models/customer_revenue_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       80 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/models/customers.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      182 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/models/schema.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      309 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/models/top_waiters.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      389 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/models/waiter_as_customer_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      752 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/models/waiter_revenue_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      186 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/models/waiters.sql
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.556059 sqlmesh-0.3.0/examples/sushi_dbt/packages/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/analyses/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/analyses/.gitkeep
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      663 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/dbt_project.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/macros/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      117 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/macros/current_engine.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       65 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/macros/distinct.sql
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/models/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/models/schema.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/seeds/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/seeds/.gitkeep
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/snapshots/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/snapshots/.gitkeep
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/tests/.gitkeep
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      783 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/profiles.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/seeds/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2327 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/seeds/items.csv
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10472 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/seeds/order_items.csv
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9746 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/seeds/orders.csv
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       97 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/seeds/properties.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       88 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/seeds/waiter_names.csv
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/snapshots/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/snapshots/.gitkeep
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/sushi_dbt/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/sushi_dbt/tests/.gitkeep
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.572059 sqlmesh-0.3.0/examples/wursthall/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.556059 sqlmesh-0.3.0/examples/wursthall/audits/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/examples/wursthall/audits/db/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      141 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/audits/db/order_f.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       66 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/config.yaml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/examples/wursthall/macros/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/macros/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      618 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/macros/macros.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/examples/wursthall/models/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/examples/wursthall/models/db/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      428 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/db/customer_d.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      256 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/db/item_d.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3145 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/db/order_f.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      537 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/db/order_item_f.sql
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/examples/wursthall/models/src/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/src/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1667 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/src/customer_details.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      120 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/src/menu_item_details.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3419 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/src/order_item_details.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      892 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/models/src/shared.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.556059 sqlmesh-0.3.0/examples/wursthall/seeds/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/examples/wursthall/seeds/src/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7416 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/seeds/src/menu_item_details.csv
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/examples/wursthall/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      888 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/tests/test_customer_d.yaml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      955 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/examples/wursthall/tests/test_order_item_f.yaml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2094 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/mkdocs.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/pdoc/
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)     1153 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/pdoc/cli.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/pdoc/templates/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      131 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/pdoc/templates/module.html.jinja2
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      734 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/pytest.ini
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1299 2023-04-07 17:18:31.632059 sqlmesh-0.3.0/setup.cfg
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2971 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/setup.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/sqlmesh/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        3 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/.airflowignore
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3676 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      160 2023-04-07 17:18:31.000000 sqlmesh-0.3.0/sqlmesh/_version.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/sqlmesh/cli/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      821 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/cli/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4314 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/cli/example_project.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8938 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/cli/main.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1391 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/cli/options.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.580059 sqlmesh-0.3.0/sqlmesh/core/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      586 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/_typing.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.580059 sqlmesh-0.3.0/sqlmesh/core/audit/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      449 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/audit/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      896 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/audit/builtin.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7947 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/audit/definition.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.580059 sqlmesh-0.3.0/sqlmesh/core/config/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      638 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4412 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/base.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1001 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/categorizer.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      940 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/common.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    18770 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/connection.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3355 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/loader.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1655 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/model.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5389 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/root.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8432 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/config/scheduler.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    29029 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/console.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      731 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/constants.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    33507 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/context.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8612 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/context_diff.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    17626 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/dialect.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.580059 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2327 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      762 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/_typing.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    28418 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/base.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5339 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/base_spark.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9365 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/bigquery.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      193 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/databricks.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1730 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/databricks_api.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1971 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/duckdb.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8645 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/redshift.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1181 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/shared.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2658 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/snowflake.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3678 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/engine_adapter/spark.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1815 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/environment.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      742 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/hooks.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9362 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/loader.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    18920 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/macros.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.584059 sqlmesh-0.3.0/sqlmesh/core/model/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      546 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/model/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1300 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/model/common.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2417 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/model/decorator.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    47553 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/model/definition.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7382 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/model/kind.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    12622 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/model/meta.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2017 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/model/seed.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2314 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/notification_target.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.584059 sqlmesh-0.3.0/sqlmesh/core/plan/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      191 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/plan/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    23746 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/plan/definition.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8075 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/plan/evaluator.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    12174 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/renderer.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    15345 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/scheduler.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3730 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/schema_diff.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.584059 sqlmesh-0.3.0/sqlmesh/core/snapshot/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      527 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/snapshot/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1990 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/snapshot/categorizer.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    31132 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/snapshot/definition.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    19457 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/snapshot/evaluator.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.584059 sqlmesh-0.3.0/sqlmesh/core/state_sync/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      682 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/state_sync/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9681 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/state_sync/base.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    12081 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/state_sync/common.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    14539 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/state_sync/engine_adapter.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    12062 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/test.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1412 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/core/user.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.584059 sqlmesh-0.3.0/sqlmesh/dbt/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       79 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9319 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/adapter.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    15630 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/basemodel.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10323 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/builtin.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1969 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/column.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9746 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/common.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3229 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/loader.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9390 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/model.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    12372 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/package.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3530 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/profile.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4412 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/project.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1049 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/seed.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3145 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/source.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    11101 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/target.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      291 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/dbt/util.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.588059 sqlmesh-0.3.0/sqlmesh/engines/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/engines/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4437 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/engines/commands.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.588059 sqlmesh-0.3.0/sqlmesh/engines/spark/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/engines/spark/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3414 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/engines/spark/app.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.588059 sqlmesh-0.3.0/sqlmesh/engines/spark/db_api/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/engines/spark/db_api/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      148 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/engines/spark/db_api/errors.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2571 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/engines/spark/db_api/spark_session.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.588059 sqlmesh-0.3.0/sqlmesh/integrations/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/integrations/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.588059 sqlmesh-0.3.0/sqlmesh/integrations/github/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/integrations/github/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2210 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/integrations/github/notification_operator_provider.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1726 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/integrations/github/notification_target.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1829 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/integrations/github/shared.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    13153 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/magics.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/py.typed
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.588059 sqlmesh-0.3.0/sqlmesh/schedulers/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.588059 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3770 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/api.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7848 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/client.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3830 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/common.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    18799 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/dag_generator.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.592059 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/hooks/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/hooks/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2132 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/hooks/bigquery.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      868 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/hooks/redshift.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8508 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/integration.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.592059 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1341 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/bigquery.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6307 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/databricks.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2549 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/hwm_sensor.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      877 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/notification.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1211 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/redshift.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1340 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/snowflake.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5222 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/spark_submit.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10922 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/targets.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4400 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/plan.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1300 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/plugin.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3790 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/state_sync.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5006 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/schedulers/airflow/util.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.592059 sqlmesh-0.3.0/sqlmesh/utils/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4089 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8053 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/concurrency.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7530 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/connection_pool.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      410 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/conversions.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4329 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/dag.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7549 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/date.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1244 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/errors.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    15800 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/jinja.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    15093 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/metaprogramming.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      888 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/pandas.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1609 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/pydantic.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1534 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/rich.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1301 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh/utils/yaml.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.576059 sqlmesh-0.3.0/sqlmesh.egg-info/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1969 2023-04-07 17:18:31.000000 sqlmesh-0.3.0/sqlmesh.egg-info/PKG-INFO
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    20177 2023-04-07 17:18:31.000000 sqlmesh-0.3.0/sqlmesh.egg-info/SOURCES.txt
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        1 2023-04-07 17:18:31.000000 sqlmesh-0.3.0/sqlmesh.egg-info/dependency_links.txt
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      141 2023-04-07 17:18:31.000000 sqlmesh-0.3.0/sqlmesh.egg-info/entry_points.txt
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      780 2023-04-07 17:18:31.000000 sqlmesh-0.3.0/sqlmesh.egg-info/requires.txt
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       12 2023-04-07 17:18:31.000000 sqlmesh-0.3.0/sqlmesh.egg-info/top_level.txt
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    21020 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/sqlmesh.svg
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.592059 sqlmesh-0.3.0/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      285 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/common_fixtures.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3375 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/conftest.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/core/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/core/engine_adapter/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/engine_adapter/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    12116 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/engine_adapter/test_base.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1298 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/engine_adapter/test_base_spark.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7171 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/engine_adapter/test_bigquery.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1281 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/engine_adapter/test_databricks.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2613 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/engine_adapter/test_duckdb.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7133 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/engine_adapter/test_redshift.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2340 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/engine_adapter/test_spark.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6270 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_audit.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6611 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_config.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      850 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_connection_config.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10633 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_context.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2749 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_dialect.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      464 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_environment.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    25987 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_integration.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5760 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_macros.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    24586 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_model.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    14690 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_plan.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3886 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_plan_evaluator.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4635 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_scheduler.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3531 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_schema_diff.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      857 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_seed.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    25050 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_snapshot.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9368 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_snapshot_evaluator.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    15845 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/core/test_state_sync.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/dbt/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/dbt/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      630 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/dbt/conftest.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2572 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/dbt/test_adapter.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    12387 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/dbt/test_config.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    15733 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/dbt/test_transformation.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/engines/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/engines/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/engines/spark/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/engines/spark/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      357 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/engines/spark/conftest.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1503 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/engines/spark/test_db_api.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.556059 sqlmesh-0.3.0/tests/fixtures/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.556059 sqlmesh-0.3.0/tests/fixtures/dbt/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/analyses/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/analyses/.gitkeep
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      291 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/config.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.556059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/dbt_packages/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1055 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/dbt_project.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/logs/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10264 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/logs/dbt.log.legacy
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.596059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/macros/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      941 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/macros/incremental.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       80 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/macros/log_value.sql
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/models/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      247 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/models/schema.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      334 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/models/top_waiters.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      389 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/models/waiter_as_customer_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      863 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/models/waiter_revenue_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      196 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/models/waiters.sql
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.556059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/analyses/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/analyses/.gitkeep
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      663 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/dbt_project.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/macros/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      117 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/macros/current_engine.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       65 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/macros/distinct.sql
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/models/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1155 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/models/customer_revenue_by_day.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      108 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/models/customers.sql
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      193 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/models/schema.yml
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/seeds/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/seeds/.gitkeep
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/snapshots/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/snapshots/.gitkeep
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/tests/.gitkeep
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       41 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      540 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/profiles.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1249 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/seed_sources.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/seeds/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       42 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/seeds/properties.yml
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       88 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/seeds/waiter_names.csv
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/snapshots/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/snapshots/.gitkeep
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/source_data/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2327 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/source_data/items.csv
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10472 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/source_data/order_items.csv
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9746 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/source_data/orders.csv
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/tests/.gitkeep
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/integrations/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/integrations/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/integrations/github/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/integrations/github/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.600059 sqlmesh-0.3.0/tests/integrations/github/fixtures/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      816 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/integrations/github/fixtures/pull_request_review.json
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      477 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/integrations/github/test_notification_target.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.604059 sqlmesh-0.3.0/tests/schedulers/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.604059 sqlmesh-0.3.0/tests/schedulers/airflow/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1414 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/conftest.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.604059 sqlmesh-0.3.0/tests/schedulers/airflow/operators/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/operators/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3866 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/operators/test_hwm_sensor.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4280 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/operators/test_targets.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9673 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/test_client.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1226 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/test_end_to_end.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6043 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/test_integration.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5785 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/schedulers/airflow/test_plan.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.604059 sqlmesh-0.3.0/tests/utils/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3580 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_concurrency.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6430 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_connection_pool.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1381 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_dag.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1818 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_date.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      551 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_filesystem.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5516 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_jinja.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5790 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_metaprogramming.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2501 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_pandas.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      518 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_pydantic.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1194 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/utils/test_yaml.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.604059 sqlmesh-0.3.0/tests/web/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/web/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    14574 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/tests/web/test_main.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.604059 sqlmesh-0.3.0/web/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.608059 sqlmesh-0.3.0/web/client/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1104 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/.eslintrc.js
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       94 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/.gitignore
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      129 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/.prettierignore
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      403 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/.prettierrc.js
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.608059 sqlmesh-0.3.0/web/client/dist/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.612059 sqlmesh-0.3.0/web/client/dist/assets/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    74500 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/CircularStd-Black-52659624.otf
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    74368 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/CircularStd-Bold-0e6c076d.otf
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    74116 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/CircularStd-Medium-2f373e53.otf
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4355 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/Graph-9e2d4101.css
++-rw-r--r--   0 circleci  (1001) circleci  (1002)   140647 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/Graph-fac2719f.js
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    20819 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/Plan-01476deb.js
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    55004 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/Publico-Black-e6bd2ea2.otf
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    57104 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/Publico-Bold-c79acd56.otf
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    56836 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/Publico-Medium-01b4a891.otf
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10106 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/TasksProgress-2fbc68a7.js
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      239 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/_commonjs-dynamic-modules-302442b1.js
++-rw-r--r--   0 circleci  (1001) circleci  (1002)  1087543 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/index-d4a59988.js
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    34831 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/index-e180bc61.css
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2419 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/assets/worker-0959ec7c.js
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.612059 sqlmesh-0.3.0/web/client/dist/favicons/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2473 2023-04-07 17:18:20.000000 sqlmesh-0.3.0/web/client/dist/favicons/favicon.ico
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1150 2023-04-07 17:18:21.000000 sqlmesh-0.3.0/web/client/dist/index.html
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1076 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/index.html
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      330 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/orval.config.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)   403384 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/package-lock.json
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2144 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/package.json
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1608 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/playwright.config.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       82 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/postcss.config.js
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.560059 sqlmesh-0.3.0/web/client/public/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.612059 sqlmesh-0.3.0/web/client/public/favicons/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2473 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/public/favicons/favicon.ico
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.612059 sqlmesh-0.3.0/web/client/src/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.612059 sqlmesh-0.3.0/web/client/src/api/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1220 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/api/channels.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4473 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/api/index.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3247 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/api/instance.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.560059 sqlmesh-0.3.0/web/client/src/assets/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.560059 sqlmesh-0.3.0/web/client/src/assets/fonts/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.612059 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    74500 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-Black.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    74524 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-BlackItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    74368 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-Bold.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    73964 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-BoldItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    68940 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-Book.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    67284 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-BookItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    74116 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-Medium.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    73916 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-MediumItalic.otf
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.616059 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    55004 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Black.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    56384 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-BlackItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    57104 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Bold.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    62320 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-BoldItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    56652 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Extrabold.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    61688 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-ExtraboldItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    57680 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Italic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    53148 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Light.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    57060 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-LightItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    56836 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Medium.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    61460 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-MediumItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    52820 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Roman.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    59176 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-Bold.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    63876 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-BoldItalic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    60768 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-Italic.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    81732 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-Roman.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    60992 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-Semibold.otf
++-rwxr-xr-x   0 circleci  (1001) circleci  (1002)    64792 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-SemiboldItalic.otf
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.616059 sqlmesh-0.3.0/web/client/src/context/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4198 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/context/context.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3220 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/context/editor.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      922 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/context/fileTree.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2661 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/context/plan.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1562 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/context/theme.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.616059 sqlmesh-0.3.0/web/client/src/hooks/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      308 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/hooks/useActiveFocus.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      817 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/hooks/useLocalStorage.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9237 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/index.css
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.560059 sqlmesh-0.3.0/web/client/src/library/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.560059 sqlmesh-0.3.0/web/client/src/library/components/
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.616059 sqlmesh-0.3.0/web/client/src/library/components/button/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4517 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/button/Button.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.616059 sqlmesh-0.3.0/web/client/src/library/components/button/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3516 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/button/tests/Button.spec.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.616059 sqlmesh-0.3.0/web/client/src/library/components/divider/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      856 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/divider/Divider.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.616059 sqlmesh-0.3.0/web/client/src/library/components/divider/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      632 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/divider/tests/Divider.spec.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.620059 sqlmesh-0.3.0/web/client/src/library/components/editor/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1388 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/Editor.css
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4232 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/Editor.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8065 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/EditorCode.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2694 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/EditorFooter.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1990 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/EditorIndicator.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9785 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/EditorInspector.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8257 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/EditorPreview.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3708 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/EditorTabs.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.620059 sqlmesh-0.3.0/web/client/src/library/components/editor/extensions/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5880 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/extensions/SqlMeshDialect.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3854 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/extensions/index.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1538 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/editor/help.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.620059 sqlmesh-0.3.0/web/client/src/library/components/fileTree/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10822 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/fileTree/Directory.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6044 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/fileTree/File.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2967 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/fileTree/FileTree.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      562 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/fileTree/help.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.620059 sqlmesh-0.3.0/web/client/src/library/components/graph/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2961 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/graph/Graph.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3205 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/graph/help.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.620059 sqlmesh-0.3.0/web/client/src/library/components/ide/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3568 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/ide/ActivePlan.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6011 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/ide/IDE.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    22356 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/ide/RunPlan.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.620059 sqlmesh-0.3.0/web/client/src/library/components/input/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2087 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/input/Input.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      688 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/input/InputToggle.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.620059 sqlmesh-0.3.0/web/client/src/library/components/logo/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2292 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/logo/Spinner.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4637 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/logo/SqlMesh.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     8042 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/logo/Tobiko.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.624059 sqlmesh-0.3.0/web/client/src/library/components/modal/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1560 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/modal/Modal.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1953 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/modal/ModalConfirmation.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1447 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/modal/ModalDrawer.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.624059 sqlmesh-0.3.0/web/client/src/library/components/plan/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7537 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/Plan.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     6775 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/PlanActions.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1312 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/PlanBackfillDates.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10223 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/PlanChangePreview.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2368 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/PlanHeader.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    12736 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/PlanWizard.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     9926 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/PlanWizardStepOptions.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)    10478 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/context.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3444 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/help.spec.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2155 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/help.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2633 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/plan/hooks.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.624059 sqlmesh-0.3.0/web/client/src/library/components/progress/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      713 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/progress/Progress.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.624059 sqlmesh-0.3.0/web/client/src/library/components/root/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      526 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/root/Footer.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1921 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/root/Header.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      247 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/root/Main.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      443 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/root/Root.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.624059 sqlmesh-0.3.0/web/client/src/library/components/splitPane/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      788 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/splitPane/SplitPane.css
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      541 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/splitPane/SplitPane.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.624059 sqlmesh-0.3.0/web/client/src/library/components/tasksProgress/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     7318 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/tasksProgress/TasksProgress.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.624059 sqlmesh-0.3.0/web/client/src/library/components/toggle/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1453 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/library/components/toggle/Toggle.tsx
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1197 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/main.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/client/src/models/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1647 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/models/artifact.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3472 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/models/directory.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4190 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/models/environment.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1506 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/models/file.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      173 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/models/index.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      766 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/models/initial.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      200 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/routes.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/client/src/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)       35 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/tests/setup.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      541 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/tests/utils.tsx
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/client/src/types/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      467 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/types/enum.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      137 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/types/index.d.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/client/src/utils/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4102 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/utils/index.spec.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5246 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/utils/index.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/client/src/workers/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      113 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/workers/index.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/client/src/workers/sqlglot/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1105 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/workers/sqlglot/sqlglot.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1578 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/src/workers/sqlglot/worker.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5926 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/tailwind.config.js
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/client/tests/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      170 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/tests/initial.spec.ts
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1141 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/tsconfig.json
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1167 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/client/vite.config.ts
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/server/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.628059 sqlmesh-0.3.0/web/server/api/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/__init__.py
++drwxr-xr-x   0 circleci  (1001) circleci  (1002)        0 2023-04-07 17:18:31.632059 sqlmesh-0.3.0/web/server/api/endpoints/
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      710 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/__init__.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     4864 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/commands.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      819 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/context.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1858 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/directories.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      708 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/environments.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      637 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/events.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5528 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/files.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      969 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/models.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3806 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/api/endpoints/plan.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     3381 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/console.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     1374 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/main.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     5724 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/models.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)      260 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/openapi.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2401 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/settings.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2114 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/sse.py
++-rw-r--r--   0 circleci  (1001) circleci  (1002)     2419 2023-04-07 17:18:26.000000 sqlmesh-0.3.0/web/server/utils.py
+```
+
+### Comparing `sqlmesh-0.2.6/.circleci/config.yml` & `sqlmesh-0.3.0/.circleci/config.yml`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -15,14 +15,16 @@
+ jobs:
+   publish:
+     docker:
+       - image: cimg/python:3.10
+     resource_class: small
+     steps:
+       - checkout
++      - attach_workspace:
++          at: web/client
+       - run:
+           name: Publish Python package
+           command: make publish
+ 
+   gh-release:
+     docker:
+       - image: cimg/node:16.14
+```
+
+### Comparing `sqlmesh-0.2.6/.circleci/continue_config.yml` & `sqlmesh-0.3.0/.circleci/continue_config.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/.gitignore` & `sqlmesh-0.3.0/.gitignore`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/.pre-commit-config.yaml` & `sqlmesh-0.3.0/.pre-commit-config.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/LICENSE` & `sqlmesh-0.3.0/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/Makefile` & `sqlmesh-0.3.0/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/PKG-INFO` & `sqlmesh-0.3.0/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: sqlmesh
+-Version: 0.2.6
++Version: 0.3.0
+ Home-page: https://github.com/TobikoData/sqlmesh
+ Author: TobikoData Inc.
+ Author-email: engineering@tobikodata.com
+ License: Apache License 2.0
+ Classifier: Intended Audience :: Developers
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: Apache Software License
+```
+
+### Comparing `sqlmesh-0.2.6/README.md` & `sqlmesh-0.3.0/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docker-compose.yml` & `sqlmesh-0.3.0/docker-compose.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/comparisons.md` & `sqlmesh-0.3.0/docs/comparisons.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/architecture/serialization.md` & `sqlmesh-0.3.0/docs/concepts/architecture/serialization.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/architecture/snapshots.md` & `sqlmesh-0.3.0/docs/concepts/architecture/snapshots.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/audits.md` & `sqlmesh-0.3.0/docs/concepts/audits.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/environments.md` & `sqlmesh-0.3.0/docs/concepts/environments.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/glossary.md` & `sqlmesh-0.3.0/docs/concepts/glossary.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/macros.md` & `sqlmesh-0.3.0/docs/concepts/macros.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/models/model_kinds.md` & `sqlmesh-0.3.0/docs/concepts/models/model_kinds.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/models/overview.md` & `sqlmesh-0.3.0/docs/concepts/models/overview.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/models/python_models.md` & `sqlmesh-0.3.0/docs/concepts/models/python_models.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/models/seed_models.md` & `sqlmesh-0.3.0/docs/concepts/models/seed_models.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/models/sql_models.md` & `sqlmesh-0.3.0/docs/concepts/models/sql_models.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/overview.md` & `sqlmesh-0.3.0/docs/concepts/overview.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/plans/model_versioning.png` & `sqlmesh-0.3.0/docs/concepts/plans/model_versioning.png`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/plans.md` & `sqlmesh-0.3.0/docs/concepts/plans.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/concepts/tests.md` & `sqlmesh-0.3.0/docs/concepts/tests.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/development.md` & `sqlmesh-0.3.0/docs/development.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/guides/connections.md` & `sqlmesh-0.3.0/docs/guides/connections.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/guides/models.md` & `sqlmesh-0.3.0/docs/guides/models.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -87,17 +87,21 @@
+ [2] [Non-breaking] Backfill sqlmesh_example.example_incremental_model but not indirectly modified children: 2
+ Models needing backfill (missing dates):
+ └── sqlmesh_example.example_incremental_model: (2020-01-01, 2023-02-17)
+ Enter the backfill start date (eg. '1 year', '2020-01-01') or blank for the beginning of history: 
+ Enter the backfill end date (eg. '1 month ago', '2020-01-01') or blank to backfill up until now: 
+ Apply - Backfill Tables [y/n]: y
+ 
++sqlmesh_example__dev.example_incremental_model ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 1/1 • 0:00:00
++
+ All model batches have been executed successfully
+ 
+-sqlmesh_example.example_incremental_model ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 1/1 • 0:00:00
++Virtually Updating 'dev' ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 0:00:00
++
++The target environment has been updated successfully
+ ```
+ 
+ For more information, refer to [plans](../concepts/plans.md).
+ 
+ ## Reverting a change to a model
+ 
+ ---
+@@ -216,15 +220,15 @@
+         └── sqlmesh_example.example_incremental_model: (2020-01-01, 2023-02-17)
+         Enter the backfill start date (eg. '1 year', '2020-01-01') or blank for the beginning of history: 
+         Enter the backfill end date (eg. '1 month ago', '2020-01-01') or blank to backfill up until now: 
+         Apply - Backfill Tables [y/n]: y
+ 
+         All model batches have been executed successfully
+ 
+-        sqlmesh_example.example_incremental_model ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 1/1 • 0:00:00
++        sqlmesh_example__dev.example_incremental_model ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 1/1 • 0:00:00
+         ```
+ 
+     **Note:** If you have other files that reference the model you wish to delete, an error message will note the file(s) containing the reference. You will need to also delete these files in order to apply the change.
+ 
+ 3. Plan and apply your changes to production, and enter `y` for the Virtual Update. By default, the `sqlmesh plan` command targets your production environment:
+ 
+         ```
+```
+
+### Comparing `sqlmesh-0.2.6/docs/guides/projects.md` & `sqlmesh-0.3.0/docs/guides/projects.md`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -27,15 +27,15 @@
+ 1. To scaffold a project, it is recommended that you use a virtual environment by running the following commands:
+ 
+     ```bash
+     python -m venv .env
+     ```
+ 
+     ```bash
+-    source .env/bin/active
++    source .env/bin/activate
+     ```
+ 
+     ```bash
+     pip install sqlmesh
+     ```
+ 
+     **Note:** When using a virtual environment, you must ensure that it is activated first. You should see `(.env)` in your command line; if you don't, run `source .env/bin/activate` from your project directory to activate your environment.
+```
+
+### Comparing `sqlmesh-0.2.6/docs/guides/scheduling/airflow_successful_plan_apply.png` & `sqlmesh-0.3.0/docs/guides/scheduling/airflow_successful_plan_apply.png`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/guides/scheduling/airflow_successful_setup.png` & `sqlmesh-0.3.0/docs/guides/scheduling/airflow_successful_setup.png`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/guides/scheduling.md` & `sqlmesh-0.3.0/docs/guides/scheduling.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/guides/testing.md` & `sqlmesh-0.3.0/docs/guides/testing.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/index.md` & `sqlmesh-0.3.0/docs/index.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/integrations/airflow.md` & `sqlmesh-0.3.0/docs/integrations/airflow.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/integrations/dbt.md` & `sqlmesh-0.3.0/docs/integrations/dbt.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/integrations/engines.md` & `sqlmesh-0.3.0/docs/integrations/engines.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/integrations/github.md` & `sqlmesh-0.3.0/docs/integrations/github.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/prerequisites.md` & `sqlmesh-0.3.0/docs/prerequisites.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/quick_start.md` & `sqlmesh-0.3.0/docs/quick_start.md`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -137,15 +137,16 @@
+ └── Indirectly Modified Children:
+     └── sqlmesh_example.example_full_model
+ Models needing backfill (missing dates):
+ └── sqlmesh_example.example_incremental_model: (2020-01-01, 2023-03-22)
+ Enter the backfill start date (eg. '1 year', '2020-01-01') or blank for the beginning of history:
+ Enter the backfill end date (eg. '1 month ago', '2020-01-01') or blank to backfill up until now:
+ Apply - Backfill Tables [y/n]: y
+-sqlmesh_example.example_incremental_model ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 1/1 • 0:00:00
++
++sqlmesh_example__dev.example_incremental_model ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 1/1 • 0:00:00
+ 
+ All model batches have been executed successfully
+ 
+ Virtually Updating 'dev' ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.0% • 0:00:00
+ 
+ The target environment has been updated successfully
+ ```
+```
+
+### Comparing `sqlmesh-0.2.6/docs/reference/cli.md` & `sqlmesh-0.3.0/docs/reference/cli.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/reference/configuration.md` & `sqlmesh-0.3.0/docs/reference/configuration.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/reference/notebook.md` & `sqlmesh-0.3.0/docs/reference/notebook.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/reference/overview.md` & `sqlmesh-0.3.0/docs/reference/overview.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/docs/sqlmesh.png` & `sqlmesh-0.3.0/docs/sqlmesh.png`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/airflow/Dockerfile.template` & `sqlmesh-0.3.0/examples/airflow/Dockerfile.template`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/airflow/Makefile` & `sqlmesh-0.3.0/examples/airflow/Makefile`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/airflow/README.md` & `sqlmesh-0.3.0/examples/airflow/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/airflow/docker_compose_decorator.py` & `sqlmesh-0.3.0/examples/airflow/docker_compose_decorator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/airflow/spark_conf/hive-site.xml` & `sqlmesh-0.3.0/examples/airflow/spark_conf/hive-site.xml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/config.py` & `sqlmesh-0.3.0/examples/sushi/config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/helper.py` & `sqlmesh-0.3.0/examples/sushi/helper.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/macros/macros.py` & `sqlmesh-0.3.0/examples/sushi/macros/macros.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/models/customer_revenue_by_day.sql` & `sqlmesh-0.3.0/examples/sushi/models/customer_revenue_by_day.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/models/items.py` & `sqlmesh-0.3.0/examples/sushi/models/items.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/models/order_items.py` & `sqlmesh-0.3.0/examples/sushi/models/order_items.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/models/orders.py` & `sqlmesh-0.3.0/examples/sushi/models/orders.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/models/waiter_revenue_by_day.sql` & `sqlmesh-0.3.0/examples/sushi/models/waiter_revenue_by_day.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi/tests/test_customer_revenue_by_day.yaml` & `sqlmesh-0.3.0/examples/sushi/tests/test_customer_revenue_by_day.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi_dbt/macros/incremental.sql` & `sqlmesh-0.3.0/examples/sushi_dbt/macros/incremental.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi_dbt/models/customer_revenue_by_day.sql` & `sqlmesh-0.3.0/examples/sushi_dbt/models/customer_revenue_by_day.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi_dbt/models/waiter_revenue_by_day.sql` & `sqlmesh-0.3.0/examples/sushi_dbt/models/waiter_revenue_by_day.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi_dbt/packages/customers/dbt_project.yml` & `sqlmesh-0.3.0/examples/sushi_dbt/packages/customers/dbt_project.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi_dbt/profiles.yml` & `sqlmesh-0.3.0/examples/sushi_dbt/profiles.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi_dbt/seeds/items.csv` & `sqlmesh-0.3.0/examples/sushi_dbt/seeds/items.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi_dbt/seeds/order_items.csv` & `sqlmesh-0.3.0/examples/sushi_dbt/seeds/order_items.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/sushi_dbt/seeds/orders.csv` & `sqlmesh-0.3.0/examples/sushi_dbt/seeds/orders.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/macros/macros.py` & `sqlmesh-0.3.0/examples/wursthall/macros/macros.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/models/db/order_f.py` & `sqlmesh-0.3.0/examples/wursthall/models/db/order_f.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/models/db/order_item_f.sql` & `sqlmesh-0.3.0/examples/wursthall/models/db/order_item_f.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/models/src/customer_details.py` & `sqlmesh-0.3.0/examples/wursthall/models/src/customer_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/models/src/order_item_details.py` & `sqlmesh-0.3.0/examples/wursthall/models/src/order_item_details.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/models/src/shared.py` & `sqlmesh-0.3.0/examples/wursthall/models/src/shared.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/seeds/src/menu_item_details.csv` & `sqlmesh-0.3.0/examples/wursthall/seeds/src/menu_item_details.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/tests/test_customer_d.yaml` & `sqlmesh-0.3.0/examples/wursthall/tests/test_customer_d.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/examples/wursthall/tests/test_order_item_f.yaml` & `sqlmesh-0.3.0/examples/wursthall/tests/test_order_item_f.yaml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/mkdocs.yml` & `sqlmesh-0.3.0/mkdocs.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/pdoc/cli.py` & `sqlmesh-0.3.0/pdoc/cli.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/pytest.ini` & `sqlmesh-0.3.0/pytest.ini`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/setup.cfg` & `sqlmesh-0.3.0/setup.cfg`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/setup.py` & `sqlmesh-0.3.0/setup.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -31,15 +31,15 @@
+         "click",
+         "croniter",
+         "duckdb",
+         "dateparser",
+         "hyperscript",
+         "jinja2",
+         "pandas",
+-        "pydantic",
++        "pydantic>=1.9.1,<2.0.0",
+         "requests",
+         "rich",
+         "ruamel.yaml",
+         "sqlglot>=11.4.4",
+     ],
+     extras_require={
+         "dev": [
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/__init__.py` & `sqlmesh-0.3.0/sqlmesh/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/cli/__init__.py` & `sqlmesh-0.3.0/sqlmesh/cli/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/cli/example_project.py` & `sqlmesh-0.3.0/sqlmesh/cli/example_project.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/cli/main.py` & `sqlmesh-0.3.0/sqlmesh/cli/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/cli/options.py` & `sqlmesh-0.3.0/sqlmesh/cli/options.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/_typing.py` & `sqlmesh-0.3.0/sqlmesh/core/_typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/audit/builtin.py` & `sqlmesh-0.3.0/sqlmesh/core/audit/builtin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/audit/definition.py` & `sqlmesh-0.3.0/sqlmesh/core/audit/definition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/__init__.py` & `sqlmesh-0.3.0/sqlmesh/core/config/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/base.py` & `sqlmesh-0.3.0/sqlmesh/core/config/base.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -119,8 +119,13 @@
+                     getattr(self, field),
+                     getattr(other, field),
+                     self._FIELD_UPDATE_STRATEGY.get(field),
+                 )
+             else:
+                 updated_fields[field] = getattr(other, field)
+ 
+-        return self.copy(update=updated_fields)
++        # Assign each field to trigger assignment validators
++        updated = self.copy()
++        for field, value in updated_fields.items():
++            setattr(updated, field, value)
++
++        return updated
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/categorizer.py` & `sqlmesh-0.3.0/sqlmesh/core/config/categorizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/common.py` & `sqlmesh-0.3.0/sqlmesh/core/config/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/connection.py` & `sqlmesh-0.3.0/sqlmesh/core/config/connection.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/loader.py` & `sqlmesh-0.3.0/sqlmesh/core/config/loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/model.py` & `sqlmesh-0.3.0/sqlmesh/core/config/model.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/root.py` & `sqlmesh-0.3.0/sqlmesh/core/config/root.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/config/scheduler.py` & `sqlmesh-0.3.0/sqlmesh/core/config/scheduler.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/console.py` & `sqlmesh-0.3.0/sqlmesh/core/console.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -36,15 +36,17 @@
+ 
+ 
+ class Console(abc.ABC):
+     """Abstract base class for defining classes used for displaying information to the user and also interact
+     with them when their input is needed"""
+ 
+     @abc.abstractmethod
+-    def start_snapshot_progress(self, snapshot_name: str, total_batches: int) -> None:
++    def start_snapshot_progress(
++        self, snapshot: Snapshot, total_batches: int, environment: str
++    ) -> None:
+         """Indicates that a new load progress has begun."""
+ 
+     @abc.abstractmethod
+     def update_snapshot_progress(self, snapshot_name: str, num_batches: int) -> None:
+         """Update snapshot progress."""
+ 
+     @abc.abstractmethod
+@@ -134,33 +136,36 @@
+ 
+     def _prompt(self, message: str, **kwargs: t.Any) -> t.Any:
+         return Prompt.ask(message, console=self.console, **kwargs)
+ 
+     def _confirm(self, message: str, **kwargs: t.Any) -> bool:
+         return Confirm.ask(message, console=self.console, **kwargs)
+ 
+-    def start_snapshot_progress(self, snapshot_name: str, total_batches: int) -> None:
++    def start_snapshot_progress(
++        self, snapshot: Snapshot, total_batches: int, environment: str
++    ) -> None:
+         """Indicates that a new load progress has begun."""
+         if not self.evaluation_progress:
+             self.evaluation_progress = Progress(
+-                TextColumn("[bold blue]{task.fields[snapshot_name]}", justify="right"),
++                TextColumn("[bold blue]{task.fields[view_name]}", justify="right"),
+                 BarColumn(bar_width=40),
+                 "[progress.percentage]{task.percentage:>3.1f}%",
+                 "•",
+                 srich.SchedulerBatchColumn(),
+                 "•",
+                 TimeElapsedColumn(),
+                 console=self.console,
+             )
+             self.evaluation_progress.start()
+             self.evaluation_tasks = {}
+-        self.evaluation_tasks[snapshot_name] = (
++        view_name = snapshot.qualified_view_name.for_environment(environment)
++        self.evaluation_tasks[snapshot.name] = (
+             self.evaluation_progress.add_task(
+-                f"Running {snapshot_name}...",
+-                snapshot_name=snapshot_name,
++                f"Running {view_name}...",
++                view_name=view_name,
+                 total=total_batches,
+             ),
+             total_batches,
+         )
+ 
+     def update_snapshot_progress(self, snapshot_name: str, num_batches: int) -> None:
+         """Update snapshot progress."""
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/constants.py` & `sqlmesh-0.3.0/sqlmesh/core/constants.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/context.py` & `sqlmesh-0.3.0/sqlmesh/core/context.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -395,21 +395,22 @@
+         end: t.Optional[TimeLike] = None,
+         latest: t.Optional[TimeLike] = None,
+         skip_janitor: bool = False,
+     ) -> None:
+         """Run the entire dag through the scheduler.
+ 
+         Args:
+-            environment: The target environment to source model snapshots from. Default: prod.
++            environment: The target environment to source model snapshots from and virtually update. Default: prod.
+             start: The start of the interval to render.
+             end: The end of the interval to render.
+             latest: The latest time used for non incremental datasets.
+-            skip_janitor: Whether to skip the jantitor task.
++            skip_janitor: Whether to skip the janitor task.
+         """
+-        self.scheduler(environment=environment or c.PROD).run(start, end, latest)
++        environment = environment or c.PROD
++        self.scheduler(environment=environment).run(environment, start, end, latest)
+ 
+         if not skip_janitor:
+             self._run_janitor()
+ 
+     def get_model(self, name: str) -> t.Optional[Model]:
+         """Returns a model with the given name or None if a model with such name doesn't exist."""
+         return self._models.get(name)
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/context_diff.py` & `sqlmesh-0.3.0/sqlmesh/core/context_diff.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/dialect.py` & `sqlmesh-0.3.0/sqlmesh/core/dialect.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/__init__.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/_typing.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/_typing.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/base.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/base_spark.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/base_spark.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/bigquery.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/bigquery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/databricks_api.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/databricks_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/duckdb.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/duckdb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/redshift.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/redshift.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/shared.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/shared.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/snowflake.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/snowflake.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/engine_adapter/spark.py` & `sqlmesh-0.3.0/sqlmesh/core/engine_adapter/spark.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/environment.py` & `sqlmesh-0.3.0/sqlmesh/core/environment.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/hooks.py` & `sqlmesh-0.3.0/sqlmesh/core/hooks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/loader.py` & `sqlmesh-0.3.0/sqlmesh/core/loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/macros.py` & `sqlmesh-0.3.0/sqlmesh/core/macros.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/model/common.py` & `sqlmesh-0.3.0/sqlmesh/core/model/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/model/decorator.py` & `sqlmesh-0.3.0/sqlmesh/core/model/decorator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/model/definition.py` & `sqlmesh-0.3.0/sqlmesh/core/model/definition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/model/kind.py` & `sqlmesh-0.3.0/sqlmesh/core/model/kind.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -58,14 +58,22 @@
+         return self.name == ModelKindName.SEED
+ 
+     @property
+     def is_materialized(self) -> bool:
+         return self.name not in (ModelKindName.VIEW, ModelKindName.EMBEDDED)
+ 
+     @property
++    def supports_batch_size(self) -> bool:
++        """Whether or not this model supports the batch_size property."""
++        return self.name in (
++            ModelKindName.INCREMENTAL_BY_TIME_RANGE,
++            ModelKindName.INCREMENTAL_BY_UNIQUE_KEY,
++        )
++
++    @property
+     def only_latest(self) -> bool:
+         """Whether or not this model only cares about latest date to render."""
+         return self.name in (ModelKindName.VIEW, ModelKindName.FULL)
+ 
+     def to_expression(self, **kwargs: t.Any) -> d.ModelKind:
+         return d.ModelKind(this=self.name.value.upper(), **kwargs)
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/model/meta.py` & `sqlmesh-0.3.0/sqlmesh/core/model/meta.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -230,17 +230,20 @@
+                 f"Invalid batch size {batch_size}. The value should be greater than 0"
+             )
+         return batch_size
+ 
+     @root_validator
+     def _kind_validator(cls, values: t.Dict[str, t.Any]) -> t.Dict[str, t.Any]:
+         kind = values.get("kind")
+-        if kind and not kind.is_materialized:
+-            if values.get("partitioned_by_"):
+-                raise ValueError(f"partitioned_by field cannot be set for {kind} models")
++        if kind:
++            if not kind.is_materialized:
++                if values.get("partitioned_by_"):
++                    raise ValueError(f"partitioned_by field cannot be set for {kind} models")
++            if values.get("batch_size") and not kind.supports_batch_size:
++                raise ValueError(f"batch_size field cannot be set for {kind} models")
+         return values
+ 
+     @property
+     def time_column(self) -> t.Optional[TimeColumn]:
+         if isinstance(self.kind, IncrementalByTimeRangeKind):
+             return self.kind.time_column
+         return None
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/model/seed.py` & `sqlmesh-0.3.0/sqlmesh/core/model/seed.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/notification_target.py` & `sqlmesh-0.3.0/sqlmesh/core/notification_target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/plan/definition.py` & `sqlmesh-0.3.0/sqlmesh/core/plan/definition.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/plan/evaluator.py` & `sqlmesh-0.3.0/sqlmesh/core/plan/evaluator.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -69,15 +69,15 @@
+             scheduler = Scheduler(
+                 snapshots,
+                 self.snapshot_evaluator,
+                 self.state_sync,
+                 max_workers=self.backfill_concurrent_tasks,
+                 console=self.console,
+             )
+-            is_run_successful = scheduler.run(plan.start, plan.end, is_dev=plan.is_dev)
++            is_run_successful = scheduler.run(plan.environment.name, plan.start, plan.end)
+             if not is_run_successful:
+                 raise SQLMeshError("Plan application failed.")
+ 
+         self._promote(plan)
+ 
+         if not plan.requires_backfill:
+             self.console.log_success("Virtual Update executed successfully")
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/renderer.py` & `sqlmesh-0.3.0/sqlmesh/core/renderer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/scheduler.py` & `sqlmesh-0.3.0/sqlmesh/core/scheduler.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,13 +1,14 @@
+ from __future__ import annotations
+ 
+ import logging
+ import typing as t
+ from datetime import datetime
+ 
++from sqlmesh.core import constants as c
+ from sqlmesh.core.console import Console, get_console
+ from sqlmesh.core.snapshot import (
+     Snapshot,
+     SnapshotEvaluator,
+     SnapshotId,
+     SnapshotIdLike,
+ )
+@@ -134,44 +135,44 @@
+             **kwargs,
+         )
+         self.state_sync.add_interval(snapshot.snapshot_id, start, end, is_dev=is_dev)
+         self.console.update_snapshot_progress(snapshot.name, 1)
+ 
+     def run(
+         self,
++        environment: str,
+         start: t.Optional[TimeLike] = None,
+         end: t.Optional[TimeLike] = None,
+         latest: t.Optional[TimeLike] = None,
+-        is_dev: bool = False,
+     ) -> bool:
+         """Concurrently runs all snapshots in topological order.
+ 
+         Args:
++            environment: The environment the user is targeting when applying their change.
+             start: The start of the run. Defaults to the min model start date.
+             end: The end of the run. Defaults to now.
+             latest: The latest datetime to use for non-incremental queries.
+-            is_dev: Indicates whether the evaluation happens in the development mode and temporary
+-                tables / table clones should be used where applicable.
+ 
+         Returns:
+             True if the execution was successful and False otherwise.
+         """
+         validate_date_range(start, end)
+ 
++        is_dev = environment != c.PROD
+         latest = latest or now()
+         batches = self.batches(start, end, latest, is_dev=is_dev)
+         dag = self._dag(batches)
+ 
+         visited = set()
+         for snapshot, _ in dag.sorted():
+             if snapshot in visited:
+                 continue
+             visited.add(snapshot)
+             intervals = batches[snapshot]
+-            self.console.start_snapshot_progress(snapshot.name, len(intervals))
++            self.console.start_snapshot_progress(snapshot, len(intervals), environment)
+ 
+         def evaluate_node(node: SchedulingUnit) -> None:
+             assert latest
+             snapshot, (start, end) = node
+             self.evaluate(snapshot, start, end, latest, is_dev=is_dev)
+ 
+         with self.snapshot_evaluator.concurrent_context():
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/schema_diff.py` & `sqlmesh-0.3.0/sqlmesh/core/schema_diff.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/snapshot/__init__.py` & `sqlmesh-0.3.0/sqlmesh/core/snapshot/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/snapshot/categorizer.py` & `sqlmesh-0.3.0/sqlmesh/core/snapshot/categorizer.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/snapshot/definition.py` & `sqlmesh-0.3.0/sqlmesh/core/snapshot/definition.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -480,27 +480,14 @@
+ 
+         Returns:
+             A list of all the missing intervals as epoch timestamps.
+         """
+         if self.is_embedded_kind:
+             return []
+ 
+-        if self.is_full_kind or self.is_view_kind or self.is_seed_kind:
+-            latest = latest or now()
+-
+-            latest_start, latest_end = self._inclusive_exclusive(
+-                latest if is_date(latest) else self.model.cron_prev(self.model.cron_floor(latest)),
+-                latest,
+-            )
+-            # if the latest ts is stored in the last interval, nothing is missing
+-            # else returns the latest ts with the exclusive end ts.
+-            if self.intervals and self.intervals[-1][1] >= latest_end:
+-                return []
+-            return [(latest_start, latest_end)]
+-
+         missing = []
+         start_dt, end_dt = (to_datetime(ts) for ts in self._inclusive_exclusive(start, end))
+         dates = tuple(croniter_range(start_dt, end_dt, self.model.normalized_cron()))
+         size = len(dates) - 1
+ 
+         for i in range(size):
+             current_ts = to_timestamp(dates[i])
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/snapshot/evaluator.py` & `sqlmesh-0.3.0/sqlmesh/core/snapshot/evaluator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/state_sync/__init__.py` & `sqlmesh-0.3.0/sqlmesh/core/state_sync/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/state_sync/base.py` & `sqlmesh-0.3.0/sqlmesh/core/state_sync/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/state_sync/common.py` & `sqlmesh-0.3.0/sqlmesh/core/state_sync/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/state_sync/engine_adapter.py` & `sqlmesh-0.3.0/sqlmesh/core/state_sync/engine_adapter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/test.py` & `sqlmesh-0.3.0/sqlmesh/core/test.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/core/user.py` & `sqlmesh-0.3.0/sqlmesh/core/user.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/adapter.py` & `sqlmesh-0.3.0/sqlmesh/dbt/adapter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/basemodel.py` & `sqlmesh-0.3.0/sqlmesh/dbt/basemodel.py`
+
+ * *Files 7% similar despite different names*
+
+```diff
+@@ -3,14 +3,16 @@
+ import typing as t
+ from abc import abstractmethod
+ from enum import Enum
+ from pathlib import Path
+ 
+ from dbt.adapters.base import BaseRelation
+ from dbt.contracts.relation import RelationType
++from jinja2 import nodes
++from jinja2.exceptions import UndefinedError
+ from pydantic import Field, validator
+ from sqlglot.helper import ensure_list
+ 
+ from sqlmesh.core import constants as c
+ from sqlmesh.core import dialect as d
+ from sqlmesh.core.config.base import UpdateStrategy
+ from sqlmesh.core.model import Model
+@@ -136,14 +138,22 @@
+             "post-hook": UpdateStrategy.EXTEND,
+             "columns": UpdateStrategy.KEY_EXTEND,
+         },
+     }
+ 
+     @property
+     def all_sql(self) -> SqlStr:
++        return SqlStr("\n".join(self.pre_hook + [self.sql_no_config] + self.post_hook))
++
++    @property
++    def sql_no_config(self) -> SqlStr:
++        return SqlStr("")
++
++    @property
++    def sql_embedded_config(self) -> SqlStr:
+         return SqlStr("")
+ 
+     @property
+     def table_schema(self) -> str:
+         """
+         Get the full schema name
+         """
+@@ -186,21 +196,25 @@
+                 "database": self.database,
+                 "schema": self.table_schema,
+                 "identifier": self.table_name,
+                 "type": relation_type.value,
+             }
+         )
+ 
++    def attribute_dict(self) -> AttributeDict[str, t.Any]:
++        return AttributeDict(self.dict())
++
+     def sqlmesh_model_kwargs(self, model_context: DbtContext) -> t.Dict[str, t.Any]:
+         """Get common sqlmesh model parameters"""
+         jinja_macros = model_context.jinja_macros.trim(self._dependencies.macros)
+         jinja_macros.global_objs.update(
+             {
+                 "this": self.relation_info,
+                 "schema": self.table_schema,
++                "config": self.attribute_dict(),
+                 **model_context.jinja_globals,  # type: ignore
+             }
+         )
+ 
+         optional_kwargs: t.Dict[str, t.Any] = {}
+         for field in ("description", "owner", "stamp", "storage_format"):
+             field_val = getattr(self, field, None) or self.meta.get(field, None)
+@@ -216,15 +230,14 @@
+             "pre": [exp for hook in self.pre_hook for exp in d.parse(hook)],
+             "post": [exp for hook in self.post_hook for exp in d.parse(hook)],
+             **optional_kwargs,
+         }
+ 
+     def render_config(self: BMC, context: DbtContext) -> BMC:
+         rendered = super().render_config(context)
+-        rendered._dependencies = Dependencies(macros=extract_macro_references(rendered.all_sql))
+         rendered = ModelSqlRenderer(context, rendered).enriched_config
+ 
+         rendered_dependencies = rendered._dependencies
+         for dependency in rendered_dependencies.refs:
+             model = context.models.get(dependency)
+             if model and model.materialized == Materialization.EPHEMERAL:
+                 rendered._dependencies = rendered._dependencies.union(
+@@ -271,15 +284,15 @@
+         self._enriched_config: BMC = config.copy()
+ 
+         self._jinja_globals = create_builtin_globals(
+             jinja_macros=context.jinja_macros,
+             jinja_globals={
+                 **context.jinja_globals,
+                 **date_dict(c.EPOCH, c.EPOCH, c.EPOCH),
+-                "config": self._config,
++                "config": lambda *args, **kwargs: "",
+                 "ref": self._ref,
+                 "var": self._var,
+                 "source": self._source,
+                 "this": self.config.relation_info,
+                 "schema": self.config.table_schema,
+             },
+             engine_adapter=None,
+@@ -289,33 +302,67 @@
+         self._jinja_globals["adapter"] = ModelSqlRenderer.TrackingAdapter(
+             self,
+             context.jinja_macros,
+             jinja_globals=self._jinja_globals,
+             dialect=context.engine_adapter.dialect if context.engine_adapter else "",
+         )
+ 
++        self.jinja_env = self.context.jinja_macros.build_environment(**self._jinja_globals)
++
+     @property
+     def enriched_config(self) -> BMC:
+         if self._rendered_sql is None:
++            self._enriched_config = self._update_with_sql_config(self._enriched_config)
++            self._enriched_config._dependencies = Dependencies(
++                macros=extract_macro_references(self._enriched_config.all_sql)
++            )
+             self.render()
+             self._enriched_config._dependencies = self._enriched_config._dependencies.union(
+                 self._captured_dependencies
+             )
+         return self._enriched_config
+ 
+     def render(self) -> str:
+         if self._rendered_sql is None:
+-            registry = self.context.jinja_macros
+-            self._rendered_sql = (
+-                registry.build_environment(**self._jinja_globals)
+-                .from_string(self.config.all_sql)
+-                .render()
+-            )
++            try:
++                self._rendered_sql = self.jinja_env.from_string(
++                    self._enriched_config.all_sql
++                ).render()
++            except UndefinedError as e:
++                raise ConfigError(e.message)
+         return self._rendered_sql
+ 
++    def _update_with_sql_config(self, config: BMC) -> BMC:
++        def _extract_value(node: t.Any) -> t.Any:
++            if not isinstance(node, nodes.Node):
++                return node
++            if isinstance(node, nodes.Const):
++                return _extract_value(node.value)
++            if isinstance(node, nodes.TemplateData):
++                return _extract_value(node.data)
++            if isinstance(node, nodes.List):
++                return [_extract_value(val) for val in node.items]
++            if isinstance(node, nodes.Dict):
++                return {_extract_value(pair.key): _extract_value(pair.value) for pair in node.items}
++            if isinstance(node, nodes.Tuple):
++                return tuple(_extract_value(val) for val in node.items)
++
++            return self.jinja_env.from_string(nodes.Template([nodes.Output([node])])).render()
++
++        for call in self.jinja_env.parse(self._enriched_config.sql_embedded_config).find_all(
++            nodes.Call
++        ):
++            if not isinstance(call.node, nodes.Name) or call.node.name != "config":
++                continue
++            config = config.update_with(
++                {kwarg.key: _extract_value(kwarg.value) for kwarg in call.kwargs}
++            )
++
++        return config
++
+     def _ref(self, package_name: str, model_name: t.Optional[str] = None) -> BaseRelation:
+         if package_name in self.context.models:
+             relation = BaseRelation.create(**self.context.models[package_name].relation_info)
+         elif package_name in self.context.seeds:
+             relation = BaseRelation.create(**self.context.seeds[package_name].relation_info)
+         else:
+             raise ConfigError(
+@@ -337,21 +384,14 @@
+         if full_name not in self.context.sources:
+             raise ConfigError(
+                 f"Source '{full_name}' was not found for model '{self.config.table_name}'."
+             )
+         self._captured_dependencies.sources.add(full_name)
+         return BaseRelation.create(**self.context.sources[full_name].relation_info)
+ 
+-    def _config(self, *args: t.Any, **kwargs: t.Any) -> str:
+-        if args and isinstance(args[0], dict):
+-            self._enriched_config = self._enriched_config.update_with(args[0])
+-        if kwargs:
+-            self._enriched_config = self._enriched_config.update_with(kwargs)
+-        return ""
+-
+     class TrackingAdapter(ParsetimeAdapter):
+         def __init__(self, outer_self: ModelSqlRenderer, *args: t.Any, **kwargs: t.Any):
+             super().__init__(*args, **kwargs)
+             self.outer_self = outer_self
+             self.context = outer_self.context
+ 
+         def dispatch(self, name: str, package: t.Optional[str] = None) -> t.Callable:
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/builtin.py` & `sqlmesh-0.3.0/sqlmesh/dbt/builtin.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -139,18 +139,14 @@
+     return ""
+ 
+ 
+ def no_log(msg: str, info: bool = False) -> str:
+     return ""
+ 
+ 
+-def config(*args: t.Any, **kwargs: t.Any) -> str:
+-    return ""
+-
+-
+ def generate_var(variables: t.Dict[str, t.Any]) -> t.Callable:
+     def var(name: str, default: t.Optional[str] = None) -> str:
+         return variables.get(name, default)
+ 
+     return var
+ 
+ 
+@@ -248,15 +244,14 @@
+         return literal_eval(value)
+     except (ValueError, SyntaxError, MemoryError):
+         return value
+ 
+ 
+ BUILTIN_GLOBALS = {
+     "api": Api(),
+-    "config": config,
+     "env_var": env_var,
+     "exceptions": Exceptions(),
+     "flags": Flags(),
+     "fromjson": from_json,
+     "fromyaml": from_yaml,
+     "is_incremental": is_incremental,
+     "log": no_log,
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/column.py` & `sqlmesh-0.3.0/sqlmesh/dbt/column.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/common.py` & `sqlmesh-0.3.0/sqlmesh/dbt/common.py`
+
+ * *Files 4% similar despite different names*
+
+```diff
+@@ -186,14 +186,15 @@
+     pass
+ 
+ 
+ class DbtConfig(PydanticModel):
+     class Config:
+         extra = "allow"
+         allow_mutation = True
++        validate_assignment = True
+ 
+ 
+ class GeneralConfig(DbtConfig, BaseConfig):
+     """
+     General DBT configuration properties for models, sources, seeds, columns, etc.
+ 
+     Args:
+@@ -281,15 +282,17 @@
+                 for k in val:
+                     val[k] = render_value(val[k])
+ 
+             return val
+ 
+         rendered = self.copy(deep=True)
+         for name in rendered.__fields__:
+-            setattr(rendered, name, render_value(getattr(rendered, name)))
++            value = getattr(rendered, name)
++            if value is not None:
++                setattr(rendered, name, render_value(value))
+ 
+         return rendered
+ 
+ 
+ def parse_meta(v: t.Dict[str, t.Any]) -> t.Dict[str, t.Any]:
+     for key, value in v.items():
+         if isinstance(value, str):
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/loader.py` & `sqlmesh-0.3.0/sqlmesh/dbt/loader.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/model.py` & `sqlmesh-0.3.0/sqlmesh/dbt/model.py`
+
+ * *Files 9% similar despite different names*
+
+```diff
+@@ -72,14 +72,18 @@
+     materialized: Materialization = Materialization.VIEW
+     sql_header: t.Optional[str] = None
+     unique_key: t.Optional[t.List[str]] = None
+ 
+     # redshift
+     bind: t.Optional[bool] = None
+ 
++    # Private fields
++    _sql_embedded_config: t.Optional[SqlStr] = None
++    _sql_no_config: t.Optional[SqlStr] = None
++
+     @validator(
+         "unique_key",
+         "cluster_by",
+         "partitioned_by",
+         pre=True,
+     )
+     def _validate_list(cls, v: t.Union[str, t.List[str]]) -> t.List[str]:
+@@ -153,34 +157,55 @@
+                 f"unique_key ({collection_to_str(INCREMENTAL_BY_UNIQUE_KEY_STRATEGIES)}) configuration."
+             )
+         if materialization == Materialization.EPHEMERAL:
+             return ModelKind(name=ModelKindName.EMBEDDED)
+         raise ConfigError(f"{materialization.value} materialization not supported.")
+ 
+     @property
+-    def sql_no_config(self) -> str:
+-        matches = re.findall(r"{{\s*config\(", self.sql)
+-        if matches:
+-            config_macro_start = self.sql.index(matches[0])
+-            cursor = config_macro_start
++    def sql_no_config(self) -> SqlStr:
++        if self._sql_no_config is None:
++            self._sql_no_config = SqlStr("")
++            self._extract_sql_config()
++        return self._sql_no_config
++
++    @property
++    def sql_embedded_config(self) -> SqlStr:
++        if self._sql_embedded_config is None:
++            self._sql_embedded_config = SqlStr("")
++            self._extract_sql_config()
++        return self._sql_embedded_config
++
++    def _extract_sql_config(self) -> None:
++        def jinja_end(sql: str, start: int) -> int:
++            cursor = start
+             quote = None
+-            while cursor < len(self.sql):
+-                if self.sql[cursor] in ('"', "'"):
++            while cursor < len(sql):
++                if sql[cursor] in ('"', "'"):
+                     if quote is None:
+-                        quote = self.sql[cursor]
+-                    elif quote == self.sql[cursor]:
++                        quote = sql[cursor]
++                    elif quote == sql[cursor]:
+                         quote = None
+-                if self.sql[cursor : cursor + 2] == "}}" and quote is None:
+-                    return "".join([self.sql[:config_macro_start], self.sql[cursor + 2 :]])
++                if sql[cursor : cursor + 2] == "}}" and quote is None:
++                    return cursor + 2
+                 cursor += 1
+-        return self.sql
++            return cursor
+ 
+-    @property
+-    def all_sql(self) -> SqlStr:
+-        return SqlStr(";\n".join(self.pre_hook + [self.sql] + self.post_hook))
++        self._sql_no_config = self.sql
++        matches = re.findall(r"{{\s*config\s*\(", self._sql_no_config)
++        for match in matches:
++            start = self._sql_no_config.find(match)
++            if start == -1:
++                continue
++            extracted = self._sql_no_config[start : jinja_end(self._sql_no_config, start)]
++            self._sql_embedded_config = SqlStr(
++                "\n".join([self._sql_embedded_config, extracted])
++                if self._sql_embedded_config
++                else extracted
++            )
++            self._sql_no_config = SqlStr(self._sql_no_config.replace(extracted, "").strip())
+ 
+     def to_sqlmesh(self, context: DbtContext) -> Model:
+         """Converts the dbt model into a SQLMesh model."""
+         model_context = self._context_for_dependencies(context, self._dependencies)
+         expressions = d.parse(self.sql_no_config)
+         if not expressions:
+             raise ConfigError(f"Model '{self.table_name}' must have a query.")
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/package.py` & `sqlmesh-0.3.0/sqlmesh/dbt/package.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/profile.py` & `sqlmesh-0.3.0/sqlmesh/dbt/profile.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/project.py` & `sqlmesh-0.3.0/sqlmesh/dbt/project.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/seed.py` & `sqlmesh-0.3.0/sqlmesh/dbt/seed.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/source.py` & `sqlmesh-0.3.0/sqlmesh/dbt/source.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -46,14 +46,17 @@
+ 
+     @validator("quoting", pre=True)
+     def _validate_quoting(cls, v: t.Dict[str, t.Any]) -> t.Dict[str, bool]:
+         return {key: ensure_bool(val) for key, val in v.items()}
+ 
+     @validator("columns", pre=True)
+     def _validate_columns(cls, v: t.Any) -> t.Dict[str, ColumnConfig]:
++        if not isinstance(v, dict) or all(isinstance(col, ColumnConfig) for col in v.values()):
++            return v
++
+         return yaml_to_columns(v)
+ 
+     _FIELD_UPDATE_STRATEGY: t.ClassVar[t.Dict[str, UpdateStrategy]] = {
+         **GeneralConfig._FIELD_UPDATE_STRATEGY,
+         **{"columns": UpdateStrategy.KEY_EXTEND},
+     }
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/dbt/target.py` & `sqlmesh-0.3.0/sqlmesh/dbt/target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/engines/commands.py` & `sqlmesh-0.3.0/sqlmesh/engines/commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/engines/spark/app.py` & `sqlmesh-0.3.0/sqlmesh/engines/spark/app.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/engines/spark/db_api/spark_session.py` & `sqlmesh-0.3.0/sqlmesh/engines/spark/db_api/spark_session.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/integrations/github/notification_operator_provider.py` & `sqlmesh-0.3.0/sqlmesh/integrations/github/notification_operator_provider.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/integrations/github/notification_target.py` & `sqlmesh-0.3.0/sqlmesh/integrations/github/notification_target.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/integrations/github/shared.py` & `sqlmesh-0.3.0/sqlmesh/integrations/github/shared.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/magics.py` & `sqlmesh-0.3.0/sqlmesh/magics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/api.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/client.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/common.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/common.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/dag_generator.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/dag_generator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/hooks/bigquery.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/hooks/bigquery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/hooks/redshift.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/hooks/redshift.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/integration.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/integration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/bigquery.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/bigquery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/databricks.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/databricks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/hwm_sensor.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/hwm_sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/notification.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/notification.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/redshift.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/redshift.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/snowflake.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/snowflake.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/spark_submit.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/spark_submit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/operators/targets.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/operators/targets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/plan.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/plan.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/plugin.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/plugin.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/state_sync.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/state_sync.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/schedulers/airflow/util.py` & `sqlmesh-0.3.0/sqlmesh/schedulers/airflow/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/__init__.py` & `sqlmesh-0.3.0/sqlmesh/utils/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/concurrency.py` & `sqlmesh-0.3.0/sqlmesh/utils/concurrency.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/connection_pool.py` & `sqlmesh-0.3.0/sqlmesh/utils/connection_pool.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/dag.py` & `sqlmesh-0.3.0/sqlmesh/utils/dag.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/date.py` & `sqlmesh-0.3.0/sqlmesh/utils/date.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/errors.py` & `sqlmesh-0.3.0/sqlmesh/utils/errors.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/jinja.py` & `sqlmesh-0.3.0/sqlmesh/utils/jinja.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -117,15 +117,15 @@
+         return call_name(node.node) + (node.attr,)
+     if isinstance(node, (nodes.Getitem, nodes.Call)):
+         return call_name(node.node)
+     return ()
+ 
+ 
+ def render_jinja(query: str, methods: t.Optional[t.Dict[str, t.Any]] = None) -> str:
+-    return ENVIRONMENT.from_string(query).render(methods)
++    return ENVIRONMENT.from_string(query).render(methods or {})
+ 
+ 
+ def find_call_names(node: nodes.Node, vars_in_scope: t.Set[str]) -> t.Iterator[t.Tuple[str, ...]]:
+     vars_in_scope = vars_in_scope.copy()
+     for child_node in node.iter_child_nodes():
+         if "target" in child_node.fields:
+             target = getattr(child_node, "target")
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/metaprogramming.py` & `sqlmesh-0.3.0/sqlmesh/utils/metaprogramming.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/pandas.py` & `sqlmesh-0.3.0/sqlmesh/utils/pandas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/pydantic.py` & `sqlmesh-0.3.0/sqlmesh/utils/pydantic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/rich.py` & `sqlmesh-0.3.0/sqlmesh/utils/rich.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh/utils/yaml.py` & `sqlmesh-0.3.0/sqlmesh/utils/yaml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/sqlmesh.egg-info/PKG-INFO` & `sqlmesh-0.3.0/sqlmesh.egg-info/PKG-INFO`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: sqlmesh
+-Version: 0.2.6
++Version: 0.3.0
+ Home-page: https://github.com/TobikoData/sqlmesh
+ Author: TobikoData Inc.
+ Author-email: engineering@tobikodata.com
+ License: Apache License 2.0
+ Classifier: Intended Audience :: Developers
+ Classifier: Intended Audience :: Science/Research
+ Classifier: License :: OSI Approved :: Apache Software License
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh.egg-info/SOURCES.txt` & `sqlmesh-0.3.0/sqlmesh.egg-info/SOURCES.txt`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -387,14 +387,30 @@
+ web/client/package-lock.json
+ web/client/package.json
+ web/client/playwright.config.ts
+ web/client/postcss.config.js
+ web/client/tailwind.config.js
+ web/client/tsconfig.json
+ web/client/vite.config.ts
++web/client/dist/index.html
++web/client/dist/assets/CircularStd-Black-52659624.otf
++web/client/dist/assets/CircularStd-Bold-0e6c076d.otf
++web/client/dist/assets/CircularStd-Medium-2f373e53.otf
++web/client/dist/assets/Graph-9e2d4101.css
++web/client/dist/assets/Graph-fac2719f.js
++web/client/dist/assets/Plan-01476deb.js
++web/client/dist/assets/Publico-Black-e6bd2ea2.otf
++web/client/dist/assets/Publico-Bold-c79acd56.otf
++web/client/dist/assets/Publico-Medium-01b4a891.otf
++web/client/dist/assets/TasksProgress-2fbc68a7.js
++web/client/dist/assets/_commonjs-dynamic-modules-302442b1.js
++web/client/dist/assets/index-d4a59988.js
++web/client/dist/assets/index-e180bc61.css
++web/client/dist/assets/worker-0959ec7c.js
++web/client/dist/favicons/favicon.ico
+ web/client/public/favicons/favicon.ico
+ web/client/src/index.css
+ web/client/src/main.tsx
+ web/client/src/routes.tsx
+ web/client/src/api/channels.ts
+ web/client/src/api/index.ts
+ web/client/src/api/instance.ts
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh.egg-info/requires.txt` & `sqlmesh-0.3.0/sqlmesh.egg-info/requires.txt`
+
+ * *Files 12% similar despite different names*
+
+```diff
+@@ -2,15 +2,15 @@
+ click
+ croniter
+ duckdb
+ dateparser
+ hyperscript
+ jinja2
+ pandas
+-pydantic
++pydantic<2.0.0,>=1.9.1
+ requests
+ rich
+ ruamel.yaml
+ sqlglot>=11.4.4
+ 
+ [bigquery]
+ google-cloud-bigquery[pandas]
+```
+
+### Comparing `sqlmesh-0.2.6/sqlmesh.svg` & `sqlmesh-0.3.0/sqlmesh.svg`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/conftest.py` & `sqlmesh-0.3.0/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/engine_adapter/test_base.py` & `sqlmesh-0.3.0/tests/core/engine_adapter/test_base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/engine_adapter/test_base_spark.py` & `sqlmesh-0.3.0/tests/core/engine_adapter/test_base_spark.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/engine_adapter/test_bigquery.py` & `sqlmesh-0.3.0/tests/core/engine_adapter/test_bigquery.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/engine_adapter/test_databricks.py` & `sqlmesh-0.3.0/tests/core/engine_adapter/test_databricks.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/engine_adapter/test_duckdb.py` & `sqlmesh-0.3.0/tests/core/engine_adapter/test_duckdb.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/engine_adapter/test_redshift.py` & `sqlmesh-0.3.0/tests/core/engine_adapter/test_redshift.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/engine_adapter/test_spark.py` & `sqlmesh-0.3.0/tests/core/engine_adapter/test_spark.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_audit.py` & `sqlmesh-0.3.0/tests/core/test_audit.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_config.py` & `sqlmesh-0.3.0/tests/core/test_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_connection_config.py` & `sqlmesh-0.3.0/tests/core/test_connection_config.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_context.py` & `sqlmesh-0.3.0/tests/core/test_context.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_dialect.py` & `sqlmesh-0.3.0/tests/core/test_dialect.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_integration.py` & `sqlmesh-0.3.0/tests/core/test_integration.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -220,14 +220,15 @@
+     validate_model_kind_change(to, sushi_context, environment, logical=logical)
+ 
+ 
+ def change_model_kind(context: Context, kind: ModelKindName):
+     if kind in (ModelKindName.VIEW, ModelKindName.EMBEDDED, ModelKindName.FULL):
+         context.upsert_model(
+             "sushi.items",
++            batch_size=None,
+             partitioned_by=[],
+             audits=[],
+         )
+     context.upsert_model("sushi.items", kind=ModelKind(name=kind))
+ 
+ 
+ def validate_model_kind_change(
+```
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_macros.py` & `sqlmesh-0.3.0/tests/core/test_macros.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_model.py` & `sqlmesh-0.3.0/tests/core/test_model.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -962,7 +962,29 @@
+               (5, 1, '2020-01-05'),
+               (6, 1, '2020-01-06'),
+               (7, 1, '2020-01-07')) AS t(id, item_id, ds)
+           ) AS model1
+         ) AS model2
+         """,
+     )
++
++
++def test_batch_size_validation():
++    expressions = parse(
++        """
++        MODEL (
++            name db.seed,
++            kind SEED (
++              path '../seeds/waiter_names.csv',
++              batch_size 100,
++            ),
++            columns (
++              id double,
++              alias varchar
++            ),
++            batch_size 100,
++        );
++    """
++    )
++
++    with pytest.raises(ConfigError) as ex:
++        load_model(expressions, path=Path("./examples/sushi/models/test_model.sql"))
+```
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_plan.py` & `sqlmesh-0.3.0/tests/core/test_plan.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_plan_evaluator.py` & `sqlmesh-0.3.0/tests/core/test_plan_evaluator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_scheduler.py` & `sqlmesh-0.3.0/tests/core/test_scheduler.py`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,11 @@
+ import pytest
+ from sqlglot import parse_one
+ 
++from sqlmesh.core import constants as c
+ from sqlmesh.core.context import Context
+ from sqlmesh.core.scheduler import Scheduler
+ from sqlmesh.core.snapshot import Snapshot, SnapshotFingerprint
+ from sqlmesh.utils.date import to_datetime
+ 
+ 
+ @pytest.fixture
+@@ -112,14 +113,15 @@
+     ]
+ 
+ 
+ def test_run(sushi_context_pre_scheduling: Context, scheduler: Scheduler):
+     adapter = sushi_context_pre_scheduling.engine_adapter
+     snapshot = sushi_context_pre_scheduling.snapshots["sushi.items"]
+     scheduler.run(
++        c.PROD,
+         "2022-01-01",
+         "2022-01-03",
+         "2022-01-30",
+     )
+ 
+     assert (
+         adapter.fetchone(
+```
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_schema_diff.py` & `sqlmesh-0.3.0/tests/core/test_schema_diff.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_seed.py` & `sqlmesh-0.3.0/tests/core/test_seed.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_snapshot.py` & `sqlmesh-0.3.0/tests/core/test_snapshot.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -6,17 +6,17 @@
+ from pytest_mock.plugin import MockerFixture
+ from sqlglot import exp, parse, parse_one, to_column
+ 
+ from sqlmesh.core.config import AutoCategorizationMode, CategorizerConfig
+ from sqlmesh.core.model import (
+     IncrementalByTimeRangeKind,
+     Model,
+-    ModelKind,
+-    ModelKindName,
++    Seed,
+     SeedKind,
++    SeedModel,
+     SqlModel,
+     create_seed_model,
+     load_model,
+ )
+ from sqlmesh.core.snapshot import (
+     Snapshot,
+     SnapshotChangeCategory,
+@@ -50,28 +50,14 @@
+         batch_size=30,
+         start="2020-01-01",
+         query=parse_one("SELECT @EACH([1, 2], x -> x), ds FROM parent.tbl"),
+     )
+ 
+ 
+ @pytest.fixture
+-def full_refresh_model():
+-    return SqlModel(
+-        name="fr_model",
+-        kind=ModelKind(name=ModelKindName.FULL),
+-        owner="owner",
+-        dialect="spark",
+-        cron="1 0 * * *",
+-        batch_size=30,
+-        start="2020-01-01",
+-        query=parse_one("SELECT @EACH([1, 2], x -> x), ds FROM parent.tbl"),
+-    )
+-
+-
+-@pytest.fixture
+ def snapshot(
+     model: Model,
+     parent_model: Model,
+     monkeypatch: MonkeyPatch,
+     mocker: MockerFixture,
+     make_snapshot,
+ ):
+@@ -82,33 +68,14 @@
+         model,
+         models={parent_model.name: parent_model, model.name: model},
+     )
+     snapshot.version = snapshot.fingerprint
+     return snapshot
+ 
+ 
+-@pytest.fixture
+-def full_refresh_snapshot(
+-    full_refresh_model: Model,
+-    parent_model: Model,
+-    monkeypatch: MonkeyPatch,
+-    mocker: MockerFixture,
+-    make_snapshot,
+-):
+-    mock = mocker.Mock()
+-    mock.return_value = to_datetime("2022-09-23T00:12:53+00:00")
+-    monkeypatch.setattr("sqlmesh.utils.date.now", mock)
+-    full_refresh_snapshot = make_snapshot(
+-        full_refresh_model,
+-        models={parent_model.name: parent_model, full_refresh_model.name: full_refresh_model},
+-    )
+-    full_refresh_snapshot.version = full_refresh_snapshot.fingerprint
+-    return full_refresh_snapshot
+-
+-
+ def test_json(snapshot: Snapshot):
+     assert json.loads(snapshot.json()) == {
+         "created_ts": 1663891973000,
+         "ttl": "in 1 week",
+         "fingerprint": snapshot.fingerprint,
+         "physical_schema": "sqlmesh",
+         "intervals": [],
+@@ -238,39 +205,30 @@
+     ]
+     assert snapshot.missing_intervals("2020-01-03 00:00:01", "2020-01-05 00:00:02") == []
+     assert snapshot.missing_intervals("2020-01-03 00:00:01", "2020-01-07 00:00:02") == [
+         (to_timestamp("2020-01-06"), to_timestamp("2020-01-07")),
+     ]
+ 
+ 
+-def test_missing_interval_latest(
+-    full_refresh_snapshot: Snapshot, monkeypatch: MonkeyPatch, mocker: MockerFixture
+-):
+-    mock = mocker.Mock()
+-    mock.return_value = to_datetime("2020-01-05T00:12:53+00:00")
+-    monkeypatch.setattr("sqlmesh.core.snapshot.definition.now", mock)
+-    full_refresh_snapshot.add_interval("2020-01-01", "2020-01-01")
+-    assert full_refresh_snapshot.missing_intervals("2020-01-01", "2020-01-01", "2020-01-01") == []
+-    assert full_refresh_snapshot.missing_intervals("2020-01-02", "2020-01-02", "2020-01-02") == [
+-        (to_timestamp("2020-01-02"), to_timestamp("2020-01-03"))
+-    ]
+-    assert full_refresh_snapshot.missing_intervals("2020-01-02", "2020-01-03", "2020-01-03") == [
+-        (to_timestamp("2020-01-03"), to_timestamp("2020-01-04"))
+-    ]
+-    assert full_refresh_snapshot.missing_intervals("2020-01-02", "2020-01-03", "2020-01-04") == [
+-        (to_timestamp("2020-01-04"), to_timestamp("2020-01-05"))
++def test_seed_intervals(make_snapshot):
++    snapshot_a = make_snapshot(
++        SeedModel(
++            name="a",
++            kind=SeedKind(path="./path/to/seed"),
++            seed=Seed(content="content"),
++            depends_on=set(),
++        )
++    )
++
++    assert snapshot_a.missing_intervals("2020-01-01", "2020-01-01") == [
++        (to_timestamp("2020-01-01"), to_timestamp("2020-01-02"))
+     ]
+-    assert full_refresh_snapshot.missing_intervals(
+-        "2020-01-02", "2020-01-03", "2020-01-03 01:00:00"
+-    ) == [(to_timestamp("2020-01-02"), to_timestamp("2020-01-03"))]
+-    assert full_refresh_snapshot.missing_intervals(
+-        "2020-01-02", "2020-01-03", "2020-01-04 23:59:59"
+-    ) == [(to_timestamp("2020-01-03"), to_timestamp("2020-01-04"))]
+-    assert full_refresh_snapshot.missing_intervals("2020-01-02", "2020-01-03") == [
+-        (to_timestamp("2020-01-04"), to_timestamp("2020-01-05"))
++    snapshot_a.add_interval("2020-01-01", "2020-01-01")
++    assert snapshot_a.missing_intervals("2020-01-02", "2020-01-02") == [
++        (to_timestamp("2020-01-02"), to_timestamp("2020-01-03"))
+     ]
+ 
+ 
+ def test_remove_intervals(snapshot: Snapshot):
+     snapshot.add_interval("2020-01-01", "2020-01-01")
+     snapshot.remove_interval("2020-01-01", "2020-01-01")
+     assert snapshot.intervals == []
+```
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_snapshot_evaluator.py` & `sqlmesh-0.3.0/tests/core/test_snapshot_evaluator.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/core/test_state_sync.py` & `sqlmesh-0.3.0/tests/core/test_state_sync.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/dbt/conftest.py` & `sqlmesh-0.3.0/tests/dbt/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/dbt/test_adapter.py` & `sqlmesh-0.3.0/tests/dbt/test_adapter.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/dbt/test_config.py` & `sqlmesh-0.3.0/tests/dbt/test_config.py`
+
+ * *Files 6% similar despite different names*
+
+```diff
+@@ -1,14 +1,13 @@
+ import typing as t
+ from pathlib import Path
+ 
+ import pytest
+ 
+ from sqlmesh.core.model import SqlModel
+-from sqlmesh.dbt.basemodel import Dependencies
+ from sqlmesh.dbt.common import DbtContext
+ from sqlmesh.dbt.model import Materialization, ModelConfig
+ from sqlmesh.dbt.project import Project
+ from sqlmesh.dbt.source import SourceConfig
+ from sqlmesh.dbt.target import (
+     BigQueryConfig,
+     DatabricksConfig,
+@@ -108,15 +107,14 @@
+         description="test model",
+         sql="SELECT 1 AS a FROM foo",
+         start="Jan 1 2023",
+         partitioned_by=["a"],
+         cron="@hourly",
+         meta={"stamp": "bar", "dialect": "duckdb"},
+         owner="Sally",
+-        batch_size=2,
+     )
+     context = DbtContext(project_name="Foo")
+     context.target = DuckDbConfig(schema="foo")
+     model = model_config.to_sqlmesh(context)
+ 
+     assert isinstance(model, SqlModel)
+     assert model.name == "database.schema_custom.model"
+@@ -124,85 +122,93 @@
+     assert model.query.sql() == "SELECT 1 AS a FROM foo"
+     assert model.start == "Jan 1 2023"
+     assert model.partitioned_by == ["a"]
+     assert model.cron == "@hourly"
+     assert model.stamp == "bar"
+     assert model.dialect == "duckdb"
+     assert model.owner == "Sally"
+-    assert model.batch_size == 2
+ 
+ 
+ def test_model_config_sql_no_config():
++    context = DbtContext()
+     assert (
+         ModelConfig(
+             sql="""{{
+   config(
+     materialized='table',
+     incremental_strategy='delete+"insert'
+   )
+ }}
+ query"""
+-        ).sql_no_config.strip()
++        )
++        .render_config(context)
++        .sql_no_config.strip()
+         == "query"
+     )
+ 
++    context.variables = {"new": "old"}
+     assert (
+         ModelConfig(
+             sql="""{{
+   config(
+-    materialized='"table"',
++    materialized='table',
+     incremental_strategy='delete+insert',
+-    post_hook=" '{{ macro_call(this) }}' "
++    post_hook=" '{{ var('new') }}' "
+   )
+ }}
+ query"""
+-        ).sql_no_config.strip()
++        )
++        .render_config(context)
++        .sql_no_config.strip()
+         == "query"
+     )
+ 
+     assert (
+         ModelConfig(
+-            sql="""before {{config(materialized='table', post_hook=" {{ macro_call(this) }} ")}} after"""
+-        ).sql_no_config
++            sql="""before {{config(materialized='table', post_hook=" {{ var('new') }} ")}} after"""
++        )
++        .render_config(context)
++        .sql_no_config.strip()
+         == "before  after"
+     )
+ 
+ 
+ def test_variables(assert_exp_eq, sushi_test_project):
+     # Case 1: using an undefined variable without a default value
+     defined_variables = {}
+-    model_variables = {"foo"}
+-
+-    model_config = ModelConfig(alias="test", sql="SELECT {{ var('foo') }}")
+-    model_config._dependencies = Dependencies(variables=model_variables)
+ 
+     context = sushi_test_project.context
+     context.variables = defined_variables
+ 
++    model_config = ModelConfig(alias="test", sql="SELECT {{ var('foo') }}")
++
+     kwargs = {"context": context}
+ 
+     with pytest.raises(ConfigError, match=r".*Variable 'foo' was not found.*"):
+-        model_config = model_config.render_config(context)
++        rendered = model_config.render_config(context)
+         model_config.to_sqlmesh(**kwargs)
+ 
+     # Case 2: using a defined variable without a default value
+     defined_variables["foo"] = 6
+     context.variables = defined_variables
+-    assert_exp_eq(model_config.to_sqlmesh(**kwargs).render_query(), 'SELECT 6 AS "6"')
++    rendered = model_config.render_config(context)
++    assert_exp_eq(rendered.to_sqlmesh(**kwargs).render_query(), 'SELECT 6 AS "6"')
+ 
+     # Case 3: using a defined variable with a default value
+     model_config.sql = "SELECT {{ var('foo', 5) }}"
+ 
+-    assert_exp_eq(model_config.to_sqlmesh(**kwargs).render_query(), 'SELECT 6 AS "6"')
++    rendered = model_config.render_config(context)
++    assert_exp_eq(rendered.to_sqlmesh(**kwargs).render_query(), 'SELECT 6 AS "6"')
+ 
+     # Case 4: using an undefined variable with a default value
+     del defined_variables["foo"]
+     context.variables = defined_variables
+ 
+-    assert_exp_eq(model_config.to_sqlmesh(**kwargs).render_query(), 'SELECT 5 AS "5"')
++    rendered = model_config.render_config(context)
++    assert_exp_eq(rendered.to_sqlmesh(**kwargs).render_query(), 'SELECT 5 AS "5"')
+ 
+     # Finally, check that variable scoping & overwriting (some_var) works as expected
+     expected_sushi_variables = {
+         "top_waiters:limit": 10,
+         "top_waiters:revenue": "revenue",
+         "customers:boo": ["a", "b"],
+     }
+```
+
+### Comparing `sqlmesh-0.2.6/tests/dbt/test_transformation.py` & `sqlmesh-0.3.0/tests/dbt/test_transformation.py`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -208,14 +208,40 @@
+ 
+     sqlmesh_model = rendered.to_sqlmesh(context)
+     assert str(sqlmesh_model.query) == model.sql
+     assert str(sqlmesh_model.render_query()) == "SELECT * FROM raw.baz AS baz"
+     assert sqlmesh_model.columns_to_types == column_types_to_sqlmesh(rendered.columns)
+ 
+ 
++def test_config_containing_missing_dependency():
++    context = DbtContext()
++    model = ModelConfig(sql="{{ config(pre_hook=\"{{ print(ref('bar')) }}\") }} SELECT 1 FROM a")
++    with pytest.raises(ConfigError, match="'bar' was not found"):
++        model.render_config(context)
++
++    model = ModelConfig(sql='{{ config(pre_hook="{{ get_table_name() }}") }} SELECT 1 FROM a')
++    with pytest.raises(ConfigError, match="get_table_name"):
++        model.render_config(context)
++
++    model = ModelConfig(sql="{{ config(alias='{{ get_table_name() }}') }} SELECT 1 FROM a")
++    rendered = model.render_config(context)
++    assert rendered.alias == "{{ get_table_name() }}"
++    assert "get_table_name" not in [macro.name for macro in rendered._dependencies.macros]
++
++
++def test_config_containing_method():
++    context = DbtContext()
++    context.jinja_macros.global_objs.update({"get_table_name": lambda: "foo"})
++    model = ModelConfig(sql="{{ config(alias=get_table_name()) }} SELECT 1 FROM a")
++
++    rendered = model.render_config(context)
++    assert rendered.alias == "foo"
++    assert "get_table_name" not in [macro.name for macro in rendered._dependencies.macros]
++
++
+ @pytest.mark.parametrize("model", ["sushi.waiters", "sushi.waiter_names"])
+ def test_hooks(capsys, sushi_test_dbt_context: Context, model: str):
+     waiters = sushi_test_dbt_context.models[model]
+     execution_context = ExecutionContext(sushi_test_dbt_context.engine_adapter, {}, False)
+     capsys.readouterr()
+ 
+     waiters.run_pre_hooks(execution_context)
+```
+
+### Comparing `sqlmesh-0.2.6/tests/engines/spark/test_db_api.py` & `sqlmesh-0.3.0/tests/engines/spark/test_db_api.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/dbt_project.yml` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/dbt_project.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/logs/dbt.log.legacy` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/logs/dbt.log.legacy`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/macros/incremental.sql` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/macros/incremental.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/models/waiter_revenue_by_day.sql` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/models/waiter_revenue_by_day.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/dbt_project.yml` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/dbt_project.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/packages/customers/models/customer_revenue_by_day.sql` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/packages/customers/models/customer_revenue_by_day.sql`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/profiles.yml` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/profiles.yml`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/seed_sources.py` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/seed_sources.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/source_data/items.csv` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/source_data/items.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/source_data/order_items.csv` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/source_data/order_items.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/fixtures/dbt/sushi_test/source_data/orders.csv` & `sqlmesh-0.3.0/tests/fixtures/dbt/sushi_test/source_data/orders.csv`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/integrations/github/fixtures/pull_request_review.json` & `sqlmesh-0.3.0/tests/integrations/github/fixtures/pull_request_review.json`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/schedulers/airflow/conftest.py` & `sqlmesh-0.3.0/tests/schedulers/airflow/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/schedulers/airflow/operators/test_hwm_sensor.py` & `sqlmesh-0.3.0/tests/schedulers/airflow/operators/test_hwm_sensor.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/schedulers/airflow/operators/test_targets.py` & `sqlmesh-0.3.0/tests/schedulers/airflow/operators/test_targets.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/schedulers/airflow/test_client.py` & `sqlmesh-0.3.0/tests/schedulers/airflow/test_client.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/schedulers/airflow/test_end_to_end.py` & `sqlmesh-0.3.0/tests/schedulers/airflow/test_end_to_end.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/schedulers/airflow/test_integration.py` & `sqlmesh-0.3.0/tests/schedulers/airflow/test_integration.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/schedulers/airflow/test_plan.py` & `sqlmesh-0.3.0/tests/schedulers/airflow/test_plan.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_concurrency.py` & `sqlmesh-0.3.0/tests/utils/test_concurrency.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_connection_pool.py` & `sqlmesh-0.3.0/tests/utils/test_connection_pool.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_dag.py` & `sqlmesh-0.3.0/tests/utils/test_dag.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_date.py` & `sqlmesh-0.3.0/tests/utils/test_date.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_filesystem.py` & `sqlmesh-0.3.0/tests/utils/test_filesystem.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_jinja.py` & `sqlmesh-0.3.0/tests/utils/test_jinja.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_metaprogramming.py` & `sqlmesh-0.3.0/tests/utils/test_metaprogramming.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_pandas.py` & `sqlmesh-0.3.0/tests/utils/test_pandas.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_pydantic.py` & `sqlmesh-0.3.0/tests/utils/test_pydantic.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/utils/test_yaml.py` & `sqlmesh-0.3.0/tests/utils/test_yaml.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/tests/web/test_main.py` & `sqlmesh-0.3.0/tests/web/test_main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/.eslintrc.js` & `sqlmesh-0.3.0/web/client/.eslintrc.js`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/index.html` & `sqlmesh-0.3.0/web/client/index.html`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/package-lock.json` & `sqlmesh-0.3.0/web/client/package-lock.json`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/package.json` & `sqlmesh-0.3.0/web/client/package.json`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/playwright.config.ts` & `sqlmesh-0.3.0/web/client/playwright.config.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/public/favicons/favicon.ico` & `sqlmesh-0.3.0/web/client/dist/favicons/favicon.ico`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/api/channels.ts` & `sqlmesh-0.3.0/web/client/src/api/channels.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/api/index.ts` & `sqlmesh-0.3.0/web/client/src/api/index.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/api/instance.ts` & `sqlmesh-0.3.0/web/client/src/api/instance.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-Black.otf` & `sqlmesh-0.3.0/web/client/dist/assets/CircularStd-Black-52659624.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-BlackItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-BlackItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-Bold.otf` & `sqlmesh-0.3.0/web/client/dist/assets/CircularStd-Bold-0e6c076d.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-BoldItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-BoldItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-Book.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-Book.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-BookItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-BookItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-Medium.otf` & `sqlmesh-0.3.0/web/client/dist/assets/CircularStd-Medium-2f373e53.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Circular STD/CircularStd-MediumItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Circular STD/CircularStd-MediumItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Black.otf` & `sqlmesh-0.3.0/web/client/dist/assets/Publico-Black-e6bd2ea2.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-BlackItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-BlackItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Bold.otf` & `sqlmesh-0.3.0/web/client/dist/assets/Publico-Bold-c79acd56.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-BoldItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-BoldItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Extrabold.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Extrabold.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-ExtraboldItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-ExtraboldItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Italic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Italic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Light.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Light.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-LightItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-LightItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Medium.otf` & `sqlmesh-0.3.0/web/client/dist/assets/Publico-Medium-01b4a891.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-MediumItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-MediumItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/Publico-Roman.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/Publico-Roman.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-Bold.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-Bold.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-BoldItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-BoldItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-Italic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-Italic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-Roman.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-Roman.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-Semibold.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-Semibold.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/assets/fonts/Publico/PublicoText-SemiboldItalic.otf` & `sqlmesh-0.3.0/web/client/src/assets/fonts/Publico/PublicoText-SemiboldItalic.otf`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/context/context.ts` & `sqlmesh-0.3.0/web/client/src/context/context.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/context/editor.ts` & `sqlmesh-0.3.0/web/client/src/context/editor.ts`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -7,24 +7,24 @@
+ export interface Dialect {
+   dialect_title: string
+   dialect_name: string
+ }
+ 
+ interface EditorStore {
+   storedTabsIds: ID[]
+-  tabs: Map<ID, EditorTab>
++  tabs: Map<ModelFile, EditorTab>
+   tab: EditorTab
+   engine: Worker
+   dialects: Dialect[]
+   previewQuery?: string
+   previewTable?: any[]
+   previewConsole?: string
+   selectTab: (tab: EditorTab) => void
+   addTab: (tab: EditorTab) => void
+-  closeTab: (id: ID) => void
++  closeTab: (file: ModelFile) => void
+   createTab: (file?: ModelFile) => EditorTab
+   setDialects: (dialects: Dialect[]) => void
+   refreshTab: () => void
+   setPreviewQuery: (previewQuery?: string) => void
+   setPreviewTable: (previewTable?: any[]) => void
+   setPreviewConsole: (previewConsole?: string) => void
+ }
+@@ -44,15 +44,15 @@
+   preview?: EditorPreview
+ }
+ 
+ const [getStoredTabs, setStoredTabs] = useLocalStorage<{ ids: ID[] }>('tabs')
+ 
+ const initialFile = createLocalFile()
+ const initialTab: EditorTab = createTab(initialFile, true)
+-const initialTabs = new Map([[initialFile.id, initialTab]])
++const initialTabs = new Map([[initialFile, initialTab]])
+ 
+ export const useStoreEditor = create<EditorStore>((set, get) => ({
+   storedTabsIds: getStoredTabsIds(),
+   tab: initialTab,
+   tabs: initialTabs,
+   engine: sqlglotWorker,
+   dialects: [],
+@@ -66,38 +66,38 @@
+   },
+   selectTab(tab) {
+     set(() => ({ tab }))
+ 
+     get().addTab(tab)
+   },
+   addTab(tab) {
+-    const tabs = new Map([...get().tabs, [tab.file.id, tab]])
++    const tabs = new Map([...get().tabs, [tab.file, tab]])
+ 
+     setStoredTabs({
+       ids: Array.from(tabs.values())
+         .filter(tab => tab.file.isRemote)
+         .map(tab => tab.file.id),
+     })
+ 
+     set(() => ({
+       tabsIds: getStoredTabsIds(),
+       tabs,
+     }))
+   },
+-  closeTab(id) {
++  closeTab(file) {
+     const s = get()
+ 
+-    if (isTrue(s.tabs.get(id)?.isInitial)) return
++    if (isTrue(s.tabs.get(file)?.isInitial)) return
+ 
+     const tabs = Array.from(get().tabs.values())
+-    const indexAt = tabs.findIndex(tab => tab.file.id === id)
++    const indexAt = tabs.findIndex(tab => tab.file === file)
+ 
+-    s.tabs.delete(id)
++    s.tabs.delete(file)
+ 
+-    if (id === s.tab.file.id) {
++    if (file.id === s.tab.file.id) {
+       s.selectTab(tabs.at(indexAt - 1) as EditorTab)
+     }
+ 
+     set(() => ({
+       tabs: new Map(s.tabs),
+     }))
+   },
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/context/fileTree.ts` & `sqlmesh-0.3.0/web/client/src/context/fileTree.ts`
+
+ * *Ordering differences only*
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -4,16 +4,16 @@
+ 
+ interface FileTreeStore {
+   project?: ModelDirectory
+   files: Map<ID, ModelFile>
+   selectedFile?: ModelFile
+   selectFile: (selectedFile: ModelFile) => void
+   setFiles: (files: ModelFile[]) => void
+-  refreshProject: () => void
+   setProject: (project?: Directory) => void
++  refreshProject: () => void
+ }
+ 
+ export const useStoreFileTree = create<FileTreeStore>((set, get) => ({
+   project: undefined,
+   files: new Map(),
+   selectedFile: undefined,
+   setProject(project) {
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/context/plan.ts` & `sqlmesh-0.3.0/web/client/src/context/plan.ts`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -30,14 +30,15 @@
+ export type PlanApplyType = KeyOf<typeof EnumPlanApplyType>
+ export type PlanState = KeyOf<typeof EnumPlanState>
+ export type PlanAction = KeyOf<typeof EnumPlanAction>
+ 
+ export interface PlanTaskStatus {
+   total: number
+   completed: number
++  view_name: string
+   start?: number
+   end?: number
+   interval?: [string, string]
+ }
+ export type PlanTasks = Record<string, PlanTaskStatus>
+ 
+ export interface PlanProgress {
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/context/theme.tsx` & `sqlmesh-0.3.0/web/client/src/context/theme.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/hooks/useLocalStorage.ts` & `sqlmesh-0.3.0/web/client/src/hooks/useLocalStorage.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/index.css` & `sqlmesh-0.3.0/web/client/src/index.css`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/button/Button.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/button/Button.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/button/tests/Button.spec.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/button/tests/Button.spec.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/divider/Divider.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/divider/Divider.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/divider/tests/Divider.spec.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/divider/tests/Divider.spec.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/Editor.css` & `sqlmesh-0.3.0/web/client/src/library/components/editor/Editor.css`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/Editor.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/editor/Editor.tsx`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -73,15 +73,15 @@
+   useEffect(() => {
+     setPreviewQuery(undefined)
+     setPreviewTable(undefined)
+     setPreviewConsole(undefined)
+   }, [tab])
+ 
+   useEffect(() => {
+-    if (selectedFile == null) return
++    if (selectedFile == null || tab.file === selectedFile) return
+ 
+     selectTab(createTab(selectedFile))
+   }, [selectedFile])
+ 
+   function getSizesCodeEditorAndPreview(): [number, number] {
+     const showPreview =
+       (tab.file.isSQLMeshModel || tab.file.isLocal) &&
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/EditorCode.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/editor/EditorCode.tsx`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -100,21 +100,21 @@
+           return true
+         },
+       },
+       {
+         key: 'Mod-Alt-]',
+         preventDefault: true,
+         run() {
+-          closeTab(tab.file.id)
++          closeTab(tab.file)
+ 
+           return true
+         },
+       },
+     ],
+-    [closeTab, selectTab, createTab, tab.file.id],
++    [closeTab, selectTab, createTab, tab.file],
+   )
+ 
+   useEffect(() => {
+     engine.addEventListener('message', handleEngineWorkerMessage)
+ 
+     return () => {
+       engine.removeEventListener('message', handleEngineWorkerMessage)
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/EditorFooter.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/editor/EditorFooter.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/EditorIndicator.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/editor/EditorIndicator.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/EditorInspector.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/editor/EditorInspector.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/EditorPreview.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/editor/EditorPreview.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/EditorTabs.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/editor/EditorTabs.tsx`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -77,15 +77,15 @@
+   isClosable?: boolean
+ }): JSX.Element {
+   const activeTab = useStoreEditor(s => s.tab)
+   const selectTab = useStoreEditor(s => s.selectTab)
+   const closeTab = useStoreEditor(s => s.closeTab)
+ 
+   function closeEditorTab(tab: EditorTab): void {
+-    closeTab(tab.file.id)
++    closeTab(tab.file)
+   }
+ 
+   return (
+     <li
+       className={clsx(
+         'inline-block py-1 pr-2 last-child:pr-0 overflow-hidden text-center overflow-ellipsis cursor-pointer',
+       )}
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/extensions/SqlMeshDialect.ts` & `sqlmesh-0.3.0/web/client/src/library/components/editor/extensions/SqlMeshDialect.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/extensions/index.ts` & `sqlmesh-0.3.0/web/client/src/library/components/editor/extensions/index.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/editor/help.ts` & `sqlmesh-0.3.0/web/client/src/library/components/editor/help.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/fileTree/Directory.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/fileTree/Directory.tsx`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -93,27 +93,26 @@
+   function createFile(e: MouseEvent): void {
+     e.stopPropagation()
+ 
+     if (isLoading) return
+ 
+     setIsLoading(true)
+ 
+-    const extension = '.py'
++    const extension = directory.isModels ? '.sql' : '.py'
+     const name = toUniqueName('new_file', extension)
+ 
+     writeFileApiFilesPathPost(`${directory.path}/${name}`, { content: '' })
+       .then(created => {
+         if (isFalse((created as any).ok)) {
+           console.warn([`File: ${directory.path}`, (created as any).detail])
+ 
+           return
+         }
+ 
+         directory.addFile(new ModelFile(created, directory))
+-
+         directory.open()
+       })
+       .catch(error => {
+         // TODO: Show error notification
+         console.log(error)
+       })
+       .finally(() => {
+@@ -137,15 +136,15 @@
+           return
+         }
+ 
+         if (directory.isNotEmpty) {
+           const files = getAllFilesInDirectory(directory)
+ 
+           files.forEach(file => {
+-            closeTab(file.id)
++            closeTab(file)
+           })
+         }
+ 
+         directory.parent?.removeDirectory(directory)
+ 
+         refreshProject()
+       })
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/fileTree/File.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/fileTree/File.tsx`
+
+ * *Files 19% similar despite different names*
+
+```diff
+@@ -1,8 +1,8 @@
+-import { useState, type MouseEvent } from 'react'
++import { useState, type MouseEvent, useEffect } from 'react'
+ import {
+   DocumentIcon,
+   XCircleIcon,
+   CheckCircleIcon,
+ } from '@heroicons/react/24/solid'
+ import clsx from 'clsx'
+ import {
+@@ -15,39 +15,42 @@
+ import { useStoreEditor } from '~/context/editor'
+ import { useStoreFileTree } from '~/context/fileTree'
+ 
+ interface PropsFile extends WithConfirmation {
+   file: ModelFile
+ }
+ 
+-const CSS_ICON_SIZE = 'w-4 h-4'
+-
+ export default function File({
+   file,
+   setConfirmation,
+ }: PropsFile): JSX.Element {
+   const tab = useStoreEditor(s => s.tab)
+   const tabs = useStoreEditor(s => s.tabs)
+   const closeTab = useStoreEditor(s => s.closeTab)
+ 
++  const selectedFile = useStoreFileTree(s => s.selectedFile)
+   const selectFile = useStoreFileTree(s => s.selectFile)
+   const refreshProject = useStoreFileTree(s => s.refreshProject)
+ 
+   const [isLoading, setIsLoading] = useState(false)
+   const [newName, setNewName] = useState<string>()
+ 
++  useEffect(() => {
++    selectFile(tab.file)
++  }, [tab])
++
+   function remove(): void {
+     if (isLoading) return
+ 
+     setIsLoading(true)
+ 
+     deleteFileApiFilesPathDelete(file.path)
+       .then(response => {
+         if ((response as unknown as { ok: boolean }).ok) {
+-          closeTab(file.id)
++          closeTab(file)
+ 
+           file.parent?.removeFile(file)
+ 
+           refreshProject()
+         } else {
+           // TODO: Show error notification
+         }
+@@ -103,93 +106,142 @@
+       })
+   }
+ 
+   return (
+     <span
+       className={clsx(
+         'whitespace-nowrap group/file pl-3 pr-2 py-[0.125rem] flex rounded-md',
+-        'hover:bg-neutral-100 dark:hover:bg-dark-lighter  ',
++        'hover:bg-neutral-100 dark:hover:bg-dark-lighter',
+         file.is_supported &&
+           'group hover:bg-neutral-100 dark:hover:bg-dark-lighter',
+         isFalse(isStringEmptyOrNil(newName)) && 'bg-primary-800',
+-        tabs.has(file.id)
++        tabs.has(file)
+           ? 'text-brand-500'
+           : 'text-neutral-500 dark:text-neutral-100',
+-        file === tab.file && 'bg-neutral-100 dark:bg-dark-lighter',
++        file === selectedFile && 'bg-neutral-100 dark:bg-dark-lighter',
+       )}
+     >
+       <span
+         className={clsx(
+           'flex w-full items-center overflow-hidden overflow-ellipsis',
+         )}
+       >
+         <div className="flex items-center">
+           <DocumentIcon
+             className={clsx(
+-              `inline-block ${CSS_ICON_SIZE} mr-2`,
+-              file === tab.file
++              `inline-block w-4 h-4 mr-2`,
++              file === selectedFile
+                 ? 'text-brand-500'
+                 : 'text-neutral-500 dark:text-neutral-100',
+             )}
+           />
+         </div>
+         {isStringEmptyOrNil(newName) ? (
+           <>
+-            <span
+-              onClick={(e: MouseEvent) => {
+-                e.stopPropagation()
+-
+-                file.is_supported && file !== tab.file && selectFile(file)
+-              }}
+-              onDoubleClick={(e: MouseEvent) => {
+-                e.stopPropagation()
+-
+-                setNewName(file.name)
+-              }}
+-              className={clsx(
+-                'w-full overflow-hidden overflow-ellipsis cursor-default',
+-                !file.is_supported && 'opacity-50 cursor-not-allowed',
+-              )}
+-            >
+-              {file.name}
+-            </span>
+-            <span
+-              className="flex items-center invisible group-hover/file:visible min-w-8"
+-              onClick={(e: MouseEvent) => {
+-                e.stopPropagation()
+-
+-                removeWithConfirmation()
+-              }}
+-            >
+-              <XCircleIcon
+-                className={`inline-block ${CSS_ICON_SIZE} ml-2 text-danger-500 cursor-pointer`}
+-              />
+-            </span>
++            <FileName
++              file={file}
++              setNewName={setNewName}
++            />
++            <FileActions removeWithConfirmation={removeWithConfirmation} />
+           </>
+         ) : (
+-          <div className="w-full flex items-center">
+-            <input
+-              type="text"
+-              className="w-full overflow-hidden overflow-ellipsis bg-primary-900 text-primary-100"
+-              value={newName === '' ? file.name : newName}
+-              onInput={(e: any) => {
+-                e.stopPropagation()
+-
+-                setNewName(e.target.value)
+-              }}
+-            />
+-            <div className="flex">
+-              <CheckCircleIcon
+-                className={`inline-block ${CSS_ICON_SIZE} ml-2 text-success-500 cursor-pointer`}
+-                onClick={(e: MouseEvent) => {
+-                  e.stopPropagation()
+-
+-                  rename()
+-                }}
+-              />
+-            </div>
+-          </div>
++          <FileRename
++            file={file}
++            newName={newName}
++            setNewName={setNewName}
++            rename={rename}
++          />
+         )}
+       </span>
+     </span>
+   )
+ }
++
++function FileName({
++  file,
++  setNewName,
++}: {
++  file: ModelFile
++  setNewName: (name: string) => void
++}): JSX.Element {
++  const selectedFile = useStoreFileTree(s => s.selectedFile)
++  const selectFile = useStoreFileTree(s => s.selectFile)
++
++  return (
++    <span
++      onClick={(e: MouseEvent) => {
++        e.stopPropagation()
++
++        file.is_supported && file !== selectedFile && selectFile(file)
++      }}
++      onDoubleClick={(e: MouseEvent) => {
++        e.stopPropagation()
++
++        setNewName(file.name)
++      }}
++      className={clsx(
++        'w-full overflow-hidden overflow-ellipsis cursor-default',
++        !file.is_supported && 'opacity-50 cursor-not-allowed',
++      )}
++    >
++      {file.name}
++    </span>
++  )
++}
++
++function FileRename({
++  file,
++  newName,
++  setNewName,
++  rename,
++}: {
++  file: ModelFile
++  newName?: string
++  setNewName: (name: string) => void
++  rename: () => void
++}): JSX.Element {
++  return (
++    <div className="w-full flex items-center">
++      <input
++        type="text"
++        className="w-full overflow-hidden overflow-ellipsis bg-primary-900 text-primary-100"
++        value={newName === '' ? file.name : newName}
++        onInput={(e: any) => {
++          e.stopPropagation()
++
++          setNewName(e.target.value)
++        }}
++      />
++      <div className="flex">
++        <CheckCircleIcon
++          className={`inline-block w-4 h-4 ml-2 text-success-500 cursor-pointer`}
++          onClick={(e: MouseEvent) => {
++            e.stopPropagation()
++
++            rename()
++          }}
++        />
++      </div>
++    </div>
++  )
++}
++
++function FileActions({
++  removeWithConfirmation,
++}: {
++  removeWithConfirmation: () => void
++}): JSX.Element {
++  return (
++    <span
++      className="flex items-center invisible group-hover/file:visible min-w-8"
++      onClick={(e: MouseEvent) => {
++        e.stopPropagation()
++
++        removeWithConfirmation()
++      }}
++    >
++      <XCircleIcon
++        className={`inline-block w-4 h-4 ml-2 text-danger-500 cursor-pointer`}
++      />
++    </span>
++  )
++}
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/fileTree/FileTree.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/fileTree/FileTree.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/fileTree/help.ts` & `sqlmesh-0.3.0/web/client/src/library/components/fileTree/help.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/graph/Graph.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/graph/Graph.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/graph/help.ts` & `sqlmesh-0.3.0/web/client/src/library/components/graph/help.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/ide/ActivePlan.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/ide/ActivePlan.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/ide/IDE.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/ide/IDE.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/ide/RunPlan.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/ide/RunPlan.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/input/Input.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/input/Input.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/input/InputToggle.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/input/InputToggle.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/logo/Spinner.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/logo/Spinner.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/logo/SqlMesh.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/logo/SqlMesh.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/logo/Tobiko.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/logo/Tobiko.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/modal/Modal.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/modal/Modal.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/modal/ModalConfirmation.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/modal/ModalConfirmation.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/modal/ModalDrawer.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/modal/ModalDrawer.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/Plan.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/plan/Plan.tsx`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -129,15 +129,15 @@
+       (isFalse(hasChanges || hasBackfills) && isFalse(hasVirtualUpdate)) ||
+       includes([EnumPlanState.Finished, EnumPlanState.Failed], planState)
+     ) {
+       setPlanAction(EnumPlanAction.Done)
+     } else {
+       setPlanAction(EnumPlanAction.Apply)
+     }
+-  }, [planState, isPlanRan, hasChanges, hasBackfills])
++  }, [planState, isPlanRan, hasChanges, hasBackfills, hasVirtualUpdate])
+ 
+   useEffect(() => {
+     if (activePlan == null) return
+ 
+     dispatch({
+       type: EnumPlanActions.BackfillProgress,
+       activeBackfill: activePlan,
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/PlanActions.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/plan/PlanActions.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/PlanBackfillDates.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/plan/PlanBackfillDates.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/PlanChangePreview.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/plan/PlanChangePreview.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/PlanHeader.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/plan/PlanHeader.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/PlanWizard.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/plan/PlanWizard.tsx`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -95,14 +95,15 @@
+       return backfills.reduce((acc: PlanTasks, task) => {
+         const taskModelName = task.model_name
+         const taskInterval = task.interval as [string, string]
+         const taskBackfill: PlanTaskStatus = {
+           completed: 0,
+           total: task.batches,
+           interval: taskInterval,
++          view_name: task.view_name,
+         }
+         const choices = categories[taskModelName]
+ 
+         const shouldExclude = choices != null ? choices.every(Boolean) : false
+ 
+         if (shouldExclude) return acc
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/PlanWizardStepOptions.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/plan/PlanWizardStepOptions.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/context.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/plan/context.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/help.spec.ts` & `sqlmesh-0.3.0/web/client/src/library/components/plan/help.spec.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/help.ts` & `sqlmesh-0.3.0/web/client/src/library/components/plan/help.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/plan/hooks.ts` & `sqlmesh-0.3.0/web/client/src/library/components/plan/hooks.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/progress/Progress.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/progress/Progress.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/root/Footer.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/root/Footer.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/root/Header.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/root/Header.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/splitPane/SplitPane.css` & `sqlmesh-0.3.0/web/client/src/library/components/splitPane/SplitPane.css`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/splitPane/SplitPane.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/splitPane/SplitPane.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/tasksProgress/TasksProgress.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/tasksProgress/TasksProgress.tsx`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -144,15 +144,15 @@
+                           'text-secondary-500 dark:text-primary-500',
+                         changesModifiedIndirect.includes(model_name) &&
+                           'text-warning-500',
+                         changesModifiedMetadata.includes(model_name) &&
+                           'text-prose',
+                       )}
+                     >
+-                      {model_name}
++                      {task.view_name}
+                     </span>
+                   </span>
+                   <span className="flex items-center">
+                     {showBatches && (
+                       <>
+                         <span className="block whitespace-nowrap">
+                           {task.completed} of {task.total}&nbsp;
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/library/components/toggle/Toggle.tsx` & `sqlmesh-0.3.0/web/client/src/library/components/toggle/Toggle.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/main.tsx` & `sqlmesh-0.3.0/web/client/src/main.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/models/artifact.ts` & `sqlmesh-0.3.0/web/client/src/models/artifact.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/models/directory.ts` & `sqlmesh-0.3.0/web/client/src/models/directory.ts`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -89,14 +89,18 @@
+     return this.isOpen && this.allDirectories.every(d => d.isExpanded)
+   }
+ 
+   get isCollapsed(): boolean {
+     return !this.isOpen && this.allDirectories.every(d => d.isCollapsed)
+   }
+ 
++  get isModels(): boolean {
++    return this.path.startsWith('models')
++  }
++
+   open(): void {
+     this._isOpen = true
+ 
+     this.syncStateOpen?.(this.isOpen)
+   }
+ 
+   close(): void {
+```
+
+### Comparing `sqlmesh-0.2.6/web/client/src/models/environment.ts` & `sqlmesh-0.3.0/web/client/src/models/environment.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/models/file.ts` & `sqlmesh-0.3.0/web/client/src/models/file.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/models/initial.ts` & `sqlmesh-0.3.0/web/client/src/models/initial.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/tests/utils.tsx` & `sqlmesh-0.3.0/web/client/src/tests/utils.tsx`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/utils/index.spec.ts` & `sqlmesh-0.3.0/web/client/src/utils/index.spec.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/utils/index.ts` & `sqlmesh-0.3.0/web/client/src/utils/index.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/workers/sqlglot/sqlglot.py` & `sqlmesh-0.3.0/web/client/src/workers/sqlglot/sqlglot.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/src/workers/sqlglot/worker.ts` & `sqlmesh-0.3.0/web/client/src/workers/sqlglot/worker.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/tailwind.config.js` & `sqlmesh-0.3.0/web/client/tailwind.config.js`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/tsconfig.json` & `sqlmesh-0.3.0/web/client/tsconfig.json`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/client/vite.config.ts` & `sqlmesh-0.3.0/web/client/vite.config.ts`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/__init__.py` & `sqlmesh-0.3.0/web/server/api/endpoints/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/commands.py` & `sqlmesh-0.3.0/web/server/api/endpoints/commands.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/context.py` & `sqlmesh-0.3.0/web/server/api/endpoints/context.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/directories.py` & `sqlmesh-0.3.0/web/server/api/endpoints/directories.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/environments.py` & `sqlmesh-0.3.0/web/server/api/endpoints/environments.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/events.py` & `sqlmesh-0.3.0/web/server/api/endpoints/events.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/files.py` & `sqlmesh-0.3.0/web/server/api/endpoints/files.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/models.py` & `sqlmesh-0.3.0/web/server/api/endpoints/models.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/api/endpoints/plan.py` & `sqlmesh-0.3.0/web/server/api/endpoints/plan.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -64,21 +64,26 @@
+ 
+     payload = models.ContextEnvironment(
+         environment=plan.environment.name,
+         start=plan.start,
+         end=plan.end,
+     )
+ 
+-    if plan.context_diff.has_changes:
++    if plan.context_diff.has_changes or plan.requires_backfill:
+         batches = context.scheduler().batches()
+         tasks = {snapshot.name: len(intervals) for snapshot, intervals in batches.items()}
+ 
+         payload.backfills = [
+             models.ContextEnvironmentBackfill(
+                 model_name=interval.snapshot_name,
++                view_name=plan.context_diff.snapshots[
++                    interval.snapshot_name
++                ].qualified_view_name.for_environment(plan.environment.name)
++                if interval.snapshot_name in plan.context_diff.snapshots
++                else interval.snapshot_name,
+                 interval=[
+                     [to_ds(t) for t in make_inclusive(start, end)]
+                     for start, end in interval.merged_intervals
+                 ][0],
+                 batches=tasks[interval.snapshot_name],
+             )
+             for interval in plan.missing_intervals
+```
+
+### Comparing `sqlmesh-0.2.6/web/server/console.py` & `sqlmesh-0.3.0/web/server/console.py`
+
+ * *Files 5% similar despite different names*
+
+```diff
+@@ -2,23 +2,24 @@
+ 
+ import asyncio
+ import json
+ import typing as t
+ import unittest
+ 
+ from sqlmesh.core.console import TerminalConsole
++from sqlmesh.core.snapshot import Snapshot
+ from sqlmesh.core.test import ModelTest
+ from sqlmesh.utils.date import now_timestamp
+ from web.server.sse import Event
+ 
+ 
+ class ApiConsole(TerminalConsole):
+     def __init__(self) -> None:
+         super().__init__()
+-        self.current_task_status: t.Dict[str, t.Dict[str, int]] = {}
++        self.current_task_status: t.Dict[str, t.Dict[str, t.Any]] = {}
+         self.queue: asyncio.Queue = asyncio.Queue()
+ 
+     def _make_event(
+         self, data: str | dict[str, t.Any], event: str | None = None, ok: bool | None = None
+     ) -> Event:
+         payload: dict[str, t.Any] = {
+             "ok": True if ok is None else ok,
+@@ -29,20 +30,24 @@
+         else:
+             payload.update(data)
+         return Event(
+             event=event,
+             data=json.dumps(payload),
+         )
+ 
+-    def start_snapshot_progress(self, snapshot_name: str, total_batches: int) -> None:
++    def start_snapshot_progress(
++        self, snapshot: Snapshot, total_batches: int, environment: str
++    ) -> None:
+         """Indicates that a new load progress has begun."""
+-        self.current_task_status[snapshot_name] = {
++        view_name = snapshot.qualified_view_name.for_environment(environment)
++        self.current_task_status[snapshot.name] = {
+             "completed": 0,
+             "total": total_batches,
+             "start": now_timestamp(),
++            "view_name": view_name,
+         }
+ 
+     def update_snapshot_progress(self, snapshot_name: str, num_batches: int) -> None:
+         """Update snapshot progress."""
+         if self.current_task_status:
+             self.current_task_status[snapshot_name]["completed"] += num_batches
+             if (
+```
+
+### Comparing `sqlmesh-0.2.6/web/server/main.py` & `sqlmesh-0.3.0/web/server/main.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/models.py` & `sqlmesh-0.3.0/web/server/models.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -142,14 +142,15 @@
+     added: t.Set[str]
+     removed: t.Set[str]
+     modified: ModelsDiff
+ 
+ 
+ class ContextEnvironmentBackfill(BaseModel):
+     model_name: str
++    view_name: str
+     interval: t.Tuple[str, str]
+     batches: int
+ 
+ 
+ class ContextEnvironment(BaseModel):
+     environment: str
+     start: TimeLike
+```
+
+### Comparing `sqlmesh-0.2.6/web/server/settings.py` & `sqlmesh-0.3.0/web/server/settings.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/sse.py` & `sqlmesh-0.3.0/web/server/sse.py`
+
+ * *Files identical despite different names*
+
+### Comparing `sqlmesh-0.2.6/web/server/utils.py` & `sqlmesh-0.3.0/web/server/utils.py`
+
+ * *Files identical despite different names*
+

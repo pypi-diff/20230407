@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/cleanchausie-1.9.0.tar.gz tmp/cleanchausie-1.9.1.tar.gz --html 20230407/c/cleanchausie/1.9.0-1.9.1/index.html --text 20230407/c/cleanchausie/1.9.0-1.9.1/diff.txt --markdown 20230407/c/cleanchausie/1.9.0-1.9.1/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">18.0 KB</span></div>
+  <div><span class="source">tmp/cleanchausie-1.9.0.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/cleanchausie-1.9.1.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">274 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;cleanchausie-1.9.<del>0</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<del>ue</del><span class="dp">·</span>Mar<span class="dp">·</span><span class="dp">·</span><del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;cleanchausie-1.9.<ins>1</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span>T<ins>hu</ins><span class="dp">·</span>Mar<span class="dp">·</span><span class="dp">·</span><ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">17.7 KB</span></div>
+    <div><span class="source">cleanchausie-1.9.0.tar</span> vs.</div>
+    <div id="cleanchausie--.-.-.tar"><span class="source">cleanchausie-1.9.1.tar</span>
+      <a class="anchor" href="#cleanchausie--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">12.4 KB</span></div>
+      <div id="cleanchausie--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 48 lines modified</td><td colspan="2">Offset 1, 48 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>217</del>0<del>91</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>920</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1094<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1094<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3541<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>217</del>0<del>91</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/PKG-INFO</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3541<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>920</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2304<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/README.md</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2304<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>2</del>1<del>7</del>0<del>91</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/</td><td class="diffline">5 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>9</ins>1<ins>6</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1370<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/__init__.py</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1370<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>462<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/consts.py</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>462<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/consts.py</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>754<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/errors.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>754<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/errors.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>217</del>0<del>91</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/ext/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>920</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/ext/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/ext/__init__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/ext/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3887<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/ext/attrs.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3887<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/ext/attrs.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>620<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/ext/pytz.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>620<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/ext/pytz.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>217</del>0<del>91</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/</td><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>920</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/__init__.py</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7411<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/field.py</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7411<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/field.py</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1207<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/type_map.py</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1207<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/type_map.py</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>217</del>0<del>91</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/</td><td class="diffline">17 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>920</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/__init__.py</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>373<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/bools.py</td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>373<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/bools.py</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1338<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/datetimes.py</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1338<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/datetimes.py</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1675<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/dicts.py</td><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1675<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/dicts.py</td></tr>
+<tr class="diffchanged"><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1328<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/enums.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1328<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/enums.py</td></tr>
+<tr class="diffchanged"><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>448<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/instances.py</td><td class="diffline">23 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>448<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/instances.py</td></tr>
+<tr class="diffchanged"><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1882<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/lists.py</td><td class="diffline">24 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1882<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/lists.py</td></tr>
+<tr class="diffchanged"><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1445<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/nested.py</td><td class="diffline">25 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1445<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/nested.py</td></tr>
+<tr class="diffchanged"><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1392<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/numbers.py</td><td class="diffline">26 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1392<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/numbers.py</td></tr>
+<tr class="diffchanged"><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<del>354</del><span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/polymorphic.py</td><td class="diffline">27 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>6<ins>568</ins><span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/polymorphic.py</td></tr>
+<tr class="diffchanged"><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4758<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/types/strings.py</td><td class="diffline">28 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4758<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/types/strings.py</td></tr>
+<tr class="diffchanged"><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1756<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/utils.py</td><td class="diffline">29 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1756<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7292<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/fields/validation.py</td><td class="diffline">30 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>7292<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/fields/validation.py</td></tr>
+<tr class="diffchanged"><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2075<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/interface.py</td><td class="diffline">31 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>2075<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/interface.py</td></tr>
+<tr class="diffchanged"><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>217</del>0<del>91</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/mypy/</td><td class="diffline">32 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>920</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/mypy/</td></tr>
+<tr class="diffchanged"><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/mypy/__init__.py</td><td class="diffline">33 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/mypy/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8118<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/mypy/plugin.py</td><td class="diffline">34 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>8118<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/mypy/plugin.py</td></tr>
+<tr class="diffchanged"><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/py.typed</td><td class="diffline">35 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/py.typed</td></tr>
+<tr class="diffchanged"><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9546<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/schema.py</td><td class="diffline">36 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>9546<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/schema.py</td></tr>
+<tr class="diffchanged"><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4294<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/schema_definition.py</td><td class="diffline">37 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>4294<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/schema_definition.py</td></tr>
+<tr class="diffchanged"><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>548<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie/utils.py</td><td class="diffline">38 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>548<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie/utils.py</td></tr>
+<tr class="diffchanged"><td class="diffline">39 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>2</del>1<del>7</del>0<del>91</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie.egg-info/</td><td class="diffline">39 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>9</ins>1<ins>6</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3541<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie.egg-info/PKG-INFO</td><td class="diffline">40 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3541<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1164<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie.egg-info/SOURCES.txt</td><td class="diffline">41 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1164<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie.egg-info/dependency_links.txt</td><td class="diffline">42 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie.egg-info/not-zip-safe</td><td class="diffline">43 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie.egg-info/not-zip-safe</td></tr>
+<tr class="diffchanged"><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie.egg-info/requires.txt</td><td class="diffline">44 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>39<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/cleanchausie.egg-info/top_level.txt</td><td class="diffline">45 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>13<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/cleanchausie.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>281<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/pyproject.toml</td><td class="diffline">46 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>281<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/pyproject.toml</td></tr>
+<tr class="diffchanged"><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>713<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>23</del>.<del>2</del>2<del>1</del>0<del>92</del><span class="dp">·</span>cleanchausie-1.9.<del>0</del>/setup.cfg</td><td class="diffline">47 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>713<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>10</ins>.<ins>9</ins>2<ins>0</ins>0<ins>55</ins><span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1454<span class="dp">·</span>2023-03-0<del>7</del><span class="dp">·</span>1<del>6</del>:<del>3</del>5:<del>14</del>.000000<span class="dp">·</span>cleanchausie-1.9.<del>0</del>/setup.py</td><td class="diffline">48 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>runner<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1454<span class="dp">·</span>2023-03-0<ins>9</ins><span class="dp">·</span>1<ins>2</ins>:<ins>5</ins>5:<ins>00</ins>.000000<span class="dp">·</span>cleanchausie-1.9.<ins>1</ins>/setup.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">91.0 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/LICENSE</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--LICENSE"><span class="source">cleanchausie-1.9.1/LICENSE</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">468 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/PKG-INFO</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--PKG-INFO"><span class="source">cleanchausie-1.9.1/PKG-INFO</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cleanchausie</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cleanchausie</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.9.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.9.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>validation<span class="dp">·</span>and<span class="dp">·</span>transformation<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>Python.<span class="dp">·</span>Successor<span class="dp">·</span>to<span class="dp">·</span>CleanCat.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>validation<span class="dp">·</span>and<span class="dp">·</span>transformation<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>Python.<span class="dp">·</span>Successor<span class="dp">·</span>to<span class="dp">·</span>CleanCat.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>http://github.com/closeio/cleanchausie</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>http://github.com/closeio/cleanchausie</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alec<span class="dp">·</span>Rosenbaum</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alec<span class="dp">·</span>Rosenbaum</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>engineering@close.io</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>engineering@close.io</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>Alec<span class="dp">·</span>Rosenbaum</td><td class="diffline">8 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>Alec<span class="dp">·</span>Rosenbaum</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>engineering@close.io</td><td class="diffline">9 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>engineering@close.io</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">10 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/README.md</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--README.md"><span class="source">cleanchausie-1.9.1/README.md</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">273 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/__init__.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-__init__.py"><span class="source">cleanchausie-1.9.1/cleanchausie/__init__.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-__init__.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 47, 8 lines modified</td><td colspan="2">Offset 47, 8 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;field&quot;,</td><td class="diffline">47 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;field&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;OMITTED&quot;,</td><td class="diffline">48 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;OMITTED&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;omitted&quot;,</td><td class="diffline">49 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;omitted&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;clean&quot;,</td><td class="diffline">50 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;clean&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;serialize&quot;,</td><td class="diffline">51 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;serialize&quot;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">52 </td><td class="diffpresent">]</td><td class="diffline">52 </td><td class="diffpresent">]</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffchanged"><td class="diffline">53 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;1.9.<del>0</del>&quot;</td><td class="diffline">53 </td><td class="diffpresent">__version__<span class="dp">·</span>=<span class="dp">·</span>&quot;1.9.<ins>1</ins>&quot;</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/errors.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-errors.py"><span class="source">cleanchausie-1.9.1/cleanchausie/errors.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-errors.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/ext/attrs.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-ext-attrs.py"><span class="source">cleanchausie-1.9.1/cleanchausie/ext/attrs.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-ext-attrs.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">125 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/ext/pytz.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-ext-pytz.py"><span class="source">cleanchausie-1.9.1/cleanchausie/ext/pytz.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-ext-pytz.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/field.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-field.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/field.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-field.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">139 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/type_map.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-type_map.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/type_map.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-type_map.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">153 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/types/datetimes.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-datetimes.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/types/datetimes.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-datetimes.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/types/dicts.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-dicts.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/types/dicts.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-dicts.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/types/enums.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-enums.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/types/enums.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-enums.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">145 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/types/lists.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-lists.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/types/lists.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-lists.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">147 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/types/nested.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-nested.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/types/nested.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-nested.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/types/numbers.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-numbers.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/types/numbers.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-numbers.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">984 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/types/polymorphic.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-polymorphic.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/types/polymorphic.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-polymorphic.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 2% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 152, 16 lines modified</td><td colspan="2">Offset 152, 22 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(m<span class="dp">·</span>for<span class="dp">·</span>m<span class="dp">·</span>in<span class="dp">·</span>mappings<span class="dp">·</span>if<span class="dp">·</span>m.public_type<span class="dp">·</span>==<span class="dp">·</span>public_type),<span class="dp">·</span>empty</td><td class="diffline">152 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(m<span class="dp">·</span>for<span class="dp">·</span>m<span class="dp">·</span>in<span class="dp">·</span>mappings<span class="dp">·</span>if<span class="dp">·</span>m.public_type<span class="dp">·</span>==<span class="dp">·</span>public_type),<span class="dp">·</span>empty</td></tr>
+<tr class="diffunmodified"><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td class="diffline">153 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_serialize_func(value):</td><td class="diffline">154 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_serialize_func(value):</td></tr>
+<tr class="diffunmodified"><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>value<span class="dp">·</span>is<span class="dp">·</span>None:</td><td class="diffline">155 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>value<span class="dp">·</span>is<span class="dp">·</span>None:</td></tr>
+<tr class="diffunmodified"><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>None</td><td class="diffline">156 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>None</td></tr>
+<tr class="diffunmodified"><td class="diffline">157 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mapping<span class="dp">·</span>=<span class="dp">·</span>next(</td><td class="diffline">157 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>mapping<span class="dp">·</span>=<span class="dp">·</span>next(</td></tr>
+<tr class="diffchanged"><td class="diffline">158 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>m<span class="dp">·</span>for<span class="dp">·</span>m<span class="dp">·</span>in<span class="dp">·</span>mappings<span class="dp">·</span>if<span class="dp">·</span>isinstance(value,<span class="dp">·</span>m.internal_type)</td><td class="diffline">158 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>(</ins>m<span class="dp">·</span>for<span class="dp">·</span>m<span class="dp">·</span>in<span class="dp">·</span>mappings<span class="dp">·</span>if<span class="dp">·</span>isinstance(value,<span class="dp">·</span>m.internal_type<ins>)</ins>)<ins>,</ins></td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">159 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>None,</td></tr>
+<tr class="diffunmodified"><td class="diffline">159 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td><td class="diffline">160 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">161 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>mapping<span class="dp">·</span>is<span class="dp">·</span>None:</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">162 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>raise<span class="dp">·</span>TypeError(</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">163 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>f&quot;Value<span class="dp">·</span>&#x27;{value}&#x27;<span class="dp">·</span>is<span class="dp">·</span>not<span class="dp">·</span>an<span class="dp">·</span>instance<span class="dp">·</span>of<span class="dp">·</span>any<span class="dp">·</span>of<span class="dp">·</span>the<span class="dp">·</span>&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">164 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>&quot;provided<span class="dp">·</span>mappings&#x27;<span class="dp">·</span>internal<span class="dp">·</span>types.&quot;</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">165 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>)</td></tr>
+<tr class="diffunmodified"><td class="diffline">160 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>=<span class="dp">·</span>mapping.serializer(value)</td><td class="diffline">166 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result<span class="dp">·</span>=<span class="dp">·</span>mapping.serializer(value)</td></tr>
+<tr class="diffunmodified"><td class="diffline">161 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>isinstance(result,<span class="dp">·</span>dict):</td><td class="diffline">167 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>if<span class="dp">·</span>isinstance(result,<span class="dp">·</span>dict):</td></tr>
+<tr class="diffunmodified"><td class="diffline">162 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result[type_field]<span class="dp">·</span>=<span class="dp">·</span>mapping.public_type</td><td class="diffline">168 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>result[type_field]<span class="dp">·</span>=<span class="dp">·</span>mapping.public_type</td></tr>
+<tr class="diffunmodified"><td class="diffline">163 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>result</td><td class="diffline">169 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>return<span class="dp">·</span>result</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">164 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@field(serialize_func=_serialize_func)</td><td class="diffline">170 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>@field(serialize_func=_serialize_func)</td></tr>
+<tr class="diffunmodified"><td class="diffline">165 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_polymorphic_field(</td><td class="diffline">171 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>def<span class="dp">·</span>_polymorphic_field(</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">149 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/types/strings.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-strings.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/types/strings.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-types-strings.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">133 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/utils.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-utils.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/utils.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/fields/validation.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-validation.py"><span class="source">cleanchausie-1.9.1/cleanchausie/fields/validation.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-fields-validation.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">127 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/interface.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-interface.py"><span class="source">cleanchausie-1.9.1/cleanchausie/interface.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-interface.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">131 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/mypy/plugin.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-mypy-plugin.py"><span class="source">cleanchausie-1.9.1/cleanchausie/mypy/plugin.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-mypy-plugin.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">121 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/schema.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-schema.py"><span class="source">cleanchausie-1.9.1/cleanchausie/schema.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-schema.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/schema_definition.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-schema_definition.py"><span class="source">cleanchausie-1.9.1/cleanchausie/schema_definition.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-schema_definition.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">119 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie/utils.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-utils.py"><span class="source">cleanchausie-1.9.1/cleanchausie/utils.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie-utils.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">512 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie.egg-info/PKG-INFO</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie.egg-info-PKG-INFO"><span class="source">cleanchausie-1.9.1/cleanchausie.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 0% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cleanchausie</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>cleanchausie</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.9.<del>0</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>1.9.<ins>1</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>validation<span class="dp">·</span>and<span class="dp">·</span>transformation<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>Python.<span class="dp">·</span>Successor<span class="dp">·</span>to<span class="dp">·</span>CleanCat.</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Data<span class="dp">·</span>validation<span class="dp">·</span>and<span class="dp">·</span>transformation<span class="dp">·</span>library<span class="dp">·</span>for<span class="dp">·</span>Python.<span class="dp">·</span>Successor<span class="dp">·</span>to<span class="dp">·</span>CleanCat.</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>http://github.com/closeio/cleanchausie</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>http://github.com/closeio/cleanchausie</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alec<span class="dp">·</span>Rosenbaum</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Alec<span class="dp">·</span>Rosenbaum</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>engineering@close.io</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>engineering@close.io</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>Alec<span class="dp">·</span>Rosenbaum</td><td class="diffline">8 </td><td class="diffpresent">Maintainer:<span class="dp">·</span>Alec<span class="dp">·</span>Rosenbaum</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>engineering@close.io</td><td class="diffline">9 </td><td class="diffpresent">Maintainer-email:<span class="dp">·</span>engineering@close.io</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td><td class="diffline">10 </td><td class="diffpresent">License:<span class="dp">·</span>MIT</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">143 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/cleanchausie.egg-info/SOURCES.txt</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie.egg-info-SOURCES.txt"><span class="source">cleanchausie-1.9.1/cleanchausie.egg-info/SOURCES.txt</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--cleanchausie.egg-info-SOURCES.txt">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">95.0 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/setup.cfg</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--setup.cfg"><span class="source">cleanchausie-1.9.1/setup.cfg</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--setup.cfg">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">93.0 B</span></div>
+      <div><span class="source">cleanchausie-1.9.0/setup.py</span> vs.</div>
+      <div id="cleanchausie--.-.-.tar---cleanchausie--.-.--setup.py"><span class="source">cleanchausie-1.9.1/setup.py</span>
+        <a class="anchor" href="#cleanchausie--.-.-.tar---cleanchausie--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
