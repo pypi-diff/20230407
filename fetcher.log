@@ -4082,3 +4082,43 @@
 [2023-04-07 22:36:48] INFO root fetch - processPackages [robowebserver]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/robowebserver-0.1.5.tar.gz tmp/robowebserver-0.1.6.tar.gz --markdown 20230407/r/robowebserver/0.1.5-0.1.6/diff.md
 [2023-04-07 22:36:51] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:36:51] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:37:36] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622877]
+[2023-04-07 22:37:41] INFO root fetch - main [MainThread]: Found 8 changed packages
+[2023-04-07 22:37:41] INFO root fetch - processPackages [web-utils-soft]: New version: [0.1.2] Old Version: [0.1.1]
+[2023-04-07 22:37:41] INFO root fetch - processPackages [gs-apps]: New version: [0.21.0a20230406] Old Version: [0.21.0a20230405]
+[2023-04-07 22:37:41] INFO root fetch - processPackages [graphscope-client]: New version: [0.9.1] Old Version: [0.9.0]
+[2023-04-07 22:37:41] INFO root fetch - processPackages [graphscope]: New version: [0.9.1] Old Version: [0.9.0]
+[2023-04-07 22:37:41] INFO root fetch - processPackages [gs-coordinator]: New version: [0.9.1] Old Version: [0.9.0]
+[2023-04-07 22:37:41] INFO root fetch - processPackages [web-utils-soft]: executing diffoscope
+[2023-04-07 22:37:41] INFO root fetch - processPackages [web-utils-soft]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/web-utils-soft-0.1.1.tar.gz tmp/web-utils-soft-0.1.2.tar.gz --markdown 20230407/w/web-utils-soft/0.1.1-0.1.2/diff.md
+[2023-04-07 22:37:41] INFO root fetch - processPackages [gs-apps]: Downloading https://files.pythonhosted.org/packages/56/f4/707416a678b519bf2b54ee0f0fdf56f48b981dfff2b77ec576e52b434ef4/gs_apps-0.21.0a20230405-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+[2023-04-07 22:37:41] INFO root fetch - processPackages [graphscope-client]: Downloading https://files.pythonhosted.org/packages/f7/53/c1ffb245684956bc30883fd2945f3e1677b030e8d69945fbfca28db2b46a/graphscope_client-0.9.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+[2023-04-07 22:37:41] INFO root fetch - processPackages [graphscope]: Downloading https://files.pythonhosted.org/packages/8a/cf/5bf5520d0cba1c8ac0bd824e70ade1c01fce914eeed5c7c210496c3f5906/graphscope-0.9.0-py2.py3-none-macosx_10_9_x86_64.whl
+[2023-04-07 22:37:41] INFO root fetch - processPackages [gs-coordinator]: Downloading https://files.pythonhosted.org/packages/71/0d/6c4b5d49846c2ee8e977037c2419e1ef57a68acfe87fdf0a031771493e84/gs_coordinator-0.9.0-py2.py3-none-macosx_10_9_x86_64.whl
+[2023-04-07 22:37:41] WARNING root fetch - processPackages [gs-apps]: Skipping package: exceeds size limit 47778294>=10485760
+[2023-04-07 22:37:41] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:37:41] WARNING root fetch - processPackages [graphscope-client]: Skipping package: exceeds size limit 48560616>=10485760
+[2023-04-07 22:37:41] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:37:41] INFO root fetch - processPackages [gs-engine]: New version: [0.9.1] Old Version: [0.9.0]
+[2023-04-07 22:37:41] INFO root fetch - processPackages [gs-include]: New version: [0.9.1] Old Version: [0.9.0]
+[2023-04-07 22:37:42] INFO root fetch - processPackages [gs-engine]: Downloading https://files.pythonhosted.org/packages/bd/b0/b9b1a1a65be3a78a220a726aa90bda0d1e1a17bbc47999c157c784a7320e/gs_engine-0.9.0-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+[2023-04-07 22:37:42] INFO root fetch - processPackages [graphscope]: Downloading https://files.pythonhosted.org/packages/88/bc/d15c620f88ee0f2d9e2d48162b0fe41abceec7a07feb87268c4d10c6392b/graphscope-0.9.1-py2.py3-none-macosx_11_0_arm64.whl
+[2023-04-07 22:37:42] INFO root fetch - processPackages [gs-include]: Downloading https://files.pythonhosted.org/packages/14/24/6aa7d96461fb18c825639db76c5c3edc7abfca148e3e55cc010cbf4d9a02/gs_include-0.9.0-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+[2023-04-07 22:37:42] INFO root fetch - processPackages [gs-coordinator]: Downloading https://files.pythonhosted.org/packages/b7/72/66667502448c5415e0a3437e817f8ee16d970e4058abb125303ce5365eee/gs_coordinator-0.9.1-py2.py3-none-macosx_11_0_arm64.whl
+[2023-04-07 22:37:42] WARNING root fetch - processPackages [gs-engine]: Skipping package: exceeds size limit 88119450>=10485760
+[2023-04-07 22:37:42] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:37:42] WARNING root fetch - processPackages [gs-include]: Skipping package: exceeds size limit 73794505>=10485760
+[2023-04-07 22:37:42] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:37:42] INFO root fetch - processPackages [graphscope]: executing diffoscope
+[2023-04-07 22:37:42] INFO root fetch - processPackages [graphscope]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/graphscope-0.9.0-py2.py3-none-macosx_10_9_x86_64.whl.zip tmp/graphscope-0.9.1-py2.py3-none-macosx_11_0_arm64.whl.zip --markdown 20230407/g/graphscope/0.9.0-0.9.1/diff.md
+[2023-04-07 22:37:42] INFO root fetch - processPackages [gs-coordinator]: executing diffoscope
+[2023-04-07 22:37:42] INFO root fetch - processPackages [gs-coordinator]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/gs_coordinator-0.9.0-py2.py3-none-macosx_10_9_x86_64.whl.zip tmp/gs_coordinator-0.9.1-py2.py3-none-macosx_11_0_arm64.whl.zip --markdown 20230407/g/gs-coordinator/0.9.0-0.9.1/diff.md
+[2023-04-07 22:37:42] INFO root fetch - processPackages [iot-device]: New version: [0.5.9] Old Version: [0.5.8]
+[2023-04-07 22:37:42] INFO root fetch - processPackages [iot-device]: Downloading https://files.pythonhosted.org/packages/8c/6c/a95cb2e5fae0bff94a04808b2b663604acdfb8dfdbd144894a5295944436/iot-device-0.5.8.tar.gz
+[2023-04-07 22:37:42] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:37:42] INFO root fetch - processPackages [iot-device]: Downloading https://files.pythonhosted.org/packages/8d/31/375ddecee2c755ba6b81fec24355a6f180bc6a08922bdf767d3ee3bac6ec/iot-device-0.5.9.tar.gz
+[2023-04-07 22:37:43] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:37:43] INFO root fetch - processPackages [iot-device]: executing diffoscope
+[2023-04-07 22:37:43] INFO root fetch - processPackages [iot-device]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/iot-device-0.5.8.tar.gz tmp/iot-device-0.5.9.tar.gz --markdown 20230407/i/iot-device/0.5.8-0.5.9/diff.md
+[2023-04-07 22:37:43] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:37:44] INFO root fetch - main [MainThread]: success
