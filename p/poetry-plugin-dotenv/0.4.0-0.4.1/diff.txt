@@ -1,0 +1,178 @@
+--- tmp/poetry_plugin_dotenv-0.4.0.tar.gz
++++ tmp/poetry_plugin_dotenv-0.4.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "poetry_plugin_dotenv-0.4.0.tar", max compression
+│ +gzip compressed data, was "poetry_plugin_dotenv-0.4.1.tar", max compression
+│   --- poetry_plugin_dotenv-0.4.0.tar
+├── +++ poetry_plugin_dotenv-0.4.1.tar
+│ ├── file list
+│ │ @@ -1,11 +1,11 @@
+│ │ --rw-r--r--   0        0        0     1077 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/LICENSE
+│ │ --rw-r--r--   0        0        0     8525 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/README.md
+│ │ --rw-r--r--   0        0        0     6238 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0      699 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/__init__.py
+│ │ --rw-r--r--   0        0        0      335 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/dotenv/__init__.py
+│ │ --rw-r--r--   0        0        0     5423 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/dotenv/core.py
+│ │ --rw-r--r--   0        0        0     6010 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/dotenv/parsers.py
+│ │ --rw-r--r--   0        0        0     1445 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/dotenv/variables.py
+│ │ --rw-r--r--   0        0        0     3395 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/plugin.py
+│ │ --rw-r--r--   0        0        0        0 2023-04-07 11:34:50.413785 poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/py.typed
+│ │ --rw-r--r--   0        0        0    10611 1970-01-01 00:00:00.000000 poetry_plugin_dotenv-0.4.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1077 2023-04-07 16:59:07.544749 poetry_plugin_dotenv-0.4.1/LICENSE
+│ │ +-rw-r--r--   0        0        0     8651 2023-04-07 16:59:07.544749 poetry_plugin_dotenv-0.4.1/README.md
+│ │ +-rw-r--r--   0        0        0     6238 2023-04-07 16:59:35.758122 poetry_plugin_dotenv-0.4.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      699 2023-04-07 16:59:35.662117 poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/__init__.py
+│ │ +-rw-r--r--   0        0        0      335 2023-04-07 16:59:07.548749 poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/dotenv/__init__.py
+│ │ +-rw-r--r--   0        0        0     5423 2023-04-07 16:59:07.548749 poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/dotenv/core.py
+│ │ +-rw-r--r--   0        0        0     6010 2023-04-07 16:59:07.548749 poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/dotenv/parsers.py
+│ │ +-rw-r--r--   0        0        0     1445 2023-04-07 16:59:07.548749 poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/dotenv/variables.py
+│ │ +-rw-r--r--   0        0        0     3395 2023-04-07 16:59:07.548749 poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/plugin.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 16:59:07.548749 poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/py.typed
+│ │ +-rw-r--r--   0        0        0    10737 1970-01-01 00:00:00.000000 poetry_plugin_dotenv-0.4.1/PKG-INFO
+│ │   --- poetry_plugin_dotenv-0.4.0/LICENSE
+│ ├── +++ poetry_plugin_dotenv-0.4.1/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- poetry_plugin_dotenv-0.4.0/README.md
+│ ├── +++ poetry_plugin_dotenv-0.4.1/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -131,14 +131,16 @@
+│ │  
+│ │  By default, plugin will load the `.env` file from the current working directory or "higher directories".
+│ │  
+│ │  To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_DOTENV`` environment variable.
+│ │  
+│ │  If your dotenv file is located in a different path or has a different name you may set the ``POETRY_DOTENV_LOCATION`` environment variable.
+│ │  
+│ │ +<img alt="logo" src="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/docs/static/assets/demo.gif?raw=True">
+│ │ +
+│ │  ```dotenv
+│ │  # .env
+│ │  DB__HOST=localhost
+│ │  DB__DBNAME=prod
+│ │  DB__USER=admin
+│ │  DB__PASSWORD=admin
+│ │  DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
+│ │ ├── html2text {}
+│ │ │ @@ -13,15 +13,15 @@
+│ │ │  dotenv` supports (e.g. templates, interpolating variables using `POSIX`
+│ │ │  variable expansions etc).** # âï¸ Installation ```bash poetry self add
+│ │ │  poetry-plugin-dotenv ``` # ð©ð»âð» Usage By default, plugin will load
+│ │ │  the `.env` file from the current working directory or "higher directories". To
+│ │ │  prevent ``poetry`` from loading the dotenv file, set the
+│ │ │  ``POETRY_DONT_LOAD_DOTENV`` environment variable. If your dotenv file is
+│ │ │  located in a different path or has a different name you may set the
+│ │ │ -``POETRY_DOTENV_LOCATION`` environment variable. ```dotenv # .env
+│ │ │ +``POETRY_DOTENV_LOCATION`` environment variable. [logo] ```dotenv # .env
+│ │ │  DB__HOST=localhost DB__DBNAME=prod DB__USER=admin DB__PASSWORD=admin
+│ │ │  DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
+│ │ │  ``` ```dotenv # .env.dev DB__HOST=localhost DB__DBNAME=dev DB__USER=root
+│ │ │  DB__PASSWORD=root DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@$
+│ │ │  {DB__HOST}/${DB__DBNAME} ``` ```python # main.py import os if __name__ ==
+│ │ │  "__main__": try: print(f"Host: {os.environ['DB__HOST']!r}") print(f"Name:
+│ │ │  {os.environ['DB__DBNAME']!r}") print(f"Username: {os.environ['DB__USER']!r}")
+│ │   --- poetry_plugin_dotenv-0.4.0/pyproject.toml
+│ ├── +++ poetry_plugin_dotenv-0.4.1/pyproject.toml
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "poetry-plugin-dotenv"
+│ │ -version = "0.4.0"
+│ │ +version = "0.4.1"
+│ │  description = "poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
+│ │  license = "MIT"
+│ │  authors = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
+│ │  maintainers = ["Volodymyr Pivoshenko <volodymyr.pivoshenko@gmail.com>"]
+│ │  keywords = [
+│ │      "python",
+│ │      "pypi",
+│ │   --- poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/__init__.py
+│ ├── +++ poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/__init__.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  """poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."""
+│ │  
+│ │  __title__ = "poetry-plugin-dotenv"
+│ │  __summary__ = "poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run."
+│ │  __uri__ = "https://github.com/volopivoshenko/poetry-plugin-dotenv"
+│ │  
+│ │ -__version__ = "0.4.0"
+│ │ +__version__ = "0.4.1"
+│ │  
+│ │  __author__ = "Volodymyr Pivoshenko"
+│ │  __email__ = "volodymyr.pivoshenko@gmail.com"
+│ │  
+│ │  __license__ = "MIT"
+│ │  __copyright__ = "Copyright 2023, Volodymyr Pivoshenko"
+│ │   --- poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/dotenv/core.py
+│ ├── +++ poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/dotenv/core.py
+│ │┄ Files identical despite different names
+│ │   --- poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/dotenv/parsers.py
+│ ├── +++ poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/dotenv/parsers.py
+│ │┄ Files identical despite different names
+│ │   --- poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/dotenv/variables.py
+│ ├── +++ poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/dotenv/variables.py
+│ │┄ Files identical despite different names
+│ │   --- poetry_plugin_dotenv-0.4.0/src/poetry_plugin_dotenv/plugin.py
+│ ├── +++ poetry_plugin_dotenv-0.4.1/src/poetry_plugin_dotenv/plugin.py
+│ │┄ Files identical despite different names
+│ │   --- poetry_plugin_dotenv-0.4.0/PKG-INFO
+│ ├── +++ poetry_plugin_dotenv-0.4.1/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: poetry-plugin-dotenv
+│ │ -Version: 0.4.0
+│ │ +Version: 0.4.1
+│ │  Summary: poetry-plugin-dotenv - is the plugin that automatically loads environment variables from a dotenv file into the environment before poetry commands are run.
+│ │  Home-page: https://github.com/volopivoshenko/poetry-plugin-dotenv
+│ │  License: MIT
+│ │  Keywords: python,pypi,poetry,plugin,plugins,poetry-plugin,poetry-plugins,env,dotenv,cross-platform,hacktoberfest
+│ │  Author: Volodymyr Pivoshenko
+│ │  Author-email: volodymyr.pivoshenko@gmail.com
+│ │  Maintainer: Volodymyr Pivoshenko
+│ │ @@ -171,14 +171,16 @@
+│ │  
+│ │  By default, plugin will load the `.env` file from the current working directory or "higher directories".
+│ │  
+│ │  To prevent ``poetry`` from loading the dotenv file, set the ``POETRY_DONT_LOAD_DOTENV`` environment variable.
+│ │  
+│ │  If your dotenv file is located in a different path or has a different name you may set the ``POETRY_DOTENV_LOCATION`` environment variable.
+│ │  
+│ │ +<img alt="logo" src="https://github.com/volopivoshenko/poetry-plugin-dotenv/blob/main/docs/static/assets/demo.gif?raw=True">
+│ │ +
+│ │  ```dotenv
+│ │  # .env
+│ │  DB__HOST=localhost
+│ │  DB__DBNAME=prod
+│ │  DB__USER=admin
+│ │  DB__PASSWORD=admin
+│ │  DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
+│ │ ├── html2text {}
+│ │ │ @@ -1,8 +1,8 @@
+│ │ │ -Metadata-Version: 2.1 Name: poetry-plugin-dotenv Version: 0.4.0 Summary:
+│ │ │ +Metadata-Version: 2.1 Name: poetry-plugin-dotenv Version: 0.4.1 Summary:
+│ │ │  poetry-plugin-dotenv - is the plugin that automatically loads environment
+│ │ │  variables from a dotenv file into the environment before poetry commands are
+│ │ │  run. Home-page: https://github.com/volopivoshenko/poetry-plugin-dotenv License:
+│ │ │  MIT Keywords: python,pypi,poetry,plugin,plugins,poetry-plugin,poetry-
+│ │ │  plugins,env,dotenv,cross-platform,hacktoberfest Author: Volodymyr Pivoshenko
+│ │ │  Author-email: volodymyr.pivoshenko@gmail.com Maintainer: Volodymyr Pivoshenko
+│ │ │  Maintainer-email: volodymyr.pivoshenko@gmail.com Requires-Python: >=3.8.1,<4.0
+│ │ │ @@ -41,15 +41,15 @@
+│ │ │  dotenv` supports (e.g. templates, interpolating variables using `POSIX`
+│ │ │  variable expansions etc).** # âï¸ Installation ```bash poetry self add
+│ │ │  poetry-plugin-dotenv ``` # ð©ð»âð» Usage By default, plugin will load
+│ │ │  the `.env` file from the current working directory or "higher directories". To
+│ │ │  prevent ``poetry`` from loading the dotenv file, set the
+│ │ │  ``POETRY_DONT_LOAD_DOTENV`` environment variable. If your dotenv file is
+│ │ │  located in a different path or has a different name you may set the
+│ │ │ -``POETRY_DOTENV_LOCATION`` environment variable. ```dotenv # .env
+│ │ │ +``POETRY_DOTENV_LOCATION`` environment variable. [logo] ```dotenv # .env
+│ │ │  DB__HOST=localhost DB__DBNAME=prod DB__USER=admin DB__PASSWORD=admin
+│ │ │  DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@${DB__HOST}/${DB__DBNAME}
+│ │ │  ``` ```dotenv # .env.dev DB__HOST=localhost DB__DBNAME=dev DB__USER=root
+│ │ │  DB__PASSWORD=root DB__ENGINE=postgresql://${DB__USER}:${DB__PASSWORD}@$
+│ │ │  {DB__HOST}/${DB__DBNAME} ``` ```python # main.py import os if __name__ ==
+│ │ │  "__main__": try: print(f"Host: {os.environ['DB__HOST']!r}") print(f"Name:
+│ │ │  {os.environ['DB__DBNAME']!r}") print(f"Username: {os.environ['DB__USER']!r}")

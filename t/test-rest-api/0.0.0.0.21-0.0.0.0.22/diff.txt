@@ -1,0 +1,228 @@
+--- tmp/test_rest_api-0.0.0.0.21.tar.gz
++++ tmp/test_rest_api-0.0.0.0.22.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "test_rest_api-0.0.0.0.21.tar", last modified: Fri Apr  7 17:01:01 2023, max compression
+│ +gzip compressed data, was "test_rest_api-0.0.0.0.22.tar", last modified: Fri Apr  7 17:07:32 2023, max compression
+│   --- test_rest_api-0.0.0.0.21.tar
+├── +++ test_rest_api-0.0.0.0.22.tar
+│ ├── file list
+│ │ @@ -1,47 +1,47 @@
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.079155 test_rest_api-0.0.0.0.21/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     1067 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/LICENSE
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)    19518 2023-04-07 17:01:01.078823 test_rest_api-0.0.0.0.21/PKG-INFO
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)    17931 2023-04-07 07:45:37.000000 test_rest_api-0.0.0.0.21/README.md
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)       38 2023-04-07 17:01:01.079261 test_rest_api-0.0.0.0.21/setup.cfg
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     2747 2023-04-07 17:00:00.000000 test_rest_api-0.0.0.0.21/setup.py
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.062076 test_rest_api-0.0.0.0.21/test_rest_api/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      236 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/__init__.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     1608 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/__main__.py
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.065803 test_rest_api-0.0.0.0.21/test_rest_api/global_variables/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)        0 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.21/test_rest_api/global_variables/__init__.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     1161 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/global_variables/exception.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     2568 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/global_variables/global_variables.py
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.067227 test_rest_api-0.0.0.0.21/test_rest_api/logger/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)        0 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.21/test_rest_api/logger/__init__.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     1237 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/logger/exception.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      848 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/logger/logger.py
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.069294 test_rest_api-0.0.0.0.21/test_rest_api/reporting/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)        0 2023-03-25 09:45:47.000000 test_rest_api-0.0.0.0.21/test_rest_api/reporting/__init__.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)    34587 2023-04-07 16:39:07.000000 test_rest_api-0.0.0.0.21/test_rest_api/reporting/html.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     5404 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/reporting/report.py
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.071950 test_rest_api-0.0.0.0.21/test_rest_api/rest_api/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)        0 2023-03-11 07:34:23.000000 test_rest_api-0.0.0.0.21/test_rest_api/rest_api/__init__.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     1824 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/rest_api/exception.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      423 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.21/test_rest_api/rest_api/method.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      332 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.21/test_rest_api/rest_api/response.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     5987 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/rest_api/rest_api.py
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.074454 test_rest_api-0.0.0.0.21/test_rest_api/testing/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)        0 2023-03-11 07:03:23.000000 test_rest_api-0.0.0.0.21/test_rest_api/testing/__init__.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     3904 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/testing/bug.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)    14788 2023-04-07 13:46:31.000000 test_rest_api-0.0.0.0.21/test_rest_api/testing/decorator.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      863 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.21/test_rest_api/testing/exception.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)    13772 2023-04-07 14:33:51.000000 test_rest_api-0.0.0.0.21/test_rest_api/testing/runner.py
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.078249 test_rest_api-0.0.0.0.21/test_rest_api/utils/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)        0 2023-03-24 16:41:57.000000 test_rest_api-0.0.0.0.21/test_rest_api/utils/__init__.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      943 2023-03-24 16:41:57.000000 test_rest_api-0.0.0.0.21/test_rest_api/utils/aiohttp_session.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      546 2023-03-24 16:41:57.000000 test_rest_api-0.0.0.0.21/test_rest_api/utils/colors.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      247 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.21/test_rest_api/utils/decorator_hints.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     2027 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.21/test_rest_api/utils/error_msg.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     1127 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.21/test_rest_api/utils/exception.py
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)      606 2023-03-24 16:41:57.000000 test_rest_api-0.0.0.0.21/test_rest_api/utils/logger.py
+│ │ -drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:01:01.064412 test_rest_api-0.0.0.0.21/test_rest_api.egg-info/
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)    19518 2023-04-07 17:01:00.000000 test_rest_api-0.0.0.0.21/test_rest_api.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)     1175 2023-04-07 17:01:01.000000 test_rest_api-0.0.0.0.21/test_rest_api.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)        1 2023-04-07 17:01:00.000000 test_rest_api-0.0.0.0.21/test_rest_api.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)       29 2023-04-07 17:01:00.000000 test_rest_api-0.0.0.0.21/test_rest_api.egg-info/requires.txt
+│ │ --rw-r--r--   0 trjose     (501) staff       (20)       14 2023-04-07 17:01:00.000000 test_rest_api-0.0.0.0.21/test_rest_api.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.399900 test_rest_api-0.0.0.0.22/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     1067 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/LICENSE
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)    19575 2023-04-07 17:07:32.399297 test_rest_api-0.0.0.0.22/PKG-INFO
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)    17931 2023-04-07 07:45:37.000000 test_rest_api-0.0.0.0.22/README.md
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)       38 2023-04-07 17:07:32.400142 test_rest_api-0.0.0.0.22/setup.cfg
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     2812 2023-04-07 17:07:15.000000 test_rest_api-0.0.0.0.22/setup.py
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.371488 test_rest_api-0.0.0.0.22/test_rest_api/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      236 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/__init__.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     1608 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/__main__.py
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.376487 test_rest_api-0.0.0.0.22/test_rest_api/global_variables/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)        0 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.22/test_rest_api/global_variables/__init__.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     1161 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/global_variables/exception.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     2568 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/global_variables/global_variables.py
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.378538 test_rest_api-0.0.0.0.22/test_rest_api/logger/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)        0 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.22/test_rest_api/logger/__init__.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     1237 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/logger/exception.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      848 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/logger/logger.py
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.381601 test_rest_api-0.0.0.0.22/test_rest_api/reporting/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)        0 2023-03-25 09:45:47.000000 test_rest_api-0.0.0.0.22/test_rest_api/reporting/__init__.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)    34587 2023-04-07 16:39:07.000000 test_rest_api-0.0.0.0.22/test_rest_api/reporting/html.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     5404 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/reporting/report.py
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.386280 test_rest_api-0.0.0.0.22/test_rest_api/rest_api/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)        0 2023-03-11 07:34:23.000000 test_rest_api-0.0.0.0.22/test_rest_api/rest_api/__init__.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     1824 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/rest_api/exception.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      423 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.22/test_rest_api/rest_api/method.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      332 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.22/test_rest_api/rest_api/response.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     5987 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/rest_api/rest_api.py
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.391089 test_rest_api-0.0.0.0.22/test_rest_api/testing/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)        0 2023-03-11 07:03:23.000000 test_rest_api-0.0.0.0.22/test_rest_api/testing/__init__.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     3904 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/testing/bug.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)    14788 2023-04-07 13:46:31.000000 test_rest_api-0.0.0.0.22/test_rest_api/testing/decorator.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      863 2023-04-04 09:00:40.000000 test_rest_api-0.0.0.0.22/test_rest_api/testing/exception.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)    13772 2023-04-07 14:33:51.000000 test_rest_api-0.0.0.0.22/test_rest_api/testing/runner.py
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.398126 test_rest_api-0.0.0.0.22/test_rest_api/utils/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)        0 2023-03-24 16:41:57.000000 test_rest_api-0.0.0.0.22/test_rest_api/utils/__init__.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      943 2023-03-24 16:41:57.000000 test_rest_api-0.0.0.0.22/test_rest_api/utils/aiohttp_session.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      546 2023-03-24 16:41:57.000000 test_rest_api-0.0.0.0.22/test_rest_api/utils/colors.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      247 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.22/test_rest_api/utils/decorator_hints.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     2027 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.22/test_rest_api/utils/error_msg.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     1127 2023-04-03 07:06:15.000000 test_rest_api-0.0.0.0.22/test_rest_api/utils/exception.py
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)      606 2023-03-24 16:41:57.000000 test_rest_api-0.0.0.0.22/test_rest_api/utils/logger.py
+│ │ +drwxr-xr-x   0 trjose     (501) staff       (20)        0 2023-04-07 17:07:32.374689 test_rest_api-0.0.0.0.22/test_rest_api.egg-info/
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)    19575 2023-04-07 17:07:32.000000 test_rest_api-0.0.0.0.22/test_rest_api.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)     1175 2023-04-07 17:07:32.000000 test_rest_api-0.0.0.0.22/test_rest_api.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)        1 2023-04-07 17:07:32.000000 test_rest_api-0.0.0.0.22/test_rest_api.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)       29 2023-04-07 17:07:32.000000 test_rest_api-0.0.0.0.22/test_rest_api.egg-info/requires.txt
+│ │ +-rw-r--r--   0 trjose     (501) staff       (20)       14 2023-04-07 17:07:32.000000 test_rest_api-0.0.0.0.22/test_rest_api.egg-info/top_level.txt
+│ │   --- test_rest_api-0.0.0.0.21/LICENSE
+│ ├── +++ test_rest_api-0.0.0.0.22/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/PKG-INFO
+│ ├── +++ test_rest_api-0.0.0.0.22/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,13 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: test_rest_api
+│ │ -Version: 0.0.0.0.21
+│ │ +Version: 0.0.0.0.22
+│ │  Summary: Asynchronous Test Framework #HighPerformance #EasyToLearn #FastToCode #AsyncTests
+│ │  Home-page: https://github.com/troymjose/test_rest_api
+│ │ +Download-URL: https://github.com/troymjose/test_rest_api
+│ │  Author: Troy M Jose
+│ │  Author-email: 
+│ │  Keywords: test,unittest,restapi,testframework,asyncio,async,asynchronous,testingframework,rest,api,python,python3,testing,unittesting,automation,automationtest,automationtesting,restapitest,restapitesting,restapiunittest,restapiunittesting,restapiautomation,restapiautomationtest,restapiautomationtesting,apitest,apitesting,apiunittest,apiunittesting,apiautomation,apiautomationtest,apiautomationtesting
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │   --- test_rest_api-0.0.0.0.21/README.md
+│ ├── +++ test_rest_api-0.0.0.0.22/README.md
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/setup.py
+│ ├── +++ test_rest_api-0.0.0.0.22/setup.py
+│ │┄ Files 1% similar despite different names
+│ │ @@ -14,19 +14,20 @@
+│ │  
+│ │  # Get README.md details
+│ │  with codecs.open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "README.md"), encoding="utf-8") as f:
+│ │      long_description = "\n" + f.read()
+│ │  
+│ │  # Setup
+│ │  setup(name="test_rest_api",
+│ │ -      version="0.0.0.0.21",
+│ │ +      version="0.0.0.0.22",
+│ │        author="Troy M Jose",
+│ │        author_email="",
+│ │        url='https://github.com/troymjose/test_rest_api',
+│ │        bugtrack_url='https://github.com/troymjose/test_rest_api/issues',
+│ │ +      download_url='https://github.com/troymjose/test_rest_api',
+│ │        description="Asynchronous Test Framework #HighPerformance #EasyToLearn #FastToCode #AsyncTests",
+│ │        keywords=['test', 'unittest', 'restapi', 'testframework', 'asyncio', 'async', 'asynchronous',
+│ │                  'testingframework', 'rest', 'api', 'python', 'python3', 'testing', 'unittesting', 'automation',
+│ │                  'automationtest', 'automationtesting',
+│ │                  'restapitest', 'restapitesting', 'restapiunittest', 'restapiunittesting', 'restapiautomation',
+│ │                  'restapiautomationtest', 'restapiautomationtesting', 'apitest', 'apitesting', 'apiunittest',
+│ │                  'apiunittesting', 'apiautomation', 'apiautomationtest', 'apiautomationtesting'],
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/__main__.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/__main__.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/global_variables/exception.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/global_variables/exception.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/global_variables/global_variables.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/global_variables/global_variables.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/logger/exception.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/logger/exception.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/logger/logger.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/logger/logger.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/reporting/html.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/reporting/html.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/reporting/report.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/reporting/report.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/rest_api/exception.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/rest_api/exception.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/rest_api/rest_api.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/rest_api/rest_api.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/testing/bug.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/testing/bug.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/testing/decorator.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/testing/decorator.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/testing/exception.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/testing/exception.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/testing/runner.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/testing/runner.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/utils/aiohttp_session.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/utils/aiohttp_session.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/utils/colors.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/utils/colors.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/utils/error_msg.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/utils/error_msg.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/utils/exception.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/utils/exception.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api/utils/logger.py
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api/utils/logger.py
+│ │┄ Files identical despite different names
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api.egg-info/PKG-INFO
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,12 +1,13 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: test-rest-api
+│ │ -Version: 0.0.0.0.21
+│ │ +Version: 0.0.0.0.22
+│ │  Summary: Asynchronous Test Framework #HighPerformance #EasyToLearn #FastToCode #AsyncTests
+│ │  Home-page: https://github.com/troymjose/test_rest_api
+│ │ +Download-URL: https://github.com/troymjose/test_rest_api
+│ │  Author: Troy M Jose
+│ │  Author-email: 
+│ │  Keywords: test,unittest,restapi,testframework,asyncio,async,asynchronous,testingframework,rest,api,python,python3,testing,unittesting,automation,automationtest,automationtesting,restapitest,restapitesting,restapiunittest,restapiunittesting,restapiautomation,restapiautomationtest,restapiautomationtesting,apitest,apitesting,apiunittest,apiunittesting,apiautomation,apiautomationtest,apiautomationtesting
+│ │  Classifier: Programming Language :: Python :: 3.8
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │   --- test_rest_api-0.0.0.0.21/test_rest_api.egg-info/SOURCES.txt
+│ ├── +++ test_rest_api-0.0.0.0.22/test_rest_api.egg-info/SOURCES.txt
+│ │┄ Files identical despite different names
