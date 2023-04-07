@@ -2269,3 +2269,115 @@
 [2023-04-07 20:02:14] INFO root fetch - main [MainThread]: success
 [2023-04-07 20:02:15] INFO root fetch - main [MainThread]: success
 [2023-04-07 20:02:16] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:04] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17621723]
+[2023-04-07 20:12:09] INFO root fetch - main [MainThread]: Found 22 changed packages
+[2023-04-07 20:12:09] INFO root fetch - processPackages [bullet-safety-gym]: New version: [0.2.0] Old Version: [0.1.0]
+[2023-04-07 20:12:09] INFO root fetch - processPackages [bullet-safety-gym]: report already exists
+[2023-04-07 20:12:09] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:09] INFO root fetch - processPackages [extera]: New version: [1.0.0.2] Old Version: [1.0.0.1]
+[2023-04-07 20:12:09] INFO root fetch - processPackages [alethiometer]: New version: [1.0.2] Old Version: [1.0.1]
+[2023-04-07 20:12:09] WARNING root fetch - processPackages [napari-blender-bridge]: Skipping, unable to determine old version
+[2023-04-07 20:12:09] INFO root fetch - main [MainThread]: error
+[2023-04-07 20:12:09] INFO root fetch - processPackages [geodesic-api]: New version: [0.9.0] Old Version: [0.8.7]
+[2023-04-07 20:12:09] INFO root fetch - processPackages [geodesic-api]: report already exists
+[2023-04-07 20:12:09] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:09] INFO root fetch - processPackages [cmds-helper]: New version: [0.1.1] Old Version: [0.0.1]
+[2023-04-07 20:12:09] INFO root fetch - processPackages [hoppr-security-commons]: New version: [0.0.9] Old Version: [0.0.8]
+[2023-04-07 20:12:09] INFO root fetch - processPackages [asrp]: New version: [0.0.9] Old Version: [0.0.8]
+[2023-04-07 20:12:09] INFO root fetch - processPackages [extera]: Downloading https://files.pythonhosted.org/packages/64/93/e42a77eefb23b1d682643df176b7e5d271917b9d90b81e38c557e0dc71f7/extera-1.0.0.1.tar.gz
+[2023-04-07 20:12:09] INFO root fetch - processPackages [alethiometer]: Downloading https://files.pythonhosted.org/packages/14/20/42c6527f166d753ba8a892f9e04d236b6e6d26e1526b7199cc3768cc13db/alethiometer-1.0.1-py3-none-any.whl
+[2023-04-07 20:12:10] INFO root fetch - processPackages [cmds-helper]: Downloading https://files.pythonhosted.org/packages/a8/82/77a19b6110bfee688f38f8ef36436aee5bd0b03aae560707d8788343678e/cmds_helper-0.0.1.tar.gz
+[2023-04-07 20:12:10] INFO root fetch - processPackages [asrp]: Downloading https://files.pythonhosted.org/packages/43/58/35f772cf5dc9a95c20ec9736410ef553da63da6257899d7ad6545927d524/asrp-0.0.8.tar.gz
+[2023-04-07 20:12:10] INFO root fetch - processPackages [hoppr-security-commons]: Downloading https://files.pythonhosted.org/packages/73/a4/8b39dee10fcc7f5b6cf68593087145653b22ef60b8f70d63c5484f34b750/hoppr_security_commons-0.0.8.tar.gz
+[2023-04-07 20:12:10] INFO root fetch - processPackages [cmds-helper]: Downloading https://files.pythonhosted.org/packages/d3/e8/5f568f2365e12ff8aa0068dd3c4c6396411cd43067593ee375b327456da4/cmds_helper-0.1.1.tar.gz
+[2023-04-07 20:12:10] INFO root fetch - processPackages [cmds-helper]: executing diffoscope
+[2023-04-07 20:12:10] INFO root fetch - processPackages [cmds-helper]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/cmds_helper-0.0.1.tar.gz tmp/cmds_helper-0.1.1.tar.gz --html 20230407/c/cmds-helper/0.0.1-0.1.1/index.html --text 20230407/c/cmds-helper/0.0.1-0.1.1/diff.txt --markdown 20230407/c/cmds-helper/0.0.1-0.1.1/diff.md
+[2023-04-07 20:12:10] INFO root fetch - processPackages [hoppr-security-commons]: Downloading https://files.pythonhosted.org/packages/28/98/819d5ffab5f26c075fb2191a2d5583cd18aa8069a8fc43484d65978fe18d/hoppr_security_commons-0.0.9.tar.gz
+[2023-04-07 20:12:10] INFO root fetch - processPackages [alethiometer]: Downloading https://files.pythonhosted.org/packages/ae/12/45f5d1728404494d94cf55887581f68e18a513cba5c01608a9ea8339ec5d/alethiometer-1.0.2.tar.gz
+[2023-04-07 20:12:10] INFO root fetch - processPackages [extera]: Downloading https://files.pythonhosted.org/packages/51/c4/dcf59d58078352c1c067423b0c6e01c61f868370d51058694dbe083557d7/extera-1.0.0.2.tar.gz
+[2023-04-07 20:12:10] INFO root fetch - processPackages [hoppr-security-commons]: executing diffoscope
+[2023-04-07 20:12:10] INFO root fetch - processPackages [hoppr-security-commons]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/hoppr_security_commons-0.0.8.tar.gz tmp/hoppr_security_commons-0.0.9.tar.gz --html 20230407/h/hoppr-security-commons/0.0.8-0.0.9/index.html --text 20230407/h/hoppr-security-commons/0.0.8-0.0.9/diff.txt --markdown 20230407/h/hoppr-security-commons/0.0.8-0.0.9/diff.md
+[2023-04-07 20:12:10] INFO root fetch - processPackages [asrp]: Downloading https://files.pythonhosted.org/packages/3e/0b/9d70f62ca56685aefb58a7b30c57584607d3cef3c1cb185282165f5f03cd/asrp-0.0.9.tar.gz
+[2023-04-07 20:12:10] INFO root fetch - processPackages [alethiometer]: executing diffoscope
+[2023-04-07 20:12:10] INFO root fetch - processPackages [alethiometer]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/alethiometer-1.0.1-py3-none-any.whl.zip tmp/alethiometer-1.0.2.tar.gz --html 20230407/a/alethiometer/1.0.1-1.0.2/index.html --text 20230407/a/alethiometer/1.0.1-1.0.2/diff.txt --markdown 20230407/a/alethiometer/1.0.1-1.0.2/diff.md
+[2023-04-07 20:12:10] INFO root fetch - processPackages [extera]: executing diffoscope
+[2023-04-07 20:12:10] INFO root fetch - processPackages [extera]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/extera-1.0.0.1.tar.gz tmp/extera-1.0.0.2.tar.gz --html 20230407/e/extera/1.0.0.1-1.0.0.2/index.html --text 20230407/e/extera/1.0.0.1-1.0.0.2/diff.txt --markdown 20230407/e/extera/1.0.0.1-1.0.0.2/diff.md
+[2023-04-07 20:12:10] INFO root fetch - processPackages [asrp]: executing diffoscope
+[2023-04-07 20:12:10] INFO root fetch - processPackages [asrp]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/asrp-0.0.8.tar.gz tmp/asrp-0.0.9.tar.gz --html 20230407/a/asrp/0.0.8-0.0.9/index.html --text 20230407/a/asrp/0.0.8-0.0.9/diff.txt --markdown 20230407/a/asrp/0.0.8-0.0.9/diff.md
+[2023-04-07 20:12:11] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:11] INFO root fetch - processPackages [alchemlyb]: New version: [2.0.1] Old Version: [2.0.0]
+[2023-04-07 20:12:11] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:11] INFO root fetch - processPackages [hoppr-cyclonedx-models]: New version: [0.4.9] Old Version: [0.4.8]
+[2023-04-07 20:12:11] INFO root fetch - processPackages [hoppr-cyclonedx-models]: report already exists
+[2023-04-07 20:12:11] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:11] INFO root fetch - processPackages [arcanum-newspaper-segmentation-client]: New version: [1.5.1] Old Version: [1.5.0]
+[2023-04-07 20:12:11] INFO root fetch - processPackages [alchemlyb]: Downloading https://files.pythonhosted.org/packages/2c/b5/593615a8c08a60237aa900265bbcc018ca291c1fe30ba1b1b1dc81f5beca/alchemlyb-2.0.0.tar.gz
+[2023-04-07 20:12:11] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:11] INFO root fetch - processPackages [arcanum-newspaper-segmentation-client]: Downloading https://files.pythonhosted.org/packages/4f/1f/e641f87a693714be16fbacb101daa3c6378111112a2b8d35c5e48de65005/arcanum-newspaper-segmentation-client-1.5.1.tar.gz
+[2023-04-07 20:12:11] INFO root fetch - processPackages [viqi-api]: New version: [0.6.4.1] Old Version: [0.6.4.0]
+[2023-04-07 20:12:12] INFO root fetch - processPackages [alchemlyb]: Downloading https://files.pythonhosted.org/packages/12/f0/6dac6fdefc5a6146cb6833a3b8e532e49acc29edfab392b6e8c083364d2b/alchemlyb-2.0.1.tar.gz
+[2023-04-07 20:12:12] INFO root fetch - processPackages [alchemlyb]: executing diffoscope
+[2023-04-07 20:12:12] INFO root fetch - processPackages [alchemlyb]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/alchemlyb-2.0.0.tar.gz tmp/alchemlyb-2.0.1.tar.gz --html 20230407/a/alchemlyb/2.0.0-2.0.1/index.html --text 20230407/a/alchemlyb/2.0.0-2.0.1/diff.txt --markdown 20230407/a/alchemlyb/2.0.0-2.0.1/diff.md
+[2023-04-07 20:12:12] INFO root fetch - processPackages [viqi-api]: Downloading https://files.pythonhosted.org/packages/44/f5/e4cbc670fc51ea74affa13a81e193786c198d8e1ddd7afdcb295bdf6f5e3/viqi_api-0.6.4.0-py3-none-any.whl
+[2023-04-07 20:12:12] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:12] INFO root fetch - processPackages [spatialcsv]: New version: [0.0.3] Old Version: [0.0.1]
+[2023-04-07 20:12:12] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:12] INFO root fetch - processPackages [arcanum-newspaper-segmentation-client]: executing diffoscope
+[2023-04-07 20:12:12] INFO root fetch - processPackages [arcanum-newspaper-segmentation-client]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/arcanum-newspaper-segmentation-client-1.5.0.tar.gz tmp/arcanum-newspaper-segmentation-client-1.5.1.tar.gz --html 20230407/a/arcanum-newspaper-segmentation-client/1.5.0-1.5.1/index.html --text 20230407/a/arcanum-newspaper-segmentation-client/1.5.0-1.5.1/diff.txt --markdown 20230407/a/arcanum-newspaper-segmentation-client/1.5.0-1.5.1/diff.md
+[2023-04-07 20:12:12] INFO root fetch - processPackages [ethpm-types]: New version: [0.4.3] Old Version: [0.4.2]
+[2023-04-07 20:12:12] INFO root fetch - processPackages [viqi-api]: Downloading https://files.pythonhosted.org/packages/6c/4a/19f6d21376a8c4b55174e95317adeb590b001aa1453b044ab4d556808313/viqi_api-0.6.4.1-py3-none-any.whl
+[2023-04-07 20:12:12] INFO root fetch - processPackages [spatialcsv]: Downloading https://files.pythonhosted.org/packages/cf/0a/75c9e53345f195bcddbeadfc65ade017fb837cfdd5d141f6042af7d1dcfc/spatialcsv-0.0.1.tar.gz
+[2023-04-07 20:12:12] INFO root fetch - processPackages [ethpm-types]: Downloading https://files.pythonhosted.org/packages/6f/fd/c28294278bb4d1567dee3780447d54f1fa93dc2e908bad0ba288be78e0de/ethpm-types-0.4.2.tar.gz
+[2023-04-07 20:12:12] INFO root fetch - processPackages [viqi-api]: executing diffoscope
+[2023-04-07 20:12:12] INFO root fetch - processPackages [viqi-api]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/viqi_api-0.6.4.0-py3-none-any.whl.zip tmp/viqi_api-0.6.4.1-py3-none-any.whl.zip --html 20230407/v/viqi-api/0.6.4.0-0.6.4.1/index.html --text 20230407/v/viqi-api/0.6.4.0-0.6.4.1/diff.txt --markdown 20230407/v/viqi-api/0.6.4.0-0.6.4.1/diff.md
+[2023-04-07 20:12:12] INFO root fetch - processPackages [spatialcsv]: Downloading https://files.pythonhosted.org/packages/28/39/a1c244c9a16cb4c86015e280ee0b513101d9ace9c64c66b6157ab0ba7bd7/spatialcsv-0.0.3.tar.gz
+[2023-04-07 20:12:12] INFO root fetch - processPackages [spatialcsv]: executing diffoscope
+[2023-04-07 20:12:12] INFO root fetch - processPackages [spatialcsv]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/spatialcsv-0.0.1.tar.gz tmp/spatialcsv-0.0.3.tar.gz --html 20230407/s/spatialcsv/0.0.1-0.0.3/index.html --text 20230407/s/spatialcsv/0.0.1-0.0.3/diff.txt --markdown 20230407/s/spatialcsv/0.0.1-0.0.3/diff.md
+[2023-04-07 20:12:13] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:13] INFO root fetch - processPackages [acryl-datahub]: New version: [0.9.6rc1] Old Version: [0.9.6rc0]
+[2023-04-07 20:12:13] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:13] INFO root fetch - processPackages [acryl-datahub-airflow-plugin]: New version: [0.9.6rc1] Old Version: [0.9.6rc0]
+[2023-04-07 20:12:13] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:13] WARNING root fetch - processPackages [factorialalexmclean]: Skipping, unable to determine old version
+[2023-04-07 20:12:13] INFO root fetch - main [MainThread]: error
+[2023-04-07 20:12:13] INFO root fetch - processPackages [acryl-datahub]: Downloading https://files.pythonhosted.org/packages/5c/93/a89204befbf5a41d498b9204bc4e597e57cf385fbbf058bd74b9e2cff691/acryl-datahub-0.9.6rc0.tar.gz
+[2023-04-07 20:12:14] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:14] INFO root fetch - processPackages [acryl-datahub-airflow-plugin]: Downloading https://files.pythonhosted.org/packages/60/74/0b422dc91d4bd8d366dd7b7d0ec02d0dce8acb8fd091783a0270d02e5607/acryl-datahub-airflow-plugin-0.9.6rc0.tar.gz
+[2023-04-07 20:12:14] INFO root fetch - processPackages [omnidep]: New version: [0.3.4] Old Version: [0.3.3]
+[2023-04-07 20:12:14] INFO root fetch - processPackages [xGPR]: New version: [0.1.0.4] Old Version: [0.1.0.3]
+[2023-04-07 20:12:14] INFO root fetch - processPackages [omnidep]: Downloading https://files.pythonhosted.org/packages/a2/bf/7690a8eaa6ccf6e190ef345d098366264104a5e974b08870a982578e0925/omnidep-0.3.3.tar.gz
+[2023-04-07 20:12:14] INFO root fetch - processPackages [xGPR]: Downloading https://files.pythonhosted.org/packages/e0/8e/68417577e9752c716a616bcb42bfbbf77fca3f5ba4e22714842f8d372106/xGPR-0.1.0.3.tar.gz
+[2023-04-07 20:12:14] INFO root fetch - processPackages [acryl-datahub-airflow-plugin]: Downloading https://files.pythonhosted.org/packages/8c/ee/fa9c08b9f255db5385b46e09a7315f48f208b40d651a68bf9966b4745db4/acryl-datahub-airflow-plugin-0.9.6rc1.tar.gz
+[2023-04-07 20:12:14] INFO root fetch - processPackages [xGPR]: Downloading https://files.pythonhosted.org/packages/bf/dd/d4896301d32039864ebb5e33c38f911cc25cab67fc23d2fece4378bc9557/xGPR-0.1.0.4.tar.gz
+[2023-04-07 20:12:14] INFO root fetch - processPackages [omnidep]: Downloading https://files.pythonhosted.org/packages/da/05/6a77103ababbaa1474781dd09074e9cd4cd5e15eef9da4206d3e4a6b5f7a/omnidep-0.3.4.tar.gz
+[2023-04-07 20:12:14] INFO root fetch - processPackages [acryl-datahub-airflow-plugin]: executing diffoscope
+[2023-04-07 20:12:14] INFO root fetch - processPackages [acryl-datahub-airflow-plugin]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/acryl-datahub-airflow-plugin-0.9.6rc0.tar.gz tmp/acryl-datahub-airflow-plugin-0.9.6rc1.tar.gz --html 20230407/a/acryl-datahub-airflow-plugin/0.9.6rc0-0.9.6rc1/index.html --text 20230407/a/acryl-datahub-airflow-plugin/0.9.6rc0-0.9.6rc1/diff.txt --markdown 20230407/a/acryl-datahub-airflow-plugin/0.9.6rc0-0.9.6rc1/diff.md
+[2023-04-07 20:12:14] INFO root fetch - processPackages [xGPR]: executing diffoscope
+[2023-04-07 20:12:14] INFO root fetch - processPackages [xGPR]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/xGPR-0.1.0.3.tar.gz tmp/xGPR-0.1.0.4.tar.gz --html 20230407/x/xGPR/0.1.0.3-0.1.0.4/index.html --text 20230407/x/xGPR/0.1.0.3-0.1.0.4/diff.txt --markdown 20230407/x/xGPR/0.1.0.3-0.1.0.4/diff.md
+[2023-04-07 20:12:14] INFO root fetch - processPackages [omnidep]: executing diffoscope
+[2023-04-07 20:12:14] INFO root fetch - processPackages [omnidep]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/omnidep-0.3.3.tar.gz tmp/omnidep-0.3.4.tar.gz --html 20230407/o/omnidep/0.3.3-0.3.4/index.html --text 20230407/o/omnidep/0.3.3-0.3.4/diff.txt --markdown 20230407/o/omnidep/0.3.3-0.3.4/diff.md
+[2023-04-07 20:12:15] INFO root fetch - processPackages [ethpm-types]: Downloading https://files.pythonhosted.org/packages/7a/b6/ad6472b0ec789aca83d1d6eb137951f3658387e4efee521652367b761de7/ethpm-types-0.4.3.tar.gz
+[2023-04-07 20:12:15] INFO root fetch - processPackages [acryl-datahub]: Downloading https://files.pythonhosted.org/packages/ad/82/42882429f560fe5f9e20c6f3ee4d421b566a61c843e944997be820243708/acryl-datahub-0.9.6rc1.tar.gz
+[2023-04-07 20:12:15] INFO root fetch - processPackages [ethpm-types]: executing diffoscope
+[2023-04-07 20:12:15] INFO root fetch - processPackages [ethpm-types]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ethpm-types-0.4.2.tar.gz tmp/ethpm-types-0.4.3.tar.gz --html 20230407/e/ethpm-types/0.4.2-0.4.3/index.html --text 20230407/e/ethpm-types/0.4.2-0.4.3/diff.txt --markdown 20230407/e/ethpm-types/0.4.2-0.4.3/diff.md
+[2023-04-07 20:12:15] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:15] INFO root fetch - processPackages [ooo-dev-tools]: New version: [0.9.3] Old Version: [0.9.2]
+[2023-04-07 20:12:16] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:16] INFO root fetch - processPackages [acryl-datahub]: executing diffoscope
+[2023-04-07 20:12:16] INFO root fetch - processPackages [acryl-datahub]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/acryl-datahub-0.9.6rc0.tar.gz tmp/acryl-datahub-0.9.6rc1.tar.gz --html 20230407/a/acryl-datahub/0.9.6rc0-0.9.6rc1/index.html --text 20230407/a/acryl-datahub/0.9.6rc0-0.9.6rc1/diff.txt --markdown 20230407/a/acryl-datahub/0.9.6rc0-0.9.6rc1/diff.md
+[2023-04-07 20:12:16] INFO root fetch - processPackages [pymdown-extensions]: New version: [9.9.2] Old Version: [9.9.1]
+[2023-04-07 20:12:16] INFO root fetch - processPackages [ooo-dev-tools]: Downloading https://files.pythonhosted.org/packages/d6/0e/a060a2c9aab84cf80fcb02adc26155d347f3663fe254464b23fe5de5a5b5/ooo_dev_tools-0.9.2.tar.gz
+[2023-04-07 20:12:16] INFO root fetch - processPackages [pymdown-extensions]: Downloading https://files.pythonhosted.org/packages/af/a9/fc26e9bacc2a2fbdabe2b2ff384fe605ad508ad23298596f5660ad878dde/pymdown_extensions-9.9.1.tar.gz
+[2023-04-07 20:12:16] INFO root fetch - processPackages [ooo-dev-tools]: Downloading https://files.pythonhosted.org/packages/8b/e8/3e56ada0f8d37583fd19e0b3440848eb3bbf603781781d61de410340b6a2/ooo_dev_tools-0.9.3.tar.gz
+[2023-04-07 20:12:16] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:16] WARNING root fetch - processPackages [anacron]: Skipping, unable to determine old version
+[2023-04-07 20:12:16] INFO root fetch - main [MainThread]: error
+[2023-04-07 20:12:16] INFO root fetch - processPackages [pymdown-extensions]: Downloading https://files.pythonhosted.org/packages/d9/6c/acf082ba18d1c91f75d38ba8fbc2dc97d782ce119739467e4529647809ed/pymdown_extensions-9.9.2.tar.gz
+[2023-04-07 20:12:16] INFO root fetch - processPackages [pymdown-extensions]: executing diffoscope
+[2023-04-07 20:12:16] INFO root fetch - processPackages [pymdown-extensions]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pymdown_extensions-9.9.1.tar.gz tmp/pymdown_extensions-9.9.2.tar.gz --html 20230407/p/pymdown-extensions/9.9.1-9.9.2/index.html --text 20230407/p/pymdown-extensions/9.9.1-9.9.2/diff.txt --markdown 20230407/p/pymdown-extensions/9.9.1-9.9.2/diff.md
+[2023-04-07 20:12:17] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:18] INFO root fetch - processPackages [ooo-dev-tools]: executing diffoscope
+[2023-04-07 20:12:18] INFO root fetch - processPackages [ooo-dev-tools]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ooo_dev_tools-0.9.2.tar.gz tmp/ooo_dev_tools-0.9.3.tar.gz --html 20230407/o/ooo-dev-tools/0.9.2-0.9.3/index.html --text 20230407/o/ooo-dev-tools/0.9.2-0.9.3/diff.txt --markdown 20230407/o/ooo-dev-tools/0.9.2-0.9.3/diff.md
+[2023-04-07 20:12:24] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:12:29] INFO root fetch - main [MainThread]: success

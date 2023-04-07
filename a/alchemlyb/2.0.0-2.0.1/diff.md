@@ -1,0 +1,493 @@
+# Comparing `tmp/alchemlyb-2.0.0.tar.gz` & `tmp/alchemlyb-2.0.1.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "alchemlyb-2.0.0.tar", last modified: Tue Dec 13 14:32:59 2022, max compression
++gzip compressed data, was "alchemlyb-2.0.1.tar", last modified: Fri Apr  7 18:11:16 2023, max compression
+```
+
+## Comparing `alchemlyb-2.0.0.tar` & `alchemlyb-2.0.1.tar`
+
+### file list
+
+```diff
+@@ -1,72 +1,72 @@
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.746532 alchemlyb-2.0.0/
+--rw-r--r--   0 runner    (1001) docker     (123)     1117 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/AUTHORS
+--rw-r--r--   0 runner    (1001) docker     (123)     1488 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/LICENSE
+--rw-r--r--   0 runner    (1001) docker     (123)      166 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/MANIFEST.in
+--rw-r--r--   0 runner    (1001) docker     (123)     4974 2022-12-13 14:32:59.746532 alchemlyb-2.0.0/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     3817 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/README.rst
+--rw-r--r--   0 runner    (1001) docker     (123)      210 2022-12-13 14:32:59.746532 alchemlyb-2.0.0/setup.cfg
+--rwxr-xr-x   0 runner    (1001) docker     (123)     1758 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/setup.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.738532 alchemlyb-2.0.0/src/
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.746532 alchemlyb-2.0.0/src/alchemlyb/
+--rw-r--r--   0 runner    (1001) docker     (123)     1776 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)      497 2022-12-13 14:32:59.746532 alchemlyb-2.0.0/src/alchemlyb/_version.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.738532 alchemlyb-2.0.0/src/alchemlyb/convergence/
+--rw-r--r--   0 runner    (1001) docker     (123)       77 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/convergence/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    12683 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/convergence/convergence.py
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/convergence/pade.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.742532 alchemlyb-2.0.0/src/alchemlyb/estimators/
+--rw-r--r--   0 runner    (1001) docker     (123)      144 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/estimators/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5216 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/estimators/bar_.py
+--rw-r--r--   0 runner    (1001) docker     (123)      410 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/estimators/base.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4474 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/estimators/mbar_.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6024 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/estimators/ti_.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.742532 alchemlyb-2.0.0/src/alchemlyb/parsing/
+--rw-r--r--   0 runner    (1001) docker     (123)     1195 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/parsing/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15383 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/parsing/amber.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18526 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/parsing/gmx.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6905 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/parsing/gomc.py
+--rw-r--r--   0 runner    (1001) docker     (123)    17782 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/parsing/namd.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3180 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/parsing/util.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.742532 alchemlyb-2.0.0/src/alchemlyb/postprocessors/
+--rw-r--r--   0 runner    (1001) docker     (123)       27 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/postprocessors/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3719 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/postprocessors/units.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.742532 alchemlyb-2.0.0/src/alchemlyb/preprocessing/
+--rw-r--r--   0 runner    (1001) docker     (123)      513 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/preprocessing/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    19042 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/preprocessing/subsampling.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.742532 alchemlyb-2.0.0/src/alchemlyb/tests/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6589 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/conftest.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.746532 alchemlyb-2.0.0/src/alchemlyb/tests/parsing/
+--rw-r--r--   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/parsing/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9252 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_amber.py
+--rw-r--r--   0 runner    (1001) docker     (123)     9633 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_gmx.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1226 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_gomc.py
+--rw-r--r--   0 runner    (1001) docker     (123)    14650 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_namd.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4068 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_util.py
+--rw-r--r--   0 runner    (1001) docker     (123)     3360 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_convergence.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4789 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_fep_estimators.py
+--rw-r--r--   0 runner    (1001) docker     (123)       81 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_import.py
+--rw-r--r--   0 runner    (1001) docker     (123)    18275 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_preprocessing.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5503 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_ti_estimators.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4348 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_units.py
+--rw-r--r--   0 runner    (1001) docker     (123)      382 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_version.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8275 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_visualisation.py
+--rw-r--r--   0 runner    (1001) docker     (123)     1180 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_workflow.py
+--rw-r--r--   0 runner    (1001) docker     (123)    15033 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/tests/test_workflow_ABFE.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.746532 alchemlyb-2.0.0/src/alchemlyb/visualisation/
+--rw-r--r--   0 runner    (1001) docker     (123)      162 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/visualisation/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4844 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/visualisation/convergence.py
+--rw-r--r--   0 runner    (1001) docker     (123)     8399 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/visualisation/dF_state.py
+--rw-r--r--   0 runner    (1001) docker     (123)     4211 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/visualisation/mbar_matrix.py
+--rw-r--r--   0 runner    (1001) docker     (123)     6903 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/visualisation/ti_dhdl.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.746532 alchemlyb-2.0.0/src/alchemlyb/workflows/
+--rw-r--r--   0 runner    (1001) docker     (123)       50 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/workflows/__init__.py
+--rw-r--r--   0 runner    (1001) docker     (123)    32537 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/workflows/abfe.py
+--rw-r--r--   0 runner    (1001) docker     (123)     5118 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/src/alchemlyb/workflows/base.py
+-drwxr-xr-x   0 runner    (1001) docker     (123)        0 2022-12-13 14:32:59.738532 alchemlyb-2.0.0/src/alchemlyb.egg-info/
+--rw-r--r--   0 runner    (1001) docker     (123)     4974 2022-12-13 14:32:59.000000 alchemlyb-2.0.0/src/alchemlyb.egg-info/PKG-INFO
+--rw-r--r--   0 runner    (1001) docker     (123)     1942 2022-12-13 14:32:59.000000 alchemlyb-2.0.0/src/alchemlyb.egg-info/SOURCES.txt
+--rw-r--r--   0 runner    (1001) docker     (123)        1 2022-12-13 14:32:59.000000 alchemlyb-2.0.0/src/alchemlyb.egg-info/dependency_links.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       58 2022-12-13 14:32:59.000000 alchemlyb-2.0.0/src/alchemlyb.egg-info/requires.txt
+--rw-r--r--   0 runner    (1001) docker     (123)       10 2022-12-13 14:32:59.000000 alchemlyb-2.0.0/src/alchemlyb.egg-info/top_level.txt
+--rw-r--r--   0 runner    (1001) docker     (123)    68573 2022-12-13 14:32:33.000000 alchemlyb-2.0.0/versioneer.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/
++-rw-r--r--   0 runner    (1001) docker     (123)     1117 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/AUTHORS
++-rw-r--r--   0 runner    (1001) docker     (123)     1488 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/LICENSE
++-rw-r--r--   0 runner    (1001) docker     (123)      166 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/MANIFEST.in
++-rw-r--r--   0 runner    (1001) docker     (123)     4974 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     3817 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/README.rst
++-rw-r--r--   0 runner    (1001) docker     (123)      210 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/setup.cfg
++-rwxr-xr-x   0 runner    (1001) docker     (123)     1758 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/setup.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.931970 alchemlyb-2.0.1/src/
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/src/alchemlyb/
++-rw-r--r--   0 runner    (1001) docker     (123)     1776 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)      497 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/src/alchemlyb/_version.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.935970 alchemlyb-2.0.1/src/alchemlyb/convergence/
++-rw-r--r--   0 runner    (1001) docker     (123)       77 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/convergence/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    12683 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/convergence/convergence.py
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/convergence/pade.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.935970 alchemlyb-2.0.1/src/alchemlyb/estimators/
++-rw-r--r--   0 runner    (1001) docker     (123)      144 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/estimators/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5216 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/estimators/bar_.py
++-rw-r--r--   0 runner    (1001) docker     (123)      410 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/estimators/base.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4474 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/estimators/mbar_.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6024 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/estimators/ti_.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.935970 alchemlyb-2.0.1/src/alchemlyb/parsing/
++-rw-r--r--   0 runner    (1001) docker     (123)     1195 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/parsing/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15383 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/parsing/amber.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18526 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/parsing/gmx.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6905 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/parsing/gomc.py
++-rw-r--r--   0 runner    (1001) docker     (123)    17782 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/parsing/namd.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3180 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/parsing/util.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.935970 alchemlyb-2.0.1/src/alchemlyb/postprocessors/
++-rw-r--r--   0 runner    (1001) docker     (123)       27 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/postprocessors/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3719 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/postprocessors/units.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.935970 alchemlyb-2.0.1/src/alchemlyb/preprocessing/
++-rw-r--r--   0 runner    (1001) docker     (123)      513 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/preprocessing/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    19392 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/preprocessing/subsampling.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/src/alchemlyb/tests/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6589 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/conftest.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/src/alchemlyb/tests/parsing/
++-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/parsing/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9252 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_amber.py
++-rw-r--r--   0 runner    (1001) docker     (123)     9633 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_gmx.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1226 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_gomc.py
++-rw-r--r--   0 runner    (1001) docker     (123)    14650 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_namd.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4068 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_util.py
++-rw-r--r--   0 runner    (1001) docker     (123)     3360 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_convergence.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4789 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_fep_estimators.py
++-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_import.py
++-rw-r--r--   0 runner    (1001) docker     (123)    18260 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_preprocessing.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5503 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_ti_estimators.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4348 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_units.py
++-rw-r--r--   0 runner    (1001) docker     (123)      382 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_version.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8275 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_visualisation.py
++-rw-r--r--   0 runner    (1001) docker     (123)     1180 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_workflow.py
++-rw-r--r--   0 runner    (1001) docker     (123)    15033 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/tests/test_workflow_ABFE.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/src/alchemlyb/visualisation/
++-rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/visualisation/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4844 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/visualisation/convergence.py
++-rw-r--r--   0 runner    (1001) docker     (123)     8399 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/visualisation/dF_state.py
++-rw-r--r--   0 runner    (1001) docker     (123)     4211 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/visualisation/mbar_matrix.py
++-rw-r--r--   0 runner    (1001) docker     (123)     6903 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/visualisation/ti_dhdl.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.939970 alchemlyb-2.0.1/src/alchemlyb/workflows/
++-rw-r--r--   0 runner    (1001) docker     (123)       50 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/workflows/__init__.py
++-rw-r--r--   0 runner    (1001) docker     (123)    32537 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/workflows/abfe.py
++-rw-r--r--   0 runner    (1001) docker     (123)     5118 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/src/alchemlyb/workflows/base.py
++drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 18:11:16.935970 alchemlyb-2.0.1/src/alchemlyb.egg-info/
++-rw-r--r--   0 runner    (1001) docker     (123)     4974 2023-04-07 18:11:16.000000 alchemlyb-2.0.1/src/alchemlyb.egg-info/PKG-INFO
++-rw-r--r--   0 runner    (1001) docker     (123)     1942 2023-04-07 18:11:16.000000 alchemlyb-2.0.1/src/alchemlyb.egg-info/SOURCES.txt
++-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 18:11:16.000000 alchemlyb-2.0.1/src/alchemlyb.egg-info/dependency_links.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       58 2023-04-07 18:11:16.000000 alchemlyb-2.0.1/src/alchemlyb.egg-info/requires.txt
++-rw-r--r--   0 runner    (1001) docker     (123)       10 2023-04-07 18:11:16.000000 alchemlyb-2.0.1/src/alchemlyb.egg-info/top_level.txt
++-rw-r--r--   0 runner    (1001) docker     (123)    68573 2023-04-07 18:10:48.000000 alchemlyb-2.0.1/versioneer.py
+```
+
+### Comparing `alchemlyb-2.0.0/AUTHORS` & `alchemlyb-2.0.1/AUTHORS`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/LICENSE` & `alchemlyb-2.0.1/LICENSE`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/PKG-INFO` & `alchemlyb-2.0.1/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: alchemlyb
+-Version: 2.0.0
++Version: 2.0.1
+ Summary: the simple alchemistry library
+ Author: David Dotson
+ Author-email: dotsdl@gmail.com
+ Maintainer: Oliver Beckstein
+ Maintainer-email: orbeckst@gmail.com
+ License: BSD
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `alchemlyb-2.0.0/README.rst` & `alchemlyb-2.0.1/README.rst`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/setup.py` & `alchemlyb-2.0.1/setup.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/__init__.py` & `alchemlyb-2.0.1/src/alchemlyb/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/convergence/convergence.py` & `alchemlyb-2.0.1/src/alchemlyb/convergence/convergence.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/estimators/bar_.py` & `alchemlyb-2.0.1/src/alchemlyb/estimators/bar_.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/estimators/mbar_.py` & `alchemlyb-2.0.1/src/alchemlyb/estimators/mbar_.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/estimators/ti_.py` & `alchemlyb-2.0.1/src/alchemlyb/estimators/ti_.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/parsing/__init__.py` & `alchemlyb-2.0.1/src/alchemlyb/parsing/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/parsing/amber.py` & `alchemlyb-2.0.1/src/alchemlyb/parsing/amber.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/parsing/gmx.py` & `alchemlyb-2.0.1/src/alchemlyb/parsing/gmx.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/parsing/gomc.py` & `alchemlyb-2.0.1/src/alchemlyb/parsing/gomc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/parsing/namd.py` & `alchemlyb-2.0.1/src/alchemlyb/parsing/namd.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/parsing/util.py` & `alchemlyb-2.0.1/src/alchemlyb/parsing/util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/postprocessors/units.py` & `alchemlyb-2.0.1/src/alchemlyb/postprocessors/units.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/preprocessing/__init__.py` & `alchemlyb-2.0.1/src/alchemlyb/preprocessing/__init__.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/preprocessing/subsampling.py` & `alchemlyb-2.0.1/src/alchemlyb/preprocessing/subsampling.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -149,14 +149,18 @@
+         `series` to be used as input for
+         :func:`~alchemlyb.preprocessing.subsampling.statistical_inefficiency`
+         or
+         :func:`~alchemlyb.preprocessing.subsampling.equilibrium_detection`.
+ 
+ 
+     .. versionadded:: 1.0.0
++    .. versionchanged:: 2.0.1
++       The `dE` method computes the difference between the current lambda
++       and the next lambda (previous lambda for the last window), instead
++       of using the next lambda or the previous lambda for the last window.
+ 
+     """
+ 
+     # deprecation: remove in 3.0.0
+     # (the deprecations should show up in the calling functions)
+     if method == "dhdl":
+         warnings.warn(
+@@ -192,19 +196,21 @@
+         if len(key) == 1:
+             # For the case where there is a single lambda
+             index = df.columns.values.tolist().index(key[0])
+         else:
+             # For the case of more than 1 lambda
+             index = df.columns.values.tolist().index(key)
+             # for the state that is not the last state, take the state+1
++        current_lambda = df.iloc[:, index]
+         if index + 1 < len(df.columns):
+-            series = df.iloc[:, index + 1]
++            new_lambda = df.iloc[:, index + 1]
+             # for the state that is the last state, take the state-1
+         else:
+-            series = df.iloc[:, index - 1]
++            new_lambda = df.iloc[:, index - 1]
++        series = new_lambda - current_lambda
+     else:
+         raise ValueError("Decorrelation method {} not found.".format(method))
+     return series
+ 
+ 
+ @pass_attrs
+ def dhdl2series(df, method="all"):
+```
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/conftest.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/conftest.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_amber.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_amber.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_gmx.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_gmx.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_gomc.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_gomc.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_namd.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_namd.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/parsing/test_util.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/parsing/test_util.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/test_convergence.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/test_convergence.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/test_fep_estimators.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/test_fep_estimators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/test_preprocessing.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/test_preprocessing.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -418,15 +418,15 @@
+                 u_nk,
+                 method="dE",
+                 drop_duplicates=True,
+                 sort=True,
+                 remove_burnin=True,
+             )
+         )
+-        == 2849
++        == 2848
+     )
+ 
+ 
+ def test_decorrelate_dhdl_burnin(dHdl):
+     assert (
+         len(
+             decorrelate_dhdl(
+@@ -489,29 +489,29 @@
+             dhdl2series(dHdl, method="dE")
+ 
+ 
+ class TestU_nk2series:
+     @pytest.mark.parametrize(
+         "methodargs,reference",  # reference = sum
+         [
+-            ({}, 9207.80229000283),
++            ({}, 7988.667045),
+             ({"method": "all"}, 85982.34668751864),
+-            ({"method": "dE"}, 9207.80229000283),
++            ({"method": "dE"}, 7988.667045),
+         ],
+     )
+     def test_u_nk2series(self, u_nk, methodargs, reference):
+         series = u_nk2series(u_nk, **methodargs)
+         assert len(series) == len(u_nk)
+         assert_allclose(series.sum(), reference)
+ 
+     @pytest.mark.parametrize(
+         "methodargs,reference",  # reference = sum
+         [
+             ({"method": "dhdl_all"}, 85982.34668751864),
+-            ({"method": "dhdl"}, 9207.80229000283),
++            ({"method": "dhdl"}, 7988.667045),
+         ],
+     )
+     def test_u_nk2series_deprecated(self, u_nk, methodargs, reference):
+         with pytest.warns(
+             DeprecationWarning,
+             match=r"Method 'dhdl.*' has been deprecated, using '.*' instead\. "
+             r"'dhdl.*' will be removed in alchemlyb 3\.0\.0\.",
+```
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/test_ti_estimators.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/test_ti_estimators.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/test_units.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/test_units.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/test_visualisation.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/test_visualisation.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/test_workflow.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/test_workflow.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/tests/test_workflow_ABFE.py` & `alchemlyb-2.0.1/src/alchemlyb/tests/test_workflow_ABFE.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/visualisation/convergence.py` & `alchemlyb-2.0.1/src/alchemlyb/visualisation/convergence.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/visualisation/dF_state.py` & `alchemlyb-2.0.1/src/alchemlyb/visualisation/dF_state.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/visualisation/mbar_matrix.py` & `alchemlyb-2.0.1/src/alchemlyb/visualisation/mbar_matrix.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/visualisation/ti_dhdl.py` & `alchemlyb-2.0.1/src/alchemlyb/visualisation/ti_dhdl.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/workflows/abfe.py` & `alchemlyb-2.0.1/src/alchemlyb/workflows/abfe.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,11 +1,11 @@
+ import logging
+ import os
+-from glob import glob
+ from os.path import join
++from pathlib import Path
+ 
+ import matplotlib.pyplot as plt
+ import numpy as np
+ import pandas as pd
+ 
+ from .base import WorkflowBase
+ from .. import concat
+@@ -77,16 +77,16 @@
+         self.logger.info("Initialise Alchemlyb ABFE Workflow")
+         self.update_units(units)
+         self.logger.info(
+             f"Finding files with prefix: {prefix}, suffix: "
+             f"{suffix} under directory {dir} produced by "
+             f"{software}"
+         )
+-        reg_exp = dir + "/**/" + prefix + "*" + suffix
+-        self.file_list = list(glob(reg_exp, recursive=True))
++        reg_exp = "**/" + prefix + "*" + suffix
++        self.file_list = list(map(str, Path(dir).glob(reg_exp)))
+ 
+         if len(self.file_list) == 0:
+             raise ValueError(f"No file has been matched to {reg_exp}.")
+ 
+         self.logger.info(f"Found {len(self.file_list)} xvg files.")
+         self.logger.info("Unsorted file list: \n %s", "\n".join(self.file_list))
+```
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb/workflows/base.py` & `alchemlyb-2.0.1/src/alchemlyb/workflows/base.py`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb.egg-info/PKG-INFO` & `alchemlyb-2.0.1/src/alchemlyb.egg-info/PKG-INFO`
+
+ * *Files 2% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: alchemlyb
+-Version: 2.0.0
++Version: 2.0.1
+ Summary: the simple alchemistry library
+ Author: David Dotson
+ Author-email: dotsdl@gmail.com
+ Maintainer: Oliver Beckstein
+ Maintainer-email: orbeckst@gmail.com
+ License: BSD
+ Classifier: Development Status :: 5 - Production/Stable
+```
+
+### Comparing `alchemlyb-2.0.0/src/alchemlyb.egg-info/SOURCES.txt` & `alchemlyb-2.0.1/src/alchemlyb.egg-info/SOURCES.txt`
+
+ * *Files identical despite different names*
+
+### Comparing `alchemlyb-2.0.0/versioneer.py` & `alchemlyb-2.0.1/versioneer.py`
+
+ * *Files identical despite different names*
+

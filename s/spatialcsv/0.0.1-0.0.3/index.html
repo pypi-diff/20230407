@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="referrer" content="no-referrer" />
+  <meta name="generator" content="diffoscope" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADdgAAA3YBfdWCzAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAM8SURBVFiF7dZdaJZlGAfw3/O+e9XNjy3XllZzWImBxIpifqTgsmUHBSIeBNFBdRh0UHQ0xGdb66CFBIERZEFRQRRUw0HkQkLMYQSBdpCFWdgSP6jpNn2393k68Nn2bj3vXtb6UOh/cl/39b/u67mem/913zf/4z9GUDw5xNI8n5WIzW9m/QF2YluJmI8203mALzEvLWAerRs4Pz6vSIkZSlsYk0/GkaB0zEgyDgWMlijyWsJuS2fkQwu8pqpMTA0ypeiShG71Bp0rU8Q+A47MWEDgvHZbZl/Av4SpIgxVYB3IqwZDmoUuYkzosDaNchpAoFqkSmgjGPWzLieF1k3JHVsjvCJQHBYaSy9g1E3m+QImQiK9SbNGqJDzuiDZ0lggQJCsyelDq8BB47sbCWTsnvhG3kqcLL833eqF4hk1EOoTOjZjnnaRdq2l6KtMAyl4/g23bKJrun+Mt9uOq7nvqOVbebWYy9Adc1fM/R/3CO780dONbIeFPHsPw+ULeM5ZHTbXHfUtXpxOZzgT5z02UGsZThRzF/ilht9G+fr4zfbfccIxXIa7uVTup69i7LJXaEEqF3on1d9ludBLpVLOVoT1lky9QYtwQ6p3WAVqSyUslWwSbRrkPJrMtgn0iBVk7BPJ4sGE24EPQKW3jLgdzWKLBTbg0yTuZeGkDsp2gcUGDesHGQ/gK5G8nLMigWiCe3jCrnTRiJ9EYjm1ImsUEq5l8hScPXbpsVtlKhfan+pv0yD0ZqmU5XegGBmnDIo/pylj8oYLOP3Eab/v5Zmi6EtZ3vv1FU/2r7LioYSL2dNybbdiMdptFU57++20Vqh+iq/Tap1WpaWY611wmyWyUzxZDbIWTvEV1Ildn5agfBumoUMTtoisFvhebAAHZWxX0ChwTuScvHdVeVykToysMyJ7ittwbmj31J+6IrRDp5XTfBt1WJ+WYnZdMB0F3xlUgD5uDVj2Sa+a4SrzH+FeyHHmw17V112waBOZgP4WczkLZsILar1fpIliMU4XZoK/poE0XHl+N8v6QcGAUbVymnDIZVnzrTXqGzmnhKLxZX/niyiDjIJgwg4Se1GR/Y8idGPysh6fr0i1i/AHMWHgrwUJgNAAAAAASUVORK5CYII=" />
+  <title>/srv/diffoscope/bin/diffoscope --no-progress tmp/spatialcsv-0.0.1.tar.gz tmp/spatialcsv-0.0.3.tar.gz --html 20230407/s/spatialcsv/0.0.1-0.0.3/index.html --text 20230407/s/spatialcsv/0.0.1-0.0.3/diff.txt --markdown 20230407/s/spatialcsv/0.0.1-0.0.3/diff.md</title>
+<style>
+body.diffoscope {
+  background: white;
+  color: black;
+}
+.diffoscope .footer {
+  font-size: small;
+}
+.diffoscope .difference {
+  border: outset #888 1px;
+  background: #E8E8E8;
+  background: rgba(0,0,0,.1);
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+.diffoscope .difference table {
+  table-layout: fixed;
+  width: 100%;
+  border: 0;
+}
+.diffoscope .difference th,
+.diffoscope .difference td {
+  border: 0;
+}
+.diffoscope table.diff {
+  border: 0;
+  border-collapse:collapse;
+  font-size:0.75em;
+  font-family: 'Lucida Console', monospace;
+  word-break: break-word;
+}
+.diffoscope table.diff tr:hover td {
+  background: #FFFF00;
+}
+.diffoscope .line {
+  color:#8080a0
+}
+.diffoscope th {
+  background: black;
+  color: white
+}
+.diffoscope .diffunmodified td {
+  background: #D0D0E0
+}
+.diffoscope .diffhunk td {
+  background: #A0A0A0
+}
+.diffoscope .diffadded td {
+  background: #CCFFCC
+}
+.diffoscope .diffdeleted td {
+  background: #FFCCCC
+}
+.diffoscope .diffchanged td {
+  background: #FFFFA0
+}
+.diffoscope ins, del {
+  background: #E0C880;
+  text-decoration: none
+}
+.diffoscope .dp {
+  color: #B08080
+}
+.diffoscope .comment {
+  font-style: italic;
+}
+.diffoscope .comment.multiline {
+  font-style: normal;
+  font-family: monospace;
+  white-space: pre;
+}
+.diffoscope .source {
+  font-weight: bold;
+}
+.diffoscope .error {
+  border: solid black 1px;
+  background: red;
+  color: white;
+  padding: 0.2em;
+}
+.diffoscope .anchor {
+  margin-left: 0.5em;
+  font-size: 80%;
+  color: #333;
+  text-decoration: none;
+  display: none;
+}
+.diffoscope .diffheader:hover .anchor {
+  display: inline;
+}
+.diffoscope .diffcontrol, .diffoscope .diffcontrol-nochildren {
+  float: left;
+  margin-right: 0.3em;
+  cursor: pointer;
+  display: none; /* currently, only available in html-dir output where jquery is enabled */
+}
+.diffoscope .colines {
+  width: 3em;
+}
+.diffoscope .coldiff {
+  width: 99%;
+}
+.diffoscope .diffsize {
+  float: right;
+}
+.diffoscope table.diff tr.ondemand td, .diffoscope div.ondemand-details {
+  background: #f99;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.diffoscope table.diff tr.ondemand:hover td, .diffoscope div.ondemand-details:hover {
+  background: #faa;
+  cursor: pointer;
+}
+</style>
+</head>
+<body class="diffoscope">
+<div class="difference">
+  <div class="diffheader">
+  <div class="diffcontrol diffcontrol-double">⊟</div>
+  <div><span class="diffsize">8.29 KB</span></div>
+  <div><span class="source">tmp/spatialcsv-0.0.1.tar.gz</span> vs.</div>
+  <div id="top"><span class="source">tmp/spatialcsv-0.0.3.tar.gz</span>
+    <a class="anchor" href="#top">¶</a>
+  </div>
+  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol">⊟</div>
+    <div><span class="diffsize">270 B</span></div>
+    <div id="filetype-from-file---"><span class="source">filetype from file(1)</span>
+      <a class="anchor" href="#filetype-from-file---">¶</a>
+    </div>
+    </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 1 lines modified</td><td colspan="2">Offset 1, 1 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;spatialcsv-0.0.<del>1</del>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><del>Sun</del><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td><td class="diffline">1 </td><td class="diffpresent">gzip<span class="dp">·</span>compressed<span class="dp">·</span>data,<span class="dp">·</span>was<span class="dp">·</span>&quot;spatialcsv-0.0.<ins>3</ins>.tar&quot;,<span class="dp">·</span>last<span class="dp">·</span>modified:<span class="dp">·</span><ins>Fri</ins><span class="dp">·</span>Apr<span class="dp">·</span><span class="dp">·</span><ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>48</ins><span class="dp">·</span>2023,<span class="dp">·</span>max<span class="dp">·</span>compression</td></tr>
+</table>  </div>
+  <div class="difference">
+    <div class="diffheader">
+    <div class="diffcontrol diffcontrol-double">⊟</div>
+    <div><span class="diffsize">7.97 KB</span></div>
+    <div><span class="source">spatialcsv-0.0.1.tar</span> vs.</div>
+    <div id="spatialcsv--.-.-.tar"><span class="source">spatialcsv-0.0.3.tar</span>
+      <a class="anchor" href="#spatialcsv--.-.-.tar">¶</a>
+    </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol">⊟</div>
+      <div><span class="diffsize">5.2 KB</span></div>
+      <div id="spatialcsv--.-.-.tar---file-list"><span class="source">file list</span>
+        <a class="anchor" href="#spatialcsv--.-.-.tar---file-list">¶</a>
+      </div>
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 21 lines modified</td><td colspan="2">Offset 1, 22 lines modified</td></tr>
+<tr class="diffchanged"><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.<del>117418</del><span class="dp">·</span>spatialcsv-0.0.<del>1</del>/</td><td class="diffline">1 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>48</ins>.<ins>009990</ins><span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/</td></tr>
+<tr class="diffchanged"><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1560<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:42:12.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/LICENSE</td><td class="diffline">2 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1560<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:42:12.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/LICENSE</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>122<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:42:12.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/MANIFEST.in</td><td class="diffline">3 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>122<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:42:12.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/MANIFEST.in</td></tr>
+<tr class="diffchanged"><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>141<del>5</del><span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.<del>117418</del><span class="dp">·</span>spatialcsv-0.0.<del>1</del>/PKG-INFO</td><td class="diffline">4 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>141<ins>6</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>48</ins>.<ins>009990</ins><span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<del>3</del><span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span><del>12</del>:<del>42</del>:<del>1</del>2.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/README.md</td><td class="diffline">5 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>60<ins>4</ins><span class="dp">·</span>2023-04-0<ins>6</ins><span class="dp">·</span><ins>01</ins>:<ins>34</ins>:<ins>4</ins>2.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/README.md</td></tr>
+<tr class="diffchanged"><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>0<span class="dp">·</span>2023-04-02<span class="dp">·</span>1<del>2</del>:<del>42</del>:<del>12</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/requirements.txt</td><td class="diffline">6 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>2</ins>0<span class="dp">·</span>2023-04-02<span class="dp">·</span>1<ins>3</ins>:<ins>04</ins>:<ins>24</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/requirements.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>393<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.<del>117418</del><span class="dp">·</span>spatialcsv-0.0.<del>1</del>/setup.cfg</td><td class="diffline">7 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>393<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>48</ins>.<ins>009990</ins><span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/setup.cfg</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1908<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>42</del>:1<del>2</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/setup.py</td><td class="diffline">8 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1908<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>08</ins>:1<ins>5</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/setup.py</td></tr>
+<tr class="diffchanged"><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.<del>117418</del><span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv/</td><td class="diffline">9 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>48</ins>.<ins>009990</ins><span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv/</td></tr>
+<tr class="diffchanged"><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<del>23</del><span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>42</del>:1<del>2</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv/__init__.py</td><td class="diffline">10 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<ins>50</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>08</ins>:1<ins>5</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv/__init__.py</td></tr>
+<tr class="diffchanged"><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>445<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:42:12.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv/cli.py</td><td class="diffline">11 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>445<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:42:12.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv/cli.py</td></tr>
+<tr class="diffchanged"><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span><span class="dp">·</span>19</del><span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>42</del>:<del>12</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv/spatialcsv.py</td><td class="diffline">12 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>1694</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>7</ins>:<ins>27</ins>:<ins>44</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv/spatialcsv.py</td></tr>
+<tr class="diffchanged"><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.<del>117418</del><span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv.egg-info/</td><td class="diffline">13 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>48</ins>.<ins>009990</ins><span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv.egg-info/</td></tr>
+<tr class="diffchanged"><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>141<del>5</del><span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv.egg-info/PKG-INFO</td><td class="diffline">14 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>141<ins>6</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>47</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv.egg-info/PKG-INFO</td></tr>
+<tr class="diffchanged"><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<del>62</del><span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv.egg-info/SOURCES.txt</td><td class="diffline">15 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>3<ins>95</ins><span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>47</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv.egg-info/SOURCES.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><del><span class="dp">·</span></del>1<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv.egg-info/dependency_links.txt</td><td class="diffline">16 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><ins>2</ins>1<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>47</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv.egg-info/dependency_links.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>51<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv.egg-info/entry_points.txt</td><td class="diffline">17 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>51<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>47</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv.egg-info/entry_points.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:46:06.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv.egg-info/not-zip-safe</td><td class="diffline">18 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>1<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:46:06.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv.egg-info/not-zip-safe</td></tr>
+<tr class="diffadded"><td colspan="2"> </td><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>19<span class="dp">·</span>2023-04-07<span class="dp">·</span>18:11:47.000000<span class="dp">·</span>spatialcsv-0.0.3/spatialcsv.egg-info/requires.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">19 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/spatialcsv.egg-info/top_level.txt</td><td class="diffline">20 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>11<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>47</ins>.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/spatialcsv.egg-info/top_level.txt</td></tr>
+<tr class="diffchanged"><td class="diffline">20 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<del>2</del><span class="dp">·</span>1<del>2</del>:<del>46</del>:<del>06</del>.<del>117418</del><span class="dp">·</span>spatialcsv-0.0.<del>1</del>/tests/</td><td class="diffline">21 </td><td class="diffpresent">drwxr-xr-x<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>2023-04-0<ins>7</ins><span class="dp">·</span>1<ins>8</ins>:<ins>11</ins>:<ins>48</ins>.<ins>009990</ins><span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/tests/</td></tr>
+<tr class="diffchanged"><td class="diffline">21 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>402<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:42:12.000000<span class="dp">·</span>spatialcsv-0.0.<del>1</del>/tests/test_spatialcsv.py</td><td class="diffline">22 </td><td class="diffpresent">-rw-r--r--<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>0<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span>thomer<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>(1000)<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>402<span class="dp">·</span>2023-04-02<span class="dp">·</span>12:42:12.000000<span class="dp">·</span>spatialcsv-0.0.<ins>3</ins>/tests/test_spatialcsv.py</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">87.0 B</span></div>
+      <div><span class="source">spatialcsv-0.0.1/LICENSE</span> vs.</div>
+      <div id="spatialcsv--.-.-.tar---spatialcsv--.-.--LICENSE"><span class="source">spatialcsv-0.0.3/LICENSE</span>
+        <a class="anchor" href="#spatialcsv--.-.-.tar---spatialcsv--.-.--LICENSE">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files identical despite different names
+      </div>
+    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">859 B</span></div>
+      <div><span class="source">spatialcsv-0.0.1/PKG-INFO</span> vs.</div>
+      <div id="spatialcsv--.-.-.tar---spatialcsv--.-.--PKG-INFO"><span class="source">spatialcsv-0.0.3/PKG-INFO</span>
+        <a class="anchor" href="#spatialcsv--.-.-.tar---spatialcsv--.-.--PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 9% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>spatialcsv</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>spatialcsv</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/TJHomer/spatialcsv</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/TJHomer/spatialcsv</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Tracy<span class="dp">·</span>Homer</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Tracy<span class="dp">·</span>Homer</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>thomer@mac.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>thomer@mac.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>spatialcsv</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>spatialcsv</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 27, 15 lines modified</td><td colspan="2">Offset 27, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">[![image](https://img.shields.io/conda/vn/conda-forge/spatialcsv.svg)](https://anaconda.org/conda-forge/spatialcsv)</td><td class="diffline">27 </td><td class="diffpresent">[![image](https://img.shields.io/conda/vn/conda-forge/spatialcsv.svg)](https://anaconda.org/conda-forge/spatialcsv)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">**Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv**</td><td class="diffline">28 </td><td class="diffpresent">**Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv**</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Free<span class="dp">·</span>software:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td><td class="diffline">29 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Free<span class="dp">·</span>software:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Documentation:<span class="dp">·</span>https://<del>TJH</del>omer.github.io/spatialcsv</td><td class="diffline">30 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Documentation:<span class="dp">·</span>https://<ins>tjh</ins>omer.github.io/spatialcsv<ins>/</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">##<span class="dp">·</span>Features</td><td class="diffline">32 </td><td class="diffpresent">##<span class="dp">·</span>Features</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TODO</td><td class="diffline">33 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TODO</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">##<span class="dp">·</span>Credits</td><td class="diffline">34 </td><td class="diffpresent">##<span class="dp">·</span>Credits</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">500 B</span></div>
+      <div><span class="source">spatialcsv-0.0.1/README.md</span> vs.</div>
+      <div id="spatialcsv--.-.-.tar---spatialcsv--.-.--README.md"><span class="source">spatialcsv-0.0.3/README.md</span>
+        <a class="anchor" href="#spatialcsv--.-.-.tar---spatialcsv--.-.--README.md">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 19% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 5, 15 lines modified</td><td colspan="2">Offset 5, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">[![image](https://img.shields.io/conda/vn/conda-forge/spatialcsv.svg)](https://anaconda.org/conda-forge/spatialcsv)</td><td class="diffline">5 </td><td class="diffpresent">[![image](https://img.shields.io/conda/vn/conda-forge/spatialcsv.svg)](https://anaconda.org/conda-forge/spatialcsv)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">**Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv**</td><td class="diffline">6 </td><td class="diffpresent">**Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv**</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Free<span class="dp">·</span>software:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td><td class="diffline">7 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Free<span class="dp">·</span>software:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td></tr>
+<tr class="diffchanged"><td class="diffline">8 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Documentation:<span class="dp">·</span>https://<del>TJH</del>omer.github.io/spatialcsv</td><td class="diffline">8 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Documentation:<span class="dp">·</span>https://<ins>tjh</ins>omer.github.io/spatialcsv<ins>/</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">9 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">##<span class="dp">·</span>Features</td><td class="diffline">10 </td><td class="diffpresent">##<span class="dp">·</span>Features</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">11 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TODO</td><td class="diffline">11 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TODO</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">12 </td><td class="diffpresent">##<span class="dp">·</span>Credits</td><td class="diffline">12 </td><td class="diffpresent">##<span class="dp">·</span>Credits</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">452 B</span></div>
+      <div><span class="source">spatialcsv-0.0.1/setup.py</span> vs.</div>
+      <div id="spatialcsv--.-.-.tar---spatialcsv--.-.--setup.py"><span class="source">spatialcsv-0.0.3/setup.py</span>
+        <a class="anchor" href="#spatialcsv--.-.-.tar---spatialcsv--.-.--setup.py">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 5% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 54, 10 lines modified</td><td colspan="2">Offset 54, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=&#x27;spatialcsv&#x27;,</td><td class="diffline">54 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>keywords=&#x27;spatialcsv&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;spatialcsv&#x27;,</td><td class="diffline">55 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>name=&#x27;spatialcsv&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(include=[&#x27;spatialcsv&#x27;,<span class="dp">·</span>&#x27;spatialcsv.*&#x27;]),</td><td class="diffline">56 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>packages=find_packages(include=[&#x27;spatialcsv&#x27;,<span class="dp">·</span>&#x27;spatialcsv.*&#x27;]),</td></tr>
+<tr class="diffunmodified"><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>setup_requires=setup_requirements,</td><td class="diffline">57 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>setup_requires=setup_requirements,</td></tr>
+<tr class="diffunmodified"><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite=&#x27;tests&#x27;,</td><td class="diffline">58 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>test_suite=&#x27;tests&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tests_require=test_requirements,</td><td class="diffline">59 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>tests_require=test_requirements,</td></tr>
+<tr class="diffunmodified"><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/TJHomer/spatialcsv&#x27;,</td><td class="diffline">60 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>url=&#x27;https://github.com/TJHomer/spatialcsv&#x27;,</td></tr>
+<tr class="diffchanged"><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.0.<del>1</del>&#x27;,</td><td class="diffline">61 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>version=&#x27;0.0.<ins>3</ins>&#x27;,</td></tr>
+<tr class="diffunmodified"><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>zip_safe=False,</td><td class="diffline">62 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>zip_safe=False,</td></tr>
+<tr class="diffunmodified"><td class="diffline">63 </td><td class="diffpresent">)</td><td class="diffline">63 </td><td class="diffpresent">)</td></tr>
+</table>    </div>
+    <div class="difference">
+      <div class="diffheader">
+      <div class="diffcontrol diffcontrol-double">⊟</div>
+      <div><span class="diffsize">899 B</span></div>
+      <div><span class="source">spatialcsv-0.0.1/spatialcsv.egg-info/PKG-INFO</span> vs.</div>
+      <div id="spatialcsv--.-.-.tar---spatialcsv--.-.--spatialcsv.egg-info-PKG-INFO"><span class="source">spatialcsv-0.0.3/spatialcsv.egg-info/PKG-INFO</span>
+        <a class="anchor" href="#spatialcsv--.-.-.tar---spatialcsv--.-.--spatialcsv.egg-info-PKG-INFO">¶</a>
+      </div>
+      </div>
+      <div class="comment">Files 9% similar despite different names
+      </div>
+<table class="diff">
+<colgroup><col class="colines"/><col class="coldiff"/>
+<col class="colines"/><col class="coldiff"/></colgroup>
+<tr style="display:none;"><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 1, 10 lines modified</td><td colspan="2">Offset 1, 10 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td><td class="diffline">1 </td><td class="diffpresent">Metadata-Version:<span class="dp">·</span>2.1</td></tr>
+<tr class="diffunmodified"><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>spatialcsv</td><td class="diffline">2 </td><td class="diffpresent">Name:<span class="dp">·</span>spatialcsv</td></tr>
+<tr class="diffchanged"><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<del>1</del></td><td class="diffline">3 </td><td class="diffpresent">Version:<span class="dp">·</span>0.0.<ins>3</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv</td><td class="diffline">4 </td><td class="diffpresent">Summary:<span class="dp">·</span>Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv</td></tr>
+<tr class="diffunmodified"><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/TJHomer/spatialcsv</td><td class="diffline">5 </td><td class="diffpresent">Home-page:<span class="dp">·</span>https://github.com/TJHomer/spatialcsv</td></tr>
+<tr class="diffunmodified"><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Tracy<span class="dp">·</span>Homer</td><td class="diffline">6 </td><td class="diffpresent">Author:<span class="dp">·</span>Tracy<span class="dp">·</span>Homer</td></tr>
+<tr class="diffunmodified"><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>thomer@mac.com</td><td class="diffline">7 </td><td class="diffpresent">Author-email:<span class="dp">·</span>thomer@mac.com</td></tr>
+<tr class="diffunmodified"><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td><td class="diffline">8 </td><td class="diffpresent">License:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td></tr>
+<tr class="diffunmodified"><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>spatialcsv</td><td class="diffline">9 </td><td class="diffpresent">Keywords:<span class="dp">·</span>spatialcsv</td></tr>
+<tr class="diffunmodified"><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td><td class="diffline">10 </td><td class="diffpresent">Classifier:<span class="dp">·</span>Development<span class="dp">·</span>Status<span class="dp">·</span>::<span class="dp">·</span>2<span class="dp">·</span>-<span class="dp">·</span>Pre-Alpha</td></tr>
+<tr class="diffhunk"><td colspan="2">Offset 27, 15 lines modified</td><td colspan="2">Offset 27, 15 lines modified</td></tr>
+<tr class="diffunmodified"><td class="diffline">27 </td><td class="diffpresent">[![image](https://img.shields.io/conda/vn/conda-forge/spatialcsv.svg)](https://anaconda.org/conda-forge/spatialcsv)</td><td class="diffline">27 </td><td class="diffpresent">[![image](https://img.shields.io/conda/vn/conda-forge/spatialcsv.svg)](https://anaconda.org/conda-forge/spatialcsv)</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">28 </td><td class="diffpresent">**Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv**</td><td class="diffline">28 </td><td class="diffpresent">**Easily<span class="dp">·</span>add<span class="dp">·</span>location<span class="dp">·</span>points<span class="dp">·</span>to<span class="dp">·</span>a<span class="dp">·</span>map<span class="dp">·</span>from<span class="dp">·</span>a<span class="dp">·</span>csv**</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">29 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Free<span class="dp">·</span>software:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td><td class="diffline">29 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Free<span class="dp">·</span>software:<span class="dp">·</span>GNU<span class="dp">·</span>General<span class="dp">·</span>Public<span class="dp">·</span>License<span class="dp">·</span>v3</td></tr>
+<tr class="diffchanged"><td class="diffline">30 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Documentation:<span class="dp">·</span>https://<del>TJH</del>omer.github.io/spatialcsv</td><td class="diffline">30 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>Documentation:<span class="dp">·</span>https://<ins>tjh</ins>omer.github.io/spatialcsv<ins>/</ins></td></tr>
+<tr class="diffunmodified"><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td><td class="diffline">31 </td><td class="diffpresent"><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span><span class="dp">·</span></td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">32 </td><td class="diffpresent">##<span class="dp">·</span>Features</td><td class="diffline">32 </td><td class="diffpresent">##<span class="dp">·</span>Features</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">33 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TODO</td><td class="diffline">33 </td><td class="diffpresent">-<span class="dp">·</span><span class="dp">·</span><span class="dp">·</span>TODO</td></tr>
+<tr class="diffunmodified"><td colspan="2"> </td><td colspan="2"> </td></tr>
+<tr class="diffunmodified"><td class="diffline">34 </td><td class="diffpresent">##<span class="dp">·</span>Credits</td><td class="diffline">34 </td><td class="diffpresent">##<span class="dp">·</span>Credits</td></tr>
+</table>    </div>
+  </div>
+</div>
+<div class="footer">
+Generated by
+<a href="https://diffoscope.org" rel="noopener noreferrer" target="_blank">
+diffoscope</a> 238
+</div>
+</body>
+</html>
+
