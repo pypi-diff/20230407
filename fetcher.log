@@ -5034,3 +5034,83 @@
 [2023-04-07 23:39:44] INFO root fetch - main [MainThread]: success
 [2023-04-07 23:39:45] INFO root fetch - main [MainThread]: success
 [2023-04-07 23:39:47] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:51] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17623605]
+[2023-04-07 23:49:56] INFO root fetch - main [MainThread]: Found 17 changed packages
+[2023-04-07 23:49:56] WARNING root fetch - processPackages [alamos]: Skipping, unable to determine old version
+[2023-04-07 23:49:56] INFO root fetch - processPackages [toolformer-pytorch]: New version: [0.0.9] Old Version: [0.0.7]
+[2023-04-07 23:49:56] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:49:56] INFO root fetch - processPackages [toolformer-pytorch]: report already exists
+[2023-04-07 23:49:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:56] INFO root fetch - processPackages [wystia]: New version: [1.2.0] Old Version: [1.1.0]
+[2023-04-07 23:49:56] INFO root fetch - processPackages [aligned-textgrid]: New version: [0.3.0] Old Version: [0.2.1]
+[2023-04-07 23:49:56] INFO root fetch - processPackages [aind-data-transfer]: New version: [0.9.3] Old Version: [0.9.2]
+[2023-04-07 23:49:56] INFO root fetch - processPackages [motion-python]: New version: [0.1.24] Old Version: [0.1.23]
+[2023-04-07 23:49:56] WARNING root fetch - processPackages [swaportunity]: Skipping, unable to determine old version
+[2023-04-07 23:49:56] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:49:56] INFO root fetch - processPackages [pyntc]: New version: [1.0.0] Old Version: [0.20.3]
+[2023-04-07 23:49:56] INFO root fetch - processPackages [aligned-textgrid]: Downloading https://files.pythonhosted.org/packages/42/c3/56e82f4e453d8502d3e3b6d75c7cbd717243633f77d4392bc023fdf5b8a5/aligned_textgrid-0.2.1.tar.gz
+[2023-04-07 23:49:56] INFO root fetch - processPackages [aind-data-transfer]: Downloading https://files.pythonhosted.org/packages/c6/c0/d43cf5b63152fa04e14114f721f196be5dd4bdfdd260c46ab01f94dbc621/aind-data-transfer-0.9.2.tar.gz
+[2023-04-07 23:49:56] INFO root fetch - processPackages [wystia]: Downloading https://files.pythonhosted.org/packages/5c/71/4ae0ca8a33cb2fdd1f7e3d8a88c8dfde665d73c2974821cddafc3972e9fb/wystia-1.1.0.tar.gz
+[2023-04-07 23:49:56] INFO root fetch - processPackages [pyntc]: Downloading https://files.pythonhosted.org/packages/3f/ab/9e33a9b40d226d460991173284c157bc19e6dd0ab24338b7ebad1c0e1cf4/pyntc-0.20.3.tar.gz
+[2023-04-07 23:49:56] INFO root fetch - processPackages [motion-python]: Downloading https://files.pythonhosted.org/packages/a1/fe/d757c98fe585e7e500dd434e9ba1d9bbaed8fd5e4ab976e536cfdd8c85a9/motion_python-0.1.24.tar.gz
+[2023-04-07 23:49:57] INFO root fetch - processPackages [motion-python]: executing diffoscope
+[2023-04-07 23:49:57] INFO root fetch - processPackages [motion-python]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/motion_python-0.1.23.tar.gz tmp/motion_python-0.1.24.tar.gz --markdown 20230407/m/motion-python/0.1.23-0.1.24/diff.md
+[2023-04-07 23:49:57] INFO root fetch - processPackages [wystia]: Downloading https://files.pythonhosted.org/packages/c8/47/07f4b21f216fc5ce7dae7d4d9b4351435b377ec7d71e8873810d3c3d7c4c/wystia-1.2.0.tar.gz
+[2023-04-07 23:49:57] INFO root fetch - processPackages [pyntc]: Downloading https://files.pythonhosted.org/packages/d3/31/2915594db29872415160257b03400cdcd23061f87c945e3c3ae078a27463/pyntc-1.0.0.tar.gz
+[2023-04-07 23:49:57] INFO root fetch - processPackages [aligned-textgrid]: Downloading https://files.pythonhosted.org/packages/89/8b/030b7fffc3e092efbacb402c297c9de47cfe1cf46224771d17bb5fead7ad/aligned_textgrid-0.3.0.tar.gz
+[2023-04-07 23:49:57] INFO root fetch - processPackages [aind-data-transfer]: Downloading https://files.pythonhosted.org/packages/ee/dc/9a630eab65d1c84402e0889b488d378cf516a68beee16401bf6e0c916cff/aind-data-transfer-0.9.3.tar.gz
+[2023-04-07 23:49:57] INFO root fetch - processPackages [pyntc]: executing diffoscope
+[2023-04-07 23:49:57] INFO root fetch - processPackages [pyntc]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pyntc-0.20.3.tar.gz tmp/pyntc-1.0.0.tar.gz --markdown 20230407/p/pyntc/0.20.3-1.0.0/diff.md
+[2023-04-07 23:49:57] INFO root fetch - processPackages [wystia]: executing diffoscope
+[2023-04-07 23:49:57] INFO root fetch - processPackages [wystia]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/wystia-1.1.0.tar.gz tmp/wystia-1.2.0.tar.gz --markdown 20230407/w/wystia/1.1.0-1.2.0/diff.md
+[2023-04-07 23:49:57] INFO root fetch - processPackages [aligned-textgrid]: executing diffoscope
+[2023-04-07 23:49:57] INFO root fetch - processPackages [aligned-textgrid]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/aligned_textgrid-0.2.1.tar.gz tmp/aligned_textgrid-0.3.0.tar.gz --markdown 20230407/a/aligned-textgrid/0.2.1-0.3.0/diff.md
+[2023-04-07 23:49:57] INFO root fetch - processPackages [aind-data-transfer]: executing diffoscope
+[2023-04-07 23:49:57] INFO root fetch - processPackages [aind-data-transfer]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/aind-data-transfer-0.9.2.tar.gz tmp/aind-data-transfer-0.9.3.tar.gz --markdown 20230407/a/aind-data-transfer/0.9.2-0.9.3/diff.md
+[2023-04-07 23:49:58] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:58] INFO root fetch - processPackages [DyaGram]: New version: [0.0.99] Old Version: [0.0.98]
+[2023-04-07 23:49:58] INFO root fetch - processPackages [DyaGram]: report already exists
+[2023-04-07 23:49:58] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:58] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:58] INFO root fetch - processPackages [toolformer-pytorch]: New version: [0.0.9] Old Version: [0.0.7]
+[2023-04-07 23:49:58] INFO root fetch - processPackages [toolformer-pytorch]: report already exists
+[2023-04-07 23:49:58] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:58] INFO root fetch - processPackages [netunicorn-connector-salt]: New version: [0.3.1] Old Version: [0.3.0]
+[2023-04-07 23:49:58] WARNING root fetch - processPackages [responsibleai-text]: Skipping, unable to determine old version
+[2023-04-07 23:49:58] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:49:58] INFO root fetch - processPackages [BBFinance]: New version: [1.1.9] Old Version: [1.1.8]
+[2023-04-07 23:49:58] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:58] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:58] INFO root fetch - processPackages [pvmodule]: New version: [0.0.99] Old Version: [0.0.98]
+[2023-04-07 23:49:58] INFO root fetch - processPackages [netunicorn-connector-salt]: Downloading https://files.pythonhosted.org/packages/10/da/b314460daad5ec80c8fa993ee5c4e5b63839d03e017e26688f34e25a9512/netunicorn-connector-salt-0.3.0.tar.gz
+[2023-04-07 23:49:58] INFO root fetch - processPackages [colomoto-jupyter]: New version: [0.8.5] Old Version: [0.8.4]
+[2023-04-07 23:49:58] INFO root fetch - processPackages [BBFinance]: Downloading https://files.pythonhosted.org/packages/78/20/586e3faca96d62aa99c183a5bc7bed9f6779ca56631e911bb798373fd3ac/BBFinance-1.1.8.tar.gz
+[2023-04-07 23:49:58] INFO root fetch - processPackages [pvmodule]: Downloading https://files.pythonhosted.org/packages/5e/67/e72159278ed018c12d7447dbdf0a6f9d382cb087ce3bc10ae5c15ea103ba/pvmodule-0.0.98.tar.gz
+[2023-04-07 23:49:58] INFO root fetch - processPackages [colomoto-jupyter]: Downloading https://files.pythonhosted.org/packages/58/e2/8720afc99a1990c128b87e4df344aef07035b50340978f7405577d12fbcb/colomoto_jupyter-0.8.4.tar.gz
+[2023-04-07 23:49:58] INFO root fetch - processPackages [netunicorn-connector-salt]: Downloading https://files.pythonhosted.org/packages/06/80/c42d912e3a6c00af9a6b0a2154ac17aaa8f89625619d8aba5495a82dff3e/netunicorn-connector-salt-0.3.1.tar.gz
+[2023-04-07 23:49:58] INFO root fetch - processPackages [BBFinance]: Downloading https://files.pythonhosted.org/packages/e9/ad/00b1d610fd58c7e3c8507fd45822d879eda7c98be7a1a903921c45553013/BBFinance-1.1.9.tar.gz
+[2023-04-07 23:49:58] INFO root fetch - processPackages [netunicorn-connector-salt]: executing diffoscope
+[2023-04-07 23:49:58] INFO root fetch - processPackages [netunicorn-connector-salt]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/netunicorn-connector-salt-0.3.0.tar.gz tmp/netunicorn-connector-salt-0.3.1.tar.gz --markdown 20230407/n/netunicorn-connector-salt/0.3.0-0.3.1/diff.md
+[2023-04-07 23:49:58] INFO root fetch - processPackages [BBFinance]: executing diffoscope
+[2023-04-07 23:49:58] INFO root fetch - processPackages [BBFinance]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/BBFinance-1.1.8.tar.gz tmp/BBFinance-1.1.9.tar.gz --markdown 20230407/B/BBFinance/1.1.8-1.1.9/diff.md
+[2023-04-07 23:49:59] INFO root fetch - processPackages [pvmodule]: Downloading https://files.pythonhosted.org/packages/dd/d6/72eb38ce69005f0ec1f5ebfc31982571b28fefe8c57ae21b3706923a27d3/pvmodule-0.0.99.tar.gz
+[2023-04-07 23:49:59] INFO root fetch - processPackages [pvmodule]: executing diffoscope
+[2023-04-07 23:49:59] INFO root fetch - processPackages [pvmodule]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pvmodule-0.0.98.tar.gz tmp/pvmodule-0.0.99.tar.gz --markdown 20230407/p/pvmodule/0.0.98-0.0.99/diff.md
+[2023-04-07 23:49:59] INFO root fetch - processPackages [colomoto-jupyter]: Downloading https://files.pythonhosted.org/packages/67/65/740b619cc9f3ec18dec0523aeb4a51a54b172f087f62615e6d749b414ce3/colomoto_jupyter-0.8.5.tar.gz
+[2023-04-07 23:49:59] INFO root fetch - processPackages [colomoto-jupyter]: executing diffoscope
+[2023-04-07 23:49:59] INFO root fetch - processPackages [colomoto-jupyter]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/colomoto_jupyter-0.8.4.tar.gz tmp/colomoto_jupyter-0.8.5.tar.gz --markdown 20230407/c/colomoto-jupyter/0.8.4-0.8.5/diff.md
+[2023-04-07 23:49:59] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:59] INFO root fetch - processPackages [armspeech]: New version: [0.1.2a0] Old Version: [0.1.2]
+[2023-04-07 23:49:59] INFO root fetch - processPackages [armspeech]: Downloading https://files.pythonhosted.org/packages/7d/52/971f9f06d04416f900fd412177b3b5070fe497b13d8bdc5cda41182540e4/armspeech-0.1.2.tar.gz
+[2023-04-07 23:49:59] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:49:59] INFO root fetch - processPackages [kizano]: New version: [1.0.1] Old Version: [1.0.0]
+[2023-04-07 23:50:00] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:50:00] WARNING root fetch - processPackages [armspeech]: Skipping package: exceeds size limit 20726090>=10485760
+[2023-04-07 23:50:00] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:50:00] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:50:00] INFO root fetch - processPackages [kizano]: Downloading https://files.pythonhosted.org/packages/80/58/9c2e73f83e48d4f6a61f9c97eb83a3875d8def961f713786b0ae58373803/kizano-1.0.0.tar.gz
+[2023-04-07 23:50:00] INFO root fetch - processPackages [kizano]: Downloading https://files.pythonhosted.org/packages/c5/49/5aa453548cbe5d27aaacbf4ad2146e413d92a9cca8bee8036e971a37e2bb/kizano-1.0.1.tar.gz
+[2023-04-07 23:50:00] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:50:00] INFO root fetch - processPackages [kizano]: executing diffoscope
+[2023-04-07 23:50:00] INFO root fetch - processPackages [kizano]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/kizano-1.0.0.tar.gz tmp/kizano-1.0.1.tar.gz --markdown 20230407/k/kizano/1.0.0-1.0.1/diff.md
+[2023-04-07 23:50:01] INFO root fetch - main [MainThread]: success
