@@ -1,0 +1,268 @@
+# Comparing `tmp/kmlb-0.0.85.tar.gz` & `tmp/kmlb-0.0.86.tar.gz`
+
+## filetype from file(1)
+
+```diff
+@@ -1 +1 @@
+-gzip compressed data, was "kmlb-0.0.85.tar", last modified: Tue Mar 28 18:12:50 2023, max compression
++gzip compressed data, was "kmlb-0.0.86.tar", last modified: Fri Apr  7 16:20:37 2023, max compression
+```
+
+## Comparing `kmlb-0.0.85.tar` & `kmlb-0.0.86.tar`
+
+### file list
+
+```diff
+@@ -1,16 +1,16 @@
+-drwxrwxrwx   0        0        0        0 2023-03-28 18:12:50.665014 kmlb-0.0.85/
+--rw-rw-rw-   0        0        0    35142 2023-03-28 15:12:39.000000 kmlb-0.0.85/LICENSE.md
+--rw-rw-rw-   0        0        0    38527 2023-03-28 18:12:50.665014 kmlb-0.0.85/PKG-INFO
+--rw-rw-rw-   0        0        0    38044 2023-03-28 15:12:39.000000 kmlb-0.0.85/README.md
+-drwxrwxrwx   0        0        0        0 2023-03-28 18:12:50.645206 kmlb-0.0.85/kmlb/
+--rw-rw-rw-   0        0        0       65 2023-03-28 15:12:39.000000 kmlb-0.0.85/kmlb/__init__.py
+--rw-rw-rw-   0        0        0    33499 2023-03-28 18:09:55.000000 kmlb-0.0.85/kmlb/base.py
+--rw-rw-rw-   0        0        0    10618 2023-03-28 15:12:39.000000 kmlb-0.0.85/kmlb/gis_basics.py
+--rw-rw-rw-   0        0        0     2413 2023-03-28 15:12:39.000000 kmlb-0.0.85/kmlb/shapes.py
+-drwxrwxrwx   0        0        0        0 2023-03-28 18:12:50.663989 kmlb-0.0.85/kmlb.egg-info/
+--rw-rw-rw-   0        0        0    38527 2023-03-28 18:12:50.000000 kmlb-0.0.85/kmlb.egg-info/PKG-INFO
+--rw-rw-rw-   0        0        0      205 2023-03-28 18:12:50.000000 kmlb-0.0.85/kmlb.egg-info/SOURCES.txt
+--rw-rw-rw-   0        0        0        1 2023-03-28 18:12:50.000000 kmlb-0.0.85/kmlb.egg-info/dependency_links.txt
+--rw-rw-rw-   0        0        0        5 2023-03-28 18:12:50.000000 kmlb-0.0.85/kmlb.egg-info/top_level.txt
+--rw-rw-rw-   0        0        0       42 2023-03-28 18:12:50.666034 kmlb-0.0.85/setup.cfg
+--rw-rw-rw-   0        0        0      741 2023-03-28 18:12:50.000000 kmlb-0.0.85/setup.py
++drwxrwxrwx   0        0        0        0 2023-04-07 16:20:37.388786 kmlb-0.0.86/
++-rw-rw-rw-   0        0        0    35142 2023-03-28 15:12:39.000000 kmlb-0.0.86/LICENSE.md
++-rw-rw-rw-   0        0        0    38527 2023-04-07 16:20:37.387800 kmlb-0.0.86/PKG-INFO
++-rw-rw-rw-   0        0        0    38044 2023-03-28 15:12:39.000000 kmlb-0.0.86/README.md
++drwxrwxrwx   0        0        0        0 2023-04-07 16:20:37.362607 kmlb-0.0.86/kmlb/
++-rw-rw-rw-   0        0        0       65 2023-03-28 15:12:39.000000 kmlb-0.0.86/kmlb/__init__.py
++-rw-rw-rw-   0        0        0    36118 2023-04-07 16:06:39.000000 kmlb-0.0.86/kmlb/base.py
++-rw-rw-rw-   0        0        0    10618 2023-03-28 15:12:39.000000 kmlb-0.0.86/kmlb/gis_basics.py
++-rw-rw-rw-   0        0        0     2413 2023-03-28 15:12:39.000000 kmlb-0.0.86/kmlb/shapes.py
++drwxrwxrwx   0        0        0        0 2023-04-07 16:20:37.386776 kmlb-0.0.86/kmlb.egg-info/
++-rw-rw-rw-   0        0        0    38527 2023-04-07 16:20:37.000000 kmlb-0.0.86/kmlb.egg-info/PKG-INFO
++-rw-rw-rw-   0        0        0      205 2023-04-07 16:20:37.000000 kmlb-0.0.86/kmlb.egg-info/SOURCES.txt
++-rw-rw-rw-   0        0        0        1 2023-04-07 16:20:37.000000 kmlb-0.0.86/kmlb.egg-info/dependency_links.txt
++-rw-rw-rw-   0        0        0        5 2023-04-07 16:20:37.000000 kmlb-0.0.86/kmlb.egg-info/top_level.txt
++-rw-rw-rw-   0        0        0       42 2023-04-07 16:20:37.388786 kmlb-0.0.86/setup.cfg
++-rw-rw-rw-   0        0        0      741 2023-04-07 16:20:05.000000 kmlb-0.0.86/setup.py
+```
+
+### Comparing `kmlb-0.0.85/LICENSE.md` & `kmlb-0.0.86/LICENSE.md`
+
+ * *Files identical despite different names*
+
+### Comparing `kmlb-0.0.85/PKG-INFO` & `kmlb-0.0.86/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: kmlb
+-Version: 0.0.85
++Version: 0.0.86
+ Summary: A Straightforward Google Earth KML Builder
+ Home-page: https://github.com/HFM3/kmlb
+ Author: HFM3
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Operating System :: OS Independent
+ Classifier: Intended Audience :: Science/Research
+```
+
+### Comparing `kmlb-0.0.85/README.md` & `kmlb-0.0.86/README.md`
+
+ * *Files identical despite different names*
+
+### Comparing `kmlb-0.0.85/kmlb/base.py` & `kmlb-0.0.86/kmlb/base.py`
+
+ * *Files 3% similar despite different names*
+
+```diff
+@@ -854,15 +854,15 @@
+                 A small body of descriptive text for the kml.
+         styles (List) [Optional]:
+             A list of the defined style object to include in the KML
+         collapsed (Bool) [Optional]:
+                 True = Root folder is collapsed.
+                 False = Root folder is open/expanded.
+         camera (Element) [Optional]:
+-            A KML 'LookAt' element that defines the default camera angle to the line.
++            A KML 'LookAt' element that defines the default camera angle to the kml.
+ 
+     OUTPUT:
+         kml_string (String):
+             xml string of kml file
+ 
+     Parameters
+     ----------
+@@ -934,16 +934,14 @@
+                The path to the folder where the KML file will be written to. The KML's file name is defined in the path.
+                Necessary folders will be created of they do not exist.
+                Note: The file path should end '.kml'
+            description (String) [Optional]:
+                    A small body of descriptive text for the kml.
+            refresh_interval (Int) [Optional]:
+                Number of seconds between file refreshes.
+-           view_refresh (Int) [Optional]:
+-               Number of seconds after camera movement stops before area is refreshed.
+            collapsed (Bool) [Optional]:
+                    True = Root folder is collapsed.
+                    False = Root folder is open/expanded.
+ 
+        OUTPUT:
+            kml_string (String):
+             xml string of kml file
+@@ -951,15 +949,14 @@
+        Parameters
+        ----------
+        name : str
+        link_path : str
+        write_path : str, optional
+        description : str, optional
+        refresh_interval : int, optional
+-       view_refresh : int, optional
+        collapsed : bool, optional
+ 
+        Returns
+        -------
+        kml_string : str
+ 
+        """
+@@ -989,7 +986,82 @@
+ 
+         with filepath.open("w", encoding="utf-8") as f:
+             f.write(kml_string)
+     else:
+         pass
+ 
+     return kml_string
++
++
++def ground_overlay(name, img_path, bounds, description='', opacity=100, refresh_interval=300, altitude=0, altitude_mode='CTG', hidden=False, camera=None):
++    """
++    INPUTS:
++    name (String):
++        The name to be given to the overlay.
++    img_path (String):
++        Path to the image to be used
++    bounds (List of four floats):
++        [North, South, East, West] bounding box coordinates of image
++    description (String) [Optional]:
++        A small body of descriptive text for the overlay. (Default = '')
++    opacity (Integer) [Optional]:
++        Opactiy percentage. 100 = opaque, 0 = invisible. (Default = 100)
++    refresh_interval (Integer) [Optional]:
++        Number of seconds between image refreshes. (Default = 300)
++    altitude (Integer) [Optional]:
++        Height in meters at which to render the overlay.
++    altitude_mode (String) [Optional]:
++        An abbreviated altitude mode ('CTG' or 'ABS') (Default = 'CTG').
++    hidden (Bool) [Optional]:
++        A value of 'True' or 'False' where 'False' means the point will be visible (Default = 'False').
++    camera (Element) [Optional]:
++        A KML 'LookAt' element that defines the default camera angle to the line. (Default = None)
++
++
++    Parameters
++    ----------
++    name : str
++    img_path : str
++    bounds : list[float]
++    description : str, optional
++    opacity : int, optional
++    refresh_interval : int, optional
++    altitude : int, optional
++    altitude_mode : str, optional
++    hidden : bool, optional
++    camera : element, optional
++
++    Returns
++    -------
++    ground_overlay : element
++
++    """
++    overlay = ET.Element("GroundOverlay")
++    ET.SubElement(overlay, "name").text = str(name)
++    ET.SubElement(overlay, "description").text = str(description)
++    ET.SubElement(overlay, "color").text = kml_color('#FFFFFF', opacity)
++    ET.SubElement(overlay, "altitude").text = str(altitude)
++    ET.SubElement(overlay, "altitudeMode").text = altitude_modes(altitude_mode)
++
++    icon = ET.SubElement(overlay, "Icon")
++    ET.SubElement(icon, "href").text = img_path
++    ET.SubElement(icon, "refreshMode").text = "onInterval"
++    ET.SubElement(icon, "refreshInterval").text = str(refresh_interval)
++
++    llbox = ET.SubElement(overlay, "LatLonBox")
++    ET.SubElement(llbox, "north").text = str(bounds[0])
++    ET.SubElement(llbox, "south").text = str(bounds[1])
++    ET.SubElement(llbox, "east").text = str(bounds[2])
++    ET.SubElement(llbox, "west").text = str(bounds[3])
++
++    # Set 'visibility' value
++    visibility = 0
++    if hidden is False:
++        visibility = 1
++
++    ET.SubElement(overlay, 'visibility').text = str(visibility)
++
++    # Image Default Camera Angle
++    if camera is not None:
++        overlay.append(camera)
++
++    return overlay
+```
+
+### Comparing `kmlb-0.0.85/kmlb/gis_basics.py` & `kmlb-0.0.86/kmlb/gis_basics.py`
+
+ * *Files identical despite different names*
+
+### Comparing `kmlb-0.0.85/kmlb/shapes.py` & `kmlb-0.0.86/kmlb/shapes.py`
+
+ * *Files identical despite different names*
+
+### Comparing `kmlb-0.0.85/kmlb.egg-info/PKG-INFO` & `kmlb-0.0.86/kmlb.egg-info/PKG-INFO`
+
+ * *Files 0% similar despite different names*
+
+```diff
+@@ -1,10 +1,10 @@
+ Metadata-Version: 2.1
+ Name: kmlb
+-Version: 0.0.85
++Version: 0.0.86
+ Summary: A Straightforward Google Earth KML Builder
+ Home-page: https://github.com/HFM3/kmlb
+ Author: HFM3
+ Classifier: Programming Language :: Python :: 3.8
+ Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+ Classifier: Operating System :: OS Independent
+ Classifier: Intended Audience :: Science/Research
+```
+
+### Comparing `kmlb-0.0.85/setup.py` & `kmlb-0.0.86/setup.py`
+
+ * *Files 1% similar despite different names*
+
+```diff
+@@ -1,15 +1,15 @@
+ import setuptools
+ 
+ with open("README.md", "r") as fh:
+     long_description = fh.read()
+ 
+ setuptools.setup(
+     name="kmlb",
+-    version="0.0.85",
++    version="0.0.86",
+     author="HFM3",
+     description="A Straightforward Google Earth KML Builder",
+     long_description=long_description,
+     long_description_content_type="text/markdown",
+     url="https://github.com/HFM3/kmlb",
+     packages=setuptools.find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests", "images", "art"]),
+     classifiers=[
+```
+

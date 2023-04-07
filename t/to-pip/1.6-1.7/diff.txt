@@ -1,0 +1,137 @@
+--- tmp/to-pip-1.6.tar.gz
++++ tmp/to-pip-1.7.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "to-pip-1.6.tar", last modified: Fri Apr  7 16:18:47 2023, max compression
+│ +gzip compressed data, was "to-pip-1.7.tar", last modified: Fri Apr  7 16:27:11 2023, max compression
+│   --- to-pip-1.6.tar
+├── +++ to-pip-1.7.tar
+│ ├── file list
+│ │ @@ -1,13 +1,13 @@
+│ │ -drwxrwxr-x   0 root         (0) root         (0)        0 2023-04-07 16:18:47.198867 to-pip-1.6/
+│ │ --rw-rw-r--   0 root         (0) root         (0)     2065 2023-04-07 16:18:47.198578 to-pip-1.6/PKG-INFO
+│ │ --rw-rw-r--   0 root         (0) root         (0)     1903 2023-04-07 16:18:38.000000 to-pip-1.6/README.md
+│ │ --rw-rw-r--   0 root         (0) root         (0)       38 2023-04-07 16:18:47.198939 to-pip-1.6/setup.cfg
+│ │ --rw-rw-r--   0 root         (0) root         (0)      486 2023-04-07 16:18:38.000000 to-pip-1.6/setup.py
+│ │ -drwxrwxr-x   0 root         (0) root         (0)        0 2023-04-07 16:18:47.198225 to-pip-1.6/to_pip.egg-info/
+│ │ --rw-rw-r--   0 root         (0) root         (0)     2065 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/PKG-INFO
+│ │ --rw-rw-r--   0 root         (0) root         (0)      210 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/SOURCES.txt
+│ │ --rw-rw-r--   0 root         (0) root         (0)        1 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/dependency_links.txt
+│ │ --rw-rw-r--   0 root         (0) root         (0)       40 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/entry_points.txt
+│ │ --rw-rw-r--   0 root         (0) root         (0)       56 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/requires.txt
+│ │ --rw-rw-r--   0 root         (0) root         (0)        7 2023-04-07 16:18:46.000000 to-pip-1.6/to_pip.egg-info/top_level.txt
+│ │ --rwxrwxr-x   0 root         (0) root         (0)     4471 2023-04-07 16:18:38.000000 to-pip-1.6/to_pip.py
+│ │ +drwxrwxr-x   0 root         (0) root         (0)        0 2023-04-07 16:27:11.806573 to-pip-1.7/
+│ │ +-rw-rw-r--   0 root         (0) root         (0)     2136 2023-04-07 16:27:11.806274 to-pip-1.7/PKG-INFO
+│ │ +-rw-rw-r--   0 root         (0) root         (0)     1974 2023-04-07 16:27:07.000000 to-pip-1.7/README.md
+│ │ +-rw-rw-r--   0 root         (0) root         (0)       38 2023-04-07 16:27:11.806646 to-pip-1.7/setup.cfg
+│ │ +-rw-rw-r--   0 root         (0) root         (0)      486 2023-04-07 16:27:07.000000 to-pip-1.7/setup.py
+│ │ +drwxrwxr-x   0 root         (0) root         (0)        0 2023-04-07 16:27:11.805553 to-pip-1.7/to_pip.egg-info/
+│ │ +-rw-rw-r--   0 root         (0) root         (0)     2136 2023-04-07 16:27:11.000000 to-pip-1.7/to_pip.egg-info/PKG-INFO
+│ │ +-rw-rw-r--   0 root         (0) root         (0)      210 2023-04-07 16:27:11.000000 to-pip-1.7/to_pip.egg-info/SOURCES.txt
+│ │ +-rw-rw-r--   0 root         (0) root         (0)        1 2023-04-07 16:27:11.000000 to-pip-1.7/to_pip.egg-info/dependency_links.txt
+│ │ +-rw-rw-r--   0 root         (0) root         (0)       40 2023-04-07 16:27:11.000000 to-pip-1.7/to_pip.egg-info/entry_points.txt
+│ │ +-rw-rw-r--   0 root         (0) root         (0)       56 2023-04-07 16:27:11.000000 to-pip-1.7/to_pip.egg-info/requires.txt
+│ │ +-rw-rw-r--   0 root         (0) root         (0)        7 2023-04-07 16:27:11.000000 to-pip-1.7/to_pip.egg-info/top_level.txt
+│ │ +-rwxrwxr-x   0 root         (0) root         (0)     4471 2023-04-07 16:27:06.000000 to-pip-1.7/to_pip.py
+│ │   --- to-pip-1.6/README.md
+│ ├── +++ to-pip-1.7/PKG-INFO
+│ │┄ Files 26% similar despite different names
+│ │ @@ -1,56 +1,60 @@
+│ │ -# To-pip
+│ │ +Metadata-Version: 2.1
+│ │ +Name: to-pip
+│ │ +Version: 1.7
+│ │ +Summary: UNKNOWN
+│ │ +Home-page: UNKNOWN
+│ │ +License: UNKNOWN
+│ │ +Platform: UNKNOWN
+│ │ +Description-Content-Type: text/markdown
+│ │  
+│ │ -`to-pip` is a command line tool that helps you create Python packages from your Python files and upload them to PyPI with ease.
+│ │ +# to-pip
+│ │  
+│ │ -## Installation
+│ │ +`to-pip` is a tool that makes it easy to convert a set of Python files into a Python package that can be uploaded to PyPI. It can also upload the package to PyPI for you, if you provide your PyPI credentials. 
+│ │  
+│ │ -To install `to-pip`, use the following command:
+│ │ +## Usage
+│ │  
+│ │ -```bash
+│ │ -python -m pip install to-pip
+│ │ -```
+│ │ +### Web Interface
+│ │  
+│ │ -## Usage
+│ │ +You can use the web interface of `to-pip` [here](https://to-pip-jqvkl3xr3a-uc.a.run.app). Simply upload your Python files, enter your package name and version, and click "Create Package". If you provide your PyPI credentials, you can also choose to upload the package to PyPI directly from the web interface.
+│ │  
+│ │ -To use `to-pip`, simply run the following command:
+│ │ +### Command Line Interface
+│ │  
+│ │ -```bash
+│ │ -python -m to_pip -n <package_name> -v <package_version> [-u <pypi_username> -p <pypi_password>] <python_files>
+│ │ -```
+│ │ +You can also use the `to-pip` command-line tool to create a package from your Python files. To use it, simply install the `to-pip` package using pip:
+│ │  
+│ │ -Where:
+│ │ -- `<package_name>` is the name of your package.
+│ │ -- `<package_version>` is the version of your package.
+│ │ -- `<pypi_username>` is your PyPI username (optional).
+│ │ -- `<pypi_password>` is your PyPI password (optional).
+│ │ -- `<python_files>` are the Python files you want to include in your package.
+│ │ +```
+│ │ +pip install to-pip
+│ │ +```
+│ │  
+│ │ -For example, if you have a file `hello.py` that you want to include in your package, you can run the following command:
+│ │ +Then, run the `to-pip` command with the following arguments:
+│ │  
+│ │ -```bash
+│ │ -python -m to_pip -n hello-world -v 0.1.0 hello.py
+│ │  ```
+│ │ +python -m to_pip -n <package_name> -v <package_version> [-u <pypi_username> -p <pypi_password>] <python_files>
+│ │ +```
+│ │ +
+│ │ +Here is what each argument means:
+│ │ +
+│ │ +- `-n` or `--package_name`: The name of your package.
+│ │ +- `-v` or `--package_version`: The version of your package in `x.x.x` format.
+│ │ +- `-u` or `--pypi_username` (optional): Your PyPI username. If you provide this, `to-pip` will upload your package to PyPI for you.
+│ │ +- `-p` or `--pypi_password` (optional): Your PyPI password. If you provide this, `to-pip` will upload your package to PyPI for you.
+│ │ +- `<python_files>`: The Python files that you want to include in your package.
+│ │  
+│ │ -This will create a package called `hello-world` with version `0.1.0`, and containing the `hello.py` file.
+│ │ +### Package Usage
+│ │  
+│ │ -If you have multiple Python files that you want to include in your package, you can specify them all as arguments:
+│ │ +Once you have created your package, you can install it using pip:
+│ │  
+│ │ -```bash
+│ │ -python -m to_pip -n hello-world -v 0.1.0 hello.py world.py
+│ │ +```
+│ │ +pip install <package_name>
+│ │  ```
+│ │  
+│ │ -By default, `to-pip` will create a console script for each Python file you include in your package. For example, if you include `hello.py` and `world.py`, `to-pip` will create two console scripts called `hello` and `world`. You can run these scripts from the command line once you install your package.
+│ │ +After installing the package, you can use any functions or classes defined in your Python files as normal. 
+│ │  
+│ │ -## Uploading to PyPI
+│ │ +### Example
+│ │  
+│ │ -If you want to upload your package to PyPI, you can provide your PyPI credentials using the `-u` and `-p` options:
+│ │ +Let's say you have two Python files, `hello.py` and `world.py`, that you want to package into a package called `helloworld` with version `1.0.0`. Here's how you would use `to-pip` to create the package:
+│ │  
+│ │ -```bash
+│ │ -python -m to_pip -n hello-world -v 0.1.0 -u <pypi_username> -p <pypi_password> hello.py
+│ │ +```
+│ │ +python -m to_pip -n helloworld -v 1.0.0 hello.py world.py
+│ │  ```
+│ │  
+│ │ -This will upload your package to PyPI once it is created.
+│ │ -
+│ │ -## License
+│ │  
+│ │ -`to-pip` is distributed under the MIT License. See `LICENSE` for more information.
+│ │   --- to-pip-1.6/to_pip.py
+│ ├── +++ to-pip-1.7/to_pip.py
+│ │┄ Files identical despite different names

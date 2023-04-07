@@ -1,0 +1,320 @@
+--- tmp/dmp3-0.0.5.tar.gz
++++ tmp/dmp3-0.0.6.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "dmp3-0.0.5.tar", last modified: Fri Apr  7 16:20:18 2023, max compression
+│ +gzip compressed data, was "dmp3-0.0.6.tar", last modified: Fri Apr  7 16:30:48 2023, max compression
+│   --- dmp3-0.0.5.tar
+├── +++ dmp3-0.0.6.tar
+│ ├── file list
+│ │ @@ -1,23 +1,23 @@
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:20:18.511543 dmp3-0.0.5/
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     3109 2023-04-07 04:09:35.000000 dmp3-0.0.5/.gitignore
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     1064 2023-04-05 05:41:07.000000 dmp3-0.0.5/LICENSE
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     6188 2023-04-07 16:20:18.511543 dmp3-0.0.5/PKG-INFO
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     5354 2023-04-07 16:04:18.000000 dmp3-0.0.5/README.rst
+│ │ --rw-r--r--   0 user      (1000) user      (1000)      969 2023-04-07 16:04:26.000000 dmp3-0.0.5/pyproject.toml
+│ │ --rw-r--r--   0 user      (1000) user      (1000)       38 2023-04-07 16:20:18.511543 dmp3-0.0.5/setup.cfg
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:20:18.501542 dmp3-0.0.5/src/
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:20:18.501542 dmp3-0.0.5/src/dmp3/
+│ │ --rw-r--r--   0 user      (1000) user      (1000)        0 2023-04-06 08:28:30.000000 dmp3-0.0.5/src/dmp3/__init__.py
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     4271 2023-04-07 14:45:10.000000 dmp3-0.0.5/src/dmp3/_internal.py
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     4872 2023-04-07 15:59:29.000000 dmp3-0.0.5/src/dmp3/dmp3.py
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:20:18.501542 dmp3-0.0.5/src/dmp3.egg-info/
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     6188 2023-04-07 16:20:18.000000 dmp3-0.0.5/src/dmp3.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 user      (1000) user      (1000)      352 2023-04-07 16:20:18.000000 dmp3-0.0.5/src/dmp3.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 user      (1000) user      (1000)        1 2023-04-07 16:20:18.000000 dmp3-0.0.5/src/dmp3.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 user      (1000) user      (1000)       39 2023-04-07 16:20:18.000000 dmp3-0.0.5/src/dmp3.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 user      (1000) user      (1000)       14 2023-04-07 16:20:18.000000 dmp3-0.0.5/src/dmp3.egg-info/requires.txt
+│ │ --rw-r--r--   0 user      (1000) user      (1000)        5 2023-04-07 16:20:18.000000 dmp3-0.0.5/src/dmp3.egg-info/top_level.txt
+│ │ -drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:20:18.511543 dmp3-0.0.5/tests/
+│ │ --rw-r--r--   0 user      (1000) user      (1000)      290 2023-04-06 04:40:16.000000 dmp3-0.0.5/tests/conftest.py
+│ │ --rw-r--r--   0 user      (1000) user      (1000)      682 2023-04-06 04:40:16.000000 dmp3-0.0.5/tests/terminal.py
+│ │ --rw-r--r--   0 user      (1000) user      (1000)     4530 2023-04-07 15:43:38.000000 dmp3-0.0.5/tests/test_wsl.py
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:30:48.151547 dmp3-0.0.6/
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     3109 2023-04-07 04:09:35.000000 dmp3-0.0.6/.gitignore
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     1064 2023-04-05 05:41:07.000000 dmp3-0.0.6/LICENSE
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     6227 2023-04-07 16:30:48.151547 dmp3-0.0.6/PKG-INFO
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     5382 2023-04-07 16:29:40.000000 dmp3-0.0.6/README.rst
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)      980 2023-04-07 16:23:05.000000 dmp3-0.0.6/pyproject.toml
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)       38 2023-04-07 16:30:48.151547 dmp3-0.0.6/setup.cfg
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:30:48.141547 dmp3-0.0.6/src/
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:30:48.141547 dmp3-0.0.6/src/dmp3/
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)        0 2023-04-06 08:28:30.000000 dmp3-0.0.6/src/dmp3/__init__.py
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     4271 2023-04-07 14:45:10.000000 dmp3-0.0.6/src/dmp3/_internal.py
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     4887 2023-04-07 16:27:58.000000 dmp3-0.0.6/src/dmp3/dmp3.py
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:30:48.141547 dmp3-0.0.6/src/dmp3.egg-info/
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     6227 2023-04-07 16:30:48.000000 dmp3-0.0.6/src/dmp3.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)      352 2023-04-07 16:30:48.000000 dmp3-0.0.6/src/dmp3.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)        1 2023-04-07 16:30:48.000000 dmp3-0.0.6/src/dmp3.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)       39 2023-04-07 16:30:48.000000 dmp3-0.0.6/src/dmp3.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)       14 2023-04-07 16:30:48.000000 dmp3-0.0.6/src/dmp3.egg-info/requires.txt
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)        5 2023-04-07 16:30:48.000000 dmp3-0.0.6/src/dmp3.egg-info/top_level.txt
+│ │ +drwxr-xr-x   0 user      (1000) user      (1000)        0 2023-04-07 16:30:48.151547 dmp3-0.0.6/tests/
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)      290 2023-04-06 04:40:16.000000 dmp3-0.0.6/tests/conftest.py
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)      682 2023-04-06 04:40:16.000000 dmp3-0.0.6/tests/terminal.py
+│ │ +-rw-r--r--   0 user      (1000) user      (1000)     4530 2023-04-07 15:43:38.000000 dmp3-0.0.6/tests/test_wsl.py
+│ │   --- dmp3-0.0.5/.gitignore
+│ ├── +++ dmp3-0.0.6/.gitignore
+│ │┄ Files identical despite different names
+│ │   --- dmp3-0.0.5/LICENSE
+│ ├── +++ dmp3-0.0.6/LICENSE
+│ │┄ Files identical despite different names
+│ │   --- dmp3-0.0.5/PKG-INFO
+│ ├── +++ dmp3-0.0.6/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dmp3
+│ │ -Version: 0.0.5
+│ │ -Summary: Download youtube video or playlist, convert to mp3, store into a folder.
+│ │ +Version: 0.0.6
+│ │ +Summary: Download youtube video or playlist or channel, convert to mp3, store into a folder.
+│ │  Author-email: 0xdomyz <septemberwhyms@gmail.com>
+│ │  Project-URL: homepage, https://github.com/0xdomyz/utube_playlist_mp3_downloader
+│ │  Project-URL: documentation, https://github.com/0xdomyz/utube_playlist_mp3_downloader
+│ │  Project-URL: Bug Tracker, https://github.com/0xdomyz/utube_playlist_mp3_downloader/issues
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │ @@ -29,21 +29,21 @@
+│ │  - Download only additional items, once local storage folder is created
+│ │  - Refresh local storage folder with saved parameters
+│ │  - Refresh multiple local storage folders
+│ │  
+│ │  Installation
+│ │  ------------
+│ │  
+│ │ -#. Install Python >= 3.9
+│ │ +#. Install Python 3.9 or 3.10 or 3.11.
+│ │  
+│ │ -#. Install dmp3 package from pypi
+│ │ +#. Install package from pypi.
+│ │  
+│ │      .. code-block:: console
+│ │  
+│ │ -        pip install dmp3
+│ │ +        pip install -U dmp3
+│ │  
+│ │  #. Install `FFMPEG <https://ffmpeg.org/>`_, it converts media formats. 
+│ │  
+│ │      Linux
+│ │  
+│ │      .. code-block:: console
+│ │  
+│ │ @@ -137,21 +137,21 @@
+│ │  
+│ │          positional arguments:
+│ │          folder                Folder to store mp3 files
+│ │  
+│ │          options:
+│ │          -h, --help            show this help message and exit
+│ │          -w WEBPATH, --webpath WEBPATH
+│ │ -                                Webpath to download from, creates a .dmp3 file insdie folder to store webpath
+│ │ +                                Webpath to download from, creates a .dmp3 file insdie folder to store parameters
+│ │          -s START, --start START
+│ │                                  Start index of the playlist
+│ │          -e END, --end END     End index of the playlist
+│ │          -r, --refresh_folder_mode
+│ │ -                                Refresh all mp3 folders in the folder, default is False.
+│ │ -        -m MP3, --mp3 MP3     Convert mp4 files to mp3 files in the folder (WIP)
+│ │ +                                Refresh all mp3 folders in the folder, default is False
+│ │ +        -m MP3, --mp3 MP3     Convert video to mp3 files in the folder, default is True (WIP)
+│ │  
+│ │          Examples:
+│ │  
+│ │          Entire playlist:
+│ │          cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │          dmp3 starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │   --- dmp3-0.0.5/README.rst
+│ ├── +++ dmp3-0.0.6/README.rst
+│ │┄ Files 3% similar despite different names
+│ │ @@ -11,21 +11,21 @@
+│ │  - Download only additional items, once local storage folder is created
+│ │  - Refresh local storage folder with saved parameters
+│ │  - Refresh multiple local storage folders
+│ │  
+│ │  Installation
+│ │  ------------
+│ │  
+│ │ -#. Install Python >= 3.9
+│ │ +#. Install Python 3.9 or 3.10 or 3.11.
+│ │  
+│ │ -#. Install dmp3 package from pypi
+│ │ +#. Install package from pypi.
+│ │  
+│ │      .. code-block:: console
+│ │  
+│ │ -        pip install dmp3
+│ │ +        pip install -U dmp3
+│ │  
+│ │  #. Install `FFMPEG <https://ffmpeg.org/>`_, it converts media formats. 
+│ │  
+│ │      Linux
+│ │  
+│ │      .. code-block:: console
+│ │  
+│ │ @@ -119,21 +119,21 @@
+│ │  
+│ │          positional arguments:
+│ │          folder                Folder to store mp3 files
+│ │  
+│ │          options:
+│ │          -h, --help            show this help message and exit
+│ │          -w WEBPATH, --webpath WEBPATH
+│ │ -                                Webpath to download from, creates a .dmp3 file insdie folder to store webpath
+│ │ +                                Webpath to download from, creates a .dmp3 file insdie folder to store parameters
+│ │          -s START, --start START
+│ │                                  Start index of the playlist
+│ │          -e END, --end END     End index of the playlist
+│ │          -r, --refresh_folder_mode
+│ │ -                                Refresh all mp3 folders in the folder, default is False.
+│ │ -        -m MP3, --mp3 MP3     Convert mp4 files to mp3 files in the folder (WIP)
+│ │ +                                Refresh all mp3 folders in the folder, default is False
+│ │ +        -m MP3, --mp3 MP3     Convert video to mp3 files in the folder, default is True (WIP)
+│ │  
+│ │          Examples:
+│ │  
+│ │          Entire playlist:
+│ │          cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │          dmp3 starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │   --- dmp3-0.0.5/pyproject.toml
+│ ├── +++ dmp3-0.0.6/pyproject.toml
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,18 +1,18 @@
+│ │  [build-system]
+│ │  requires = ["setuptools>=61.0"]
+│ │  build-backend = "setuptools.build_meta"
+│ │  
+│ │  [project]
+│ │  name = "dmp3"
+│ │ -version = "0.0.5"
+│ │ +version = "0.0.6"
+│ │  authors = [
+│ │    { name="0xdomyz", email="septemberwhyms@gmail.com" },
+│ │  ]
+│ │ -description = "Download youtube video or playlist, convert to mp3, store into a folder."
+│ │ +description = "Download youtube video or playlist or channel, convert to mp3, store into a folder."
+│ │  readme = "README.rst"
+│ │  requires-python = ">=3.9"
+│ │  classifiers = [
+│ │      "Programming Language :: Python :: 3.9",
+│ │      "Programming Language :: Python :: 3.10",
+│ │      "Programming Language :: Python :: 3.11",
+│ │      "License :: OSI Approved :: MIT License",
+│ │   --- dmp3-0.0.5/src/dmp3/_internal.py
+│ ├── +++ dmp3-0.0.6/src/dmp3/_internal.py
+│ │┄ Files identical despite different names
+│ │   --- dmp3-0.0.5/src/dmp3/dmp3.py
+│ ├── +++ dmp3-0.0.6/src/dmp3/dmp3.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -10,34 +10,34 @@
+│ │      type=Path,
+│ │      help="Folder to store mp3 files",
+│ │  )
+│ │  argparser.add_argument(
+│ │      "-w",
+│ │      "--webpath",
+│ │      type=str,
+│ │ -    help="Webpath to download from, creates a .dmp3 file insdie folder to store webpath",
+│ │ +    help="Webpath to download from, creates a .dmp3 file insdie folder to store parameters",
+│ │      default=None,
+│ │  )
+│ │  argparser.add_argument(
+│ │      "-s", "--start", type=int, help="Start index of the playlist", default=None
+│ │  )
+│ │  argparser.add_argument(
+│ │      "-e", "--end", type=int, help="End index of the playlist", default=None
+│ │  )
+│ │  argparser.add_argument(
+│ │      "-r",
+│ │      "--refresh_folder_mode",
+│ │      action="store_true",
+│ │ -    help=("Refresh all mp3 folders in the folder, default is False."),
+│ │ +    help=("Refresh all mp3 folders in the folder, default is False"),
+│ │  )
+│ │  argparser.add_argument(
+│ │      "-m",
+│ │      "--mp3",
+│ │      type=bool,
+│ │ -    help="Convert mp4 files to mp3 files in the folder (WIP)",
+│ │ +    help="Convert video to mp3 files in the folder, default is True (WIP)",
+│ │      default=True,
+│ │  )
+│ │  
+│ │  description = """
+│ │  Download youtube video or playlist or channel, convert to mp3, store into a folder.
+│ │  
+│ │  Creates folder if not exists.
+│ │   --- dmp3-0.0.5/src/dmp3.egg-info/PKG-INFO
+│ ├── +++ dmp3-0.0.6/src/dmp3.egg-info/PKG-INFO
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,11 +1,11 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: dmp3
+│ │ -Version: 0.0.5
+│ │ -Summary: Download youtube video or playlist, convert to mp3, store into a folder.
+│ │ +Version: 0.0.6
+│ │ +Summary: Download youtube video or playlist or channel, convert to mp3, store into a folder.
+│ │  Author-email: 0xdomyz <septemberwhyms@gmail.com>
+│ │  Project-URL: homepage, https://github.com/0xdomyz/utube_playlist_mp3_downloader
+│ │  Project-URL: documentation, https://github.com/0xdomyz/utube_playlist_mp3_downloader
+│ │  Project-URL: Bug Tracker, https://github.com/0xdomyz/utube_playlist_mp3_downloader/issues
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Classifier: Programming Language :: Python :: 3.11
+│ │ @@ -29,21 +29,21 @@
+│ │  - Download only additional items, once local storage folder is created
+│ │  - Refresh local storage folder with saved parameters
+│ │  - Refresh multiple local storage folders
+│ │  
+│ │  Installation
+│ │  ------------
+│ │  
+│ │ -#. Install Python >= 3.9
+│ │ +#. Install Python 3.9 or 3.10 or 3.11.
+│ │  
+│ │ -#. Install dmp3 package from pypi
+│ │ +#. Install package from pypi.
+│ │  
+│ │      .. code-block:: console
+│ │  
+│ │ -        pip install dmp3
+│ │ +        pip install -U dmp3
+│ │  
+│ │  #. Install `FFMPEG <https://ffmpeg.org/>`_, it converts media formats. 
+│ │  
+│ │      Linux
+│ │  
+│ │      .. code-block:: console
+│ │  
+│ │ @@ -137,21 +137,21 @@
+│ │  
+│ │          positional arguments:
+│ │          folder                Folder to store mp3 files
+│ │  
+│ │          options:
+│ │          -h, --help            show this help message and exit
+│ │          -w WEBPATH, --webpath WEBPATH
+│ │ -                                Webpath to download from, creates a .dmp3 file insdie folder to store webpath
+│ │ +                                Webpath to download from, creates a .dmp3 file insdie folder to store parameters
+│ │          -s START, --start START
+│ │                                  Start index of the playlist
+│ │          -e END, --end END     End index of the playlist
+│ │          -r, --refresh_folder_mode
+│ │ -                                Refresh all mp3 folders in the folder, default is False.
+│ │ -        -m MP3, --mp3 MP3     Convert mp4 files to mp3 files in the folder (WIP)
+│ │ +                                Refresh all mp3 folders in the folder, default is False
+│ │ +        -m MP3, --mp3 MP3     Convert video to mp3 files in the folder, default is True (WIP)
+│ │  
+│ │          Examples:
+│ │  
+│ │          Entire playlist:
+│ │          cd /home/user/Projects/utube_playlist_mp3_downloader/tests/mp3_dir
+│ │          dmp3 starcraft_terran -w https://www.youtube.com/playlist?list=PLEtYTVnkBVuZWJ4Gsxtt80tWbiiyy1bcy
+│ │   --- dmp3-0.0.5/tests/terminal.py
+│ ├── +++ dmp3-0.0.6/tests/terminal.py
+│ │┄ Files identical despite different names
+│ │   --- dmp3-0.0.5/tests/test_wsl.py
+│ ├── +++ dmp3-0.0.6/tests/test_wsl.py
+│ │┄ Files identical despite different names

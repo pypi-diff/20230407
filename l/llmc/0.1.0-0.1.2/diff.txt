@@ -1,0 +1,21 @@
+--- tmp/llmc-0.1.0.tar.gz
++++ tmp/llmc-0.1.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "llmc-0.1.0.tar", max compression
+│ +gzip compressed data, was "llmc-0.1.2.tar", max compression
+│   --- llmc-0.1.0.tar
+├── +++ llmc-0.1.2.tar
+│ ├── file list
+│ │ @@ -1,4 +1,7 @@
+│ │ --rw-r--r--   0        0        0        0 2023-03-27 13:50:28.207795 llmc-0.1.0/README.md
+│ │ --rw-r--r--   0        0        0        0 2023-03-27 13:50:28.207748 llmc-0.1.0/llmc/__init__.py
+│ │ --rw-r--r--   0        0        0      286 2023-03-27 13:52:15.894651 llmc-0.1.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0      456 1970-01-01 00:00:00.000000 llmc-0.1.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1060 2023-03-27 15:27:57.531891 llmc-0.1.2/LICENSE
+│ │ +-rw-r--r--   0        0        0       16 2023-03-27 15:26:25.385465 llmc-0.1.2/README.md
+│ │ +-rw-r--r--   0        0        0     3865 2023-04-07 15:56:56.489310 llmc-0.1.2/llmc/__init__.py
+│ │ +-rw-r--r--   0        0        0       55 2023-04-07 15:37:27.535927 llmc-0.1.2/llmc/__main__.py
+│ │ +-rw-r--r--   0        0        0       55 2023-04-07 16:03:13.914087 llmc-0.1.2/llmc/cli.py
+│ │ +-rw-r--r--   0        0        0      346 2023-04-07 16:21:35.405709 llmc-0.1.2/pyproject.toml
+│ │ +-rw-r--r--   0        0        0      463 1970-01-01 00:00:00.000000 llmc-0.1.2/PKG-INFO
