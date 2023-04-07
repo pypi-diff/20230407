@@ -3930,3 +3930,18 @@
 [2023-04-07 22:23:47] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:23:47] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:23:47] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:25:28] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17622765]
+[2023-04-07 22:25:33] INFO root fetch - main [MainThread]: Found 3 changed packages
+[2023-04-07 22:25:33] INFO root fetch - processPackages [hoppr-security-commons]: New version: [0.0.9] Old Version: [0.0.8]
+[2023-04-07 22:25:33] INFO root fetch - processPackages [hoppr-security-commons]: report already exists
+[2023-04-07 22:25:33] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:25:33] INFO root fetch - processPackages [igwn-alert]: New version: [0.3.0] Old Version: [0.2.3]
+[2023-04-07 22:25:33] INFO root fetch - processPackages [jsonschema-gentypes]: New version: [1.7.1] Old Version: [1.7.0]
+[2023-04-07 22:25:33] INFO root fetch - processPackages [igwn-alert]: executing diffoscope
+[2023-04-07 22:25:33] INFO root fetch - processPackages [igwn-alert]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/igwn-alert-0.2.3.tar.gz tmp/igwn-alert-0.3.0.tar.gz --markdown 20230407/i/igwn-alert/0.2.3-0.3.0/diff.md
+[2023-04-07 22:25:33] INFO root fetch - processPackages [jsonschema-gentypes]: Downloading https://files.pythonhosted.org/packages/c1/48/6e5aee2c048e9e3cc8d42c045f17eacb7ae10b91d416770701d1042fc519/jsonschema_gentypes-1.7.0.tar.gz
+[2023-04-07 22:25:33] INFO root fetch - processPackages [jsonschema-gentypes]: Downloading https://files.pythonhosted.org/packages/31/dc/fb8ff8f3bd6de2ebcc934afbb7bd48b9d0e5864d61a7a242b63cc5e1c7f7/jsonschema_gentypes-1.7.1.tar.gz
+[2023-04-07 22:25:34] INFO root fetch - processPackages [jsonschema-gentypes]: executing diffoscope
+[2023-04-07 22:25:34] INFO root fetch - processPackages [jsonschema-gentypes]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/jsonschema_gentypes-1.7.0.tar.gz tmp/jsonschema_gentypes-1.7.1.tar.gz --markdown 20230407/j/jsonschema-gentypes/1.7.0-1.7.1/diff.md
+[2023-04-07 22:25:34] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:25:35] INFO root fetch - main [MainThread]: success
