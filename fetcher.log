@@ -4364,3 +4364,158 @@
 [2023-04-07 22:48:09] INFO root fetch - processPackages [bigdict]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/bigdict-21.4.11.tar.gz tmp/bigdict-22.5.29.tar.gz --markdown 20230407/b/bigdict/21.4.11-22.5.29/diff.md
 [2023-04-07 22:48:10] INFO root fetch - main [MainThread]: success
 [2023-04-07 22:48:10] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:14] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17623064]
+[2023-04-07 22:58:19] INFO root fetch - main [MainThread]: Found 31 changed packages
+[2023-04-07 22:58:19] INFO root fetch - processPackages [toolformer-pytorch]: New version: [0.0.9] Old Version: [0.0.7]
+[2023-04-07 22:58:19] INFO root fetch - processPackages [toolformer-pytorch]: report already exists
+[2023-04-07 22:58:19] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:19] INFO root fetch - processPackages [ipywidgets-gallery]: New version: [0.17] Old Version: [0.16]
+[2023-04-07 22:58:19] INFO root fetch - processPackages [tokenizer-viz]: New version: [0.1.2] Old Version: [0.1.1]
+[2023-04-07 22:58:19] WARNING root fetch - processPackages [lakefuse]: Skipping, unable to determine old version
+[2023-04-07 22:58:19] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:58:19] WARNING root fetch - processPackages [pandaspg]: Skipping, unable to determine old version
+[2023-04-07 22:58:19] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:58:19] INFO root fetch - processPackages [fabric-fim]: New version: [1.4.7] Old Version: [1.4.6]
+[2023-04-07 22:58:19] INFO root fetch - processPackages [leadguru-common]: New version: [0.99.0] Old Version: [0.98.0]
+[2023-04-07 22:58:19] INFO root fetch - processPackages [leadguru-data]: New version: [0.99.0] Old Version: [0.98.0]
+[2023-04-07 22:58:19] INFO root fetch - processPackages [tokenizer-viz]: Downloading https://files.pythonhosted.org/packages/8e/b0/1ac1e14670ce3cbb285ef97ed2b83273d7750abe09d6954a289970d23aaa/tokenizer-viz-0.1.2.tar.gz
+[2023-04-07 22:58:19] INFO root fetch - processPackages [fabric-fim]: Downloading https://files.pythonhosted.org/packages/14/a4/fc81351431edc8101612b3a088ef52faba726295ab92bb8ce9e1e337c977/fabric_fim-1.4.6.tar.gz
+[2023-04-07 22:58:19] INFO root fetch - processPackages [leadguru-common]: Downloading https://files.pythonhosted.org/packages/fc/35/ca8dc82028975cbcb02faead26153071461e5c78a03fb67e0f27256aee8d/leadguru_common-0.98.0.tar.gz
+[2023-04-07 22:58:19] INFO root fetch - processPackages [leadguru-data]: Downloading https://files.pythonhosted.org/packages/81/bf/f4c758210f3132ad36cea5286e4857350dc02f38ded759934614da96bd78/leadguru_data-0.98.0.tar.gz
+[2023-04-07 22:58:19] INFO root fetch - processPackages [ipywidgets-gallery]: Downloading https://files.pythonhosted.org/packages/27/02/644824e5d18791a2a78e6d44bdd42d5bebca7dd08ddf3d4daf5a166ecdea/ipywidgets_gallery-0.17.tar.gz
+[2023-04-07 22:58:19] INFO root fetch - processPackages [tokenizer-viz]: executing diffoscope
+[2023-04-07 22:58:19] INFO root fetch - processPackages [tokenizer-viz]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/tokenizer-viz-0.1.1.tar.gz tmp/tokenizer-viz-0.1.2.tar.gz --markdown 20230407/t/tokenizer-viz/0.1.1-0.1.2/diff.md
+[2023-04-07 22:58:19] INFO root fetch - processPackages [fabric-fim]: Downloading https://files.pythonhosted.org/packages/57/e5/312c822833aec6046481b678820e77286fdbc5e4bd4470922c97856da3cc/fabric_fim-1.4.7.tar.gz
+[2023-04-07 22:58:19] INFO root fetch - processPackages [ipywidgets-gallery]: executing diffoscope
+[2023-04-07 22:58:19] INFO root fetch - processPackages [ipywidgets-gallery]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ipywidgets_gallery-0.16.tar.gz tmp/ipywidgets_gallery-0.17.tar.gz --markdown 20230407/i/ipywidgets-gallery/0.16-0.17/diff.md
+[2023-04-07 22:58:19] INFO root fetch - processPackages [leadguru-common]: Downloading https://files.pythonhosted.org/packages/4e/4f/236c71729e1b70c3c5c202003cf9aa48c1c9b9d202620f8c5e94a7aacdc9/leadguru_common-0.99.0.tar.gz
+[2023-04-07 22:58:19] INFO root fetch - processPackages [leadguru-data]: Downloading https://files.pythonhosted.org/packages/16/1c/017bcd8f49a9ceed0d36796e84f43cefd77b1a273b4b9807a222b85cb578/leadguru_data-0.99.0.tar.gz
+[2023-04-07 22:58:19] INFO root fetch - processPackages [leadguru-common]: executing diffoscope
+[2023-04-07 22:58:19] INFO root fetch - processPackages [leadguru-common]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/leadguru_common-0.98.0.tar.gz tmp/leadguru_common-0.99.0.tar.gz --markdown 20230407/l/leadguru-common/0.98.0-0.99.0/diff.md
+[2023-04-07 22:58:20] INFO root fetch - processPackages [leadguru-data]: executing diffoscope
+[2023-04-07 22:58:20] INFO root fetch - processPackages [leadguru-data]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/leadguru_data-0.98.0.tar.gz tmp/leadguru_data-0.99.0.tar.gz --markdown 20230407/l/leadguru-data/0.98.0-0.99.0/diff.md
+[2023-04-07 22:58:20] INFO root fetch - processPackages [fabric-fim]: executing diffoscope
+[2023-04-07 22:58:20] INFO root fetch - processPackages [fabric-fim]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/fabric_fim-1.4.6.tar.gz tmp/fabric_fim-1.4.7.tar.gz --markdown 20230407/f/fabric-fim/1.4.6-1.4.7/diff.md
+[2023-04-07 22:58:20] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:20] INFO root fetch - processPackages [inviz]: New version: [0.0.4] Old Version: [0.0.3]
+[2023-04-07 22:58:20] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:20] INFO root fetch - processPackages [gcloudy]: New version: [1.4.0] Old Version: [1.3.0]
+[2023-04-07 22:58:20] INFO root fetch - processPackages [inviz]: Downloading https://files.pythonhosted.org/packages/32/af/13298804c503d1a9ace07d0096d3a77fbda707acd824988c5845b2c63540/inviz-0.0.3.tar.gz
+[2023-04-07 22:58:20] INFO root fetch - processPackages [gcloudy]: Downloading https://files.pythonhosted.org/packages/78/e8/11f55ad2e801a201f9ee40104765dc142603c910140443adfadfc643a741/gcloudy-1.3.0.tar.gz
+[2023-04-07 22:58:20] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:21] INFO root fetch - processPackages [tmu]: New version: [0.7.9] Old Version: [0.7.1]
+[2023-04-07 22:58:21] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:21] INFO root fetch - processPackages [mcon]: New version: [0.0.7] Old Version: [0.0.6]
+[2023-04-07 22:58:21] INFO root fetch - processPackages [inviz]: Downloading https://files.pythonhosted.org/packages/f7/c2/5bd061d22a5db3f3d0619d5c060913fe6899767f8a88093b8d18adf9d5f8/inviz-0.0.4.tar.gz
+[2023-04-07 22:58:21] INFO root fetch - processPackages [tmu]: Downloading https://files.pythonhosted.org/packages/e9/eb/954974f0a88afad396d3426da7498ccba35f2b34abed1d16daa8f9017da2/tmu-0.7.1.tar.gz
+[2023-04-07 22:58:21] INFO root fetch - processPackages [inviz]: executing diffoscope
+[2023-04-07 22:58:21] INFO root fetch - processPackages [inviz]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/inviz-0.0.3.tar.gz tmp/inviz-0.0.4.tar.gz --markdown 20230407/i/inviz/0.0.3-0.0.4/diff.md
+[2023-04-07 22:58:21] INFO root fetch - processPackages [mcon]: Downloading https://files.pythonhosted.org/packages/a9/10/3ef3d4b40a1e0eff73a1094be61896e8acb057489d9b376fce9b2d3754f0/mcon-0.0.6.tar.gz
+[2023-04-07 22:58:21] INFO root fetch - processPackages [gcloudy]: Downloading https://files.pythonhosted.org/packages/23/d1/b714513928a54ab78d3e9cfe7185d89a6d3f281666bf813e6405abf0ffc9/gcloudy-1.4.0.tar.gz
+[2023-04-07 22:58:21] INFO root fetch - processPackages [gcloudy]: executing diffoscope
+[2023-04-07 22:58:21] INFO root fetch - processPackages [gcloudy]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/gcloudy-1.3.0.tar.gz tmp/gcloudy-1.4.0.tar.gz --markdown 20230407/g/gcloudy/1.3.0-1.4.0/diff.md
+[2023-04-07 22:58:21] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:21] WARNING root fetch - processPackages [zmung]: Skipping, unable to determine old version
+[2023-04-07 22:58:21] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:58:21] INFO root fetch - processPackages [tmu]: Downloading https://files.pythonhosted.org/packages/42/c1/e6ac12b94b8db842c1095ce1b2a0be3e3c1f9eb52c13fb82aac8b3add1f8/tmu-0.7.9-pp39-pypy39_pp73-win_amd64.whl
+[2023-04-07 22:58:21] INFO root fetch - processPackages [cli-sandbox]: New version: [0.2.9] Old Version: [0.2.8]
+[2023-04-07 22:58:21] INFO root fetch - processPackages [tmu]: executing diffoscope
+[2023-04-07 22:58:21] INFO root fetch - processPackages [tmu]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/tmu-0.7.1.tar.gz tmp/tmu-0.7.9-pp39-pypy39_pp73-win_amd64.whl.zip --markdown 20230407/t/tmu/0.7.1-0.7.9/diff.md
+[2023-04-07 22:58:21] INFO root fetch - processPackages [mcon]: Downloading https://files.pythonhosted.org/packages/cb/df/39af2e16114f1a51770e90eed5626036947529fbbd381339ffec3c52a2a6/mcon-0.0.7.tar.gz
+[2023-04-07 22:58:21] INFO root fetch - processPackages [cli-sandbox]: executing diffoscope
+[2023-04-07 22:58:21] INFO root fetch - processPackages [cli-sandbox]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/cli-sandbox-0.2.8.tar.gz tmp/cli-sandbox-0.2.9.tar.gz --markdown 20230407/c/cli-sandbox/0.2.8-0.2.9/diff.md
+[2023-04-07 22:58:21] INFO root fetch - processPackages [mcon]: executing diffoscope
+[2023-04-07 22:58:21] INFO root fetch - processPackages [mcon]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/mcon-0.0.6.tar.gz tmp/mcon-0.0.7.tar.gz --markdown 20230407/m/mcon/0.0.6-0.0.7/diff.md
+[2023-04-07 22:58:22] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:22] INFO root fetch - processPackages [edwh]: New version: [0.2.1] Old Version: [0.2.0]
+[2023-04-07 22:58:22] INFO root fetch - processPackages [edwh]: Downloading https://files.pythonhosted.org/packages/c6/46/c7d486593357d752833c92dd1ac9a9c443a07096c2700a7f4d476ee712de/edwh-0.2.1.tar.gz
+[2023-04-07 22:58:22] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:22] INFO root fetch - processPackages [ovos-bus-client]: New version: [0.0.3a9] Old Version: [0.0.3a8]
+[2023-04-07 22:58:22] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:22] INFO root fetch - processPackages [dockyard-cli]: New version: [0.1.9] Old Version: [0.1.8]
+[2023-04-07 22:58:22] INFO root fetch - processPackages [edwh]: executing diffoscope
+[2023-04-07 22:58:22] INFO root fetch - processPackages [edwh]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/edwh-0.2.0.tar.gz tmp/edwh-0.2.1.tar.gz --markdown 20230407/e/edwh/0.2.0-0.2.1/diff.md
+[2023-04-07 22:58:22] INFO root fetch - processPackages [dockyard-cli]: executing diffoscope
+[2023-04-07 22:58:22] INFO root fetch - processPackages [dockyard-cli]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/dockyard_cli-0.1.8.tar.gz tmp/dockyard_cli-0.1.9.tar.gz --markdown 20230407/d/dockyard-cli/0.1.8-0.1.9/diff.md
+[2023-04-07 22:58:22] INFO root fetch - processPackages [ovos-bus-client]: Downloading https://files.pythonhosted.org/packages/fc/c4/138027c1325f8e162e21f5737009a3e373d081d67bb21b49942eaa435903/ovos_bus_client-0.0.3a8-py3-none-any.whl
+[2023-04-07 22:58:22] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:22] INFO root fetch - processPackages [startstop]: New version: [1.0.2] Old Version: [1.0.1]
+[2023-04-07 22:58:23] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:23] INFO root fetch - processPackages [datalad-metalad]: New version: [0.4.9] Old Version: [0.4.7]
+[2023-04-07 22:58:23] INFO root fetch - processPackages [startstop]: Downloading https://files.pythonhosted.org/packages/20/7a/9452bba970d74da20de2b3095c4d0f29de3d2af47deb46aec507d41f23e1/startstop-1.0.1.tar.gz
+[2023-04-07 22:58:23] INFO root fetch - processPackages [ovos-bus-client]: Downloading https://files.pythonhosted.org/packages/bf/83/b95833c225e72a471bc93cdf6b23535e84809c54776e7deb8c2a93ebf9e3/ovos_bus_client-0.0.3a9-py3-none-any.whl
+[2023-04-07 22:58:23] INFO root fetch - processPackages [datalad-metalad]: Downloading https://files.pythonhosted.org/packages/25/fe/51b52d78c24412d845e644f0dd3b0ffec7fa556a8c548146ebbc78b884b2/datalad_metalad-0.4.7.tar.gz
+[2023-04-07 22:58:23] INFO root fetch - processPackages [ovos-bus-client]: executing diffoscope
+[2023-04-07 22:58:23] INFO root fetch - processPackages [ovos-bus-client]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ovos_bus_client-0.0.3a8-py3-none-any.whl.zip tmp/ovos_bus_client-0.0.3a9-py3-none-any.whl.zip --markdown 20230407/o/ovos-bus-client/0.0.3a8-0.0.3a9/diff.md
+[2023-04-07 22:58:23] INFO root fetch - processPackages [startstop]: Downloading https://files.pythonhosted.org/packages/af/2a/ebd1be1a5211aded8ad3e39e8d6776ca8b0a72b99edd838a93df77aeb625/startstop-1.0.2.tar.gz
+[2023-04-07 22:58:23] INFO root fetch - processPackages [startstop]: executing diffoscope
+[2023-04-07 22:58:23] INFO root fetch - processPackages [startstop]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/startstop-1.0.1.tar.gz tmp/startstop-1.0.2.tar.gz --markdown 20230407/s/startstop/1.0.1-1.0.2/diff.md
+[2023-04-07 22:58:23] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:23] INFO root fetch - processPackages [hat-gateway]: New version: [0.5.9] Old Version: [0.5.8]
+[2023-04-07 22:58:23] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:23] INFO root fetch - processPackages [forml]: New version: [0.91] Old Version: [0.9]
+[2023-04-07 22:58:23] INFO root fetch - processPackages [hat-gateway]: Downloading https://files.pythonhosted.org/packages/9d/19/055e42a362a5198fe0f58c25a462e79a2bf4455d8bd5af99d4df19ce93ba/hat_gateway-0.5.8-cp38.cp39-none-any.whl
+[2023-04-07 22:58:23] INFO root fetch - processPackages [forml]: Downloading https://files.pythonhosted.org/packages/9e/aa/bed1d1968e03bae872277b1b0ca7f1a72c3e56ba5da56d9b20d323eb3aa4/forml-0.9-py3-none-any.whl
+[2023-04-07 22:58:24] INFO root fetch - processPackages [datalad-metalad]: Downloading https://files.pythonhosted.org/packages/fd/5c/e57b297f8ed8c8080e85c50149bcc7d093a801956a1b23802161b7858a05/datalad_metalad-0.4.9.tar.gz
+[2023-04-07 22:58:24] INFO root fetch - processPackages [hat-gateway]: Downloading https://files.pythonhosted.org/packages/39/8b/cbbd9b7227ad66c20545a3d975c305af731f51d30649d57a2ebe8b498f89/hat_gateway-0.5.9-cp38.cp39-none-any.whl
+[2023-04-07 22:58:24] INFO root fetch - processPackages [datalad-metalad]: executing diffoscope
+[2023-04-07 22:58:24] INFO root fetch - processPackages [datalad-metalad]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/datalad_metalad-0.4.7.tar.gz tmp/datalad_metalad-0.4.9.tar.gz --markdown 20230407/d/datalad-metalad/0.4.7-0.4.9/diff.md
+[2023-04-07 22:58:24] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:24] INFO root fetch - processPackages [zxkane.cdk-construct-simple-nat]: New version: [0.2.99] Old Version: [0.2.98]
+[2023-04-07 22:58:24] INFO root fetch - processPackages [hat-gateway]: executing diffoscope
+[2023-04-07 22:58:24] INFO root fetch - processPackages [hat-gateway]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/hat_gateway-0.5.8-cp38.cp39-none-any.whl.zip tmp/hat_gateway-0.5.9-cp38.cp39-none-any.whl.zip --markdown 20230407/h/hat-gateway/0.5.8-0.5.9/diff.md
+[2023-04-07 22:58:24] INFO root fetch - processPackages [forml]: Downloading https://files.pythonhosted.org/packages/ec/bc/5b195fa85ea3bcac5496bb2398a86999913549c4f045e4a7be5d5a7e60f6/forml-0.91-py3-none-any.whl
+[2023-04-07 22:58:24] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:24] INFO root fetch - processPackages [yaml-scripts]: New version: [0.1.1.post0] Old Version: [0.1.1]
+[2023-04-07 22:58:24] INFO root fetch - processPackages [forml]: executing diffoscope
+[2023-04-07 22:58:24] INFO root fetch - processPackages [forml]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/forml-0.9-py3-none-any.whl.zip tmp/forml-0.91-py3-none-any.whl.zip --markdown 20230407/f/forml/0.9-0.91/diff.md
+[2023-04-07 22:58:24] INFO root fetch - processPackages [zxkane.cdk-construct-simple-nat]: Downloading https://files.pythonhosted.org/packages/8e/42/0a609d15782dbbbc9ed11adae4b6947cb95d90050b2993420f854023f40d/zxkane.cdk-construct-simple-nat-0.2.98.tar.gz
+[2023-04-07 22:58:24] INFO root fetch - processPackages [yaml-scripts]: Downloading https://files.pythonhosted.org/packages/91/9d/25e713380f875dcfd07a4dc34207b0ae66264df9f4b801c1aedfb2567ecd/yaml_scripts-0.1.1.tar.gz
+[2023-04-07 22:58:25] INFO root fetch - processPackages [yaml-scripts]: Downloading https://files.pythonhosted.org/packages/b9/c5/fbcf0ecd03f77afdcc635cb85967b24cd95967aef44c1568253549a33922/yaml_scripts-0.1.1.post0.tar.gz
+[2023-04-07 22:58:25] INFO root fetch - processPackages [yaml-scripts]: executing diffoscope
+[2023-04-07 22:58:25] INFO root fetch - processPackages [yaml-scripts]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/yaml_scripts-0.1.1.tar.gz tmp/yaml_scripts-0.1.1.post0.tar.gz --markdown 20230407/y/yaml-scripts/0.1.1-0.1.1.post0/diff.md
+[2023-04-07 22:58:25] INFO root fetch - processPackages [zxkane.cdk-construct-simple-nat]: Downloading https://files.pythonhosted.org/packages/b9/f8/6046aa2afc88718422d134f2f5818c383b5e88aa849c8a4d74a3c1bf370e/zxkane.cdk-construct-simple-nat-0.2.99.tar.gz
+[2023-04-07 22:58:25] INFO root fetch - processPackages [zxkane.cdk-construct-simple-nat]: executing diffoscope
+[2023-04-07 22:58:25] INFO root fetch - processPackages [zxkane.cdk-construct-simple-nat]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/zxkane.cdk-construct-simple-nat-0.2.98.tar.gz tmp/zxkane.cdk-construct-simple-nat-0.2.99.tar.gz --markdown 20230407/z/zxkane.cdk-construct-simple-nat/0.2.98-0.2.99/diff.md
+[2023-04-07 22:58:25] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:25] WARNING root fetch - processPackages [jaxrie]: Skipping, unable to determine old version
+[2023-04-07 22:58:25] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:58:25] INFO root fetch - processPackages [hatch-msgfmt]: New version: [1.1.6] Old Version: [1.1.5]
+[2023-04-07 22:58:25] INFO root fetch - processPackages [hatch-msgfmt]: Downloading https://files.pythonhosted.org/packages/41/b6/bd45edd72664e5d699761f4aee5c04e5469cfcf836eb189ec246d24d570f/hatch-msgfmt-1.1.5.tar.gz
+[2023-04-07 22:58:25] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:25] INFO root fetch - processPackages [ekonlpy]: New version: [1.1.3] Old Version: [1.1.1]
+[2023-04-07 22:58:25] INFO root fetch - processPackages [hatch-msgfmt]: Downloading https://files.pythonhosted.org/packages/6b/9b/c6019e612449a0c8da5b896d942894a8dafdad32587e46487842925432d9/hatch-msgfmt-1.1.6.tar.gz
+[2023-04-07 22:58:25] INFO root fetch - processPackages [ekonlpy]: Downloading https://files.pythonhosted.org/packages/d1/c3/b22cb0c73e2d8fdd28a952dad99ea8c9c65f556b07fe875c4104450c3b60/ekonlpy-1.1.1.tar.gz
+[2023-04-07 22:58:25] INFO root fetch - processPackages [hatch-msgfmt]: executing diffoscope
+[2023-04-07 22:58:25] INFO root fetch - processPackages [hatch-msgfmt]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/hatch-msgfmt-1.1.5.tar.gz tmp/hatch-msgfmt-1.1.6.tar.gz --markdown 20230407/h/hatch-msgfmt/1.1.5-1.1.6/diff.md
+[2023-04-07 22:58:26] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:26] INFO root fetch - processPackages [interval-sdk]: New version: [1.0.2] Old Version: [1.0.1]
+[2023-04-07 22:58:26] INFO root fetch - processPackages [ekonlpy]: Downloading https://files.pythonhosted.org/packages/6f/b0/f6ad34903f10a1d8368efa5a91303c313c64e7164f6cece93beb1983661a/ekonlpy-1.1.3.tar.gz
+[2023-04-07 22:58:26] INFO root fetch - processPackages [interval-sdk]: Downloading https://files.pythonhosted.org/packages/b4/5d/7a1c2368e845b71cc05f0982e91267cf45f01adaaf62e9bb84ee26ab71b4/interval_sdk-1.0.1.tar.gz
+[2023-04-07 22:58:26] INFO root fetch - processPackages [ekonlpy]: executing diffoscope
+[2023-04-07 22:58:26] INFO root fetch - processPackages [ekonlpy]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ekonlpy-1.1.1.tar.gz tmp/ekonlpy-1.1.3.tar.gz --markdown 20230407/e/ekonlpy/1.1.1-1.1.3/diff.md
+[2023-04-07 22:58:26] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:26] INFO root fetch - processPackages [inviz]: New version: [0.0.4] Old Version: [0.0.3]
+[2023-04-07 22:58:26] INFO root fetch - processPackages [inviz]: executing diffoscope
+[2023-04-07 22:58:26] INFO root fetch - processPackages [inviz]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/inviz-0.0.3.tar.gz tmp/inviz-0.0.4.tar.gz --markdown 20230407/i/inviz/0.0.3-0.0.4/diff.md
+[2023-04-07 22:58:26] INFO root fetch - processPackages [interval-sdk]: Downloading https://files.pythonhosted.org/packages/8e/68/86b055d3ebd7ab11ce74f2cd544251b49bdb7b9d23494d6fb1eaea4469fa/interval_sdk-1.0.2.tar.gz
+[2023-04-07 22:58:26] INFO root fetch - processPackages [interval-sdk]: executing diffoscope
+[2023-04-07 22:58:26] INFO root fetch - processPackages [interval-sdk]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/interval_sdk-1.0.1.tar.gz tmp/interval_sdk-1.0.2.tar.gz --markdown 20230407/i/interval-sdk/1.0.1-1.0.2/diff.md
+[2023-04-07 22:58:26] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:26] INFO root fetch - processPackages [fugle-realtime]: New version: [0.4.2] Old Version: [0.4.1]
+[2023-04-07 22:58:27] INFO root fetch - processPackages [fugle-realtime]: Downloading https://files.pythonhosted.org/packages/d1/c3/be88dd9966be7b4c51e5579fb6711d2747aaa58f1629124727389d21556a/fugle-realtime-0.4.1.tar.gz
+[2023-04-07 22:58:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:27] INFO root fetch - processPackages [yaml-scripts]: New version: [0.1.1.post1] Old Version: [0.1.1.post0]
+[2023-04-07 22:58:27] INFO root fetch - processPackages [yaml-scripts]: Downloading https://files.pythonhosted.org/packages/11/95/a9fe1cd869a29a021bca83ba1250eb440e6f9c14525b55566d1f16044a21/yaml_scripts-0.1.1.post1.tar.gz
+[2023-04-07 22:58:27] INFO root fetch - processPackages [fugle-realtime]: Downloading https://files.pythonhosted.org/packages/57/ae/31d5acb88bf90c5ef5d2c5a0a444eedf4186d29261a5a8bbe8f736a73b89/fugle-realtime-0.4.2.tar.gz
+[2023-04-07 22:58:27] INFO root fetch - processPackages [fugle-realtime]: executing diffoscope
+[2023-04-07 22:58:27] INFO root fetch - processPackages [fugle-realtime]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/fugle-realtime-0.4.1.tar.gz tmp/fugle-realtime-0.4.2.tar.gz --markdown 20230407/f/fugle-realtime/0.4.1-0.4.2/diff.md
+[2023-04-07 22:58:27] INFO root fetch - processPackages [yaml-scripts]: executing diffoscope
+[2023-04-07 22:58:27] INFO root fetch - processPackages [yaml-scripts]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/yaml_scripts-0.1.1.post0.tar.gz tmp/yaml_scripts-0.1.1.post1.tar.gz --markdown 20230407/y/yaml-scripts/0.1.1.post0-0.1.1.post1/diff.md
+[2023-04-07 22:58:27] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:27] WARNING root fetch - processPackages [allencell-ml-segmenter]: Skipping, unable to determine old version
+[2023-04-07 22:58:27] INFO root fetch - main [MainThread]: error
+[2023-04-07 22:58:28] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:28] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:28] INFO root fetch - main [MainThread]: success
+[2023-04-07 22:58:29] INFO root fetch - main [MainThread]: success
