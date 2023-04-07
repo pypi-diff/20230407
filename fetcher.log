@@ -4664,3 +4664,112 @@
 [2023-04-07 23:08:48] INFO root fetch - main [MainThread]: success
 [2023-04-07 23:08:48] WARNING root fetch - processPackages [meshlib]: Skipping package: exceeds size limit 14353316>=10485760
 [2023-04-07 23:08:48] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:18:52] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17623327]
+[2023-04-07 23:18:57] INFO root fetch - main [MainThread]: Found 22 changed packages
+[2023-04-07 23:18:57] INFO root fetch - processPackages [persian-names]: New version: [1.3.7] Old Version: [1.3.6]
+[2023-04-07 23:18:57] INFO root fetch - processPackages [whatsapp-python]: New version: [1.0.2] Old Version: [1.0.1]
+[2023-04-07 23:18:57] INFO root fetch - processPackages [submit-cgap]: New version: [3.1.0.1b2] Old Version: [3.1.0.1b1]
+[2023-04-07 23:18:57] INFO root fetch - processPackages [openschema]: New version: [0.6.dev1] Old Version: [0.5.dev1]
+[2023-04-07 23:18:57] INFO root fetch - processPackages [startstop]: New version: [1.0.4] Old Version: [1.0.3]
+[2023-04-07 23:18:57] INFO root fetch - processPackages [persian-names]: Downloading https://files.pythonhosted.org/packages/c0/9d/4383fd4712cb8288e17b7fec274d2a7d316b60b0698906c5aec577c300e3/persian-names-1.3.6.tar.gz
+[2023-04-07 23:18:57] INFO root fetch - processPackages [submit-cgap]: Downloading https://files.pythonhosted.org/packages/7c/5e/097b7e8916a514f678cae01223e097dda8d8902fa1ce68053927e7c86af8/submit_cgap-3.1.0.1b1.tar.gz
+[2023-04-07 23:18:57] INFO root fetch - processPackages [whatsapp-python]: Downloading https://files.pythonhosted.org/packages/14/ac/205c1e7a31d4db4e6c2d3aabd5b7dafbf104871dcd8f3ce7be451f1fbc1f/whatsapp-python-1.0.2.tar.gz
+[2023-04-07 23:18:58] INFO root fetch - processPackages [startstop]: Downloading https://files.pythonhosted.org/packages/e4/0c/5eb575f1eaf6031be312ee5df984b4aedfc83bed5d35f65305ed419d0f40/startstop-1.0.4.tar.gz
+[2023-04-07 23:18:58] INFO root fetch - processPackages [openschema]: Downloading https://files.pythonhosted.org/packages/e6/29/d16edc4a006abf01a8a99c190180627e1ed19258324febbe97d4bfee13b8/openschema-0.5.dev1-py3-none-any.whl
+[2023-04-07 23:18:58] INFO root fetch - processPackages [persian-names]: Downloading https://files.pythonhosted.org/packages/eb/90/9b22275354557eaa0a242f59ff31ede05e03dc59468e1979958392fe9cbe/persian-names-1.3.7.tar.gz
+[2023-04-07 23:18:58] INFO root fetch - processPackages [submit-cgap]: Downloading https://files.pythonhosted.org/packages/51/4a/66d6942ae2e5ec48962098d0d510c0d73a03cb7f1e8297fd41854fb7e711/submit_cgap-3.1.0.1b2.tar.gz
+[2023-04-07 23:18:58] INFO root fetch - processPackages [whatsapp-python]: executing diffoscope
+[2023-04-07 23:18:58] INFO root fetch - processPackages [whatsapp-python]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/whatsapp-python-1.0.1.tar.gz tmp/whatsapp-python-1.0.2.tar.gz --markdown 20230407/w/whatsapp-python/1.0.1-1.0.2/diff.md
+[2023-04-07 23:18:58] INFO root fetch - processPackages [startstop]: executing diffoscope
+[2023-04-07 23:18:58] INFO root fetch - processPackages [startstop]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/startstop-1.0.3.tar.gz tmp/startstop-1.0.4.tar.gz --markdown 20230407/s/startstop/1.0.3-1.0.4/diff.md
+[2023-04-07 23:18:58] INFO root fetch - processPackages [openschema]: Downloading https://files.pythonhosted.org/packages/bb/14/d593786b07abbe13a845cac23c5754a8132b1d8b3d75248f3803979a6e96/openschema-0.6.dev1-py3-none-any.whl
+[2023-04-07 23:18:58] INFO root fetch - processPackages [persian-names]: executing diffoscope
+[2023-04-07 23:18:58] INFO root fetch - processPackages [persian-names]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/persian-names-1.3.6.tar.gz tmp/persian-names-1.3.7.tar.gz --markdown 20230407/p/persian-names/1.3.6-1.3.7/diff.md
+[2023-04-07 23:18:58] INFO root fetch - processPackages [submit-cgap]: executing diffoscope
+[2023-04-07 23:18:58] INFO root fetch - processPackages [submit-cgap]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/submit_cgap-3.1.0.1b1.tar.gz tmp/submit_cgap-3.1.0.1b2.tar.gz --markdown 20230407/s/submit-cgap/3.1.0.1b1-3.1.0.1b2/diff.md
+[2023-04-07 23:18:58] INFO root fetch - processPackages [openschema]: executing diffoscope
+[2023-04-07 23:18:58] INFO root fetch - processPackages [openschema]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/openschema-0.5.dev1-py3-none-any.whl.zip tmp/openschema-0.6.dev1-py3-none-any.whl.zip --markdown 20230407/o/openschema/0.5.dev1-0.6.dev1/diff.md
+[2023-04-07 23:18:59] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:18:59] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:18:59] WARNING root fetch - processPackages [zimran-events]: Skipping, unable to determine old version
+[2023-04-07 23:18:59] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:18:59] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:18:59] INFO root fetch - processPackages [microkanren]: New version: [0.2.0] Old Version: [0.1.0]
+[2023-04-07 23:18:59] INFO root fetch - processPackages [codenames]: New version: [1.2.5] Old Version: [1.2.4]
+[2023-04-07 23:18:59] INFO root fetch - processPackages [django-moncash]: New version: [1.1.2] Old Version: [1.1.0]
+[2023-04-07 23:18:59] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:18:59] INFO root fetch - processPackages [microkanren]: Downloading https://files.pythonhosted.org/packages/56/8d/c426f528ce0a9cd0bf5bd2acf4d8d3cbca43fd935a1dd27ad4b8894e0ef9/microkanren-0.1.0.tar.gz
+[2023-04-07 23:18:59] INFO root fetch - processPackages [openlake]: New version: [0.5.dev1] Old Version: [0.4.dev1]
+[2023-04-07 23:18:59] INFO root fetch - processPackages [django-moncash]: Downloading https://files.pythonhosted.org/packages/d4/e0/93a4303d83ed8e2a2e66c9c3f3c546bebe2cad2a057cf3237b846f7fe4bd/django_moncash-1.1.0.tar.gz
+[2023-04-07 23:18:59] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:18:59] INFO root fetch - processPackages [codenames]: Downloading https://files.pythonhosted.org/packages/12/11/a5e8e0af7a71ce1bbd956094988cde00b8177d0e38462d6a7f8d15db6e8c/codenames-1.2.5.tar.gz
+[2023-04-07 23:18:59] WARNING root fetch - processPackages [defiswaphelper]: Skipping, unable to determine old version
+[2023-04-07 23:18:59] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:18:59] INFO root fetch - processPackages [openlake]: Downloading https://files.pythonhosted.org/packages/ba/cb/e06977b2d4325398f8e0fac74f77f4660dedf3427e2c6219074bb02caaad/openlake-0.4.dev1-py3-none-any.whl
+[2023-04-07 23:18:59] INFO root fetch - processPackages [microkanren]: Downloading https://files.pythonhosted.org/packages/ad/bb/3f2092082e618647745cad3c63cbae6ebddd566df688a7b2b4c2603817d9/microkanren-0.2.0.tar.gz
+[2023-04-07 23:19:00] WARNING root fetch - processPackages [pandaspg]: Skipping, unable to determine old version
+[2023-04-07 23:19:00] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:19:00] INFO root fetch - processPackages [allencell-ml-segmenter]: New version: [0.0.6] Old Version: [0.0.5]
+[2023-04-07 23:19:00] INFO root fetch - processPackages [django-moncash]: Downloading https://files.pythonhosted.org/packages/6c/16/13601931c38093a436de678842451c134a91dba5fbc7fcf9c7bb88fec689/django_moncash-1.1.2.tar.gz
+[2023-04-07 23:19:00] INFO root fetch - processPackages [allencell-ml-segmenter]: executing diffoscope
+[2023-04-07 23:19:00] INFO root fetch - processPackages [allencell-ml-segmenter]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/allencell-ml-segmenter-0.0.5.tar.gz tmp/allencell-ml-segmenter-0.0.6.tar.gz --markdown 20230407/a/allencell-ml-segmenter/0.0.5-0.0.6/diff.md
+[2023-04-07 23:19:00] INFO root fetch - processPackages [codenames]: executing diffoscope
+[2023-04-07 23:19:00] INFO root fetch - processPackages [codenames]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/codenames-1.2.4.tar.gz tmp/codenames-1.2.5.tar.gz --markdown 20230407/c/codenames/1.2.4-1.2.5/diff.md
+[2023-04-07 23:19:00] INFO root fetch - processPackages [openlake]: Downloading https://files.pythonhosted.org/packages/1e/f2/e29b7cecea3f5f655fb1dde9c5f5c1eec0b8a51483be6f8d1e636ee68964/openlake-0.5.dev1-py3-none-any.whl
+[2023-04-07 23:19:00] INFO root fetch - processPackages [microkanren]: executing diffoscope
+[2023-04-07 23:19:00] INFO root fetch - processPackages [microkanren]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/microkanren-0.1.0.tar.gz tmp/microkanren-0.2.0.tar.gz --markdown 20230407/m/microkanren/0.1.0-0.2.0/diff.md
+[2023-04-07 23:19:00] INFO root fetch - processPackages [django-moncash]: executing diffoscope
+[2023-04-07 23:19:00] INFO root fetch - processPackages [django-moncash]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/django_moncash-1.1.0.tar.gz tmp/django_moncash-1.1.2.tar.gz --markdown 20230407/d/django-moncash/1.1.0-1.1.2/diff.md
+[2023-04-07 23:19:00] INFO root fetch - processPackages [openlake]: executing diffoscope
+[2023-04-07 23:19:00] INFO root fetch - processPackages [openlake]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/openlake-0.4.dev1-py3-none-any.whl.zip tmp/openlake-0.5.dev1-py3-none-any.whl.zip --markdown 20230407/o/openlake/0.4.dev1-0.5.dev1/diff.md
+[2023-04-07 23:19:01] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:01] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:01] INFO root fetch - processPackages [marshmallow_api_utils]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 23:19:01] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:01] INFO root fetch - processPackages [pycep-parser]: New version: [0.3.9a3] Old Version: [0.3.9a2]
+[2023-04-07 23:19:01] INFO root fetch - processPackages [marshmallow_api_utils]: Downloading https://files.pythonhosted.org/packages/6b/b1/93743be9305c8b9a0a652b5c6dce54af2a47e00293abc509900d83370f4a/marshmallow_api_utils-0.1.0.tar.gz
+[2023-04-07 23:19:01] WARNING root fetch - processPackages [hf4q]: Skipping, unable to determine old version
+[2023-04-07 23:19:01] INFO root fetch - main [MainThread]: error
+[2023-04-07 23:19:01] INFO root fetch - processPackages [lightbeam]: New version: [0.0.5] Old Version: [0.0.4]
+[2023-04-07 23:19:01] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:01] INFO root fetch - processPackages [django-moncash]: New version: [1.1.2] Old Version: [1.1.0]
+[2023-04-07 23:19:01] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:01] INFO root fetch - processPackages [lightbeam]: executing diffoscope
+[2023-04-07 23:19:01] INFO root fetch - processPackages [lightbeam]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/lightbeam-0.0.4-py3-none-any.whl.zip tmp/lightbeam-0.0.5-py3-none-any.whl.zip --markdown 20230407/l/lightbeam/0.0.4-0.0.5/diff.md
+[2023-04-07 23:19:01] INFO root fetch - processPackages [marshmallow_api_utils]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 23:19:01] INFO root fetch - processPackages [pycep-parser]: Downloading https://files.pythonhosted.org/packages/ee/0a/57b45cde366f2a24b448e3557fd88a587ed69b0d98fdb208abddfefaff54/pycep-parser-0.3.9a2.tar.gz
+[2023-04-07 23:19:01] INFO root fetch - processPackages [marshmallow_api_utils]: Downloading https://files.pythonhosted.org/packages/6b/b1/93743be9305c8b9a0a652b5c6dce54af2a47e00293abc509900d83370f4a/marshmallow_api_utils-0.1.0.tar.gz
+[2023-04-07 23:19:01] INFO root fetch - processPackages [django-moncash]: executing diffoscope
+[2023-04-07 23:19:01] INFO root fetch - processPackages [django-moncash]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/django_moncash-1.1.0.tar.gz tmp/django_moncash-1.1.2.tar.gz --markdown 20230407/d/django-moncash/1.1.0-1.1.2/diff.md
+[2023-04-07 23:19:01] INFO root fetch - processPackages [marshmallow_api_utils]: Downloading https://files.pythonhosted.org/packages/d0/e8/6a7d0e47fafa68958741eaeceaf3181ccb53a5ed9ddeb9a9116bb101ef87/marshmallow_api_utils-0.1.1.tar.gz
+[2023-04-07 23:19:01] INFO root fetch - processPackages [marshmallow_api_utils]: Downloading https://files.pythonhosted.org/packages/d0/e8/6a7d0e47fafa68958741eaeceaf3181ccb53a5ed9ddeb9a9116bb101ef87/marshmallow_api_utils-0.1.1.tar.gz
+[2023-04-07 23:19:02] INFO root fetch - processPackages [marshmallow_api_utils]: executing diffoscope
+[2023-04-07 23:19:02] INFO root fetch - processPackages [marshmallow_api_utils]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/marshmallow_api_utils-0.1.0.tar.gz tmp/marshmallow_api_utils-0.1.1.tar.gz --markdown 20230407/m/marshmallow_api_utils/0.1.0-0.1.1/diff.md
+[2023-04-07 23:19:02] INFO root fetch - processPackages [marshmallow_api_utils]: executing diffoscope
+[2023-04-07 23:19:02] INFO root fetch - processPackages [marshmallow_api_utils]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/marshmallow_api_utils-0.1.0.tar.gz tmp/marshmallow_api_utils-0.1.1.tar.gz --markdown 20230407/m/marshmallow_api_utils/0.1.0-0.1.1/diff.md
+[2023-04-07 23:19:02] INFO root fetch - processPackages [pycep-parser]: Downloading https://files.pythonhosted.org/packages/98/bb/2073bfc63045e4f78ff49541a2702ad631b2b95931e75fe37a49bf9e8518/pycep-parser-0.3.9a3.tar.gz
+[2023-04-07 23:19:02] INFO root fetch - processPackages [pycep-parser]: executing diffoscope
+[2023-04-07 23:19:02] INFO root fetch - processPackages [pycep-parser]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pycep-parser-0.3.9a2.tar.gz tmp/pycep-parser-0.3.9a3.tar.gz --markdown 20230407/p/pycep-parser/0.3.9a2-0.3.9a3/diff.md
+[2023-04-07 23:19:02] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:02] INFO root fetch - processPackages [badsecrets]: New version: [0.1.288] Old Version: [0.1.287]
+[2023-04-07 23:19:02] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:02] INFO root fetch - processPackages [preemo-worker-sdk]: New version: [0.3.0] Old Version: [0.2.2]
+[2023-04-07 23:19:02] INFO root fetch - processPackages [badsecrets]: Downloading https://files.pythonhosted.org/packages/3a/05/4998709e239b9913ce91845e401a96653d6b5b5229b27767f0a1addb1b3d/badsecrets-0.1.287.tar.gz
+[2023-04-07 23:19:03] INFO root fetch - processPackages [preemo-worker-sdk]: Downloading https://files.pythonhosted.org/packages/dd/a9/68e321667d3785fef223c3e7c73bb3d0f8b058ecc89cdbfaeb3296ea1fd0/preemo_worker_sdk-0.2.2.tar.gz
+[2023-04-07 23:19:03] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:03] INFO root fetch - processPackages [waterline]: New version: [0.1.5] Old Version: [0.1.4]
+[2023-04-07 23:19:03] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:03] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:03] INFO root fetch - processPackages [preemo-worker-sdk]: Downloading https://files.pythonhosted.org/packages/98/24/2cc91d8f706c3e977c843defa108e72c8bdd222ba7cf585d3d4c372a4d84/preemo_worker_sdk-0.3.0.tar.gz
+[2023-04-07 23:19:03] INFO root fetch - processPackages [waterline]: Downloading https://files.pythonhosted.org/packages/75/58/dbefac0cffbd05114f6fefa472327c0b69695c398cf2a62301397fe96b59/waterline-0.1.4-py3-none-any.whl
+[2023-04-07 23:19:03] INFO root fetch - processPackages [preemo-worker-sdk]: executing diffoscope
+[2023-04-07 23:19:03] INFO root fetch - processPackages [preemo-worker-sdk]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/preemo_worker_sdk-0.2.2.tar.gz tmp/preemo_worker_sdk-0.3.0.tar.gz --markdown 20230407/p/preemo-worker-sdk/0.2.2-0.3.0/diff.md
+[2023-04-07 23:19:03] INFO root fetch - processPackages [waterline]: Downloading https://files.pythonhosted.org/packages/c7/3f/a2e6fd7ed89841eb81c8c63dcf2222e45c6de23ce8fac8b37a281cab9cb9/waterline-0.1.5-py3-none-any.whl
+[2023-04-07 23:19:03] INFO root fetch - processPackages [badsecrets]: Downloading https://files.pythonhosted.org/packages/28/95/1ce0fbfcdabbb6ed2ed5a140f24d284fa26c07b72741a6d9fa8cd20efdc5/badsecrets-0.1.288.tar.gz
+[2023-04-07 23:19:04] INFO root fetch - processPackages [badsecrets]: executing diffoscope
+[2023-04-07 23:19:04] INFO root fetch - processPackages [badsecrets]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/badsecrets-0.1.287.tar.gz tmp/badsecrets-0.1.288.tar.gz --markdown 20230407/b/badsecrets/0.1.287-0.1.288/diff.md
+[2023-04-07 23:19:05] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:05] INFO root fetch - processPackages [waterline]: executing diffoscope
+[2023-04-07 23:19:05] INFO root fetch - processPackages [waterline]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/waterline-0.1.4-py3-none-any.whl.zip tmp/waterline-0.1.5-py3-none-any.whl.zip --markdown 20230407/w/waterline/0.1.4-0.1.5/diff.md
+[2023-04-07 23:19:06] INFO root fetch - main [MainThread]: success
+[2023-04-07 23:19:06] INFO root fetch - main [MainThread]: success
