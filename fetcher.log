@@ -2763,3 +2763,94 @@
 [2023-04-07 20:38:17] INFO root fetch - main [MainThread]: success
 [2023-04-07 20:38:17] INFO root fetch - main [MainThread]: success
 [2023-04-07 20:38:18] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:23] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17621972]
+[2023-04-07 20:48:28] INFO root fetch - main [MainThread]: Found 18 changed packages
+[2023-04-07 20:48:28] WARNING root fetch - processPackages [asciicolor]: Skipping, unable to determine old version
+[2023-04-07 20:48:28] INFO root fetch - main [MainThread]: error
+[2023-04-07 20:48:28] INFO root fetch - processPackages [dequeai]: New version: [0.682] Old Version: [0.680]
+[2023-04-07 20:48:28] INFO root fetch - processPackages [dictanykey]: New version: [0.1.0] Old Version: [0.0.5]
+[2023-04-07 20:48:28] INFO root fetch - processPackages [gmap]: New version: [1.4.7] Old Version: [1.4.6]
+[2023-04-07 20:48:28] INFO root fetch - processPackages [propan]: New version: [0.0.8.9] Old Version: [0.0.8.8]
+[2023-04-07 20:48:28] INFO root fetch - processPackages [Files.com]: New version: [1.0.99] Old Version: [1.0.98]
+[2023-04-07 20:48:29] INFO root fetch - processPackages [dictanykey]: Downloading https://files.pythonhosted.org/packages/af/4e/b2acad01fb93adaf5ebfc7acb7dc1ab924802f856d5368154e1c616f59c5/dictanykey-0.0.5.tar.gz
+[2023-04-07 20:48:29] INFO root fetch - processPackages [dequeai]: Downloading https://files.pythonhosted.org/packages/e3/c5/1b3288dea1b3704b5600aca553647a3219d75bcda9dbb64fcf8e59b5bc02/dequeai-0.680.tar.gz
+[2023-04-07 20:48:29] INFO root fetch - processPackages [Files.com]: Downloading https://files.pythonhosted.org/packages/94/53/fbdfda733dea9c814dc2617b3c6ff721e4e11d756b49b2d6dc317f00d5c3/Files.com-1.0.98.tar.gz
+[2023-04-07 20:48:29] INFO root fetch - processPackages [gmap]: Downloading https://files.pythonhosted.org/packages/9d/6c/88b1768909cfcbe904b0351e22ab3d7929eead17dd638f503cf517c07eb5/gmap-1.4.7.tar.gz
+[2023-04-07 20:48:29] INFO root fetch - processPackages [dequeai]: Downloading https://files.pythonhosted.org/packages/e2/16/ea8e5f4b97dc4348833ab8d5f61469d0b8d2610d46e1ee36a82becbe69a8/dequeai-0.682.tar.gz
+[2023-04-07 20:48:29] INFO root fetch - processPackages [propan]: executing diffoscope
+[2023-04-07 20:48:29] INFO root fetch - processPackages [propan]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/propan-0.0.8.8.tar.gz tmp/propan-0.0.8.9.tar.gz --markdown 20230407/p/propan/0.0.8.8-0.0.8.9/diff.md
+[2023-04-07 20:48:29] INFO root fetch - processPackages [dequeai]: executing diffoscope
+[2023-04-07 20:48:29] INFO root fetch - processPackages [dequeai]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/dequeai-0.680.tar.gz tmp/dequeai-0.682.tar.gz --markdown 20230407/d/dequeai/0.680-0.682/diff.md
+[2023-04-07 20:48:29] INFO root fetch - processPackages [gmap]: executing diffoscope
+[2023-04-07 20:48:29] INFO root fetch - processPackages [gmap]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/gmap-1.4.6.tar.gz tmp/gmap-1.4.7.tar.gz --markdown 20230407/g/gmap/1.4.6-1.4.7/diff.md
+[2023-04-07 20:48:29] INFO root fetch - processPackages [dictanykey]: Downloading https://files.pythonhosted.org/packages/93/ad/bd4c892aa5457a3ed7e89cb25a0e6bcefc28033684f6afa507aaffb7a80e/dictanykey-0.1.0.tar.gz
+[2023-04-07 20:48:29] INFO root fetch - processPackages [Files.com]: Downloading https://files.pythonhosted.org/packages/3b/2c/ec980b43b6c82499f9f9442e06cf2b0e489d114398d6098f2a9049a19767/Files.com-1.0.99.tar.gz
+[2023-04-07 20:48:29] INFO root fetch - processPackages [dictanykey]: executing diffoscope
+[2023-04-07 20:48:29] INFO root fetch - processPackages [dictanykey]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/dictanykey-0.0.5.tar.gz tmp/dictanykey-0.1.0.tar.gz --markdown 20230407/d/dictanykey/0.0.5-0.1.0/diff.md
+[2023-04-07 20:48:29] INFO root fetch - processPackages [Files.com]: executing diffoscope
+[2023-04-07 20:48:29] INFO root fetch - processPackages [Files.com]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/Files.com-1.0.98.tar.gz tmp/Files.com-1.0.99.tar.gz --markdown 20230407/F/Files.com/1.0.98-1.0.99/diff.md
+[2023-04-07 20:48:30] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:30] INFO root fetch - processPackages [pyaedt]: New version: [0.6.70] Old Version: [0.6.61]
+[2023-04-07 20:48:30] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:30] WARNING root fetch - processPackages [oak9.tython]: Skipping, unable to determine old version
+[2023-04-07 20:48:30] INFO root fetch - main [MainThread]: error
+[2023-04-07 20:48:30] INFO root fetch - processPackages [propan]: New version: [0.0.8.9] Old Version: [0.0.8.8]
+[2023-04-07 20:48:30] INFO root fetch - processPackages [pyaedt]: Downloading https://files.pythonhosted.org/packages/a1/6a/e4a62d15c7dffd454b7a51a120613b871bc57449ddd8f839354759a35b1b/pyaedt-0.6.61.tar.gz
+[2023-04-07 20:48:30] INFO root fetch - processPackages [propan]: executing diffoscope
+[2023-04-07 20:48:30] INFO root fetch - processPackages [propan]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/propan-0.0.8.8.tar.gz tmp/propan-0.0.8.9.tar.gz --markdown 20230407/p/propan/0.0.8.8-0.0.8.9/diff.md
+[2023-04-07 20:48:30] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:30] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:30] INFO root fetch - processPackages [data-algebra]: New version: [1.6.7] Old Version: [1.6.6]
+[2023-04-07 20:48:30] INFO root fetch - processPackages [dequeai]: New version: [0.682] Old Version: [0.680]
+[2023-04-07 20:48:30] INFO root fetch - processPackages [dequeai]: executing diffoscope
+[2023-04-07 20:48:30] INFO root fetch - processPackages [dequeai]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/dequeai-0.680.tar.gz tmp/dequeai-0.682.tar.gz --markdown 20230407/d/dequeai/0.680-0.682/diff.md
+[2023-04-07 20:48:30] INFO root fetch - processPackages [data-algebra]: Downloading https://files.pythonhosted.org/packages/a7/68/bca01f5457569c532dc7f17bcecb031400564abf646a90aef89d738107df/data_algebra-1.6.6.tar.gz
+[2023-04-07 20:48:31] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:31] INFO root fetch - processPackages [data-algebra]: Downloading https://files.pythonhosted.org/packages/75/e6/9afa3c6d6a4e4b4e4000f9d23bd3543151e5072cade6d675b8aec7965605/data_algebra-1.6.7.tar.gz
+[2023-04-07 20:48:31] INFO root fetch - processPackages [pypbar]: New version: [0.2.0] Old Version: [0.1.0]
+[2023-04-07 20:48:31] INFO root fetch - processPackages [data-algebra]: executing diffoscope
+[2023-04-07 20:48:31] INFO root fetch - processPackages [data-algebra]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/data_algebra-1.6.6.tar.gz tmp/data_algebra-1.6.7.tar.gz --markdown 20230407/d/data-algebra/1.6.6-1.6.7/diff.md
+[2023-04-07 20:48:31] INFO root fetch - processPackages [pypbar]: Downloading https://files.pythonhosted.org/packages/d4/87/4857d8fd109df18c7fccbca123e6298dc14ad592678b2aaeac4b4525a2e7/pypbar-0.1.0-py3-none-any.whl
+[2023-04-07 20:48:31] INFO root fetch - processPackages [pypbar]: Downloading https://files.pythonhosted.org/packages/28/55/bd3a5bad168b2dc4dc1784e36da224b83ae8d4e6fde6a3932e07e8424a6d/pypbar-0.2.0.tar.gz
+[2023-04-07 20:48:31] INFO root fetch - processPackages [pypbar]: executing diffoscope
+[2023-04-07 20:48:31] INFO root fetch - processPackages [pypbar]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pypbar-0.1.0-py3-none-any.whl.zip tmp/pypbar-0.2.0.tar.gz --markdown 20230407/p/pypbar/0.1.0-0.2.0/diff.md
+[2023-04-07 20:48:31] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:31] INFO root fetch - processPackages [PyroFork-dev]: New version: [2.1.4.dev202304071850] Old Version: [2.1.4.dev202304071849]
+[2023-04-07 20:48:31] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:31] INFO root fetch - processPackages [PyPDFForm]: New version: [1.2.5] Old Version: [1.2.4]
+[2023-04-07 20:48:31] INFO root fetch - processPackages [PyroFork-dev]: Downloading https://files.pythonhosted.org/packages/cc/74/82d55531ea1b7d0a238e19c3cfd0f230c11838215f3839395d7798da12df/PyroFork-dev-2.1.4.dev202304071849.tar.gz
+[2023-04-07 20:48:32] INFO root fetch - processPackages [PyPDFForm]: Downloading https://files.pythonhosted.org/packages/bd/db/4e387e65f2318520455cffad5943939a2a9da80fd142b081782814e6fc75/PyPDFForm-1.2.4.tar.gz
+[2023-04-07 20:48:32] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:32] INFO root fetch - processPackages [PyroFork-dev]: New version: [2.1.4.dev202304071850] Old Version: [2.1.4.dev202304071849]
+[2023-04-07 20:48:32] INFO root fetch - processPackages [PyroFork-dev]: Downloading https://files.pythonhosted.org/packages/cc/74/82d55531ea1b7d0a238e19c3cfd0f230c11838215f3839395d7798da12df/PyroFork-dev-2.1.4.dev202304071849.tar.gz
+[2023-04-07 20:48:32] INFO root fetch - processPackages [PyPDFForm]: Downloading https://files.pythonhosted.org/packages/1e/55/f935d92bbc4e3590502242d8d12fdf289170f99a21d6d936c48cfad4ded1/PyPDFForm-1.2.5.tar.gz
+[2023-04-07 20:48:32] INFO root fetch - processPackages [PyPDFForm]: executing diffoscope
+[2023-04-07 20:48:32] INFO root fetch - processPackages [PyPDFForm]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/PyPDFForm-1.2.4.tar.gz tmp/PyPDFForm-1.2.5.tar.gz --markdown 20230407/P/PyPDFForm/1.2.4-1.2.5/diff.md
+[2023-04-07 20:48:32] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:32] INFO root fetch - processPackages [panel]: New version: [1.0.0b8] Old Version: [1.0.0b7]
+[2023-04-07 20:48:32] INFO root fetch - processPackages [PyroFork-dev]: Downloading https://files.pythonhosted.org/packages/21/cc/49a7438281d495a172d67d575ced4a620c5b9dfb811046c2919425f65088/PyroFork-dev-2.1.4.dev202304071850.tar.gz
+[2023-04-07 20:48:32] INFO root fetch - processPackages [PyroFork-dev]: Downloading https://files.pythonhosted.org/packages/21/cc/49a7438281d495a172d67d575ced4a620c5b9dfb811046c2919425f65088/PyroFork-dev-2.1.4.dev202304071850.tar.gz
+[2023-04-07 20:48:32] INFO root fetch - processPackages [panel]: Downloading https://files.pythonhosted.org/packages/fc/1e/e82051373e19bf2f3ab76c16118c1b65372ac13ea837cd10924f6bc53e82/panel-1.0.0b7.tar.gz
+[2023-04-07 20:48:33] INFO root fetch - processPackages [PyroFork-dev]: executing diffoscope
+[2023-04-07 20:48:33] INFO root fetch - processPackages [PyroFork-dev]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/PyroFork-dev-2.1.4.dev202304071849.tar.gz tmp/PyroFork-dev-2.1.4.dev202304071850.tar.gz --markdown 20230407/P/PyroFork-dev/2.1.4.dev202304071849-2.1.4.dev202304071850/diff.md
+[2023-04-07 20:48:33] INFO root fetch - processPackages [PyroFork-dev]: executing diffoscope
+[2023-04-07 20:48:33] INFO root fetch - processPackages [PyroFork-dev]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/PyroFork-dev-2.1.4.dev202304071849.tar.gz tmp/PyroFork-dev-2.1.4.dev202304071850.tar.gz --markdown 20230407/P/PyroFork-dev/2.1.4.dev202304071849-2.1.4.dev202304071850/diff.md
+[2023-04-07 20:48:33] WARNING root fetch - processPackages [panel]: Skipping package: exceeds size limit 25098220>=10485760
+[2023-04-07 20:48:33] INFO root fetch - main [MainThread]: error
+[2023-04-07 20:48:33] INFO root fetch - processPackages [dequeai]: New version: [0.682] Old Version: [0.680]
+[2023-04-07 20:48:33] INFO root fetch - processPackages [dequeai]: executing diffoscope
+[2023-04-07 20:48:33] INFO root fetch - processPackages [dequeai]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/dequeai-0.680.tar.gz tmp/dequeai-0.682.tar.gz --markdown 20230407/d/dequeai/0.680-0.682/diff.md
+[2023-04-07 20:48:33] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:33] INFO root fetch - processPackages [subgrounds]: New version: [1.3.0] Old Version: [1.2.0]
+[2023-04-07 20:48:33] INFO root fetch - processPackages [subgrounds]: Downloading https://files.pythonhosted.org/packages/6a/d7/b5870bad456a6030d959cedc32ca729b4de6af61467d99600e670cc9d652/subgrounds-1.2.0.tar.gz
+[2023-04-07 20:48:34] INFO root fetch - processPackages [subgrounds]: Downloading https://files.pythonhosted.org/packages/72/84/4c5be541b2fc845dd0de860fc9809a44f0d31f04d2d7490efbb7482dd413/subgrounds-1.3.0.tar.gz
+[2023-04-07 20:48:34] INFO root fetch - processPackages [subgrounds]: executing diffoscope
+[2023-04-07 20:48:34] INFO root fetch - processPackages [subgrounds]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/subgrounds-1.2.0.tar.gz tmp/subgrounds-1.3.0.tar.gz --markdown 20230407/s/subgrounds/1.2.0-1.3.0/diff.md
+[2023-04-07 20:48:34] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:35] INFO root fetch - processPackages [pyaedt]: Downloading https://files.pythonhosted.org/packages/88/a8/150089a89e8dae2a10fa8edae498fa1665c6ab1cbeac027da95601a4e7dc/pyaedt-0.6.70.tar.gz
+[2023-04-07 20:48:35] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:36] INFO root fetch - processPackages [pyaedt]: executing diffoscope
+[2023-04-07 20:48:36] INFO root fetch - processPackages [pyaedt]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pyaedt-0.6.61.tar.gz tmp/pyaedt-0.6.70.tar.gz --markdown 20230407/p/pyaedt/0.6.61-0.6.70/diff.md
+[2023-04-07 20:48:37] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:38] INFO root fetch - main [MainThread]: success
+[2023-04-07 20:48:44] INFO root fetch - main [MainThread]: success
