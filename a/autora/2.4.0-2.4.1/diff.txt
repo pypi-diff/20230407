@@ -1,0 +1,737 @@
+--- tmp/autora-2.4.0.tar.gz
++++ tmp/autora-2.4.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "autora-2.4.0.tar", max compression
+│ +gzip compressed data, was "autora-2.4.1.tar", max compression
+│   --- autora-2.4.0.tar
+├── +++ autora-2.4.1.tar
+│ ├── file list
+│ │ @@ -1,62 +1,62 @@
+│ │ --rw-r--r--   0        0        0     1100 2023-03-28 15:08:45.882033 autora-2.4.0/LICENSE.md
+│ │ --rw-r--r--   0        0        0    18857 2023-03-28 15:08:45.882033 autora-2.4.0/README.md
+│ │ --rw-r--r--   0        0        0      173 2023-03-28 15:08:45.882033 autora-2.4.0/autora/__init__.py
+│ │ --rw-r--r--   0        0        0      197 2023-03-28 15:08:45.882033 autora-2.4.0/autora/cycle/__init__.py
+│ │ --rw-r--r--   0        0        0    20073 2023-03-28 15:08:45.882033 autora-2.4.0/autora/cycle/plot_utils.py
+│ │ --rw-r--r--   0        0        0    21619 2023-03-28 15:08:45.882033 autora-2.4.0/autora/cycle/simple.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/__init__.py
+│ │ --rw-r--r--   0        0        0     5014 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/filter.py
+│ │ --rw-r--r--   0        0        0    18310 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/pipeline.py
+│ │ --rw-r--r--   0        0        0       87 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/pooler/__init__.py
+│ │ --rw-r--r--   0        0        0     1800 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/pooler/general_pool.py
+│ │ --rw-r--r--   0        0        0    13496 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/pooler/poppernet.py
+│ │ --rw-r--r--   0        0        0      232 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/sampler/__init__.py
+│ │ --rw-r--r--   0        0        0     2383 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/sampler/assumption.py
+│ │ --rw-r--r--   0        0        0     2841 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/sampler/dissimilarity.py
+│ │ --rw-r--r--   0        0        0     2216 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/sampler/model_disagreement.py
+│ │ --rw-r--r--   0        0        0     1666 2023-03-28 15:08:45.882033 autora-2.4.0/autora/experimentalist/sampler/nearest_value.py
+│ │ --rw-r--r--   0        0        0      497 2023-03-28 15:08:45.886033 autora-2.4.0/autora/experimentalist/sampler/random.py
+│ │ --rw-r--r--   0        0        0     2052 2023-03-28 15:08:45.886033 autora-2.4.0/autora/experimentalist/sampler/uncertainty.py
+│ │ --rw-r--r--   0        0        0     4586 2023-03-28 15:08:45.886033 autora-2.4.0/autora/experimentalist/utils/__init__.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-28 15:08:45.886033 autora-2.4.0/autora/skl/__init__.py
+│ │ --rw-r--r--   0        0        0     6087 2023-03-28 15:08:45.886033 autora-2.4.0/autora/skl/bms.py
+│ │ --rw-r--r--   0        0        0    12781 2023-03-28 15:08:45.886033 autora-2.4.0/autora/skl/bsr.py
+│ │ --rw-r--r--   0        0        0    31115 2023-03-28 15:08:45.886033 autora-2.4.0/autora/skl/darts.py
+│ │ --rw-r--r--   0        0        0     2649 2023-03-28 15:08:45.886033 autora-2.4.0/autora/synthetic/__init__.py
+│ │ --rw-r--r--   0        0        0       97 2023-03-28 15:08:45.886033 autora-2.4.0/autora/synthetic/data/__init__.py
+│ │ --rw-r--r--   0        0        0     5123 2023-03-28 15:08:45.886033 autora-2.4.0/autora/synthetic/data/expected_value.py
+│ │ --rw-r--r--   0        0        0     6631 2023-03-28 15:08:45.886033 autora-2.4.0/autora/synthetic/data/prospect_theory.py
+│ │ --rw-r--r--   0        0        0     4587 2023-03-28 15:08:45.886033 autora-2.4.0/autora/synthetic/data/weber_fechner.py
+│ │ --rw-r--r--   0        0        0     7338 2023-03-28 15:08:45.886033 autora-2.4.0/autora/synthetic/inventory.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/__init__.py
+│ │ --rw-r--r--   0        0        0      126 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/__init__.py
+│ │ --rw-r--r--   0        0        0      164 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/data/named_equations.wiki.parsed__num_operations.dat
+│ │ --rw-r--r--   0        0        0      130 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/data/named_equations.wiki.parsed__operation_type.dat
+│ │ --rw-r--r--   0        0        0      133 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/data/named_equations.wiki.parsed__operation_type_sq.dat
+│ │ --rw-r--r--   0        0        0     8599 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/fit_prior.py
+│ │ --rw-r--r--   0        0        0    60372 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/mcmc.py
+│ │ --rw-r--r--   0        0        0     5726 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/parallel.py
+│ │ --rw-r--r--   0        0        0     2341 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/prior.py
+│ │ --rwxr-xr-x   0        0        0     2860 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bms/utils.py
+│ │ --rw-r--r--   0        0        0        0 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bsr/__init__.py
+│ │ --rw-r--r--   0        0        0    32217 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bsr/funcs.py
+│ │ --rw-r--r--   0        0        0     1430 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bsr/misc.py
+│ │ --rw-r--r--   0        0        0     6521 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bsr/node.py
+│ │ --rw-r--r--   0        0        0     2117 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bsr/operation.py
+│ │ --rw-r--r--   0        0        0     5114 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/bsr/prior.py
+│ │ --rw-r--r--   0        0        0      347 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/__init__.py
+│ │ --rwxr-xr-x   0        0        0    12774 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/architect.py
+│ │ --rw-r--r--   0        0        0     1791 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/dataset.py
+│ │ --rw-r--r--   0        0        0     1301 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/fan_out.py
+│ │ --rwxr-xr-x   0        0        0    30660 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/model_search.py
+│ │ --rwxr-xr-x   0        0        0    19820 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/operations.py
+│ │ --rwxr-xr-x   0        0        0    41286 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/plot_utils.py
+│ │ --rwxr-xr-x   0        0        0    13517 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/utils.py
+│ │ --rwxr-xr-x   0        0        0     6645 2023-03-28 15:08:45.886033 autora-2.4.0/autora/theorist/darts/visualize.py
+│ │ --rw-r--r--   0        0        0       25 2023-03-28 15:08:45.886033 autora-2.4.0/autora/utils/__init__.py
+│ │ --rw-r--r--   0        0        0      441 2023-03-28 15:08:45.886033 autora-2.4.0/autora/utils/dictionary.py
+│ │ --rw-r--r--   0        0        0     1866 2023-03-28 15:08:45.886033 autora-2.4.0/autora/variable/__init__.py
+│ │ --rw-r--r--   0        0        0     2511 2023-03-28 15:08:45.886033 autora-2.4.0/autora/variable/time.py
+│ │ --rw-r--r--   0        0        0     8899 2023-03-28 15:08:45.886033 autora-2.4.0/autora/variable/tinkerforge.py
+│ │ --rw-r--r--   0        0        0     1775 2023-03-28 15:11:08.023047 autora-2.4.0/pyproject.toml
+│ │ --rw-r--r--   0        0        0    20334 1970-01-01 00:00:00.000000 autora-2.4.0/PKG-INFO
+│ │ +-rw-r--r--   0        0        0     1100 2023-04-07 16:00:32.253006 autora-2.4.1/LICENSE.md
+│ │ +-rw-r--r--   0        0        0    18724 2023-04-07 16:00:32.253006 autora-2.4.1/README.md
+│ │ +-rw-r--r--   0        0        0      173 2023-04-07 16:00:32.253006 autora-2.4.1/autora/__init__.py
+│ │ +-rw-r--r--   0        0        0      197 2023-04-07 16:00:32.253006 autora-2.4.1/autora/cycle/__init__.py
+│ │ +-rw-r--r--   0        0        0    20784 2023-04-07 16:00:32.253006 autora-2.4.1/autora/cycle/plot_utils.py
+│ │ +-rw-r--r--   0        0        0    21619 2023-04-07 16:00:32.253006 autora-2.4.1/autora/cycle/simple.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/__init__.py
+│ │ +-rw-r--r--   0        0        0     5014 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/filter.py
+│ │ +-rw-r--r--   0        0        0    18310 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/pipeline.py
+│ │ +-rw-r--r--   0        0        0       87 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/pooler/__init__.py
+│ │ +-rw-r--r--   0        0        0     1800 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/pooler/general_pool.py
+│ │ +-rw-r--r--   0        0        0    13496 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/pooler/poppernet.py
+│ │ +-rw-r--r--   0        0        0      232 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/sampler/__init__.py
+│ │ +-rw-r--r--   0        0        0     2383 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/sampler/assumption.py
+│ │ +-rw-r--r--   0        0        0     2841 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/sampler/dissimilarity.py
+│ │ +-rw-r--r--   0        0        0     2216 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/sampler/model_disagreement.py
+│ │ +-rw-r--r--   0        0        0     1666 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/sampler/nearest_value.py
+│ │ +-rw-r--r--   0        0        0      497 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/sampler/random.py
+│ │ +-rw-r--r--   0        0        0     2052 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/sampler/uncertainty.py
+│ │ +-rw-r--r--   0        0        0     4586 2023-04-07 16:00:32.253006 autora-2.4.1/autora/experimentalist/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 16:00:32.253006 autora-2.4.1/autora/skl/__init__.py
+│ │ +-rw-r--r--   0        0        0     6087 2023-04-07 16:00:32.253006 autora-2.4.1/autora/skl/bms.py
+│ │ +-rw-r--r--   0        0        0    12781 2023-04-07 16:00:32.253006 autora-2.4.1/autora/skl/bsr.py
+│ │ +-rw-r--r--   0        0        0    31115 2023-04-07 16:00:32.253006 autora-2.4.1/autora/skl/darts.py
+│ │ +-rw-r--r--   0        0        0     2649 2023-04-07 16:00:32.253006 autora-2.4.1/autora/synthetic/__init__.py
+│ │ +-rw-r--r--   0        0        0       97 2023-04-07 16:00:32.253006 autora-2.4.1/autora/synthetic/data/__init__.py
+│ │ +-rw-r--r--   0        0        0     5123 2023-04-07 16:00:32.253006 autora-2.4.1/autora/synthetic/data/expected_value.py
+│ │ +-rw-r--r--   0        0        0     6631 2023-04-07 16:00:32.253006 autora-2.4.1/autora/synthetic/data/prospect_theory.py
+│ │ +-rw-r--r--   0        0        0     4587 2023-04-07 16:00:32.253006 autora-2.4.1/autora/synthetic/data/weber_fechner.py
+│ │ +-rw-r--r--   0        0        0     7338 2023-04-07 16:00:32.253006 autora-2.4.1/autora/synthetic/inventory.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/__init__.py
+│ │ +-rw-r--r--   0        0        0      126 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/__init__.py
+│ │ +-rw-r--r--   0        0        0      164 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/data/named_equations.wiki.parsed__num_operations.dat
+│ │ +-rw-r--r--   0        0        0      130 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/data/named_equations.wiki.parsed__operation_type.dat
+│ │ +-rw-r--r--   0        0        0      133 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/data/named_equations.wiki.parsed__operation_type_sq.dat
+│ │ +-rw-r--r--   0        0        0     8599 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/fit_prior.py
+│ │ +-rw-r--r--   0        0        0    60372 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/mcmc.py
+│ │ +-rw-r--r--   0        0        0     5726 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/parallel.py
+│ │ +-rw-r--r--   0        0        0     2341 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/prior.py
+│ │ +-rwxr-xr-x   0        0        0     2860 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bms/utils.py
+│ │ +-rw-r--r--   0        0        0        0 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bsr/__init__.py
+│ │ +-rw-r--r--   0        0        0    32217 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bsr/funcs.py
+│ │ +-rw-r--r--   0        0        0     1430 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bsr/misc.py
+│ │ +-rw-r--r--   0        0        0     6521 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bsr/node.py
+│ │ +-rw-r--r--   0        0        0     2117 2023-04-07 16:00:32.253006 autora-2.4.1/autora/theorist/bsr/operation.py
+│ │ +-rw-r--r--   0        0        0     5114 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/bsr/prior.py
+│ │ +-rw-r--r--   0        0        0      347 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/__init__.py
+│ │ +-rwxr-xr-x   0        0        0    12774 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/architect.py
+│ │ +-rw-r--r--   0        0        0     1791 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/dataset.py
+│ │ +-rw-r--r--   0        0        0     1301 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/fan_out.py
+│ │ +-rwxr-xr-x   0        0        0    30660 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/model_search.py
+│ │ +-rwxr-xr-x   0        0        0    19820 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/operations.py
+│ │ +-rwxr-xr-x   0        0        0    41286 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/plot_utils.py
+│ │ +-rwxr-xr-x   0        0        0    13517 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/utils.py
+│ │ +-rwxr-xr-x   0        0        0     6645 2023-04-07 16:00:32.257007 autora-2.4.1/autora/theorist/darts/visualize.py
+│ │ +-rw-r--r--   0        0        0       25 2023-04-07 16:00:32.257007 autora-2.4.1/autora/utils/__init__.py
+│ │ +-rw-r--r--   0        0        0      441 2023-04-07 16:00:32.257007 autora-2.4.1/autora/utils/dictionary.py
+│ │ +-rw-r--r--   0        0        0     1866 2023-04-07 16:00:32.257007 autora-2.4.1/autora/variable/__init__.py
+│ │ +-rw-r--r--   0        0        0     2511 2023-04-07 16:00:32.257007 autora-2.4.1/autora/variable/time.py
+│ │ +-rw-r--r--   0        0        0     8899 2023-04-07 16:00:32.257007 autora-2.4.1/autora/variable/tinkerforge.py
+│ │ +-rw-r--r--   0        0        0     1810 2023-04-07 16:02:58.655477 autora-2.4.1/pyproject.toml
+│ │ +-rw-r--r--   0        0        0    20200 1970-01-01 00:00:00.000000 autora-2.4.1/PKG-INFO
+│ │   --- autora-2.4.0/LICENSE.md
+│ ├── +++ autora-2.4.1/LICENSE.md
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/README.md
+│ ├── +++ autora-2.4.1/README.md
+│ │┄ Files 2% similar despite different names
+│ │ @@ -364,16 +364,14 @@
+│ │          >>> first_order_linear(np.array([-1. , 0. , 1. ]), c=1.0, m=2.0)
+│ │          array([-1.,  1.,  3.])
+│ │      """
+│ │      y = m * x + c
+│ │      return y
+│ │  ```
+│ │  
+│ │ -For an example of a file with docstrings, see [docs/docstrings.py](./docs/docstrings.py).
+│ │ -
+│ │  *Pro-Tip: Write the docstring for your new high-level object before starting on the code. In particular, writing examples of how you expect it should be used can help clarify the right level of abstraction.*
+│ │  
+│ │  ## Online Documentation
+│ │  
+│ │  Online Documentation is automatically generated using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) based on docstrings in files in the `autora/` directory. 
+│ │  
+│ │  ### Commands
+│ │ @@ -396,16 +394,15 @@
+│ │  # Release Process
+│ │  
+│ │  The release process is automated using GitHub Actions. 
+│ │  
+│ │  - Before you start, ensure that the tokens are up-to-date. If in doubt, try to create and publish a new release 
+│ │    candidate version of the package first. The tokens are stored as "organization secrets" enabled for the autora 
+│ │    repository, and are called:
+│ │ -  - PYPI_TOKEN: a token from pypi.org with upload permissions on the AutoResearch/AutoRA project. Current token 
+│ │ -    expires on 2023-03-01.
+│ │ +  - PYPI_TOKEN: a token from pypi.org with upload permissions on the AutoResearch/AutoRA project.
+│ │    - ANACONDA_TOKEN: a token from anaconda.org with the following scopes on the AutoResearch organization: `repos conda
+│ │      api:read api:write`. Current token expires on 2023-03-01.
+│ │  - Update [conda recipe](./conda/autora/meta.yaml): 
+│ │      - dependencies, so that it matches [pyproject.toml](pyproject.toml).
+│ │      - imports for testing – all modules should be listed.
+│ │  - Trigger a new release from GitHub. 
+│ │    - Navigate to the repository's code tab at https://github.com/autoresearch/autora,
+│ │   --- autora-2.4.0/autora/cycle/plot_utils.py
+│ ├── +++ autora-2.4.1/autora/cycle/plot_utils.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -8,17 +8,19 @@
+│ │  from matplotlib import rcParams
+│ │  from matplotlib.patches import Patch
+│ │  from matplotlib.ticker import MaxNLocator
+│ │  
+│ │  from .simple import SimpleCycle as Cycle
+│ │  
+│ │  # Change default plot styles
+│ │ -rcParams["axes.spines.top"] = False
+│ │ -rcParams["axes.spines.right"] = False
+│ │ -rcParams["legend.frameon"] = False
+│ │ +controller_plotting_rc_context = {
+│ │ +    "axes.spines.top": False,
+│ │ +    "axes.spines.right": False,
+│ │ +    "legend.frameon": False,
+│ │ +}
+│ │  
+│ │  
+│ │  def _get_variable_index(
+│ │      cycle: Cycle,
+│ │  ) -> Tuple[List[Tuple[int, str, str]], List[Tuple[int, str, str]]]:
+│ │      """
+│ │      Extracts information about independent and dependent variables from the cycle object.
+│ │ @@ -291,62 +293,69 @@
+│ │  
+│ │      # Subplot configurations
+│ │      n_cycles_to_plot = len(cycle_idx)
+│ │      if n_cycles_to_plot < wrap:
+│ │          shape = (1, n_cycles_to_plot)
+│ │      else:
+│ │          shape = (int(np.ceil(n_cycles_to_plot / wrap)), wrap)
+│ │ -    fig, axs = plt.subplots(*shape, **d_kw["subplot_kw"])
+│ │ -    # Place axis object in an array if plotting single panel
+│ │ -    if shape == (1, 1):
+│ │ -        axs = np.array([axs])
+│ │ -
+│ │ -    # Loop by panel
+│ │ -    for i, ax in enumerate(axs.flat):
+│ │ -        if i + 1 <= n_cycles_to_plot:
+│ │ -            # Get index of cycle to plot
+│ │ -            i_cycle = cycle_idx[i]
+│ │ -
+│ │ -            # ---Plot observed data---
+│ │ -            # Independent variable values
+│ │ -            x_vals = df_observed.loc[:, iv[0]]
+│ │ -            # Dependent values masked by current cycle vs previous data
+│ │ -            dv_previous = np.ma.masked_where(
+│ │ -                df_observed["cycle"] >= i_cycle, df_observed[dv[0]]
+│ │ -            )
+│ │ -            dv_current = np.ma.masked_where(
+│ │ -                df_observed["cycle"] != i_cycle, df_observed[dv[0]]
+│ │ -            )
+│ │ -            # Plotting scatter
+│ │ -            ax.scatter(x_vals, dv_previous, **d_kw["scatter_previous_kw"])
+│ │ -            ax.scatter(x_vals, dv_current, **d_kw["scatter_current_kw"])
+│ │ -
+│ │ -            # ---Plot Theory---
+│ │ -            conditions = condition_space[:, iv[0]]
+│ │ -            ax.plot(conditions, l_predictions[i_cycle], **d_kw["plot_theory_kw"])
+│ │ -
+│ │ -            # Label Panels
+│ │ -            ax.text(
+│ │ -                0.05, 1, f"Cycle {i_cycle}", ha="left", va="top", transform=ax.transAxes
+│ │ -            )
+│ │  
+│ │ -        else:
+│ │ -            ax.axis("off")
+│ │ +    with plt.rc_context(controller_plotting_rc_context):
+│ │ +        fig, axs = plt.subplots(*shape, **d_kw["subplot_kw"])
+│ │ +        # Place axis object in an array if plotting single panel
+│ │ +        if shape == (1, 1):
+│ │ +            axs = np.array([axs])
+│ │ +
+│ │ +        # Loop by panel
+│ │ +        for i, ax in enumerate(axs.flat):
+│ │ +            if i + 1 <= n_cycles_to_plot:
+│ │ +                # Get index of cycle to plot
+│ │ +                i_cycle = cycle_idx[i]
+│ │ +
+│ │ +                # ---Plot observed data---
+│ │ +                # Independent variable values
+│ │ +                x_vals = df_observed.loc[:, iv[0]]
+│ │ +                # Dependent values masked by current cycle vs previous data
+│ │ +                dv_previous = np.ma.masked_where(
+│ │ +                    df_observed["cycle"] >= i_cycle, df_observed[dv[0]]
+│ │ +                )
+│ │ +                dv_current = np.ma.masked_where(
+│ │ +                    df_observed["cycle"] != i_cycle, df_observed[dv[0]]
+│ │ +                )
+│ │ +                # Plotting scatter
+│ │ +                ax.scatter(x_vals, dv_previous, **d_kw["scatter_previous_kw"])
+│ │ +                ax.scatter(x_vals, dv_current, **d_kw["scatter_current_kw"])
+│ │ +
+│ │ +                # ---Plot Theory---
+│ │ +                conditions = condition_space[:, iv[0]]
+│ │ +                ax.plot(conditions, l_predictions[i_cycle], **d_kw["plot_theory_kw"])
+│ │ +
+│ │ +                # Label Panels
+│ │ +                ax.text(
+│ │ +                    0.05,
+│ │ +                    1,
+│ │ +                    f"Cycle {i_cycle}",
+│ │ +                    ha="left",
+│ │ +                    va="top",
+│ │ +                    transform=ax.transAxes,
+│ │ +                )
+│ │  
+│ │ -    # Super Labels
+│ │ -    fig.supxlabel(iv_label, y=0.07)
+│ │ -    fig.supylabel(dv_label)
+│ │ -
+│ │ -    # Legend
+│ │ -    fig.legend(
+│ │ -        ["Previous Data", "New Data", "Theory"],
+│ │ -        ncols=3,
+│ │ -        bbox_to_anchor=(0.5, 0),
+│ │ -        loc="lower center",
+│ │ -    )
+│ │ +            else:
+│ │ +                ax.axis("off")
+│ │ +
+│ │ +        # Super Labels
+│ │ +        fig.supxlabel(iv_label, y=0.07)
+│ │ +        fig.supylabel(dv_label)
+│ │ +
+│ │ +        # Legend
+│ │ +        fig.legend(
+│ │ +            ["Previous Data", "New Data", "Theory"],
+│ │ +            ncols=3,
+│ │ +            bbox_to_anchor=(0.5, 0),
+│ │ +            loc="lower center",
+│ │ +        )
+│ │  
+│ │      return fig
+│ │  
+│ │  
+│ │  def plot_results_panel_3d(
+│ │      cycle: Cycle,
+│ │      iv_names: Optional[List[str]] = None,
+│ │ @@ -438,69 +447,69 @@
+│ │      l_predictions = _theory_predict(cycle, np.column_stack((x1.ravel(), x2.ravel())))
+│ │  
+│ │      # Subplot configurations
+│ │      if n_cycles < wrap:
+│ │          shape = (1, n_cycles)
+│ │      else:
+│ │          shape = (int(np.ceil(n_cycles / wrap)), wrap)
+│ │ +    with plt.rc_context(controller_plotting_rc_context):
+│ │ +        fig, axs = plt.subplots(*shape, **d_kw["subplot_kw"])
+│ │  
+│ │ -    fig, axs = plt.subplots(*shape, **d_kw["subplot_kw"])
+│ │ -
+│ │ -    # Loop by panel
+│ │ -    for i, ax in enumerate(axs.flat):
+│ │ -        if i + 1 <= n_cycles:
+│ │ -
+│ │ -            # ---Plot observed data---
+│ │ -            # Independent variable values
+│ │ -            l_x = [df_observed.loc[:, s[0]] for s in iv]
+│ │ -            # Dependent values masked by current cycle vs previous data
+│ │ -            dv_previous = np.ma.masked_where(
+│ │ -                df_observed["cycle"] >= i, df_observed[dv[0]]
+│ │ -            )
+│ │ -            dv_current = np.ma.masked_where(
+│ │ -                df_observed["cycle"] != i, df_observed[dv[0]]
+│ │ -            )
+│ │ -            # Plotting scatter
+│ │ -            ax.scatter(*l_x, dv_previous, **d_kw["scatter_previous_kw"])
+│ │ -            ax.scatter(*l_x, dv_current, **d_kw["scatter_current_kw"])
+│ │ -
+│ │ -            # ---Plot Theory---
+│ │ -            ax.plot_surface(
+│ │ -                x1, x2, l_predictions[i].reshape(x1.shape), **d_kw["surface_kw"]
+│ │ -            )
+│ │ -            # ---Labels---
+│ │ -            # Title
+│ │ -            ax.set_title(f"Cycle {i}")
+│ │ -
+│ │ -            # Axis
+│ │ -            ax.set_xlabel(iv_labels[0])
+│ │ -            ax.set_ylabel(iv_labels[1])
+│ │ -            ax.set_zlabel(dv_label)
+│ │ -
+│ │ -            # Viewing angle
+│ │ -            if view:
+│ │ -                ax.view_init(*view)
+│ │ +        # Loop by panel
+│ │ +        for i, ax in enumerate(axs.flat):
+│ │ +            if i + 1 <= n_cycles:
+│ │ +
+│ │ +                # ---Plot observed data---
+│ │ +                # Independent variable values
+│ │ +                l_x = [df_observed.loc[:, s[0]] for s in iv]
+│ │ +                # Dependent values masked by current cycle vs previous data
+│ │ +                dv_previous = np.ma.masked_where(
+│ │ +                    df_observed["cycle"] >= i, df_observed[dv[0]]
+│ │ +                )
+│ │ +                dv_current = np.ma.masked_where(
+│ │ +                    df_observed["cycle"] != i, df_observed[dv[0]]
+│ │ +                )
+│ │ +                # Plotting scatter
+│ │ +                ax.scatter(*l_x, dv_previous, **d_kw["scatter_previous_kw"])
+│ │ +                ax.scatter(*l_x, dv_current, **d_kw["scatter_current_kw"])
+│ │ +
+│ │ +                # ---Plot Theory---
+│ │ +                ax.plot_surface(
+│ │ +                    x1, x2, l_predictions[i].reshape(x1.shape), **d_kw["surface_kw"]
+│ │ +                )
+│ │ +                # ---Labels---
+│ │ +                # Title
+│ │ +                ax.set_title(f"Cycle {i}")
+│ │ +
+│ │ +                # Axis
+│ │ +                ax.set_xlabel(iv_labels[0])
+│ │ +                ax.set_ylabel(iv_labels[1])
+│ │ +                ax.set_zlabel(dv_label)
+│ │ +
+│ │ +                # Viewing angle
+│ │ +                if view:
+│ │ +                    ax.view_init(*view)
+│ │  
+│ │ -        else:
+│ │ -            ax.axis("off")
+│ │ +            else:
+│ │ +                ax.axis("off")
+│ │  
+│ │ -    # Legend
+│ │ -    handles, labels = axs.flatten()[0].get_legend_handles_labels()
+│ │ -    legend_elements = [
+│ │ -        handles[0],
+│ │ -        handles[1],
+│ │ -        Patch(facecolor=handles[2].get_facecolors()[0]),
+│ │ -    ]
+│ │ -    fig.legend(
+│ │ -        handles=legend_elements,
+│ │ -        labels=labels,
+│ │ -        ncols=3,
+│ │ -        bbox_to_anchor=(0.5, 0),
+│ │ -        loc="lower center",
+│ │ -    )
+│ │ +        # Legend
+│ │ +        handles, labels = axs.flatten()[0].get_legend_handles_labels()
+│ │ +        legend_elements = [
+│ │ +            handles[0],
+│ │ +            handles[1],
+│ │ +            Patch(facecolor=handles[2].get_facecolors()[0]),
+│ │ +        ]
+│ │ +        fig.legend(
+│ │ +            handles=legend_elements,
+│ │ +            labels=labels,
+│ │ +            ncols=3,
+│ │ +            bbox_to_anchor=(0.5, 0),
+│ │ +            loc="lower center",
+│ │ +        )
+│ │  
+│ │      return fig
+│ │  
+│ │  
+│ │  def cycle_default_score(cycle: Cycle, x_vals: np.ndarray, y_true: np.ndarray):
+│ │      """
+│ │      Calculates score for each cycle using the estimator's default scorer.
+│ │ @@ -579,28 +588,29 @@
+│ │  
+│ │      # Use estimator's default scoring method if specific scorer is not supplied
+│ │      if scorer is None:
+│ │          l_scores = cycle_default_score(cycle, X, y_true)
+│ │      else:
+│ │          l_scores = cycle_specified_score(scorer, cycle, X, y_true, **scorer_kw)
+│ │  
+│ │ -    # Plotting
+│ │ -    fig, ax = plt.subplots(figsize=figsize)
+│ │ -    ax.plot(np.arange(len(cycle.data.theories)), l_scores, **plot_kw)
+│ │ -
+│ │ -    # Adjusting axis limits
+│ │ -    if ylim:
+│ │ -        ax.set_ylim(*ylim)
+│ │ -    if xlim:
+│ │ -        ax.set_xlim(*xlim)
+│ │ -
+│ │ -    # Labeling
+│ │ -    ax.set_xlabel(x_label)
+│ │ -    if y_label is None:
+│ │ -        if scorer is not None:
+│ │ -            y_label = scorer.__name__
+│ │ -        else:
+│ │ -            y_label = "Score"
+│ │ -    ax.set_ylabel(y_label)
+│ │ -    ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+│ │ +    with plt.rc_context(controller_plotting_rc_context):
+│ │ +        # Plotting
+│ │ +        fig, ax = plt.subplots(figsize=figsize)
+│ │ +        ax.plot(np.arange(len(cycle.data.theories)), l_scores, **plot_kw)
+│ │ +
+│ │ +        # Adjusting axis limits
+│ │ +        if ylim:
+│ │ +            ax.set_ylim(*ylim)
+│ │ +        if xlim:
+│ │ +            ax.set_xlim(*xlim)
+│ │ +
+│ │ +        # Labeling
+│ │ +        ax.set_xlabel(x_label)
+│ │ +        if y_label is None:
+│ │ +            if scorer is not None:
+│ │ +                y_label = scorer.__name__
+│ │ +            else:
+│ │ +                y_label = "Score"
+│ │ +        ax.set_ylabel(y_label)
+│ │ +        ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+│ │  
+│ │      return fig
+│ │   --- autora-2.4.0/autora/cycle/simple.py
+│ ├── +++ autora-2.4.1/autora/cycle/simple.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/filter.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/filter.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/pipeline.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/pipeline.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/pooler/general_pool.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/pooler/general_pool.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/pooler/poppernet.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/pooler/poppernet.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/sampler/assumption.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/sampler/assumption.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/sampler/dissimilarity.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/sampler/dissimilarity.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/sampler/model_disagreement.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/sampler/model_disagreement.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/sampler/nearest_value.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/sampler/nearest_value.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/sampler/uncertainty.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/sampler/uncertainty.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/experimentalist/utils/__init__.py
+│ ├── +++ autora-2.4.1/autora/experimentalist/utils/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/skl/bms.py
+│ ├── +++ autora-2.4.1/autora/skl/bms.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/skl/bsr.py
+│ ├── +++ autora-2.4.1/autora/skl/bsr.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/skl/darts.py
+│ ├── +++ autora-2.4.1/autora/skl/darts.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/synthetic/__init__.py
+│ ├── +++ autora-2.4.1/autora/synthetic/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/synthetic/data/expected_value.py
+│ ├── +++ autora-2.4.1/autora/synthetic/data/expected_value.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/synthetic/data/prospect_theory.py
+│ ├── +++ autora-2.4.1/autora/synthetic/data/prospect_theory.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/synthetic/data/weber_fechner.py
+│ ├── +++ autora-2.4.1/autora/synthetic/data/weber_fechner.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/synthetic/inventory.py
+│ ├── +++ autora-2.4.1/autora/synthetic/inventory.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bms/fit_prior.py
+│ ├── +++ autora-2.4.1/autora/theorist/bms/fit_prior.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bms/mcmc.py
+│ ├── +++ autora-2.4.1/autora/theorist/bms/mcmc.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bms/parallel.py
+│ ├── +++ autora-2.4.1/autora/theorist/bms/parallel.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bms/prior.py
+│ ├── +++ autora-2.4.1/autora/theorist/bms/prior.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bms/utils.py
+│ ├── +++ autora-2.4.1/autora/theorist/bms/utils.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bsr/funcs.py
+│ ├── +++ autora-2.4.1/autora/theorist/bsr/funcs.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bsr/misc.py
+│ ├── +++ autora-2.4.1/autora/theorist/bsr/misc.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bsr/node.py
+│ ├── +++ autora-2.4.1/autora/theorist/bsr/node.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bsr/operation.py
+│ ├── +++ autora-2.4.1/autora/theorist/bsr/operation.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/bsr/prior.py
+│ ├── +++ autora-2.4.1/autora/theorist/bsr/prior.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/darts/architect.py
+│ ├── +++ autora-2.4.1/autora/theorist/darts/architect.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/darts/dataset.py
+│ ├── +++ autora-2.4.1/autora/theorist/darts/dataset.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/darts/fan_out.py
+│ ├── +++ autora-2.4.1/autora/theorist/darts/fan_out.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/darts/model_search.py
+│ ├── +++ autora-2.4.1/autora/theorist/darts/model_search.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/darts/operations.py
+│ ├── +++ autora-2.4.1/autora/theorist/darts/operations.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/darts/plot_utils.py
+│ ├── +++ autora-2.4.1/autora/theorist/darts/plot_utils.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/darts/utils.py
+│ ├── +++ autora-2.4.1/autora/theorist/darts/utils.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/theorist/darts/visualize.py
+│ ├── +++ autora-2.4.1/autora/theorist/darts/visualize.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/variable/__init__.py
+│ ├── +++ autora-2.4.1/autora/variable/__init__.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/variable/time.py
+│ ├── +++ autora-2.4.1/autora/variable/time.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/autora/variable/tinkerforge.py
+│ ├── +++ autora-2.4.1/autora/variable/tinkerforge.py
+│ │┄ Files identical despite different names
+│ │   --- autora-2.4.0/pyproject.toml
+│ ├── +++ autora-2.4.1/pyproject.toml
+│ │┄ Files 7% similar despite different names
+│ │ @@ -1,10 +1,10 @@
+│ │  [tool.poetry]
+│ │  name = "autora"
+│ │ -version = "v2.4.0"
+│ │ +version = "v2.4.1"
+│ │  description = "Autonomous Research Assistant (AutoRA) is a framework for automating steps of the empirical research process. This framework implements tools for autonomously and iteratively generating 1) new theories to describe real-world data, and 2) experiments to invalidate those theories and seed a new cycle of theory-making. The experiments will be run online via crowd-sourcing platforms (MTurk, Prolific)."
+│ │  authors = [
+│ │      "Sebastian Musslick <sebastian_musslick@brown.edu>",
+│ │      "John Gerrard Holland <john_holland1@brown.edu>",
+│ │  ]
+│ │  readme = "README.md"
+│ │  homepage = "https://musslick.github.io/AER_website/Research.html"
+│ │ @@ -13,21 +13,21 @@
+│ │  
+│ │  [tool.poetry.dependencies]
+│ │  python = ">=3.8.10,<3.11"
+│ │  numpy = ">=1.22.1"
+│ │  scipy = "^1.9.3"
+│ │  imageio = "^2.9.0"
+│ │  matplotlib = "^3.2.1"
+│ │ -pandas = "^1.4.2"
+│ │ +pandas = ">=1.4.2,<3.0.0"
+│ │  graphviz = ">=0.14.1,<0.21.0"
+│ │  seaborn = ">=0.11.1,<0.13.0"
+│ │  scikit-learn = "^1.1.1"
+│ │  sympy = "^1.10.1"
+│ │  tinkerforge = {version = "^2.1.25", optional=true}
+│ │ -torch = "1.13.1"
+│ │ +torch = "2.0.0"
+│ │  tqdm = "^4.64.0"
+│ │  
+│ │  [tool.poetry.extras]
+│ │  tinkerforge = ["tinkerforge"]
+│ │  
+│ │  [tool.poetry.group.dev.dependencies]
+│ │  jupyter = "^1.0.0"
+│ │ @@ -42,15 +42,16 @@
+│ │  pre-commit = ">=2.20,<4.0"
+│ │  
+│ │  [tool.poetry.group.docs.dependencies]
+│ │  mkdocs-material = ">=8.5.10,<10.0.0"
+│ │  mkdocs-gen-files = ">=0.3.4,<0.5.0"
+│ │  mkdocs-literate-nav = ">=0.4.1,<0.7.0"
+│ │  mkdocs-section-index = "^0.3.4"
+│ │ -mkdocstrings-python = ">=0.7.1,<0.9.0"
+│ │ +mkdocstrings-python = ">=0.7.1,<0.10.0"
+│ │ +mkdocs-jupyter = "^0.24.1"
+│ │  
+│ │  [build-system]
+│ │  requires = ["poetry-core>=1.0.0"]
+│ │  build-backend = "poetry.core.masonry.api"
+│ │  
+│ │  [tool.isort]
+│ │  profile = "black"
+│ │   --- autora-2.4.0/PKG-INFO
+│ ├── +++ autora-2.4.1/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,30 +1,30 @@
+│ │  Metadata-Version: 2.1
+│ │  Name: autora
+│ │ -Version: 2.4.0
+│ │ +Version: 2.4.1
+│ │  Summary: Autonomous Research Assistant (AutoRA) is a framework for automating steps of the empirical research process. This framework implements tools for autonomously and iteratively generating 1) new theories to describe real-world data, and 2) experiments to invalidate those theories and seed a new cycle of theory-making. The experiments will be run online via crowd-sourcing platforms (MTurk, Prolific).
+│ │  Home-page: https://musslick.github.io/AER_website/Research.html
+│ │  Author: Sebastian Musslick
+│ │  Author-email: sebastian_musslick@brown.edu
+│ │  Requires-Python: >=3.8.10,<3.11
+│ │  Classifier: Programming Language :: Python :: 3
+│ │  Classifier: Programming Language :: Python :: 3.9
+│ │  Classifier: Programming Language :: Python :: 3.10
+│ │  Provides-Extra: tinkerforge
+│ │  Requires-Dist: graphviz (>=0.14.1,<0.21.0)
+│ │  Requires-Dist: imageio (>=2.9.0,<3.0.0)
+│ │  Requires-Dist: matplotlib (>=3.2.1,<4.0.0)
+│ │  Requires-Dist: numpy (>=1.22.1)
+│ │ -Requires-Dist: pandas (>=1.4.2,<2.0.0)
+│ │ +Requires-Dist: pandas (>=1.4.2,<3.0.0)
+│ │  Requires-Dist: scikit-learn (>=1.1.1,<2.0.0)
+│ │  Requires-Dist: scipy (>=1.9.3,<2.0.0)
+│ │  Requires-Dist: seaborn (>=0.11.1,<0.13.0)
+│ │  Requires-Dist: sympy (>=1.10.1,<2.0.0)
+│ │  Requires-Dist: tinkerforge (>=2.1.25,<3.0.0) ; extra == "tinkerforge"
+│ │ -Requires-Dist: torch (==1.13.1)
+│ │ +Requires-Dist: torch (==2.0.0)
+│ │  Requires-Dist: tqdm (>=4.64.0,<5.0.0)
+│ │  Project-URL: Documentation, https://autoresearch.github.io/autora/
+│ │  Project-URL: Repository, https://github.com/AutoResearch/autora
+│ │  Description-Content-Type: text/markdown
+│ │  
+│ │  # Autonomous Research Assistant
+│ │  Autonomous Research Assistant (AutoRA) is an open source AI-based system for automating each aspect of empirical research in the behavioral sciences, from the construction of a scientific hypothesis to conducting novel experiments. The documentation is here: [https://autoresearch.github.io/autora/](https://autoresearch.github.io/autora/)
+│ │ @@ -392,16 +392,14 @@
+│ │          >>> first_order_linear(np.array([-1. , 0. , 1. ]), c=1.0, m=2.0)
+│ │          array([-1.,  1.,  3.])
+│ │      """
+│ │      y = m * x + c
+│ │      return y
+│ │  ```
+│ │  
+│ │ -For an example of a file with docstrings, see [docs/docstrings.py](./docs/docstrings.py).
+│ │ -
+│ │  *Pro-Tip: Write the docstring for your new high-level object before starting on the code. In particular, writing examples of how you expect it should be used can help clarify the right level of abstraction.*
+│ │  
+│ │  ## Online Documentation
+│ │  
+│ │  Online Documentation is automatically generated using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) based on docstrings in files in the `autora/` directory. 
+│ │  
+│ │  ### Commands
+│ │ @@ -424,16 +422,15 @@
+│ │  # Release Process
+│ │  
+│ │  The release process is automated using GitHub Actions. 
+│ │  
+│ │  - Before you start, ensure that the tokens are up-to-date. If in doubt, try to create and publish a new release 
+│ │    candidate version of the package first. The tokens are stored as "organization secrets" enabled for the autora 
+│ │    repository, and are called:
+│ │ -  - PYPI_TOKEN: a token from pypi.org with upload permissions on the AutoResearch/AutoRA project. Current token 
+│ │ -    expires on 2023-03-01.
+│ │ +  - PYPI_TOKEN: a token from pypi.org with upload permissions on the AutoResearch/AutoRA project.
+│ │    - ANACONDA_TOKEN: a token from anaconda.org with the following scopes on the AutoResearch organization: `repos conda
+│ │      api:read api:write`. Current token expires on 2023-03-01.
+│ │  - Update [conda recipe](./conda/autora/meta.yaml): 
+│ │      - dependencies, so that it matches [pyproject.toml](pyproject.toml).
+│ │      - imports for testing – all modules should be listed.
+│ │  - Trigger a new release from GitHub. 
+│ │    - Navigate to the repository's code tab at https://github.com/autoresearch/autora,
