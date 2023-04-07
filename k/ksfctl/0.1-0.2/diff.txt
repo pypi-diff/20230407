@@ -1,0 +1,1470 @@
+--- tmp/ksfctl-0.1.tar.gz
++++ tmp/ksfctl-0.2.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "ksfctl-0.1.tar", last modified: Fri Apr  7 06:31:52 2023, max compression
+│ +gzip compressed data, was "ksfctl-0.2.tar", last modified: Fri Apr  7 15:26:54 2023, max compression
+│   --- ksfctl-0.1.tar
+├── +++ ksfctl-0.2.tar
+│ ├── file list
+│ │ @@ -1,26 +1,26 @@
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:31:52.027316 ksfctl-0.1/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 06:31:52.027316 ksfctl-0.1/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       32 2023-04-07 06:31:44.000000 ksfctl-0.1/README.md
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:31:52.027316 ksfctl-0.1/ksfctl/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       41 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/__init__.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:31:52.027316 ksfctl-0.1/ksfctl/cmd/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/cmd/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5893 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/cmd/cmd.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:31:52.027316 ksfctl-0.1/ksfctl/generate/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/generate/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    54196 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/generate/cpp_generator.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:31:52.027316 ksfctl-0.1/ksfctl/parser/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/parser/__init__.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     5559 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/parser/ksf_lex.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     8464 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/parser/ksf_parser.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)    31195 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/parser/ksf_yacc.py
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)     3758 2023-04-07 06:31:44.000000 ksfctl-0.1/ksfctl/parser/tools.py
+│ │ -drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 06:31:52.027316 ksfctl-0.1/ksfctl.egg-info/
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 06:31:51.000000 ksfctl-0.1/ksfctl.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      449 2023-04-07 06:31:51.000000 ksfctl-0.1/ksfctl.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 06:31:51.000000 ksfctl-0.1/ksfctl.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       75 2023-04-07 06:31:51.000000 ksfctl-0.1/ksfctl.egg-info/entry_points.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       13 2023-04-07 06:31:51.000000 ksfctl-0.1/ksfctl.egg-info/requires.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-07 06:31:51.000000 ksfctl-0.1/ksfctl.egg-info/top_level.txt
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 06:31:52.027316 ksfctl-0.1/setup.cfg
+│ │ --rw-r--r--   0 runner    (1001) docker     (123)      465 2023-04-07 06:31:44.000000 ksfctl-0.1/setup.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:26:54.672675 ksfctl-0.2/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 15:26:54.672675 ksfctl-0.2/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       32 2023-04-07 15:26:40.000000 ksfctl-0.2/README.md
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:26:54.668675 ksfctl-0.2/ksfctl/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       41 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/__init__.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:26:54.668675 ksfctl-0.2/ksfctl/cmd/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        0 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/cmd/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     6142 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/cmd/cmd.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:26:54.672675 ksfctl-0.2/ksfctl/generate/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       28 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/generate/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    57858 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/generate/cpp_generator.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:26:54.672675 ksfctl-0.2/ksfctl/parser/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       57 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/parser/__init__.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     5628 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/parser/ksf_lex.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     8531 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/parser/ksf_parser.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)    33041 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/parser/ksf_yacc.py
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)     3758 2023-04-07 15:26:40.000000 ksfctl-0.2/ksfctl/parser/tools.py
+│ │ +drwxr-xr-x   0 runner    (1001) docker     (123)        0 2023-04-07 15:26:54.668675 ksfctl-0.2/ksfctl.egg-info/
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      162 2023-04-07 15:26:54.000000 ksfctl-0.2/ksfctl.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      449 2023-04-07 15:26:54.000000 ksfctl-0.2/ksfctl.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        1 2023-04-07 15:26:54.000000 ksfctl-0.2/ksfctl.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       81 2023-04-07 15:26:54.000000 ksfctl-0.2/ksfctl.egg-info/entry_points.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       24 2023-04-07 15:26:54.000000 ksfctl-0.2/ksfctl.egg-info/requires.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)        7 2023-04-07 15:26:54.000000 ksfctl-0.2/ksfctl.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)       38 2023-04-07 15:26:54.672675 ksfctl-0.2/setup.cfg
+│ │ +-rw-r--r--   0 runner    (1001) docker     (123)      559 2023-04-07 15:26:40.000000 ksfctl-0.2/setup.py
+│ │   --- ksfctl-0.1/ksfctl/cmd/cmd.py
+│ ├── +++ ksfctl-0.2/ksfctl/cmd/cmd.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -1,36 +1,35 @@
+│ │  import os
+│ │  
+│ │  import click
+│ │ -from click.testing import CliRunner
+│ │ +
+│ │  from ksfctl.generate.cpp_generator import cpp_gen
+│ │  
+│ │  
+│ │  @click.group(context_settings={'help_option_names': ['-h', '--help']})
+│ │  @click.pass_context
+│ │  def cli(ctx):
+│ │ -    ctx.help_option_names += ['-h']
+│ │      pass
+│ │  
+│ │  
+│ │ -@cli.group(name='parse', help="解析ksf文件到其他语言，目前支持(cpp, python, java, node.js, go)")
+│ │ +@cli.group(name='parse', help="解析ksf文件到其他语言，目前支持(cpp, python, java, node.js, go)", context_settings={'help_option_names': ['-h', '--help']})
+│ │  @click.pass_context
+│ │  def parse(ctx):
+│ │ -    ctx.help_option_names += ['-h']
+│ │      pass
+│ │  
+│ │  
+│ │ -@parse.command(name='cpp')
+│ │ +@parse.command(name='cpp', context_settings={'help_option_names': ['-h', '--help']})
+│ │  @click.pass_context
+│ │  @click.argument('ksf_files', nargs=-1, required=True, type=str)
+│ │  @click.option('-i', '--include', '--include-path', multiple=True, help='ksf协议文件搜索路径')
+│ │  @click.option('-d', '--dir', '--dest', 'destination_dir', multiple=False, help='生成的头文件存放的路径')
+│ │  @click.option('--replace_ns', '--replace-ns', multiple=False, help='(将被废弃)替换namespace')
+│ │  @click.option('--replace-namespace', nargs=2, multiple=True, type=str, help='(推荐)将指定命名空间替换为另一个命名空间')
+│ │  @click.option('--replace-include-dir', nargs=2, multiple=True, type=str, help='(推荐)替换头文件路径')
+│ │ +@click.option('--ignore-relative-path', 'ignore_relative_path', is_flag=True, flag_value=True, default=False, help='忽略依赖目录')
+│ │  @click.option('--check-default/--no-check-default', default=True, help='是否打包默认值')
+│ │  @click.option('--ksf/--no-ksf', 'ksf', is_flag=True, default=False, help='是否ksf内部模块')
+│ │  @click.option('--json/--no-json', 'json', is_flag=True, default=True, help='是否生成Json格式')
+│ │  @click.option('--sql/--no-sql', 'sql', is_flag=True, default=False, help='是否生成Sql接口')
+│ │  @click.option('--rpc/--no-rpc', 'rpc', is_flag=True, default=True, help='是否生成RPC接口')
+│ │  @click.option('--current-priority/--no-current-priority', 'current_priority', is_flag=True, default=True,
+│ │                help='是否优先使用当前目录')
+│ │ @@ -107,14 +106,17 @@
+│ │  
+│ │      """是否需要调用链追踪逻辑"""
+│ │      click.echo(f"是否需要调用链追踪逻辑：{kwargs['trace']}")
+│ │  
+│ │      """是否参数使用右值引用"""
+│ │      click.echo(f"是否参数使用右值引用：{kwargs['param_rvalue_ref']}")
+│ │  
+│ │ +    """忽略依赖目录"""
+│ │ +    click.echo(f"忽略依赖目录：{kwargs['ignore_relative_path']}")
+│ │ +
+│ │      """解析所有的flags，携带with_头"""
+│ │      kwargs_with_prefix = {}
+│ │      for k, v in kwargs.items():
+│ │          kwargs_with_prefix.update({f'with_{k}': v})
+│ │  
+│ │      cpp_gen(files=ksf_files, include_dirs=include, destination_dir=destination_dir, flags=kwargs_with_prefix)
+│ │   --- ksfctl-0.1/ksfctl/generate/cpp_generator.py
+│ ├── +++ ksfctl-0.2/ksfctl/generate/cpp_generator.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -1,8 +1,9 @@
+│ │  from hashlib import md5
+│ │ +
+│ │  from ksfctl.parser.ksf_parser import *
+│ │  from ksfctl.parser.ksf_yacc import generate
+│ │  
+│ │  
+│ │  class CppGenerator:
+│ │      def __init__(self, ast, filename, dest, **kwargs):
+│ │          self.__dict__.update(kwargs)
+│ │ @@ -98,14 +99,16 @@
+│ │  
+│ │      def parse_type(self, module, value_type):
+│ │          if value_type['type'] == 'native':
+│ │              if value_type['name'] == 'string':
+│ │                  self.add_include(f"<string>")
+│ │                  return 'std::string'
+│ │              elif value_type['name'] == 'int':
+│ │ +                if value_type['bit'] == 8:
+│ │ +                    return f'{"unsigned char" if value_type["unsigned"] else "char"}'
+│ │                  return f'{"u" if value_type["unsigned"] else ""}int{value_type["bit"]}_t'
+│ │              elif value_type['name'] == 'float':
+│ │                  return value_type['name']
+│ │              elif value_type['name'] == 'double':
+│ │                  return value_type['name']
+│ │              elif value_type['name'] == 'bool':
+│ │                  return value_type['name']
+│ │ @@ -172,45 +175,55 @@
+│ │          else:
+│ │              raise SyntaxError("不支持的注释方式")
+│ │  
+│ │      def parse_value(self, value):
+│ │          return value['value'] if value['is_number'] else f'"{value["value"]}"'
+│ │  
+│ │      def parse_const(self, curr_module, ksf_const: KsfConst):
+│ │ -        return f"{self.parse_comment_above(ksf_const.comment)}{self.curr_tab}{self.parse_type(curr_module, ksf_const.value_type)} {ksf_const.name} = {self.parse_value(ksf_const.value)};\n\n"
+│ │ +        if ksf_const.value_type['name'] == 'string':
+│ │ +            return f"{self.parse_comment_above(ksf_const.comment)}{self.curr_tab}constexpr const char *{ksf_const.name} = {self.parse_value(ksf_const.value)};\n\n"
+│ │ +        return f"{self.parse_comment_above(ksf_const.comment)}{self.curr_tab}constexpr {self.parse_type(curr_module, ksf_const.value_type)} {ksf_const.name} = {self.parse_value(ksf_const.value)};\n\n"
+│ │  
+│ │      def parse_enum_member(self, ksf_enum_member: KsfEnumMember):
+│ │          return f"{self.curr_tab}{ksf_enum_member.name} = {ksf_enum_member.value}"
+│ │  
+│ │      def parse_enum_to_str(self, ksf_enum_member: KsfEnumMember):
+│ │          return f"{self.curr_tab}    case {ksf_enum_member.name}: return \"{ksf_enum_member.name}\";"
+│ │  
+│ │      def parse_str_to_enum(self, ksf_enum_member: KsfEnumMember):
+│ │          return f"{self.curr_tab}if (s == \"{ksf_enum_member.name}\") {{ e = {ksf_enum_member.name}; return 0; }}"
+│ │  
+│ │ -    def parse_default_var(self, value_type, default):
+│ │ +    def parse_default_var(self, name, value_type, default):
+│ │          if default is None:
+│ │              if value_type['name'] == 'int':
+│ │ -                return '0'
+│ │ +                return f'''if ({name} == 0) '''
+│ │              elif value_type['name'] == 'float':
+│ │ -                return '0.0'
+│ │ +                return f'if (ksf::KS_Common::equal(0.0f, {name})) '
+│ │              elif value_type['name'] == 'double':
+│ │ -                return '0.0'
+│ │ +                return f'if (ksf::KS_Common::equal(0.0, {name})) '
+│ │              elif value_type['name'] == 'bool':
+│ │ -                return 'true'
+│ │ +                return f'if ({name})'
+│ │ +            elif value_type['name'] == 'string':
+│ │ +                return f'if ({name}.empty())'
+│ │              else:
+│ │ -                return None
+│ │ +                return ''
+│ │  
+│ │          # 特殊处理一下bool型
+│ │          if default['is_bool']:
+│ │ -            return f'{"true" if default["value"] else "false"}'
+│ │ +            return f'if ({"" if default["value"] else "!"}{name})'
+│ │          elif default['is_number']:
+│ │ -            return f'{default["value"]}'
+│ │ +            if value_type['name'] == 'float':
+│ │ +                return f'if (ksf::KS_Common::equal({name}f, {default["value"]})) '
+│ │ +            elif value_type['name'] == 'double':
+│ │ +                return f'if (ksf::KS_Common::equal({name}, {default["value"]})) '
+│ │ +            return f'if ({name} == {default["value"]}) '
+│ │ +        elif default['is_enum']:
+│ │ +            return f'if ({name} == {default["value"]}) '
+│ │          else:
+│ │ -            return f'"{default["value"]}"'
+│ │ +            return f'if ({name} == "{default["value"]}") '
+│ │  
+│ │      def parse_enum(self, curr_module, ksf_enum: KsfEnum):
+│ │          enum_str = f"{self.parse_comment_above(ksf_enum.comment)}{self.curr_tab}enum {ksf_enum.name} \n{{\n"
+│ │          self.inc_tab()
+│ │          enum_member_str_list = []
+│ │          enum_member_tostr = []
+│ │          enum_member_strto = []
+│ │ @@ -236,21 +249,44 @@
+│ │  
+│ │  """
+│ │  
+│ │          stoe_member = '\n'.join(enum_member_strto)
+│ │          enum_str += f"""\
+│ │  inline int stoe(const std::string &s, {ksf_enum.name} &e) {{
+│ │  {stoe_member}
+│ │ +    return -1;
+│ │  }}
+│ │  
+│ │  """
+│ │          return enum_str
+│ │  
+│ │      def parse_variable(self, curr_module, ksf_var: KsfField):
+│ │ -        default_var = self.parse_default_var(ksf_var.value_type, ksf_var.default)
+│ │ +        def parse_default_var(value_type, default):
+│ │ +            if default is None:
+│ │ +                if value_type['name'] == 'int':
+│ │ +                    return '0'
+│ │ +                elif value_type['name'] == 'float':
+│ │ +                    return '0.0f'
+│ │ +                elif value_type['name'] == 'double':
+│ │ +                    return '0.0'
+│ │ +                elif value_type['name'] == 'bool':
+│ │ +                    return 'true'
+│ │ +                elif value_type['name'] == 'string':
+│ │ +                    return '""'
+│ │ +                else:
+│ │ +                    return None
+│ │ +
+│ │ +            # 特殊处理一下bool型
+│ │ +            if default['is_bool']:
+│ │ +                return f'{"true" if default["value"] else "false"}'
+│ │ +            elif default['is_number'] or default['is_enum']:
+│ │ +                return f'{default["value"]}'
+│ │ +            else:
+│ │ +                return f'"{default["value"]}"'
+│ │ +        default_var = parse_default_var(ksf_var.value_type, ksf_var.default)
+│ │          return f"{self.parse_type(curr_module, ksf_var.value_type)} \n{ksf_var.name}" \
+│ │                 f"{' = ' + default_var if default_var is not None else ''}; " \
+│ │                 f"{self.parse_comment_line(ksf_var.comment)}\n\n"
+│ │          pass
+│ │  
+│ │      def add_lines(self, lines, tab=None):
+│ │          if tab is None:
+│ │ @@ -268,17 +304,15 @@
+│ │  }}\n''')
+│ │  
+│ │      def parse_variable_writeTo(self, ksf_field: KsfField):
+│ │          value_type = ksf_field.value_type
+│ │          if self.with_check_default:
+│ │              if value_type['type'] == 'native':
+│ │                  if value_type['name'] != 'bool':
+│ │ -                    if value_type['name'] == 'float' or value_type['name'] == 'double':
+│ │ -                        return f"""if (!ksf::KS_Common::equal({ksf_field.name}, {self.parse_default_var(value_type, ksf_field.default)}{value_type['name'][0]})) {{_os.write({ksf_field.name}, {ksf_field.tag});}}"""
+│ │ -                    return f"""if (!{ksf_field.name} != {self.parse_default_var(value_type, ksf_field.default)}) {{_os.write({ksf_field.name}, {ksf_field.tag});}}"""
+│ │ +                    return f"""{self.parse_default_var(ksf_field.name, value_type, ksf_field.default)} {{_os.write({ksf_field.name}, {ksf_field.tag});}}"""
+│ │                  else:
+│ │                      if ksf_field.default is None or ksf_field.default['value']:
+│ │                          return f"""if (!{ksf_field.name}) {{_os.write({ksf_field.name}, {ksf_field.tag});}}"""
+│ │                      else:
+│ │                          return f"""if ({ksf_field.name}) {{_os.write({ksf_field.name}, {ksf_field.tag});}}"""
+│ │              elif value_type['type'] == 'class':
+│ │                  # 如果是枚举类型
+│ │ @@ -320,14 +354,15 @@
+│ │          return self.add_lines(f'''\
+│ │  /**
+│ │   * 序列化为Json
+│ │   */
+│ │  ksf::JsonValueObjPtr writeToJson() const {{
+│ │      ksf::JsonValueObjPtr p = new ksf::JsonValueObj();
+│ │  {self.add_lines(var_list, '    ')}
+│ │ +    return p;
+│ │  }}
+│ │  
+│ │  /**
+│ │   * 序列化为Json字符串
+│ │   */
+│ │  std::string writeToJsonString() const {{
+│ │      return ksf::KS_Json::writeValue(writeToJson());
+│ │ @@ -359,26 +394,26 @@
+│ │  void readFrom(ksf::KsfInputStream<ReaderT>& _is)
+│ │  {{
+│ │      resetDefault();
+│ │  {self.add_lines(var_list, '    ')}
+│ │  }}\n''')
+│ │  
+│ │      def parse_variable_readFromJson(self, curr_module, ksf_field: KsfField):
+│ │ -        return f"""ksf::JsonInput::readJson(c,pObj->value["{ksf_field.name}"], false);"""
+│ │ +        return f"""ksf::JsonInput::readJson({ksf_field.name}, pObj->value["{ksf_field.name}"], false);"""
+│ │  
+│ │      def parse_readFromJson(self, curr_module, ksf_struct: KsfStruct):
+│ │          var_list = ""
+│ │          for var in ksf_struct.variable:
+│ │              var_list += self.parse_variable_readFromJson(curr_module, ksf_struct.variable[var]) + '\n'
+│ │  
+│ │          return self.add_lines(f'''\
+│ │  /**
+│ │   * Json反序列化为结构体
+│ │   */
+│ │ -ksf::JsonValueObjPtr writeToJson() const {{
+│ │ +void readFromJson(const ksf::JsonValuePtr &p, bool isRequire = true) {{
+│ │      resetDefault();
+│ │      if(NULL == p.get() || p->getType() != ksf::eJsonTypeObj)
+│ │      {{
+│ │          char s[128];
+│ │          snprintf(s, sizeof(s), "read 'struct' type mismatch, get type: %d.", (p.get() ? p->getType() : 0));
+│ │          throw ksf::KS_Json_Exception(s);
+│ │      }}
+│ │ @@ -418,15 +453,15 @@
+│ │  
+│ │      def parse_displaySimple(self, curr_module, ksf_struct: KsfStruct):
+│ │          var_list = ""
+│ │          for var in ksf_struct.variable:
+│ │              field = ksf_struct.variable[var]
+│ │              if field.value_type['type'] == "class" and self.get_type_id(curr_module,
+│ │                                                                          field.value_type) in self.ast.enums:
+│ │ -                var_list += f'_ds.displaySimple(static_cast<int32_t>({ksf_struct.variable[var].name}), true");\n'
+│ │ +                var_list += f'_ds.displaySimple(static_cast<int32_t>({ksf_struct.variable[var].name}), true);\n'
+│ │              else:
+│ │                  var_list += f'_ds.displaySimple({ksf_struct.variable[var].name}, true);\n'
+│ │  
+│ │          return self.add_lines(f'''\
+│ │  /**
+│ │   * 简单打印
+│ │   */
+│ │ @@ -445,19 +480,21 @@
+│ │                  var_list.append(f'ksf::KS_Common::equal(l.{field.name}, r.{field.name})')
+│ │              else:
+│ │                  var_list.append(f'l.{field.name} == r.{field.name}')
+│ │  
+│ │          in_list = ' && '
+│ │          var_eq = in_list.join(var_list)
+│ │          return self.add_lines(f'''\
+│ │ -inline bool operator==(const JsonData &l, const JsonData &r) {{
+│ │ +inline bool operator==(const {ksf_struct.name} &l, const {ksf_struct.name} &r) {{
+│ │      return {var_eq};
+│ │  }}\n''')
+│ │  
+│ │      def parse_struct(self, curr_module, ksf_struct: KsfStruct):
+│ │ +        self.add_include("<kup/Ksf.h>")
+│ │ +
+│ │          struct_str = f"{self.parse_comment_above(ksf_struct.comment)}"  # 注释(可能没有)
+│ │  
+│ │          # struct XXX : public ksf::KsfStructBase
+│ │          # {
+│ │          struct_str += self.add_lines(f"struct {ksf_struct.name} : public ksf::KsfStructBase\n{{\n")
+│ │  
+│ │          # public:
+│ │ @@ -510,14 +547,15 @@
+│ │          struct_str += '\n'
+│ │          struct_str += self.parse_writeTo(curr_module, ksf_struct)  # writeTo
+│ │  
+│ │          struct_str += '\n'
+│ │          struct_str += self.parse_readFrom(curr_module, ksf_struct)  # readFrom
+│ │  
+│ │          if self.with_json:
+│ │ +            self.add_include("<kup/KsfJson.h>")
+│ │              struct_str += '\n'
+│ │              struct_str += self.parse_writeToJson(curr_module, ksf_struct)  # writeToJson
+│ │  
+│ │              struct_str += '\n'
+│ │              struct_str += self.parse_readFromJson(curr_module, ksf_struct)  # readFromJson
+│ │  
+│ │          struct_str += '\n'
+│ │ @@ -526,25 +564,46 @@
+│ │          struct_str += '\n'
+│ │          struct_str += self.parse_displaySimple(curr_module, ksf_struct)  # displaySimple
+│ │  
+│ │          self.del_tab()
+│ │          # };
+│ │          struct_str += f"{self.curr_tab}}};\n"
+│ │  
+│ │ -        # inline bool operator==(const JsonData&l, const JsonData&r)
+│ │ +        # inline bool operator==(const {ksf_struct.name}&l, const {ksf_struct.name}&r)
+│ │          struct_str += '\n'
+│ │          # operator==
+│ │          struct_str += self.parse_equal(curr_module, ksf_struct)
+│ │  
+│ │          struct_str += '\n'
+│ │          # operator!=
+│ │          struct_str += f"""\
+│ │ -inline bool operator!=(const JsonData &l, const JsonData &r) {{
+│ │ +inline bool operator!=(const {ksf_struct.name} &l, const {ksf_struct.name} &r) {{
+│ │      return !(l == r);
+│ │ -}}"""
+│ │ +}}\n"""
+│ │ +        if len(ksf_struct.key_fields) != 0:
+│ │ +            struct_str += f"""\
+│ │ +inline bool operator<(const {ksf_struct.name} &l, const {ksf_struct.name} &r) {{\n"""
+│ │ +            for key_field in ksf_struct.key_fields:
+│ │ +                struct_str += f"""\
+│ │ +    if(l.{key_field} != r.{key_field})  return (l.{key_field} < r.{key_field});\n"""
+│ │ +            struct_str += f"""\
+│ │ +    return false;
+│ │ +}}
+│ │ +
+│ │ +inline bool operator<=(const {ksf_struct.name} &l, const {ksf_struct.name} &r) {{
+│ │ +    return !(r < l);
+│ │ +}}
+│ │ +
+│ │ +inline bool operator>(const {ksf_struct.name} &l, const {ksf_struct.name} &r) {{
+│ │ +    return r < l;
+│ │ +}}
+│ │ +
+│ │ +inline bool operator>=(const {ksf_struct.name} &l, const {ksf_struct.name} &r) {{
+│ │ +    return !(l < r);
+│ │ +}}\n\n"""
+│ │  
+│ │          if self.with_json:
+│ │  
+│ │              struct_str += '\n'
+│ │              # operator<<
+│ │              struct_str += f"""\
+│ │  inline std::ostream &operator<<(std::ostream &os, const {ksf_struct.name} &r) {{
+│ │ @@ -556,27 +615,29 @@
+│ │              # operator>>
+│ │              struct_str += f"""\
+│ │  inline std::istream &operator>>(std::istream &is, {ksf_struct.name} &l) {{
+│ │      std::istreambuf_iterator<char> eos;
+│ │      std::string s(std::istreambuf_iterator<char>(is), eos);
+│ │      l.readFromJsonString(s);
+│ │      return is;
+│ │ -}}"""
+│ │ +}}\n"""
+│ │          return struct_str
+│ │  
+│ │      def parse_InterfacePrxCallBack(self, curr_module, ksf_interface: KsfInterface):
+│ │          prx_str = f"""\
+│ │  class {ksf_interface.name}PrxCallback : public ksf::AgentCallback
+│ │  {{
+│ │  public:
+│ │      virtual ~{ksf_interface.name}PrxCallback() = default;
+│ │      
+│ │  public:
+│ │  \n"""
+│ │  
+│ │ +        index = 0
+│ │ +        func_case_str = ""
+│ │          for item in ksf_interface.operator:
+│ │              operator = ksf_interface.operator[item]
+│ │  
+│ │              def parse_output_vars(with_type=True):
+│ │                  def parse_output_var(value_type, name, with_type):
+│ │                      if value_type['name'] != 'void':
+│ │                          if not self.is_movable_type(curr_module, value_type):
+│ │ @@ -585,57 +646,53 @@
+│ │                              return f"{self.parse_type(curr_module, value_type)} &&{name}" if with_type else f"std::move({name})"
+│ │                          else:
+│ │                              return f"const {self.parse_type(curr_module, value_type)} &{name}" if with_type else name
+│ │                  vars_list = []
+│ │                  if operator.return_type['name'] != 'void':
+│ │                      vars_list.append(parse_output_var(operator.return_type, '_ret', with_type))
+│ │  
+│ │ -                for item in operator.output:
+│ │ -                    vars_list.append(parse_output_var(operator.output[item].value_type, operator.output[item].name, with_type))
+│ │ +                for i in operator.output:
+│ │ +                    vars_list.append(parse_output_var(operator.output[i].value_type, operator.output[i].name, with_type))
+│ │  
+│ │                  return ', '.join(vars_list)
+│ │  
+│ │              prx_str += f"""\
+│ │ -    virtual void callback_{operator.name}({parse_output_vars(False)}) \
+│ │ +    virtual void callback_{operator.name}({parse_output_vars(True)}) \
+│ │  {{ throw std::runtime_error("callback_{operator.name} override incorrect."); }}
+│ │      
+│ │      virtual void callback_{operator.name}_exception(int32_t ret) \
+│ │  {{ throw std::runtime_error("callback_{operator.name}_exception override incorrect."); }}
+│ │                  
+│ │  """
+│ │  
+│ │ -        def parse_var_dispatch(var, name, index):
+│ │ -            if var['type'] == 'void':
+│ │ -                return ""
+│ │ +            def parse_var_dispatch(var, name, index):
+│ │ +                if var['name'] == 'void':
+│ │ +                    return ""
+│ │  
+│ │ -            return f"""\
+│ │ +                return f"""\
+│ │                  {self.parse_type(curr_module, var)} {name};
+│ │                  _is.read({name}, {index}, true);\n\n"""
+│ │  
+│ │ -        def parse_func_dispatch():
+│ │ -            """处理函数的分发"""
+│ │ -            func_case_str = ""
+│ │ -            index = 0
+│ │ -            for item in ksf_interface.operator:
+│ │ -                operator = ksf_interface.operator[item]
+│ │ -                func_case_str += f"""
+│ │ +            def parse_func_dispatch():
+│ │ +                """处理函数的分发"""
+│ │ +                func_case_str = f"""
+│ │              case {index}: {{
+│ │                  if (msg->response->iRet != ksf::KSFSERVERSUCCESS) {{
+│ │                      callback_{operator.name}_exception(msg->response->iRet);
+│ │                      return msg->response->iRet;
+│ │                  }}
+│ │                  
+│ │                  ksf::KsfInputStream<ksf::BufferReader> _is;
+│ │                  
+│ │                  _is.setBuffer(msg->response->sBuffer);\n\n"""
+│ │  
+│ │                  func_case_str += parse_var_dispatch(operator.return_type, '_ret', 0)
+│ │  
+│ │ -                for item in operator.output:
+│ │ -                    var = operator.output[item]
+│ │ +                for i in operator.output:
+│ │ +                    var = operator.output[i]
+│ │                      func_case_str += parse_var_dispatch(var.value_type, var.name, var.index)
+│ │  
+│ │                  func_case_str += f"""\
+│ │                  
+│ │                  ksf::CallbackThreadData *pCbtd = ksf::CallbackThreadData::getData();
+│ │                  assert(pCbtd != NULL);
+│ │                  
+│ │ @@ -643,18 +700,18 @@
+│ │                  
+│ │                  callback_{operator.name}({parse_output_vars(False)});
+│ │                  
+│ │                  pCbtd->delResponseContext();
+│ │                  
+│ │                  return ksf::KSFSERVERSUCCESS;
+│ │              }}"""
+│ │ +                return func_case_str
+│ │  
+│ │ -                index += 1
+│ │ -
+│ │ -            return func_case_str
+│ │ +            func_case_str += parse_func_dispatch()
+│ │ +            index += 1
+│ │  
+│ │          # 函数列表
+│ │          prx_str += f"""\
+│ │  public:
+│ │      virtual const std::map<std::string, std::string> &getResponseContext() const {{
+│ │          ksf::CallbackThreadData *pCbtd = ksf::CallbackThreadData::getData();
+│ │          assert(pCbtd != NULL);
+│ │ @@ -663,49 +720,52 @@
+│ │              throw ksf::KS_Exception("cann't get response context");
+│ │          }}
+│ │          return pCbtd->getResponseContext();
+│ │      }}\n\n"""
+│ │  
+│ │          prx_str += f"""\
+│ │  public:
+│ │ -    virtual int onDispatch(ksf::ReqMessagePtr _msg_)
+│ │ +    int onDispatch(ksf::ReqMessagePtr msg) override
+│ │      {{
+│ │          static std::string __{ksf_interface.name}_all[] = {{"{'", "'.join(ksf_interface.operator.keys())}"}};
+│ │                                              
+│ │ -        std::pair<std::string *, std::string *> r = equal_range(__{ksf_interface.name}_all, __{ksf_interface.name}_all + 9, std::string(_msg_->request.sFuncName));
+│ │ +        std::pair<std::string *, std::string *> r = equal_range(__{ksf_interface.name}_all, __{ksf_interface.name}_all + 9, std::string(msg->request.sFuncName));
+│ │          
+│ │          if (r.first == r.second) {{
+│ │              return ksf::KSFSERVERNOFUNCERR;
+│ │          }}
+│ │          
+│ │          switch (r.first - __{ksf_interface.name}_all) {{
+│ │ -{parse_func_dispatch()}
+│ │ +{func_case_str}
+│ │          }} //end switch
+│ │ -    }} //end onDispatch"""
+│ │ +        
+│ │ +        return ksf::KSFSERVERNOFUNCERR;
+│ │ +    }} //end onDispatch\n"""
+│ │  
+│ │          prx_str += f"""}}; //end {ksf_interface.name}PrxCallback
+│ │  
+│ │  using {ksf_interface.name}PrxCallbackPtr = ksf::KS_AutoPtr<{ksf_interface.name}PrxCallback>;\n\n"""
+│ │  
+│ │          return prx_str
+│ │  
+│ │      def parse_InterfacePrxCallbackPromise(self, curr_module, ksf_interface: KsfInterface):
+│ │          parsed_str = f"""\
+│ │ -class {ksf_interface.name}PrxCallbackPromise: public ksf::ServantProxyCallback
+│ │ +class {ksf_interface.name}PrxCallbackPromise: public ksf::AgentCallback
+│ │  {{
+│ │  public:
+│ │      virtual ~{ksf_interface.name}PrxCallbackPromise() = default;
+│ │  \n"""
+│ │  
+│ │ +        dispatch_case_str = ""
+│ │ +        case_index = 0
+│ │          for item in ksf_interface.operator:
+│ │              operator = ksf_interface.operator[item]
+│ │              parsed_str += f"""\
+│ │  public:
+│ │ -    struct Promise{operator.name}: virtual public KS_HandleBase
+│ │ -    {{
+│ │ +    struct Promise{operator.name}: virtual public KS_HandleBase {{
+│ │      public:
+│ │          std::map<std::string, std::string> _mRspContext;\n"""
+│ │  
+│ │              if operator.return_type['name'] != 'void':
+│ │                  parsed_str += f"        {self.parse_type(curr_module, operator.return_type)} _ret;\n"
+│ │  
+│ │              for item in operator.output:
+│ │ @@ -720,106 +780,101 @@
+│ │      {ksf_interface.name}PrxCallbackPromise(const ksf::Promise<{ksf_interface.name}PrxCallbackPromise::Promise{operator.name}Ptr> &promise)
+│ │      : _promise_{operator.name}(promise) {{}}
+│ │      
+│ │      virtual void callback_{operator.name}(const {ksf_interface.name}PrxCallbackPromise::Promise{operator.name}Ptr &ptr) {{
+│ │          _promise_{operator.name}.setValue(ptr);
+│ │      }}
+│ │      
+│ │ -    virtual void callback_{operator.name}_exception(ksf::Int32 ret)
+│ │ -    {{
+│ │ +    virtual void callback_{operator.name}_exception(ksf::Int32 ret) {{
+│ │          std::stringstream oss;
+│ │          oss << "Function:{operator.name}_exception|Ret:";
+│ │          oss << ret;
+│ │          _promise_{operator.name}.setException(ksf::copyException(oss.str(), ret));
+│ │      }}
+│ │      
+│ │ -    protected:
+│ │ -        ksf::Promise<{ksf_interface.name}PrxCallbackPromise::Promise{operator.name}Ptr > _promise_{operator.name};\n\n"""
+│ │ +protected:
+│ │ +    ksf::Promise<{ksf_interface.name}PrxCallbackPromise::Promise{operator.name}Ptr > _promise_{operator.name};\n\n"""
+│ │  
+│ │              def parse_var_dispatch(var, name, index):
+│ │ -                if var['type'] == 'void':
+│ │ +                if var['name'] == 'void':
+│ │                      return ""
+│ │  
+│ │                  return f"""\
+│ │                      _is.read(ptr->{name}, {index}, true);\n"""
+│ │  
+│ │              def parse_func_dispatch():
+│ │                  """处理函数的分发"""
+│ │ -                func_case_str = ""
+│ │ -                index = 0
+│ │ -                for item in ksf_interface.operator:
+│ │ -                    operator = ksf_interface.operator[item]
+│ │ -                    func_case_str += f"""
+│ │ -            case {index}: {{
+│ │ +                func_case_str = f"""\
+│ │ +            case {case_index}: {{
+│ │                  if (msg->response->iRet != ksf::KSFSERVERSUCCESS) {{
+│ │                      callback_{operator.name}_exception(msg->response->iRet);
+│ │                      return msg->response->iRet;
+│ │                  }}
+│ │  
+│ │                  ksf::KsfInputStream<ksf::BufferReader> _is;
+│ │                  _is.setBuffer(msg->response->sBuffer);
+│ │ -                {ksf_interface.name}PrxCallbackPromise::PromisetestConHashPtr ptr = new {ksf_interface.name}PrxCallbackPromise::PromisetestConHash();
+│ │ +                {ksf_interface.name}PrxCallbackPromise::Promise{operator.name}Ptr ptr = new {ksf_interface.name}PrxCallbackPromise::Promise{operator.name}();
+│ │                  
+│ │                  try {{\n"""
+│ │ -                    func_case_list = []
+│ │ -                    ret = parse_var_dispatch(operator.return_type, '_ret', 0)
+│ │ -                    if ret != "":
+│ │ -                        func_case_list.append(ret)
+│ │ -
+│ │ -                    for item2 in operator.output:
+│ │ -                        var2 = operator.output[item2]
+│ │ -                        func_case_list.append(parse_var_dispatch(var2.value_type, var2.name, var2.index))
+│ │  
+│ │ -                    func_case_str += ''.join(func_case_list)
+│ │ +                func_case_list = []
+│ │ +                ret = parse_var_dispatch(operator.return_type, '_ret', 0)
+│ │ +                if ret != "":
+│ │ +                    func_case_list.append(ret)
+│ │  
+│ │ -                    func_case_str += f"""\
+│ │ -                }}
+│ │ -                catch (std::exception &ex) {{
+│ │ +                for item2 in operator.output:
+│ │ +                    var2 = operator.output[item2]
+│ │ +                    func_case_list.append(parse_var_dispatch(var2.value_type, var2.name, var2.index))
+│ │ +
+│ │ +                func_case_str += ''.join(func_case_list)
+│ │ +                return func_case_str
+│ │ +            case_index += 1
+│ │ +            dispatch_case_str += parse_func_dispatch()
+│ │ +            dispatch_case_str += f"""\
+│ │ +                }} catch (std::exception &ex) {{
+│ │                      callback_{operator.name}_exception(ksf::KSFCLIENTDECODEERR);
+│ │                      return ksf::KSFCLIENTDECODEERR;
+│ │ -                }}
+│ │ -                catch (...) {{
+│ │ +                }} catch (...) {{
+│ │                      callback_{operator.name}_exception(ksf::KSFCLIENTDECODEERR);
+│ │                      return ksf::KSFCLIENTDECODEERR;
+│ │                  }}
+│ │                  
+│ │ -                ptr->_mRspContext = _msg_->response->context;
+│ │ +                ptr->_mRspContext = msg->response->context;
+│ │                  callback_{operator.name}(ptr);
+│ │                  return ksf::KSFSERVERSUCCESS;
+│ │              }}\n"""
+│ │  
+│ │ -                    index += 1
+│ │ -
+│ │ -                return func_case_str
+│ │ -
+│ │ -            parsed_str += f"""\
+│ │ +        parsed_str += f"""\
+│ │  public:
+│ │ -    virtual int onDispatch(ksf::ReqMessagePtr _msg_)
+│ │ +    int onDispatch(ksf::ReqMessagePtr msg) override
+│ │      {{
+│ │          static std::string __{ksf_interface.name}_all[] = {{"{'", "'.join(ksf_interface.operator.keys())}"}};
+│ │  
+│ │ -        std::pair<std::string *, std::string *> r = equal_range(__{ksf_interface.name}_all, __{ksf_interface.name}_all + 9, std::string(_msg_->request.sFuncName));
+│ │ +        std::pair<std::string *, std::string *> r = equal_range(__{ksf_interface.name}_all, __{ksf_interface.name}_all + 9, std::string(msg->request.sFuncName));
+│ │  
+│ │          if (r.first == r.second) {{
+│ │              return ksf::KSFSERVERNOFUNCERR;
+│ │          }}
+│ │  
+│ │ -        switch (r.first - __{ksf_interface.name}_all) {{
+│ │ -{parse_func_dispatch()}
+│ │ +        switch (r.first - __{ksf_interface.name}_all) {{\n"""
+│ │ +        parsed_str += dispatch_case_str
+│ │ +        parsed_str += f"""\
+│ │          }} //end switch
+│ │ -    }} //end onDispatch"""
+│ │ +        
+│ │ +        return ksf::KSFSERVERNOFUNCERR;
+│ │ +    }} //end onDispatch\n"""
+│ │  
+│ │          parsed_str += f"\n}}; //end {ksf_interface.name}PrxCallbackPromise\n\n" \
+│ │                        f"using {ksf_interface.name}PrxCallbackPromisePtr = ksf::KS_AutoPtr<{ksf_interface.name}PrxCallbackPromise>;\n" \
+│ │                        f"\n"
+│ │          return parsed_str
+│ │  
+│ │      def parse_InterfaceCoroPrxCallback(self, curr_module, ksf_interface: KsfInterface):
+│ │          def parse_var_dispatch(var, name, index):
+│ │ -            if var['type'] == 'void':
+│ │ +            if var['name'] == 'void':
+│ │                  return ""
+│ │  
+│ │              return f"""\
+│ │                      {self.parse_type(curr_module, var)} {name};
+│ │                      _is.read({name}, {index}, true);\n\n"""
+│ │  
+│ │          def parse_func_dispatch():
+│ │ @@ -888,28 +943,28 @@
+│ │  
+│ │              return func_case_str
+│ │  
+│ │          parsed_str = f"""\
+│ │  class {ksf_interface.name}CoroPrxCallback : public {ksf_interface.name}PrxCallback
+│ │  {{
+│ │  public:
+│ │ -    virtual ~{ksf_interface.name}CoroPrxCallback() == default;
+│ │ +    virtual ~{ksf_interface.name}CoroPrxCallback() = default;
+│ │  
+│ │  public:
+│ │ -    virtual const std::map<std::string, std::string> &getResponseContext() const {{ return _mRspContext; }}
+│ │ +    const std::map<std::string, std::string> &getResponseContext() const override {{ return _mRspContext; }}
+│ │      
+│ │      virtual void setResponseContext(const std::map<std::string, std::string> &mContext) {{ _mRspContext = mContext; }}
+│ │  """
+│ │          parsed_str += f"""\
+│ │  public:
+│ │ -    virtual int onDispatch(ksf::ReqMessagePtr _msg_)
+│ │ +    int onDispatch(ksf::ReqMessagePtr msg) override
+│ │      {{
+│ │          static std::string __{ksf_interface.name}_all[] = {{"{'", "'.join(ksf_interface.operator.keys())}"}};
+│ │  
+│ │ -        std::pair<std::string *, std::string *> r = equal_range(__{ksf_interface.name}_all, __{ksf_interface.name}_all + 9, std::string(_msg_->request.sFuncName));
+│ │ +        std::pair<std::string *, std::string *> r = equal_range(__{ksf_interface.name}_all, __{ksf_interface.name}_all + 9, std::string(msg->request.sFuncName));
+│ │  
+│ │          if (r.first == r.second) {{
+│ │              return ksf::KSFSERVERNOFUNCERR;
+│ │          }}
+│ │  
+│ │          switch (r.first - __{ksf_interface.name}_all) {{
+│ │  {parse_func_dispatch()}
+│ │ @@ -1036,15 +1091,15 @@
+│ │      {ksf_interface.name}Proxy* ksf_set_timeout(int msecond) {{
+│ │          return ({ksf_interface.name}Proxy*)Agent::ksf_set_timeout(msecond);
+│ │      }}
+│ │  
+│ │      static const char* ksf_prxname() {{ return "{ksf_interface.name}Proxy"; }}
+│ │      
+│ │  {parse_operators()}
+│ │ -}} //end {ksf_interface.name}Proxy
+│ │ +}}; //end {ksf_interface.name}Proxy
+│ │  
+│ │  using {ksf_interface.name}Prx = ksf::KS_AutoPtr<{ksf_interface.name}Proxy>;\n\n"""
+│ │  
+│ │          return parsed_str
+│ │  
+│ │      def parse_InterfaceObj(self, curr_module, ksf_interface: KsfInterface):
+│ │          parsed_str = f"""\
+│ │ @@ -1077,14 +1132,25 @@
+│ │                              parsed_list.append(f"""{var.name}, """)
+│ │                      else:
+│ │                          var = operator.output[name]
+│ │                          parsed_list.append(f"""{var.name}, """)
+│ │  
+│ │                  return ''.join(parsed_list)
+│ │  
+│ │ +            def parse_vars_list(tab=None):
+│ │ +                parsed_list = []
+│ │ +                for name, is_output in operator.ordered_var:
+│ │ +                    if not is_output:
+│ │ +                        var = operator.input[name]
+│ │ +                    else:
+│ │ +                        var = operator.output[name]
+│ │ +                    parsed_list.append(f"""{self.parse_type(curr_module, var.value_type)} {var.name};""")
+│ │ +
+│ │ +                return '\n'.join([' ' * (4 * tab) + line for line in parsed_list])
+│ │ +
+│ │              def parse_output_vars(mode='ksf', tab=None):
+│ │                  if tab is None:
+│ │                      tab = 0
+│ │  
+│ │                  parsed_list = []
+│ │                  if operator.return_type['name'] != 'void':
+│ │                      if mode == 'ksf':
+│ │ @@ -1115,20 +1181,24 @@
+│ │                          if with_input:
+│ │                              parsed_list.append(
+│ │                                  f"{self.parse_type(curr_module, operator.output[var_name].value_type)} &{var_name}, ")
+│ │                          else:
+│ │                              parsed_list.append(
+│ │                                  f", const {self.parse_type(curr_module, operator.output[var_name].value_type)} &{var_name}")
+│ │                      elif with_input:
+│ │ -                        if self.with_param_rvalue_ref and self.is_movable_type(curr_module, operator.input[var_name].value_type):
+│ │ -                            parsed_list.append(
+│ │ -                                f"{self.parse_type(curr_module, operator.input[var_name].value_type)} &&{var_name}, ")
+│ │ +                        if self.is_movable_type(curr_module, operator.input[var_name].value_type):
+│ │ +                            if self.with_param_rvalue_ref:
+│ │ +                                parsed_list.append(
+│ │ +                                    f"{self.parse_type(curr_module, operator.input[var_name].value_type)} &&{var_name}, ")
+│ │ +                            else:
+│ │ +                                parsed_list.append(
+│ │ +                                    f"const {self.parse_type(curr_module, operator.input[var_name].value_type)} &{var_name}, ")
+│ │                          else:
+│ │                              parsed_list.append(
+│ │ -                                f"const {self.parse_type(curr_module, operator.input[var_name].value_type)} &{var_name}, ")
+│ │ +                                f"{self.parse_type(curr_module, operator.input[var_name].value_type)} {var_name}, ")
+│ │  
+│ │                  return parsed_list
+│ │  
+│ │              parsed_str += f"""\
+│ │  {self.parse_comment_above(operator.comment, tab='    ')}\
+│ │      virtual {self.parse_type(curr_module, operator.return_type) if has_return() else 'void'} {operator.name}({''.join(parse_all_vars(True))}ksf::KsfCurrentPtr _current_) = 0;\n\n"""
+│ │  
+│ │ @@ -1158,15 +1228,15 @@
+│ │              parsed_async_str += f"""\
+│ │              case ksf::KSFVERSION: {{
+│ │                  ksf::KsfOutputStream<ksf::BufferWriterVector> _os;
+│ │  {parse_output_vars(mode='ksf', tab=4)}
+│ │                  _current_->sendResponse(ksf::KSFSERVERSUCCESS, _os);
+│ │                  break;
+│ │              }}
+│ │ -                default: {{std::runtime_error("unsupport ksf packet version");}}
+│ │ +            default: {{std::runtime_error("unsupport ksf packet version");}}
+│ │          }} // end switch\n\n"""
+│ │  
+│ │              # 链路追踪
+│ │              if self.with_trace:
+│ │                  if not self.with_json:
+│ │                      raise SyntaxError("如果需要链路追踪，需要打开生成Json序列化支持(--json)")
+│ │  
+│ │ @@ -1184,31 +1254,32 @@
+│ │              
+│ │              KSF_TRACE(_current_->getTraceKey(), TRACE_ANNOTATION_SS, "", ksf::ServerConfig::Application + "." + ksf::ServerConfig::ServerName, "test", 0, _trace_param_, "");
+│ │          }}\n"""
+│ │              dispatch_case_str += f"""\
+│ │              case {index}: {{
+│ │                  ksf::KsfInputStream<ksf::BufferReader> _is;
+│ │                  _is.setBuffer(_current->getRequestBuffer());
+│ │ -                switch (_current->getRequestVersion()): {{
+│ │ +{parse_vars_list(tab=4)}
+│ │ +                switch (_current->getRequestVersion()) {{
+│ │                      case ksf::KUPVERSION: {{
+│ │                          ksf::kup::UniAttribute<ksf::BufferWriterVector, ksf::BufferReader>  _ksfAttr_;
+│ │                          _ksfAttr_.setVersion(_current->getRequestVersion());
+│ │                          _ksfAttr_.decode(_current->getRequestBuffer());
+│ │                          break;
+│ │                      }} 
+│ │                      case ksf::JSONVERSION: {{
+│ │                          ksf::JsonValueObjPtr _jsonPtr = ksf::JsonValueObjPtr::dynamicCast(ksf::KS_Json::getValue(_current->getRequestBuffer()));
+│ │                          break;
+│ │                      }}
+│ │                      default: {{}}
+│ │                  }}
+│ │                  
+│ │ -                {"ksf::Int32 _ret = " if has_return() else ""}{operator.name}({parse_invoke_vars()}_current);
+│ │ +                {f"{self.parse_type(curr_module, operator.return_type)} _ret = " if has_return() else ""}{operator.name}({parse_invoke_vars()}_current);
+│ │                  if(_current->isResponse()) {{
+│ │ -                    switch (_current->getRequestVersion()): {{
+│ │ +                    switch (_current->getRequestVersion()) {{
+│ │                          case ksf::KUPVERSION: {{
+│ │                              ksf::kup::UniAttribute<ksf::BufferWriterVector, ksf::BufferReader>  _ksfAttr_;
+│ │                              _ksfAttr_.setVersion(_current->getRequestVersion());
+│ │  {parse_output_vars(mode='kup', tab=7)}
+│ │                              _ksfAttr_.encode(_sResponseBuffer);
+│ │                              break;
+│ │                          }} 
+│ │ @@ -1232,15 +1303,15 @@
+│ │              }}\n"""
+│ │              index += 1
+│ │  
+│ │              parsed_async_str += f"""\
+│ │      }}
+│ │  \n"""
+│ │              parsed_push_str += f"""\
+│ │ -    static void async_response_push_{operator.name}(ksf::KsfCurrentPtr _current_{''.join(parse_all_vars())})
+│ │ +    static void async_response_push_{operator.name}(ksf::KsfCurrentPtr _current_{''.join(parse_all_vars())}, const std::map<std::string, std::string> &_context = ksf::Current::KSF_STATUS())
+│ │      {{
+│ │          {{
+│ │              ksf::KsfOutputStream<ksf::BufferWriterVector> _os;
+│ │  {parse_output_vars(mode='ksf', tab=3)}
+│ │              _current_->sendPushResponse(ksf::KSFSERVERSUCCESS, "{operator.name}", _os, _context);
+│ │          }}
+│ │      }}
+│ │ @@ -1253,50 +1324,59 @@
+│ │          parsed_str += f"""public:
+│ │  /*推送应答的封装函数*/\n\n"""
+│ │  
+│ │          parsed_str += parsed_push_str
+│ │  
+│ │          parsed_str += f"""\
+│ │  public:
+│ │ -    virtual int onDispatch(ksf::ReqMessagePtr _msg_)
+│ │ +    int onDispatch(ksf::KsfCurrentPtr _current, std::vector<char> &_sResponseBuffer) override
+│ │      {{
+│ │          static std::string __{ksf_interface.name}_all[] = {{"{'", "'.join(ksf_interface.operator.keys())}"}};
+│ │                                              
+│ │ -        std::pair<std::string *, std::string *> r = equal_range(__{ksf_interface.name}_all, __{ksf_interface.name}_all + 9, std::string(_msg_->request.sFuncName));
+│ │ +        std::pair<std::string *, std::string *> r = equal_range(__{ksf_interface.name}_all, __{ksf_interface.name}_all + 9, _current->getFuncName());
+│ │          
+│ │          if (r.first == r.second) {{
+│ │              return ksf::KSFSERVERNOFUNCERR;
+│ │          }}
+│ │          
+│ │          switch (r.first - __{ksf_interface.name}_all) {{
+│ │  """
+│ │  
+│ │          parsed_str += dispatch_case_str
+│ │          parsed_str += f"""\
+│ │          }} //end switch
+│ │ -    }} //end onDispatch"""
+│ │ +        
+│ │ +        return ksf::KSFSERVERNOFUNCERR;
+│ │ +    }} //end onDispatch\n"""
+│ │  
+│ │          parsed_str += f"""}}; // end {ksf_interface.name}\n\n"""
+│ │          return parsed_str
+│ │  
+│ │      def parse_interface(self, curr_module, ksf_interface: KsfInterface):
+│ │          interface_str = ''
+│ │  
+│ │ +        self.add_include("<servant/Agent.h>")
+│ │ +        self.add_include("<servant/Servant.h>")
+│ │ +
+│ │          interface_str += self.add_lines(self.parse_InterfacePrxCallBack(curr_module, ksf_interface))
+│ │ +        self.add_include("<promise/promise.h>")
+│ │          interface_str += self.add_lines(self.parse_InterfacePrxCallbackPromise(curr_module, ksf_interface))
+│ │          interface_str += self.parse_InterfaceCoroPrxCallback(curr_module, ksf_interface)
+│ │          interface_str += self.parse_InterfaceProxy(curr_module, ksf_interface)
+│ │          interface_str += self.parse_InterfaceObj(curr_module, ksf_interface)
+│ │  
+│ │          return interface_str
+│ │  
+│ │      def to_file(self):
+│ │ -        # 生成头文件
+│ │ -        for inc in self.ast_in_file.includes:
+│ │ -            self.add_include(f'"{inc.name[:-4]}.h"')
+│ │ +        # 生成头文件（需要判断是否忽略路径)
+│ │ +        for inc, inc_file_name in self.ast_in_file.includes:
+│ │ +            if self.with_ignore_relative_path:
+│ │ +                self.add_include(f'"{inc.name[:-4]}.h"')
+│ │ +            else:
+│ │ +                self.add_include(f'"{inc_file_name[:-4]}.h"')
+│ │  
+│ │          curr_module = None
+│ │          for ele in self.ast_in_file.elements:
+│ │              # 生成命名空间
+│ │              if curr_module is None:
+│ │                  curr_module = ele.module
+│ │                  self.file_str += self.curr_tab + f"namespace {ele.module} {{\n\n"
+│ │ @@ -1314,26 +1394,27 @@
+│ │                  self.file_str += self.parse_struct(curr_module, ele)
+│ │                  pass
+│ │              elif isinstance(ele, KsfInterface) and self.with_rpc:
+│ │                  self.file_str += self.parse_interface(curr_module, ele)
+│ │  
+│ │          self.file_str += f"}} //end {curr_module}\n\n"
+│ │  
+│ │ -        self.file_str = self.parse_header() + "\n\n" + self.file_str
+│ │ +        self.file_str = "#pragma once\n\n" + self.parse_header() + "\n\n" + self.file_str
+│ │          # print(self.file_str)
+│ │  
+│ │          with self.generated_file.open("w") as f:
+│ │              f.write(self.file_str)
+│ │  
+│ │  
+│ │  def cpp_gen(files, include_dirs, destination_dir, flags=None):
+│ │      # 读取文件
+│ │      # parser_grammar = {}
+│ │      if flags is None:
+│ │          flags = defaultdict(bool)
+│ │ +
+│ │      file_path = files
+│ │  
+│ │      real_inc_dirs = set()
+│ │      for inc in include_dirs:
+│ │          real_inc_dirs.add(str(Path(inc).resolve()))
+│ │      ast = generate(file_path, real_inc_dirs, flags['with_current_priority'])
+│ │      for file in file_path:
+│ │   --- ksfctl-0.1/ksfctl/parser/ksf_lex.py
+│ ├── +++ ksfctl-0.2/ksfctl/parser/ksf_lex.py
+│ │┄ Files 4% similar despite different names
+│ │ @@ -31,15 +31,15 @@
+│ │          'EQUALS',
+│ │          # 'DOT',
+│ │          # 输出参数前缀
+│ │          'OUTPUT',
+│ │  
+│ │          'IDENTIFIER',
+│ │          'STRING_CONSTANT',
+│ │ -        'INT_CONSTANT',
+│ │ +        # 'INT_CONSTANT',
+│ │          'RADIX_CONSTANT',
+│ │          'EXPR_CONSTANT',
+│ │  
+│ │          # 限定
+│ │          'UNSIGNED',
+│ │  
+│ │          # 字段模式
+│ │ @@ -54,14 +54,17 @@
+│ │          'SHORT',
+│ │          'BOOL',
+│ │          'CHAR',
+│ │          'STRING',
+│ │          'VECTOR',
+│ │          'MAP',
+│ │  
+│ │ +        'FALSE',
+│ │ +        'TRUE',
+│ │ +
+│ │          'COMMENT_MULTILINE',
+│ │          'COMMENT_LINE',
+│ │      )
+│ │  
+│ │      # 定义词法规则优先级
+│ │      precedence = (
+│ │          ('left', 'EXPR_CONSTANT'),
+│ │ @@ -123,15 +126,16 @@
+│ │              "double": "DOUBLE",
+│ │              "float": "FLOAT",
+│ │              "int": "INT",
+│ │              "unsigned": "UNSIGNED",
+│ │              "key": "KEY",
+│ │              "out": "OUTPUT",
+│ │              "const": "CONST",
+│ │ -
+│ │ +            "false": "FALSE",
+│ │ +            "true": "TRUE",
+│ │          }.get(t.value, "IDENTIFIER")
+│ │          return t
+│ │  
+│ │      # 定义字符串
+│ │      def t_STRING_CONSTANT(self, t):
+│ │          r""""[^"]*\""""
+│ │          t.value = t.value[1:-1]
+│ │ @@ -143,20 +147,14 @@
+│ │          return t
+│ │  
+│ │      # 定义科学计数的正则表达式
+│ │      def t_EXPR_CONSTANT(self, t):
+│ │          r'(-?\d+(\.\d+)?([eE][-+]?\d+)?)'
+│ │          return t
+│ │  
+│ │ -
+│ │ -    # 定义整数的正则表达式
+│ │ -    def t_INT_CONSTANT(self, t):
+│ │ -        r'\d+'
+│ │ -        return t
+│ │ -
+│ │      def t_COMMENT_LINE(self, t):
+│ │          r"""//.*"""
+│ │          t.value = t.value[2:]
+│ │          return t
+│ │  
+│ │      # 定义包含关键字的规则
+│ │      def t_INCLUDE(self, t):
+│ │ @@ -168,15 +166,15 @@
+│ │  
+│ │      def t_newline(self, t):
+│ │          r"\n+"
+│ │          t.lexer.lineno += len(t.value)
+│ │  
+│ │      # 定义错误处理函数，打印错误信息
+│ │      def t_error(self, t):
+│ │ -        t.lineno, t.lexpos = self.find_position(t.lexer.lexdata, t.lexpos)
+│ │ +        t.lineno, t.lexpos = self.find_position(t.lexer.lexdata, t)
+│ │          print("Illegal character '%s'" % t.value[0])
+│ │          t.lexer.skip(1)
+│ │  
+│ │      # 编译lexer
+│ │      def build(self, **kwargs):
+│ │          self.lexer = lex.lex(module=self, **kwargs)
+│ │  
+│ │ @@ -225,11 +223,12 @@
+│ │      interface MyInterface {
+│ │          int add(int a, int b);
+│ │          void print(string message);
+│ │      }
+│ │  }
+│ │      '''
+│ │  
+│ │ -    file = Path('../../example/const_definition.ksf')
+│ │ +    # file = Path('../../example/const_definition.ksf')
+│ │ +    file = Path('/Users/xiongjuli/kingstar/ksf-cpp/event/proto/event/EventBase.ksf')
+│ │      with file.open() as f:
+│ │          # 将 KSF IDL 文件传递给词法分析器
+│ │          lexer.test(f.read())
+│ │   --- ksfctl-0.1/ksfctl/parser/ksf_parser.py
+│ ├── +++ ksfctl-0.2/ksfctl/parser/ksf_parser.py
+│ │┄ Files 0% similar despite different names
+│ │ @@ -16,16 +16,16 @@
+│ │  
+│ │      def add_struct(self, struct):
+│ │          self.elements.append(struct)
+│ │  
+│ │      def add_const(self, const):
+│ │          self.elements.append(const)
+│ │  
+│ │ -    def add_include(self, inc):
+│ │ -        self.includes.append(inc)
+│ │ +    def add_include(self, inc, inc_file_name):
+│ │ +        self.includes.append((inc, inc_file_name))
+│ │  
+│ │  
+│ │  class KsfEnumMember:
+│ │      def __init__(self, file, module, enum, name, value, comment=''):
+│ │          self.file = file
+│ │          self.module = module
+│ │          self.name = name
+│ │ @@ -268,9 +268,9 @@
+│ │  
+│ │      @classmethod
+│ │      def add_file(cls, file: Path):
+│ │          ksf_file = KsfFile(file)
+│ │          cls.files[file.name] = ksf_file
+│ │  
+│ │      @classmethod
+│ │ -    def add_include(cls, file: Path, include: Path):
+│ │ -        cls.files[file.name].add_include(include)
+│ │ +    def add_include(cls, file: Path, include: Path, inc_file_name: str):
+│ │ +        cls.files[file.name].add_include(include, inc_file_name)
+│ │   --- ksfctl-0.1/ksfctl/parser/ksf_yacc.py
+│ ├── +++ ksfctl-0.2/ksfctl/parser/ksf_yacc.py
+│ │┄ Files 3% similar despite different names
+│ │ @@ -1,15 +1,15 @@
+│ │  import json
+│ │  import warnings
+│ │  
+│ │  import ply.yacc as yacc
+│ │  
+│ │ +from ksfctl.parser.ksf_lex import KsfLexer
+│ │  from ksfctl.parser.ksf_parser import *
+│ │  from ksfctl.parser.tools import Graph
+│ │ -from ksfctl.parser.ksf_lex import KsfLexer
+│ │  
+│ │  
+│ │  class KsfParser:
+│ │      def __init__(self):
+│ │          # 解析语法的准备
+│ │          self.lexer = KsfLexer()
+│ │          self.lexer.build()
+│ │ @@ -75,20 +75,21 @@
+│ │          return_type : type
+│ │          """
+│ │          p[0] = p[1]
+│ │  
+│ │      def p_operation(self, p):
+│ │          """
+│ │          operation : comment_multi return_type operation_name LEFT_PAREN operation_param_list RIGHT_PAREN SEMICOLON comment_line
+│ │ +                  | comment_multi return_type operation_name LEFT_PAREN empty RIGHT_PAREN SEMICOLON comment_line
+│ │          """
+│ │          p[0] = {
+│ │              'type': 'operation',
+│ │              'name': p[3],
+│ │              'return_type': p[2],
+│ │ -            'variable': p[5],
+│ │ +            'variable': [] if p[5] is None else p[5],
+│ │              'comment': p[1] if p[1] is not None else p[8]
+│ │          }
+│ │  
+│ │      def p_element_list(self, p):
+│ │          """
+│ │          element_list : element
+│ │                       | element_list element
+│ │ @@ -98,15 +99,15 @@
+│ │          else:
+│ │              p[1].append(p[2])
+│ │              p[0] = p[1]
+│ │  
+│ │      def p_comment_multi(self, p):
+│ │          """
+│ │          comment_multi : COMMENT_MULTILINE
+│ │ -                | empty
+│ │ +                      | empty
+│ │          """
+│ │          if len(p) == 2 and isinstance(p[1], str):
+│ │              p[0] = p[1]
+│ │          else:
+│ │              p[0] = None
+│ │  
+│ │      def p_comment_line(self, p):
+│ │ @@ -166,15 +167,15 @@
+│ │              'value': p[6],
+│ │              'comment': p[1] if p[1] is not None else p[8],
+│ │          }
+│ │  
+│ │      ####### 枚举 ########
+│ │      def p_enum(self, p):
+│ │          """
+│ │ -        enum : comment_multi ENUM enum_name LEFT_BRACE enum_items RIGHT_BRACE SEMICOLON
+│ │ +        enum : comment_multi ENUM enum_name LEFT_BRACE enum_items opt_comma RIGHT_BRACE SEMICOLON
+│ │          """
+│ │          p[0] = {
+│ │              'element': 'enum',
+│ │              'name': p[3],
+│ │              'type': 'int32',
+│ │              'member': p[5],
+│ │              'comment': p[1]
+│ │ @@ -188,14 +189,20 @@
+│ │          p[0] = {
+│ │              'element': 'key',
+│ │              'struct': p[3],
+│ │              'args': p[5]
+│ │          }
+│ │  
+│ │      ######### 各类list #########
+│ │ +    def p_opt_comma(self, p):
+│ │ +        """
+│ │ +        opt_comma : COMMA
+│ │ +                  | empty
+│ │ +        """
+│ │ +
+│ │      #### 枚举值列表 ####
+│ │      def p_enum_items(self, p):
+│ │          """
+│ │          enum_items : enum_item
+│ │                     | enum_items COMMA enum_item
+│ │          """
+│ │          if len(p) == 2:
+│ │ @@ -307,21 +314,24 @@
+│ │  
+│ │      ######## 类型定义 ########
+│ │      def p_unsigned_type(self, p):
+│ │          """
+│ │          unsigned_type : UNSIGNED INT
+│ │                          | UNSIGNED SHORT
+│ │                          | UNSIGNED LONG
+│ │ +                        | UNSIGNED CHAR
+│ │          """
+│ │          if p[2] == 'long':
+│ │              p[0] = {'element': 'type', 'type': 'native', 'name': 'int', 'bit': 64, 'unsigned': True}
+│ │          elif p[2] == 'short':
+│ │              p[0] = {'element': 'type', 'type': 'native', 'name': 'int', 'bit': 16, 'unsigned': True}
+│ │          elif p[2] == 'int':
+│ │              p[0] = {'element': 'type', 'type': 'native', 'name': 'int', 'bit': 32, 'unsigned': True}
+│ │ +        elif p[2] == 'byte':
+│ │ +            p[0] = {'element': 'type', 'type': 'native', 'name': 'int', 'bit': 8, 'unsigned': True}
+│ │  
+│ │      def p_primitive_type(self, p):
+│ │          """
+│ │          primitive_type : INT
+│ │                         | SHORT
+│ │                         | LONG
+│ │                         | FLOAT
+│ │ @@ -464,46 +474,47 @@
+│ │               | struct_type
+│ │          """
+│ │          p[0] = p[1]
+│ │  
+│ │      ######## 值定义 ########
+│ │      def p_number_value(self, p):
+│ │          """
+│ │ -        number_value : INT_CONSTANT
+│ │ -        | EXPR_CONSTANT
+│ │ -        | RADIX_CONSTANT
+│ │ +        number_value : EXPR_CONSTANT
+│ │ +                     | RADIX_CONSTANT
+│ │          """
+│ │          p[0] = p[1]
+│ │  
+│ │      def p_string_value(self, p):
+│ │          """
+│ │          string_value : STRING_CONSTANT
+│ │          """
+│ │          p[0] = p[1]
+│ │  
+│ │      def p_bool_value(self, p):
+│ │          """
+│ │ -        bool_value : IDENTIFIER
+│ │ +        bool_value : TRUE
+│ │ +                   | FALSE
+│ │          """
+│ │ -        if p[1] == 'true':
+│ │ -            p[0] = p[1]
+│ │ -        elif p[1] == 'false':
+│ │ -            p[0] = p[1]
+│ │ -        else:
+│ │ -            raise SyntaxError('布尔类型只支持(0, 1)或者(false, true)')
+│ │ +        p[0] = p[1]
+│ │  
+│ │      def p_value(self, p):
+│ │          """
+│ │          value : string_value
+│ │                | number_value
+│ │                | bool_value
+│ │ +              | IDENTIFIER
+│ │          """
+│ │          is_number = True if p.slice[1].type == 'number_value' else False
+│ │          is_bool = True if p.slice[1].type == 'bool_value' else False
+│ │ -        p[0] = {'value': p[1], 'is_number': is_number, 'is_bool': is_bool}
+│ │ +        is_enum = True if p.slice[1].type == 'IDENTIFIER' else False
+│ │ +        p[0] = {'value': p[1],
+│ │ +                'is_number': is_number,
+│ │ +                'is_bool': is_bool,
+│ │ +                'is_enum': is_enum,
+│ │ +                }
+│ │  
+│ │      def p_ro(self, p):
+│ │          """
+│ │          ro : REQUIRED
+│ │             | OPTIONAL
+│ │          """
+│ │          if p[1] == 'require':
+│ │ @@ -586,14 +597,15 @@
+│ │          """
+│ │          pass
+│ │  
+│ │      def p_error(self, p):
+│ │          if p:
+│ │              if p.type in {'COMMENT_MULTILINE', 'COMMENT_LINE'}:
+│ │                  self.parser.errok()
+│ │ +                # print(f"Syntax error at token {p.type} ({p.value}), line {KsfLexer.find_position(p.lexer.lexdata, p.lexer)}")
+│ │                  return
+│ │              else:
+│ │                  raise SyntaxError(
+│ │                      f"Syntax error at token {p.type} ({p.value}), line {KsfLexer.find_position(p.lexer.lexdata, p.lexer)}")
+│ │          else:
+│ │              SyntaxError("Syntax error at EOF")
+│ │  
+│ │ @@ -657,15 +669,15 @@
+│ │          if name not in flag_dicts[flag]:
+│ │              return False, f"该名称[{name}]不存在"
+│ │  
+│ │          if filename is None or flag_dicts[flag][name] is None:
+│ │              return True, ""
+│ │  
+│ │          # 如果filename不为None, 则需要递归的判断一下该名称所在的文件是否位于当前文件所能依赖的所有文件中
+│ │ -        if flag_dicts[flag][name] in g_files_reverse.get_all_prev(filename, with_self=True):
+│ │ +        if flag_dicts[flag][name] == filename or flag_dicts[flag][name] in g_files_reverse.get_all_prev(filename, with_self=True):
+│ │              return True, ""
+│ │          else:
+│ │              return False, f"该名称[{name}]不位于被[{filename}]依赖的文件中"
+│ │  
+│ │      def traverse_all_file(func):
+│ │          # 处理单点文件
+│ │          for cur_file in grammar:
+│ │ @@ -679,15 +691,15 @@
+│ │      # exit(0)
+│ │      def check_module_depends(filename):
+│ │          for module_desc in grammar[filename]['module']:
+│ │              # print(f'检测文件[{filename}]的模块[{module_desc["name"]}]中...')
+│ │              module_name = module_desc["name"]
+│ │  
+│ │              # 判断类型是否合法
+│ │ -            def is_valid(etype):
+│ │ +            def is_valid(etype, default=None):
+│ │                  # native 为原生类型，不用解析
+│ │                  if etype['type'] == 'native':
+│ │                      return True
+│ │  
+│ │                  # vector 需递归解析
+│ │                  if etype['type'] == 'vector':
+│ │                      return is_valid(etype['value_type'])
+│ │ @@ -698,14 +710,31 @@
+│ │  
+│ │                  valid, err_msg = has_name('element',
+│ │                                            (module_name if etype['module'] is None else etype['module']) + '.' + etype[
+│ │                                                'name'], filename)
+│ │                  if not valid:
+│ │                      raise SyntaxError(err_msg)
+│ │  
+│ │ +                if default is not None:
+│ │ +                    if not default['is_enum']:
+│ │ +                        module_enum = default['value'].split("::")
+│ │ +                        if len(module_enum) == 1:
+│ │ +                            valid, err_msg = has_name('enum_member', (module_name if etype['module'] is None else etype['module']) + '.' + etype[
+│ │ +                                              'name'] + '.' + module_enum[0], filename)
+│ │ +                            if not valid:
+│ │ +                                raise SyntaxError(err_msg)
+│ │ +                        elif len(module_enum) == 2:
+│ │ +                            if module_enum[0] != (module_name if etype['module'] is None else etype['module']):
+│ │ +                                raise SyntaxError(f"默认的枚举值[{default['value']}]不属于该类型[{etype['name']}]")
+│ │ +
+│ │ +                            valid, err_msg = has_name('enum_member', (module_name if etype['module'] is None else etype['module']) + '.' + etype[
+│ │ +                                              'name'] + '.' + module_enum[1], filename)
+│ │ +                            if not valid:
+│ │ +                                raise SyntaxError(err_msg)
+│ │ +
+│ │              for element in module_desc['elements']:
+│ │                  if 'name' in element and is_name_collision('element', module_name + '.' + element['name'], filename):
+│ │                      raise SyntaxError(f"不允许有重复的模块元素命名{module_name + '.' + element['name']}")
+│ │  
+│ │                  # pretty_print(element)
+│ │                  # 判断是否成立的原则：
+│ │                  # 1. 类(结构体or枚举)之前是否有其他类定义，包括在依赖的文件中定义的
+│ │ @@ -721,15 +750,15 @@
+│ │                      for var in element['variable']:
+│ │                          if is_name_collision('struct_variable',
+│ │                                               module_name + '.' + element['name'] + '.' + var['name']):
+│ │                              raise SyntaxError(
+│ │                                  f"结构体[{module_name + '.' + element['name']}]不允许有重名的变量{var['name']}")
+│ │  
+│ │                          value_type = var['value_type']
+│ │ -                        is_valid(value_type)
+│ │ +                        is_valid(value_type, var['default'] if 'default' in var else None)
+│ │                  elif element['element'] == 'interface':
+│ │                      # 对于所有函数，判断 返回值类型、参数类型是否合法
+│ │                      # 对于所有函数，判断 参数名是否重复
+│ │                      for operator in element['operator']:
+│ │                          if is_name_collision('operator_name',
+│ │                                               module_name + '.' + element['name'] + '.' + operator['name']):
+│ │                              raise SyntaxError(
+│ │ @@ -867,15 +896,15 @@
+│ │                          curr_search_dirs = search_dirs
+│ │                          curr_search_dirs.add(str(file.parent.resolve()))
+│ │  
+│ │                          inc_path = find_file(include, curr_search_dirs, with_curr_dir_first)
+│ │                          if inc_path is None:
+│ │                              raise FileNotFoundError(f"依赖的头文件[{include}]未找到")
+│ │  
+│ │ -                        Ksf.add_include(file, inc_path)
+│ │ +                        Ksf.add_include(file, inc_path, include)
+│ │  
+│ │                          if str(Path(inc_path).name) not in parser_grammar:
+│ │                              parse_depends(inc_path)
+│ │  
+│ │      for file in files:
+│ │          parse_depends(file)
+│ │   --- ksfctl-0.1/ksfctl/parser/tools.py
+│ ├── +++ ksfctl-0.2/ksfctl/parser/tools.py
+│ │┄ Files identical despite different names

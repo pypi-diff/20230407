@@ -197,3 +197,71 @@
 [2023-04-07 17:22:07] INFO root fetch - processPackages [codenames]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/codenames-1.2.0.tar.gz tmp/codenames-1.2.1.tar.gz --html 20230407/c/codenames/1.2.0-1.2.1/index.html --text 20230407/c/codenames/1.2.0-1.2.1/diff.txt --markdown 20230407/c/codenames/1.2.0-1.2.1/diff.md
 [2023-04-07 17:22:08] INFO root fetch - main [MainThread]: success
 [2023-04-07 17:22:08] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:24:07] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17620266]
+[2023-04-07 17:24:12] INFO root fetch - main [MainThread]: Found 6 changed packages
+[2023-04-07 17:24:12] INFO root fetch - processPackages [govqa]: New version: [0.1.0] Old Version: [0.0.3]
+[2023-04-07 17:24:12] INFO root fetch - processPackages [morphqs]: New version: [0.1.9] Old Version: [0.1.8]
+[2023-04-07 17:24:12] INFO root fetch - processPackages [morphqs]: report already exists
+[2023-04-07 17:24:12] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:24:12] INFO root fetch - processPackages [ksfctl]: New version: [0.2] Old Version: [0.1]
+[2023-04-07 17:24:12] INFO root fetch - processPackages [CTADIRAC]: New version: [2.2a3] Old Version: [2.2.9]
+[2023-04-07 17:24:12] INFO root fetch - processPackages [prefect]: New version: [2.9.0] Old Version: [2.82]
+[2023-04-07 17:24:12] INFO root fetch - processPackages [pylettize]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 17:24:13] INFO root fetch - processPackages [prefect]: Downloading https://files.pythonhosted.org/packages/20/bd/9580e89a911969805904dd984258f2250f96726fbb91373970a41c36aab3/prefect-2.82.tar.gz
+[2023-04-07 17:24:13] INFO root fetch - processPackages [govqa]: Downloading https://files.pythonhosted.org/packages/32/77/941320a99679db32d28a24bc33468a0096bda53aabe89546c287f005e75d/govqa-0.0.3-py3-none-any.whl
+[2023-04-07 17:24:13] INFO root fetch - processPackages [ksfctl]: Downloading https://files.pythonhosted.org/packages/47/b7/a7a86eac6a372c3c40e565dceb44e691d038d0043ab8be728a564ae765b2/ksfctl-0.1.tar.gz
+[2023-04-07 17:24:13] INFO root fetch - processPackages [CTADIRAC]: Downloading https://files.pythonhosted.org/packages/c4/fd/863c06d80a7cb3f8b807886edd3b375bed2ee4d3a384cb8b7213479f2248/CTADIRAC-2.2.9.tar.gz
+[2023-04-07 17:24:13] INFO root fetch - processPackages [pylettize]: Downloading https://files.pythonhosted.org/packages/cb/3a/ddda06ef40c24bf6c4ac3bebafd5bbf79164569fa8ae648cfec2cdc285a1/pylettize-0.1.0.tar.gz
+[2023-04-07 17:24:13] INFO root fetch - processPackages [prefect]: Downloading https://files.pythonhosted.org/packages/52/49/e4a42ea984b987b634f492725a5484b96da5a97fda925a3d37ff0821ecae/prefect-2.9.0.tar.gz
+[2023-04-07 17:24:13] INFO root fetch - processPackages [prefect]: executing diffoscope
+[2023-04-07 17:24:13] INFO root fetch - processPackages [prefect]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/prefect-2.82.tar.gz tmp/prefect-2.9.0.tar.gz --html 20230407/p/prefect/2.82-2.9.0/index.html --text 20230407/p/prefect/2.82-2.9.0/diff.txt --markdown 20230407/p/prefect/2.82-2.9.0/diff.md
+[2023-04-07 17:24:13] INFO root fetch - processPackages [ksfctl]: Downloading https://files.pythonhosted.org/packages/eb/28/bfdb62a178a3999ec754623f86698dcff77dc3afc18d4ada8861f367ccdb/ksfctl-0.2.tar.gz
+[2023-04-07 17:24:13] INFO root fetch - processPackages [CTADIRAC]: Downloading https://files.pythonhosted.org/packages/b3/dc/eeb2adbd38eb21f4638e8a34f30ed6748361e02727136583e01b66570df8/CTADIRAC-2.2a3.tar.gz
+[2023-04-07 17:24:13] INFO root fetch - processPackages [CTADIRAC]: executing diffoscope
+[2023-04-07 17:24:13] INFO root fetch - processPackages [CTADIRAC]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/CTADIRAC-2.2.9.tar.gz tmp/CTADIRAC-2.2a3.tar.gz --html 20230407/C/CTADIRAC/2.2.9-2.2a3/index.html --text 20230407/C/CTADIRAC/2.2.9-2.2a3/diff.txt --markdown 20230407/C/CTADIRAC/2.2.9-2.2a3/diff.md
+[2023-04-07 17:24:13] INFO root fetch - processPackages [govqa]: Downloading https://files.pythonhosted.org/packages/6c/6b/f0fd74eea07b8d0bb0f1a724764dd03dd4fbd9a8d25fd9a82b6c4c3845e5/govqa-0.1.0-py3-none-any.whl
+[2023-04-07 17:24:13] INFO root fetch - processPackages [pylettize]: Downloading https://files.pythonhosted.org/packages/10/01/5068688543e6ffbc554d71359e8759cc55f2c53076495b54ab0b8bc9abe0/pylettize-0.1.1.tar.gz
+[2023-04-07 17:24:13] INFO root fetch - processPackages [ksfctl]: executing diffoscope
+[2023-04-07 17:24:13] INFO root fetch - processPackages [ksfctl]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/ksfctl-0.1.tar.gz tmp/ksfctl-0.2.tar.gz --html 20230407/k/ksfctl/0.1-0.2/index.html --text 20230407/k/ksfctl/0.1-0.2/diff.txt --markdown 20230407/k/ksfctl/0.1-0.2/diff.md
+[2023-04-07 17:24:13] INFO root fetch - processPackages [govqa]: executing diffoscope
+[2023-04-07 17:24:13] INFO root fetch - processPackages [govqa]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/govqa-0.0.3-py3-none-any.whl.zip tmp/govqa-0.1.0-py3-none-any.whl.zip --html 20230407/g/govqa/0.0.3-0.1.0/index.html --text 20230407/g/govqa/0.0.3-0.1.0/diff.txt --markdown 20230407/g/govqa/0.0.3-0.1.0/diff.md
+[2023-04-07 17:24:13] INFO root fetch - processPackages [pylettize]: executing diffoscope
+[2023-04-07 17:24:13] INFO root fetch - processPackages [pylettize]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/pylettize-0.1.0.tar.gz tmp/pylettize-0.1.1.tar.gz --html 20230407/p/pylettize/0.1.0-0.1.1/index.html --text 20230407/p/pylettize/0.1.0-0.1.1/diff.txt --markdown 20230407/p/pylettize/0.1.0-0.1.1/diff.md
+[2023-04-07 17:24:14] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:24:14] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:24:15] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:24:26] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:25:52] INFO root fetch - main [MainThread]: Get Changelog since Serial: [17620266]
+[2023-04-07 17:25:56] INFO root fetch - main [MainThread]: Found 8 changed packages
+[2023-04-07 17:25:56] INFO root fetch - processPackages [govqa]: New version: [0.1.0] Old Version: [0.0.3]
+[2023-04-07 17:25:56] INFO root fetch - processPackages [govqa]: report already exists
+[2023-04-07 17:25:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:25:56] INFO root fetch - processPackages [ksfctl]: New version: [0.2] Old Version: [0.1]
+[2023-04-07 17:25:56] INFO root fetch - processPackages [CTADIRAC]: New version: [2.2a3] Old Version: [2.2.9]
+[2023-04-07 17:25:56] INFO root fetch - processPackages [ksfctl]: report already exists
+[2023-04-07 17:25:56] INFO root fetch - processPackages [CTADIRAC]: report already exists
+[2023-04-07 17:25:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:25:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:25:56] INFO root fetch - processPackages [pylettize]: New version: [0.1.1] Old Version: [0.1.0]
+[2023-04-07 17:25:56] INFO root fetch - processPackages [pylettize]: report already exists
+[2023-04-07 17:25:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:25:56] INFO root fetch - processPackages [morphqs]: New version: [0.1.9] Old Version: [0.1.8]
+[2023-04-07 17:25:56] INFO root fetch - processPackages [morphqs]: report already exists
+[2023-04-07 17:25:56] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:25:56] INFO root fetch - processPackages [prefect]: New version: [2.9.0] Old Version: [2.82]
+[2023-04-07 17:25:56] INFO root fetch - processPackages [jmespath-community]: New version: [1.1.1] Old Version: [1.1.0rc2]
+[2023-04-07 17:25:56] INFO root fetch - processPackages [prefect]: executing diffoscope
+[2023-04-07 17:25:56] INFO root fetch - processPackages [prefect]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/prefect-2.82.tar.gz tmp/prefect-2.9.0.tar.gz --html 20230407/p/prefect/2.82-2.9.0/index.html --text 20230407/p/prefect/2.82-2.9.0/diff.txt --markdown 20230407/p/prefect/2.82-2.9.0/diff.md
+[2023-04-07 17:25:57] INFO root fetch - processPackages [imcascade]: New version: [1.1] Old Version: [1.0]
+[2023-04-07 17:25:57] INFO root fetch - processPackages [jmespath-community]: Downloading https://files.pythonhosted.org/packages/67/12/4e39463d7c536c59a69806a3dfc7c568164d12d48e6c1fb2268955421fdc/jmespath-community-1.1.0rc2.tar.gz
+[2023-04-07 17:25:57] INFO root fetch - processPackages [imcascade]: Downloading https://files.pythonhosted.org/packages/96/12/06ed7fe9172e43e15710b22023344fa3baa85a9977b14c2a2a574b3cbf41/imcascade-1.0.tar.gz
+[2023-04-07 17:25:57] INFO root fetch - processPackages [jmespath-community]: Downloading https://files.pythonhosted.org/packages/2b/2f/b5e6565b42e55bf245e9fc03172b2b24ea6a5455c7a274ddac2db5564016/jmespath-community-1.1.1.tar.gz
+[2023-04-07 17:25:57] INFO root fetch - processPackages [imcascade]: Downloading https://files.pythonhosted.org/packages/16/df/d592a4274d2f3559ee5d6b959d95e731254e80e87e4375536ffb54577b94/imcascade-1.1.tar.gz
+[2023-04-07 17:25:57] INFO root fetch - processPackages [jmespath-community]: executing diffoscope
+[2023-04-07 17:25:57] INFO root fetch - processPackages [jmespath-community]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/jmespath-community-1.1.0rc2.tar.gz tmp/jmespath-community-1.1.1.tar.gz --html 20230407/j/jmespath-community/1.1.0rc2-1.1.1/index.html --text 20230407/j/jmespath-community/1.1.0rc2-1.1.1/diff.txt --markdown 20230407/j/jmespath-community/1.1.0rc2-1.1.1/diff.md
+[2023-04-07 17:25:57] INFO root fetch - processPackages [imcascade]: executing diffoscope
+[2023-04-07 17:25:57] INFO root fetch - processPackages [imcascade]: podman run --user 0:0 --rm -w /home/abi/fetcher -v /home/abi/fetcher/tmp:/home/abi/fetcher/tmp:ro -v /home/abi/fetcher/20230407:/home/abi/fetcher/20230407:rw registry.salsa.debian.org/reproducible-builds/diffoscope --no-progress tmp/imcascade-1.0.tar.gz tmp/imcascade-1.1.tar.gz --html 20230407/i/imcascade/1.0-1.1/index.html --text 20230407/i/imcascade/1.0-1.1/diff.txt --markdown 20230407/i/imcascade/1.0-1.1/diff.md
+[2023-04-07 17:25:58] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:25:59] INFO root fetch - main [MainThread]: success
+[2023-04-07 17:28:57] ERROR root fetch - processPackages [prefect]: Timeout during execution of pkgdiff
+[2023-04-07 17:28:57] INFO root fetch - main [MainThread]: error

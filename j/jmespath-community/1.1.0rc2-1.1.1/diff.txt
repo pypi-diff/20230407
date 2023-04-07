@@ -1,0 +1,815 @@
+--- tmp/jmespath-community-1.1.0rc2.tar.gz
++++ tmp/jmespath-community-1.1.1.tar.gz
+├── filetype from file(1)
+│ @@ -1 +1 @@
+│ -gzip compressed data, was "jmespath-community-1.1.0rc2.tar", last modified: Sat Nov 19 07:23:47 2022, max compression
+│ +gzip compressed data, was "jmespath-community-1.1.1.tar", last modified: Fri Apr  7 15:27:58 2023, max compression
+│   --- jmespath-community-1.1.0rc2.tar
+├── +++ jmespath-community-1.1.1.tar
+│ ├── file list
+│ │ @@ -1,27 +1,28 @@
+│ │ -drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2022-11-19 07:23:47.400330 jmespath-community-1.1.0rc2/
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)     1084 2022-10-24 19:39:00.000000 jmespath-community-1.1.0rc2/LICENSE.txt
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)       39 2022-10-24 19:39:00.000000 jmespath-community-1.1.0rc2/MANIFEST.in
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)    10897 2022-11-19 07:23:47.400330 jmespath-community-1.1.0rc2/PKG-INFO
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)     7884 2022-11-19 07:20:36.000000 jmespath-community-1.1.0rc2/README.rst
+│ │ -drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2022-11-19 07:23:47.400330 jmespath-community-1.1.0rc2/bin/
+│ │ --rwxr-xr-x   0 springcomp  (1000) springcomp  (1000)     1698 2022-10-24 19:39:00.000000 jmespath-community-1.1.0rc2/bin/jp.py
+│ │ -drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2022-11-19 07:23:47.400330 jmespath-community-1.1.0rc2/jmespath/
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)      310 2022-11-19 07:20:40.000000 jmespath-community-1.1.0rc2/jmespath/__init__.py
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)     2445 2022-11-18 20:00:34.000000 jmespath-community-1.1.0rc2/jmespath/ast.py
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)      369 2022-11-18 19:54:14.000000 jmespath-community-1.1.0rc2/jmespath/compat.py
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)     4128 2022-10-24 19:39:00.000000 jmespath-community-1.1.0rc2/jmespath/exceptions.py
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)    20785 2022-11-18 20:15:46.000000 jmespath-community-1.1.0rc2/jmespath/functions.py
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)    10065 2022-11-18 20:18:14.000000 jmespath-community-1.1.0rc2/jmespath/lexer.py
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)    20561 2022-11-18 20:19:54.000000 jmespath-community-1.1.0rc2/jmespath/parser.py
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)    14394 2022-11-18 20:17:50.000000 jmespath-community-1.1.0rc2/jmespath/visitor.py
+│ │ -drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2022-11-19 07:23:47.400330 jmespath-community-1.1.0rc2/jmespath_community.egg-info/
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)    10897 2022-11-19 07:23:47.000000 jmespath-community-1.1.0rc2/jmespath_community.egg-info/PKG-INFO
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)      441 2022-11-19 07:23:47.000000 jmespath-community-1.1.0rc2/jmespath_community.egg-info/SOURCES.txt
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)        1 2022-11-19 07:23:47.000000 jmespath-community-1.1.0rc2/jmespath_community.egg-info/dependency_links.txt
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)       15 2022-11-19 07:23:47.000000 jmespath-community-1.1.0rc2/jmespath_community.egg-info/top_level.txt
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)      106 2022-11-19 07:23:47.400330 jmespath-community-1.1.0rc2/setup.cfg
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)     1233 2022-11-19 07:20:40.000000 jmespath-community-1.1.0rc2/setup.py
+│ │ -drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2022-11-19 07:23:47.400330 jmespath-community-1.1.0rc2/tests/
+│ │ -drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2022-11-19 07:23:47.400330 jmespath-community-1.1.0rc2/tests/legacy/
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)       16 2022-11-18 20:17:50.000000 jmespath-community-1.1.0rc2/tests/legacy/__init__.py
+│ │ --rw-r--r--   0 springcomp  (1000) springcomp  (1000)     1301 2022-11-18 20:17:50.000000 jmespath-community-1.1.0rc2/tests/legacy/test_lexer.py
+│ │ +drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2023-04-07 15:27:58.413715 jmespath-community-1.1.1/
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)     1113 2023-04-07 14:59:05.000000 jmespath-community-1.1.1/LICENSE
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)       35 2023-04-07 14:59:05.000000 jmespath-community-1.1.1/MANIFEST.in
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)    10906 2023-04-07 15:27:58.413715 jmespath-community-1.1.1/PKG-INFO
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)     7884 2023-04-07 14:58:41.000000 jmespath-community-1.1.1/README.rst
+│ │ +drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2023-04-07 15:27:58.413715 jmespath-community-1.1.1/bin/
+│ │ +-rwxr-xr-x   0 springcomp  (1000) springcomp  (1000)     1814 2023-04-07 14:58:41.000000 jmespath-community-1.1.1/bin/jp.py
+│ │ +drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2023-04-07 15:27:58.413715 jmespath-community-1.1.1/jmespath/
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)      307 2023-04-07 15:26:59.000000 jmespath-community-1.1.1/jmespath/__init__.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)     2736 2023-04-07 15:09:16.000000 jmespath-community-1.1.1/jmespath/ast.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)      369 2023-04-07 14:58:41.000000 jmespath-community-1.1.1/jmespath/compat.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)     4794 2023-04-07 15:09:16.000000 jmespath-community-1.1.1/jmespath/exceptions.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)    19822 2023-04-07 15:09:16.000000 jmespath-community-1.1.1/jmespath/functions.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)    10614 2023-04-07 15:09:16.000000 jmespath-community-1.1.1/jmespath/lexer.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)    21644 2023-04-07 15:09:16.000000 jmespath-community-1.1.1/jmespath/parser.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)     1417 2023-04-07 15:09:16.000000 jmespath-community-1.1.1/jmespath/scope.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)    13551 2023-04-07 15:09:16.000000 jmespath-community-1.1.1/jmespath/visitor.py
+│ │ +drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2023-04-07 15:27:58.413715 jmespath-community-1.1.1/jmespath_community.egg-info/
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)    10906 2023-04-07 15:27:58.000000 jmespath-community-1.1.1/jmespath_community.egg-info/PKG-INFO
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)      455 2023-04-07 15:27:58.000000 jmespath-community-1.1.1/jmespath_community.egg-info/SOURCES.txt
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)        1 2023-04-07 15:27:58.000000 jmespath-community-1.1.1/jmespath_community.egg-info/dependency_links.txt
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)       15 2023-04-07 15:27:58.000000 jmespath-community-1.1.1/jmespath_community.egg-info/top_level.txt
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)      102 2023-04-07 15:27:58.413715 jmespath-community-1.1.1/setup.cfg
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)     1242 2023-04-07 15:26:59.000000 jmespath-community-1.1.1/setup.py
+│ │ +drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2023-04-07 15:27:58.413715 jmespath-community-1.1.1/tests/
+│ │ +drwxr-xr-x   0 springcomp  (1000) springcomp  (1000)        0 2023-04-07 15:27:58.413715 jmespath-community-1.1.1/tests/legacy/
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)       16 2023-04-07 14:58:41.000000 jmespath-community-1.1.1/tests/legacy/__init__.py
+│ │ +-rw-r--r--   0 springcomp  (1000) springcomp  (1000)     1301 2023-04-07 14:58:41.000000 jmespath-community-1.1.1/tests/legacy/test_lexer.py
+│ │   --- jmespath-community-1.1.0rc2/PKG-INFO
+│ ├── +++ jmespath-community-1.1.1/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  Metadata-Version: 1.2
+│ │  Name: jmespath-community
+│ │ -Version: 1.1.0rc2
+│ │ +Version: 1.1.1
+│ │  Summary: JSON Matching Expressions
+│ │  Home-page: https://github.com/jmespath-community/jmespath.py
+│ │ -Author: James Saryerwinnie, Maxime Labelle
+│ │ -Author-email: springcomp@users.noreply.github.com
+│ │ +Author: James Saryerwinnie, Springcomp
+│ │ +Author-email: js@jamesls.com, springcomp@users.noreply.github.com
+│ │  License: MIT
+│ │  Description: JMESPath Community
+│ │          ==================
+│ │          
+│ │          
+│ │          .. image:: https://badges.gitter.im/Join Chat.svg
+│ │             :target: https://gitter.im/jmespath/chat
+│ │   --- jmespath-community-1.1.0rc2/README.rst
+│ ├── +++ jmespath-community-1.1.1/README.rst
+│ │┄ Files identical despite different names
+│ │   --- jmespath-community-1.1.0rc2/bin/jp.py
+│ ├── +++ jmespath-community-1.1.1/bin/jp.py
+│ │┄ Files 7% similar despite different names
+│ │ @@ -38,14 +38,17 @@
+│ │          sys.stdout.write('\n')
+│ │      except exceptions.ArityError as e:
+│ │          sys.stderr.write("invalid-arity: %s\n" % e)
+│ │          return 1
+│ │      except exceptions.JMESPathTypeError as e:
+│ │          sys.stderr.write("invalid-type: %s\n" % e)
+│ │          return 1
+│ │ +    except exceptions.JMESPathValueError as e:
+│ │ +        sys.stderr.write("invalid-value: %s\n" % e)
+│ │ +        return 1
+│ │      except exceptions.UnknownFunctionError as e:
+│ │          sys.stderr.write("unknown-function: %s\n" % e)
+│ │          return 1
+│ │      except exceptions.ParseError as e:
+│ │          sys.stderr.write("syntax-error: %s\n" % e)
+│ │          return 1
+│ │   --- jmespath-community-1.1.0rc2/jmespath/ast.py
+│ ├── +++ jmespath-community-1.1.1/jmespath/ast.py
+│ │┄ Files 10% similar despite different names
+│ │ @@ -6,14 +6,18 @@
+│ │      return {'type': 'arithmetic_unary', 'children': [expression], 'value': operator}
+│ │  
+│ │  
+│ │  def arithmetic(operator, left, right):
+│ │      return {'type': 'arithmetic', 'children': [left, right], 'value': operator}
+│ │  
+│ │  
+│ │ +def assign(name, expr):
+│ │ +    return {'type': 'assign', 'children': [expr], 'value': name}
+│ │ +
+│ │ +
+│ │  def comparator(name, first, second):
+│ │      return {'type': 'comparator', 'children': [first, second], 'value': name}
+│ │  
+│ │  
+│ │  def current_node():
+│ │      return {'type': 'current', 'children': []}
+│ │  
+│ │ @@ -54,14 +58,18 @@
+│ │      return {"type": "index_expression", 'children': children}
+│ │  
+│ │  
+│ │  def key_val_pair(key_name, node):
+│ │      return {"type": "key_val_pair", 'children': [node], "value": key_name}
+│ │  
+│ │  
+│ │ +def let_expression(bindings, expr):
+│ │ +    return {'type': 'let_expression', 'children': [*bindings, expr]}
+│ │ +
+│ │ +
+│ │  def literal(literal_value):
+│ │      return {'type': 'literal', 'value': literal_value, 'children': []}
+│ │  
+│ │  
+│ │  def multi_select_dict(nodes):
+│ │      return {"type": "multi_select_dict", "children": nodes}
+│ │  
+│ │ @@ -96,7 +104,11 @@
+│ │  
+│ │  def slice(start, end, step):
+│ │      return {"type": "slice", "children": [start, end, step]}
+│ │  
+│ │  
+│ │  def value_projection(left, right):
+│ │      return {'type': 'value_projection', 'children': [left, right]}
+│ │ +
+│ │ +
+│ │ +def variable_ref(name):
+│ │ +    return {"type": "variable_ref", "children": [], "value": name}
+│ │   --- jmespath-community-1.1.0rc2/jmespath/exceptions.py
+│ ├── +++ jmespath-community-1.1.1/jmespath/exceptions.py
+│ │┄ Files 9% similar despite different names
+│ │ @@ -108,15 +108,34 @@
+│ │      def __str__(self):
+│ │          return ('In function %s(), invalid type for value: %s, '
+│ │                  'expected one of: %s, received: "%s"' % (
+│ │                      self.function_name, self.current_value,
+│ │                      self.expected_types, self.actual_type))
+│ │  
+│ │  
+│ │ +@with_str_method
+│ │ +class JMESPathValueError(JMESPathError):
+│ │ +    def __init__(self, function_name, current_value, expected_types):
+│ │ +        self.function_name = function_name
+│ │ +        self.current_value = current_value
+│ │ +        self.expected_types = expected_types
+│ │ +
+│ │ +    def __str__(self):
+│ │ +        return ('In function %s(), invalid value: "%s", '
+│ │ +                'expected: %s"%s"' % (
+│ │ +                    self.function_name, self.current_value,
+│ │ +                    self.expected_types))
+│ │ +
+│ │  class EmptyExpressionError(JMESPathError):
+│ │      def __init__(self):
+│ │          super(EmptyExpressionError, self).__init__(
+│ │              "Invalid JMESPath expression: cannot be empty.")
+│ │  
+│ │  
+│ │  class UnknownFunctionError(JMESPathError):
+│ │      pass
+│ │ +
+│ │ +
+│ │ +class UndefinedVariable(JMESPathError):
+│ │ +    def __init__(self, varname):
+│ │ +        self.varname = varname
+│ │ +        super().__init__(f"Reference to undefined variable: {self.varname}")
+│ │   --- jmespath-community-1.1.0rc2/jmespath/functions.py
+│ ├── +++ jmespath-community-1.1.1/jmespath/functions.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -6,15 +6,14 @@
+│ │  from collections import OrderedDict
+│ │  
+│ │  from jmespath import exceptions
+│ │  from jmespath.compat import get_methods
+│ │  from jmespath.compat import iteritems
+│ │  from jmespath.compat import map
+│ │  from jmespath.compat import string_type as STRING_TYPE
+│ │ -from jmespath.compat import get_methods
+│ │  
+│ │  
+│ │  # python types -> jmespath types
+│ │  TYPES_MAP = {
+│ │      'bool': 'boolean',
+│ │      'list': 'array',
+│ │      'dict': 'object',
+│ │ @@ -82,20 +81,14 @@
+│ │          except KeyError:
+│ │              raise exceptions.UnknownFunctionError(
+│ │                  "Unknown function: %s()" % function_name)
+│ │          function = spec['function']
+│ │          signature = spec['signature']
+│ │          self._validate_arguments(resolved_args, signature, function_name)
+│ │  
+│ │ -        # supply extra arguments only if the function expects them
+│ │ -
+│ │ -        parameters = [parameter.name for parameter in inspect.signature(function).parameters.values()]
+│ │ -        if ('kwargs' in parameters):
+│ │ -            return function(self, *resolved_args, *args, scopes = kwargs.get('scopes'))
+│ │ -
+│ │          return function(self, *resolved_args)
+│ │  
+│ │      def _validate_arguments(self, args, signature, function_name):
+│ │          required_arguments_count = len([param for param in signature if not param.get('optional') or not param['optional']])
+│ │          optional_arguments_count = len([param for param in signature if param.get('optional') and param['optional']])
+│ │          has_variadic = signature[-1].get('variadic') if signature != None else False
+│ │          if has_variadic:
+│ │ @@ -332,32 +325,32 @@
+│ │  
+│ │      @signature(
+│ │          {'type': 'string'},
+│ │          {'type': 'string'},
+│ │          {'type': 'number', 'optional': True},
+│ │          {'type': 'number', 'optional': True})
+│ │      def _func_find_first(self, text, search, start = 0, end = None):
+│ │ -        self._ensure_integer('find_first', start, start)
+│ │ -        self._ensure_integer('find_first', end, end)
+│ │ +        self._ensure_integer('find_first', 'start', start)
+│ │ +        self._ensure_integer('find_first', 'end', end)
+│ │          return self._find_impl(
+│ │              text,
+│ │              search,
+│ │              lambda t, s: t.find(s),
+│ │              start, 
+│ │              end
+│ │          )
+│ │  
+│ │      @signature(
+│ │          {'type': 'string'},
+│ │          {'type': 'string'},
+│ │          {'type': 'number', 'optional': True},
+│ │          {'type': 'number', 'optional': True})
+│ │      def _func_find_last(self, text, search, start = 0, end = None):
+│ │ -        self._ensure_integer('find_last', start, start)
+│ │ -        self._ensure_integer('find_last', end, end)
+│ │ +        self._ensure_integer('find_last', 'start', start)
+│ │ +        self._ensure_integer('find_last', 'end', end)
+│ │          return self._find_impl(
+│ │              text,
+│ │              search,
+│ │              lambda t, s: t.rfind(s),
+│ │              start, 
+│ │              end
+│ │          )
+│ │ @@ -385,15 +378,15 @@
+│ │          return self._pad_impl(lambda : text.rjust(width, padding), padding)
+│ │  
+│ │      @signature(
+│ │          {'type': 'string'},
+│ │          {'type': 'number'},
+│ │          {'type': 'string', 'optional': True})
+│ │      def _func_pad_right(self, text, width, padding = ' '):
+│ │ -        self._ensure_non_negative_integer('pad_left', 'width', width)
+│ │ +        self._ensure_non_negative_integer('pad_right', 'width', width)
+│ │          return self._pad_impl(lambda : text.ljust(width, padding), padding)
+│ │  
+│ │      def _pad_impl(self, func, padding):
+│ │          if len(padding) != 1:
+│ │              raise exceptions.JMESPathError(
+│ │                  'syntax-error: pad_right() expects $padding to have a '
+│ │                  'single character, but received `{}` instead.'
+│ │ @@ -442,39 +435,31 @@
+│ │          self,
+│ │          func_name,
+│ │          param_name,
+│ │          param_value):
+│ │  
+│ │          if param_value != None: 
+│ │              if int(param_value) != param_value:
+│ │ -                raise exceptions.JMESPathError(
+│ │ -                    'invalid-type: {}() expects ${} to be a '
+│ │ -                    'integer, but received {} instead.'
+│ │ -                    .format(
+│ │ -                        func_name,
+│ │ -                        param_name,
+│ │ -                        param_value
+│ │ -                    ))
+│ │ +                raise exceptions.JMESPathValueError(
+│ │ +                    func_name,
+│ │ +                    param_value,
+│ │ +                    "integer")
+│ │  
+│ │      def _ensure_non_negative_integer(
+│ │          self,
+│ │          func_name,
+│ │          param_name,
+│ │          param_value):
+│ │  
+│ │          if param_value != None: 
+│ │              if int(param_value) != param_value or int(param_value) < 0:
+│ │ -                raise exceptions.JMESPathError(
+│ │ -                    'invalid-type: {}() expects ${} to be a '
+│ │ -                    'non-negative integer, but received {} instead.'
+│ │ -                    .format(
+│ │ -                        func_name,
+│ │ -                        param_name,
+│ │ -                        param_value
+│ │ -                    ))
+│ │ +                raise exceptions.JMESPathValueError(
+│ │ +                    func_name,
+│ │ +                    param_name,
+│ │ +                    "non-negative integer")
+│ │  
+│ │      @signature({'type': 'string'}, {'type': 'string', 'optional': True})
+│ │      def _func_trim(self, text, chars = None):
+│ │          if chars == None or len(chars) == 0:
+│ │              return text.strip()
+│ │          return text.strip(chars)
+│ │  
+│ │ @@ -545,20 +530,14 @@
+│ │                                          ['number', 'string'],
+│ │                                          'max_by')
+│ │          if array:
+│ │              return max(array, key=keyfunc)
+│ │          else:
+│ │              return None
+│ │  
+│ │ -    @signature({'types': ['object']}, {'types': ['expref']})
+│ │ -    def _func_let(self, scope, expref, *args, **kwargs):
+│ │ -        if 'scopes' in kwargs:
+│ │ -            kwargs.get('scopes').pushScope(scope)
+│ │ -        return expref.visit(expref.expression, expref.context, *args, **kwargs)
+│ │ -
+│ │      @signature({'types': ['array'], 'variadic': True})
+│ │      def _func_zip(self, *arguments):
+│ │          return list(map(list, zip(*arguments)))
+│ │  
+│ │      @signature({'types': ['array']}, {'types': ['expref']})
+│ │      def _func_group_by(self, array, expref):
+│ │          keyfunc = self._create_key_func(expref, ['null', 'string'], 'group_by')
+│ │   --- jmespath-community-1.1.0rc2/jmespath/lexer.py
+│ ├── +++ jmespath-community-1.1.1/jmespath/lexer.py
+│ │┄ Files 6% similar despite different names
+│ │ @@ -14,15 +14,14 @@
+│ │      SIMPLE_TOKENS = {
+│ │          '.': 'dot',
+│ │          '*': 'star',
+│ │          ']': 'rbracket',
+│ │          ',': 'comma',
+│ │          ':': 'colon',
+│ │          '@': 'current',
+│ │ -        '$': 'root',
+│ │          '(': 'lparen',
+│ │          ')': 'rparen',
+│ │          '{': 'lbrace',
+│ │          '}': 'rbrace',
+│ │          '+': 'plus',
+│ │          '%': 'modulo',
+│ │          u'\u2212': 'minus',
+│ │ @@ -111,44 +110,59 @@
+│ │              elif self._current == '<':
+│ │                  yield self._match_or_else('=', 'lte', 'lt')
+│ │              elif self._current == '>':
+│ │                  yield self._match_or_else('=', 'gte', 'gt')
+│ │              elif self._current == '!':
+│ │                  yield self._match_or_else('=', 'ne', 'not')
+│ │              elif self._current == '=':
+│ │ -                if self._next() == '=':
+│ │ -                    yield {'type': 'eq', 'value': '==',
+│ │ -                        'start': self._position - 1, 'end': self._position}
+│ │ -                    self._next()
+│ │ +                yield self._match_or_else('=', 'eq', 'assign')
+│ │ +            elif self._current == '$':
+│ │ +                if self._peek_may_be_valid_unquoted_identifier():
+│ │ +                    yield self._consume_variable()
+│ │                  else:
+│ │ -                    if self._current is None:
+│ │ -                        # If we're at the EOF, we never advanced
+│ │ -                        # the position so we don't need to rewind
+│ │ -                        # it back one location.
+│ │ -                        position = self._position
+│ │ -                    else:
+│ │ -                        position = self._position - 1
+│ │ -                    raise LexerError(
+│ │ -                        lexer_position=position,
+│ │ -                        lexer_value='=',
+│ │ -                        message="Unknown token '='")
+│ │ +                    yield {'type': 'root',
+│ │ +                           'value': self._current,
+│ │ +                           'start': self._position, 'end': self._position + 1}
+│ │ +                    self._next()
+│ │              else:
+│ │                  raise LexerError(lexer_position=self._position,
+│ │                                   lexer_value=self._current,
+│ │                                   message="Unknown token %s" % self._current)
+│ │          yield {'type': 'eof', 'value': '',
+│ │                 'start': self._length, 'end': self._length}
+│ │  
+│ │      def _consume_number(self):
+│ │          start = self._position
+│ │          buff = self._current
+│ │          while self._next() in self.VALID_NUMBER:
+│ │              buff += self._current
+│ │          return buff
+│ │  
+│ │ +    def _consume_variable(self):
+│ │ +        start = self._position
+│ │ +        buff = self._current
+│ │ +        self._next()
+│ │ +        if self._current not in self.START_IDENTIFIER:
+│ │ +            raise LexerError(
+│ │ +                lexer_position=start,
+│ │ +                lexer_value=self._current,
+│ │ +                message='Invalid variable starting character %s' % self._current)
+│ │ +        buff += self._current
+│ │ +        while self._next() in self.VALID_IDENTIFIER:
+│ │ +            buff += self._current
+│ │ +        return {'type': 'variable', 'value': buff,
+│ │ +                'start': start, 'end': start + len(buff)}
+│ │ +
+│ │ +    def _peek_may_be_valid_unquoted_identifier(self):
+│ │ +        if (self._position == self._length - 1):
+│ │ +            return False
+│ │ +        else:
+│ │ +            next = self._chars[self._position + 1]
+│ │ +            return next in self.START_IDENTIFIER
+│ │ +
+│ │      def _peek_is_next_digit(self):
+│ │          if (self._position == self._length - 1):
+│ │              return False
+│ │          else:
+│ │              next = self._chars[self._position + 1]
+│ │              return next in self.VALID_NUMBER
+│ │  
+│ │ @@ -231,15 +245,18 @@
+│ │              error_message = str(e).split(':')[0]
+│ │              raise LexerError(lexer_position=start,
+│ │                               lexer_value=lexeme,
+│ │                               message=error_message)
+│ │  
+│ │      def _consume_raw_string_literal(self):
+│ │          start = self._position
+│ │ -        lexeme = self._consume_until("'").replace("\\'", "'")
+│ │ +        lexeme = self._consume_until("'") \
+│ │ +            .replace("\\'", "'")  \
+│ │ +            .replace("\\\\", "\\")
+│ │ +
+│ │          token_len = self._position - start
+│ │          return {'type': 'literal', 'value': lexeme,
+│ │                  'start': start, 'end': token_len}
+│ │  
+│ │      def _match_or_else(self, expected, match_type, else_type):
+│ │          start = self._position
+│ │          current = self._current
+│ │   --- jmespath-community-1.1.0rc2/jmespath/parser.py
+│ ├── +++ jmespath-community-1.1.1/jmespath/parser.py
+│ │┄ Files 2% similar despite different names
+│ │ @@ -34,14 +34,16 @@
+│ │  from jmespath import exceptions
+│ │  from jmespath import visitor
+│ │  
+│ │  
+│ │  class Parser(object):
+│ │      BINDING_POWER = {
+│ │          'eof': 0,
+│ │ +        'variable': 0,
+│ │ +        'assign': 0,
+│ │          'unquoted_identifier': 0,
+│ │          'quoted_identifier': 0,
+│ │          'literal': 0,
+│ │          'rbracket': 0,
+│ │          'rparen': 0,
+│ │          'comma': 0,
+│ │          'rbrace': 0,
+│ │ @@ -141,16 +143,47 @@
+│ │                  left = led(left)
+│ │                  current_token = self._current_token()
+│ │          return left
+│ │  
+│ │      def _token_nud_literal(self, token):
+│ │          return ast.literal(token['value'])
+│ │  
+│ │ +    def _token_nud_variable(self, token):
+│ │ +        return ast.variable_ref(token['value'][1:])
+│ │ +
+│ │      def _token_nud_unquoted_identifier(self, token):
+│ │ -        return ast.field(token['value'])
+│ │ +        if token['value'] == 'let' and \
+│ │ +                self._current_token() == 'variable':
+│ │ +            return self._parse_let_expression()
+│ │ +        else:
+│ │ +            return ast.field(token['value'])
+│ │ +
+│ │ +    def _parse_let_expression(self):
+│ │ +        bindings = []
+│ │ +        while True:
+│ │ +            var_token = self._lookahead_token(0)
+│ │ +            # Strip off the '$'.
+│ │ +            varname = var_token['value'][1:]
+│ │ +            self._advance()
+│ │ +            self._match('assign')
+│ │ +            assign_expr = self._expression()
+│ │ +            bindings.append(ast.assign(varname, assign_expr))
+│ │ +            if self._is_in_keyword(self._lookahead_token(0)):
+│ │ +                self._advance()
+│ │ +                break
+│ │ +            else:
+│ │ +                self._match('comma')
+│ │ +        expr = self._expression()
+│ │ +        return ast.let_expression(bindings, expr)
+│ │ +
+│ │ +    def _is_in_keyword(self, token):
+│ │ +        return (
+│ │ +            token['type'] == 'unquoted_identifier' and
+│ │ +            token['value'] == 'in'
+│ │ +        )
+│ │  
+│ │      def _token_nud_quoted_identifier(self, token):
+│ │          field = ast.field(token['value'])
+│ │          # You can't have a quoted identifier as a function
+│ │          # name.
+│ │          if self._current_token() == 'lparen':
+│ │              t = self._lookahead_token(0)
+│ │ @@ -548,15 +581,15 @@
+│ │  @with_repr_method
+│ │  class ParsedResult(object):
+│ │      def __init__(self, expression, parsed):
+│ │          self.expression = expression
+│ │          self.parsed = parsed
+│ │  
+│ │      def search(self, value, options=None):
+│ │ -        evaluator = visitor.ScopedInterpreter(options)
+│ │ +        evaluator = visitor.TreeInterpreter(options)
+│ │          return evaluator.evaluate(self.parsed, value)
+│ │  
+│ │      def _render_dot_file(self):
+│ │          """Render the parsed AST as a dot file.
+│ │  
+│ │          Note that this is marked as an internal method because
+│ │          the AST is an implementation detail and is subject
+│ │   --- jmespath-community-1.1.0rc2/jmespath/visitor.py
+│ ├── +++ jmespath-community-1.1.1/jmespath/visitor.py
+│ │┄ Files 12% similar despite different names
+│ │ @@ -1,12 +1,13 @@
+│ │  import operator
+│ │  
+│ │ +from jmespath import exceptions
+│ │  from jmespath import functions
+│ │  from jmespath.compat import string_type
+│ │ -from jmespath.compat import with_str_method
+│ │ +from jmespath.scope import ScopedChainDict
+│ │  from numbers import Number
+│ │  
+│ │  
+│ │  def _equals(x, y):
+│ │      if _is_special_number_case(x, y):
+│ │          return False
+│ │      else:
+│ │ @@ -78,18 +79,17 @@
+│ │          #  JEP-12 deprecates `foo` -> "foo" syntax.
+│ │          #  Valid expressions MUST use: `"foo"` -> "foo"
+│ │          #  Setting this flag to `True` enables support for legacy syntax.
+│ │          self.enable_legacy_literals = enable_legacy_literals
+│ │  
+│ │  
+│ │  class _Expression(object):
+│ │ -    def __init__(self, expression, interpreter, context):
+│ │ +    def __init__(self, expression, interpreter):
+│ │          self.expression = expression
+│ │          self.interpreter = interpreter
+│ │ -        self.context = context
+│ │  
+│ │      def visit(self, node, *args, **kwargs):
+│ │          return self.interpreter.visit(node, *args, **kwargs)
+│ │  
+│ │  class Visitor(object):
+│ │      def __init__(self):
+│ │          self._method_cache = {}
+│ │ @@ -138,44 +138,37 @@
+│ │          self._options = options
+│ │          if options.dict_cls is not None:
+│ │              self._dict_cls = self._options.dict_cls
+│ │          if options.custom_functions is not None:
+│ │              self._functions = self._options.custom_functions
+│ │          else:
+│ │              self._functions = functions.Functions()
+│ │ +        self._root = None
+│ │ +        self._scope = ScopedChainDict()
+│ │  
+│ │      def default_visit(self, node, *args, **kwargs):
+│ │          raise NotImplementedError(node['type'])
+│ │  
+│ │ +    def evaluate(self, ast, root):
+│ │ +        self._root = root
+│ │ +        return self.visit(ast, root)
+│ │ +
+│ │      def visit_subexpression(self, node, value):
+│ │          result = value
+│ │          for node in node['children']:
+│ │              result = self.visit(node, result)
+│ │              if (result is None):
+│ │                  return None
+│ │          return result
+│ │  
+│ │      def visit_field(self, node, value, *args, **kwargs):
+│ │ -        identifier = node['value']
+│ │ -        scopes = kwargs.get('scopes')
+│ │ -
+│ │          try:
+│ │ -            result = value.get(identifier) 
+│ │ -            if result == None:
+│ │ -                result = self._get_from_scopes(
+│ │ -                    identifier, *args, scopes=scopes)
+│ │ -            return result
+│ │ +           return value.get(node['value']) 
+│ │          except AttributeError:
+│ │ -            return self._get_from_scopes(
+│ │ -                identifier, *args, scopes=scopes)
+│ │ -
+│ │ -    def _get_from_scopes(self, identifier, *args, **kwargs):
+│ │ -        if 'scopes' in kwargs:
+│ │ -            return kwargs['scopes'].getValue(identifier) 
+│ │ -        return None
+│ │ +            return None
+│ │  
+│ │      def visit_comparator(self, node, value):
+│ │          # Common case: comparator is == or !=
+│ │          comparator_func = self.COMPARATOR_FUNC[node['value']]
+│ │          if node['value'] in self._EQUALITY_OPS:
+│ │              return comparator_func(
+│ │                  self.visit(node['children'][0], value),
+│ │ @@ -205,21 +198,19 @@
+│ │              self.visit(node['children'][0], value),
+│ │              self.visit(node['children'][1], value)
+│ │          )
+│ │  
+│ │      def visit_current(self, node, value):
+│ │          return value
+│ │  
+│ │ -    def visit_root(self, *args, **kwargs):
+│ │ -        if 'scopes' in kwargs:
+│ │ -            return kwargs['scopes'].getValue('$')
+│ │ -        return None
+│ │ +    def visit_root(self, node, value):
+│ │ +        return self._root
+│ │  
+│ │      def visit_expref(self, node, value):
+│ │ -        return _Expression(node['children'][0], self, value)
+│ │ +        return _Expression(node['children'][0], self)
+│ │  
+│ │      def visit_function_expression(self, node, value, *args, **kwargs):
+│ │          resolved_args = []
+│ │          for child in node['children']:
+│ │              current = self.visit(child, value)
+│ │              resolved_args.append(current)
+│ │          return self._functions.call_function(node['value'], resolved_args, scopes = kwargs.get('scopes'))
+│ │ @@ -343,14 +334,35 @@
+│ │          collected = []
+│ │          for element in base:
+│ │              current = self.visit(node['children'][1], element)
+│ │              if current is not None:
+│ │                  collected.append(current)
+│ │          return collected
+│ │  
+│ │ +    def visit_let_expression(self, node, value):
+│ │ +        *bindings, expr = node['children']
+│ │ +        scope = {}
+│ │ +        for assign in bindings:
+│ │ +            scope.update(self.visit(assign, value))
+│ │ +        self._scope.push_scope(scope)
+│ │ +        result = self.visit(expr, value)
+│ │ +        self._scope.pop_scope()
+│ │ +        return result
+│ │ +
+│ │ +    def visit_assign(self, node, value):
+│ │ +        name = node['value']
+│ │ +        value = self.visit(node['children'][0], value)
+│ │ +        return {name: value}
+│ │ +
+│ │ +    def visit_variable_ref(self, node, value):
+│ │ +        try:
+│ │ +            return self._scope[node['value']]
+│ │ +        except KeyError:
+│ │ +            raise exceptions.UndefinedVariable(node['value'])
+│ │ +
+│ │      def visit_value_projection(self, node, value):
+│ │          base = self.visit(node['children'][0], value)
+│ │          try:
+│ │              base = base.values()
+│ │          except AttributeError:
+│ │              return None
+│ │          collected = []
+│ │ @@ -389,49 +401,7 @@
+│ │          self._lines.append('%s [label="%s(%s)"]' % (
+│ │              current, node['type'], node.get('value', '')))
+│ │          for child in node.get('children', []):
+│ │              child_name = '%s%s' % (child['type'], self._count)
+│ │              self._count += 1
+│ │              self._lines.append('  %s -> %s' % (current, child_name))
+│ │              self._visit(child, child_name)
+│ │ -
+│ │ -
+│ │ -@with_str_method
+│ │ -class Scopes:
+│ │ -    def __init__(self):
+│ │ -        self._scopes = []
+│ │ -
+│ │ -    def pushScope(self, scope):
+│ │ -        self._scopes.append(scope)
+│ │ -
+│ │ -    def popScope(self):
+│ │ -        if len(self._scopes) > 0:
+│ │ -            self._scopes.pop()
+│ │ -
+│ │ -    def getValue(self, identifier):
+│ │ -        for scope in self._scopes[::-1]:
+│ │ -            if scope.get(identifier) != None:
+│ │ -                return scope[identifier]
+│ │ -        return None
+│ │ -
+│ │ -    def __str__(self):
+│ │ -        return '{}'.format(self._scopes)
+│ │ -
+│ │ -
+│ │ -class ScopedInterpreter(TreeInterpreter):
+│ │ -    def __init__(self, options = None):
+│ │ -        super().__init__(options)
+│ │ -        self._scopes = Scopes()
+│ │ -
+│ │ -    def evaluate(self, ast, root_scope):
+│ │ -        self._scopes.pushScope({'$': root_scope})
+│ │ -        return self.visit(ast, root_scope)
+│ │ -
+│ │ -    def visit(self, node, *args, **kwargs):
+│ │ -        scoped_types = ['field', 'function_expression', 'root']
+│ │ -        if (node['type'] in scoped_types):
+│ │ -            kwargs.update({'scopes': self._scopes})
+│ │ -        else:
+│ │ -            if 'scopes' in kwargs:
+│ │ -                kwargs.pop('scopes')
+│ │ -
+│ │ -        return super().visit(node, *args, **kwargs)
+│ │   --- jmespath-community-1.1.0rc2/jmespath_community.egg-info/PKG-INFO
+│ ├── +++ jmespath-community-1.1.1/jmespath_community.egg-info/PKG-INFO
+│ │┄ Files 1% similar despite different names
+│ │ @@ -1,14 +1,14 @@
+│ │  Metadata-Version: 1.2
+│ │  Name: jmespath-community
+│ │ -Version: 1.1.0rc2
+│ │ +Version: 1.1.1
+│ │  Summary: JSON Matching Expressions
+│ │  Home-page: https://github.com/jmespath-community/jmespath.py
+│ │ -Author: James Saryerwinnie, Maxime Labelle
+│ │ -Author-email: springcomp@users.noreply.github.com
+│ │ +Author: James Saryerwinnie, Springcomp
+│ │ +Author-email: js@jamesls.com, springcomp@users.noreply.github.com
+│ │  License: MIT
+│ │  Description: JMESPath Community
+│ │          ==================
+│ │          
+│ │          
+│ │          .. image:: https://badges.gitter.im/Join Chat.svg
+│ │             :target: https://gitter.im/jmespath/chat
+│ │   --- jmespath-community-1.1.0rc2/setup.py
+│ ├── +++ jmespath-community-1.1.1/setup.py
+│ │┄ Files 19% similar despite different names
+│ │ @@ -3,19 +3,19 @@
+│ │  import io
+│ │  
+│ │  from setuptools import setup, find_packages
+│ │  
+│ │  
+│ │  setup(
+│ │      name='jmespath-community',
+│ │ -    version='1.1.0rc2',
+│ │ +    version='1.1.1',
+│ │      description='JSON Matching Expressions',
+│ │      long_description=io.open('README.rst', encoding='utf-8').read(),
+│ │ -    author='James Saryerwinnie, Maxime Labelle',
+│ │ -    author_email='springcomp@users.noreply.github.com',
+│ │ +    author='James Saryerwinnie, Springcomp',
+│ │ +    author_email='js@jamesls.com, springcomp@users.noreply.github.com',
+│ │      url='https://github.com/jmespath-community/jmespath.py',
+│ │      scripts=['bin/jp.py'],
+│ │      packages=find_packages(exclude=['tests']),
+│ │      license='MIT',
+│ │      python_requires='>=3.7',
+│ │      classifiers=[
+│ │          'Development Status :: 5 - Production/Stable',
+│ │   --- jmespath-community-1.1.0rc2/tests/legacy/test_lexer.py
+│ ├── +++ jmespath-community-1.1.1/tests/legacy/test_lexer.py
+│ │┄ Files identical despite different names
